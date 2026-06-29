@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-06-29"
 
 keywords: Operating systems, powerVS OS
 
@@ -55,7 +55,7 @@ When you use IBM i for your VSI, review the following requirements:
 
 - The IBM i 7.4, 7.5, 7.6, and Cloud Optical Repository (COR) OS images support Power10 and later systems. However, you can create a custom image or upgrade your IBM i VSI by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and navigating to the **My entitled software** > **IBM i Evaluation and NLV Download** section.
 
-- When you upgrade an IBM i VSI that has a Virtual Serial Number (VSN) assigned, you must contact IBM Support to update the IBM i licenses to match the new IBM i version. For more informaiton about VSN, see [About VSN in IBM data center](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn). 
+- When you upgrade an IBM i VSI that has a virtual serial number (VSN) assigned, you must contact IBM Support to update the IBM i licenses to match the new IBM i version. For more informaiton about VSN, see [About VSN in IBM data center](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn). 
 
 
 ## Linux

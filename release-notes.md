@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-25"
+lastupdated: "2026-06-29"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -454,7 +454,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 {: important}
 
 
-- Starting `January 22, 2025`, [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn) and [Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID) are supported in all the data centers.
+- Starting `January 22, 2025`, [virtual serial number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn) and [Virtual host identifier](/docs/power-iaas?topic=power-iaas-dedicated-host#virtual-host-ID) are supported in all the data centers.
 
 
 - Global replication service supports new data center pair `LON04`-`LON06`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
@@ -468,7 +468,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-- You can now assign a Virtual Serial Number (VSN) to an IBM i VSI. With a VSN associated with your VSI, you need not pin the VSI to a host for licensing or entitlement purposes. For more information, see [Virtual Serial Number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
+- You can now assign a virtual serial number (VSN) to an IBM i VSI. With a VSN associated with your VSI, you need not pin the VSI to a host for licensing or entitlement purposes. For more information, see [virtual serial number (VSN)](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn).
 - You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 - As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 

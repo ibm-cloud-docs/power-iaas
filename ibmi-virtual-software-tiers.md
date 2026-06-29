@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025
+  years: 2025, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-06-29"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -55,7 +55,7 @@ You must complete the following prerequisites to assign an {{site.data.keyword.i
 2. Select an IBM Power10 or later server type from the **Machine type** list.
 3. Complete the following steps to assign a VSN to the instance:
    1. Edit the **Virtual serial number (VSN)** field.
-   2. The Virtual serial number (VSN) summary pane appears.
+   2. The virtual serial number summary pane appears.
    3. Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
 
 Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.

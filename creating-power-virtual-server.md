@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-06-29"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -107,7 +107,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems with an IBM provided subscription. If you assign a Virtual serial number (VSN) to a VSI without storage, you must assign the VSN before you attach the boot volume and start the VSI.
+    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems with an IBM provided subscription. If you assign a virtual serial number (VSN) to a VSI without storage, you must assign the VSN before you attach the boot volume and start the VSI.
     {: important}
 
     
@@ -285,7 +285,7 @@ VSN is a unique identifier and can be assigned only to one VSI at a time. If you
 
 
 
-View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the Virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
 
 
 
@@ -297,7 +297,7 @@ When you upgrade an IBM i VSI that has a VSN assigned, you must contact IBM Supp
 ### Mapping the customer account number to the cloud account ID
 {: #VSN-id-map}
 
-For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a Virtual Serial Number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
+For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a virtual serial number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
 
 ### Assigning a VSN to a new VSI
 {: #VSN-new-VM}
@@ -434,7 +434,7 @@ When a host fails, the selected pinning policy determines the recovery process o
 - If the VSI is set to **Soft**, it automatically restarts on the available compute resources.
 - If the VSI is set to **Hard**, it cannot be automatically restarted on the available compute resources. Such VSIs remain unavailable until the IBM {{site.data.keyword.powerSys_notm}} operations team resolves the issues that are related to host failure. Based on the type of the issue, the IBM {{site.data.keyword.powerSys_notm}} operations team might require extra time to resolve the issue.
 
-Considering the impacts of pinning a VSI, it is recommended to pin a VSI only if it is necessary. You can use IBM i virtual serial numbers (VSNs) to retain the same serial number throughout the lifecycle of a VSI independent of the compute host on which the VSI runs. For more information, contact your independent software vendor (ISV).
+Considering the impacts of pinning a VSI, it is recommended to pin a VSI only if it is necessary. You can use IBM i VSNs to retain the same serial number throughout the lifecycle of a VSI independent of the compute host on which the VSI runs. For more information, contact your independent software vendor (ISV).
 {: note}
 
 
