@@ -26,7 +26,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #June-2026}
 
 ### 29 June 2026
-{: #power-iaas-jun2626}
+{: #power-iaas-jun2926}
 {: release-note}
 
 GRS support in data center pairs
