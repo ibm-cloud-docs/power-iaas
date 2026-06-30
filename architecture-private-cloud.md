@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-06-30"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -120,7 +120,7 @@ The spare node is used by the IBM site reliability engineering (SRE) team for ma
 ### Small pod configurations
 {: #pod-config-small}
 
-A small pod has a 1x42U rack and S1122 and E1150 system types are supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server, up to the maximum capacity of the rack.
+A small pod has a 1x42U rack and S1122  system type is supported in the rack. You can expand the capacity of a small pod by adding servers of the same type that are already installed in the pod. You can add a minimum of one server, up to the maximum capacity of the rack.
 
 [Table 1](#single-rack) illustrates the available configurations for server types and memory types on a small pod that has one rack. [Table 2](#single-rack-storage) illustrates the available configurations for storage types on small pods with flash system storage options.
 
@@ -140,24 +140,13 @@ A small pod has a 1x42U rack and S1122 and E1150 system types are supported in t
 {: tab-title="S1122"}
 
 
-| Server types               | Min | Max |
-| -------------------------- | --- | --- |
-| Server quantity in a pod   | 2   | 4   |
-| Number of cores per server | 64  | 64  |
-| Total number of cores      | 128 | 256 |
-| Usable cores               | 110 | 220 |
-{: class="simple-tab-table"}
-{: tab-group="host_selection"}
-{: caption="Small pod configuration." caption-side="top"}
-{: #E1150}
-{: tab-title="E1150"}
 
 For the S1122 server, the following memory configurations are available:
 
 - **2 TB memory option per server**: A minimum 10 TB of memory and a maximum 18 TB of memory.
 - **4 TB memory option per server**: A minimum 20 TB of memory and a maximum 36 TB of memory.
 
-For the E1150 server, only a 4 TB memory option per server with a minimum 8 TB of memory and a maximum 32 TB of memory is available.
+
 
 
 
