@@ -27,9 +27,10 @@ toc:
       - topicgroup:
           label: Locations
           topics:
-          - cloud-regions.md
+          - topic: cloud-regions.md
+            navtitle: IBM Cloud regions
           - topic: satellite-location-private.md
-            navtitle: IBM Satellite location
+            navtitle: IBM Satellite regions
       - topicgroup:
           label: Pricing
           topics:

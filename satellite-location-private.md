@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-29"
+lastupdated: "2026-06-30"
 
 keywords: power systems, satellite location
 
@@ -13,7 +13,7 @@ subcollection: power-iaas
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Supported locations for {{site.data.keyword.on-prem-fname}}
+# Supported regions for {{site.data.keyword.on-prem-fname}}
 {: #satellite-location-spec-private-cloud}
 
 Specific {{site.data.keyword.cloud}} regions are available so that you can host connections from the pods for {{site.data.keyword.on-prem-fname}} in your data center.
