@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-02"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -25,7 +25,13 @@ subcollection: power-iaas
 ---
 
 
+
+
 All the IBM {{site.data.keyword.powerSys_notm}} data centers are PER-enabled, except `CHE01` and `MON01`.
+
+
+
+
 
 If you manually configure the network configurations in your workspace without customizations through a support ticket, you can use self-service automation to complete your PER migration.
 
