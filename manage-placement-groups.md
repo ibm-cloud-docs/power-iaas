@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-07-06"
 
 keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
@@ -34,8 +34,7 @@ Server placement groups provide you with control over the host or server on whic
 You can apply an affinity or anti-affinity policy to each VSI within a server placement group. After you create a placement group, you can provision a new VSI in the placement group. When you set a placement group with an affinity policy, all VSIs in the placement group are provisioned on the same server. When you set a placement group with an anti-affinity policy, all VSIs in the placement group are provisioned on different servers.
 
 
-When a host with VSIs fails unexpectedly, the VSIs do not automatically restart on another host if they belong to an affinity-based server placement group and one or more VSIs in the group are hard-pinned to the failed host. Affinity policies require all VSIs in the group to stay together on the same host. A hard-pinned VSI prevents the group from moving to another host.
-{: note}
+When a host with VSIs fails unexpectedly, the VSIs do not automatically restart on another host if they belong to an affinity-based server placement group and one or more VSIs in the group are hard-pinned to the failed host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
 
 
 
