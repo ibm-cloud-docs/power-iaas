@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  year: 2025, 2026 
+  years: 2025, 2026
 
 lastupdated: "2026-07-06"
 
@@ -27,7 +27,8 @@ subcollection: power-iaas
 A network route is a defined path that data packets follow to travel from a source to a destination across a network. You can use the routes feature in the {{site.data.keyword.powerSysFull}} to view implicit network routes and to create or manage static routes within your {{site.data.keyword.powerSys_notm}} workspaces. Static routes are custom routes that control where the network packets are sent, depending on the destination Classless Inter-Domain Routing (CIDR) and the specified next hop address. The next hop is the IP address to which you want to route the network packet.
 {: shortdesc}
 
-With static routes, you can build an overlay network by using CIDRs that are not associated with subnets in your {{site.data.keyword.powerSys_notm}} workspace to implement high availability (HA) and disaster recovery (DR) strategies. You can also view external network routes to identify which external destinations are accessible from your {{site.data.keyword.powerSys_notm}} workspace.
+With static routes, you can build an overlay network by using CIDRs that are not associated with subnets in your {{site.data.keyword.powerSys_notm}} workspace to implement high availability (HA) and disaster recovery (DR) strategies. 
+You can also view external network routes to identify which external destinations are accessible from your {{site.data.keyword.powerSys_notm}} workspace.
 
 The routes feature is available on PER-enabled {{site.data.keyword.powerSys_notm}} workspaces and on {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about PER, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 {: note}
