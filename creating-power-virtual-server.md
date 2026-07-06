@@ -87,15 +87,13 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Optional: Expand **Advanced Configuration** to set additional options for your VSI.
+7. Optional: Expand **Advanced configurations** to set additional options for your VSI.
 
-    - **Virtual server pinning**: By default, the VSI pinning option is off. This option keeps the VSI on its current host. To select a pinning type, set **Virtual server pinning** to on, and then select the preferred pinning type.
+    - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, pinning keeps the virtual server on its current host; however, downtime occurs during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard** as the pinning type.
 
-    You can choose between **Soft** pinning and **Hard** pinning. For more information, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
+    For more information, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
 
     - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
-
-
 
 8. Complete the **Boot image** fields.
 
