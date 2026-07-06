@@ -35,6 +35,7 @@ You can apply an affinity or anti-affinity policy to each VSI within a server pl
 
 
 When a host with VSIs fails unexpectedly, the VSIs do not automatically restart on another host if they belong to an affinity-based server placement group and one or more VSIs in the group are hard-pinned to the failed host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
+{: note}
 
 
 
