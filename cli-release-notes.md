@@ -42,8 +42,6 @@ New options
 
     - `--enable-dhcp` is added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-subnet-update) commands for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. You can use this option to enable or disable subnet support for Dynamic Host Configuration Protocol (DHCP).
 
-
-
     - `--allow-remote-restart` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to enable  for an instance.
 
     - `--default-trusted-profile` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify the trusted profile cloud resource name (CRN), ID, or name of the default identity and access management (IAM) trusted profile to use for a virtual server instance (VSI).
@@ -53,6 +51,8 @@ New options
     - `--metadata-service` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify whether the metadata service endpoint is available to the VSI.
 
     - `--metadata-service-force` is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to disable the metadata service while the VSI is active.
+
+
 
 
 
@@ -81,27 +81,24 @@ Other enhancements
 
 The CLI plug-in version v1.9.0 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
-**New commands**
+New commands
+:   The following CLI command is added to the {{site.data.keyword.powerSys_notm}} Private Cloud workspaces:
 
-The following CLI command is added to the {{site.data.keyword.powerSys_notm}} Private Cloud workspaces:
+    - [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume): You can use this command to attach, detach, view, and list vPMEM volumes for a {{site.data.keyword.powerSys_notm}} instance.
 
-- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume): You can use this command to attach, detach, view, and list vPMEM volumes for a {{site.data.keyword.powerSys_notm}} instance.
+New options
+:   The following option is added to the existing CLI command:
 
-**New options**
+    - `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-create) command for private workspaces. You can use this option to attach vPMEM volumes to a {{site.data.keyword.powerSys_notm}} instance. You can attach up to 1 vPMEM volume to an SAP instance and up to 4 PMEM volumes to other instances.
 
-The following option is added to the existing CLI command:
+Other enhancements
+:   The following enhancements are included in this release:
 
-- `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-create) command for private workspaces. You can use this option to attach vPMEM volumes to a {{site.data.keyword.powerSys_notm}} instance. You can attach up to 1 vPMEM volume to an SAP instance and up to 4 PMEM volumes to other instances.
+    - Added `Accelerated SAP Application Performance Standard (aSAPs)` field to the output of the [ibmcloud pi instance sap profile](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-profile) and [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) commands.
 
-**Other enhancements**
+    - Added `External IP Address` field to the output of the [ibmcloud pi network-interface get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-get), [ibmcloud pi network-interface create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-create), and [ibmcloud pi network-interface update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-update) commands.
 
-The following enhancements are included in this release:
-
-- Added `Accelerated SAP Application Performance Standard (aSAPs)` field to the output of the [ibmcloud pi instance sap profile](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-profile) and [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) commands.
-
-- Added `External IP Address` field to the output of the [ibmcloud pi network-interface get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-get), [ibmcloud pi network-interface create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-create), and [ibmcloud pi network-interface update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-interface-update) commands.
-
-- Enhanced the output of the [ibmcloud pi instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance) commands to group fields more clearly and omit fields that are not returned in the command output.
+    - Enhanced the output of the [ibmcloud pi instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance) commands to group fields more clearly and omit fields that are not returned in the command output.
 
 ### CLI v1.8.1
 {: #cli-v1.8.1}
@@ -116,40 +113,36 @@ The CLI plug-in version v1.8.1 is available. This version fixes an issue where t
 
 The CLI plug-in version v1.8.0 is available. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
-**New commands**
+New commands
+:   The following CLI command is added for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center.
 
-The following CLI command is added for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center.
+    - [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume-get): You can use this command to attach, detach, view, and list virtual persistent memory (vPMEM) volumes for an instance.
 
-- [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume-get): You can use this command to attach, detach, view, and list virtual persistent memory (vPMEM) volumes for an instance.
+New options
+:   The following options are added to the existing CLI commands:
 
-**New options**
+    - `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center. You can use this option to specify a list of vPMEM volumes that you can associate with an instance. The maximum allowed vPMEM volumes vary by the instance type:
+        - SAP instances: 1
+        - Other instances: 4
 
-The following options are added to the existing CLI commands:
+    - `--parameters` is added to the [ibmcloud pi workspace create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-create) command. You can use this option to configure additional key-value pairs in a workspace.
 
-- `--vpmem-volumes` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands for {{site.data.keyword.powerSys_notm}} workspaces in the IBM data center. You can use this option to specify a list of vPMEM volumes that you can associate with an instance. The maximum allowed vPMEM volumes vary by the instance type:
-    - SAP instances: 1
-    - Other instances: 4
+Updated commands
+:   The following commands are updated:
 
-- `--parameters` is added to the [ibmcloud pi workspace create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-create) command. You can use this option to configure additional key-value pairs in a workspace.
+    - Updated the usage instructions for the [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-operation) command.
 
-**Updated commands**
-
-The following commands are updated:
-
-- Updated the usage instructions for the [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-operation) command.
-
-- Updated the [ibmcloud pi instance action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-action) command by adding *dumprestart* as a valid value.
+    - Updated the [ibmcloud pi instance action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-action) command by adding *dumprestart* as a valid value.
 
 
-**Other enhancements**
+Other enhancements
+:   The following enhancements are included in this release:
 
-The following enhancements are included in this release:
+    - Resolved issues where some object responses were incomplete.
 
-- Resolved issues where some object responses were incomplete.
+    - Enhanced the output of the [ibmcloud pi image create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-create) and [ibmcloud pi image get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-get) commands to include *Shared* and *Type* properties, and to dynamically hide properties that are not available in the response.
 
-- Enhanced the output of the [ibmcloud pi image create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-create) and [ibmcloud pi image get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-get) commands to include *Shared* and *Type* properties, and to dynamically hide properties that are not available in the response.
-
-- Updated command messages and descriptions to improve translation accuracy and readability across supported languages.
+    - Updated command messages and descriptions to improve translation accuracy and readability across supported languages.
 
 
 ## September 2025
@@ -160,32 +153,29 @@ The following enhancements are included in this release:
 
 CLI plug-in version 1.7.0 is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}. In this release, the CLI is updated to use the latest version of the internationalization package. In addition, messages and options are updated to use the new guidelines for writing the descriptions.
 
-**New commands**
+New commands
+:   The following CLI commands are added to the IBM Power Virtual Server Private Cloud workspaces:
 
-The following CLI commands are added to the IBM Power Virtual Server Private Cloud workspaces:
-
-- [ibmcloud pi network-peer](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer). You can use this command to create, delete, get, list, and update network peering connection. In addition, you can use this command to list peer network interfaces.
-- [ibmcloud pi network-peer route-filter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer-route-filter). You can use this command to create, delete, and get the details of the route filters in the network peering connection.
-
-
-**New options**
-
-The following options are added to the existing CLI commands:
-
-The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to set the instance to your preferred processor compatibility mode. The processor must be compatible with the system in use.
+    - [ibmcloud pi network-peer](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer). You can use this command to create, delete, get, list, and update network peering connection. In addition, you can use this command to list peer network interfaces.
+    - [ibmcloud pi network-peer route-filter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-peer-route-filter). You can use this command to create, delete, and get the details of the route filters in the network peering connection.
 
 
-**Updated commands**
+New options
+:   The following options are added to the existing CLI commands:
 
-The following commands are updated:
+    The [--preferred-processor-compatibility-mode](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to set the instance to your preferred processor compatibility mode. The processor must be compatible with the system in use.
 
-- Added `Effective Processor Compatibility Mode` and `Preferred Processor Compatibility Mode` to the instance output.
-- Added `Creation Date` to the shared-processor-pool output.
-- Added `State` to the image output.
-- Added `CRN` to the volume snapshot output.
-- Added the `sr3` filter based on the [ibmcloud pi instance sap list --prefix](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) option to filter on s1122 and e1150 profiles.
-- Updated the [ibmcloud pi snapshot update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshot-update) output.
-- Updated the use of `Creation Date` and `Last Update` dates to be consistent across all outputs.
+
+Updated commands
+:   The following commands are updated:
+
+    - Added `Effective Processor Compatibility Mode` and `Preferred Processor Compatibility Mode` to the instance output.
+    - Added `Creation Date` to the shared-processor-pool output.
+    - Added `State` to the image output.
+    - Added `CRN` to the volume snapshot output.
+    - Added the `sr3` filter based on the [ibmcloud pi instance sap list --prefix](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) option to filter on s1122 and e1150 profiles.
+    - Updated the [ibmcloud pi snapshot update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshot-update) output.
+    - Updated the use of `Creation Date` and `Last Update` dates to be consistent across all outputs.
 
 
 ### CLI v1.6.1
@@ -208,38 +198,35 @@ The CLI version v1.6.1 is available with updates related to translation.
 The CLI plug-in version 1.6.0 supports Power11 systems. This version is available for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
 
 
-**New commands**
+New commands
+:   The following CLI commands are added:
 
-The following CLI commands are added:
+    - [ibmcloud pi route](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-route): You can use this command to create, delete, get, list, report, and update the custom network routes within the Power Virtual Server workspaces in the IBM data center.
+    - [ibmcloud pi virtual-serial-number software-tiers](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-virtual-serial-number-software-tiers): You can use this command to list all the supported software-tiers.
+    - [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-operation): You can use this command to set the server boot mode, the server operating mode, a job task, or an operation type to an IBM i virtual server instance. This command can be used for the Power Virtual Server Private Cloud.
 
-- [ibmcloud pi route](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-route): You can use this command to create, delete, get, list, report, and update the custom network routes within the Power Virtual Server workspaces in the IBM data center.
-- [ibmcloud pi virtual-serial-number software-tiers](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-virtual-serial-number-software-tiers): You can use this command to list all the supported software-tiers.
-- [ibmcloud pi instance operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-operation): You can use this command to set the server boot mode, the server operating mode, a job task, or an operation type to an IBM i virtual server instance. This command can be used for the Power Virtual Server Private Cloud.
+New options
+:   The following options are added to the existing CLI commands:
 
-**New options**
-
-The following options are added to the existing CLI commands:
-
-- `--family`: Added to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this option to filter the SAP profiles by the family type.
-- `--prefix`: Added to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this option to filter the SAP profiles by their prefix.
-- `--user-tags`: Added to the [ibmcloud pi placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-placement-group-create) and [ibmcloud pi shared-processor-pool placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-placement-group-create) commands. You can use this option to add user tags to the Power Virtual Server resources.
-- `--description`: Added to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) command. You can use this option to add or update the description of an SSH key.
-- `--visibility` option is added to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) and [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) commands. You can use this option to set the visibility of an SSH key at `account` or `workspace` level.
-- `--advertise`: Added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update) commands. You can use this option to determine whether or not to advertise the private networks.
-- `--arp-broadcast`: Added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update) commands. You can use this option to enable or disable the ARP broadcast.
-- `--software-tier`: Added to the [ibmcloud pi instance virtual-serial-number update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-virtual-serial-number-update) command. You can use this option to set a software tier on an IBM i instance.
-- `--name` and `--key`: Added to the [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) command. These options replace the `--new-name` and `--new-key` options.
+    - `--family`: Added to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this option to filter the SAP profiles by the family type.
+    - `--prefix`: Added to the [ibmcloud pi instance sap list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-list) command. You can use this option to filter the SAP profiles by their prefix.
+    - `--user-tags`: Added to the [ibmcloud pi placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-placement-group-create) and [ibmcloud pi shared-processor-pool placement-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-placement-group-create) commands. You can use this option to add user tags to the Power Virtual Server resources.
+    - `--description`: Added to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) command. You can use this option to add or update the description of an SSH key.
+    - `--visibility` option is added to the [ibmcloud pi ssh-key create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-create) and [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) commands. You can use this option to set the visibility of an SSH key at `account` or `workspace` level.
+    - `--advertise`: Added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update) commands. You can use this option to determine whether or not to advertise the private networks.
+    - `--arp-broadcast`: Added to the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) and [ibmcloud pi subnet update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-update) commands. You can use this option to enable or disable the ARP broadcast.
+    - `--software-tier`: Added to the [ibmcloud pi instance virtual-serial-number update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-virtual-serial-number-update) command. You can use this option to set a software tier on an IBM i instance.
+    - `--name` and `--key`: Added to the [ibmcloud pi ssh-key update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ssh-key-update) command. These options replace the `--new-name` and `--new-key` options.
 
 
 
-**Deprecated commands or options**
+Deprecated commands or options
+:   You can no longer use the following commands or options as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use:
 
-You can no longer use the following commands or options as the Power Virtual Server VPN as a Service (VPNaaS) reached its end of life and is not available for use:
+    - Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) command as the Power Virtual Server VPN as a Service (VPNaaS) has reached its end of life and is not available for use.
+    - `--access-config`, `--jumbo`, `--peer-id`, `--peer-type`, and `--source-ip` options from the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command.
 
-- Deprecated the [ibmcloud pi vpn](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn), [ibmcloud pi ike-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ike-policy), and [ibmcloud pi ipsec-policy](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-ipsec-policy) command as the Power Virtual Server VPN as a Service (VPNaaS) has reached its end of life and is not available for use.
-- `--access-config`, `--jumbo`, `--peer-id`, `--peer-type`, and `--source-ip` options from the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command.
-
-- Removed the DHCP option as a subnet type in the Power Virtual Server Private Cloud.
+    - Removed the DHCP option as a subnet type in the Power Virtual Server Private Cloud.
 
 
 
@@ -253,36 +240,30 @@ The CLI plug-in version 1.5.2 for the {{site.data.keyword.off-prem-fname}} in {{
 
 
 
-
-
 ## April 2025
 {: #cli-april-2025}
 
 New CLI version v1.5.1 is available. The Power Virtual Server CLI plug-in is available with the following features:
 
-**What's changed**
-
-- Security update with CLI plugin dependencies.
-
-
+What's changed
+:   - Security update with CLI plugin dependencies.
 
 ## March 2025
 {: #mar-2025}
 
 New CLI version v1.5.0 is available. The Power Virtual Server CLI plug-in is available with the following features:
 
-**New commands**
-- Added [ibmcloud pi instance virtual-serial-number](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-virtual-serial-number) family of commands (assign, get, unassign, and update) for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces.
-- Added [ibmcloud pi virtual-serial-number](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-virtual-serial-number) family of commands (delete, get, list, and update) for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces.
+New commands
+:   - Added [ibmcloud pi instance virtual-serial-number](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-virtual-serial-number) family of commands (assign, get, unassign, and update) for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces.
+    - Added [ibmcloud pi virtual-serial-number](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-virtual-serial-number) family of commands (delete, get, list, and update) for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces.
 
-**New options**
-- Added `--virtual-serial-number` option to [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-create) command for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces. Use this option to add virtual serial number information to an IBM i instance.
-- Added `--retainVSN` option to [ibmcloud pi instance delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-delete) command for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces. Use this option to confirm whether the virtual serial number must be retained in your account after it is removed from the instance.
+New options
+:   - Added `--virtual-serial-number` option to [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-create) command for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces. Use this option to add virtual serial number information to an IBM i instance.
+    - Added `--retainVSN` option to [ibmcloud pi instance delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-instance-delete) command for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} workspaces. Use this option to confirm whether the virtual serial number must be retained in your account after it is removed from the instance.
 
-**What's changed**
-- In the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}, if you enable the `sap-subscription-mode` option for the workspace, different options are displayed in the image list-catalog.
-- Added a default system to the instance SAP profile and the instance SAP list.
-
+What's changed
+:   - In the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}, if you enable the `sap-subscription-mode` option for the workspace, different options are displayed in the image list-catalog.
+    - Added a default system to the instance SAP profile and the instance SAP list.
 
 
 ## February 2025
