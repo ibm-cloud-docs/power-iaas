@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-30"
+lastupdated: "2026-07-07"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -666,8 +666,8 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 ### December 2023
 {: #dec-2023}
 
-- **New data center availability**
-    - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+New data center availability
+:   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
     - `SAO04` is available for PER.
     - **Cost estimator tool** - A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
     - **Dedicated hosts** - A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).

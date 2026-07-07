@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-07"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -235,17 +235,15 @@ The **IBM i operations** option is available only for the IBM i VSIs.
 
 4. In the IBM i operations dialog, configure one of the following options that are listed on the **Boot operations** tab as per your requirements:
 
-   Boot operations:
+    Server boot mode
+    :   - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
+        - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
+        - **C-** Reserved for IBM lab use only.
+        - **D-** Perform an IPL operation from a media other than the load-source disk. Perform an alternative IPL operation for code installation support.
 
-     - **Server boot mode**
-         - **A-** Perform an IPL operation from a disk by using the copy A of the system LIC.
-         - **B-** Perform an IPL operation from a disk by using the copy B of the system LIC.
-         - **C-** Reserved for IBM lab use only.
-         - **D-** Perform an IPL operation from a media other than the load-source disk. Perform an alternative IPL operation for code installation support.
-
-     - **Server operating mode**
-         - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
-         - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
+    Server operating mode
+    :   - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
+        - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
 
 5. Click **Run Action**.
 

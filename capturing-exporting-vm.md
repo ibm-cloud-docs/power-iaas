@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-07"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -15,9 +15,6 @@ subcollection: power-iaas
 
 # Capturing and exporting a VSI
 {: #capturing-exporting-vm}
-
-
-
 
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -82,27 +79,27 @@ Complete the following steps to capture and export a VSI:
     - **Image catalog**: Stores the image in your workspace image catalog for future deployments
     - **IBM Cloud Object Storage**: Exports to IBM Cloud Object Storage
 
-    **Image catalog**
+   Image catalog
 
-    If you selected **Image catalog** as the export destination, complete the following steps:
+   :   If you selected **Image catalog** as the export destination, complete the following steps:
 
-    1. Enter an image name in the **Image name** field.
+         1. Enter an image name in the **Image name** field.
 
-    2. Optional: enter tags in the **User tags** field.
+         2. Optional: enter tags in the **User tags** field.
 
-    **IBM Cloud Object Storage**
+   IBM Cloud Object Storage
 
-    If you selected **IBM Cloud Object Storage** as the export destination, complete the following steps:
+   :   If you selected **IBM Cloud Object Storage** as the export destination, complete the following steps:
 
-    1. Select the **Region** where your IBM Cloud Object Storage bucket is located.
+         1. Select the **Region** where your IBM Cloud Object Storage bucket is located.
 
-    2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. Optionally, you can specify folder paths within the bucket.
+         2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. Optionally, you can specify folder paths within the bucket.
 
-    3. In the **HMAC access key** field, provide your HMAC access key. For more information, see [Generating HMAC credentials](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
+         3. In the **HMAC access key** field, provide your HMAC access key. For more information, see [Generating HMAC credentials](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
 
-    4. In the **HMAC secret access key** field, provide your HMAC secret access key.
+         4. In the **HMAC secret access key** field, provide your HMAC secret access key.
 
-    5. Set **Generate checksum file** to **On** to generate a checksum file.
+         5. Set **Generate checksum file** to **On** to generate a checksum file.
 
        The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and has the file extension `.sha256`. Use the command `shasum -a 256` to verify that the copied file is correct.
 
