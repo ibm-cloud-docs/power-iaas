@@ -113,8 +113,8 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                        |
 | -------------------- | -------------------------- | ------------------------------------------------------ |
 | Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
 {: caption="Supported AIX versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported AIX versions for {{site.data.keyword.powerSys_notm}}"}
 {: #aix-public-private}
