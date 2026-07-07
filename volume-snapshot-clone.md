@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-18"
+lastupdated: "2026-07-07"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -544,7 +544,7 @@ You must consider the following restrictions and considerations before you start
 - If you cancel the `execute` operation of a volumes-clone request, the status of the volumes-clone request is changed to `cancelling`.
 
 #### Restrictions for executing a volumes-clone request
-{: #start-vol-clone-res}
+{: #execute-vol-clone-res}
 
 You can control the behavior of a failed `execute` operation by using the `rollbackPrepare` option. The default value of the `rollbackPrepare` option is `false`. The default value leads the failed `execute` operation to roll back the clone activity and does not remove the prepared snapshot. If the `rollbackPrepare` option is set to `true`, it leads the failed `execute` operation to roll back the clone activity and removes the prepared snapshot.
 

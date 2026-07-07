@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-07"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -398,7 +398,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
-{: #snapshot-group}
+{: #vpmem-composite-service}
 {: tab-title="vPMEM group"}
 {: translate="no"}
 

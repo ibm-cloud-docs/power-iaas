@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-02"
+lastupdated: "2026-07-07"
 
 keywords: Operating systems, powerVS OS
 
@@ -158,7 +158,7 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 | Power9[^f]           | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP \n * SLES 15.5 SAP \n * SLES 15.4 SAP | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) \n * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) \n * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) \n * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP) \n * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER) |
 {: caption="Supported Linux versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported Linux versions for {{site.data.keyword.powerSys_notm}}"}
-{: #linux-public-private}
+{: #linux-public-private-sles}
 {: tab-title="Linux (SLES)"}
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}

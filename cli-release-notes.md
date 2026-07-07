@@ -232,7 +232,7 @@ Deprecated commands or options
 
 
 ### CLI version 1.5.2
-{: #cli-v1.6.0}
+{: #cli-v1.5.2}
 
 
 The CLI plug-in version 1.5.2 for the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} is available. In this version, a bug in the CLI plug-in metadata is fixed.
