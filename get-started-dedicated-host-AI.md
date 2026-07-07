@@ -263,7 +263,7 @@ To fetch the virtual host ID of a dedicated host, use the following API or CLI c
 
 The following code examples provide the old format and new format of the virtual host ID after the format is updated to the standard format:
 
-### Example 1: /v1/hosts/{host_id} format**
+### Example 1: /v1/hosts/{host_id} format
 {: #example1}
 
 Old format
@@ -330,7 +330,7 @@ New format
      ]
      ```
 
-### Example 2: /v1/host-groups/{host_group_id} format**
+### Example 2: /v1/host-groups/{host_group_id} format
 {: #example2}
 
 Old format
