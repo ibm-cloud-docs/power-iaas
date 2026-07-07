@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-06"
+lastupdated: "2026-07-07"
 
 keywords: ibm i, program temporary fixes
 
@@ -31,17 +31,10 @@ Install the following program temporary fixes (PTFs) depending on the version of
 
 
 
-
-
 - IBM i 7.3 - MF99213 (TR13) and SJ02851, SJ04128 
-- IBM i 7.4 - MJ99312 (TR12) and SJ09009, SJ04127 
+- IBM i 7.4 - MJ99312 (TR12) and SJ08183, SJ04127  
 - IBM i 7.5 - MJ99407 (TR7) and SJ08081 
-- IBM i 7.6 - MJ99501 (TR1)  
-
-
-
-
-
+- IBM i 7.6 - SJ08079   
 
 
 
