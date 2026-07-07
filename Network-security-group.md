@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-07-06"
+lastupdated: "2026-07-07"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -252,8 +252,9 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
       - **Any**: Ideal for creating rules that apply to any protocol over a specific port or a set of ports. However, this option does not provide control over specific protocol-based security.
 
 11. Depending on the protocol that you select from the list in the previous step, complete the following steps:
-      - **TCP**
-          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
+
+      TCP
+      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates from. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
@@ -268,14 +269,14 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
 
         
 
-      - **UDP**
-          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.
+      UDP
+      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
 
-      - **ICMP**
-          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
+      ICMP
+      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
           2. **ICMP Message type**: Select the required message type from the list. Supported types are:
                 - `all`
@@ -285,8 +286,8 @@ To allow or deny inbound traffic, inbound rules must be explicitly defined. To c
                 - `time-exceeded`
                 - `destination-unreach`
 
-      - **Any**
-          1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
+      Any
+      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
 
 12. Click **Create rule**.
 13. Click **Continue** to add members to the NSG.
