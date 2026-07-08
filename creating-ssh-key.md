@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2024
+  years: 2024, 2026 
 
-lastupdated: "2026-01-08"
+lastupdated: "2026-07-08"
 
 keywords: creating ssh key, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, video, how-to
 
@@ -85,8 +85,8 @@ You cannot access the SSH key between {{site.data.keyword.on-prem-fname}} locati
 Complete the following steps to create and set the visibility of an SSH key:
 
 1. Open a workspace to add an SSH key from the {{site.data.keyword.powerSys_notm}} user interface.
-2. Click **SSH keys** under **Compute**. The list of SSH keys that are associated with the workspace are displayed on the "SSH key" page.
-3. Click **Create SSH Key**. The "New SSH key" page appears.
+2. Click **SSH keys** under **Compute**. The list of SSH keys that are associated with the workspace are displayed on the SSH key page.
+3. Click **Create SSH Key**. The new SSH key page appears.
 4. Enter a unique name in the **Key name** field.
 5. Select one of the following options from the Access setting section to set the visibility of the SSH key:
    - **Workspace**: The SSH key is visible only in the workspace in which it is created.

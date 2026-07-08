@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-05"
+lastupdated: "2026-07-08"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -140,7 +140,7 @@ To deploy a certified profile for SAP Application Servers or SAP NetWeaver by us
 You can use the following commands to get the details of an SAP profile:
 
 * **CLI** : [ibmcloud pi image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image){:external}
-* **API** : [Get list of SAP profiles](/apidocs/power-cloud#pcloud-sap-getall){:external}
+* **API** : [Get list of SAP profiles](/docs/apis/power-cloud#pcloud-sap-getall){:external}
 
 The `Type` property of an SAP Application Server profile has the value `sap-rise-app`.
 {: note}

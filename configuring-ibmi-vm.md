@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -64,7 +64,7 @@ To open the VSI console on the first boot, complete the following steps:
 
 To disconnect from the VSI console session, close the web browser window that is titled 'noVNC'.
 
-If you lose internet connectivity, your VSI console session (provided through noVNC) displays the "Server disconnected (code: 1006)" message and does not auto-connect when internet connectivity is restored.
+If you lose internet connectivity, your VSI console session (provided through noVNC) displays an error and does not auto-connect when internet connectivity is restored.
 
 To restore the VSI console session, complete the following steps:
 
@@ -145,7 +145,7 @@ If the stock image is deployed without displaying the Operating System License I
 
 
 
-To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line "Selection or command ===>"), press ENTER, choose `1`, and press ENTER again.
+To verify that `cloud-init` configured your IP addresses correctly, on the **IBM i main menu** screen type the `cfgtcp` command in the console window (on line Selection or command ===>), press ENTER, choose `1`, and press ENTER again.
 
 One or more IP addresses with "Line Description" as `CLOUDINIT<<0..n>>` must be shown and match the network interfaces for the attached IBM Power VS network subnets that are shown in the IBM Power Virtual Server workspace. If the IP addresses match, then `cloud-init` configuration ran successfully.
 
@@ -171,7 +171,7 @@ F12=Cancel    F17=Top         F18=Bottom
 For external IP addresses, if you do not see the external IP address in the **Work with TCP/IP Interfaces** screen, wait approximately 10 minutes, open another terminal, and ping the external IP address. The external address must match what is shown in the {{site.data.keyword.powerSys_notm}} user interface within your instance's **Server details** page. Contact support or delete and reprovision your IBM i VSI if the ping doesn't return anything.
 
 
-Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line "Selection or command ===>"), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values must be populated for each license.
+Lastly, on the **IBM i main menu** screen type the `WRKLICINF` command in the console window (on line Selection or command ===>), press ENTER, then click **PF11** at the bottom of the console window to display the usage information. The Usage Limit, Usage Count and Peak Usage values must be populated for each license.
 
 When you have verified your network and license key configuration, you can initial program load (IPL) the LPAR.
 

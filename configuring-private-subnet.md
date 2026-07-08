@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -73,7 +73,7 @@ You cannot assign the subnet that is already assigned to another virtual machine
 
 5. Click **Subnets** in the left navigation panel, then click **Create subnet**. The new subnet panel is displayed.
 
-6. Enter a name, CIDR value (for example, '192.168.100.14/24'), gateway number (for example, '192.168.100.15'), and the IP range values for the subnet.
+6. Enter a name, CIDR value (for example, `192.168.100.14/24`), gateway number (for example, `192.168.100.15`), and the IP range values for the subnet.
 
 7. Enter the **DNS server** value.
 

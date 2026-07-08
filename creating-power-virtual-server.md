@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-06"
+lastupdated: "2026-07-08"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -533,7 +533,7 @@ When you attach boot volume post provisioning of the VSI, the boot image still s
 
 When you select the **Deploy empty virtual server instance** checkbox, you can provision a VSI without a boot image and boot volume. Review the following table to understand how the selection of the **Deploy empty virtual server instance** checkbox works along with the provisioning of the large quantity of data volumes:
 
-| Features                                          | 'Deploy empty virtual server instance' checkbox is clear                                                                                                                                                          | 'Deploy empty virtual server instance' checkbox is selected                                                                                                               |
+| Features                                          | Deploy empty virtual server instance checkbox is clear                                                                                                                                                          | Deploy empty virtual server instance checkbox is selected                                                                                                               |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Boot image and volume                             | Provision a VSI with a boot image and boot volume                                                                                                                                                                 | Provision a VSI without a boot image and boot volume.                                                                                                                     |
 | Creating new volume during VSI provisioning       | Create up to 10 volumes from the VSI provisioning page. To create volumes in bulk, use the [Storage volumes](https://cloud.ibm.com/power/storage) page in the {{site.data.keyword.powerSys_notm}} user interface. | You cannot create any volumes and attach to the VSI during initial provisioning. You can create up to 10 volumes after provisioning.                                      |
