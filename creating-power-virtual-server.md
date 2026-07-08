@@ -91,7 +91,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, the VSI is kept on its current host; however, downtime can occur during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard**.
 
-    For more information, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
+    For more information about VSI pinning, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
 
     - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
