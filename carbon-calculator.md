@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: cloud carbon calculator, carbon calculator, carbon emission, greenhouse gas
 
@@ -150,4 +150,4 @@ To view and export the GHG emissions data for an account, you must have the acco
 ### How to extract the GHG emissions data by using APIs?
 {: #ghg-howextract}
 
-You can use APIs related to the carbon calculator to extract the GHG emissions data. For more information, see [Carbon Calculator API](https://cloud.ibm.com/apidocs/carbon-calculator){: external}.
+You can use APIs related to the carbon calculator to extract the GHG emissions data. For more information, see [Carbon Calculator API](https://cloud.ibm.com/docs/apis/carbon-calculator){: external}.

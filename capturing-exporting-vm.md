@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -123,7 +123,7 @@ ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volum
 ## Capturing and exporting a VSI by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-capture-export}
 
-To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
+To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
 
 
 ## Viewing the capture and export results
@@ -135,7 +135,7 @@ You can monitor the progress of the operation by clicking **View details** next 
 
 To view details of a capture and export job by using the CLI, use the [`ibmcloud pi instance capture show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-capture-show) command.
 
-To view details of a capture and export job by using the API, use the [Get detail of last capture job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-get){: external} method.
+To view details of a capture and export job by using the API, use the [Get detail of last capture job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-pvminstances-capture-get){: external} method.
 
 If you select large volumes, the export process can take a significantly long time.
 {: important}

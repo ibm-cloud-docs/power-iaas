@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-02"
+lastupdated: "2026-07-08"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -98,7 +98,7 @@ The migration of an existing workspace to PER is supported through CLI by using 
 
 
 
-Before you migrate the last workspace in the data center to PER, delete any Cloud Connections that are not attached to any networks. After the migration, Cloud Connections can only be deleted using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+Before you migrate the last workspace in the data center to PER, delete any Cloud Connections that are not attached to any networks. After the migration, Cloud Connections can only be deleted using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 {: note}
 
 
@@ -352,7 +352,7 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
 PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and CLIs.
 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
-- API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
+- API - [Create a new cloud connection](/docs/apis/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
 
 ## Data centers that support PER

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-06"
+lastupdated: "2026-07-08"
 
 keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
@@ -46,7 +46,7 @@ You can use the user interface for placement groups only when the total number o
 {: #creating-placement-groups}
 
 
-You can create server placement groups to provision VSIs with an affinity or anti-affinity policy. Each placement group that you create must have a unique name. You can create a maximum of 25 placement groups. If you need to create more than 25 placement groups, raise a support ticket to increase the maximum limit. Use the following API to create a placement group: [Create a server placement group](/apidocs/power-cloud#pcloud-placementgroups-post).
+You can create server placement groups to provision VSIs with an affinity or anti-affinity policy. Each placement group that you create must have a unique name. You can create a maximum of 25 placement groups. If you need to create more than 25 placement groups, raise a support ticket to increase the maximum limit. Use the following API to create a placement group: [Create a server placement group](/docs/apis/power-cloud#pcloud-placementgroups-post).
 
 You can add or remove VSIs within the placement group. You cannot change the policy or name of a placement group after you create it.
 
@@ -82,17 +82,17 @@ The new placement group is displayed in the Server placement groups table. The t
 
 You can use the following APIs for managing server placement groups:
 
-- [Get all server placement groups](/apidocs/power-cloud#pcloud-placementgroups-getall): Displays all existing server placement groups.
-- [Get server placement group details](/apidocs/power-cloud#pcloud-cloud-placementgroups-get): Displays details about a specific server placement group.
-- [Delete server placement group](/apidocs/power-cloud#pcloud-placementgroups-delete): Deletes server placement groups even if they contain member instances.
-- [Remove server from placement group](/apidocs/power-cloud#pcloud-placementgroups-members-delete): Removes a virtual server instance from a server placement group.
+- [Get all server placement groups](/docs/apis/power-cloud#pcloud-placementgroups-getall): Displays all existing server placement groups.
+- [Get server placement group details](/docs/apis/power-cloud#pcloud-cloud-placementgroups-get): Displays details about a specific server placement group.
+- [Delete server placement group](/docs/apis/power-cloud#pcloud-placementgroups-delete): Deletes server placement groups even if they contain member instances.
+- [Remove server from placement group](/docs/apis/power-cloud#pcloud-placementgroups-members-delete): Removes a virtual server instance from a server placement group.
 
 ## Adding VSIs to a server placement group by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #add-server-pgroup}
 
 
 
-You can add VSIs to a server placement group.  You cannot add a VSI to a server placement group that contains a VSI in the **Build** state.  You must wait until the VSI changes to the **Active** state before adding another VSI to the server placement group. Use the following API to add a server to a placement group: [Add server to placement group](/apidocs/power-cloud#pcloud-placementgroups-members-post).
+You can add VSIs to a server placement group.  You cannot add a VSI to a server placement group that contains a VSI in the **Build** state.  You must wait until the VSI changes to the **Active** state before adding another VSI to the server placement group. Use the following API to add a server to a placement group: [Add server to placement group](/docs/apis/power-cloud#pcloud-placementgroups-members-post).
 
 
 When you add a VSI to the server placement group, the request might fail due to a conflict (409) with the affinity policy. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

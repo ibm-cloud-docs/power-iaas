@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -140,6 +140,7 @@ A small pod has a 1x42U rack and S1122 system type is supported in the rack. You
 {: caption="Small pod configuration." caption-side="top"}
 {: #S1122}
 {: tab-title="S1122"}
+{: #single-rack}
 
 
 

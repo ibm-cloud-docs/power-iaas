@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -258,7 +258,7 @@ To map a dedicated host with VSIs or SPP resources, you must use the values of t
 
 To fetch the virtual host ID of a dedicated host, use the following API or CLI commands:
 
-* API command &ndash; [get the list of all hosts](https://cloud.ibm.com/apidocs/power-cloud#v1-hosts-get) with the `?host_reference=true` query parameter.
+* API command &ndash; [get the list of all hosts](https://cloud.ibm.com/docs/apis/power-cloud#v1-hosts-get) with the `?host_reference=true` query parameter.
 * CLI command &ndash; [get the host information](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-host-get){: external} with the `--json` option.
 
 The following code examples provide the old format and new format of the virtual host ID after the format is updated to the standard format:

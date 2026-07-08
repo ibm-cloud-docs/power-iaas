@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -101,7 +101,7 @@ To view details of an image export job, use the [`ibmcloud pi image export-show`
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-export-image}
 
-To export a boot image to IBM Cloud Object Storage by using the API, use the [Add image export job to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-images-export-post){: external} method.
+To export a boot image to IBM Cloud Object Storage by using the API, use the [Add image export job to the jobs queue](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-images-export-post){: external} method.
 
 ## Viewing boot image export results
 {: #view-export-results}
@@ -116,7 +116,7 @@ After you start a boot image export operation, the **Status** column on the **Bo
 
 To view details of an image export job by using the CLI, use the [`ibmcloud pi image-export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-image-export-show) command.
 
-To view the image export status by using the API, use the [Get detail of last image export job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-images-export-get){: external} method.
+To view the image export status by using the API, use the [Get detail of last image export job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-images-export-get){: external} method.
 
 ## Related information
 {: #related-info-export}

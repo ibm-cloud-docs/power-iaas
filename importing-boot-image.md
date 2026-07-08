@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
 
@@ -169,7 +169,7 @@ To import a customized SAP HANA or SAP NetWeaver image, use the [`-d, --import-d
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method.
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method.
 
 To import a customized SAP HANA or SAP NetWeaver image, specify the following image details:
 
@@ -195,7 +195,7 @@ After you start a boot image import operation, the **Status** column on the **Bo
 
 To view details of an image import job by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
 
-To view the image import status by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
+To view the image import status by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}

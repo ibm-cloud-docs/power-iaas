@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2026 
+  years: 2023, 2026 # 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -137,7 +137,7 @@ The snapshot that you created is displayed in the Instance snapshots page with t
 
 You can create a snapshot by using the following API and CLI:
 
-- **API:** [Create a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-post)
+- **API:** [Create a PVM Instance snapshot](/docs/apis/power-cloud#pcloud-pvminstances-snapshots-post)
 
 - **CLI:** [ibmcloud pi snapshot create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
 
@@ -150,7 +150,7 @@ You must provide values for the following parameters in the API and CLI:
 
 
 
-You can use the [Get a list of flashcopy mappings of a given volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge){: external} API to confirm that the operation to create a snapshot of a volume is completed before you retry the resize operation.
+You can use the [Get a list of flashcopy mappings of a given volume](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge){: external} API to confirm that the operation to create a snapshot of a volume is completed before you retry the resize operation.
 
 
 
@@ -256,7 +256,7 @@ A failed restore operation changes the snapshot status to **Restore error**. You
 
 You can restore a snapshot by using the following API and CLI:
 
-* **API**: [Restore a PVM Instance snapshot](/apidocs/power-cloud#pcloud-pvminstances-snapshots-restore-post).
+* **API**: [Restore a PVM Instance snapshot](/docs/apis/power-cloud#pcloud-pvminstances-snapshots-restore-post).
 
 * **CLI**: [ibmcloud pi snapshot-restore](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-restore)
 
@@ -295,7 +295,7 @@ Consider the following scenarios to restore a snapshot:
 ### Restrictions for restoring a snapshot
 {: #restoring-snapshot-rest}
 
-* Volume restore operation is not allowed if any copy operations are running on the target volume. The volumes in the instance snapshot are validated to ensure that no copy operations are running against them. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
+* Volume restore operation is not allowed if any copy operations are running on the target volume. The volumes in the instance snapshot are validated to ensure that no copy operations are running against them. Use the API to [get a list of FlashCopy mappings for a volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
 
 * When you perform a `restore` operation, the snapshot task status changes to `restoring`, the volume status is changed to `reverting`, and no other snapshot operations are allowed.
 
@@ -303,7 +303,7 @@ Consider the following scenarios to restore a snapshot:
 
 * Before you perform a `restore` operation on a boot disk, the virtual machine must be shut down and the status must change to `shutoff` state.
 
-* You cannot restore a virtual server instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
+* You cannot restore a virtual server instance snapshot if the snapshot was recently created and the `FlashCopy` operations are still running in the background. The `FlashCopy` operations must first get completed. Use the API to [get a list of FlashCopy mappings for a volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-flashcopymappings-ge) or the CLI to [get a list of FlashCopy mappings for a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping).
 
 
 
@@ -348,7 +348,7 @@ You cannot recover a snapshot after it is successfully deleted.
 
 You can delete a snapshot by using the following API and CLI:
 
-* **API**: [Delete a PVM instance snapshot of a cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-snapshots-delete){: external}.
+* **API**: [Delete a PVM instance snapshot of a cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-snapshots-delete){: external}.
 
 * **CLI**: [ibmcloud pi snapshot-delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-delete){: external}.
 
@@ -423,7 +423,7 @@ When a `Prepare action` operation is in progress, you cannot trigger another `Pr
 
 You can initiate the `Prepare action` operation by using the following API and CLI:
 
-- **API**: [Create a new volumes clone request and initiates the Prepare action](/apidocs/power-cloud#pcloud-v2-volumesclone-post)
+- **API**: [Create a new volumes clone request and initiates the Prepare action](/docs/apis/power-cloud#pcloud-v2-volumesclone-post)
 - **CLI**: [ibmcloud pi volume clone create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-create)
 
 You must provide values for the following parameters in the API and CLI:
@@ -450,7 +450,7 @@ When a clone operation is performed on a volume that is in the `in-use` state, {
 
 - A minimum of 2 volume IDs are required and at least one of them must be in the `in-use` state.
 
-To clone a single volume, you can use the [Create a volume clone for specified volumes](/apidocs/power-cloud#pcloud-v2-volumes-clone-post) API or the [ibmcloud pi volume clone-async](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-async) CLI. To check on the status of the single volumes-clone, you can use the [Get the status of a volumes clone request for the specified clone task ID](/apidocs/power-cloud#pcloud-v2-volumes-clonetasks-get) API or the [ibmcloud pi volume clone-async get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-async-get) CLI.
+To clone a single volume, you can use the [Create a volume clone for specified volumes](/docs/apis/power-cloud#pcloud-v2-volumes-clone-post) API or the [ibmcloud pi volume clone-async](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-async) CLI. To check on the status of the single volumes-clone, you can use the [Get the status of a volumes clone request for the specified clone task ID](/docs/apis/power-cloud#pcloud-v2-volumes-clonetasks-get) API or the [ibmcloud pi volume clone-async get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-async-get) CLI.
 {: note}
 
 - You cannot modify the source or target disk attributes such as disk size, while the clone operation is in progress.
@@ -475,7 +475,7 @@ The initial status of the volume-clone request is set to `Starting`.
 
 You can start the volumes-clone request by using the following API and CLI:
 
-- **API**: [Initiate the Start action for a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-start-post)
+- **API**: [Initiate the Start action for a volumes-clone request](/docs/apis/power-cloud#pcloud-v2-volumesclone-start-post)
 - **CLI**: [ibmcloud pi volume clone start](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-start)
 
 You must provide the unique identifier of a volumes-clone request in the `volume_clones_id` parameter. The identifier can be the volumes-clone ID or the volumes-clone name.
@@ -515,7 +515,7 @@ After you start the `execute` operation, the initial `percentComplete` will be 0
 
 You can execute the volumes-clone request by using the following API and CLI:
 
-- **API**: [Initiate the Execute action for a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-execute-post)
+- **API**: [Initiate the Execute action for a volumes-clone request](/docs/apis/power-cloud#pcloud-v2-volumesclone-execute-post)
 - **CLI**: [ibmcloud pi volume clone execute](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-execute)
 
 You must provide values for the following parameters in the API and CLI:
@@ -567,7 +567,7 @@ After you start the `cancel` operation, the initial `percentComplete` will be 0%
 
 You can cancel the volumes-clone request by using the following API and CLI:
 
-- **API**: [Cancel a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-cancel-post)
+- **API**: [Cancel a volumes-clone request](/docs/apis/power-cloud#pcloud-v2-volumesclone-cancel-post)
 - **CLI**: [ibmcloud pi volume clone cancel](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-cancel)
 
 You must provide values for the following parameters in the API and CLI:
@@ -601,7 +601,7 @@ The volumes-clone request must be in one of these final statuses: `Completed`, `
 
 You can delete the volumes-clone request by using the following API and CLI:
 
-- **API**: [Delete a volumes-clone request](/apidocs/power-cloud#pcloud-v2-volumesclone-delete)
+- **API**: [Delete a volumes-clone request](/docs/apis/power-cloud#pcloud-v2-volumesclone-delete)
 - **CLI**: [ibmcloud pi volume clone delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-delete)
 
 You must provide values for the following parameters in the API and CLI:
@@ -631,7 +631,7 @@ None.
 
 You can get the status of volumes-clone request by using the following API and CLI:
 
-- **API**: [Get the status of a volumes clone request for the specified clone task ID](/apidocs/power-cloud#pcloud-v2-volumes-clonetasks-get)
+- **API**: [Get the status of a volumes clone request for the specified clone task ID](/docs/apis/power-cloud#pcloud-v2-volumes-clonetasks-get)
 - **CLI**: [ibmcloud pi volume clone get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-get)
 
 Provide a value for the `volume-clones-id` field. The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
@@ -663,7 +663,7 @@ None.
 
 You can get a list of volumes-clone request by using the following API and CLI:
 
-- **API**: [Get the list of volumes-clone request for a cloud instance](/apidocs/power-cloud#pcloud-v2-volumesclone-getall)
+- **API**: [Get the list of volumes-clone request for a cloud instance](/docs/apis/power-cloud#pcloud-v2-volumesclone-getall)
 - **CLI**: [ibmcloud pi volume clone list](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone-list)
 
 Provide one of the values to the `filter` parameter from the following list:

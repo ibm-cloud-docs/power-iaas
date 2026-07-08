@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-11"
+lastupdated: "2026-07-08"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -197,7 +197,7 @@ The use of fixed IOPS is limited to volumes with a size of 200 GB or less, which
 ### Working with the APIs
 {: #IOPS-api}
 
-Use the [List all supported storage tiers for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
+Use the [List all supported storage tiers for this cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-storagetiers-getall) API to see the supported IOPS levels available for your workspace.
 
 The storage tier that you choose does not influence the determination of the storage pool where a volume gets created in. If the storage tier is not specified, then the storage tier is set to Tier 3, by default.
 
@@ -207,7 +207,7 @@ The storage pool selection is based on the use of storage pool or storage affini
 
 
 
-To view the tier of volumes attached to an instance, use the [Detailed info of a volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
+To view the tier of volumes attached to an instance, use the [Get a Cloud Instance's current state/information](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
 {: note}
 
 

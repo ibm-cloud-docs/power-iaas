@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-06-26"
+lastupdated: "2026-07-08"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -44,7 +44,7 @@ Identity endpoints
 Metadata endpoint
 :   The metadata endpoint provides access to the metadata for a VSI. {{site.data.keyword.powerSys_notm}} supports the instance metadata endpoint, which returns information about the VSI including the instance ID, name, CRN, workspace information, and network configuration.
 
-For more information about using these APIs, refer to the {{site.data.keyword.powerSys_notm}} [Metadata and Identity API](https://cloud.ibm.com/apidocs/power-cloud-metadata-identity){: external} documentation.
+For more information about using these APIs, refer to the {{site.data.keyword.powerSys_notm}} [Metadata and Identity API](https://cloud.ibm.com/docs/apis/power-cloud-metadata-identity){: external} documentation.
 
 ## Activity tracking events
 {: #metadata-auditing}
@@ -300,7 +300,7 @@ An identity access token is a security credential that you use to access the {{s
 Communication between the VSI and the metadata service remains within the {{site.data.keyword.powerSys_notm}} environment. You can access the APIs only from a {{site.data.keyword.powerSys_notm}} VSIs. You cannot access the metadata and Identity APIs by using the {{site.data.keyword.powerSys_notm}} user interface or CLI.
 {: important}
 
-To obtain the identity access token, send a `PUT https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token` request to the [{{site.data.keyword.powerSys_notm}} Identity API](/apidocs/power-cloud-identity#pvs-identity-api).
+To obtain the identity access token, send a `PUT https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token` request to the [{{site.data.keyword.powerSys_notm}} Identity API](/docs/apis/power-cloud-identity#pvs-identity-api).
 
 ```sh
 curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" \

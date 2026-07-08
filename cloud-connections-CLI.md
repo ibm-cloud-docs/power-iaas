@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-07-02"
+lastupdated: "2026-07-08"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -156,7 +156,7 @@ When you delete a virtual server instance, it deletes the private networks (subn
 
 
 
-Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 {: note}
 
 

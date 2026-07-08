@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-08"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -328,7 +328,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can view and delete the connections using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can view and delete the connections using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 
 
 
@@ -576,7 +576,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 - Access the dedicated host capability from the {{site.data.keyword.powerSys_notm}} user interface. IBM Power S922 and S1022 servers can be provisioned for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
-- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/apidocs/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/apidocs/power-cloud#v1-snapshots-get) for API details.
+- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/docs/apis/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/docs/apis/power-cloud#v1-snapshots-get) for API details.
 
     Dedicated Hosts and Snapshots require PowerVC (PVC) 2.2.1 that is deployed worldwide except in four data centers. These four data centers are upgraded to PVC 2.2.1 with the following timeline:
 

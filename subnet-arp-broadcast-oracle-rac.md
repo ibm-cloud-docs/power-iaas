@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: ARP Broadcast, subnet ARP, subnet ARP Broadcast, Subnet ARP Broadcast Oracle RAC, Oracle RAC
 
@@ -81,8 +81,8 @@ To change the status of the **{{site.data.keyword.arp-broadcast}}** option for a
 To change the status of the **{{site.data.keyword.arp-broadcast}}** option for an existing subnet, use the following API or CLI commands:
 
 * **API**: Use the following APIs to enable or disable the ARP broadcast option:
-  * When you create a subnet, use the [Create a new Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-post) API.
-  * When you update a subnet, use the [Update a Network](/apidocs/power-cloud?loginMethod=federated#pcloud-networks-put) API.
+  * When you create a subnet, use the [Create a new Network](/docs/apis/power-cloud?loginMethod=federated#pcloud-networks-post) API.
+  * When you update a subnet, use the [Update a Network](/docs/apis/power-cloud?loginMethod=federated#pcloud-networks-put) API.
 
   Set the `arpBroadcast` parameter to `enable` or `disable` value. By default, the `arpBroadcast` parameter is set to `disable` value.
 
