@@ -93,7 +93,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
         For more information about VSI pinning, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
 
-    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
+    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
 8. Complete the **Boot image** fields.
 
