@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-09"
+lastupdated: "2026-07-10"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -98,13 +98,12 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization that is implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
-[Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request the IBM public cloud (infrastructure, VPC, and PaaS) SOC reports.
-
 
 
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
 -   SOC 1 Type II
 -   SOC 2 Type II
+
 
 
 
@@ -134,6 +133,8 @@ You are responsible for the storing, processing, and transmission of cardholder 
 Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request a PCI DSS Attestation of Compliance (AOC) or a Service Responsibility Matrix (SRM) guide for {{site.data.keyword.powerSys_notm}}.
 
 You can build PCI-DSS compliant environments and applications by using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
+
+PCI-DSS reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
 
 ## HIPAA
 {: #HIPAA-cert}
