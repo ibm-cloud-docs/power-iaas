@@ -109,7 +109,6 @@ The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
 
 
 
-
 ## ISO 27017:2015
 {: #ISO-cert}
 
