@@ -54,7 +54,7 @@ You must select the same region and zone as your VSI for all the configurations.
 {{site.data.keyword.powerSys_notm}} instances can access the internet through outbound network connections. The following architecture describes this setup:
 
 1. Connect the {{site.data.keyword.powerSys_notm}} workspace to a transit gateway. The transit gateway provides the connection between the {{site.data.keyword.powerSys_notm}} instance and the VPC infrastructure.
-2. Connecnt the transit gateway to a VPC that contains a network load balancer (NLB) that is configured in route mode.
+2. Connect the transit gateway to a VPC that contains a network load balancer (NLB) that is configured in the route mode.
 3. Route internet traffic from {{site.data.keyword.powerSys_notm}} instances through a VPC subnet to the internet by using the NLB as a routing gateway. The VPC security groups that are associated with the NLB filter the traffic between the {{site.data.keyword.powerSys_notm}} instance and the internet.
 4. Attach the VPC subnet to a public gateway, which provides the actual internet connectivity.
 
@@ -77,7 +77,7 @@ Planning the outbound connectivity for your {{site.data.keyword.powerSys_notm}} 
 
 Complete the following steps to configure outbound network access for {{site.data.keyword.powerSys_notm}}:
 
-Ensure that a VSI is created before you configure outbound network access. For more informaiton see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
+Ensure that a VSI is created before you configure outbound network access. For more information see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
 {: note}
 
 ### Step 1: Create the VPC infrastructure.
@@ -92,7 +92,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
     If the **Create a default prefix for each zone** checkbox is selected, IBM Cloud automatically creates default subnets in each available zone. You can use these default subnets for the NLB or create a custom subnet.
 
 
-2. Record the subnet ID and Classless Inter-Domain Routing (CIDR) range of the subnet. Use the subnet ID and CIDR range when you craete an NLB. For more information, see [Create NLB with routing mode](#create-nlb).
+2. Record the subnet ID and Classless Inter-Domain Routing (CIDR) range of the subnet. Use the subnet ID and CIDR range when you create an NLB. For more information, see [Create NLB with routing mode](#create-nlb).
 
 3. Create a public gateway and attach the public gateway to the VPC subnet. For instructions, see [Creating public gateways](/docs/vpc?topic=vpc-create-public-gateways&interface=ui){: external}.
 
@@ -212,7 +212,7 @@ The {{site.data.keyword.powerSys_notm}} instance sends the response from the pub
 
 Configure the inbound network by using the same VPC and subnet that is created in [Step 1: Create VPC infrastructure](#create-vpc).
 
-Ensure that a VSI is created and the outbound network access is configured before you configure the inbound network access. For more informaiton see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
+Ensure that a VSI is created and the outbound network access is configured before you configure the inbound network access. For more information see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
 {: note}
 
 ### Step 1: Attach a public address range (Public IP address) to the VPC.
@@ -238,7 +238,7 @@ If you have a public IP address that is attached to your VPC, do not perform thi
 
 Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create NLB](#create-nlb).
 
-If you have not created an NLB, create an NLB in route mode. For instructions, see [Step 2: Create NLB](#create-nlb).
+If you have not created an NLB, create an NLB in the route mode. For instructions, see [Step 2: Create NLB](#create-nlb).
 {: note}
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
@@ -318,7 +318,7 @@ Configure the secondary interface in the guest operating system on your VSI, and
 
 If the outbound connectivity is configured, the required security groups are already mapped to your NLB. Verify that the security group allows the required inbound ports for your public IP address.
 
-If the security groups that are mapped with your NLB does not permit the inbound internet traffic, configure the security groups to add the rules for inbound internet traffic. For instrauctions, see [Defining security group rules](/docs/vpc?topic=vpc-using-security-groups#defining-security-group-rules){: external}.
+If the security groups that are mapped with your NLB does not permit the inbound internet traffic, configure the security groups to add the rules for inbound internet traffic. For instructions, see [Defining security group rules](/docs/vpc?topic=vpc-using-security-groups#defining-security-group-rules){: external}.
 
 For new outbound or inbound connections, map the required security groups with the NLB. You can also adjust the rules to match your security requirements. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
 
