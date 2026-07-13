@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-07-13"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -817,19 +817,20 @@ You can change the tier of the replication-enabled volume by using the following
 
 You can modify the attributes of a replication-enabled primary volume. To modify some of the properties of the primary and auxiliary volumes, you must perform related actions on the primary and secondary locations.
 
-### Changing the size of a primary volume
+### Changing the capacity of a primary volume
+{: #changing-capacity-primary-vol}
 
-To change the size of a replication-enabled primary volume, complete the following steps:
+To change the capacity of a replication-enabled primary volume, complete the following steps:
 
 1. Remove the primary volume from the volume group
-2. Change the size of the primary volume
+2. Change the capacity of the primary volume
 3. Add the primary volume back to the volume group
 
-In the next 24 hours, the size of the auxiliary volume on the secondary location is changed.
+In the next 24 hours, the capacity of the auxiliary volume on the secondary location is changed.
 
-For example, on the `dal10` and `wdc07` location pair, when you change the size of a replication-enabled primary volume on the primary location, the system changes the size of the auxiliary volume on the secondary location in the next 24 hours.
+For example, on the `dal10` and `wdc07` location pair, when you change the capacity of a replication-enabled primary volume on the primary location, the system changes the size of the auxiliary volume on the secondary location in the next 24 hours.
 
-Use the following API and CLI commands to change the size of the replication-enabled primary volume:
+Use the following API and CLI commands to change the capacity of the replication-enabled primary volume:
 
 
 -**API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to primary volume ID and set the size in GB by using the following request body:
