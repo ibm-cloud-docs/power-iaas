@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 # 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-07-13"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -387,7 +387,7 @@ The cost of the snapshot is the sum of the costs of volume A and volume B.
 
 The clone operation creates a full copy of the volume. You can select multiple volumes and start a group clone operation. When multiple volumes are selected, the clone operation ensures that a consistent data copy is created.
 
-The clone operation continues to copy data from the source disks to target disks in the background. Depending on the size of the source disks and the amount of data to be copied, the clone operation can take a significant amount of time.
+The clone operation continues to copy data from the source disks to target disks in the background. Depending on the capacity of the source disks and the amount of data to be copied, the clone operation can take a significant amount of time.
 
 #### Prerequisites for creating a volume-clone request
 {: #vol-clon-bp-req}

@@ -358,7 +358,7 @@ For more information, see [How to calculate the pricing for OS licensing in SPP]
 
 {{site.data.keyword.on-prem-fname}} charges are based on the following storage types:
 
-* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. The following table shows an example billing based on your volume creation:
+* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume capacity when metered. The following table shows an example billing based on your volume creation:
 
    | Volume size that you create | Volume size that you are billed |
    | --------------------------- | ------------------------------- |

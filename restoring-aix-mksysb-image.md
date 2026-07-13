@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-07-13"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -89,7 +89,7 @@ In the following example, mksysb creates the image in /tmp. The `-i` builds the 
 mksysb -i -X -C -b 512 /tmp/my-mksysb
 ```
 
-Once the mksysb image is created, the storage volume size that is necessary to restore of the image can be extracted as follows. In this example, a 25 GB volume would be necessary.
+Once the mksysb image is created, the storage volume capacity that is necessary to restore of the image can be extracted as follows. In this example, a 25 GB volume would be necessary.
 
 
 ```screen
@@ -122,7 +122,7 @@ An AIX instance is required in {{site.data.keyword.powerSys_notm}} that can be c
 
 The instance must be at the same AIX version as the AIX instance where the mksyb image was created. {{site.data.keyword.powerSys_notm}} provides a set of stock images that can be used to facilitate the conversion. When deployed, the AIX instance needs some updates to host the mksysb image. Choose the stock image and deploy a new {{site.data.keyword.powerSys_notm}} AIX instance via the user interface or CLI with the cpu, memory, and network details that are required for the final converted instance.
 
-For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum required size in Megabytes. The following is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
+For example, if an AIX 7.2 based mksysb image is being used, choose the `7200-05-05` stock image. When deploying the instance, attach an additional storage volume with sufficient capacity for the mksysb image restore. Use the information from the bosinst.data file to get the minimum required capacity in Megabytes. The following is an example AIX 7.2 deployed instance with an additional 30 GB volume (hdisk1).
 
 The following details should be observed with the deployed AIX instance.
 
