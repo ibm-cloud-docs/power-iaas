@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-06-18"
+lastupdated: "2026-07-13"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -21,7 +21,7 @@ subcollection: power-iaas
 
 ---
 
-In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use Virtual Private Cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
+In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use virtual private cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
 {: shortdesc}
 
 A transit gateway connects VPCs and {{site.data.keyword.powerSys_notm}} workspaces.
@@ -70,7 +70,7 @@ Planning the outbound connectivity for your {{site.data.keyword.powerSys_notm}} 
 
 * A workspace with no external connections restricts LPAR and VSI communication to resources within the same Power Virtual Server workspace only.
 * A workspace that is connected to a transit gateway links to a VPC with internet access and enables outbound connectivity for the workspace resources.
-* Your {{site.data.keyword.powerSys_notm}} instance inherits network connectivity from the workspace configuration. As a result, you need not configure network access for individual LPAR or VSI instances.
+* Your {{site.data.keyword.powerSys_notm}} instances inherit network connectivity from the workspace configuration. As a result, you need not configure network access for individual LPAR or VSI instances.
 
 ## Configuring outbound network access for {{site.data.keyword.powerSys_notm}}
 {: #outbound-network}
@@ -87,7 +87,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
     When you create a VPC, set the following values:
     * Select the same region as your {{site.data.keyword.powerSys_notm}} workspace.
-    * Ensure that the **Create a default prefix for each zone** checkbox is selected.
+    * Ensure that you select the **Create a default prefix for each zone** checkbox.
 
     If the **Create a default prefix for each zone** checkbox is selected, IBM Cloud automatically creates default subnets in each available zone. You can use these default subnets for the NLB or create a custom subnet.
 
@@ -96,10 +96,10 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
 3. Create a public gateway and attach the public gateway to the VPC subnet. For instructions, see [Creating public gateways](/docs/vpc?topic=vpc-create-public-gateways&interface=ui){: external}.
 
-### Step 2: Create a private NLB in route mode.
+### Step 2: Create a private NLB in the route mode.
 {: #create-nlb}
 
-1. Create a private NLB in route mode. For instructions, see [Creating a network load balancer with routing mode by using the UI](/docs/vpc?topic=vpc-nlb-vnf&interface=ui#nlb-vnf-ui){: external}.
+1. Create a private NLB in the route mode. For instructions, see [Creating a network load balancer with routing mode by using the UI](/docs/vpc?topic=vpc-nlb-vnf&interface=ui#nlb-vnf-ui){: external}.
 
     When you create the NLB, set the following values:
     * Select the same VPC and VPC subnet that you created in [Step 1: Create VPC infrastructure](#create-vpc).
@@ -176,6 +176,14 @@ From the {{site.data.keyword.powerSys_notm}} VSI console, run the following comm
       ping -c4 <URL>
 ```
 {: codeblock}
+
+For example:
+
+```text
+      ping -c4 google.com
+```
+{: codeblock}
+
 
 If your outbound connectivity is not working, check whether your VPC security group is configured correctly. You must review the rules that allow only the required TCP protocols. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
 {: note}
@@ -268,7 +276,7 @@ The transit gateway that you created for outbound connectivity already connects 
 
 The transit gateway is already configured for outbound connectivity. For more information, see [Step 4: Configure VPC routing](#vpc-routing).
 
-### Step 6: Modify the VPC routing table that is mapped with the NLB subnet.
+### Step 6: Configure the VPC routing table that is mapped with the NLB subnet.
 {: #modify-route-table}
 
 Route the incoming traffic for the public IP address to the VPC subnet. Configure the default routing table and create a route for your VPC. For instructions, see [Creating a route](/docs/vpc?topic=vpc-create-vpc-route&interface=ui){: external}.
@@ -301,7 +309,7 @@ This static route configuration routes traffic for the public IP address directl
 ### Step 8: Configure the VSI network.
 {: #vsi-network}
 
-Since {{site.data.keyword.powerSys_notm}} does not support network address translation (NAT), you must configure the public IP address as a secondary interface in the guest operating system of your VSI. Retain the existing private interface for normal {{site.data.keyword.powerSys_notm}} subnet connectivity, and add the public IP address to a secondary interface.
+Because {{site.data.keyword.powerSys_notm}} does not support network address translation (NAT), you must configure the public IP address as a secondary interface in the guest operating system of your VSI. Retain the existing private interface for normal {{site.data.keyword.powerSys_notm}} subnet connectivity, and add the public IP address to a secondary interface.
 
 Configure the secondary interface in the guest operating system on your VSI, and not in the {{site.data.keyword.powerSys_notm}} console. Complete this task in the operating system of your VSI that receives the routed internet traffic.
 
