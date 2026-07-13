@@ -21,7 +21,7 @@ subcollection: power-iaas
 
 ---
 
-In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use virtual private cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
+In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use the virtual private cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
 {: shortdesc}
 
 A transit gateway connects VPCs and {{site.data.keyword.powerSys_notm}} workspaces.
