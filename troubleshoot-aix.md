@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-07-13"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS, object data manager, improving performance, suboptimal, lsattr
 
@@ -58,7 +58,7 @@ nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no
 
 For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-## My AIX VM Tier 1 (NVMe-based Flash Storage) disk is running at a suboptimal level. What can I do to improve its performance?
+## How can I improve the performance of my AIX VM Tier 1 NVMe-based Flash Storage disk?
 {: #troubleshoot-slow-aix}
 {: troubleshoot}
 

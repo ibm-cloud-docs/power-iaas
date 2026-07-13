@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-22"
+lastupdated: "2026-07-13"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -558,7 +558,7 @@ The following table shows how the pricing for OS licensing is calculated conside
 
 
 
-### Is there any initial one-time payment before the pod infrastructure is installed in the {{site.data.keyword.on-prem-fname}} data center?
+### Is there any initial one-time payment before the pod infrastructure is installed in the Private Cloud data center?
 {: #initial-one-time-payment}
 
    No

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-07-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -542,11 +542,11 @@ On a Linux VM, the following database is supported:
 
 You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
-## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
+## How can I get the WebSphere Application Server that is included with the **Web Enablement for i** packages?
 {: #web-enablement-for-ibmi}
 {: faq}
 
-If you have an IBM i VM instance with the licensed program bundle in the {{site.data.keyword.powerSys_notm}} offering, you can download the WebSphere Application Server. This is available in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
+If you have an IBM i VM instance with the licensed program bundle in the {{site.data.keyword.powerSys_notm}} offering, you can download the WebSphere Application Server at no extra cost. This is available in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
 1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: external}.
 
