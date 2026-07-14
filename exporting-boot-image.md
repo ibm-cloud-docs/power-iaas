@@ -85,30 +85,7 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-export-image}
 
-To export a boot image, use the [`ibmcloud pi image export`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export) command.
-
-Example command syntax:
-
-```sh
-ibmcloud pi image export IMAGE_ID --bucket BUCKET_NAME --region REGION_NAME --access-key KEY --secret-key KEY [--json]
-```
-{: pre}
-
-Where:
-
-`IMAGE_ID`
-:   The ID of the image to export.
-
-`BUCKET_NAME`
-:   The Cloud Object Storage bucket name.
-
-`REGION_NAME`
-:   The region where your bucket resides.
-
-`KEY`
-:   Your HMAC access and secret keys.
-
-To verify that the export completed successfully, use the [`ibmcloud pi image export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export-show) command.
+To export a boot image, use the [`ibmcloud pi image export`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export) command. To verify that the export completed successfully, use the [`ibmcloud pi image export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export-show) command.
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-export-image}
