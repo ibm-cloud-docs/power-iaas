@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-10"
+lastupdated: "2026-07-14"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -59,11 +59,11 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Select the workspace to which you want to import the boot image. The **Virtual server instances** page of the selected workspace is displayed.
+4. Select the workspace to which you want to import the boot image. The "Virtual server instances" page of the selected workspace is displayed.
 
-5. Click **Boot images** in the navigation panel, then click **Import image**. The Import boot image panel is displayed.
+5. Click **Boot images** in the navigation panel, then click **Import image**. The "Import boot image" panel is displayed.
 
-6. In the Import boot image panel, complete the following steps in the **Source** section:
+6. In the "Import boot image" panel, complete the following steps in the **Source** section:
 
    1. Select the image OS from the **Image OS** drop-down list.
 
@@ -130,63 +130,45 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
 9. Click **Import image**.
 
-The new boot image is listed on the **Boot images** page.
+The new boot image is listed on the "Boot images" page.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-import-image}
 
-You can use the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command to import a boot image from IBM Cloud Object Storage.
+To import a boot image, use the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command. To verify that the image was imported successfully, use the [`ibmcloud pi image list`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
 
-Example command syntax:
-
-```sh
-ibmcloud pi image import IMAGE_NAME --image-path IMAGE_PATH --os-type OS_TYPE --access-key KEY --secret-key KEY [--bucket BUCKET_NAME] [--region REGION_NAME] [--json]
-```
-{: pre}
-
-Where:
-
-`IMAGE_NAME`
-:   The name for the imported boot image.
-
-`IMAGE_PATH`
-:   The path to the image file in the bucket.
-
-`OS_TYPE`
-:   The operating system type.
-
-`KEY`
-:   Your HMAC access and secret keys.
-
-`BUCKET_NAME`
-:   The Cloud Object Storage bucket name.
-
-`REGION_NAME`
-:   The region where your bucket resides.
-
-To view the newly imported boot image, use the [`ibmcloud pi image`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
-
-Example command syntax:
-
-```sh
-ibmcloud pi images [--long] [--json]
-```
-{: pre}
-
-To import a customized SAP HANA or SAP NetWeaver image, use the [`-d, --import-details strings`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command.
+If you are bringing your own SAP HANA or SAP NetWeaver image with your own license, add the [`--import-details`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) flag to the `ibmcloud pi image import` command to identify the image as an SAP-certified image.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method.
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, also include `accessKey` and `secretKey`.
 
-To import a customized SAP HANA or SAP NetWeaver image, specify the following image details:
+```sh
+curl -X POST \
+  https://us-east.power-iaas.cloud.ibm.com/pcloud/v1/cloud-instances/$CLOUD_INSTANCE_ID/cos-images \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "CRN: $CRN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "imageName": "my-image-name",
+    "imageFilename": "my-os-image-file.ova.gz",
+    "bucketName": "my-cos-bucket-name",
+    "region": "us-east",
+    "accessKey": "my-cos-access-key",
+    "secretKey": "my-cos-secret-key",
+    "storageType": "tier3"
+  }'
+```
+{: pre}
 
-```text
-"importDetails":{
-   "licenseType":"byol",
-   "product":"Hana",
-   "vendor":"SAP"
+If you are bringing your own SAP HANA or SAP NetWeaver image with your own license, include the `importDetails` object in the request body to identify the image as an SAP-certified image:
+
+```json
+"importDetails": {
+   "licenseType": "byol",
+   "product": "Hana",
+   "vendor": "SAP"
 }
 ```
 {: codeblock}
@@ -194,7 +176,7 @@ To import a customized SAP HANA or SAP NetWeaver image, specify the following im
 ## Viewing boot image import results
 {: #view-import-results}
 
-After you start a boot image import operation, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The following information is displayed:
+After you start a boot image import operation, the **Status** column on the "Boot images" page shows the import progress. To view more details, click **View details** to open the "Ongoing job status" dialog. The following information is displayed:
 
 - Job ID
 - Operation type
@@ -202,11 +184,11 @@ After you start a boot image import operation, the **Status** column on the **Bo
 - Creation time
 - Steps completed
 
-To view details of a boot image import job by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
+To view the boot image import job details by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
 
-To view the image import status by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
+To view the boot image import job details by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}
 
-To download your boot image after importing it, navigate to the **Resource List** in the IBM Cloud dashboard, and access your **Cloud Object Storage** workspace. In the bucket where your boot image is stored, select the boot image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+To download the boot image after you import it, navigate to **Resource List** in the IBM Cloud dashboard, and access your **Cloud Object Storage** workspace. In the bucket where your boot image is stored, select the boot image file to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
