@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-14"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -103,7 +103,7 @@ As part of the network planning, you can review the following use cases and iden
 * **Outbound-only external connectivity via DNAT** - You can create external networks in the pod. Connectivity for these networks must be configured through a manual ticket process. After the connectivity configuration, LPARs can be deployed on them and they can access external networks. You can always deploy LPARs with both internal and external networks as separate network interfaces. For more information, see [Outbound-only external connectivity via DNAT](/docs/power-iaas?topic=power-iaas-network_use_cases#outbound-ext-conn-dnat){: external}.
 * **Bi-directional external connectivity via BGP** - You can deploy an external network within the pod to establish the communicating between the endpoints that are in the {{site.data.keyword.on-prem-fname}} network environment by using BGP. For more information, see [Bi-directional external connectivity via BGP](/docs/power-iaas?topic=power-iaas-network_use_cases#bi-dir-ext-conn-bgp){: external}.
 * **Bi-directional external connectivity via Static Route** - You can deploy an external network within the pod to establish the communicating between the endpoints that are in the {{site.data.keyword.on-prem-fname}} network environment by using static route similar to BGP. For more information, see [Bi-directional external connectivity via static routes](/docs/power-iaas?topic=power-iaas-network_use_cases#bi-dir-ext-conn-static-routes){: external}.
-* **Bi-directional external connectivity - L2Out** -  When you establish this type of external connectivity, it by-passes the router and directly connects to the network fabric. This type of connectivity is useful if the same IP address space is required on both internal and external networks. All the other types of external networks involve two distinct subnets. For more information, see [Bi-directional external connectivity via L2Out](/docs/power-iaas?topic=power-iaas-network_use_cases#bi-dir-ext-conn-L2out){: external}.
+* **Bi-directional external connectivity - L2Out** -  When you establish this type of external connectivity, it bypasses the router and directly connects to the network fabric. This type of connectivity is useful if the same IP address space is required on both internal and external networks. All the other types of external networks involve two distinct subnets. For more information, see [Bi-directional external connectivity via L2Out](/docs/power-iaas?topic=power-iaas-network_use_cases#bi-dir-ext-conn-L2out){: external}.
 
 
 ## Network architecture diagrams

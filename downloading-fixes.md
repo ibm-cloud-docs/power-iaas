@@ -1,11 +1,11 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2026-01-14"
+lastupdated: "2026-07-14"
 
-keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network intsall server
+keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network install server
 
 subcollection: power-iaas
 

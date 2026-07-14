@@ -3,9 +3,9 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-14"
 
-keywords: ibm i, network intsall server, volume_list
+keywords: ibm i, network install server, volume_list
 
 subcollection: power-iaas
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-14"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -85,7 +85,7 @@ Procedure
 
 You must note the following considerations when you configure VPC VPN in a non-PER workspace:
 
-* Use a policy-based VPN when you confirgure the VPN connections.
+* Use a policy-based VPN when you configure the VPN connections.
 * Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the following lists:
   * Local Classless Inter-Domain Routing (CIDR) list of IBM Cloud VPC
   * Peer CIDR list of IBM Cloud VPC in your client-managed environment

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-07-14"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -45,15 +45,15 @@ The following network architecture diagram explains how the PER is integrated in
 ![Power Edge Router network architecture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architecture diagram"){: caption="Power Edge Router network architecture diagram" caption-side="bottom"}
 
 The network traffic in a PER environment can flow in the following two ways:
-- Accessing classic infrastructure through the Transit Gateway.
-  - `1` - Traffic from ACI tenants is forwarded to the PER.
-  - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 
+- Accessing classic infrastructure through the Transit Gateway.
+   - `1` - Traffic from ACI tenants is forwarded to the PER.
+   - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 - Accessing cloud services that can access the resources that are attached to each other.
-  - `1`	- Traffic from ACI tenants is forwarded to the PER.
-  - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers. The Service Gateway converts the destination addresses to ADN and CSE networks.
-  - `4`	- The converted traffic from NAT is forwarded to PER.
-  - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
+   - `1`	- Traffic from ACI tenants is forwarded to the PER.
+   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers. The Service Gateway converts the destination addresses to ADN and CSE networks.
+   - `4`	- The converted traffic from NAT is forwarded to PER.
+   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
 

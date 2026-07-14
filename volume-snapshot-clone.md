@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 # 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-14"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -636,13 +636,13 @@ You can get the status of volumes-clone request by using the following API and C
 
 Provide a value for the `volume-clones-id` field. The value is the unique identifier of a volumes-clone request. The identifier can be the volumes-clone ID or the volumes-clone name.
 
-#### Considerations for gettting the status of volumes-clone request by using API and CLI
+#### Considerations for getting the status of volumes-clone request by using API and CLI
 {: #get-vol-clone-con}
 
 None.
 
 
-#### Restrictions for gettting the status of volumes-clone request by using API and CLI
+#### Restrictions for getting the status of volumes-clone request by using API and CLI
 {: #get-vol-clone-res}
 
 None.

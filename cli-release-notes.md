@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-07-07"
+lastupdated: "2026-07-14"
 
 ---
 
@@ -317,7 +317,7 @@ New options
 
 What's changed
 :   * In the [ibmcloud pi subnet create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-subnet-create) command `--access-config` option is deprecated for {{site.data.keyword.on-prem}} workspaces. Alternatively, you can use `--peer-id`, `--peer-type`, and `--source-id` options.
-    * The `che01` region is supported in the following commads:
+    * The `che01` region is supported in the following commands:
         * [ibmcloud pi image export](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export)
         * [ibmcloud pi image import](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import)
         * [ibmcloud pi instance capture](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-capture)
