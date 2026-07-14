@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-07-14"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -457,7 +457,7 @@ For example, you create a VSI with the name TEST-VSI and you delete this VSI lat
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} and [Deploying your infrastructure](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-set-up-power-sap-network){: external}.
 
-Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
+Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
 ## Configuring a VSI for Epic workloads
 {: #configuring-a-vm-for-epic-workloads}

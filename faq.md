@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -74,7 +74,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 {: #expand-pods}
 {: faq}
 
-Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
+Yes, you can add up to the maximum number of compute nodes for a specific configuration capacity. For example, you can start with 5 nodes and then add 3 more nodes.
 
 ## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional storage?
 {: #expand-pods-storage}
@@ -149,7 +149,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 {: faq}
 {: support}
 
-Each volume has a storage tier, which defines how many I/O operations per second (IOPS) can be started against that volume. These tiers can scale according to the size of the volume.
+Each volume has a storage tier, which defines how many I/O operations per second (IOPS) can be started against that volume. These tiers can scale according to the capacity of the volume.
 
 The following tiers are supported:
 * Tier 0 (25 IOPS/GB)
@@ -670,11 +670,11 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
 
-## What is the Maximum Transmission Unit (MTU) size that is supported in {{site.data.keyword.powerSys_notm}} networks?
+## What is the Maximum Transmission Unit (MTU) capacity that is supported in {{site.data.keyword.powerSys_notm}} networks?
 {: #mtu-max}
 {: faq}
 
-The {{site.data.keyword.powerSys_notm}} supports a smaller MTU size of 1476 bytes for the public network interfaces and for the private network interfaces that are attached to a {{site.data.keyword.powerSys_notm}} VPN.
+The {{site.data.keyword.powerSys_notm}} supports an MTU capacity of 1476 bytes for the public network interfaces and for the private network interfaces that are attached to a {{site.data.keyword.powerSys_notm}} VPN.
 
 ## Can I automate the Maximum Transmission Unit (MTU) configuration?
 {: #mtu-config}
