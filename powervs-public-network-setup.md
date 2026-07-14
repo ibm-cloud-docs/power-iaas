@@ -154,7 +154,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
     When you create the routing table, set the following values:
     * Select your VPC.
-    * In the **Traffic** section, set **Transit gateway** to on.
+    * In the **Traffic** section, set the **Transit gateway** to on.
     * Set **Advertise to** to **On**.
 
 2. Create a route. For instructions, see [Creating a route](/docs/vpc?topic=vpc-create-vpc-route&interface=ui){: external}.
