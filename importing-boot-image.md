@@ -34,7 +34,7 @@ When you import a boot image, you select a storage tier and storage pool for the
 Large boot images might take longer to import. You might experience a delay before you receive a confirmation message.
 {: note}
 
-Image capture, image export, and image import are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. Only one of these operations can run at a time per workspace. You cannot start a new operation until the ongoing operation completes.
+VSI capture, image export, and image import are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. Only one of these operations can run at a time per workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
 ## Before you begin
