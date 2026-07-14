@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-14"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -65,6 +65,7 @@ The following diagram illustrates the outbound network architecture to show how 
 When an LPAR or VSI in a {{site.data.keyword.powerSys_notm}} workspace sends traffic to the internet, it sends the data packets to the default gateway. The default gateway routes the traffic through the transit gateway to the VPC. The VPC routing table directs traffic to the NLB, which forwards the traffic through the public gateway to the internet. The return traffic follows the same path back to the {{site.data.keyword.powerSys_notm}} instance.
 
 ### Considerations for outbound connectivity
+{: #consideration-outbound}
 
 Planning the outbound connectivity for your {{site.data.keyword.powerSys_notm}} instance includes the following considerations:
 
@@ -168,7 +169,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
 
 ### Step 5: Test outbound connectivity.
-{: outbound-connectivity}
+{: #outbound-connectivity}
 
 From the {{site.data.keyword.powerSys_notm}} VSI console, run the following command to test the outbound connectivity:
 
@@ -273,6 +274,7 @@ If you have not created an NLB, create an NLB in the route mode. For instruction
 The transit gateway that you created for outbound connectivity already connects the VPC and Power Virtual Server. For more information, see [Step 3: Create transit gateway and connect to {{site.data.keyword.powerSys_notm}}](#create-transit-gateway).
 
 ### Step 5: Configure the VPC routing for the transit gateway.
+{: #vpc-routing-config}
 
 The transit gateway is already configured for outbound connectivity. For more information, see [Step 4: Configure VPC routing](#vpc-routing).
 
@@ -314,7 +316,7 @@ Because {{site.data.keyword.powerSys_notm}} does not support network address tra
 Configure the secondary interface in the guest operating system on your VSI, and not in the {{site.data.keyword.powerSys_notm}} console. Complete this task in the operating system of your VSI that receives the routed internet traffic.
 
 ### Step 9: Configure the security groups for the NLB to permit inbound internet traffic.
-{: configure-sg}
+{: #configure-sg}
 
 If the outbound connectivity is configured, the required security groups are already mapped to your NLB. Verify that the security groups allow the required inbound ports for your public IP address.
 
@@ -323,7 +325,7 @@ If the security groups that are mapped to your NLB do not permit the inbound int
 For new outbound or inbound connections, map the required security groups to the NLB. You can also adjust the rules to match your security requirements. For more information about security groups, see [About security groups](/docs/vpc?topic=vpc-using-security-groups){: external}.
 
 ### Step 10: Test the public IP address
-{: test-public-ip}
+{: #test-public-ip}
 
 Test the public IP address from outside the IBM network by using a protocol that is allowed by your network security group.
 
