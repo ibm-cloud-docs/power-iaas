@@ -40,7 +40,7 @@ Boot image import and export are long-running asynchronous operations that {{sit
 Before you import a boot image, complete the following prerequisites:
 
 - You have uploaded your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
-- You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
+- You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 - You have a {{site.data.keyword.powerSys_notm}} workspace.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
@@ -74,11 +74,11 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
    4. Enter the name of your bucket in the **Bucket name** field. If your image file is stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
-      To identify your bucket name, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
+      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
 
    5. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 
-      To find your service credentials, go to **Navigation menu > Resource list > Storage**, click your Cloud Object Storage instance name, and then go to **Service credentials > View credentials**.
+      To find your service credentials, go to **Navigation menu** > **Resource list** > **Storage**, click your Cloud Object Storage instance name, and then go to **Service credentials** > **View credentials**.
 
    6. Copy the `secret_access_key` value from your COS service credentials and paste it into the **HMAC secret access key** field.
 
@@ -119,7 +119,7 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
       The following storage pool placement options are available:
 
-      - **Auto-select**: Automatically creates the storage volume in a storage pool with sufficient capacity.
+      - **Auto-select**: Creates the storage volume in a storage pool with sufficient capacity automatically.
 
       - **Affinity**: Identifies the storage pool to use for placing the boot volumes, based on an existing VSI or storage volume from your account. {{site.data.keyword.powerSys_notm}} stores the custom image storage volumes in the same storage pool where the affinity object exists. If you use a VSI as the affinity object, {{site.data.keyword.powerSys_notm}} determines the storage pool based on the boot volume of that VSI.
 
@@ -142,7 +142,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, also include `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, also include `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ```sh
 curl -X POST \
@@ -176,7 +176,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Viewing boot image import results
 {: #view-import-results}
 
-After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
+After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the Ongoing job status dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type
@@ -192,3 +192,10 @@ To view the boot image import job details by using the API, use the [Get detail 
 {: #download-boot-image-cos}
 
 To download the boot image after you import it, navigate to **Resource list** in the IBM Cloud dashboard and access your **Cloud Object Storage** instance. In the bucket where you stored your boot image, click the boot image file, and then click **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+
+## Related information
+{: #related-info-import}
+
+For information about exporting custom boot images, see [Exporting a boot image](/docs/power-iaas?topic=power-iaas-exporting-boot-image).
+
+For information about capturing and exporting virtual server instances, see [Capturing and exporting a virtual server instance](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).

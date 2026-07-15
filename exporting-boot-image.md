@@ -37,7 +37,7 @@ Before you export a boot image, complete the following prerequisites:
 
 - You have a {{site.data.keyword.powerSys_notm}} workspace with at least one custom boot image in your image catalog.
 - You have an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
-- You have generated HMAC credentials for your COS instance. For more information about generating HMAC credentials, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
+- You have generated HMAC credentials for your COS instance. For more information about generating HMAC credentials, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-export-image}
@@ -64,11 +64,11 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
    2. In the **Bucket name** field, enter the name of the bucket to which you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
-      To identify your bucket name, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
+      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
 
    3. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 
-      To find your service credentials, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Then go to **Service credentials > View credentials**.
+      To find your service credentials, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Then go to **Service credentials** > **View credentials**.
 
    4. Copy the `secret_access_key` value from your COS service credentials and paste it into the **HMAC secret access key** field.
 
@@ -81,6 +81,8 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
 8. Click **Export**. The **Export boot image** dialog is displayed with the export operation details. Review the information and click **Export** to confirm.
 
+The boot image export job is submitted. You can monitor the progress in the **Status** column on the **Boot images** page. For more details, see [Viewing boot image export results](#view-export-results).
+
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-export-image}
 
@@ -89,12 +91,27 @@ To export a boot image, use the [`ibmcloud pi image export`](/docs/power-iaas?to
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-export-image}
 
-To export a boot image to IBM Cloud Object Storage by using the API, use the [Add image export job to the jobs queue](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-images-export-post){: external} method.
+To export a boot image to IBM Cloud Object Storage by using the API, use the [Add image export job to the jobs queue](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-images-export-post){: external} method with the following required properties in the request body: `accessKey` and `bucketName`. Optionally, include `region` and `secretKey`. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+
+```sh
+curl -X POST \
+  https://us-east.power-iaas.cloud.ibm.com/pcloud/v2/cloud-instances/$CLOUD_INSTANCE_ID/images/$IMAGE_ID/export \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "CRN: $CRN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "bucketName": "my-cos-bucket-name",
+    "accessKey": "my-cos-access-key",
+    "region": "us-east",
+    "secretKey": "my-cos-secret-key"
+  }'
+```
+{: pre}
 
 ## Viewing boot image export results
 {: #view-export-results}
 
-After you start a boot image export, the **Status** column on the **Boot images** page shows the export progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
+After you start a boot image export, the **Status** column on the **Boot images** page shows the export progress. To view more details, click **View details** to open the Ongoing job status dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type
