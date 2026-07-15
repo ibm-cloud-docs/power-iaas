@@ -30,9 +30,6 @@ You can export a custom boot image from your image catalog to IBM Cloud Object S
 Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. Only one of these operations can run at a time per workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
-The maximum image size that you can export is 10 TB.
-{: note}
-
 ## Before you begin
 {: #before-you-begin-export}
 
@@ -41,6 +38,9 @@ Before you export a boot image, complete the following prerequisites:
 - You have a {{site.data.keyword.powerSys_notm}} workspace with at least one custom boot image in your image catalog.
 - You have an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
 - You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
+
+The maximum image size that you can export is 10 TB.
+{: note}
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-export-image}
