@@ -176,7 +176,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Viewing boot image import results
 {: #view-import-results}
 
-After you start a boot image import operation, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
+After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type

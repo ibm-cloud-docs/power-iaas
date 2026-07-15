@@ -56,13 +56,13 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
 5. Click **Boot images** in the navigation panel.
 
-6. Click the options menu for the boot image that you want to export and select **Export**. The **Export boot image** panel is displayed.
+6. Click the overflow menu for the boot image that you want to export and select **Export**. The **Export boot image** panel is displayed.
 
 7. In the **Export boot image** panel, complete the following steps:
 
    1. From the **Region** dropdown list, select the region that contains your COS bucket.
 
-   2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
+   2. In the **Bucket name** field, enter the name of the bucket to which you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
       To identify your bucket name, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
 
@@ -74,12 +74,12 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
    5. Set **Generate checksum file** to **On** to generate a checksum file.
 
-      The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and uses the `.sha256` file extension. Run the `shasum -a 256` command to verify the integrity of the exported image file.
+      The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and uses the `.sha256` file extension. After the export completes, run the `shasum -a 256` command to verify the integrity of the exported image file.
 
    The maximum image size that you can export is 10 TB.
    {: note}
 
-8. Click **Export**. The **Export boot image** dialog opens with information about the export operation. Review the information and click **Export** to confirm.
+8. Click **Export**. The **Export boot image** dialog is displayed with the export operation details. Review the information and click **Export** to confirm.
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-export-image}
@@ -94,7 +94,7 @@ To export a boot image to IBM Cloud Object Storage by using the API, use the [Ad
 ## Viewing boot image export results
 {: #view-export-results}
 
-After you start a boot image export operation, the **Status** column on the **Boot images** page shows the export progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
+After you start a boot image export, the **Status** column on the **Boot images** page shows the export progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type
