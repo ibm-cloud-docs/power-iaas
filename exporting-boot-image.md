@@ -37,7 +37,7 @@ Before you export a boot image, complete the following prerequisites:
 
 - You have a {{site.data.keyword.powerSys_notm}} workspace with at least one custom boot image in your image catalog.
 - You have an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
-- You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
+- You have generated HMAC credentials for your COS instance. For more information about generating HMAC credentials, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-export-image}

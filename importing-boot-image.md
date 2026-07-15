@@ -191,4 +191,4 @@ To view the boot image import job details by using the API, use the [Get detail 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}
 
-To download the boot image after you import it, navigate to **Resource list** in the IBM Cloud dashboard and access your **Cloud Object Storage** instance. In the bucket where your boot image is stored, click the boot image file, and then click **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+To download the boot image after you import it, navigate to **Resource list** in the IBM Cloud dashboard and access your **Cloud Object Storage** instance. In the bucket where you stored your boot image, click the boot image file, and then click **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
