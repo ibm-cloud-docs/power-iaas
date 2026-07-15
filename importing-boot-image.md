@@ -31,10 +31,7 @@ You can import a boot image when you want to use a custom operating system (OS) 
 
 When you import a boot image, you select a storage tier and storage pool for the image. {{site.data.keyword.powerSys_notm}} places the boot volumes that are created from this imported boot image in the storage pool that you specify during the import. You cannot change the storage tier or storage pool after you import the image. A VSI can have disks from multiple storage types. All {{site.data.keyword.powerSys_notm}} data centers support Tier 0, Tier 1, Tier 3, and Fixed IOPs storage types.
 
-Large boot images might take longer to import. You might experience a delay before you receive a confirmation message.
-{: note}
-
-Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. Only one of these operations can run at a time per workspace. You cannot start a new operation until the ongoing operation completes.
+Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
 ## Before you begin
@@ -129,6 +126,9 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
       - **Anti-affinity**: Identifies one or more storage pools that you want to exclude. {{site.data.keyword.powerSys_notm}} does not consider the excluded storage pools when placing boot volumes. The pools to exclude are identified based on existing VSIs or storage volumes in your account. When you select this option, {{site.data.keyword.powerSys_notm}} excludes the storage pools where the anti-affinity objects exist when it creates the custom image storage volumes. If you use VSIs as the anti-affinity objects, {{site.data.keyword.powerSys_notm}} excludes the storage pools based on the boot volume of each VSI.
 
 9. Click **Import image**.
+
+   Large boot images might take longer to import. You might experience a delay before you receive a confirmation message.
+   {: note}
 
 The new boot image is listed on the **Boot images** page.
 

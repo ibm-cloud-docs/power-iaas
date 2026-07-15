@@ -27,7 +27,7 @@ subcollection: power-iaas
 You can export a custom boot image from your image catalog to IBM Cloud Object Storage by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. Use image export to back up or archive a customized image, or to copy it to a different workspace or account in the same or a different region.
 {: shortdesc}
 
-Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. Only one of these operations can run at a time per workspace. You cannot start a new operation until the ongoing operation completes.
+Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
 ## Before you begin
@@ -38,9 +38,6 @@ Before you export a boot image, complete the following prerequisites:
 - You have a {{site.data.keyword.powerSys_notm}} workspace with at least one custom boot image in your image catalog.
 - You have an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
 - You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main){: external}.
-
-The maximum image size that you can export is 10 TB.
-{: note}
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-export-image}
@@ -67,6 +64,8 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
    2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
+      To identify your bucket name, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
+
    3. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 
       To find your service credentials, go to **Navigation menu > Resource list > Storage** and click your Cloud Object Storage instance name. Then go to **Service credentials > View credentials**.
@@ -76,6 +75,9 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
    5. Set **Generate checksum file** to **On** to generate a checksum file.
 
       The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and uses the `.sha256` file extension. Run the `shasum -a 256` command to verify the integrity of the exported image file.
+
+   The maximum image size that you can export is 10 TB.
+   {: note}
 
 8. Click **Export**. The **Export boot image** dialog opens with information about the export operation. Review the information and click **Export** to confirm.
 
