@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-15"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -25,6 +25,8 @@ The metadata service uses a link-local network with IP address 169.254.169.253 o
 
 You must perform the following procedures while you are logged in to the operating system (OS) on your VSI. You can log in by using SSH or by accessing the OS through the {{site.data.keyword.powerSys_notm}} console.
 {: requirement}
+
+
 
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
 {: #reconfigure-ibmi-after-capture}
