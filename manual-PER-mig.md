@@ -106,7 +106,7 @@ You can run FLS with the migrated workspace in two ways:
 ## Additional information about PER migration
 {: #add-info-per-mig}
 
-If you need to make additional changes after the migration that require backend device configuration, complete the following actions:
+If you need to make additional changes after the migration that requires backend device configuration, complete the following actions:
 
 - **Create a subnet:** In the {{site.data.keyword.powerSys_notm}} user interface, create the subnet, and then open a support ticket so that the {{site.data.keyword.powerSys_notm}} operations team can configure the subnet on the backend devices.
 
