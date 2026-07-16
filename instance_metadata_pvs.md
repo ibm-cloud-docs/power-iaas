@@ -34,9 +34,7 @@ The {{site.data.keyword.powerSysFull}} metadata service provides information abo
 
 The metadata service provides metadata only about the VSI that makes the request. You can retrieve the VSI name, CRN, workspace information, and so on. For more information about all metadata that the metadata service returns, see [Power Virtual Server Metadata and Identity API](/docs/apis/power-cloud-metadata-identity){: external}.
 
-
 Access to the metadata service is disabled by default. You can enable access to the metadata service for your VSIs by using the {{site.data.keyword.powerSys_notm}} user interface, API, or the CLI.
-
 
 The metadata service provides the following API endpoints:
 
