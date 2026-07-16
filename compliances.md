@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-10"
+lastupdated: "2026-07-16"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -133,7 +133,8 @@ Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MA
 
 You can build PCI-DSS compliant environments and applications by using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
 
-PCI-DSS reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
+
+
 
 ## HIPAA
 {: #HIPAA-cert}

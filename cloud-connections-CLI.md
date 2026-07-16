@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-16"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -30,13 +30,7 @@ subcollection: power-iaas
 ## [Important announcement]{: tag-green}
 {: #imp-announcement}
 
-
-
-Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection). Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges.
-
-
-
-
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection). Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025. The `CHE01` data center continue to use Cloud Connections without any charges.
 
 To connect the Power Virtual Server workspaces with the IBM Cloud, use the [Power Edge Router](/docs/power-iaas?topic=power-iaas-per) (PER) capability that is integrated with the Transit Gateway service without any additional charge. PER-enabled workspaces provide improved user experience and increased bandwidth.
 
@@ -66,21 +60,9 @@ When you perform multiple {{site.data.keyword.powerSys_notm}} Cloud Connection t
 {: #create-cloud-connections}
 
 
+The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `CHE01` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. Direct Link is not operational until an authorized IBM Cloud account user with the required authority must authorize the connection by using [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
 
-
-
-The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `MON01` and `CHE01` data centers. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. Direct Link is not operational until an authorized IBM Cloud account user with the required authority must authorize the connection by using [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
-
-To create {{site.data.keyword.powerSys_notm}} Cloud Connection from the `MON01` and `CHE01` data centers, complete the following steps:
-
-
-
-
-
-
-
-
-
+To create {{site.data.keyword.powerSys_notm}} Cloud Connection from the `CHE01` data center, complete the following steps:
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Cloud connections**.
 2. On the Cloud connections page, click **Create connection**.

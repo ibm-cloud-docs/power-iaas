@@ -34,9 +34,78 @@ You can use the [`ibmcloud pi workspace action`](/docs/power-iaas?topic=power-ia
 
 If you manually configured your subnets and Direct Link through a support ticket, consider migrating your workspace to PER by opening a support ticket. With PER, you can benefit from built-in redundancy and increased bandwidth.
 
+## Determining your Direct Link configuration method
+{: #determine-dl-config}
 
+If you are unsure whether you manually configured subnets and Direct Link for your workspace, complete the following steps to verify your configuration method.
 
-[POWERIAAS-15741-end]{: tag-purple}
+### Identifying automatically configured Cloud connections
+{: #identify-cloud-connections}
+
+To confirm that you have an automatically configured Cloud connection, check the following two conditions:
+
+1. The connection appears on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace.
+
+   To verify this, complete the following steps:
+
+   1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external}.
+
+   2. In the search box, type **Power Virtual Server**, and click the **Power Virtual Server** tile.
+
+   3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
+
+   4. From the Workspaces page, select your workspace.
+
+   5. Click **Cloud connections** in the left navigation panel. The Cloud connections page is displayed.
+
+        If the **Cloud connections** option does not appear, your workspace is already PER-enabled, and this procedure does not apply to you. If your connections are listed here, continue to the next condition.
+
+2. The Direct Link details page displays the message "This Direct Link is read-only".
+
+   To verify this, complete the following steps:
+
+   1. Log in to the [IBM Cloud console](https://cloud.ibm.com){: external}.
+
+   2. From the navigation menu, select **Infrastructure** > **Network** > **Direct link**. The Direct Link page is displayed.
+
+   3. Click the Direct Link connection that has the same name as your Cloud connection.
+
+   4. In the **Details** section, check for the read-only message.
+
+If both conditions are met, your Direct Link connection was automatically configured through Cloud connections. Use the self-service automation to migrate to PER.
+
+### Identifying manually configured Direct Link 2.0
+{: #identify-manual-dl}
+
+To confirm that you have a manually configured Direct Link 2.0, check the following conditions:
+
+1. The connection does not appear on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace.
+
+   To verify this, complete the following steps:
+
+   1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external}.
+
+   2. In the search box, type **Power Virtual Server**, and click the **Power Virtual Server** tile.
+
+   3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
+
+   4. From the Workspaces page, select your workspace.
+
+   5. Click **Cloud connections** in the left navigation panel. If the **Cloud connections** option does not appear, your workspace is already PER-enabled. If no connections are listed or your Direct Link is not shown here, your Direct Link might be manually configured.
+
+2. The Direct Link details page does not display the message "This Direct Link is read-only".
+
+   To verify this, complete the following steps:
+
+   1. Log in to the [IBM Cloud console](https://cloud.ibm.com){: external}.
+
+   2. From the navigation menu, select **Infrastructure** > **Network** > **Direct link**.
+
+   3. Click the Direct Link connection.
+
+   4. In the **Details** section, verify that the read-only message is not displayed.
+
+If both conditions are met, your Direct Link connection was manually configured through a support ticket. In this case, you must also migrate to PER by opening a support ticket.
 
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-16"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -144,12 +144,7 @@ The PER status is displayed in the **PER status** column on the [**Workspaces**]
 If you are migrating the existing workloads to a new PER-enabled workspace, back up the data from the existing workspace, and restore the data to the new PER-enabled workspace.
 
 
-
-Only `CHE01` and `MON01` data centers are not PER-enabled. Therefore, use Cloud Connections for interconnectivity between other parts of the IBM network.
-
-
-
-
+Only `CHE01` data center is not PER-enabled. Therefore, use Cloud Connections for interconnectivity between other parts of the IBM network.
 
 
 
@@ -173,13 +168,7 @@ For example, `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name pow
 
 
 
-
-
-All the data centers, except `CHE01` and `MON01`, are PER-enabled. When you create a workspace in the PER-enabled data center, the workspace is PER-enabled by default.
-
-
-
-
+All {{site.data.keyword.powerSys_notm}} data centers, except `CHE01` are PER-enabled. When you create a workspace in the PER-enabled data center, the workspace is PER-enabled by default.
 
 
 
