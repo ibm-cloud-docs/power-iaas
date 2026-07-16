@@ -41,7 +41,7 @@ GRS support in data center pairs
 Disabling automated remote restart for a virtual server instance
 :   Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. You can disable automated remote restart by modifying the settings for a VSI. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-Monitoring boot image import, boot image export, and VSI capture and export status in the UI
+Monitoring boot image import, boot image export, and virtual server instance (VSI) capture and export status in the UI
 :   You can view the status of boot image import, boot image export, and VSI capture and export operations in the UI. This enhancement provides improved visibility into long-running image jobs before you start another image job. For more information, see [Viewing import boot image results](/docs/power-iaas?topic=power-iaas-importing-boot-image#view-import-results), [Viewing export boot image results](/docs/power-iaas?topic=power-iaas-exporting-boot-image#view-export-results), and [Viewing the capture and export results](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#view-capture-export-results).
 
 Metadata service and trusted profiles support
