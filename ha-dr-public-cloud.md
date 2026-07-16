@@ -58,6 +58,8 @@ Host failure recovery:
 
 - Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
 
+
+
 ## PowerHA SystemMirror for AIX Standard Edition
 {: #ha-dr-ha-standard}
 
@@ -75,6 +77,9 @@ Review the following information for implementing PowerHA SystemMirror for AIX i
 
 Licenses that are purchased outside a subscription model are not eligible for use with {{site.data.keyword.powerSys_notm}}.
 {: note}
+
+
+
 
 
 
