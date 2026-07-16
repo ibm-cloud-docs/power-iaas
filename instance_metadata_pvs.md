@@ -65,11 +65,9 @@ When you configure access to the metadata service, a network interface is create
 
 
 
-The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system. Review the following table to understand the configuration requirements for your operating system.
+The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system (OS). Review the following table to understand the configuration requirements for your OS.
 
 
-
-The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system. Review the following table to understand the configuration requirements for your operating system.
 
 
 

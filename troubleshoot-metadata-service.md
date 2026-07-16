@@ -31,7 +31,7 @@ The metadata service uses a link-local network with IP address 169.254.169.253 o
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
 {: #reconfigure-ibmi-after-capture}
 
-Learn how to restore the metadata service network interface on an IBM i VSI after you overwrite the operating system (OS) disk with a backup image.
+Learn how to restore the metadata service network interface on an IBM i VSI after you overwrite the OS disk with a backup image.
 
 ### Reconfiguring the metadata service interface after an OS disk overwrite
 {: #reconfigure-ibmi-after-os-or}
@@ -637,6 +637,6 @@ If the metadata service interface is configured but you cannot reach the metadat
 
    Select option 1 (Work with TCP/IP interfaces) and verify that the metadata service interface configuration is correct.
 
-5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your operating system, or another `CMN*` device might be available but unconfigured.
+5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another `CMN*` device might be available but unconfigured.
 
 If you are still unable to communicate with the metadata service endpoint, contact [IBM Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
