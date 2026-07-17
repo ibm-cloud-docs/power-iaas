@@ -1,2 +1,0 @@
-{{site.data.keyword.powerSys_notm}} uses `cloud-init` package to configure connectivity from a VSI to the metadata service. The `cloud-init` package is required for each OS. If you use a custom image and your OS does not have the IP address 169.254.169.253 configured after you enable metadata service access for your VSI, ensure that your custom image includes the `cloud-init` package.
-{: requirement}

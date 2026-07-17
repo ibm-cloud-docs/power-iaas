@@ -25,14 +25,14 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## July 2026
 {: #July-2026}
 
+
+
 ### 16 July 2026
 {: #power-iaas-jul1626}
 {: release-note}
 
 Power Edge Router available in `MON01` data center
 :   Power Edge Router (PER) is available in the `MON01` data center. For more information, see [Getting started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
-
-
 
 
 ## June 2026

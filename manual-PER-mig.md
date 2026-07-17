@@ -85,7 +85,9 @@ To confirm that you have a manually configured Direct Link 2.0, check the follow
 
    4. From the Workspaces page, select your workspace.
 
-   5. Click **Cloud connections** in the left navigation panel. If the **Cloud connections** option does not appear, your workspace is already PER-enabled. If no connections are listed or your Direct Link is not shown here, your Direct Link might be manually configured.
+   5. Click **Cloud connections** in the left navigation panel. The Cloud connections page is displayed.
+
+        If the **Cloud connections** option does not appear, your workspace is already PER-enabled. If no connections are listed or your Direct Link is not shown here, your Direct Link might be manually configured.
 
 2. The Direct Link details page does not display the message "This Direct Link is read-only". To verify, complete the following steps:
 
