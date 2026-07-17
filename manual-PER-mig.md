@@ -161,6 +161,8 @@ You can run FLS with the migrated workspace in two ways:
         ```
         {: .codeblock}
 
+    Where `127.0.0.1` refers to the local stub resolver on the virtual server instance.
+
 2. For existing virtual server instances that are deployed by using migrated subnets, add the following DNS IP addresses, or the specific DNS IP addresses for your environment, to the `/etc/resolv.conf` file:
 
     * `nameserver 161.26.0.10`
