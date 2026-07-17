@@ -32,7 +32,7 @@ You must have access to Direct Link to complete your PER migration. For more inf
 
 You can use the [`ibmcloud pi workspace action`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) CLI command to automate the migration of an existing network to PER. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
-If you manually configured your subnets and Direct Link through a support ticket, consider migrating your workspace to PER by opening a support ticket. With PER, you can benefit from built-in redundancy and increased bandwidth.
+If you manually configured your subnets and Direct Link through a support ticket, migrate your workspace to PER by opening a support ticket.
 
 ## Determining your Direct Link configuration method
 {: #determine-dl-config}
@@ -114,17 +114,19 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
 3.	In the **Subject** field, provide a brief description of your migration requirements.
 
-4.	In the **Description** box under additional information, provide the following information and click **Next**:
+4.	In the **Description** box under additional information, provide the following information:
 
-    1.  The CRN (cloud resource name) of the workspace that you want to migrate.
+    - The CRN (cloud resource name) of the workspace that you want to migrate
 
-    2.	The list of subnets configured in the workspace.
+    - The subnet configuration details for the workspace
 
-    3.	The list of Direct Link connections that the subnets are attached to.
+    - The Direct Link connection details associated with the workspace subnets
 
     The {{site.data.keyword.powerSys_notm}} operations team processes the support ticket by configuring PER and other network devices in parallel with the Direct Link configuration. When the PER configuration is complete, the team notifies you through a ticket update that the PER configuration is ready for your validation and testing.
 
-5.	Schedule a maintenance window during which you must provision the Transit Gateway to complete the PER network configuration. For more information, see [PER use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases). To route the network traffic through PER, complete the following steps:
+5. Click **Next**:
+
+6.	Schedule a maintenance window during which you must provision the Transit Gateway to complete the PER network configuration. For more information, see [PER use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases). To route the network traffic through PER, complete the following steps:
 
     1.	In the [IBM Cloud console](https://cloud.ibm.com){: external}, from the navigation menu, select **Infrastructure** > **Network** > **Direct link**.
 
@@ -136,9 +138,9 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     Repeat the preceding steps for each Direct Link connection. If you encounter any PER connectivity issues, you can revert to the Direct Link path. To revert, select **Permit all import routes** to unblock the Direct Link routes, and then disconnect the workspace from the Transit Gateway.
 
-6.	After successful testing (for example, a ping test), [delete the Direct Link connections](/docs/dl?topic=dl-delete-direct-link&interface=ui) and notify IBM by updating the ticket.
+7.	After successful testing (for example, a ping test), [delete the Direct Link connections](/docs/dl?topic=dl-delete-direct-link&interface=ui) and notify IBM by updating the ticket.
 
-7.	The {{site.data.keyword.powerSys_notm}} team marks the workspace as **Migrated** and closes the ticket.
+8.	The {{site.data.keyword.powerSys_notm}} team marks the workspace as **Migrated** and closes the ticket.
 
 After the workspace is migrated to the PER network through the ticketing process, continue to refer to the support ticket for network configuration information, including subnet creation, deletion, and gateway updates. Before you delete the pre-migration workspace, open a support ticket to remove the backend device configuration. Then, you can delete the workspace.
 {: important}
