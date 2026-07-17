@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-17"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -27,6 +27,8 @@ You must perform the following procedures while you are logged in to the operati
 The metadata service uses a link-local network with IP address 169.254.169.253 on your VSI and connects to the metadata service endpoint at 169.254.169.254. This network is system-created and must not be modified unless required to correct connectivity issues or as a cleanup activity, as described in this topic.
 
 
+
+{{_include-segments/cloud-init-metadata.md}}
 
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
 {: #reconfigure-ibmi-after-capture}
