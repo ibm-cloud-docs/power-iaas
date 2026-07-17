@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2025-07-24"
+lastupdated: "2026-07-07"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -57,7 +57,7 @@ Table 2 shows the number of PDUs and the corresponding power cords that are requ
 If you have selected the configuration with 4 PDUs, you can include 6 power drops in the facility plan to increase the number of PDUs in future.
 {: note}
 
-| Rack type                                    | PDU feature codes            | Number of PDUs | Number of Power S1122 servers                     | Number of Power S1150 servers | Number of Power S1122 and S1150 servers | Number of Power  S1180 servers  \n (no mixing) |
+| Rack type                                    | PDU feature codes            | Number of PDUs | Number of Power S1122 servers                     | Number of Power S1150 servers | Number of Power S1122 and S1150 servers | Number of Power  S1180 servers (no mixing) |
 | -------------------------------------------- | ---------------------------- | -------------- | ------------------------------------------------- | ----------------------------- | --------------------------------------- | --------------------------------------------- |
 | ESMP (Small)                                 | ECNJ or ECJQ**  \n (Default) | 4              | 8 x S1122 (includes management server)            | N/A                           | N/A                                     | N/A                                           |
 |                                              |                              | 6              | 3 extra S1122                                     | (C19 PDUs are required)       | N/A                                     | N/A                                           |

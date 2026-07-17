@@ -3,9 +3,9 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-15"
 
-keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3, ssd, nvme
+keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
 subcollection: power-iaas
 
@@ -26,16 +26,22 @@ subcollection: power-iaas
 
 ---
 
-You can import a custom boot image by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. All data centers use **Tier 0**, **Tier 1**, **Tier 3**, and **Fixed IOPs** storage types. After you create a storage volume, you cannot change its storage type. A virtual server instance (VSI) can have disks from multiple storage types. Large boot images take time to import successfully. You might experience a delay in receiving a confirmation message.
+You can import a boot image when you want to use a custom operating system (OS) image instead of an IBM-provided stock image. After you import the boot image, you can use it to create a {{site.data.keyword.powerSys_notm}} virtual server instance (VSI). You can import a boot image from an IBM Cloud Object Storage (COS) bucket by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API.
 {: shortdesc}
 
-Image import requires Hash-Based Message Authentication Code (HMAC) access and secret keys to access your IBM Cloud Object Storage bucket. To generate HMAC keys for your IBM Cloud Object Storage bucket, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+When you import a boot image, you select a storage tier and storage pool for the image. {{site.data.keyword.powerSys_notm}} places the boot volumes that are created from this imported boot image in the storage pool that you specify during the import. You cannot change the storage tier or storage pool after you import the image. A VSI can have disks from multiple storage types. All {{site.data.keyword.powerSys_notm}} data centers support Tier 0, Tier 1, Tier 3, and Fixed IOPs storage types.
+
+Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
-The {{site.data.keyword.powerSys_notm}} Job feature tracks long-running asynchronous operations like VSI capture, image export, and image import across multiple workspaces in your cloud account.
+## Before you begin
+{: #before-you-begin-import}
 
-The {{site.data.keyword.powerSys_notm}} VSI capture, image export, and image import features are restricted to one operation at a time per {{site.data.keyword.powerSys_notm}} workspace. If you submit one of these operations successfully, you cannot submit another operation (VSI capture, image export, or image import) until the previous operation completes.
-{: important}
+Before you import a boot image, complete the following prerequisites:
+
+- You have uploaded your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
+- You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+- You have a {{site.data.keyword.powerSys_notm}} workspace.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-import-image}
@@ -46,41 +52,43 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
 
-2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the {{site.data.keyword.powerSys_notm}} tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Select the workspace where you want to import the boot image. The **Virtual server instances** page of the selected workspace is displayed.
+4. Select the workspace to which you want to import the boot image. The "Virtual server instances" page of the selected workspace is displayed.
 
-5. Click **Boot images** in the navigation panel, then click **Import image**. The Import boot image panel is displayed.
+5. Click **Boot images** in the navigation panel, then click **Import image**. The "Import boot image" panel is displayed.
 
-6. In the Import boot image panel, complete the following steps in the **Source** section:
+6. In the **Import boot image** panel, complete the following steps in the **Source** section:
 
-   1. Select the image OS from the **Image OS** drop-down list.
+   1. Select the image OS from the **Image OS** dropdown list.
 
       If you select a customized SAP HANA or SAP NetWeaver image, select the self-certification checkbox.
 
-   2. Select the region where your image is stored from the **Region** drop-down list.
+   2. From the **Region** dropdown list, select the region that contains your COS bucket.
 
-   3. Enter the file name of the image in the **Image filename** field. The image file name must not contain spaces. Supported file formats are `tar` and `ova`. You can compress image files by using `gzip`. The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.ova.gz`.
+   3. Enter the file name of the image in the **Image filename** field. The image file name must not contain spaces.
 
-   4. Enter the name of your bucket in the **Bucket name** field. Optionally, you can specify folder paths within the bucket by using the format `<bucketName>/optional/folders`. Optional folders are created automatically if they do not exist.
+      The supported file name extensions are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. You can compress image files by using `gzip`. For example: `Aix_7200-03-02-1846_cldrdy_112018.ova.gz`.
 
-      To identify your bucket name, click the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > *Cloud Object Storage name* > Buckets**.
+   4. Enter the name of your bucket in the **Bucket name** field. If your image file is stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
-   5. Enter your HMAC access key in the **HMAC access key** field.
+      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
 
-      To identify your access key, select the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > *Cloud Object Storage name* > Service credentials > View credentials**. Copy the `access_key_id` value and paste it into the **HMAC access key** field.
+   5. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 
-   6. Enter your HMAC secret access key in the **HMAC secret access key** field.
+      To find your service credentials, go to **Navigation menu** > **Resource list** > **Storage**, click your Cloud Object Storage instance name, and then go to **Service credentials** > **View credentials**.
 
-      To identify your secret key, click the **menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > *Cloud Object Storage name* > Service credentials > View credentials**. Copy the `secret_access_key` value and paste it into the **HMAC secret access key** field.
+   6. Copy the `secret_access_key` value from your COS service credentials and paste it into the **HMAC secret access key** field.
 
-   7. Set **Validate import with checksum file** to **On** to validate the import file against the checksum file. You can generate the checksum file while you export the image files to the IBM Cloud Object Storage bucket. Place the checksum file and import images in the same bucket.
+   7. Set **Validate import with checksum file** to **On** to verify the imported file against the checksum file. You must store the checksum file and the boot image file in the same COS bucket.
 
-      The checksum file name is based on the name of the imported image file and uses the `.sha256` file extension. For more information about generating a checksum file, see [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
+      You can generate the checksum file when you export the image files to the IBM Cloud Object Storage bucket.
 
-      If you are creating your own image, you can create a checksum file and place the checksum file with your own image in the same bucket. You can generate the checksum file by using the `shasum -a 256 <filename>` or `sha256sum <filename>` command.
+      The checksum file name is based on the name of the boot image file and uses the `.sha256` file extension. For more information about generating a checksum file, see [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
+
+      If you create your own boot image, you can create a checksum file and store it with your boot image in the same bucket. You can generate the checksum file by running the `shasum -a 256 <filename>` or `sha256sum <filename>` command.
 
       Validating an import file against the checksum file might increase the import time.
       {: note}
@@ -89,9 +97,9 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
 8. Enter the following information in the **Destination** section:
 
-   1. In the **Custom image name** field, enter a name for the imported image.
+   1. In the **Custom image name** field, enter a name for the imported boot image.
 
-   2. Optional: In the **User tags** field, enter tags. If you use user tags for billing, consider using **key:value** pairs, such as `costctr:124`.
+   2. Optional: In the **User tags** field, enter tags to organize or identify this boot image.
 
       User tags are visible account-wide. Do not include sensitive data in tag names.
       {: note}
@@ -102,82 +110,65 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
       - **Tier 3 (3 IOPs / GB)**
       - **Fixed IOPs (5000 IOPs)**
 
-      **Tier 1** uses NVMe-based flash storage and **Tier 3** uses SSD flash storage.
-
-      A VSI cannot have disks from both **Tier 1** and **Tier 3** storage types.
+      A VSI cannot use Tier 1 and Tier 3 storage types simultaneously. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
       {: note}
 
-   4. In the **Storage pool** field, select a storage pool placement option. One or more custom image storage volumes are placed in the storage pool based on the storage pool placement options (auto-select, affinity, or anti-affinity) that you choose. The boot volume of any VSI that is deployed by using this image is created in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).
+   4. In the **Storage pool** field, select a storage pool placement option.
+
+      {{site.data.keyword.powerSys_notm}} places one or more custom image storage volumes in the storage pool based on the option that you select: **Auto-select**, **Affinity**, or **Anti-affinity**. The boot volume of any VSI that you deploy by using this image is created in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).
 
       The following storage pool placement options are available:
 
-      - **Auto-select**: Automatically creates the storage volume in a storage pool with sufficient capacity.
+      - **Auto-select**: Creates the storage volume in a storage pool with sufficient capacity automatically.
 
-      - **Affinity**: Identifies the storage pool that must be used to place the boot volumes, based on an existing PVM instance (VSI) or storage volume from your account. The custom image storage volumes are placed in the same storage pool where the affinity object resides. If you use a PVM instance as the affinity object, the storage pool that is selected to place the boot volumes is based on the root (boot) volume of the PVM instance.
+      - **Affinity**: Identifies the storage pool to use for placing the boot volumes, based on an existing VSI or storage volume from your account. {{site.data.keyword.powerSys_notm}} stores the custom image storage volumes in the same storage pool where the affinity object exists. If you use a VSI as the affinity object, {{site.data.keyword.powerSys_notm}} determines the storage pool based on the boot volume of that VSI.
 
-      - **Anti-affinity**: Identifies one or more storage pools that you want to exclude from selection. The excluded storage pools are not considered when boot volumes are placed based on the existing PVM instances (VSIs) or storage volumes in your account. While you choose a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are selected. If you use PVM instances as the anti-affinity objects, the storage pools are excluded depending on the root (boot) volume of each PVM instance.
+      - **Anti-affinity**: Identifies one or more storage pools that you want to exclude. {{site.data.keyword.powerSys_notm}} does not consider the excluded storage pools when placing boot volumes. The pools to exclude are identified based on existing VSIs or storage volumes in your account. When you select this option, {{site.data.keyword.powerSys_notm}} excludes the storage pools where the anti-affinity objects exist when it creates the custom image storage volumes. If you use VSIs as the anti-affinity objects, {{site.data.keyword.powerSys_notm}} excludes the storage pools based on the boot volume of each VSI.
 
 9. Click **Import image**.
 
-The new boot image is listed on the **Boot images** page.
+   Large boot images might take longer to import. You might experience a delay before you receive a confirmation message.
+   {: note}
 
-You can use the imported boot image to create a {{site.data.keyword.powerSys_notm}} virtual server instance.
+The new boot image is listed on the **Boot images** page.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-import-image}
 
-You can use the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command to import an image from IBM Cloud Object Storage.
+To import a boot image, use the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command. To verify that the import completed successfully, use the [`ibmcloud pi image list`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
 
-Example command syntax:
-
-```sh
-ibmcloud pi image import IMAGE_NAME --image-path IMAGE_PATH --os-type OS_TYPE --access-key KEY --secret-key KEY [--bucket BUCKET_NAME] [--region REGION_NAME] [--json]
-```
-{: pre}
-
-Where:
-
-`IMAGE_NAME`
-:   The name for the imported image.
-
-`IMAGE_PATH`
-:   The path to the image file in the bucket.
-
-`OS_TYPE`
-:   The operating system type.
-
-`KEY`
-:   Your HMAC access and secret keys.
-
-`BUCKET_NAME`
-:   The Cloud Object Storage bucket name.
-
-`REGION_NAME`
-:   The region where your bucket resides.
-
-To view the newly imported image, use the [`ibmcloud pi image`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
-
-Example command syntax:
-
-```sh
-ibmcloud pi images [--long] [--json]
-```
-{: pre}
-
-To import a customized SAP HANA or SAP NetWeaver image, use the [`-d, --import-details strings`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command.
+If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image, add the [`--import-details`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) flag to the `ibmcloud pi image import` command to identify the image as SAP-certified.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method.
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, also include `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
-To import a customized SAP HANA or SAP NetWeaver image, specify the following image details:
+```sh
+curl -X POST \
+  https://us-east.power-iaas.cloud.ibm.com/pcloud/v1/cloud-instances/$CLOUD_INSTANCE_ID/cos-images \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "CRN: $CRN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "imageName": "my-image-name",
+    "imageFilename": "my-os-image-file.ova.gz",
+    "bucketName": "my-cos-bucket-name",
+    "region": "us-east",
+    "accessKey": "my-cos-access-key",
+    "secretKey": "my-cos-secret-key",
+    "storageType": "tier3"
+  }'
+```
+{: pre}
 
-```text
-"importDetails":{
-   "licenseType":"byol",
-   "product":"Hana",
-   "vendor":"SAP"
+If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image, include the `importDetails` object in the request body to identify the image as SAP-certified:
+
+```json
+"importDetails": {
+   "licenseType": "byol",
+   "product": "Hana",
+   "vendor": "SAP"
 }
 ```
 {: codeblock}
@@ -185,7 +176,7 @@ To import a customized SAP HANA or SAP NetWeaver image, specify the following im
 ## Viewing boot image import results
 {: #view-import-results}
 
-After you start a boot image import operation, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the **Ongoing job status** dialog. The following information is displayed:
+After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the Ongoing job status dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type
@@ -193,11 +184,18 @@ After you start a boot image import operation, the **Status** column on the **Bo
 - Creation time
 - Steps completed
 
-To view details of an image import job by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
+To view the boot image import job details by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
 
-To view the image import status by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
+To view the boot image import job details by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}
 
-To download your image after importing it, navigate to the **Resource List** in the IBM Cloud dashboard, and access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+To download the boot image after you import it, navigate to **Resource list** in the IBM Cloud dashboard and access your **Cloud Object Storage** instance. In the bucket where you stored your boot image, click the boot image file, and then click **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+
+## Related information
+{: #related-info-import}
+
+For information about exporting custom boot images, see [Exporting a boot image](/docs/power-iaas?topic=power-iaas-exporting-boot-image).
+
+For information about capturing and exporting virtual server instances, see [Capturing and exporting a virtual server instance](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm).

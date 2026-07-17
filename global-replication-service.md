@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-25"
+lastupdated: "2026-07-13"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -139,7 +139,7 @@ The following table shows the location pairs that support replication.
 
 To get a list of {{site.data.keyword.powerSys_notm}} regions that are replication-enabled, use the following API or CLI commands:
 
-- **API**: [Get the disaster recovery site details for the current location](https://cloud.ibm.com/apidocs/power-cloud#pcloud-locations-disasterrecovery-get){: external}
+- **API**: [Get the disaster recovery site details for the current location](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-locations-disasterrecovery-get){: external}
 
 - **CLI**: [`ibmcloud pi disaster-recovery`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-disaster-recovery){: external}. Set the `--all-regions` flag as `true`.
 
@@ -174,7 +174,7 @@ To verify whether two data centers are a location pair that support replication,
 
 You can allocate replication-enabled volumes only from storage pools that support replication. To identify the storage pools that support replication, use the following API or CLI commands:
 
-- **API**: [Storage capacity for all available storage pools in a region](https://cloud.ibm.com/apidocs/power-cloud#pcloud-storagecapacity-pools-getall){: external}
+- **API**: [Storage capacity for all available storage pools in a region](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-storagecapacity-pools-getall){: external}
 
 - **CLI**: [`ibmcloud pi storage-pools`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-storage-pools){: external}
 
@@ -269,7 +269,7 @@ The boot volumes of virtual server instances that you create are always set to n
 
 You can also create a replication-enabled volume by using the following API or CLI commands:
 
-- **API**: [Create a new data Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-post).
+- **API**: [Create a new data Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-post).
 - **CLI**: [ibmcloud pi volume create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-create).
 
 Set the values for the following parameters:
@@ -287,7 +287,7 @@ After you create a replication-enabled volume, retrieve the details of the volum
 
 Use the following API and CLI commands to get the replication-status of a volume:
 
-- **API**: [List all volumes for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-volumes-getall). Set the value of the `VOLUME_ID` parameter to the primary volume ID.
+- **API**: [List all volumes for this cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-getall). Set the value of the `VOLUME_ID` parameter to the primary volume ID.
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get). Set the value of the `VOLUME_ID` parameter to the primary volume ID.
 
 Refer to the following table for the properties of a replication-enabled volume.
@@ -310,7 +310,7 @@ Refer to the following table for the properties of a replication-enabled volume.
 
 Create a volume group (consistency group) to add replication-enabled volumes to it. You can create a volume group by using the following API or CLI commands:
 
-- **API**: [create a new volume group](/apidocs/power-cloud#pcloud-volumegroups-post)
+- **API**: [create a new volume group](/docs/apis/power-cloud#pcloud-volumegroups-post)
 - **CLI**: [ibmcloud pi volume-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-create)
 
 Set the value of the `VOLUME_ID` parameter to the primary volume ID. Provide a name for the primary volume group and the primary volume IDs to create the volume group.
@@ -323,7 +323,7 @@ A replication-enabled volume can be attached to a volume group when you create i
 
 Verify that the volume group is created successfully and it is in a `consistent_copying` state by using the following API or CLI commands:
 
-- **API**: [get storage details of the volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get)
+- **API**: [get storage details of the volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get)
 - **CLI**: [ibmcloud pi volume-group storage-details](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details)
 
 Set the value of the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Provide the primary volume group IDs to get the details.
@@ -392,7 +392,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 
 To onboard the auxiliary volume on the secondary site, use the following API or CLI commands:
 
-- **API**: [onboard auxiliary volume](/apidocs/power-cloud#pcloud-volume-onboarding-post)
+- **API**: [onboard auxiliary volume](/docs/apis/power-cloud#pcloud-volume-onboarding-post)
 - **CLI**: [ibmcloud pi volume onboarding create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-create)
 
 Specify the following parameters:
@@ -404,7 +404,7 @@ Specify the following parameters:
 
 An onboarding task ID is returned when you complete onboarding the auxiliary volumes on the secondary location. Use the task ID to check the status of the onboarding operation by using the following API and CLI commands:
 
-- **API**: [List all volume onboardings for this cloud instance](/apidocs/power-cloud#pcloud-volume-onboarding-getall)
+- **API**: [List all volume onboardings for this cloud instance](/docs/apis/power-cloud#pcloud-volume-onboarding-getall)
 - **CLI**: [ibmcloud pi volume onboarding get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-get)
 
 
@@ -423,7 +423,7 @@ If the onboarding process of the auxiliary volume on the secondary location is s
 
 Obtain the status of the auxiliary volumes by using the auxiliary volume names. If the onboarding operation is successful, the auxiliary volume names are available. Verify the status of the auxiliary volumes by using the following API and CLI commands:
 
-- **API**: [Get a Cloud Instance's current state/information](/apidocs/power-cloud#pcloud-cloudinstances-get)
+- **API**: [Get a Cloud Instance's current state/information](/docs/apis/power-cloud#pcloud-cloudinstances-get)
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get)
 
 
@@ -448,7 +448,7 @@ Using the `groupID` value of the auxiliary volume, query the details of the volu
 
 
 - **CLI**: [ibmcloud pi volume-group get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-get)
-- **API**: [Get all volume groups](/apidocs/power-cloud#pcloud-volumegroups-getall)
+- **API**: [Get all volume groups](/docs/apis/power-cloud#pcloud-volumegroups-getall)
 
 Refer to the following table to verify that the replication status of the volume group is as expected.
 
@@ -483,7 +483,7 @@ To access the auxiliary volumes from the secondary location due to a primary loc
 
 You can perform the failover operation by using the following API and CLI commands:
 
-- **API**: [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post) API with **access** flag set to `True`
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post) API with **access** flag set to `True`
 
 
 
@@ -513,7 +513,7 @@ When you stop the volume group, the status of the consistency group is changed t
 
 Get the volume group details to verify the status of the volume group by using the following API and CLI commands:
 
-- **API**: [Get storage details of volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get)
+- **API**: [Get storage details of volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get)
 - **CLI**: [ibmcloud pi volume-group storage-details](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details)
 
 
@@ -539,7 +539,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 
 Use the following API or CLI commands to start the primary volume in auxiliary mode:
 
-- **API**: [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID. Using the API, start the volume group and to set it as the `aux` volume as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID. Using the API, start the volume group and to set it as the `aux` volume as defined in the following code:
 
 
 ```code
@@ -561,7 +561,7 @@ Verify whether the `primaryRole` value of the volume group is set to `aux`. Moni
 
 When you complete data replication from the auxiliary volume to the primary volume, it is time to fallback to the primary volume. To enable the primary volume, use the following API and CLI commands to stop the primary volume group and disable the replication:
 
-- **API**: [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. The API must stop the volume group and allow read access. For example, the request body must be defined as follows:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. The API must stop the volume group and allow read access. For example, the request body must be defined as follows:
 
 
 ```code
@@ -584,7 +584,7 @@ Wait for the `replicationStatus` parameter of the primary volume group to change
 
 To restart the primary volume group that is in the disabled state, use the `start` command. When you start the volume group to re-enable replication, the primary volumes of the primary volume group are the `master` volumes again.
 
-- **API**: [Perform an action on a volume group](/apidocs/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, start the volume group and set it as the `master` volume as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, start the volume group and set it as the `master` volume as defined in the following code:
 
 
 ```code
@@ -643,7 +643,7 @@ Use the following API and CLI commands to query the volume details:
 
 You can add replication-enabled volumes to an existing volume group by using the following API and CLI commands:
 
-- **API**: [updates the volume group](/apidocs/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, add the primary volume IDs to the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, add the primary volume IDs to the volume group as defined in the following code:
 
 ```code
 
@@ -690,7 +690,7 @@ You can perform these steps only if you complete the onboarding operation of the
 
 Use the following API and CLI commands to remove the primary volume from the volume group:
 
-- **API**: [updates the volume group](/apidocs/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
 
 ```code
 
@@ -715,7 +715,7 @@ You can remove multiple replication-enabled volumes from a volume group.
 
 Use the following API and CLI commands to delete the primary volume group if it is empty:
 
-- **API**: [Delete a cloud instance volume group](/apidocs/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID.
+- **API**: [Delete a cloud instance volume group](/docs/apis/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID.
 
 - **CLI**: [ibmcloud pi volume-group delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-delete). Set the `VOLUME_GROUP_ID` parameter to a primary volume group ID that must be deleted.
 
@@ -725,7 +725,7 @@ Use the following API and CLI commands to delete the primary volume group if it 
 
 Use the following API and CLI commands to disable replication for the primary volume, if it is removed from the volume group:
 
-- **API**: [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Use the API to disable the replication for the primary volume ID as defined in the following code:
+- **API**: [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Use the API to disable the replication for the primary volume ID as defined in the following code:
 
 ```code
 
@@ -743,7 +743,7 @@ Use the following API and CLI commands to disable replication for the primary vo
 
 Use the following API and CLI commands to verify whether replication is disabled for the primary volume:
 
-- **API**: [List all volumes for this cloud instance](/apidocs/power-cloud#pcloud-cloudinstances-volumes-getall). Set the `VOLUME_ID` parameter to the primary volume ID to query the replication status.
+- **API**: [List all volumes for this cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-getall). Set the `VOLUME_ID` parameter to the primary volume ID to query the replication status.
 
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get). Set the `VOLUME_ID` parameter to the primary volume ID to query the replication status.
 
@@ -753,7 +753,7 @@ Use the following API and CLI commands to verify whether replication is disabled
 
 Use the following API and CLI commands to remove the auxiliary volume from the volume group:
 
-- **API**: [updates the volume group](/apidocs/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the volume group ID and the`VOLUME_ID` parameter to the auxiliary volume ID. Use the API to remove the auxiliary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the volume group ID and the`VOLUME_ID` parameter to the auxiliary volume ID. Use the API to remove the auxiliary volume ID from the volume group as defined in the following code:
 
 ```code
 
@@ -774,7 +774,7 @@ Use the following API and CLI commands to remove the auxiliary volume from the v
 
 Use the following API and CLI commands to delete the auxiliary volume group if it is empty:
 
-- **API**: [Delete a cloud instance volume group](/apidocs/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to auxiliary volume group ID.
+- **API**: [Delete a cloud instance volume group](/docs/apis/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to auxiliary volume group ID.
 
 - **CLI**: [ibmcloud pi volume-group delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-delete). Set the `VOLUME_GROUP_ID` parameter to an auxiliary volume group ID that must be deleted.
 
@@ -784,7 +784,7 @@ Use the following API and CLI commands to delete the auxiliary volume group if i
 
 Use the following API and CLI commands to delete the auxiliary volume:
 
-- **API**: [Delete a cloud instance volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-delete). Set the `VOLUME_ID` parameter to an auxiliary volume ID that must be deleted.
+- **API**: [Delete a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-delete). Set the `VOLUME_ID` parameter to an auxiliary volume ID that must be deleted.
 
 - **CLI**: [ibmcloud pi volume delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete). Set the `VOLUME_ID` parameter to an auxiliary volume ID that must be deleted.
 
@@ -805,7 +805,7 @@ Any attempt to change the tier of a replication-enabled volume fails, if one of 
 
 You can change the tier of the replication-enabled volume by using the following API and CLI commands:
 
-- API: [Perform an action on a Volume](https://cloud.ibm.com/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
+- API: [Perform an action on a Volume](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
 - CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
 
 
@@ -817,22 +817,23 @@ You can change the tier of the replication-enabled volume by using the following
 
 You can modify the attributes of a replication-enabled primary volume. To modify some of the properties of the primary and auxiliary volumes, you must perform related actions on the primary and secondary locations.
 
-### Changing the size of a primary volume
+### Changing the capacity of a primary volume
+{: #changing-capacity-primary-vol}
 
-To change the size of a replication-enabled primary volume, complete the following steps:
+To change the capacity of a replication-enabled primary volume, complete the following steps:
 
 1. Remove the primary volume from the volume group
-2. Change the size of the primary volume
+2. Change the capacity of the primary volume
 3. Add the primary volume back to the volume group
 
-In the next 24 hours, the size of the auxiliary volume on the secondary location is changed.
+In the next 24 hours, the capacity of the auxiliary volume on the secondary location is changed.
 
-For example, on the `dal10` and `wdc07` location pair, when you change the size of a replication-enabled primary volume on the primary location, the system changes the size of the auxiliary volume on the secondary location in the next 24 hours.
+For example, on the `dal10` and `wdc07` location pair, when you change the capacity of a replication-enabled primary volume on the primary location, the system changes the size of the auxiliary volume on the secondary location in the next 24 hours.
 
-Use the following API and CLI commands to change the size of the replication-enabled primary volume:
+Use the following API and CLI commands to change the capacity of the replication-enabled primary volume:
 
 
--**API**: [Update a cloud instance volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to primary volume ID and set the size in GB by using the following request body:
+-**API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to primary volume ID and set the size in GB by using the following request body:
 
 ```code
   Request Body:
@@ -855,7 +856,7 @@ Do not resize a primary volume by disabling replication of the volume as it resu
 
 To change the values of the `bootable` or `shareable` properties on the primary volume, use the following API or CLI commands:
 
--**API**: [Update a cloud instance volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to the primary volume ID and set the `--bootable` or `--shareable` flags to `True` or `False` value.
+-**API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to the primary volume ID and set the `--bootable` or `--shareable` flags to `True` or `False` value.
 
 -**CLI**: [ibmcloud pi volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the value of the `VOLUME_ID` parameter to the primary volume ID and set the value of the `--bootable` or `--shareable` flags to `True` or `False` value.
 
@@ -897,7 +898,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 {: note}
 
 
-- **API**: [updates the volume group](/apidocs/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
 
 ```code
 
@@ -918,7 +919,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 
 Use the following API and CLI commands to delete the primary volume:
 
-- **API**: [Delete a cloud instance volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-delete). Set the `VOLUME_ID` parameter to a primary volume ID that must be deleted.
+- **API**: [Delete a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-delete). Set the `VOLUME_ID` parameter to a primary volume ID that must be deleted.
 
 - **CLI**: [ibmcloud pi volume delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-delete). Set the `VOLUME_ID` parameter to a primary volume ID that must be deleted.
 
@@ -942,7 +943,7 @@ The impacts of GRS on other {{site.data.keyword.powerSys_notm}} operations are a
 - Operation interface and the affinity policies for storage pool for virtual server instances are not changed. The replication and non-replication-enabled volumes support volume attachment and detachment.
 - Snapshot and capture operations are allowed for a virtual server instance with replication and non-replication-enabled volumes when the volumes are from the same storage pool. The snapshot and capture operations are performed by using the non-replication-enabled volumes internally even though the volumes of a virtual server instance are replication-enabled.
 - Cloned volume is replication-enabled when you clone a replication-enabled volume by default. During cloning, you can specify whether the cloned volume must be replication-enabled or not. If you want the cloned volume to be replication-enabled, specify the policy for the clone volume. You can use the following methods to clone a volume:
-    - [Clone a volume by using API](/apidocs/power-cloud#pcloud-v2-volumesclone-execute-post){: external}.
+    - [Clone a volume by using API](/docs/apis/power-cloud#pcloud-v2-volumesclone-execute-post){: external}.
     - [Clone a volume by using CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone){: external}.
     - [Clone a volume by using Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_clone){: external}.
 
@@ -951,12 +952,12 @@ The impacts of GRS on other {{site.data.keyword.powerSys_notm}} operations are a
 {: #best-practices-GRS}
 
 - Set the **Shareable** and **Bootable** flag explicitly on onboarded volumes, if required.
-- Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary site. Verify that the volume group is created successfully and it is in a consistent copying state by using the [get storage details of the volume group](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
+- Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary site. Verify that the volume group is created successfully and it is in a consistent copying state by using the [get storage details of the volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
 * Get volume details by using the following methods:
-    * [Power Cloud API](/apidocs/power-cloud#pcloud-cloudinstances-volumes-get){: external}.
+    * [Power Cloud API](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external}.
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume){: external}.
 * Get the details of the volume groups storage details by using the following methods:
-    * [Power Cloud API](/apidocs/power-cloud#pcloud-volumegroups-storagedetails-get){: external}.
+    * [Power Cloud API](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external}.
     * [Power Virtual Server CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details){: external}
     * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}.
 

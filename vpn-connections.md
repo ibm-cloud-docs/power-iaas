@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-14"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -68,25 +68,24 @@ It is recommended that you create a direct cloud connection between the VPC and 
 3. Attach Direct Link to workspace subnet.
 4. You can choose to attach a Transit Gateway along with the Direct Link, but it incurs extra charges.
 
-**Procedure**
+Procedure
+:  1. Create a VPC resource. Complete the steps that are documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
 
-1. Create a VPC resource. Complete the steps that are documented in [Using the IBM Cloud console to create VPC resources](/docs/vpc?topic=vpc-creating-a-vpc-using-the-ibm-cloud-console).
+   2. Create a Site-to-Site VPN gateway in VPC. Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
 
-2. Create a Site-to-Site VPN gateway in VPC. Complete the steps documented in [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn).
+      To create a VPN connection, use a policy-based VPN.
+      {: note}
 
-     To create a VPN connection, use a policy-based VPN.
-     {: note}
-
-3. Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace. Use one of the following procedures that suit your needs:
-   - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#migrate-per).
-   - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
+   3. Attach the VPN connection to the {{site.data.keyword.powerSys_notm}} workspace. Use one of the following procedures that suit your needs:
+      - For a PER-enabled workspace, see: [Attaching Transit Gateway to a PER workspace](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+      - For a non-PER enabled workspace, see: [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
 ### Considerations for configuring VPC VPN in a non-PER workspace
 {: #vpcvpn-cons}
 
 You must note the following considerations when you configure VPC VPN in a non-PER workspace:
 
-* Use a policy-based VPN when you confirgure the VPN connections.
+* Use a policy-based VPN when you configure the VPN connections.
 * Add the subnets that are created in the {{site.data.keyword.powerSys_notm}} to the following lists:
   * Local Classless Inter-Domain Routing (CIDR) list of IBM Cloud VPC
   * Peer CIDR list of IBM Cloud VPC in your client-managed environment

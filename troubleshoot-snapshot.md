@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-07-13"
 
 keywords: snapshot, restore, clone, troubleshoot
 
@@ -31,7 +31,7 @@ subcollection: power-iaas
 Learn how to troubleshoot {{site.data.keyword.powerSysShort}} snapshot, clone and restore issues.
 {: shortdesc}
 
-## The PVIDs of both of my volumes are the same on my AIX operating system. How do I resolve this issue?
+## How do I resolve the issue where both volumes in my AIX operating system have the same PVID?
 {: #troubleshoot-clone}
 {: troubleshoot}
 

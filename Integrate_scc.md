@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -22,7 +22,7 @@ subcollection: power-iaas
 
 ---
 
-{{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](/docs/workload-protection?topic=workload-protection-getting-started).
+{{site.data.keyword.sysdigsecure_full}} offers a comprehensive suite of security solutions to help your organization secure its cloud environments. {{site.data.keyword.compliance_short}} Workload Protection centrally manages your organization’s security, risk, and compliance with regulatory standards and industry benchmarks. For more information about {{site.data.keyword.compliance_short}} Workload Protection, see [Getting started with IBM Cloud Security and Compliance Center Workload Protection](/docs/workload-protection?topic=workload-protection-getting-started){: external}.
 
 
 In sectors such as financial services, continuous compliance in the cloud environment is crucial to protect customer and application data. Cloud Security Posture Management (CSPM) is one of the key features of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service. When this feature is enabled in your workspace, the CSPM ensures that automatic compliance checks are integrated in your development workflow to mitigate such risks on a daily basis.
@@ -31,7 +31,7 @@ In sectors such as financial services, continuous compliance in the cloud enviro
 ## IBM Cloud® Security Posture Management (CSPM)
 {: #cspm}
 
-CSPM accelerates hybrid platform adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework. The automated compliance checks for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-about). CSPM helps with:
+CSPM accelerates hybrid platform adoption by verifying security and regulatory compliance with automated compliance checks for IBM Cloud Framework. The automated compliance checks for Financial Services, Digital Operational Resilience Act (DORA), CIS IBM Cloud Foundations Benchmark, PCI, and many other industry-related or best practice standards. For more information, see [About IBM Cloud Security Posture Management (CSPM)](/docs/workload-protection?topic=workload-protection-about){: external}. CSPM helps with:
 
 - Continuous validation of compliance
 - Vulnerability prioritization
@@ -89,7 +89,7 @@ To enable Monitoring or CSPM in an existing Power Virtual Server workspace, comp
 ## {{site.data.keyword.sysdigsecure_short}} agent in Linux® and AIX® on {{site.data.keyword.powerSys_notm}}
 {: #wp-linux-AIX}
 
-After you provision an instance of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service in IBM Cloud, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux or AIX hosts on {{site.data.keyword.powerSysFull}}. To provision an instance of {{site.data.keyword.sysdigsecure_short}}, see [Managing the Workload Protection agent in Linux on Power Virtual Server](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs) or [Managing the Workload Protection agent on AIX on Power Virtual Server](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
+After you provision an instance of the {{site.data.keyword.compliance_short}} {{site.data.keyword.sysdigsecure_short}} service in IBM Cloud, you can deploy the {{site.data.keyword.sysdigsecure_short}} agent on your Linux or AIX hosts on {{site.data.keyword.powerSysFull}}. To provision an instance of {{site.data.keyword.sysdigsecure_short}}, see [Managing the Workload Protection agent in Linux on Power Virtual Server](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs){: external} or [Managing the Workload Protection agent on AIX on Power Virtual Server](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs){: external}.
 
 {{site.data.keyword.sysdigsecure_short}} provides the following features to protect your stand-alone Linux or AIX hosts on {{site.data.keyword.powerSys_notm}}.
 
@@ -100,6 +100,6 @@ After you provision an instance of the {{site.data.keyword.compliance_short}} {{
 | Threat detection and response | Identifies threats and suspicious activity based on application, network, and host activity by processing syscall events and investigates with detailed system captures |  - |
 {: caption="{{site.data.keyword.sysdigsecure_short}} agent features" caption-side="top"}
 
-For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts, see [Managing the Workload Protection agent in Linux on PowerVS](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs).
+For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts, see [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs){: external}.
 
-For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts, see [Managing the Workload Protection agent in AIX on PowerVS](https://cloud.ibm.com/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs).
+For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your AIX hosts, see [Managing the Workload Protection agent in AIX on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-aix-powervs){: external}.

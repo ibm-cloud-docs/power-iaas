@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2020, 2024
+  years: 2020, 2026 
 
-lastupdated: "2024-12-06"
+lastupdated: "2026-07-13"
 
 keywords: aix mksysb, volume group, backup multiple volumes, savevg, dd command
 
@@ -35,7 +35,7 @@ You can use the following methods to back the cloud data that is managed by you 
 ## Migrating volume group data by using the *savevg* command
 {: #migrate-data-using-savevg}
 
-A volume group is a collection of physical volumes of various sizes and types. When a physical volume is assigned to a volume group, the physical blocks of storage media are organized into physical partitions. You can specify the size of the physical partition when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to back up and restore non-root volume groups. The *savevg* and *restvg* commands simplify the creation of new volume groups and file systems on the new VM.
+A volume group is a collection of physical volumes of various capacities and types. When a physical volume is assigned to a volume group, the physical blocks of storage media are organized into physical partitions. You can specify the capacity of the physical partition when you create the volume group. You can use built-in AIX *savevg* and *restvg* commands to back up and restore non-root volume groups. The *savevg* and *restvg* commands simplify the creation of new volume groups and file systems on the new VM.
 
 The *savevg* command finds and backs up all files that belong to a specified volume group. The volume group must be varied-on, and the file systems must be mounted. The *savevg* command uses the data file that the *mkvgdata* command creates.
 
@@ -84,7 +84,7 @@ For example,
 ## Migrating raw partitions by using the dd command
 {: #migrating-raw-partitions}
 
-The output file of the *savevg* command can be restored by using the *restvg* command. The size of a *savevg* backup file is small in comparison to the size of the physical volumes in the volume group. If the environments have several TBs of data, the prescribed method of moving volume group data by using the *savevg* command might present a disadvantage while considering transference and restoration procedures.
+The output file of the *savevg* command can be restored by using the *restvg* command. A savevg backup file is compact in comparison to the physical volumes in the volume group. If the environments have several TBs of data, the prescribed method of moving volume group data by using the *savevg* command might present a disadvantage while considering transference and restoration procedures.
 
 You can use the *savevg* command to back up volume groups. All logical volume information, Journaled File System (JFS), and JFS2 mounted file systems are archived. However, you cannot use the *savevg* command to back up raw logical volumes.
 
@@ -98,7 +98,7 @@ Use the following methods to back up and restore the contents of a file system:
 ```
 
 
-This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in the file system `/file/system`. Make sure that the specified directory where the output file will be stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume size is 100 GB, you need 100 GB file system space for the logical volume copy.
+This command creates a copy of the logical volume named **lvname** to a file named **lvname.dd** in the file system `/file/system`. Make sure that the specified directory where the output file is stored (`/file/system` in the example) has enough available disk space to hold a full copy of the logical volume. For example, if the logical volume capacity is 100 GB, you need 100 GB file system space for the logical volume copy.
 
 On the destination server, re-create the logical volume and the file system. If you are using an unmounted file system, run the following command to restore the backup copy:
 

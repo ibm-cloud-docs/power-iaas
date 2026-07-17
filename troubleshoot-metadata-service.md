@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-17"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -21,15 +21,19 @@ content-type: troubleshoot
 Learn how to configure the metadata service network interface on your virtual server instance (VSI) and troubleshoot connectivity issues.
 {: shortdesc}
 
-The metadata service uses a link-local network with IP address 169.254.169.253 on your VSI and connects to the metadata service endpoint at 169.254.169.254. This network is system-created and must not be modified unless required to correct connectivity issues or as a cleanup activity, as described in this topic.
-
 You must perform the following procedures while you are logged in to the operating system (OS) on your VSI. You can log in by using SSH or by accessing the OS through the {{site.data.keyword.powerSys_notm}} console.
 {: requirement}
+
+The metadata service uses a link-local network with IP address 169.254.169.253 on your VSI and connects to the metadata service endpoint at 169.254.169.254. This network is system-created and must not be modified unless required to correct connectivity issues or as a cleanup activity, as described in this topic.
+
+
+
+{{_include-segments/cloud-init-metadata.md}}
 
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
 {: #reconfigure-ibmi-after-capture}
 
-Learn how to restore the metadata service network interface on an IBM i VSI after you overwrite the operating system (OS) disk with a backup image.
+Learn how to restore the metadata service network interface on an IBM i VSI after you overwrite the OS disk with a backup image.
 
 ### Reconfiguring the metadata service interface after an OS disk overwrite
 {: #reconfigure-ibmi-after-os-or}
@@ -635,6 +639,6 @@ If the metadata service interface is configured but you cannot reach the metadat
 
    Select option 1 (Work with TCP/IP interfaces) and verify that the metadata service interface configuration is correct.
 
-5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your operating system, or another `CMN*` device might be available but unconfigured.
+5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another `CMN*` device might be available but unconfigured.
 
 If you are still unable to communicate with the metadata service endpoint, contact [IBM Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).

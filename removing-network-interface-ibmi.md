@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-07-14"
 
 keywords: network interface, tcp/ip address, ibm i vm, external ip address, dns, lind, cfgtcp command
 
@@ -32,7 +32,7 @@ subcollection: power-iaas
 
 
 
-Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a virtual machine (VM) or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the VM deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and readd the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
+Since IBM PowerVC Version 1.2.2, IBM PowerVC can dynamically add a network interface controller (NIC) to a virtual machine (VM) or remove a NIC from a VM. IBM PowerVC does not set the IP address for new network interfaces that are created after the VM deployment. Any removal of a NIC results in freeing the IP address that was set on it. You must remove and re-add the IBM i VM network interface if you choose to disconnect the {{site.data.keyword.powerSys_notm}} IBM i VM from a public network.
 {: shortdesc}
 
 When you toggle a public network off and on, the {{site.data.keyword.powerSysFull}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address to complete this procedure.
@@ -46,7 +46,7 @@ You can change the TCP/IP address of your IBM i VM while the TCP/IP is active. H
 
 1. Before you change a TCP/IP address, determine whether it has any associated routes. Select **Option 8** from the **NETSTAT \*IFC** screen to view the routes.
 
-    For all the **non-\*DIRECT** routes that are listed on the screen, you can display the routes and print it for reference. Select **Option 5** to display the details of the route. Press **F6** to print the details for reference for when the route must be readded.
+    For all the **non-\*DIRECT** routes that are listed on the screen, you can display the routes and print it for reference. Select **Option 5** to display the details of the route. Press **F6** to print the details for reference for when the route must be re-added.
     {: tip}
 
 2. Run the `CFGTCP` command and select **Option 2** to work with your TCP/IP routes. Select **Option 4** next to the routes that you need to remove. When you remove the routes, the communication that is happening over the route is terminated.

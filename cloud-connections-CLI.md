@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-16"
 
 keywords: Cloud connections, subnet, VPC, IBM cloud
 
@@ -30,7 +30,7 @@ subcollection: power-iaas
 ## [Important announcement]{: tag-green}
 {: #imp-announcement}
 
-Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection). Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges.
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. For more information, refer to the [Cloud announcement](https://cloud.ibm.com/status/announcement?query=cloud+connection). Depending on the port speed of your connections, the charges vary from USD 100 to USD 5000. To avoid these charges, migrate your workspace to the PER-enabled workspaces before 1 July 2025. The `CHE01` data center continue to use Cloud Connections without any charges.
 
 To connect the Power Virtual Server workspaces with the IBM Cloud, use the [Power Edge Router](/docs/power-iaas?topic=power-iaas-per) (PER) capability that is integrated with the Transit Gateway service without any additional charge. PER-enabled workspaces provide improved user experience and increased bandwidth.
 
@@ -60,14 +60,9 @@ When you perform multiple {{site.data.keyword.powerSys_notm}} Cloud Connection t
 {: #create-cloud-connections}
 
 
+The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `CHE01` data center. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. Direct Link is not operational until an authorized IBM Cloud account user with the required authority must authorize the connection by using [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
 
-The creation of new {{site.data.keyword.powerSys_notm}} Cloud Connections across most of the data centers is disabled. You can create Cloud Connections only in the `MON01` and `CHE01` data centers. If you do not have the authorization and attempt to create a Cloud Connection (Direct Link Connect), a link is generated. Direct Link is not operational until an authorized IBM Cloud account user with the required authority must authorize the connection by using [IBM Cloud Console Direct Link Portal](https://cloud.ibm.com/interconnectivity){: external}.
-
-
-To create {{site.data.keyword.powerSys_notm}} Cloud Connection from the `MON01` and `CHE01` data centers, complete the following steps:
-
-
-
+To create {{site.data.keyword.powerSys_notm}} Cloud Connection from the `CHE01` data center, complete the following steps:
 
 1. Go to the {{site.data.keyword.powerSys_notm}} user interface and click **Cloud connections**.
 2. On the Cloud connections page, click **Create connection**.
@@ -143,7 +138,7 @@ When you delete a virtual server instance, it deletes the private networks (subn
 
 
 
-Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+Effective 1 July 2025, metering charges are applied to any Direct Link connections that you continue to use. If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can now view and delete them using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 {: note}
 
 
@@ -167,7 +162,7 @@ A Generic Routing Encapsulation (GRE) tunnel connects two endpoints (a firewall 
 
 GRE tunnel configuration requires a tunnel source IP ({{site.data.keyword.powerSys_notm}} router end), GRE subnet, and destination IP address. For more information, see [Creating IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#create-cloud-connections).
 
-A GRE tunnel subnet supports addressings for GRE tunnels. It is used for the tunnel source IP, local IP, and remote IP. The first half of the subnet IP range (`s1`) is used for source IP addresses and the second half (`s2`) is used for local and remote IP addresses. GRE tunnels use the first IP from `s1` as the source IP. The local IP is the first IP of `s2` and the remote IP is the second IP of `s2`.
+A GRE tunnel subnet supports addressing for GRE tunnels. It is used for the tunnel source IP, local IP, and remote IP. The first half of the subnet IP range (`s1`) is used for source IP addresses and the second half (`s2`) is used for local and remote IP addresses. GRE tunnels use the first IP from `s1` as the source IP. The local IP is the first IP of `s2` and the remote IP is the second IP of `s2`.
 
 ### GRE configuration example
 {: #gre-configuration-example}
@@ -195,7 +190,7 @@ PowerVS ASN       : 64999
 
 In general, the overlay and underlay network must not be on the same subnet, so to make sure your configuration that is stated earlier is valid on your gateway appliance. You can change the subnet mask of the GRE subnet from /29 to /30 so that it excludes 172.16.3.1 from the overlay network.{: note}
 
-By default, gateway appliances send the traffic for the 172 network to the default gateway, which is generally the public subnet gateway of the gateway appliance. Make sure to add a static route for the destination "PowerVS Source IP" to be sent to the private subnet gateway of the gateway appliance.{: note}
+By default, gateway appliances send the traffic for the 172 network to the default gateway, which is generally the public subnet gateway of the gateway appliance. Make sure to add a static route for the destination PowerVS source IP address to be sent to the private subnet gateway of the gateway appliance.{: note}
 
 You must configure the VRA with BGP protocol for route advertising so that the subnets can reach through the GRE tunnel. The ASN numbers are pre-assigned in the {{site.data.keyword.powerSys_notm}}s and you can't choose another number.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-29"
+lastupdated: "2026-07-14"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -74,7 +74,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 {: #expand-pods}
 {: faq}
 
-Yes, you can add up to the maximum number of compute nodes for a specific configuration size. For example, you can start with 5 nodes and then add 3 more nodes.
+Yes, you can add up to the maximum number of compute nodes for a specific configuration capacity. For example, you can start with 5 nodes and then add 3 more nodes.
 
 ## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional storage?
 {: #expand-pods-storage}
@@ -149,7 +149,7 @@ Currently, you can import a custom image in the following formats: _.ova_, _.ova
 {: faq}
 {: support}
 
-Each volume has a storage tier, which defines how many I/O operations per second (IOPS) can be started against that volume. These tiers can scale according to the size of the volume.
+Each volume has a storage tier, which defines how many I/O operations per second (IOPS) can be started against that volume. These tiers can scale according to the capacity of the volume.
 
 The following tiers are supported:
 * Tier 0 (25 IOPS/GB)
@@ -260,7 +260,7 @@ The use of volume affinity policy (affinity or anti-affinity) requires the avail
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/apidocs/power-cloud#pcloud-pvminstances-put).
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put).
 
 ## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
 {: #licensing-os}
@@ -311,7 +311,7 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 {: #snapshot}
 {: faq}
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/apidocs/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 ## What are the key differences between a snapshot and a clone?
 {: #snap-vs-clone}
@@ -542,11 +542,11 @@ On a Linux VM, the following database is supported:
 
 You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
-## How can I get the WebSphere Application Server that are delivered through the **Web Enablement for i** packages, and are available at no additional charge with IBM i?
+## How can I get the WebSphere Application Server that is included with the **Web Enablement for i** packages?
 {: #web-enablement-for-ibmi}
 {: faq}
 
-If you have an IBM i VM instance with the licensed program bundle in the {{site.data.keyword.powerSys_notm}} offering, you can download the WebSphere Application Server. This is available in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
+If you have an IBM i VM instance with the licensed program bundle in the {{site.data.keyword.powerSys_notm}} offering, you can download the WebSphere Application Server at no extra cost. This is available in the Web Enablement for i software at the Entitled System Support (ESS) website by completing the following steps:
 
 1. Go to the [ESS website](https://www.ibm.com/servers/eserver/ess/index.wss){: external}.
 
@@ -601,7 +601,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 
 
 
-You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
+You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
 
 ## How can I check whether volume is already replication enabled?
 {: #check-for-replication-vol}
@@ -670,11 +670,11 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
 
-## What is the Maximum Transmission Unit (MTU) size that is supported in {{site.data.keyword.powerSys_notm}} networks?
+## What is the Maximum Transmission Unit (MTU) capacity that is supported in {{site.data.keyword.powerSys_notm}} networks?
 {: #mtu-max}
 {: faq}
 
-The {{site.data.keyword.powerSys_notm}} supports a smaller MTU size of 1476 bytes for the public network interfaces and for the private network interfaces that are attached to a {{site.data.keyword.powerSys_notm}} VPN.
+The {{site.data.keyword.powerSys_notm}} supports an MTU capacity of 1476 bytes for the public network interfaces and for the private network interfaces that are attached to a {{site.data.keyword.powerSys_notm}} VPN.
 
 ## Can I automate the Maximum Transmission Unit (MTU) configuration?
 {: #mtu-config}
@@ -686,7 +686,7 @@ To automate the MTU configuration, you need to customize your cloud-init network
 
 Both AIX and IBM i support the configurations for custom cloud-init at the time of {{site.data.keyword.powerSys_notm}} instance (VM) deployment.
 
-You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](/apidocs/power-cloud#pcloud-pvminstances-post).
+You can customize the cloud-init configurations only through the {{site.data.keyword.powerSys_notm}} API. The `userData` request parameter specifies the custom cloud-init. For more information, see [Create a new Power VM Instance](/docs/apis/power-cloud#pcloud-pvminstances-post).
 
 [{{site.data.keyword.on-prem}}]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-13"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -398,7 +398,7 @@ Refer to the following table to view the part number descriptions and the associ
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
-{: #snapshot-group}
+{: #vpmem-composite-service}
 {: tab-title="vPMEM group"}
 {: translate="no"}
 
@@ -541,7 +541,7 @@ To learn more about the dedicated host, see: [dedicated host](/docs/power-iaas?t
 {: #storage-type}
 
 The {{site.data.keyword.powerSys_notm}} charges based on three different storage types:
-- **Data volumes** are the simplest form of volume that you create. You are billed based on the current volume size at the metering time. The following table shows an example of how you are billed based on your volume creation:
+- **Data volumes** are the simplest form of volume that you create. You are billed based on the current volume capacity at the metering time. The following table shows an example of how you are billed based on your volume creation:
 
     | Volume size that you create | Volume size that you are billed |
     | --------------------------- | ------------------------------- |
@@ -655,7 +655,7 @@ Virtual Persistent Memory (vPMEM) volumes are available on IBM Power10 or later 
 vPMEM is not supported on a VSI with IBM i operating system.
 {: note}
 
-For VSIs with AIX or Linux OS that are attached with vPMEM volumes, the total cost is calculated based on the total memory usage. For VSI with SAP (HANA) profile, the vPMEM volume memory is allocated from the SAP profile size so the cost of the memory remains the same.
+For VSIs with AIX or Linux OS that are attached with vPMEM volumes, the total cost is calculated based on the total memory usage. For VSI with SAP (HANA) profile, the vPMEM volume memory is allocated from the SAP profile capacity so the cost of the memory remains the same.
 
 
 ## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-07-14"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS, object data manager, improving performance, suboptimal, lsattr
 
@@ -58,7 +58,7 @@ nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no
 
 For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
-## My AIX VM Tier 1 (NVMe-based Flash Storage) disk is running at a suboptimal level. What can I do to improve its performance?
+## How can I improve the performance of my AIX VM Tier 1 NVMe-based Flash Storage disk?
 {: #troubleshoot-slow-aix}
 {: troubleshoot}
 
@@ -83,4 +83,4 @@ You can set your disk's **queue_depth** to *64* and change the algorithm to **sh
 chdev -l hdiskX -a algorithm=shortest_queue -a reserve_policy=no_reserve -a queue_depth=64
 ```
 
-If the AIX disk is open, an error message appears that states that the disk is busy. To prevent this error from occuring, add a *-U* flag to the `chdev` command and the values are updated without disruption (assuming the Object Data Manager (ODM) for the disk has that feature that is enabled).
+If the AIX disk is open, an error message appears that states that the disk is busy. To prevent this error from occurring, add a *-U* flag to the `chdev` command and the values are updated without disruption (assuming the Object Data Manager (ODM) for the disk has that feature that is enabled).

@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-29"
+lastupdated: "2026-07-14"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -87,15 +87,13 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Optional: Expand **Advanced Configuration** to set additional options for your VSI.
+7. Optional: Expand **Advanced configurations** to set additional options for your VSI.
 
-    - **Virtual server pinning**: By default, the VSI pinning option is off. This option keeps the VSI on its current host. To select a pinning type, set **Virtual server pinning** to on, and then select the preferred pinning type.
+    - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, the VSI is kept on its current host; however, downtime can occur during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard**.
 
-    You can choose between **Soft** pinning and **Hard** pinning. For more information, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
+        For more information about VSI pinning, see [Virtual server pinning](/docs/power-iaas?topic=power-iaas-pinning).
 
-    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI, initialize workloads, and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
-
-
+    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
 8. Complete the **Boot image** fields.
 
@@ -215,7 +213,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
         Automated remote restart does not restart pinned VSIs. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
-        Automated remote restart also does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to stay together on the same host. A hard-pinned VSI prevents the group from moving to another host.
+        Automated remote restart also does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
 
         
 
@@ -459,7 +457,7 @@ For example, you create a VSI with the name TEST-VSI and you delete this VSI lat
 
 You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} and [Deploying your infrastructure](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-set-up-power-sap-network){: external}.
 
-Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory size of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
+Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
 ## Configuring a VSI for Epic workloads
 {: #configuring-a-vm-for-epic-workloads}
@@ -535,7 +533,7 @@ When you attach boot volume post provisioning of the VSI, the boot image still s
 
 When you select the **Deploy empty virtual server instance** checkbox, you can provision a VSI without a boot image and boot volume. Review the following table to understand how the selection of the **Deploy empty virtual server instance** checkbox works along with the provisioning of the large quantity of data volumes:
 
-| Features                                          | 'Deploy empty virtual server instance' checkbox is clear                                                                                                                                                          | 'Deploy empty virtual server instance' checkbox is selected                                                                                                               |
+| Features                                          | Deploy empty virtual server instance checkbox is clear                                                                                                                                                          | Deploy empty virtual server instance checkbox is selected                                                                                                               |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Boot image and volume                             | Provision a VSI with a boot image and boot volume                                                                                                                                                                 | Provision a VSI without a boot image and boot volume.                                                                                                                     |
 | Creating new volume during VSI provisioning       | Create up to 10 volumes from the VSI provisioning page. To create volumes in bulk, use the [Storage volumes](https://cloud.ibm.com/power/storage) page in the {{site.data.keyword.powerSys_notm}} user interface. | You cannot create any volumes and attach to the VSI during initial provisioning. You can create up to 10 volumes after provisioning.                                      |

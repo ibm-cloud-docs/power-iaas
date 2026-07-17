@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-15"
+lastupdated: "2026-07-16"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -45,15 +45,15 @@ The following network architecture diagram explains how the PER is integrated in
 ![Power Edge Router network architecture diagram](./images/per-network-arch-diag.svg "Power Edge Router network architecture diagram"){: caption="Power Edge Router network architecture diagram" caption-side="bottom"}
 
 The network traffic in a PER environment can flow in the following two ways:
-- Accessing classic infrastructure through the Transit Gateway.
-  - `1` - Traffic from ACI tenants is forwarded to the PER.
-  - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 
+- Accessing classic infrastructure through the Transit Gateway.
+   - `1` - Traffic from ACI tenants is forwarded to the PER.
+   - `2` - PER forwards the traffic to classic infrastructure services that use Transit Gateway.
 - Accessing cloud services that can access the resources that are attached to each other.
-  - `1`	- Traffic from ACI tenants is forwarded to the PER.
-  - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers. The Service Gateway converts the destination addresses to ADN and CSE networks.
-  - `4`	- The converted traffic from NAT is forwarded to PER.
-  - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
+   - `1`	- Traffic from ACI tenants is forwarded to the PER.
+   - `3`	- Traffic from PER is forwarded to the NAT services with Service Gateway routers. The Service Gateway converts the destination addresses to ADN and CSE networks.
+   - `4`	- The converted traffic from NAT is forwarded to PER.
+   - `2` - Traffic from PER is now forwarded to IBM Cloud PPRs for final delivery.
 
 The automation of ACI, PER, and NAT Services provisioning in IBM data centers is designed to simplify network integration and accelerate connection time for IBM {{site.data.keyword.powerSys_notm}} users in the IBM Cloud.
 
@@ -98,7 +98,7 @@ The migration of an existing workspace to PER is supported through CLI by using 
 
 
 
-Before you migrate the last workspace in the data center to PER, delete any Cloud Connections that are not attached to any networks. After the migration, Cloud Connections can only be deleted using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+Before you migrate the last workspace in the data center to PER, delete any Cloud Connections that are not attached to any networks. After the migration, Cloud Connections can only be deleted using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 {: note}
 
 
@@ -143,7 +143,8 @@ The PER status is displayed in the **PER status** column on the [**Workspaces**]
 
 If you are migrating the existing workloads to a new PER-enabled workspace, back up the data from the existing workspace, and restore the data to the new PER-enabled workspace.
 
-Only `CHE01` and `MON01` data centers are not PER-enabled. Therefore, use Cloud Connections for interconnectivity between other parts of the IBM network.
+
+Only `CHE01` data center is not PER-enabled. Therefore, use Cloud Connections for interconnectivity between other parts of the IBM network.
 
 
 
@@ -167,7 +168,7 @@ For example, `ibmcloud tg connection-create aaaa-bbbb-cccc-dddd-eeee —name pow
 
 
 
-All the data centers, except `CHE01` and `MON01`, are PER-enabled. When you create a workspace in the PER-enabled data center, the workspace is PER-enabled by default.
+All {{site.data.keyword.powerSys_notm}} data centers, except `CHE01` are PER-enabled. When you create a workspace in the PER-enabled data center, the workspace is PER-enabled by default.
 
 
 
@@ -340,11 +341,13 @@ Full Linux subscription `RHEL86` and `SLES15 SP4` images can be used in a PER wo
 PER uses the same existing {{site.data.keyword.powerSys_notm}} network APIs and CLIs.
 
 For more information, refer to the {{site.data.keyword.powerSys_notm}} documentation on:
-- API - [Create a new cloud connection](/apidocs/power-cloud#pcloud-cloudconnections-post)
+- API - [Create a new cloud connection](/docs/apis/power-cloud#pcloud-cloudconnections-post)
 - CLI - [Create a cloud connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection)
 
 ## Data centers that support PER
 {: #dcs-per}
+
+
 
 The following table shows the data centers for {{site.data.keyword.powerSys_notm}} that supports PER:
 

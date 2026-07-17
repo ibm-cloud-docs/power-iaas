@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-05-22"
+lastupdated: "2026-07-13"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -358,7 +358,7 @@ For more information, see [How to calculate the pricing for OS licensing in SPP]
 
 {{site.data.keyword.on-prem-fname}} charges are based on the following storage types:
 
-* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume size when metered. The following table shows an example billing based on your volume creation:
+* **Data volumes**: These volumes are basic forms that you can create. The billing depends on the volume capacity when metered. The following table shows an example billing based on your volume creation:
 
    | Volume size that you create | Volume size that you are billed |
    | --------------------------- | ------------------------------- |
@@ -558,7 +558,7 @@ The following table shows how the pricing for OS licensing is calculated conside
 
 
 
-### Is there any initial one-time payment before the pod infrastructure is installed in the {{site.data.keyword.on-prem-fname}} data center?
+### Is there any initial one-time payment before the pod infrastructure is installed in the Private Cloud data center?
 {: #initial-one-time-payment}
 
    No

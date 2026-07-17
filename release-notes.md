@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-06-29"
+lastupdated: "2026-07-17"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -22,6 +22,19 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
+## July 2026
+{: #July-2026}
+
+### 16 July 2026
+{: #power-iaas-jul1626}
+{: release-note}
+
+Power Edge Router available in `MON01` data center
+:   Power Edge Router (PER) is available in the `MON01` data center. For more information, see [Getting started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
+
+
+
+
 ## June 2026
 {: #June-2026}
 
@@ -37,9 +50,9 @@ GRS support in data center pairs
 {: release-note}
 
 Disabling automated remote restart for a virtual server instance
-:   Automated remote restart is enabled by default for all virtual server instances (VSIs) in the {{site.data.keyword.powerSys_notm}} environment. You can disable automated remote restart by modifying the settings for a VSI. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+:   Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. You can disable automated remote restart by modifying the settings for a VSI. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-Monitoring boot image import, boot image export, and VSI capture and export status in the UI
+Monitoring boot image import, boot image export, and virtual server instance (VSI) capture and export status in the UI
 :   You can view the status of boot image import, boot image export, and VSI capture and export operations in the UI. This enhancement provides improved visibility into long-running image jobs before you start another image job. For more information, see [Viewing import boot image results](/docs/power-iaas?topic=power-iaas-importing-boot-image#view-import-results), [Viewing export boot image results](/docs/power-iaas?topic=power-iaas-exporting-boot-image#view-export-results), and [Viewing the capture and export results](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#view-capture-export-results).
 
 Metadata service and trusted profiles support
@@ -326,7 +339,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can view and delete the connections using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/apidocs/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
+- If you have existing IBM Cloud Connections that are managed from non-PER enabled workspaces, you can view and delete the connections using the [IBM Cloud CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-cloud-connection-delete){: external} or [API](/docs/apis/power-cloud#pcloud-cloudconnections-delete){: external} from a PER-enabled workspace.
 
 
 
@@ -574,7 +587,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 - Access the dedicated host capability from the {{site.data.keyword.powerSys_notm}} user interface. IBM Power S922 and S1022 servers can be provisioned for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
-- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/apidocs/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/apidocs/power-cloud#v1-snapshots-get) for API details.
+- Snapshot usage information is now available using the API. For more information, see [Get a list of all the snapshots on a workspace](/docs/apis/power-cloud#v1-snapshots-getall) and [Get the detail of a snapshot](/docs/apis/power-cloud#v1-snapshots-get) for API details.
 
     Dedicated Hosts and Snapshots require PowerVC (PVC) 2.2.1 that is deployed worldwide except in four data centers. These four data centers are upgraded to PVC 2.2.1 with the following timeline:
 
@@ -664,8 +677,8 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 ### December 2023
 {: #dec-2023}
 
-- **New data center availability**
-    - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
+New data center availability
+:   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
     - `SAO04` is available for PER.
     - **Cost estimator tool** - A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
     - **Dedicated hosts** - A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
@@ -673,15 +686,13 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     - **Flexible IOPS** - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
     - New RHEL versions are available. See [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) page for details on the latest version.
     - **Update on the new SAP HANA large t-shirt profiles feature** - The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-plan-os-powervs) for IBM {{site.data.keyword.powerSys_notm}}.
-    - **New GRS pairs support**
-
-    The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
+    - **New GRS pairs support** - The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
 
 ### November 2023
 {: #nov-2023}
 
 - `WDC06` and `MAD02` data center are now available for PER. `MAD02` is a PER-enabled Power10 data center.
-- Availibity of IBM Cloud Monitoring service is now extended in `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
+- Availability of IBM Cloud Monitoring service is now extended in `FRA04`, `FRA05`, `LON04`, `LON06`, `MAD02`, `SAO01`, and `TOK04`.
 
 ### September 2023
 {: #sep-2023}

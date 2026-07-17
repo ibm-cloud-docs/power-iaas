@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-07-14"
 
 keywords: linux, registering, subscription, sles, powervc, snat
 
@@ -49,7 +49,7 @@ If you do not choose to use the full Linux subscription for {{site.data.keyword.
 
 When you create an OVA image, you must include the appropriate {{site.data.keyword.powerSys_notm}} environment `cloud-init` packages. Download the appropriate `cloud-init` package from [Installing and configuring cloud-init](https://www.ibm.com/docs/en/powervc/2.0.1?topic=machine-installing-configuring-cloud-init){: external}.
 
-To run SUSE Linux Enterprise Server on {{site.data.keyword.powerSys_notm}}, your hardware must meet the minimum memory requirements. A minimum of 1024 MB of memory is required for a minimal installation. On machines with more than two processors, add 512 MB per CPU. The memory values specified are valid only for the installation of the operating system. The actual memory requirement in production depends on the workload of the system. For more information about the SLES hardware recommendations, see [https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-power.html]{: external}.
+To run SUSE Linux Enterprise Server on {{site.data.keyword.powerSys_notm}}, your hardware must meet the minimum memory requirements. A minimum of 1024 MB of memory is required for a minimal installation. On machines with more than two processors, add 512 MB per CPU. The memory values specified are valid only for the installation of the operating system. The actual memory requirement in production depends on the workload of the system. For more information about the SLES hardware recommendations, see [Installation on IBM POWER](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-power.html){: external}.
 
 {{_include-segments/sap-subscription-mode.md}}
 
@@ -84,7 +84,7 @@ You can verify that the device interface type is `ibmveth` by using the followin
 ethtool -i <interface name> | grep driver
 ```
 
-The following instructions are applicable to SLES version SP15. If you need additional help to configure network interfaces, refer to the SLES documentation.
+The following instructions are applicable to SLES 15. If you need additional help to configure network interfaces, refer to the SLES documentation.
 
 1. Identify the name of the private network interface that you want to modify. Use the following command to identify the network interface names based on the IP address that is assigned to the network interface:
 

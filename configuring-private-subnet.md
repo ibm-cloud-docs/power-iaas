@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-14"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -73,7 +73,7 @@ You cannot assign the subnet that is already assigned to another virtual machine
 
 5. Click **Subnets** in the left navigation panel, then click **Create subnet**. The new subnet panel is displayed.
 
-6. Enter a name, CIDR value (for example, '192.168.100.14/24'), gateway number (for example, '192.168.100.15'), and the IP range values for the subnet.
+6. Enter a name, CIDR value (for example, `192.168.100.14/24`), gateway number (for example, `192.168.100.15`), and the IP range values for the subnet.
 
 7. Enter the **DNS server** value.
 
@@ -193,9 +193,9 @@ The {{site.data.keyword.powerSys_notm}} assigns internal IP addresses from the `
 
 
 
-The number after the slash represents the bit length of the subnet mask. As a result, the smaller the number after the slash, the more IP addresses you are allocating. The following table lists the number of available addresses in a subnet (based on its specified CIDR block size):
+The number after the slash represents the bit length of the subnet mask. As a result, a lower number after the slash means more IP addresses are allocated. The following table lists the number of available addresses in a subnet based on its specified CIDR block capacity:
 
-| CIDR block size | Available IP addresses (WDC04, WDC06) | Available IP addresses (non-WDC) |
+| CIDR block capacity | Available IP addresses (WDC04, WDC06) | Available IP addresses (non-WDC) |
 | --------------- | ------------------------------------- | -------------------------------- |
 | /22             | 1019                                  | 1021                             |
 | /23             | 507                                   | 509                              |

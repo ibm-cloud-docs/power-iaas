@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -15,9 +15,6 @@ subcollection: power-iaas
 
 # Capturing and exporting a VSI
 {: #capturing-exporting-vm}
-
-
-
 
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
@@ -82,33 +79,31 @@ Complete the following steps to capture and export a VSI:
     - **Image catalog**: Stores the image in your workspace image catalog for future deployments
     - **IBM Cloud Object Storage**: Exports to IBM Cloud Object Storage
 
-    **Image catalog**
+   Image catalog
+   :  If you selected **Image catalog** as the export destination, complete the following steps:
 
-    If you selected **Image catalog** as the export destination, complete the following steps:
+      1. Enter an image name in the **Image name** field.
 
-    1. Enter an image name in the **Image name** field.
+      2. Optional: enter tags in the **User tags** field.
 
-    2. Optional: enter tags in the **User tags** field.
+   IBM Cloud Object Storage
+   :  If you selected **IBM Cloud Object Storage** as the export destination, complete the following steps:
 
-    **IBM Cloud Object Storage**
+      1. Select the **Region** where your IBM Cloud Object Storage bucket is located.
 
-    If you selected **IBM Cloud Object Storage** as the export destination, complete the following steps:
+      2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. Optionally, you can specify folder paths within the bucket.
 
-    1. Select the **Region** where your IBM Cloud Object Storage bucket is located.
+      3. In the **HMAC access key** field, provide your HMAC access key. For more information, see [Generating HMAC credentials](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
 
-    2. In the **Bucket name** field, enter the name of the bucket where you want to export the image. Optionally, you can specify folder paths within the bucket.
+      4. In the **HMAC secret access key** field, provide your HMAC secret access key.
 
-    3. In the **HMAC access key** field, provide your HMAC access key. For more information, see [Generating HMAC credentials](/docs/power-iaas?topic=power-iaas-deploy-custom-image#access-keys).
+      5. Set **Generate checksum file** to **On** to generate a checksum file.
 
-    4. In the **HMAC secret access key** field, provide your HMAC secret access key.
+      The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and has the file extension `.sha256`. Use the command `shasum -a 256` to verify that the copied file is correct.
 
-    5. Set **Generate checksum file** to **On** to generate a checksum file.
+      If you are creating your own image, you can create a checksum image and place it with your own image in the same bucket. One of the ways to generate the checksum image is by using the command `shasum -a 256 <filename>` or `sha256sum <filename>`.
 
-       The checksum file is created and placed in the IBM Cloud Object Storage bucket along with the exported image. The checksum file name is based on the name of the image file and has the file extension `.sha256`. Use the command `shasum -a 256` to verify that the copied file is correct.
-
-       If you are creating your own image, you can create a checksum image and place it with your own image in the same bucket. One of the ways to generate the checksum image is by using the command `shasum -a 256 <filename>` or `sha256sum <filename>`.
-
-       Generating a checksum file might increase the image capture and export time.
+      Generating a checksum file might increase the image capture and export time.
        {: note}
 
 11. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox.
@@ -128,7 +123,7 @@ ibmcloud pi instance-capture INSTANCE_ID --destination DEST --name NAME [--volum
 ## Capturing and exporting a VSI by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-capture-export}
 
-To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
+To capture and export a VSI to the image catalog or IBM Cloud Object Storage by using the API, use the [Add a capture pvm-instance to the jobs queue](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-pvminstances-capture-post){: external} method.
 
 
 ## Viewing the capture and export results
@@ -140,7 +135,7 @@ You can monitor the progress of the operation by clicking **View details** next 
 
 To view details of a capture and export job by using the CLI, use the [`ibmcloud pi instance capture show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-capture-show) command.
 
-To view details of a capture and export job by using the API, use the [Get detail of last capture job](https://cloud.ibm.com/apidocs/power-cloud#pcloud-v2-pvminstances-capture-get){: external} method.
+To view details of a capture and export job by using the API, use the [Get detail of last capture job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v2-pvminstances-capture-get){: external} method.
 
 If you select large volumes, the export process can take a significantly long time.
 {: important}

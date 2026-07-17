@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2025-02-24"
+lastupdated: "2026-07-14"
 
 keywords: power, power systems, event logs, events, notifications, view logs, customize notifications
 
@@ -71,7 +71,7 @@ You can stop the notifications or stop getting notifications from other concurre
     |---------|----------|
     | On | Shows notification based on events that are requested or performed by concurrent users in the same workspace. |
     | Off |	Shows notifications for events that are requested or performed by you for the current workspace. It also hides notifications based on events that are requested or performed by concurrent users in the same workspace. |
-    {: caption="Workspace notification toglle button options" caption-side="top"}
+    {: caption="Workspace notification toggle button options" caption-side="top"}
     {: #workspace-noti-toggle}
 
 5. Click **Save**.

@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-03-25"
+lastupdated: "2026-07-08"
 
 keywords: Virtual Persistent Memory, virtual persistent memory, vPMEM, SAP HANA partitions
 
@@ -107,7 +107,7 @@ You cannot resize the vPMEM volume after you create the volume.
 
 Use the following API and CLI commands to create and add a vPMEM volume to a VSI:
 
-- API: Use the [Create a vPMEM volume to be attached to this PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-vpmem-volumes-post){: external} API to create a vPMEM volume for a VSI with AIX&reg;, Linux&reg;, or Linux (SAP HANA) OS.
+- API: Use the [Create a vPMEM volume to be attached to this PVM Instance](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-vpmem-volumes-post){: external} API to create a vPMEM volume for a VSI with AIX&reg;, Linux&reg;, or Linux (SAP HANA) OS.
 - CLI: Use the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command to create a vPMEM volume. You can use [ibmcloud pi instance vpmem-volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-vpmem-volume) to perform the `attach`, `detach`, `get`, or `list` operations.
 
 
@@ -132,7 +132,7 @@ If the vPMEM volume is associated with the VSI with Linux for SAP (HANA) OS, the
 
 Use the following API and CLI commands to delete a vPMEM volume:
 
-- API: Use the [Delete a vPMEM volume attached to this PVM Instance](https://cloud.ibm.com/apidocs/power-cloud#pcloud-pvminstances-vpmem-volumes-delete){: external} API command to delete a vPMEM volume.
+- API: Use the [Delete a vPMEM volume attached to this PVM Instance](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-vpmem-volumes-delete){: external} API command to delete a vPMEM volume.
 - CLI: Use the [ibmcloud pi instance delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-delete) to delete a vPMEM volume.
 
 

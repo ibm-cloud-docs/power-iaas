@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-06-25"
+lastupdated: "2026-07-08"
 
 ---
 
@@ -25,4 +25,4 @@ The IBM {{site.data.keyword.powerSys_notm}} command-line interface (CLI) provide
 * [IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1)
 * [IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem)
 
-You can also use the application programming interfaces (APIs) to interact with the IBM {{site.data.keyword.powerSys_notm}}. For more information, see [API references](https://cloud.ibm.com/apidocs/power-cloud){: external}.
+You can also use the application programming interfaces (APIs) to interact with the IBM {{site.data.keyword.powerSys_notm}}. For more information, see [API references](https://cloud.ibm.com/docs/apis/power-cloud){: external}.

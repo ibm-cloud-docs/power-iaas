@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-07-08"
 
 keywords: dedicated host, primary workspace, secondary workspace
 
@@ -258,120 +258,109 @@ To map a dedicated host with VSIs or SPP resources, you must use the values of t
 
 To fetch the virtual host ID of a dedicated host, use the following API or CLI commands:
 
-* API command &ndash; [get the list of all hosts](https://cloud.ibm.com/apidocs/power-cloud#v1-hosts-get) with the `?host_reference=true` query parameter.
+* API command &ndash; [get the list of all hosts](https://cloud.ibm.com/docs/apis/power-cloud#v1-hosts-get) with the `?host_reference=true` query parameter.
 * CLI command &ndash; [get the host information](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-host-get){: external} with the `--json` option.
 
 The following code examples provide the old format and new format of the virtual host ID after the format is updated to the standard format:
 
-**Example 1: /v1/hosts/{host_id} format**
+### Example 1: /v1/hosts/{host_id} format
+{: #example1}
 
-**Old format**
+Old format
+:    ```code
+     [
+          {
+               "capacity": {
+                    "cores": {
+                              "available": 14.75,
+                              "reserved": 5.25,
+                              "total": 20,
+                              "used": 0
+               },
+               "memory": {
+                              "available": 930.83,
+                              "reserved": 93.17,
+                              "total": 1024,
+                              "used": 0
+                    }
+          },
+               "displayName": "myHost3",
+               "hostGroup": {
+                    "access": "primary",
+                    "href": "/v1/host-groups/b1d71c2c-54fd-49d7-b061-44b663106fec",
+                    "name": "Fred_HG"
+          },
+          "id":123,
+          "state": "up",
+          "status": "enabled",
+          "sysType": "s922"
+          }
+     ]
+     ```
 
-
-```code
-[
-     {
-          "capacity": {
-               "cores": {
+New format
+:    ```code
+     [
+          {
+               "capacity": {
+                    "cores": {
                          "available": 14.75,
                          "reserved": 5.25,
                          "total": 20,
                          "used": 0
-          },
-          "memory": {
+                    },
+                    "memory": {
                          "available": 930.83,
                          "reserved": 93.17,
                          "total": 1024,
                          "used": 0
-               }
-        },
-          "displayName": "myHost3",
-          "hostGroup": {
-               "access": "primary",
-               "href": "/v1/host-groups/b1d71c2c-54fd-49d7-b061-44b663106fec",
-               "name": "Fred_HG"
-        },
-        "id":123,
-        "state": "up",
-        "status": "enabled",
-        "sysType": "s922"
-     }
-]
-```
-
-**New format**
-
-
-```code
-[
-     {
-          "capacity": {
-               "cores": {
-                    "available": 14.75,
-                    "reserved": 5.25,
-                    "total": 20,
-                    "used": 0
+                    }
                },
-               "memory": {
-                    "available": 930.83,
-                    "reserved": 93.17,
-                    "total": 1024,
-                    "used": 0
-               }
-          },
-          "displayName": "myHost3",
-          "hostGroup": {
-               "access": "primary",
-               "href": "/v1/host-groups/b1d71c2c-54fd-49d7-b061-44b663106fec",
-               "name": "Fred_HG"
-          },
-          "id": d750956e-e22c-4e4d-b0d1-a126c16d1cd0,
-          "state": "up",
-          "status": "enabled",
-          "sysType": "s922"
-     }
-]
-```
+               "displayName": "myHost3",
+               "hostGroup": {
+                    "access": "primary",
+                    "href": "/v1/host-groups/b1d71c2c-54fd-49d7-b061-44b663106fec",
+                    "name": "Fred_HG"
+               },
+               "id": d750956e-e22c-4e4d-b0d1-a126c16d1cd0,
+               "state": "up",
+               "status": "enabled",
+               "sysType": "s922"
+          }
+     ]
+     ```
 
+### Example 2: /v1/host-groups/{host_group_id} format
+{: #example2}
 
+Old format
+:    ```code
+     [
+          {
+          "creationDate": "2024-11-12T16:29:35.000Z",
+          "hosts": [
+                         "/v1/hosts/123"
+          ],
+          "id": "d50dd63a-dfda-46a9-854f-e05f461f24ad",
+          "name": "nonCrnEnabledHG",
+          "primary": "85e6515b-9137-487f-9155-b96aee04b089",
+          "secondaries": []
+          }
+     ]
+     ```
 
-
-
-**Example 2: /v1/host-groups/{host_group_id} format**
-
-**Old format**
-
-
-```code
-[
-     {
-        "creationDate": "2024-11-12T16:29:35.000Z",
-        "hosts": [
-                    "/v1/hosts/123"
-        ],
-        "id": "d50dd63a-dfda-46a9-854f-e05f461f24ad",
-        "name": "nonCrnEnabledHG",
-        "primary": "85e6515b-9137-487f-9155-b96aee04b089",
-        "secondaries": []
-     }
-]
-```
-
-
-**New format**
-
-
-```code
-[
-     {
-        "creationDate": "2024-11-12T16:29:35.000Z",
-        "hosts": [
-                     "/v1/hosts/d750956e-e22c-4e4d-b0d1-a126c16d1cd0"
-        ],
-        "id": "d50dd63a-dfda-46a9-854f-e05f461f24ad",
-        "name": "nonCrnEnabledHG",
-        "primary": "85e6515b-9137-487f-9155-b96aee04b089",
-        "secondaries": []
-     }
-]
-```
+New format
+:    ```code
+     [
+          {
+          "creationDate": "2024-11-12T16:29:35.000Z",
+          "hosts": [
+                         "/v1/hosts/d750956e-e22c-4e4d-b0d1-a126c16d1cd0"
+          ],
+          "id": "d50dd63a-dfda-46a9-854f-e05f461f24ad",
+          "name": "nonCrnEnabledHG",
+          "primary": "85e6515b-9137-487f-9155-b96aee04b089",
+          "secondaries": []
+          }
+     ]
+     ```

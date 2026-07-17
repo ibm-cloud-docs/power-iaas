@@ -27,9 +27,10 @@ toc:
       - topicgroup:
           label: Locations
           topics:
-          - cloud-regions.md
+          - topic: cloud-regions.md
+            navtitle: IBM Cloud regions
           - topic: satellite-location-private.md
-            navtitle: IBM Satellite location
+            navtitle: IBM Satellite regions
       - topicgroup:
           label: Pricing
           topics:
@@ -203,10 +204,10 @@ toc:
       - powervs-maintenance.md
       - link:
           label: API reference
-          href: https://cloud.ibm.com/apidocs/power-cloud
+          href: https://cloud.ibm.com/docs/apis/power-cloud
       - link:
           label: Metadata and Identity API
-          href: https://cloud.ibm.com/apidocs/power-cloud-metadata-identity
+          href: https://cloud.ibm.com/docs/apis/power-cloud-metadata-identity
       - topicgroup:
           label: Command reference
           topics:

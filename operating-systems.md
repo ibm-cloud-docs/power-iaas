@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-06-29"
+lastupdated: "2026-07-14"
 
 keywords: Operating systems, powerVS OS
 
@@ -55,7 +55,7 @@ When you use IBM i for your VSI, review the following requirements:
 
 - The IBM i 7.4, 7.5, 7.6, and Cloud Optical Repository (COR) OS images support Power10 and later systems. However, you can create a custom image or upgrade your IBM i VSI by downloading the media from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/landing/landing-page) and navigating to the **My entitled software** > **IBM i Evaluation and NLV Download** section.
 
-- When you upgrade an IBM i VSI that has a virtual serial number (VSN) assigned, you must contact IBM Support to update the IBM i licenses to match the new IBM i version. For more informaiton about VSN, see [About VSN in IBM data center](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn). 
+- When you upgrade an IBM i VSI that has a virtual serial number (VSN) assigned, you must contact IBM Support to update the IBM i licenses to match the new IBM i version. For more information about VSN, see [About VSN in IBM data center](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vsn). 
 
 
 ## Linux
@@ -77,6 +77,8 @@ When you use Linux for your VSI, review the following Linux distribution options
     {: important}
 
 - To use your own license, select the OS image with the `-BYOL` suffix. On the *Create virtual server instance* page, these images are listed under the *Client supplied subscription* section. Alternatively, you can create your own customized Linux image in Open Virtualization Appliance (OVA) format by using the Linux stock images that are available when you select Full Linux Subscription (FLS). For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
+
+
 
 The following IBM Power Systems are supported by Red Hat and SUSE:
 
@@ -112,9 +114,9 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                        |
 | -------------------- | -------------------------- | ------------------------------------------------------ |
-| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
 {: caption="Supported AIX versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported AIX versions for {{site.data.keyword.powerSys_notm}}"}
 {: #aix-public-private}
@@ -158,7 +160,7 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 | Power9[^f]           | * SLES 16 general purpose \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP \n * SLES 15.5 SAP \n * SLES 15.4 SAP | * SLES 16 general purpose (SLES16) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER) \n * SLES 15 SP5 for SAP HANA (SLES15-SP5-SAP) \n * SLES 15 SP5 for SAP NetWeaver (SLES15-SP5-SAP-NETWEAVER) \n * SLES 15 SP4 for SAP HANA (SLES15-SP4-SAP) \n * SLES 15 SP4 for SAP NetWeaver (SLES15-SP4-SAP-NETWEAVER) |
 {: caption="Supported Linux versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported Linux versions for {{site.data.keyword.powerSys_notm}}"}
-{: #linux-public-private}
+{: #linux-public-private-sles}
 {: tab-title="Linux (SLES)"}
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}

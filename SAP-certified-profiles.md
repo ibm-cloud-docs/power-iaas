@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-05"
+lastupdated: "2026-07-13"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -78,7 +78,7 @@ The following SAP HANA profiles are available for IBM Power10 processor-based se
 | MH2  | Very high memory | Suitable for server Online Analytical Processing (OLAP) databases, such as SAP NetWeaver                               |
 {: caption="Power10 SAP HANA certified profiles " caption-side="bottom"}
 
-SR2 profiles also support custom combination of physical CPU cores and memory. You must deploy custom SR2 profiles by using the CLI or API only. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory size of the virtual machine by using the UI. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware]( https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. SR2 profiles are not available with the E980 machine type.
+SR2 profiles also support custom combination of physical CPU cores and memory. You must deploy custom SR2 profiles by using the CLI or API only. You cannot switch from an SR2 profile to a different SAP HANA profile. When an SR2 profile is deployed, you can edit the core value and memory capacity of the virtual machine by using the UI. Combinations that are certified by SAP for productive usage are documented in the [SAP Note 2947579 - SAP HANA on IBM Power Virtual Servers](https://launchpad.support.sap.com/#/notes/2947579) and in the [Certified and Supported SAP HANA Hardware](https://www.sap.com/dmc/exp/2014-09-02-hana-hardware/enEN/#/solutions?filters=v:deCertified;v:60ed2297-5cdd-4387-89c2-b0d3651d1206&sort=Latest%20Certification&sortDesc=true&id=s:2837) directory. SR2 profiles are not available with the E980 machine type.
 
 
 ### Power9 profiles
@@ -140,7 +140,7 @@ To deploy a certified profile for SAP Application Servers or SAP NetWeaver by us
 You can use the following commands to get the details of an SAP profile:
 
 * **CLI** : [ibmcloud pi image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image){:external}
-* **API** : [Get list of SAP profiles](/apidocs/power-cloud#pcloud-sap-getall){:external}
+* **API** : [Get list of SAP profiles](/docs/apis/power-cloud#pcloud-sap-getall){:external}
 
 The `Type` property of an SAP Application Server profile has the value `sap-rise-app`.
 {: note}
