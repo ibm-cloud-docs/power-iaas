@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-17"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -44,9 +44,7 @@ If you are unsure whether you manually configured subnets and Direct Link for yo
 
 To confirm that you have an automatically configured Cloud connection, check the following two conditions:
 
-1. The connection appears on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace.
-
-   To verify this, complete the following steps:
+1. The connection appears on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace. To verify, complete the following steps:
 
    1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external}.
 
@@ -60,9 +58,7 @@ To confirm that you have an automatically configured Cloud connection, check the
 
         If the **Cloud connections** option does not appear, your workspace is already PER-enabled, and this procedure does not apply to you. If your connections are listed here, continue to the next condition.
 
-2. The Direct Link details page displays the message "This Direct Link is read-only".
-
-   To verify this, complete the following steps:
+2. The Direct Link details page displays the message "This Direct Link is read-only". To verify, complete the following steps:
 
    1. Log in to the [IBM Cloud console](https://cloud.ibm.com){: external}.
 
@@ -79,9 +75,7 @@ If both conditions are met, your Direct Link connection was automatically config
 
 To confirm that you have a manually configured Direct Link 2.0, check the following conditions:
 
-1. The connection does not appear on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace.
-
-   To verify this, complete the following steps:
+1. The connection does not appear on the **Cloud connections** page in the {{site.data.keyword.powerSys_notm}} workspace. To verify, complete the following steps:
 
    1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external}.
 
@@ -93,9 +87,7 @@ To confirm that you have a manually configured Direct Link 2.0, check the follow
 
    5. Click **Cloud connections** in the left navigation panel. If the **Cloud connections** option does not appear, your workspace is already PER-enabled. If no connections are listed or your Direct Link is not shown here, your Direct Link might be manually configured.
 
-2. The Direct Link details page does not display the message "This Direct Link is read-only".
-
-   To verify this, complete the following steps:
+2. The Direct Link details page does not display the message "This Direct Link is read-only". To verify, complete the following steps:
 
    1. Log in to the [IBM Cloud console](https://cloud.ibm.com){: external}.
 

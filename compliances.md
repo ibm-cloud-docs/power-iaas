@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-17"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -27,6 +27,28 @@ subcollection: power-iaas
 
 The {{site.data.keyword.powerSysFull}} provides programs and certifications that help you establish and strengthen compliance for a wide range of internationally recognized standards.
 {: shortdesc}
+
+## MeitY
+{: #meity}
+
+The Ministry of Electronics and Information Technology (MeitY), Government of India, oversees cloud adoption for government and public sector organizations through its MeghRaj (GI Cloud) initiative. This program enables secure cloud services for public sector workloads across India.
+
+Cloud service providers seeking to serve government customers must undergo MeitY's comprehensive empanelment process, which includes an independent assessment by the Standardization Testing and Quality Certification (STQC) Directorate. After successful empanelment, providers can participate in government and public sector cloud procurement programs.
+
+IBM {{site.data.keyword.powerSys_notm}} completed Cloud Service Provider (CSP) empanelment from MeitY for cloud services offered from the IBM Cloud Chennai, India Data Center in 2026. The empanelment confirms that {{site.data.keyword.powerSys_notm}} complies with the stringent security and compliance standards set by the Government of India and is qualified for use by Indian public sector and government agencies.
+
+For more information about MeitY, see [What is MeitY?](https://www.ibm.com/products/cloud/compliance/meity){: external}.
+
+## BSI C5
+{: #bsi-c5}
+
+The Cloud Computing Compliance Controls Catalogue (C5) is a cloud security framework developed by the German Federal Office for Information Security (BSI). C5 defines requirements that cloud service providers must meet to demonstrate a baseline level of security and transparency for cloud operations and data processing.
+
+BSI C5 reports are independent, third-party assessments performed by BSI-certified assessors. These reports provide assurance regarding data protection, information security, and cybersecurity controls. {{site.data.keyword.powerSys_notm}} has successfully completed a BSI C5 assessment and maintains a current BSI C5 report.
+
+For more information about C5, see [BSI Federal Office for Information Security](https://www.bsi.bund.de){: external} and [IBM Cloud® compliance: C5](https://www.ibm.com/products/cloud/compliance/c5){: external}.
+
+BSI C5 reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
 
 
 
@@ -98,16 +120,12 @@ The System and Organization Controls (SOC) framework, developed by the American 
 
 SOC 1 is an audit of the internal controls at a service organization that is implemented to protect client-owned data involved in client financial reporting. SOC 1 audits and reports are based on the Statement on Standards for Attestation Engagements (SSAE 18) and the International Standards for Assurance Engagements No. 3402 (ISAE 3402).
 
-
-
 The following SOC reports are available for {{site.data.keyword.powerSys_notm}}:
--   SOC 1 Type II
--   SOC 2 Type II
+-   SOC 1 type II
+-   SOC 2 type II
+-   [SOC 3 report](https://www-api.ibm.com/adobe/assets/urn:aaid:aem:3bffa4c5-a208-4db9-9325-49bb7f9495e3/original/as/IBM%20Power%20Virtual%20Server%20-%20SOC%203%20-%201H%202026_Report_Final.pdf){: external}
 
-
-
-
-
+SOC 1 and SOC 2 reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
 
 ## ISO 27017:2015
 {: #ISO-cert}
@@ -133,8 +151,7 @@ Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MA
 
 You can build PCI-DSS compliant environments and applications by using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
 
-
-
+PCI-DSS reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
 
 ## HIPAA
 {: #HIPAA-cert}
