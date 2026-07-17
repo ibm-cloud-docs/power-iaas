@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-17"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -25,8 +25,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## July 2026
 {: #July-2026}
 
-### 6 July 2026
-{: #power-iaas-jul0626}
+### 16 July 2026
+{: #power-iaas-jul1626}
 {: release-note}
 
 Power Edge Router available in `MON01` data center
