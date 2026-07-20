@@ -23,7 +23,7 @@ subcollection: power-iaas
 
 
 ---
-Power Edge Router (PER) is enabled for all {{site.data.keyword.powerSys_notm}} data centers except `CHE01`. Two migration paths are available depending on how your workspace network was originally configured: self-service automation or a support ticket.
+Power Edge Router (PER) is enabled for all {{site.data.keyword.powerSys_notm}} data centers except `CHE01`. Two migration paths are available depending on how your workspace network was originally configured: self-service automation or by opening a support ticket.
 {: shortdesc}
 
 ## Before you begin
@@ -174,10 +174,10 @@ You can update the DNS configuration in two ways:
 
     Run the following command:
 
-        ```bash
-        ibmcloud pi netu <network_id> --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
-        ```
-        {: .codeblock}
+    ```bash
+    ibmcloud pi netu <network_id> --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
+    ```
+    {: .codeblock}
 
     Where `127.0.0.1` refers to the local stub resolver on the VSI.
 
