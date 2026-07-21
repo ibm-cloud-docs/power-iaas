@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-21"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -27,7 +27,7 @@ subcollection: power-iaas
 
 ---
 
-You can create and configure IBM {{site.data.keyword.powerSys_notm}} instances by setting up a workspace, selecting boot images, and configuring machine profiles. You can also manage storage volumes and define network interfaces to deploy virtual server instances in your cloud environment.
+You can create and configure {{site.data.keyword.powerSys_notm}} instances by setting up a workspace, selecting boot images, and configuring machine profiles. You can also manage storage volumes and define network interfaces to deploy virtual server instances (VSIs) in your cloud environment.
 {: shortdesc}
 
 
@@ -41,18 +41,17 @@ To create a {{site.data.keyword.powerSys_notm}} workspace, complete the followin
 3. Click **Create a workspace**.
 4. Select **Location type** as {{site.data.keyword.on-prem}} or {{site.data.keyword.off-prem}}.
 
-   For {{site.data.keyword.on-prem}} location types, select the name of the created satellite location from the **Satellite Location** list.
+   For {{site.data.keyword.on-prem}} location types, select your satellite location from the **Satellite Location** list.
 
    For {{site.data.keyword.off-prem}} location types, select the IBM Cloud region that is closest to your physical location from the **Satellite Location** list. For the list of available IBM Cloud regions, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
 
-5. In the **Details** section, provide a name for the workspace and select the resource groups.
-6. Click **Continue**. The selected workspace details are displayed on the Summary page.
-   Review the estimated cost on the Summary page.
+5. In the **Details** section, provide a name for the workspace and select a resource group.
+6. Click **Continue**. Review the workspace details and estimated cost on the Summary page.
 7. Select **I agree to the Terms and conditions** checkbox.
 8. Click **Create**. You are redirected to the **Workspaces** page where you can select an existing workspace.
 
 
-For more information about appropriate region for your workspace, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
+For more information about the appropriate region for your workspace, see [IBM Cloud regions](/docs/power-iaas?topic=power-iaas-ibm-cloud-reg).
 
 
 
@@ -64,14 +63,14 @@ For more information about appropriate region for your workspace, see [IBM Cloud
 ## Configuring a {{site.data.keyword.powerSys_notm}} instance
 {: #configuring-instance}
 
-To create a virtual server instance (VSI), you must first create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and select a workspace. The created workspaces are listed under **Workspaces** of the {{site.data.keyword.powerSys_notm}} user interface in the navigation panel. Select the workspace for which you want to create an instance. Complete the following steps to create a virtual machine instance:
+To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service) and then select it from the Workspaces list. The created workspaces are listed under **Workspaces** in the navigation panel of the {{site.data.keyword.powerSys_notm}} user interface. Select the workspace for which you want to create an instance. Complete the following steps to create a virtual server instance:
 
-1. Click **Virtual server instances** in the navigation panel. The virtual server instances that are associated with the selected workspace are displayed.
+1. Click **Virtual server instances** in the navigation panel. The VSIs that are associated with the selected workspace are displayed.
 
-    Select a workspace to display the virtual server instances that were provisioned. You must refresh the page to see the updated information if you see outdated information. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
+    Select a workspace to display the VSIs that were provisioned. If the displayed information appears outdated, refresh the page to view the latest data. For more information, see the FAQ page [What should I do when I do not see the latest information in the UI](/docs/power-iaas?topic=power-iaas-powervs-faqs#ui-not-updated).
     {: important}
 
-    [{{site.data.keyword.on-prem}}]{: tag-red} If an error occurs immediately after you create or open the virtual server instance, you must delete it.
+    [{{site.data.keyword.on-prem}}]{: tag-red} If an error occurs immediately after you create or open the VSI, you must delete it.
     {: note}
 
 2. To create a new instance, click **Create instance**.
@@ -80,14 +79,14 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
 4. Optional: Enter user tags in the **User tags (optional)** field.
 
-5. Set the number of VSIs that you want to create in the **Number of instances** field. The default is `1`, and you can create up to `5` VSIs at a time. If you select more than one instance, additional options are displayed.
+5. Set the number of VSIs that you want to create in the **Number of instances** field. The default is 1, and you can create up to five VSIs at a time. If you select more than one instance, additional options are displayed.
 
     The total due per month is dynamically updated in the **Order Summary** based on your selections. You can create a cost-effective {{site.data.keyword.powerSys_notm}} instance that satisfies your business needs.
     {: tip}
 
 6. Choose an existing SSH key or create one to securely connect to your {{site.data.keyword.powerSys_notm}}.
 
-7. Optional: Expand **Advanced configurations** to set additional options for your VSI.
+7. Optional: Expand **Advanced Configurations** to set additional options for your VSI.
 
     - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, the VSI is kept on its current host; however, downtime can occur during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard**.
 
@@ -105,7 +104,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     
 
-    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems with an IBM provided subscription. If you assign a virtual serial number (VSN) to a VSI without storage, you must assign the VSN before you attach the boot volume and start the VSI.
+    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems. For Linux, an IBM-provided subscription is required. If you assign a virtual serial number (VSN) to a VSI without storage, you must assign the VSN ro the VSI before you attach the boot volume and start the VSI.
     {: important}
 
     
@@ -116,20 +115,20 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     When you select a stock image, you must also select the storage tier and the storage pool. When you select a custom image, the new VSIs are deployed into the same storage tier and pool where the image resides. You must select a storage type for stock images. Currently, you cannot mix **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
-    [{{site.data.keyword.on-prem}}]{: tag-red}If you select a custom image from a local catalog, the VSIs are deployed on a single storage tier.
+    [{{site.data.keyword.on-prem}}]{: tag-red} If you select a custom image from a local catalog, the VSIs are deployed on a single storage tier.
     {: note}
 
-    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for epic workload. For more information on epic, see [configuring a VSI for EPIC workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
+    If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for Epic workload. For more information about Epic workloads, see [Configuring a VSI for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
     
 
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
-    - Include the following licenses to your VSI:
+    - Add the following licenses to your VSI:
       - IBM i Cloud Storage Solution
-      - IBM i PowerHA, and
+      - IBM i PowerHA
       - Rational Dev Studio for IBM i
 
-        Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically set. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
+        Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically applied. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
 
      
 
@@ -140,9 +139,15 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.
     {: note}
 
-    If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you end the user data for the Linux images, you must complete the validation checks that are in place. No validation checks are done for AIX and bring your own license images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
+    If you select Full Linux Subscription (FLS) images, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to pass in user data or scripts during the first boot runtime. When you finish entering the user data for Linux images, the system does validation checks on the input. No validation checks are done for AIX and bring your own license images. For more information, see [Passing user-defined scripts](/docs/power-iaas?topic=power-iaas-set-full-Linux#cloud-init-fls).
 
-    Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} Instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information on COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+    
+
+    Cloud Optical Repository (COR) is a virtual image that can be deployed and used as a Network File Server (NFS) to perform various IBM i tasks that require media. This virtual optical image includes a collection of the media necessary for various IBM i tasks, for all supported IBM i releases. With the COR image deployed, a second {{site.data.keyword.powerSys_notm}} instance can be deployed on the same VLAN that is set up as the client and pointed to the COR (target) NFS Server Instance. For more information about COR images, see [Cloud Optical Repository](https://cloud.ibm.com/media/docs/downloads/power-iaas/Cloud_Optical_Repository.pdf){: external}.
+
+    
+
+    
 
     To deploy a VSI for SAP HANA workload, select one of the following options from the **Operating system** list:
 
@@ -150,7 +155,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
 
-    To deploy an SAP certified profile from the **Standard RISE** or **Application server** tabs, set **SAP RISE deployment** to on in the Advance Configuration section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
+    To deploy an SAP certified profile from the **Standard RISE** or **Application Server** tabs, set **SAP RISE deployment** to on in the **Advanced Configurations* section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
 
     To deploy a VSI for SAP NetWeaver workloads without an SAP certified profile, complete the following steps:
 
@@ -160,12 +165,12 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    4. Select a storage pool from the **Storage pool** field.
    5. Click **Done editing** to continue to the Profile section.
 
-8. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)** and **Core type**.
+9. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)**, and **Core type**.
 
-    The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
+    The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
 
-    When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login appears as disabled. For more information, see [How to create a new AIX VSI with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
+    When you use an AIX stock image as the boot volume, a console session is required to set the initial root user password. Without completing this step, SSH login is disabled. For more information, see [How to create a new AIX VSI with SSH keys for root login](/docs/power-iaas?topic=power-iaas-create-vm).
 
     
 
@@ -174,9 +179,8 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
    - Select an IBM i image with version 7.3 or later from the **Image** list under the **Boot image** section.
    - Select an IBM Power10 or later server type from the **Machine type** list.
    - Complete the following steps to assign a VSN to the instance:
-     - Edit the **Virtual serial number (VSN)** field.
-     - The VSN summary pane appears.
-     - Select either **Auto-assign** or **Select from retained VSNs** option to assign a VSN.
+     - Edit the **Virtual serial number (VSN)** field. The VSN summary pane appears.
+     - Select **Auto-assign** or **Select from retained VSNs** to assign a VSN.
 
     The supported {{site.data.keyword.ibmi-vst}}s are displayed in the **{{site.data.keyword.ibmi-vst}}** list based on the machine type that you select. The recommended {{site.data.keyword.ibmi-vst}} is displayed in the **{{site.data.keyword.ibmi-vst}}** field based on the number of cores and the memory size. You can select the {{site.data.keyword.ibmi-vst}} that is displayed in the **{{site.data.keyword.ibmi-vst}}** field or other options from the list.
 
@@ -190,17 +194,17 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
        - To deploy an SAP certified profile, you must select an IBM Power10 or later machine type from the list.
     2. Select a profile to deploy an SAP HANA profile.
 
-    3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The tabs are enabled if you set **SAP RISE deployment** to on in the Advance Configuration section.
+    3. Select a profile from the **Standard RISE** or **Application Server** tab to deploy an SAP certified profile. The **Standard RISE** and **Application Server** tabs are enabled only when **SAP RISE deployment** is set to on in the **Advanced Configurations** section.
 
     The **SAP RISE deployment** option is enabled when you select **Linux for SAP (HANA)** from the Operating system list and IBM Power10 or later from the Machine type list.
 
     
 
-9. Optional: Expand **Advanced Configuration** to configure additional settings for your VSI.
+10. Optional: Expand **Advanced Configurations** to configure additional settings for your VSI.
 
     - **Specify preferred processor compatibility mode**: By default, this option is set to off. To use a specific processor compatibility mode, set **Specify preferred processor compatibility mode** to on, and then select the processor compatibility mode from the **Preferred processor compatibility mode** list.
 
-        The Virtual server instance details page of a deployed VSI displays the preferred and the effective processor compatibility mode that is set for a VSI.
+        The Virtual server instance details page of a deployed VSI displays the preferred and effective processor compatibility modes that are set for a VSI.
 
         The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
@@ -211,7 +215,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
     - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. You can disable this feature during VSI creation by setting **Automated remote restart** to off, or later by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-        Automated remote restart does not restart pinned VSIs. Pinning virtual server instances to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+        Automated remote restart does not restart pinned VSIs. Pinning VSIs to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
 
         Automated remote restart also does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
 
@@ -219,11 +223,11 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
 
         {{_include-segments/disable-arr.md}}
 
-10. Click **Continue**.
+11. Click **Continue**.
 
-11. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the virtual server instance.
+12. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the VSI.
 
-    Expand **Advanced configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
+    Expand **Advanced Configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
     
 
@@ -233,7 +237,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     
 
 
-12. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not supported in all the IBM data center locations. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
+13. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not available at all IBM data center locations. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
     {: important}
@@ -241,7 +245,7 @@ To create a virtual server instance (VSI), you must first create a [{{site.data.
     For an AIX VSI, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
 
-13. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
+14. Accept the **Terms of Use** and click **Create instance** to provision a new {{site.data.keyword.powerSys_notm}}. To view your boot images, go to **Boot images** after you provision the instance.
 
     
 
@@ -264,26 +268,26 @@ Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.
 
 VSN has the following characteristics:
 
-* It has seven digits and is a unique string.
+* It is a unique seven-digit identifier.
 * It is used for licensing and tracking the usage of the VSI.
 * It can be associated with only one VSI.
 * It can be assigned to a new or an existing VSI.
-* It can be assigned to an empty virtual server instance in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
+* It can be assigned to an empty VSI in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
 
 For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
 
-A VSI is moved across systems with its associated VSN. Hence, when a VSN is associated with a VSI you need not pin the VSI to a host for licensing or entitlement purpose.
+A VSI moves across systems with its associated VSN. Therefore, when a VSN is associated with a VSI, you do not need to pin the VSI to a host for licensing or entitlement purposes.
 
 
 
 
-VSN is a unique identifier and can be assigned only to one VSI at a time. If you simultaneously deploy more than one VSI assigning the same VSN, only one of the VSIs gets the VSN, and the others are deployed without the VSN being assigned.
+VSN is a unique identifier and can be assigned only to one VSI at a time. If you deploy more than one VSI assigning the same VSN, only one VSI receives the VSN, and the remaining VSIs are deployed without a VSN.
 
 
 
 
 
-View the details of a VSN associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+You can view the details of a VSN that is associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
 
 
 
@@ -292,15 +296,21 @@ When you upgrade an IBM i VSI that has a VSN assigned, you must contact IBM Supp
 
 
 
+
+
 ### Mapping the customer account number to the cloud account ID
 {: #VSN-id-map}
 
 For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a virtual serial number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
 
+
+
+
+
 ### Assigning a VSN to a new VSI
 {: #VSN-new-VM}
 
-You can assign a VSN only to a VSI with IBM i OS. To assign a VSN when you create a VM, select **IBM i** OS. The **Virtual serial number** field is enabled. The default VSN value is **None**.
+You can assign a VSN only to a VSI with IBM i OS. To assign a VSN when you create a VSI, select **IBM i** as the operating system. The **Virtual serial number** field is enabled. The default VSN value is **None**.
 
 Edit the default VSN value and select one of the following options:
 
@@ -320,7 +330,7 @@ For more information about creating a VSI, see [Configuring a {{site.data.keywor
 ### Assigning a VSN to an existing VSI
 {: #VSN-existing-VM}
 
-To assign a VSN for an existing IBM i VSI, complete the following steps:
+To assign a VSN to an existing IBM i VSI, complete the following steps:
 
 1. Shut down the IBM i VSI that you plan to assign the VSN.
 2. Open the VSI to access the **Virtual server instance details** page.
@@ -347,11 +357,11 @@ To assign a VSN for an existing IBM i VSI, complete the following steps:
 
 When you delete a VSI, you can either retain the VSN or release it. When you edit the VSI details to change the VSN, you can retain the existing VSN or release it. To release or retain a VSN, complete the following steps:
 
-1. Delete a VSI by clicking the delete icon from the Virtual server instance details page. The Delete virtual server instance window is displayed.
-2. Edit the details of a VSI by clicking the overflow menu (icon with 3 vertical dots) on the far right of the VSI entry from the Virtual server instance details page. The Edit virtual server instance window is displayed.
-3. Set **Release the VSN attached to the VM** to `Enable` or `Disable` on the page to release or retain the VSN:
-    - `Enable`: (Default) Deletes the VSI and attaches the VSN to the VSI that is released and no longer associated with your account. By default, the **Release the VSN attached to the VM** is enabled.
-    - `Disable`: Deletes only the VSI and retains the VSN that continues to be associated with your account. The retained VSN is moved to the retained VSN pool.
+1. Click the delete icon from the Virtual server instance details page. The Delete virtual server instance window is displayed.
+2. Edit the details of a VSI by clicking the overflow menu (three vertical dots) on the far right of the VSI entry from the Virtual server instance details page. The Edit virtual server instance window is displayed.
+3. Set **Release the VSN attached to the VM** to **Enable** or **Disable** on the page to release or retain the VSN:
+    - **Enable**: (Default) Deletes the VSI and attaches the VSN to the VSI that is released and no longer associated with your account. By default, the **Release the VSN attached to the VM** is enabled.
+    - **Disable**: Deletes only the VSI and retains the VSN that continues to be associated with your account. The retained VSN is moved to the retained VSN pool.
 
 
 
@@ -362,13 +372,13 @@ The following table provides more information about each {{site.data.keyword.pow
 
 | Field            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| General          | **Instance name**: Specify a name for your virtual server instance. \n **Number of Instances** : Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VSI. If you choose the Machine type as E980, you can choose an [anti-affinity policy](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity) with maximum of 2 VSIs. \n **Placement group**: If you are creating only one instance, you can choose the placement group to control the selection of the host to host the instance. Select a placement group from the list. To create a new placement group, select one of the following options:  \n Same server : Select this option to place the VSI on the same host. \n Different servers : Select this option to place the VSI on a different host. \n **Colocation rules**: If you specify more than one instance, you can select the following naming conventions and colocation rules:  \n **No preference**: Select this option if you do not have a hosting preference. \n **Same server** : Select this option to host all instances on the same server. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Different server** :  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Numerical prefix** : Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *1Austin*. \n **Numerical postfix** : Select this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *Austin 1*. \n **Virtual server pinning** : Select this option to pin your VSI. You can choose either a **Hard** or **Soft** pinning policy. \n [Learn more](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning). \n **Note:** When you create multiple instances of the virtual server, you must select **On** from the **Shareable** field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS, you cannot have shareable data volumes. |
+| General          | **Instance name**: Specify a name for your VSI. \n **Number of Instances**: Specify the number of instances that you want to create for the {{site.data.keyword.powerSys_notm}}. You can apply placement groups only when you are creating a single VSI. If you choose the Machine type as E980, you can choose an [anti-affinity policy](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity) with a maximum of 2 VSIs. \n **Placement group**: If you are creating only one instance, you can choose the placement group to control the selection of the host to host the instance. Select a placement group from the list. To create a new placement group, select one of the following options:  \n Same server : Select this option to place the VSI on the same host. \n Different servers : Select this option to place the VSI on a different host. \n **Colocation rules**: If you specify more than one instance, you can select the following naming conventions and colocation rules:  \n **No preference**: Select this option if you do not have a hosting preference. \n **Same server**: Select this option to host all instances on the same server. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Different server**:  Select this option to host each instance on a different server. You can use this option if you are concerned about a single-server outage that might affect all {{site.data.keyword.powerSys_notm}} instances. A placement group is automatically created. The instance name that is previously provided is used as the group name and cannot be edited. \n **Numerical prefix**: Select this option to add numbers before the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *1Austin*. \n **Numerical postfix**: Select this option to add numbers after the name of the virtual server. If, for example, the first {{site.data.keyword.powerSys_notm}} name is *Austin* the next name for the virtual instance is *Austin 1*. \n **Virtual server pinning**: Select this option to pin your VSI. You can choose either a **Hard** or **Soft** pinning policy. \n [Learn more](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning). \n **Note:** When you create multiple instances of the virtual server, you must select **On** from the **Shareable** field for each data volume that you add. If you do not want the data volume to be shareable, you can add the data volume after you create the virtual server. For IBM i OS, you cannot have shareable data volumes. |
 | Machine type     | Specify the machine type. The machine type that you select determines the number of cores and memory that is available. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external} and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| Cores            | The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round-up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Memory           | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, a higher price is charged. For example, when you choose one core with 128 GBs of memory, regular price for the first 64 GBs is charged. After the first 64 GBs (64 - 128 GBs), a higher price is charged .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Boot image       | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For the SAP stock images, it is mandatory to set an SSH key when you create the VSI. You will be able to access the VSI only via SSH after launch. However, it is recommended to set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community-supported CentOS image under the Linux operating system. However, IBM support is not available for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://wiki.centos.org/FAQ.html){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/docs/sap?group=plan-powervs-compute){: external}. \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Cores            | The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Memory           | Select the amount of memory for the {{site.data.keyword.powerSys_notm}}. If you choose to use more than 64 GBs of memory per core, a higher price is charged. For example, when you choose one core with 128 GBs of memory, regular price for the first 64 GBs is charged. After the first 64 GBs (64 - 128 GBs), a higher price is charged.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Boot image       | Select a version of the IBM-provided AIX or IBM i operating system stock image. You can also select Linux stock images for SAP HANA and SAP NetWeaver applications. For the SAP stock images, you must set an SSH key when you create the VSI. You can access the VSI only through SSH after provisioning. You can also set a password by using the `passwd` command during the first SSH access. By setting a password, you are able to access the instance in the UI console. You can also [deploy your own custom image](/docs/power-iaas?topic=power-iaas-deploy-custom-image) of AIX, IBM i, or Linux. IBM also provides a community-supported CentOS image under the Linux operating system. However, IBM support is not available for this image. For CentOS support, see the [CentOS forum](https://forums.centos.org/){: external} or [FAQ](https://wiki.centos.org/FAQ.html){: external} page. {{site.data.keyword.powerSys_notm}} now supports Linux (RHEL and SLES) stock images for non-SAP applications. \n To provision {{site.data.keyword.powerSys_notm}} instance that supports SAP HANA and SAP NetWeaver applications, see [Provisioning your {{site.data.keyword.powerSysFull}}](https://cloud.ibm.com/docs/sap?group=plan-powervs-compute){: external}. \n **Important:** When you use an AIX stock image as the boot volume, a console session is required for the initial setting of the root user password. Without completing this step, SSH login as root appears as being *disabled*. \n For IBM i operating system licensing information, see [IBM i License Program Products (LPP) and Operating System (OS) feature bundles](/docs/power-iaas?topic=power-iaas-ibmi-lpps).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Attached volumes | You can either create a new data volume or attach an existing one that you defined in your account. \n **Create volume**: Click **Create volume** to create a new data volume for your {{site.data.keyword.powerSys_notm}} instance. If you want to allow multiple virtual instances to write data to the same data volume, you must click **On** under **Shareable**. \n **Attached Volume**: You can select an existing data volume from the **Attached volumes** list. If a previously used data volume does not appear, it might exist under a different account or resource instance.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Public Networks  | Select this option to use an IBM-provided public network. Cost is associated when you select this option. \n Public networks are not supported in all the IBM data center locations. \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Public Networks  | Select this option to use an IBM-provided public network. Cost is associated when you select this option. \n Public networks are not available at all IBM data center locations. \n [Learn more](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Private Networks | Click **Add** to identify a new private network for the virtual server. If you already added a private network, you can select it from the list. For more information, see [Configure a private network subnet](/docs/power-iaas?topic=power-iaas-configuring-subnet).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 {: caption="{{site.data.keyword.powerSys_notm}} instance fields" caption-side="bottom"}
 
@@ -378,7 +388,7 @@ The following table provides more information about each {{site.data.keyword.pow
 ## Virtual server pinning and its impacts on VSI availability
 {: #vmpinning}
 
-Virtual Server Instances (VSIs) can be optionally pinned to a host. Pin VSIs only when it is necessary as it negatively impacts the VSI availability during maintenance activities such as maintenance of software license compliance. VSI pinning restricts the movement of VSIs during the maintenance operations, host failures, and other restart events.
+VSIs can be optionally pinned to a host. Pin VSIs only when necessary, because pinning negatively affects VSI availability during planned maintenance activities. VSI pinning restricts the movement of VSIs during the maintenance operations, host failures, and other restart events.
 
 ### Virtual server pinning policies
 {: #vmpinning-policies}
@@ -387,7 +397,7 @@ The behavior of the VSI depends on the following **Virtual server pinning** poli
 
 
 
-- **Soft**: If you select **Soft** pinning, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI to the original host once the host returns to its operating state by using live partition migration (LPM).
+- **Soft**: If you select **Soft** pinning, {{site.data.keyword.powerSys_notm}} automatically migrates the VSI back to the original host after the host returns to its operating state by using live partition migration (LPM).
 
 - **Hard**: If you select **Hard** pinning, the movement of the VSI from the host does not occur during compute host failures and maintenance activities. When you use Hard pinning, consider protecting your workload by using a separate [High availability](#x2284708){: term} (HA) and [Disaster recovery](#x2113280){: term} (DR) solution.
 
@@ -403,7 +413,7 @@ For more information about VSI pinning, see [What does VSI pinning do?](/docs/po
 
 Enabling **Virtual server pinning** directly affects the VSI availability posture. The impacts of pinning a VSI are detailed in the following events:
 
-- [Maintenance of Power Virtual server](#vmpinning-main)
+- [Maintenance of {{site.data.keyword.powerSys_notm}}](#vmpinning-main)
 - [Unplanned host failures](#vmpinning-unplan-main)
 
 Use the following table to determine when the VSI incurs downtime during planned maintenance and host failure events based on the type of pinning policy that is selected for the VSI.
@@ -416,23 +426,23 @@ Use the following table to determine when the VSI incurs downtime during planned
 {: caption="VSI availability posture during planned maintenance or host failure events" caption-side="top"}
 
 
-### Maintenance of Power Virtual server
+### Maintenance of {{site.data.keyword.powerSys_notm}}
 {: #vmpinning-main}
 
-IBM {{site.data.keyword.powerSys_notm}} operations team performs planned maintenance activities based on the requirements of the IBM {{site.data.keyword.powerSys_notm}} infrastructure. During the performance of the planned maintenance, the operations team cannot use the LPM feature to move VSIs that are set to a pinning policy.
+IBM {{site.data.keyword.powerSys_notm}} operations team performs planned maintenance activities based on the requirements of the IBM {{site.data.keyword.powerSys_notm}} infrastructure. During planned maintenance, the operations team cannot use the LPM feature to move VSIs that are set to a pinning policy.
 
-To perform a planned maintenance activity, the IBM {{site.data.keyword.powerSys_notm}} operations team coordinates with the owner of the VSI to temporarily remove pinning and performs the LPM without downtime. The owner of the VSI must approve the temporary removal of VSI pinning. If the owner of the VSI does not approve, the VSI is shut down until the maintenance operation is completed. After the maintenance operation is completed, the owner must restart the VSI.
+To perform a planned maintenance activity, the IBM {{site.data.keyword.powerSys_notm}} operations team coordinates with the VSI owner to temporarily remove pinning and perform an LPM migration without downtime. The owner of the VSI must approve the temporary removal of VSI pinning. If the owner of the VSI does not approve, the VSI is shut down until the maintenance operation is completed. After the maintenance operation is completed, the owner must restart the VSI.
 
 ### Unplanned host failures
 {: #vmpinning-unplan-main}
 
 
 
-When a host fails, the selected pinning policy determines the recovery process of the VSI that were previously operating on the failed host:
+When a host fails, the selected pinning policy determines the recovery process of the VSIs that were previously operating on the failed host:
 - If the VSI is set to **Soft**, it automatically restarts on the available compute resources.
 - If the VSI is set to **Hard**, it cannot be automatically restarted on the available compute resources. Such VSIs remain unavailable until the IBM {{site.data.keyword.powerSys_notm}} operations team resolves the issues that are related to host failure. Based on the type of the issue, the IBM {{site.data.keyword.powerSys_notm}} operations team might require extra time to resolve the issue.
 
-Considering the impacts of pinning a VSI, it is recommended to pin a VSI only if it is necessary. You can use IBM i VSNs to retain the same serial number throughout the lifecycle of a VSI independent of the compute host on which the VSI runs. For more information, contact your independent software vendor (ISV).
+Considering the impacts of pinning a VSI, pin a VSI only if it is necessary. You can use IBM i VSNs to retain the same serial number throughout the lifecycle of a VSI independent of the compute host on which the VSI runs. For more information, contact your independent software vendor (ISV).
 {: note}
 
 
@@ -440,24 +450,24 @@ Considering the impacts of pinning a VSI, it is recommended to pin a VSI only if
 
 
 
-## Reusing Volume names or VSI names in {{site.data.keyword.powerSys_notm}}
+## Reusing volume names or VSI names in {{site.data.keyword.powerSys_notm}}
 {: #reusing_volume_names}
 
 
 
-To deploy a {{site.data.keyword.powerSys_notm}} VSI, specify any name. To delete a VSI and to deploy a new VSI with the same name, allow up to 1 hour between deletion of the original instance and creation of a VSI with the same name.
+To deploy a {{site.data.keyword.powerSys_notm}} VSI, specify any name. If you delete a VSI and want to create a new VSI with the same name, wait at least an hour after the original VSI is deleted before reusing the name.
 
 
 
-For example, you create a VSI with the name TEST-VSI and you delete this VSI later. The name `TEST-VSI` is not immediately available for reuse. Before you attempt to reuse the name TEST-VSI, you must allow 1 hour to pass after the VSI is deleted.
+For example, you create a VSI with the name TEST-VSI and you delete this VSI later. The name `TEST-VSI` is not immediately available for reuse. Before you attempt to reuse the name TEST-VSI, wait at least an hour after the VSI is deleted.
 
 
 ## Implementing SAP NetWeaver and SAP HANA in the {{site.data.keyword.powerSys_notm}} environment
 {: #sap_netweaver_hana}
 
-You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}}s. For more information, see [Planning your deployment](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} and [Deploying your infrastructure](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-set-up-power-sap-network){: external}.
+You can deploy SAP NetWeaver on an AIX or Linux&reg; operating system, and SAP HANA on a Linux operating system, in your {{site.data.keyword.powerSys_notm}} environment. You must consider several SAP-specific infrastructure requirements to run SAP applications on {{site.data.keyword.powerSys_notm}} instances. For more information, see [Planning your deployment](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} and [Deploying your infrastructure](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-set-up-power-sap-network){: external}.
 
-Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory of VSIs as described in SAP Note 2188482. For more information see, [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
+Consider an IBM Power server E980 that is running in a multiple VSI environment with at least one SAP HANA production system. You can deploy up to sixteen VSIs per physical server with dedicated or dedicated-donating processor cores. Each concurrently running VSI must be configured according to the workload and must fulfill the SAP HANA Hardware Configuration Check Tool (HWCCT) key performance indicators (KPIs). You must also consider the minimum number of CPU cores and memory of VSIs as described in SAP Note 2188482. For more information, see [SAP support Launchpad](https://launchpad.support.sap.com/#/notes/2230704){: external}. You must have an SAP ID to access this web page.
 
 ## Configuring a VSI for Epic workloads
 {: #configuring-a-vm-for-epic-workloads}
@@ -469,56 +479,52 @@ To configure a VSI for Epic workloads, select the **Configure for Epic workloads
 In the VSI details page, for the VSIs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues. For the VSIs on which Epic workloads are supported and are in a shut-down state, you must not change the core type to any value other than `dedicated` to avoid performance issues.
 {: important}
 
-The following table explains the differences in VSI configuration that may or might not support Epic workloads:
+The following table describes the VSI configuration differences between workloads that support Epic and those that do not:
 
 | VSI deployed for   | Storage volume   | Core type                                            | Machine type  |
 | ------------------ | ---------------- | ---------------------------------------------------- | ------------- |
-| Nonepic workloads | Tier 1 or Tier 3 | Shared uncapped, \n shared capped, or \n dedicated | S922 or E980  |
+| Non-Epic workloads | Tier 1 or Tier 3 | Shared uncapped, \n shared capped, or \n dedicated | S922 or E980  |
 | Epic workloads     | Always Tier 1    | Always dedicated                                     | E980 or E1080 |
 {: caption="VSI configuration difference that supports non-Epic and Epic workloads" caption-side="bottom"}
 
-The epic VSIs are not pinned by default that you can use internally for nonproduction usage. You must consider pinning the production epic VSIs to avoid performance issues.
+By default, Epic VSIs are not pinned. Unpinned Epic VSIs can be used for non-production workloads. For production Epic VSIs, enable pinning to avoid performance issues.
 {: note}
 
 You can choose to configure a VSI for Epic workloads only when you select AIX as your operating system. The other conditions that apply are as follows:
 
 1. Epic workloads are supported on AIX 7.2 and later. You cannot choose AIX 7.1.
-2. Supported storage volume is Tier 1. You can change or attach Tier 3 storage volume.
-
-    Changing the Tiers leads to performance issues.
-    {: note}
-
+2. The supported storage volume tier is Tier 1. The system allows you to change or attach a Tier 3 storage volume. However, changing the tier might lead to performance issues.
 3. Supported machine types are E980 or E1080. You cannot select S922.
-4. Supported core type is dedicated. You can switch to other core type, but it might lead to performance issues.
+4. Supported core type is dedicated. You can switch to another core type, but doing so might lead to performance issues.
 
 ## Configuring affinity policies
 {: #affinity-pol}
 
-You can use the user interface to set the affinity policies for storage pools only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, then you must use the CLI or API to set the volume affinity policies.
+You can use the user interface to set the affinity policies for storage pools only when the total number of VSIs in your account is less than 100. If your account has more than 100 VSIs, you must use the CLI or API to set the volume affinity policies.
 
 Select one of the following Storage pool options:
 - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool for the storage tier with sufficient capacity.
 
-- **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing VSI or storage volume from your account. The new storage volumes for the VSI are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the PMV instance's root (boot) volume.
+- **Affinity**: Use this option to identify the storage pool that must be used to place the boot volumes based on an existing VSI or storage volume from your account. The new storage volumes for the VSI are placed in the same storage pool where the affinity object resides. If you are using a PVM instance as the affinity object, the storage pool that is selected is based on the root (boot) volume of the PVM instance.
 
-- **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes. The boot volumes are placed based on one or more existing VSIs or storage volumes from your account. When you select a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are not selected. If you are using VSI as the anti-affinity objects, the storage pools are excluded depending on the root (boot) volume of each PVM instance that you specify.
+- **Anti-affinity**: Use this option to identify one or more storage pools that you want to exclude from getting selected to place the boot volumes. The boot volumes are placed based on one or more existing VSIs or storage volumes from your account. When you select a storage pool to create the custom image storage volumes, the storage pools in which the list of anti-affinity objects reside are not selected. If you are using VSIs as anti-affinity objects, the storage pools are excluded based on the root (boot) volume of each PVM instance that you specify.
 
-To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see: [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
+To learn more about the flexible tier offering of {{site.data.keyword.powerSys_notm}}, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 
 For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
-If you add volumes to be created and attached to your new VSI during creation then all the volumes are provisioned in the same selected storage pool. Volumes can be created in different storage pools after the VSI is provisioned.
+If you add volumes to be created and attached to your new VSI during creation, all the volumes are provisioned in the same selected storage pool. Volumes can be created in different storage pools after the VSI is provisioned.
 {: note}
 
 
 ## Provisioning a virtual machine without an initial boot volume
 {: #empty-vm}
 
-Create and deploy a virtual server instance (VSI) without an initial boot volume.
+You can create and deploy a VSI without an initial boot volume.
 
-The VSIs without boot volume can be used for cloning operations. These VSIs are not bootable until a boot volume is attached post provisioning. The following table shows which images are deployed based on your OS selection:
+The VSIs without a boot volume can be used for cloning operations. These VSIs are not bootable until a boot volume is attached after provisioning. The following table shows which images are deployed based on your OS selection:
 
-When you attach boot volume post provisioning of the VSI, the boot image still shows the OS-specific image without the boot volume name. 
+When you attach boot volume after provisioning of the VSI, the boot image still shows the OS-specific image without the boot volume name. 
 {: note}
 
 | OS selected                   | Image deployed                                                                                                                                       |
@@ -536,9 +542,9 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 | Features                                          | Deploy empty virtual server instance checkbox is clear                                                                                                                                                          | Deploy empty virtual server instance checkbox is selected                                                                                                               |
 | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Boot image and volume                             | Provision a VSI with a boot image and boot volume                                                                                                                                                                 | Provision a VSI without a boot image and boot volume.                                                                                                                     |
-| Creating new volume during VSI provisioning       | Create up to 10 volumes from the VSI provisioning page. To create volumes in bulk, use the [Storage volumes](https://cloud.ibm.com/power/storage) page in the {{site.data.keyword.powerSys_notm}} user interface. | You cannot create any volumes and attach to the VSI during initial provisioning. You can create up to 10 volumes after provisioning.                                      |
+| Creating new volume during VSI provisioning       | Create up to 10 volumes from the VSI provisioning page. To create volumes in bulk, use the [Storage volumes](https://cloud.ibm.com/power/storage) page in the {{site.data.keyword.powerSys_notm}} user interface. | You cannot create a volume and attach it to the VSI during initial provisioning. You can create up to 10 volumes after provisioning.                                      |
 | Attaching existing volume during VSI provisioning | Attach up to 500 existing data volumes                                                                                                                                                                            | You cannot attach any volumes to the VSI during initial provisioning. You can attach one boot volume and up to 500 data volumes after provisioning.                       |
-| Attaching from multiple storage tiers             | Supported. But if multiple storage tier volumes are used, a potential risk of failure of clone operation can occur.                                                                                               | Supported. But if multiple storage tier volumes are used, a potential risk of failure of clone operation is possible.                                                     |
+| Attaching from multiple storage tiers             | Supported. However, using multiple storage tier volumes increases the risk of a failed clone operation.                                                                                               | Supported. However, using multiple storage tier volumes increases the risk of a failed clone operation.                                                     |
 | Boot volume                                       | Boot volume is attached while provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes.                                         | Boot volume is attached after provisioning. Click three dots on any data volume and set it as the boot volume. However, you cannot set shareable volumes as boot volumes. |
 {: caption="Provisioning a VSI with or without a boot volume." caption-side="top"}
 
@@ -548,12 +554,12 @@ When you select the **Deploy empty virtual server instance** checkbox, you can p
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-While provisioning, you can configure your virtual server instance (VSI) to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
+While provisioning, you can configure your VSI to enable it to attach or detach more than 127 (up to 500) data volumes from the user interface.
 
 
 
 
-IBM i virtual machines in all the data centers except for the virtual machines in the `CHE01` data center support the configuration of large quantity of data volumes. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
+IBM i virtual machines in all data centers except `CHE01` support the configuration of a large quantity of data volumes. Configuring the large quantity of data volumes is supported only on {{site.data.keyword.off-prem}}.
 {: note}
 
 
@@ -562,13 +568,11 @@ IBM i virtual machines in all the data centers except for the virtual machines i
 ### Limitations of large quantity volumes
 {: #limit-large-vols}
 
-Review the following limitations when you are configuring for large quantity of volumes:
-- It is recommended to perform the operations, such as deploy, attach, detach, or delete, in a sequential order to avoid any performance delays.
+Review the following limitations when you configure a large quantity of volumes:
+- Complete the operations, such as deploy, attach, detach, or delete, in a sequential order to avoid any performance delays.
 
-- It is recommended to use image catalog to capture the virtual machines with large quantity volumes. Using Cloud Object Storage (COS) or any other cloud option might result in delays. The delay is depending on the size of your volume and network speed.
+- Use the image catalog to capture the virtual machines with large quantity volumes. Using Cloud Object Storage (COS) or any other cloud option might result in delays. The delay depends on the volume size and network speed.
 
-- When you attach a large quantity of volumes in a single request, displaying the status value from `available` to `attaching` might be delayed. It is recommended to wait for the `attach` operation to be completed and then select the attached volumes for other operations.
+- When you attach a large quantity of volumes in a single request, displaying the status value from `available` to `attaching` might be delayed. Wait for the `attach` operation to complete before selecting the attached volumes for other operations.
 
-- Provisioning an IBM i VSI with small data volumes (even fewer than 10 volumes in some cases) can cause a 3-5 hour delay if bulk-volume operations are ongoing on the storage controller. During this delay, the VSI remains in the building state and cannot be modified.
-
-- When a bulk delete operation is in progress on a storage controller, provisioning an IBM i virtual machine, even with fewer data volumes, might get delayed. During provisioning, the virtual machine status continues to be in the `building` state and this status cannot be modified.
+- Provisioning an IBM i VSI with small data volumes (even fewer than 10 volumes in some cases) can cause a 3-5 hour delay if bulk-volume operations are ongoing on the storage controller. During this delay, the VSI remains in the `building` state and cannot be modified.
