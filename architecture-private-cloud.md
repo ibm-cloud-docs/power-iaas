@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-21"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -94,16 +94,9 @@ For more information about how IBM Cloud region hosts connections from the pods 
 ### Pods
 {: #pod-spec-private-cloud}
 
-
-
 The following pod sizes are available:
-* Small: 1 rack of IBM Power11 (S1122 and E1150) processors
+* Small: 1 rack of IBM Power11 (S1122) processor.
 * Medium: 2–4 racks of IBM Power11 (S1122, E1150, or E1180) processors.
-
-
-
-
-
 
 You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes are used for maintenance or automatic high availability purposes.
 
@@ -168,120 +161,122 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 {: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
 
-
-
 ### Medium pod configurations
 {: #pod-config-medium}
 
-A medium pod has a 2x42 U or 4x42 U rack and S1122, E1150, and E1180 (2CEC) system types are supported in the rack.
+An expandable modular architecture is used to design a medium pod that supports the following pod configurations, based on the standard 42U rack specification:
 
-You can expand the capacity of a medium pod by adding servers of the same type that are already installed in the pod. A medium pod is available in two‑rack or four‑rack configurations. However, you cannot upgrade a two‑rack configuration to a four‑rack configuration. The expansion of the pod is limited to the existing rack count. You can add a minimum of one server per rack, up to the maximum capacity of each rack.
+* 1 management rack
+* 1 storage rack
+* 1 to 18 compute racks
+
+A medium pod supports up to 6 compute racks for S1122 or E1150 system types and up to 18 compute racks for a E1180 (2CEC) system type.
+
+You can expand the capacity of a medium pod by adding compute racks of the same type that are already installed in the pod.
 {: note}
 
-[Table 3](#multi-rack) illustrates the available configurations for server types and memory types on medium pod storage options. [Table 4](#multi-rack-storage) illustrates the available configurations for storage types on medium pod with flash system storage options.
+S1122 or E1150 pods are configured with a minimum of three base racks that include one compute rack, one storage rack, and one management rack. You can add up to five compute racks to make it a total of six compute racks.
+
+An E1180 pod is configured with a minimum of four base racks that include two compute racks, one storage rack, and one management rack. You can add up to 16 compute racks to make it a total of 18 compute racks.
 
 
+The following configurations and memory types are available for S1122, E1150, and E1180 (2CEC) pods:
 
-| Server types               | Min | Max | Min | Max  |
-| -------------------------- | --- | --- | --- | ---- |
-| Number of racks            | 2   | 2   | 4   | 4    |
-| Server quantity in a pod   | 12  | 15  | 16  | 40   |
-| Number of cores per server | 60  | 60  | 60  | 60   |
-| Total number of cores      | 720 | 900 | 960 | 2400 |
-| Usable cores               | 612 | 765 | 816 | 2040 |
-| **Memory types**           |     |     |     |      |
-| 2 TB                       | 24  | 30  | 32  | 80   |
-| 4 TB                       | 48  | 60  | 64  | 160  |
-| 8 TB                       | –   | –   | –   | –    |
-| 16 TB                      | –   | –   | –   | –    |
-| 32 TB                      | –   | –   | –   | –    |
+| Compute racks                          | Base configuration | 1 additional rack                                                                            | 5 additional racks                                                                           | Maximum configuration (6 racks)                                                              |
+| -------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+|                                        | Base rack          | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           |
+| Servers in a pod, excluding LPM server | 11                 | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12      | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60      | 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71                 |
+| Cores per server                       | 60                 | 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60                 | 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60                 | 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60                 |
+| Usable cores per server                | 51                 | 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51                 | 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51                 | 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51                 |
+| Total cores                            | 660                | 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;720                | 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3600               | 660&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4260                          |
+| Total Usable cores                     | 561                | 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;612                | 51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3060               | 561&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3621                          |
+| **Memory capacities**                  |                    |                                                                                              |                                                                                              |                                                                                              |
+| 2 TB                                   | 24                 | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24      | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120     | 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;142          |
+| 4 TB                                   | 44                 | 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48      | 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240     | 44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;284          |
+| 8 TB                                   | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 16 TB                                  | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 32 TB                                  | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+{: row-headers}
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
 {: #S1122-multi-rack}
 {: tab-title="S1122"}
 
-| Server types               | Min | Max | Min | Max  |
-| -------------------------- | --- | --- | --- | ---- |
-| Number of racks            | 2   | 2   | 4   | 4    |
-| Server quantity in a pod   | 5   | 7   | 8   | 19   |
-| Number of cores per server | 64  | 64  | 64  | 64   |
-| Total number of cores      | 320 | 448 | 512 | 1216 |
-| Usable cores               | 275 | 385 | 440 | 1045 |
-| **Memory types**           |     |     |     |      |
-| 2 TB                       | –   | –   | –   | –    |
-| 4 TB                       | 20  | 28  | 32  | 76   |
-| 8 TB                       | –   | –   | –   | –    |
-| 16 TB                      | –   | –   | –   | –    |
-| 32 TB                      | –   | –   | –   | –    |
+| Compute racks                          | Base configuration | 1 additional rack                                                                            | 5 additional racks                                                                           | Maximum configuration (6 racks)                                                              |
+| -------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+|                                        | Base rack          | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           |
+| Servers in a pod, excluding LPM server | 5                  | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6       | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30      | 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35      |
+| Cores per server                       | 64                 | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64                 | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64                 | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64                 |
+| Usable cores per server                | 55                 | 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55                 | 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55                 | 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55                 |
+| Total cores                            | 320                | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;384                | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1920               | 320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2240                          |
+| Total usable cores                     | 275                | 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;330                | 55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1650               | 275&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1925                          |
+| **Memory capacities**                  |                    |                                                                                              |                                                                                              |                                                                                              |
+| 2 TB                                   | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 4 TB                                   | 20                 | 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24      | 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;120     | 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;140                |
+| 8 TB                                   | 40                 | 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48      | 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;240     | 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;280                |
+| 16 TB                                  | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 32 TB                                  | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+{: row-headers}
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
 {: #E1150-multi-rack}
 {: tab-title="E1150"}
 
-| Server types               | Min | Max |
-| -------------------------- | --- | --- |
-| Number of racks            | 4   | 4   |
-| Server quantity in a pod   | 2   | 5   |
-| Number of cores per server | 128 | 128 |
-| Total number of cores      | 256 | 640 |
-| Usable cores               | 218 | 545 |
-| **Memory types**           |     |     |
-| 2 TB                       | –   | –   |
-| 4 TB                       | –   | –   |
-| 8 TB                       | 16  | 40  |
-| 16 TB                      | 32  | 80  |
-| 32 TB                      | 64  | 160 |
+| Compute racks                          | Base configuration | 1 additional rack                                                                            | Set of 3 additional racks                                                                    | 16 additional racks                                                                          | Maximum configuration (18 racks)  total                                                      |
+| -------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+|                                        | Base rack          | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           | Min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max                           |
+| Servers in a pod, excluding LPM server | 2                  | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2       | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6       | 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30      | 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35      |
+| Cores per server                       | 128                | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128                           | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128                           | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128                           | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;128                           |
+| Usable cores per server                | 107                | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107                           | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107                           | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107                           | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107                           |
+| Total cores                            | 256                | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;256                     | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;768                     | 128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3840                          | 256&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4480                          |
+| Total usable cores                     | 214                | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;214                     | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;642                     | 107&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3210                          | 214&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3745                          |
+| **Memory capacities**                  |                    |                                                                                              |                                                                                              |                                                                                              |                                                                                              |
+| 2 TB                                   | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 4 TB                                   | –                  | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– | –&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– |
+| 8 TB                                   | 16                 | 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16      | 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48      | 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;264     | 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;280          |
+| 16 TB                                  | 32                 | 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32           | 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96           | 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;528                | 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;560          |
+| 32 TB                                  | 64                 | 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64           | 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;192          | 32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1056               | 64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1120         |
+|                                        |                    |                                                                                              |                                                                                              |                                                                                              |                                                                                              |
+{: row-headers}
 {: class="simple-tab-table"}
 {: tab-group="host_selection_multi_rack"}
 {: caption="Medium pod configuration." caption-side="top"}
 {: #E1180-multi-rack}
 {: tab-title="E1180 (2CEC)"}
 
+The medium pod is available with storage capacity of 460 TB or 920 TB FlashSystem (FS) storage for S1122, E1150, and E1180 server types. The following storage configurations are available for medium pods with FS storage options:
 
-
-
-
-
-
-The medium pod with two or four racks is available with FS 460 TB or FS 920 TB flash system storage.
-
-| Storage types                           | Min  | Max  | Min  | Max  |
-| --------------------------------------- | ---- | ---- | ---- | ---- |
-| Drives for each flash system            | 24   | 48   | 24   | 48   |
-| Capacity for each drive in TB           | 19.2 | 19.2 | 19.2 | 19.2 |
-| Number of flash systems in a pod        | 1    | 1    | 2    | 2    |
-| Total Drives in a pod                   | 24   | 48   | 48   | 96   |
-| Total capacity in TB                    | 460  | 920  | 920  | 1840 |
-| Usable capacity in TB                   | 364  | 746  | 728  | 1491 |
-| Usable capacity in TB at 2x compression | 728  | 1492 | 1456 | 2982 |
+| 460 TB FS configurations               | Minimum configuration | Maximum configuration |
+| -------------------------------------- | --------------------- | --------------------- |
+| Number of FS in pod                    | 1                     | 5                     |
+| Drives per FS                          | 24                    | 24                    |
+| Capacity per drive (TB)                | 19.2                  | 19.2                  |
+| Total drives in pod                    | 24                    | 120                   |
+| Total capacity (TB)                    | 460                   | 2300                  |
+| Usable capacity (TB)                   | 438                   | 2190                  |
+| Usable capacity at 2x compression (TB) | 876                   | 4380                  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
-{: caption="Medium pod with flash system storage configuration." caption-side="top"}
+{: caption="Medium pod with FS storage configuration." caption-side="top"}
 {: #2-4-multi-rack-storage}
-{: tab-title="2 or 4 racks"}
+{: tab-title="460 TB FS"}
 
-| Storage types                           | Min  | Max  | Min  | Max  |
-| --------------------------------------- | ---- | ---- | ---- | ---- |
-| Drives for each flash system            | 24   | 48   | 24   | 48   |
-| Capacity for each drive in TB           | 19.2 | 19.2 | 19.2 | 19.2 |
-| Number of flash systems in a pod        | 3    | 3    | 4    | 4    |
-| Total Drives in a pod                   | 72   | 144  | 96   | 192  |
-| Total capacity in TB                    | 1380 | 2760 | 1840 | 3680 |
-| Usable capacity in TB                   | 1091 | 2237 | 1455 | 2982 |
-| Usable capacity in TB at 2x compression | 2182 | 4474 | 2910 | 5963 |
+| 920 TB FS configurations               | Minimum configuration | Maximum configuration |
+| -------------------------------------- | --------------------- | --------------------- |
+| Number of FS in pod                    | 1                     | 5                     |
+| Drives per FS                          | 48                    | 48                    |
+| Capacity per drive (TB)                | 19.2                  | 19.2                  |
+| Total drives in pod                    | 48                    | 240                   |
+| Total capacity (TB)                    | 920                   | 4600                  |
+| Usable capacity (TB)                   | 876                   | 4380                  |
+| Usable capacity at 2x compression (TB) | 1752                  | 8760                  |
 {: class="simple-tab-table"}
 {: tab-group="host_selection_storage_multi"}
-{: caption="Medium pod with flash system storage configuration." caption-side="top"}
+{: caption="Medium pod with FS storage configuration." caption-side="top"}
 {: #4-multi-rack-storage}
-{: tab-title="4 racks"}
-
-
-
-
-
-
+{: tab-title="920 TB FS"}
 
 ### Supported Power11 servers
 {: #power-system-spec-private-cloud}
