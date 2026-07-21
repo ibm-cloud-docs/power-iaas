@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-07-21"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -66,6 +66,9 @@ When you configure access to the metadata service, a network interface is create
 The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system (OS). Review the following table to understand the configuration requirements for your OS.
 
 
+
+{{site.data.keyword.powerSys_notm}} uses the `cloud-init` package to configure connectivity from a VSI to the metadata service. The `cloud-init` package is required on each supported operating system to access the {{site.data.keyword.powerSys_notm}} metadata service. Ensure that any custom image you create includes the `cloud-init` package.
+{: requirement}
 
 | Scenario                                                   | IBM i                                                                                                                                                                                                                                                                                                                                                                          | AIX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Linux                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
