@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-07-15"
+lastupdated: "2026-07-21"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -64,7 +64,7 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
    2. In the **Bucket name** field, enter the name of the bucket to which you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
-      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
+      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed on the **Buckets** tab.
 
    3. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 

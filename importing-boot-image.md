@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-15"
+lastupdated: "2026-07-21"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -74,7 +74,7 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
    4. Enter the name of your bucket in the **Bucket name** field. If your image file is stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
-      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed in the navigation panel.
+      To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed on the **Buckets** tab.
 
    5. Copy the `access_key_id` value from your COS service credentials and paste it into the **HMAC access key** field.
 

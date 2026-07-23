@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-20"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -459,6 +459,8 @@ Automated remote restart is enabled by default for all VSIs in the {{site.data.k
 1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
 2. Set **Automated remote restart** to **Disabled**.
 3. Click **Save**.
+
+   Automated remote restart is disabled for the VSI.
 
 {{_include-segments/disable-arr.md}}
 

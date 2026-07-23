@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-06"
+lastupdated: "2026-07-20"
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
 
@@ -41,18 +41,18 @@ For the pod software, {{site.data.keyword.powerSysFull}} removes all single poin
 
 When a host fails unexpectedly, the virtual server instances (VSIs) on the failed host are automatically restarted on another available host. In some cases, manual recovery of the failed host is required.
 
-The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume as per your standard boot procedures.
+The host failure recovery process involves restarting the VSIs on alternate hosts and results in a complete reboot of the operating system. After the operating system is rebooted, the applications must be restarted to recover and resume according to your standard boot procedures.
 {: note}
 
-Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the automated remote restart feature. You can disable automated remote restart for a VSI by modifying the related settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+Host failure recovery is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment through the automated remote restart feature. To disable this feature, you can set **Automated remote restart** to off during VSI creation. Alternatively, you can modify the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
 Host failure recovery:
 
-- Does not restart a pinned VSI. When you pin virtual server instances to specific hosts, the recovery depends on the time taken to repair the failed host, which results in extended downtime. To minimize downtime, ensure that VSIs are not pinned to a host. For more information, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+- Does not restart a pinned VSI. When you pin virtual server instances to specific hosts, the recovery depends on the time taken to repair the failed host, which results in extended downtime. To minimize downtime, ensure that VSIs are not pinned to a host. For more information, see [Virtual server pinning and its impacts on VSI availability](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vmpinning).
 
-- Does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
+- Does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents VSIs in the group from moving to another host.
 
-- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using virtual serial numbers (VSN) for IBM i, depending on your independent software vendor (ISV) licensing policies.
+- Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using virtual serial numbers (VSN) for IBM i, based on your independent software vendor (ISV) licensing policies.
 
 For advanced high-availability functions, you can implement HA clusters and HA services such as PowerHA SystemMirror, on the virtual server instances. For HA clusters, you must use server placement groups with anti-affinity policy to enable the functions of the following items:
 

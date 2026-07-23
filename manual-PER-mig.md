@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-07-17"
+lastupdated: "2026-07-20"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -23,16 +23,17 @@ subcollection: power-iaas
 
 
 ---
-Power Edge Router (PER) is enabled for all Power Virtual Server data centers except `CHE01`.
+Power Edge Router (PER) is enabled for all {{site.data.keyword.powerSys_notm}} data centers except `CHE01`. Two migration paths are available depending on how your workspace network was originally configured: self-service automation or by opening a support ticket.
+{: shortdesc}
 
-If you configured your workspace network without using a support ticket, you can use self-service automation to complete your PER migration.
+## Before you begin
+{: #per-mig-prereqs}
 
 You must have access to Direct Link to complete your PER migration. For more information about required access roles, see [Access role requirements for Power Virtual Server](/docs/power-iaas?topic=power-iaas-managing-resources-and-users#access-roles-requirement).
-{: note}
 
-You can use the [`ibmcloud pi workspace action`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) CLI command to automate the migration of an existing network to PER. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+- If you configured your workspace network without using a support ticket, use the [`ibmcloud pi workspace action`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1) CLI command to automate the migration. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 
-If you manually configured your subnets and Direct Link through a support ticket, migrate your workspace to PER by opening a support ticket.
+- If you manually configured your subnets and Direct Link through a support ticket, migrate your workspace to PER by opening a support ticket. See [Migrating to PER through a support ticket](#migrate-per-ticket).
 
 ## Determining your Direct Link configuration method
 {: #determine-dl-config}
@@ -126,7 +127,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     The {{site.data.keyword.powerSys_notm}} operations team processes the support ticket by configuring PER and other network devices in parallel with the Direct Link configuration. When the PER configuration is complete, the team notifies you through a ticket update that the PER configuration is ready for your validation and testing.
 
-5. Click **Next**:
+5. Click **Next**.
 
 6.	Schedule a maintenance window during which you must provision the Transit Gateway to complete the PER network configuration. For more information, see [PER use cases](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-use-cases). To route the network traffic through PER, complete the following steps:
 
@@ -138,19 +139,34 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     4.	Under **Import route filters** and **Export route filters**, select **Deny all import routes** to block the Direct Link routes and route traffic through the PER network.
 
-    Repeat the preceding steps for each Direct Link connection. If you encounter any PER connectivity issues, you can revert to the Direct Link path. To revert, select **Permit all import routes** to unblock the Direct Link routes, and then disconnect the workspace from the Transit Gateway.
+    Repeat the preceding steps for each Direct Link connection.
 
-7.	After successful testing (for example, a ping test), [delete the Direct Link connections](/docs/dl?topic=dl-delete-direct-link&interface=ui) and notify IBM by updating the ticket.
+7.	Verify that the network connection is working correctly, for example, by running a ping test.
 
-8.	The {{site.data.keyword.powerSys_notm}} team marks the workspace as **Migrated** and closes the ticket.
+    If you encounter any PER connectivity issues, revert to the Direct Link path by selecting **Permit all import routes** to unblock the Direct Link routes, and then disconnect the workspace from the Transit Gateway.
 
-After the workspace is migrated to the PER network through the ticketing process, continue to refer to the support ticket for network configuration information, including subnet creation, deletion, and gateway updates. Before you delete the pre-migration workspace, open a support ticket to remove the backend device configuration. Then, you can delete the workspace.
+8.	After successful verification, follow the steps in [Deleting a Direct Link](/docs/dl?topic=dl-delete-direct-link&interface=ui) to remove the Direct Link connections, and then notify IBM by updating the ticket.
+
+9.	The {{site.data.keyword.powerSys_notm}} team marks the workspace as **Migrated** and closes the ticket.
+
+10.	Open a support ticket to remove the backend device configuration, and then delete the pre-migration workspace.
+
+Before you delete the pre-migration workspace, you must open a support ticket to remove the backend device configuration first.
 {: important}
 
-## Running a Full Linux Subscription (FLS) on the migrated workspace
+After migration, if you need to make additional network configuration changes that require backend device configuration, complete the following actions:
+{: #add-info-per-mig}
+
+- **Create a subnet:** In the {{site.data.keyword.powerSys_notm}} user interface, create the subnet, and then open a support ticket so that the {{site.data.keyword.powerSys_notm}} operations team can configure the subnet on the backend devices.
+
+- **Update or delete a subnet:** First, open a support ticket so that the {{site.data.keyword.powerSys_notm}} operations team can update or remove the configuration on the backend devices. Then, update or delete the subnet in the {{site.data.keyword.powerSys_notm}} user interface.
+
+## Configuring FLS after migration
 {: #fls-migrated-sub}
 
-You can run FLS with the migrated workspace in two ways:
+If you run Full Linux Subscription (FLS) on virtual server instances (VSIs) in the migrated workspace, you must update the DNS configuration after migration. FLS requires IBM DNS IP addresses to function correctly.
+
+You can update the DNS configuration in two ways:
 
 1. FLS works if you update the migrated subnets with DNS IP addresses.
 
@@ -158,23 +174,14 @@ You can run FLS with the migrated workspace in two ways:
 
     Run the following command:
 
-        ```bash
-        ibmcloud pi netu <network_id> --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
-        ```
-        {: .codeblock}
+    ```bash
+    ibmcloud pi netu <network_id> --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
+    ```
+    {: .codeblock}
 
-    Where `127.0.0.1` refers to the local stub resolver on the virtual server instance.
+    Where `127.0.0.1` refers to the local stub resolver on the VSI.
 
-2. For existing virtual server instances that are deployed by using migrated subnets, add the following DNS IP addresses, or the specific DNS IP addresses for your environment, to the `/etc/resolv.conf` file:
+2. For existing VSIs that are deployed by using migrated subnets, add the following DNS IP addresses, or the specific DNS IP addresses for your environment, to the `/etc/resolv.conf` file:
 
     * `nameserver 161.26.0.10`
     * `nameserver 161.26.0.11`
-
-## Additional information about PER migration
-{: #add-info-per-mig}
-
-If you need to make additional changes after the migration that requires backend device configuration, complete the following actions:
-
-- **Create a subnet:** In the {{site.data.keyword.powerSys_notm}} user interface, create the subnet, and then open a support ticket so that the {{site.data.keyword.powerSys_notm}} operations team can configure the subnet on the backend devices.
-
-- **Update or delete a subnet:** First, open a support ticket so that the {{site.data.keyword.powerSys_notm}} operations team can update or remove the configuration on the backend devices. Then, update or delete the subnet in the {{site.data.keyword.powerSys_notm}} user interface.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-17"
+lastupdated: "2026-07-23"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -25,7 +25,12 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## July 2026
 {: #July-2026}
 
+### 23 July 2026
+{: #power-iaas-jul2326}
+{: release-note}
 
+Medium pod configuration in {{site.data.keyword.on-prem}}
+:   {{site.data.keyword.powerSys_notm}} supports medium pods with an expandable modular architecture based on the standard 42U rack specification. A medium pod supports up to 6 compute racks for S1122 or E1150 system types, and up to 18 compute racks for E1180 (2CEC) system types. For more information, see [Medium pod configurations](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#pod-config-medium).
 
 ### 16 July 2026
 {: #power-iaas-jul1626}
