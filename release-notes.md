@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-24"
+lastupdated: "2026-07-27"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,6 +27,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## July 2026
 {: #July-2026}
+
+
 
 ### 23 July 2026
 {: #power-iaas-jul2326}
