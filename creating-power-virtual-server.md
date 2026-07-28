@@ -221,8 +221,8 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
         
 
-        {{_include-segments/disable-arr.md}}
-
+        When you disable the automated remote restart option for a VSI, the VSI cannot restart automatically on another available host if a host fails. Ensure that your [high availability](#x2284708){: term} (HA) and [disaster recovery](#x2113280){: term} (DR) policies are configured to protect the workload after a host failure. For more information, see [High availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr).
+        {: important}
 
 11. Click **Continue**.
 
