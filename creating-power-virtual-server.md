@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-07-28"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -221,7 +221,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
         
 
-        {{_include-segments/disable-arr.md}}
+            {{_include-segments/disable-arr.md}}
 
 11. Click **Continue**.
 
