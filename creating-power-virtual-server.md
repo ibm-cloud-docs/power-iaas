@@ -223,6 +223,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
         {{_include-segments/disable-arr.md}}
 
+
 11. Click **Continue**.
 
 12. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the VSI.
