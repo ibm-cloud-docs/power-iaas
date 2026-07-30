@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-28"
+lastupdated: "2026-07-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -213,9 +213,9 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
         The effective processor compatibility mode for the VSI might not match the preferred mode that is selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lesser mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
         {: note}
 
-    - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. You can disable this feature during VSI creation by setting **Automated remote restart** to off, or later by modifying the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+    - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. To disable this feature, set **Automated remote restart** to off during VSI creation. Alternatively, you can modify the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-        Automated remote restart does not restart pinned VSIs. Pinning VSIs to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that the VSIs are not pinned to the host and are enabled for automated remote restart. For more information about VSI pinning, see [What does VSI pinning do?](/docs/power-iaas?topic=power-iaas-powervs-faqs#pinning).
+        Automated remote restart does not restart pinned VSIs. Pinning VSIs to specific hosts results in extended downtime because the recovery depends on the time taken to repair the failed host. To minimize downtime, ensure that VSIs are not pinned to a host and are enabled for automated remote restart. For more information about VSI pinning, see [Virtual server pinning and its impacts on VSI availability](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vmpinning).
 
         Automated remote restart also does not restart a VSI in a server placement group that uses an affinity policy and includes other VSIs that are hard-pinned to the host. Affinity policies require all VSIs in the group to remain on the same host. A hard-pinned VSI prevents the VSIs in the group from moving to another host.
 
