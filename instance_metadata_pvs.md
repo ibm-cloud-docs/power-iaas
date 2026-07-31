@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-07-28"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -70,6 +70,8 @@ The metadata service uses an internal network configured with the link-local IP 
 {{site.data.keyword.powerSys_notm}} uses the `cloud-init` package to configure connectivity from a VSI to the metadata service. The `cloud-init` package is required on each supported operating system to access the {{site.data.keyword.powerSys_notm}} metadata service. Ensure that any custom image that you create includes the `cloud-init` package.
 {: requirement}
 
+
+
 | Scenario                                                   | IBM i                                                                                                                                                                                                                                                                                                                                                                          | AIX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Linux                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                         | The metadata service interface is not automatically configured when you create an AIX VSI. You must create the VSI first, then enable access to the metadata service while the VSI is in the `Shutoff` state.                                                                                                                                                                                                                                                                                                                        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                         |
@@ -80,6 +82,12 @@ The metadata service uses an internal network configured with the link-local IP 
 {: class="comparison-table"}
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: summary="This table compares metadata service configuration requirements across IBM i, AIX, and Linux. The row headers identify the scenario, and the column headers identify the operating system."}
+
+
+
+
+
+
 
 ### Enabling access to the metadata service for a new VSI by using the user interface
 {: #metadata-enable-new-instance-ui}

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-07-23"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -32,15 +32,15 @@ To understand the {{site.data.keyword.on-prem}} architecture, key features, and 
 - [High-level architecture](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#high-level-architecture-private-cloud)
 - [Key features](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#key-features)
 - [Hardware and software specifications](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud)
-    - [Pods](#pods)
-    - [Small pod configurations](#small-pod-configurations)
-    - [Medium pod configurations](#medium-pod-configurations)
-    - [Supported Power11 servers](#supported-power11-servers)
-    - [Operating systems](#operating-systems)
-    - [Storage](#storage)
-    - [Storage tiers](#storage-tiers)
-  - [Network](#network)
-  - [Data center capabilities](#data-center-capabilities)
+    - [Pods](#pod-spec-private-cloud)
+    - [Small pod configurations](#pod-config-small)
+    - [Medium pod configurations](#pod-config-medium)
+    - [Supported Power11 servers](#power-system-spec-private-cloud)
+    - [Operating systems](#os-spec-private-cloud)
+    - [Storage](#storage-private-cloud)
+    - [Storage tiers](#storage-tiers-spec-private-cloud)
+- [Network](#network-spec-private-cloud)
+- [Data center capabilities](#dc-capabilities-private)
 
 ## High-level architecture
 {: #high-level-architecture-private-cloud}
