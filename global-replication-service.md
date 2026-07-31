@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-07-31"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -116,8 +116,10 @@ The following table shows the location pairs that support replication.
 
 
 
+
 | Location 1        | Location 2         |
 | ----------------- | ------------------ |
+| `che03`           | `in-mum-1`         |
 | `che02`           | `in-mum-2`         |
 | `mad02`           | `eu-de-1 (fra04)`  |
 | `mad04`           | `eu-de-2 (fra05)`  |
