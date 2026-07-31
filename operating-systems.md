@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-07-31"
 
 keywords: Operating systems, powerVS OS
 
@@ -77,6 +77,9 @@ When you use Linux for your VSI, review the following Linux distribution options
     {: important}
 
 - To use your own license, select the OS image with the `-BYOL` suffix. On the *Create virtual server instance* page, these images are listed under the *Client supplied subscription* section. Alternatively, you can create your own customized Linux image in Open Virtualization Appliance (OVA) format by using the Linux stock images that are available when you select Full Linux Subscription (FLS). For more information, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
+
+Red Hat Enterprise Linux CoreOS (RHCOS) images are intended for use only with Red Hat OpenShift clusters, in accordance with the Red Hat licensing terms. {{site.data.keyword.powerSys_notm}} does not support RHCOS as a general-purpose operating system.
+{: note}
 
 
 

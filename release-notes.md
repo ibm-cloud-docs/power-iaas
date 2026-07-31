@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-27"
+lastupdated: "2026-07-31"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -28,7 +28,12 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## July 2026
 {: #July-2026}
 
+### 31 July 2026
+{: #power-iaas-jul3126}
+{: release-note}
 
+GRS support in data center pairs
+:   Global Replication Services (GRS) is available in the `che03` and `in-mum-1` data center pair. For more information, see [{{site.data.keyword.powerSys_notm}} regions that support GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 
 ### 23 July 2026
 {: #power-iaas-jul2326}
