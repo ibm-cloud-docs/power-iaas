@@ -135,7 +135,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     2.	Click a Direct Link connection to open the connection details page.
 
-    3.	Click the **BGP** tab and then open the **Route Filter** details.
+    3.	Click the **BGP** tab, and then click the **Route filters** tab.
 
     4.	On the **Import route filters** tab, set the **Default** value to **Deny all import routes**. On the **Export route filters** tab, set the **Default** value to **Deny all export routes**. Setting both values blocks the Direct Link routes and routes traffic through the PER network.
 
