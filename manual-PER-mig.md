@@ -133,7 +133,7 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     1.	In the [IBM Cloud console](https://cloud.ibm.com){: external}, from the navigation menu, select **Infrastructure** > **Network** > **Direct link**.
 
-    2.	Click a Direct Link connection to open the connection details page.
+    2.	Click the Direct Link connection to which your workspace is connected. The connection details page for the selected connection is displayed.
 
     3.	Under **Shortcuts**, click **Go to Route filters**.
 
