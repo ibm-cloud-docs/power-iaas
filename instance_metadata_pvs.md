@@ -29,6 +29,8 @@ The {{site.data.keyword.powerSysFull}} metadata service provides information abo
 
 
 
+
+
 ## Metadata service concepts
 {: #metadata-service-concepts}
 
@@ -55,9 +57,6 @@ When you send API requests to the metadata service, the service triggers events 
 {: #metadata-configure-service}
 
 You can configure access to the metadata service for a new or existing {{site.data.keyword.powerSys_notm}} VSI by using the {{site.data.keyword.powerSys_notm}} user interface, CLI, or API.
-
-
-
 
 When you configure access to the metadata service, a network interface is created with the link-local IP address `169.254.169.253`. Do not delete the link-local IP address (`169.254.169.253`), its route, or create conflicting networks from within the VSI.
 {: important}

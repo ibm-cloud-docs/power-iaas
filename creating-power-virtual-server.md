@@ -94,6 +94,9 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
+
+
+
 8. Complete the **Boot image** fields.
 
     You can create or provision a VSI without an initial boot image volume. VSIs without a boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. You can create a VSI without a boot volume and then attach a cloned or replicated volume to restore the backed-up VSI.
