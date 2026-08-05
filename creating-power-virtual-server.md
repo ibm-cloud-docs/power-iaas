@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-31"
+lastupdated: "2026-08-05"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -295,18 +295,12 @@ You can view the details of a VSN that is associated with a VSI on the VSI detai
 When you upgrade an IBM i VSI that has a VSN assigned, you must contact IBM Support to update the IBM i licenses to match the new version.
 {: important}
 
+>
 
+### Mapping requirement for VSNs
+{: #VSN-id-map-new}
 
-
-
-### Mapping the customer account number to the cloud account ID
-{: #VSN-id-map}
-
-For VSN support in the IBM {{site.data.keyword.powerSys_notm}}, you must open a support ticket to map your IBM customer number with your IBM Cloud account ID. For more information, see [Assigning a virtual serial number to an IBM customer number in IBM Power Virtual Server](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
-
-
-
-
+Before you can use VSNs in {{site.data.keyword.powerSys_notm}}, you must complete a one-time mapping of your IBM customer number to your IBM Cloud account ID. After you complete the mapping, you can use VSNs with any VSI that you deploy in that account. For more information, see [IBM Cloud {{site.data.keyword.powerSys_notm}} - using virtual serial numbers and IBM customer numbers](https://www.ibm.com/docs/en/entitled-systems-support?topic=mp-cloud-power-virtual-server-using-virtual-serial-numbers-customer-numbers){: external}.
 
 ### Assigning a VSN to a new VSI
 {: #VSN-new-VM}
