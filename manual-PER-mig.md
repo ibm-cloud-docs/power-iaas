@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-07-20"
+lastupdated: "2026-08-05"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -133,17 +133,23 @@ To migrate your workspace to PER through a support ticket, complete the followin
 
     1.	In the [IBM Cloud console](https://cloud.ibm.com){: external}, from the navigation menu, select **Infrastructure** > **Network** > **Direct link**.
 
-    2.	Click a Direct Link connection to open the connection details page.
+    2.	Click the Direct Link connection to which your workspace is connected. The connection details page for the selected connection is displayed.
 
-    3.	Click the **BGP** tab and then open the **Route Filter** details.
+    3.	Under **Shortcuts**, click **Go to Route filters**.
 
-    4.	Under **Import route filters** and **Export route filters**, select **Deny all import routes** to block the Direct Link routes and route traffic through the PER network.
+    4.	On the **Route filters** page, set the following filters:
+
+        a.	On the **Import route filters** tab, set the **Default** value to **Deny all import routes**.
+
+        b.	On the **Export route filters** tab, set the **Default** value to **Deny all export routes**.
+
+        Setting both filters to deny blocks the Direct Link routes, which redirects the network traffic through the PER network.
 
     Repeat the preceding steps for each Direct Link connection.
 
-7.	Verify that the network connection is working correctly, for example, by running a ping test.
+7.	Verify that the network connection is working correctly. For example, from each VSI, you can ping the IBM Cloud DNS resolvers that are accessible over PER-enabled workspaces by running the `ping 161.26.0.10` or `ping 161.26.0.11` command.
 
-    If you encounter any PER connectivity issues, revert to the Direct Link path by selecting **Permit all import routes** to unblock the Direct Link routes, and then disconnect the workspace from the Transit Gateway.
+    If you encounter any PER connectivity issues, revert to the Direct Link path by setting the **Import route filters** default back to **Permit all import routes** and the **Export route filters** default back to **Permit all export routes**. This unblocks the Direct Link routes. Then disconnect the workspace from the Transit Gateway.
 
 8.	After successful verification, follow the steps in [Deleting a Direct Link](/docs/dl?topic=dl-delete-direct-link&interface=ui) to remove the Direct Link connections, and then notify IBM by updating the ticket.
 
