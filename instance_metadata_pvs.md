@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-08-06"
+lastupdated: "2026-08-11"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -114,6 +114,9 @@ To enable access to the metadata service when you create a VSI, complete the fol
 
    - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
 
+
+
+
 6. Click **Continue** and complete the remaining steps to create the VSI. For more information about creating a VSI, see [Creating a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
 ### Enabling access to the metadata service for an existing VSI by using the user interface
@@ -151,6 +154,9 @@ To enable access to the metadata service for an existing VSI, complete the follo
    - **Enabled**: Default. The VSI CRN is added to the selected default trusted profile and the profile is available to the VSI when the VSI starts.
 
    - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
+
+
+
 
 8. Click **Save**.
 

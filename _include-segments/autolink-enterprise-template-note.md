@@ -1,0 +1,2 @@
+If the selected trusted profile was created from an enterprise account template, by default the child account cannot edit the trusted profile, which causes the **Auto link** operation to fail. To avoid this error, either disable **Auto link** and create a trust relationship directly in IAM, or update the trusted profile template to allow the child account to add compute resource links. For more information, see [Creating trusted profile templates](/docs/enterprise-management?topic=enterprise-management-tp-template-create){: external}.
+{: note}
