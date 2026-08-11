@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-08-06"
+lastupdated: "2026-08-11"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -30,7 +30,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: release-note}
 
 Power9 servers reach end of life on December 31, 2027
-:   The Power9 servers (E980 and S922) in {{site.data.keyword.powerSys_notm}} reach end of life on December 31, 2027. Due to limited capacity, IBM is limiting new VSI deployments on Power9 servers. The following conditions apply:
+:   The Power9 servers (E980 and S922) in {{site.data.keyword.powerSys_notm}} reach end of life on December 31, 2027. IBM is limiting new VSI deployments on Power9 servers. The following conditions apply:
 
     - **If you had VSIs on Power9 servers before August 2026:** You can continue to deploy new VSIs on Power9 servers until November 2026, subject to available capacity. Your existing VSIs can continue to run until December 31, 2027.
     - **If you did not have VSIs on Power9 servers before August 2026:** As of August 2026, you cannot deploy new VSIs on Power9 servers.
