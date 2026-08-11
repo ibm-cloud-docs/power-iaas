@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-08-11"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -66,6 +66,8 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 
 The {{site.data.keyword.powerSys_notm}} offering supports the following versions of AIX operating system depending on the IBM Power server:
 
+
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 | Machine type                             | Supported AIX versions                                |
@@ -74,6 +76,9 @@ The {{site.data.keyword.powerSys_notm}} offering supports the following versions
 | * E1080 (9080-HEX) \n * S1022 (9105-22A) | AIX 7.1 TL5 or later                                  |
 | * S1122 (9824-22A)                       | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
 {: caption="Supported AIX versions in IBM data center" caption-side="bottom"}
+
+
+
 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
@@ -100,12 +105,17 @@ If you are using an older version of IBM i, you must upgrade the OS to a current
 
 
 
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 | Machine type                             | Supported IBM i versions |
 | ---------------------------------------- | ------------------------ |
 | * E1022 (9105-22A) \n * E1080 (9080-HEX) | IBM i 7.3 or later       |
 {: caption="Supported IBM i versions in IBM data center" caption-side="bottom"}
+
+
+
+
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
@@ -137,7 +147,9 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported b
 - [Installing and configuring cloud-init on RHEL](https://www.ibm.com/docs/en/powervc/2.1.0?topic=linux-installing-configuring-cloud-init-rhel){: external}.
 
 
-Power server E1080 (9080-HEX) and S1022 (9105-22A) supports: RHEL 8.4 or later and SLES 15 SP3 or later versions.
+Power server E1080 (9080-HEX) and S1022 (9105-22A) supports RHEL 8.4 or later and SLES 15 SP3 or later versions.
+
+
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} before you start deployment.
 {: note}
@@ -198,7 +210,7 @@ The **Image file name** field supports the following formats: *.ova*, *.ova.gz*,
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Catalog image name              | Enter the name that you want displayed in your catalog.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Storage type                    | Select whether you want **Tier 1** or **Tier 3** for the storage type. A VM cannot have disks from both **Tier 1** and **Tier 3** storage types. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).                                                                                                                                                                                                                           |
-| Region                          | Select the region from the drop-down list.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Region                          | Select the region from the drop-down list.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Image file name                 | Enter the file name of the image. The image file name must not contain spaces. Supported file formats are *tar* and *ova*. You can compress image files by using *gzip*. The supported file name extensions are *.ova*, *.ova.gz*, *.tar*, *.tar.gz* and *.tgz*. You must use the private endpoint domain. For example, `Aix_7200-03-02-1846_cldrdy_112018.gz`.                                                                                                                              |
 | Bucket name                     | Sub folders can be used and specified as *bucketName/optional/folders*. Optional folders are created automatically if they don’t exist. Optional folders can be added during an [export image](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export) operation to Cloud Object Storage. To identity your bucket name, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Buckets**. |
 | Cloud Object Storage access key | To identify your access key, select **Menu icon ![Menu icon](../icons/icon_hamburger.svg "Menu icon") > Resource list > Storage > Cloud Object Storage name > Service credentials > View credentials**. Copy the `access_key_id` value and past it into this field.                                                                                                                                                                                                                          |

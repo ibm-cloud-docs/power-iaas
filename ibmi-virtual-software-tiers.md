@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-08-11"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -90,12 +90,13 @@ The following table provides the details of the maximum number of virtual proces
 {: #ibmi-vsw-system-types}
 
 
+
+
+
+
+
+
 You can assign {{site.data.keyword.ibmi-vst}}s only to a compatible {{site.data.keyword.powerSys_notm}} system types. The following table lists the {{site.data.keyword.ibmi-vst}}s that are compatible with each system type.
-
-
-
-
-
 
 | System types | Supported IBM i software tiers | | | |
 | ------------ | ------- | ------- | ------- | ------ |
@@ -105,6 +106,10 @@ You can assign {{site.data.keyword.ibmi-vst}}s only to a compatible {{site.data.
 | E1080        | No      | Yes | Yes | Yes |
 | E1180        | No      | Yes | Yes | Yes |
 {: caption="Supported {{site.data.keyword.ibmi-vst}}s on {{site.data.keyword.powerSys_notm}}s" caption-side="bottom"}
+
+
+
+
 
 
 
