@@ -62,6 +62,7 @@ When you configure access to the metadata service, a network interface is create
 {: important}
 
 
+
 ### Configuration requirements by operating system
 {: #metadata-config-by-os}
 
@@ -97,7 +98,6 @@ The metadata service uses an internal network configured with the link-local IP 
 {: tab-group="metadata-config-os"}
 {: class="simple-tab-table"}
 {: #metadata-config-os-aix}
-
 
 
 | Scenario                                                   | Linux                                                                                                                                                                                                                                                                                                                                                                                                                          |
