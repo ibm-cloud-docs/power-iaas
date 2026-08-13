@@ -258,6 +258,8 @@ ibmcloud pi instance update INSTANCE_ID --metadata-service true
 ```
 {: codeblock}
 
+
+
 ### Enabling or disabling access to the metadata service by using the API
 {: #metadata-service-enable-api}
 
