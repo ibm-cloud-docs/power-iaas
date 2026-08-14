@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-08-13"
+lastupdated: "2026-08-14"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -104,7 +104,7 @@ The metadata service uses an internal network configured with the link-local IP 
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                         |
 | Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the `Shutoff` state. After you enable metadata service access and start the VSI, the metadata service interface is automatically configured.                                                                                                                                                                                                                                     |
-| Disabling access to the metadata service                   | When you use the `force-disable` option, you must remove the network interface configuration. Specific commands depend on your Linux distribution's network management tools. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).                                |
+| Disabling access to the metadata service                   | When you use the `--metadata-service-force` CLI option or the `forceDisable` API parameter, you must remove the network interface configuration. Specific commands depend on your Linux distribution's network management tools. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).                                |
 | Considerations for boot disk overwrite operations          | Before you copy the disk image, you must remove network persistence rules to prevent connectivity issues when the image is restored. This involves backing up and clearing udev rules files with MAC address bindings. For more information, see [Reconfiguring the metadata service interface after image capture on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#reconfigure-linux-after-capture). |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="Linux"}
