@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-08-13"
+lastupdated: "2026-08-17"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -38,6 +38,8 @@ Power9 servers reach end of life on December 31, 2027
     - **If you did not have VSIs on Power9 servers before August 2026:** As of August 2026, you cannot deploy new VSIs on Power9 servers.
 
     To migrate your VSIs to Power10 or Power11, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
 
 ## July 2026
 {: #July-2026}
