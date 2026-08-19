@@ -214,8 +214,6 @@ toc:
           - cli-getting-started.md
           - cli-release-notes.md
           - cli-before-you-begin.md
-          - cli-upgrade-v1.md
-          - cli-power-iaas.md
           - cli-power-iaas-v1.md
           - cli-power-iaas-onprem.md
       - link:

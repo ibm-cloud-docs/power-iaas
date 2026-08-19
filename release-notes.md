@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-08-06"
+lastupdated: "2026-08-19"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -22,15 +22,29 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
+
+
 ## August 2026
 {: #August-2026}
+
+### 19 August 2026
+{: #power-iaas-aug1926}
+{: release-note}
+
+Stock images support
+:   * The following AIX stock images are available in the {{site.data.keyword.powerSys_notm}} data centers:
+        - AIX 7.3 TL4 SP1
+        - AIX 7.2 TL5 SP12
+    * The following AIX stock images are removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported:
+        - AIX 7.3 TL4 SP0
+        - AIX 7.2 TL5 SP11
 
 ### 6 August 2026
 {: #power-iaas-aug0626}
 {: release-note}
 
 Power9 servers reach end of life on December 31, 2027
-:   The Power9 servers (E980 and S922) in {{site.data.keyword.powerSys_notm}} reach end of life on December 31, 2027. Due to limited capacity, IBM is limiting new VSI deployments on Power9 servers. The following conditions apply:
+:   The Power9 servers (E980 and S922) in {{site.data.keyword.powerSys_notm}} reach end of life on December 31, 2027. IBM is limiting new VSI deployments on Power9 servers. The following conditions apply:
 
     - **If you had VSIs on Power9 servers before August 2026:** You can continue to deploy new VSIs on Power9 servers until November 2026, subject to available capacity. Your existing VSIs can continue to run until December 31, 2027.
     - **If you did not have VSIs on Power9 servers before August 2026:** As of August 2026, you cannot deploy new VSIs on Power9 servers.

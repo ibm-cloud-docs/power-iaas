@@ -1,0 +1,2 @@
+If the selected trusted profile is created from an enterprise account template, by default the child account cannot edit the trusted profile. This causes the **Auto link** operation to fail. To avoid this error, disable **Auto link** and either create the trust relationship directly in IAM, or add a rule to the trusted profile template that grants access to VSIs from the child account. For more information, see [Creating trusted profile templates](/docs/enterprise-management?topic=enterprise-management-tp-template-create){: external}.
+{: note}

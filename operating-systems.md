@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-31"
+lastupdated: "2026-08-19"
 
 keywords: Operating systems, powerVS OS
 
@@ -114,12 +114,11 @@ The VSIs can continue to run without any issues after the stock OS images are re
 
 The following table lists the supported AIX, IBM i, and Linux OS versions that can be installed on {{site.data.keyword.powerSys_notm}} instances. OS versions that are not listed in the following table are not supported and cannot be installed on a VSI.
 
-
-| **Processor family** | **Supported AIX versions** | **Latest stock image versions**                        |
-| -------------------- | -------------------------- | ------------------------------------------------------ |
-| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
-| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP0 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP11 |
+| **Processor family** | **Supported AIX versions** | **Latest stock image versions**                                                               |
+| -------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
+| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
+| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
+| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
 {: caption="Supported AIX versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported AIX versions for {{site.data.keyword.powerSys_notm}}"}
 {: #aix-public-private}
@@ -128,11 +127,11 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: class="comparison-tab-table"}
 {: row-headers}
 
-| **Processor family** | **Supported IBM i versions** | **Latest stock image versions**                                                          |
-| -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| Power11              | IBM i 7.4 or later           | IBM i COR[^3] [^4] \n IBM i 7.5 TR7 \n IBM i 7.4 TR12                                    |
-| Power10              | IBM i 7.3 or later           | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13[^5]                       |
-| Power9[^b]           | IBM i 7.3 or later[^i]       | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13 |
+| **Processor family** | **Supported IBM i versions** | **Latest stock image versions**                                    |
+| -------------------- | ---------------------------- | ------------------------------------------------------------------ |
+| Power11              | IBM i 7.4 or later           | IBM i COR[^3] [^4] \n IBM i 7.5 TR7 \n IBM i 7.4 TR12              |
+| Power10              | IBM i 7.3 or later           | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13[^5] |
+| Power9[^b]           | IBM i 7.3 or later[^i]       | IBM i COR \n IBM i 7.5 TR7 \n IBM i 7.4 TR12 \n IBM i 7.3 TR13     |
 {: caption="Supported IBM i versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported IBM i versions for {{site.data.keyword.powerSys_notm}}"}
 {: #ibmi-public-private}
@@ -141,11 +140,11 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: class="comparison-tab-table"}
 {: row-headers}
 
-| **Processor family** | **Supported RHEL versions**                                                                                                                                           | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power11              | * RHEL 9.6 general purpose and SAP \n * RHEL 8.10 general purpose                                                       | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10)                                                                                                                                                                                                                                                                                                                |
+| **Processor family** | **Supported RHEL versions**                                                                                                     | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Power11              | * RHEL 9.6 general purpose and SAP \n * RHEL 8.10 general purpose                                                               | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10)                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | Power10              | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) |
-| Power9[^c]           | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER)  |
+| Power9[^c]           | * RHEL 9.6 general purpose and SAP \n * RHEL 9.4 SAP \n * RHEL 9.2 SAP \n * RHEL 8.10 general purpose and SAP \n * RHEL 8.8 SAP | * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 9.4 for SAP HANA (RHEL9-SP4-SAP-HANA) \n * RHEL 9.4 for SAP NetWeaver (RHEL9-SP4-SAP-NETWEAVER) \n * RHEL 9.2 for SAP HANA (RHEL9-SP2-SAP) \n * RHEL 9.2 for SAP NetWeaver (RHEL9-SP2-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10) \n * RHEL 8.10 for SAP HANA (RHEL8-SP10-SAP-HANA) \n * RHEL 8.10 for SAP NetWeaver (RHEL8-SP10-SAP-NETWEAVER) \n * RHEL 8.8 for SAP HANA (RHEL8-SP8-SAP) \n * RHEL 8.8 for SAP NetWeaver (RHEL8-SP8-SAP-NETWEAVER) |
 {: caption="Supported Linux versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported Linux versions for {{site.data.keyword.powerSys_notm}}"}
 {: #linux-public-private}
