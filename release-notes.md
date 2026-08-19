@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-08-17"
+lastupdated: "2026-08-19"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,6 +27,18 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## August 2026
 {: #August-2026}
 
+### 19 August 2026
+{: #power-iaas-aug1926}
+{: release-note}
+
+Stock images support
+:   * The following AIX stock images are available in the {{site.data.keyword.powerSys_notm}} data centers:
+        - AIX 7.3 TL4 SP1
+        - AIX 7.2 TL5 SP12
+    * The following AIX stock images are removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported:
+        - AIX 7.3 TL4 SP0
+        - AIX 7.2 TL5 SP11
+
 ### 6 August 2026
 {: #power-iaas-aug0626}
 {: release-note}
@@ -38,8 +50,6 @@ Power9 servers reach end of life on December 31, 2027
     - **If you did not have VSIs on Power9 servers before August 2026:** As of August 2026, you cannot deploy new VSIs on Power9 servers.
 
     To migrate your VSIs to Power10 or Power11, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
-
-
 
 ## July 2026
 {: #July-2026}

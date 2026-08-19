@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-08-14"
+lastupdated: "2026-08-19"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -147,6 +147,8 @@ To enable access to the metadata service when you create a VSI, complete the fol
 
    - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
 
+{{_include-segments/autolink-enterprise-template-note.md}}
+
 
 
 
@@ -188,6 +190,7 @@ To enable access to the metadata service for an existing VSI, complete the follo
 
    - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
 
+{{_include-segments/autolink-enterprise-template-note.md}}
 
 
 
