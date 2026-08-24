@@ -29,18 +29,18 @@ subcollection: power-iaas
 A {{site.data.keyword.nsg-lc}} (NSG) defines security rules to allow or deny specific network traffic for resources that are provisioned in an {{site.data.keyword.powerSysFull}} workspace. You can create NSGs to inspect and filter network traffic between resources in {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
 
-Security rules in an NSG define which inbound network traffic is allowed or denied from reaching members. Members are one or more network interfaces (NIC) at the subnet and virtual machine (VM) level. All outbound or egress traffic is automatically allowed.
+Security rules in an NSG define which inbound network traffic is allowed or denied from reaching members. Members are one or more network interfaces (NIC) at the subnet and virtual server instance (VSI) level. All outbound or egress traffic is automatically allowed.
 
 Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the following benefits:
 
-- Enhances security and traffic control to limit unauthorized access to VMs and network resources
+- Enhances security and traffic control to limit unauthorized access to VSIs and network resources
 - Supports creating specific security rules that are based on source, destination, port, and protocol (TCP, UDP, ICMP, and Any)
 - Incurs no additional cost; NSG is included as part of {{site.data.keyword.powerSys_notm}} workspaces
 - Does not negatively affect overall network throughput or network latency for any NSG members
 
 
 
-The existing workspaces can provide NSG support only after the data center in which the workspaces are deployed is enabled with the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+Existing workspaces can support NSG only after the data center where the workspaces are deployed is updated to use the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
 
 
 
@@ -192,7 +192,7 @@ You can delete the default rules to achieve complete isolation between members i
 ### Creating and managing NSGs in a workspace
 {: #create-manage-NSG}
 
-You can create an NSG with the default configuration (no rules or members) or with inbound rules and members defined during creation.
+You can create an NSG with the default configuration (no rules or members) or with inbound rules and members defined during NSG creation.
 {: shortdesc}
 
 ### Creating an NSG with the default configuration
@@ -201,7 +201,7 @@ You can create an NSG with the default configuration (no rules or members) or wi
 When you create an NSG in your workspace, you are not required to define security rules or add members. However, after an NSG is created with default settings, you can add rules and members to it later.
 {: shortdesc}
 
-By default, all inbound network traffic is denied and does not reach any member of the {{site.data.keyword.nsg-lc}}. To create an NSG with default configuration, complete the following steps:
+By default, all inbound network traffic is denied and does not reach any member of the {{site.data.keyword.nsg-lc}}. To create an NSG with the default configuration, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
@@ -260,7 +260,7 @@ You must explicitly define inbound rules to allow or deny traffic. To create and
 12. Depending on the protocol that you select from the list in the previous step, complete the following steps:
 
       TCP
-      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If the {{site.data.keyword.nag-lc}} that you want is unavailable, click **Create network address group** to create one.
+      :   1. **Remote**: Select a {{site.data.keyword.nsg-lc}} or {{site.data.keyword.nag-lc}} to allow or deny traffic for the rule. If you do not see the {{site.data.keyword.nag-lc}} that you want, click **Create network address group** to create one.
 
           2. **Source port range**: Specify the range of ports from which the inbound traffic originates. The valid range is `1–65535`.
           3. **Destination port range**: Specify the range of ports on which the inbound traffic is received. The valid range is `1–65535`.
@@ -327,7 +327,7 @@ To rename an NSG, complete the following steps:
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-4. Select the workspace that contains the NSG to rename. The Workspace details panel is displayed.
+4. Select the workspace that contains the NSG that you want to rename. The Workspace details panel is displayed.
 
 5. Click **View virtual servers**.
 
@@ -439,7 +439,7 @@ To create an NAG, complete the following steps:
     In addition to customer-defined NAGs, a default NAG consisting of the `0.0.0.0/0` CIDR is available.
     {: note}
 
-    Use CIDR `161.26.0.0/16` to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP. Use CIDR `166.8.0.0/14` to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
+    You can use CIDR `161.26.0.0/16` to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP. You can use CIDR `166.8.0.0/14` to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.
     {: tip}
 
 11. Click **Create group**.
@@ -460,7 +460,7 @@ To rename an NAG, complete the following steps:
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page is displayed with a list of existing workspaces.
 
-4. Select the workspace that contains the NAG to rename. The Workspace details panel is displayed.
+4. Select the workspace that contains the NAG that you want to rename. The Workspace details panel is displayed.
 
 5. Click **View virtual servers**.
 
@@ -602,7 +602,7 @@ You can manage members that are associated with an NSG by performing the followi
 
 You can add members to an NSG to control the inbound network traffic to the associated network interfaces.
 
-Members can be added at two points. First, when you are initially creating an NSG, and second, at a later point by revisiting the {{site.data.keyword.nsg-sc}} details page of an existing NSG. To add members to an NSG when you are creating it, complete the steps provided in the [Creating an NSG with inbound rules and members](#create-nsg-custom) section.
+You can add members in two ways: when you initially create the NSG, or later by revisiting the **{{site.data.keyword.nsg-sc}} details** page of an existing NSG. To add members when you are creating an NSG, see [Creating an NSG with inbound rules and members](#create-nsg-custom).
 
 To add members to an existing NSG, complete the following steps:
 
@@ -694,7 +694,7 @@ To remove members that are associated with an NSG, complete the following steps:
 
 8. Click **Delete** to initiate the deletion request. This action cannot be undone.
 
-When you remove a network interface or a subnet that is attached to a VM, the NIC is also detached from all associated NSGs.
+When you remove a network interface or a subnet that is attached to a VSI, the NIC is also detached from all associated NSGs.
 {: note}
 
 ## Quotas and limitations
@@ -735,4 +735,4 @@ The support tickets for quota increases are evaluated by Customer Support and th
 ## Security considerations
 {: #security-con}
 
-When the NSG feature is disabled on a {{site.data.keyword.powerSys_notm}} workspace, the system allows unrestricted communication between VMs and subnets in that workspace. Enabling the NSG feature on a workspace maintains this behavior but also allows you to control the network traffic with security rules to meet specific requirements.
+When the NSG feature is disabled on a {{site.data.keyword.powerSys_notm}} workspace, the system allows unrestricted communication between VSIs and subnets in that workspace. Enabling the NSG feature on a workspace maintains this behavior but also allows you to control the network traffic with security rules to meet specific requirements.
