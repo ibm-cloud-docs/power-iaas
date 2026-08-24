@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-08-12"
+lastupdated: "2026-08-24"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -146,7 +146,7 @@ Review the following topics to set up, configure, and manage NSGs:
 ### Enabling or disabling NSG in a workspace
 {: #enable-disable-nsg}
 
-You can enable or disable the NSG feature in PER and enhanced CRN-enabled workspaces. However, you cannot enable NSG on previous, manual, VPN, or Cloud Connection workspaces.
+You can enable or disable the NSG feature on PER and enhanced CRN-enabled workspaces. However, you cannot enable NSG on non-PER, manual, VPN, or Cloud Connection workspaces.
 {: shortdesc}
 
 To determine whether your {{site.data.keyword.powerSys_notm}} workspace has the prerequisites to support NSGs, run the following IBM Cloud CLI command:
@@ -177,7 +177,7 @@ To enable or disable the NSG feature on an existing workspace, complete the foll
 
 5. Set the **Network security groups** switch to **Enabled** or **Disabled**.
 
-When the NSG feature is enabled on a workspace, a default NSG is automatically created containing members of any existing NIC attachments in the workspace with two rules. The first rule allows all bidirectional communication (`Protocol=ALL`) from other members in the “default” NSG. The second rule allows all bidirectional communication (`Protocol=ALL`) with the “default” NAG (`0.0.0.0/0` network CIDR outside of the workspace).
+When the NSG feature is enabled on a workspace, a default NSG with two rules is automatically created. The default NSG includes all existing network interfaces (members) in the workspace. The first rule allows all inbound traffic (`Protocol=ALL`) from other members in the **Default** NSG. The second rule allows all inbound traffic (`Protocol=ALL`) from the **Default** NAG (`0.0.0.0/0`).
 
 
 
