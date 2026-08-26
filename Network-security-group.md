@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-08-24"
+lastupdated: "2026-08-26"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -137,13 +137,13 @@ When you provision a workspace in your {{site.data.keyword.powerSys_notm}} envir
 
 Review the following topics to set up, configure, and manage NSGs:
 
-- [Enabling or disabling NSG in a workspace](#enable-disable-nsg)
+- [Enabling or disabling NSG on a workspace](#enable-disable-nsg)
 - [Creating and managing NSGs in a workspace](#create-manage-NSG)
 - [Creating and managing NAGs in a workspace](#create-manage-nag)
 - [Managing rules in an NSG](#create-manage-ib-rules)
 - [Adding members to an NSG and managing them](#add-manage-members-nsg)
 
-### Enabling or disabling NSG in a workspace
+### Enabling or disabling NSG on a workspace
 {: #enable-disable-nsg}
 
 You can enable or disable the NSG feature on PER and enhanced CRN-enabled workspaces. However, you cannot enable NSG on non-PER, manual, VPN, or Cloud Connection workspaces.
@@ -192,7 +192,7 @@ You can delete the default rules to achieve complete isolation between members i
 ### Creating and managing NSGs in a workspace
 {: #create-manage-NSG}
 
-You can create an NSG with the default configuration (no rules or members) or with inbound rules and members defined during NSG creation.
+You can create an NSG with the default configuration (no rules or members), or you can define inbound rules and members when you create the NSG.
 {: shortdesc}
 
 ### Creating an NSG with the default configuration
@@ -213,11 +213,19 @@ By default, all inbound network traffic is denied and does not reach any member 
 
 5. In the navigation panel, click **Networking** > **Network security groups**. The "Network security groups" page is displayed with a list of existing NSGs on the **Network security groups** tab.
 
+   Before you can create an NSG, you must enable the NSG feature on the workspace. If NSG is not enabled, the **Create network security group** button is unavailable. To enable NSG on a workspace, see [Enabling or disabling NSG on a workspace](#enable-disable-nsg).
+   {: note}
+
 6. Click **Create network security group**. The "Create network security group" page is displayed.
 
-7. In the General section, enter a name for the network security group in the **Name** field and click **Continue**.
+7. In the **General** section, enter a name for the network security group in the **Name** field. Optionally, enter one or more tags in the **User tags** field to help organize and identify the NSG. Click **Continue**.
 
-8. To define **Inbound security rules** and add **Members** to the NSG later, click **Continue** > **Finish** > **Create**.
+8. In the **Inbound rules (optional)** section, click **Continue** to skip adding rules.
+
+   If you skip this step, a warning is displayed: *"All network traffic will be denied to members."* This is expected behavior. By default, all inbound traffic is denied until rules are defined. You can add rules later.
+   {: note}
+
+9. In the **Members (optional)** section, click **Finish**, and then click **Create**.
 
 ### Creating an NSG with inbound rules and members
 {: #create-nsg-custom}

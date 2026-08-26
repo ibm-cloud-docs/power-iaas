@@ -237,7 +237,7 @@ If you have a public IP address that is attached to your VPC, do not perform thi
 
 Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create a private NLB in the route mode](#create-nlb).
 
-If you have not created an NLB, create an NLB in routing mode. For instructions, see [Step 2: Create NLB](#create-nlb).
+If you have not created an NLB, create an NLB in routing mode. For instructions, see [Step 2: Create a private NLB in the route mode](#create-nlb).
 {: note}
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
