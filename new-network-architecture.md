@@ -20,7 +20,6 @@ subcollection: power-iaas
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-
 ---
 
 This topic describes typical network architectures that are used in the {{site.data.keyword.powerSysFull}} network architecture and is not an exhaustive list of {{site.data.keyword.powerSys_notm}} connection methods.
@@ -28,8 +27,6 @@ This topic describes typical network architectures that are used in the {{site.d
 
 ## {{site.data.keyword.powerSys_notm}} networking environment
 {: #networking-environment}
-
-
 
 When you create a {{site.data.keyword.powerSys_notm}}, you can select a private or public network interface. For more information, see [Public and Private networks](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#public-private-networks).
 
@@ -49,12 +46,10 @@ When you create a {{site.data.keyword.powerSys_notm}}, you can select a private 
       You can connect {{site.data.keyword.dl_short}}s to either a local or remote {{site.data.keyword.tg_full_notm}}, which allows the private cloud network to access all networks that are connected to the {{site.data.keyword.tg_full_notm}}.
       {: note}
 
-
 ## Power Edge Routers
 {: #about-per}
 
 A Power Edge Router (PER) is a high-performance router that provides advanced routing capabilities for {{site.data.keyword.powerSysFull}} users. For more information, see [Getting started with the Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
-
 
 ## Power Edge Router use cases
 {: #per-use-cases}
