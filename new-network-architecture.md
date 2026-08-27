@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2026 
+  years: 2019, 2026
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-08-27"
 
 keywords: networking diagrams, network architecture, private ssl, private ipsec, Direct Link connect, colocation, data center, cloud connect, megaport, PER use cases
 
@@ -16,11 +16,7 @@ subcollection: power-iaas
 # Network architecture diagrams
 {: #network-architecture-diagrams}
 
-
-
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
