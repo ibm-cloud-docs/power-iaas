@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-08-19"
+lastupdated: "2026-08-28"
 
 keywords: Operating systems, powerVS OS
 
@@ -116,9 +116,9 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                                                               |
 | -------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
-| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
-| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
-| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
+| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
+| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
+| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
 {: caption="Supported AIX versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported AIX versions for {{site.data.keyword.powerSys_notm}}"}
 {: #aix-public-private}
