@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-08-19"
+lastupdated: "2026-08-28"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -251,7 +251,7 @@ ibmcloud pi instance create test-instance-2 --default-trusted-profile "Profile-9
 #### Enabling or disabling access to the metadata service for an existing VSI by using the CLI
 {: #metadata-enable-existing-instance-cli}
 
-To enable access to the metadata service, the VSI must be in the `Shutoff` state. To disable access to metadata service for an AIX VSI, the VSI must be in the `Shutoff` state. The `--metadata-service-force` option is not supported for AIX.
+To enable access to the metadata service, the VSI must be in the `Shutoff` state. To disable access to metadata service for an AIX VSI, the VSI must be in the `Shutoff` state. The `--metadata-service-force-enable` and `--metadata-service-force-disable` options are not supported for AIX.
 {: requirement}
 
 Run the [`ibmcloud pi instance update`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command and specify the instance ID. To enable access to the metadata service, set the `--metadata-service` option to `true`. To disable access, set the `--metadata-service` option to `false`. The following example shows a CLI command that enables access to the metadata service:
