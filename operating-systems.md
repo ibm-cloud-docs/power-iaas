@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-08-28"
+lastupdated: "2026-08-31"
 
 keywords: Operating systems, powerVS OS
 
@@ -201,10 +201,7 @@ You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL
 
 Power Virtual Server supports multiple levels of RHEL and SLES. You can either use the stock Linux images that IBM provides with Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-For more information about licensing, see:
-
-- IBM i: /docs/power-iaas?topic=power-iaas-ibmi-lpps
-- AIX: https://www.ibm.com/support/customer/csol/terms/#search-result
+For more information about IBM software licensing, see [IBM License Information documents](https://www.ibm.com/about/software-licensing/us-en/licensing/license_information_documents){: external}.
 
 You must ensure compliance with all third-party software licenses that you use in your environment, including middleware, application software, monitoring tools, and any other non-IBM licensed components.
 {: important}
