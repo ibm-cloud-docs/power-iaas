@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-09-01"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -26,12 +26,12 @@ subcollection: power-iaas
 
 ---
 
-You can import a boot image when you want to use a custom operating system (OS) image instead of an IBM-provided stock image. After you import the boot image, you can use it to create a {{site.data.keyword.powerSys_notm}} virtual server instance (VSI). You can import a boot image from an IBM Cloud Object Storage (COS) bucket by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API.
+You can import a custom operating system (OS) image from an IBM Cloud Object Storage (COS) bucket by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API, instead of using an IBM-provided stock image. After you import the boot image, you can use it to create a {{site.data.keyword.powerSys_notm}} virtual server instance (VSI).
 {: shortdesc}
 
 When you import a boot image, you select a storage tier and storage pool for the image. {{site.data.keyword.powerSys_notm}} places the boot volumes that are created from this imported boot image in the storage pool that you specify during the import. You cannot change the storage tier or storage pool after you import the image. A VSI can have disks from multiple storage types. All {{site.data.keyword.powerSys_notm}} data centers support Tier 0, Tier 1, Tier 3, and Fixed IOPs storage types.
 
-Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
+Boot image import and export are long-running, asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
 {: important}
 
 ## Before you begin
@@ -40,7 +40,7 @@ Boot image import and export are long-running asynchronous operations that {{sit
 Before you import a boot image, complete the following prerequisites:
 
 - You have uploaded your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
-- You have generated HMAC credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+- You have generated Hash-based Message Authentication Code (HMAC) credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 - You have a {{site.data.keyword.powerSys_notm}} workspace.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
