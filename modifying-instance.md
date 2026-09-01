@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-07-20"
+lastupdated: "2026-09-01"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -41,13 +41,13 @@ To modify a VSI after you create it, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace that contains the virtual server instance that you want to modify. The Workspace details panel is displayed.
+3. Select the workspace that contains the virtual server instance that you want to modify. The "Workspace details" panel is displayed.
 
-4. Click **View virtual servers**. The Virtual server instances page is displayed.
+4. Click **View virtual servers**. The "Virtual server instances" page is displayed.
 
-5. Select the VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
+5. Select the VSI that you want to modify. The "Virtual server instance details" page is displayed for the selected VSI.
 
-From the Virtual server instance details page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
+From the "Virtual server instance details" page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
 - [Changing the pinning state and server placement group](#edit-vsi-pinning-placement)
@@ -63,14 +63,14 @@ From the Virtual server instance details page, You can use the **Overview**, **S
 
 To change the name of the VSI, complete the following steps:
 
-1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The "Edit virtual server instance details" panel is displayed.
 2. Enter the new name in the **Name** field.
 3. Click **Save**.
 
 ### Changing the preferred processor compatibility mode
 {: #change-cpu-compatibility}
 
-In virtualization environments, a VSI can operate in different processor compatibility modes. These modes determine the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. The Virtual server instance details page on the **Overview** tab displays the preferred and effective processor compatibility mode that is currently set for the VSI. The following processor compatibility modes are displayed:
+In virtualization environments, a VSI can operate in different processor compatibility modes. These modes determine the Instruction Set Architecture (ISA) version that is used by the processor and the platform-level features that are available to the VSI. The "Virtual server instance details" page on the **Overview** tab displays the preferred and effective processor compatibility mode that is currently set for the VSI. The following processor compatibility modes are displayed:
 
 - **Preferred**: The processor mode in which you want the VSI to operate. By default, {{site.data.keyword.powerSys_notm}} sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
@@ -99,7 +99,7 @@ You can use the GUI, CLI, API, or Terraform to set the preferred processor compa
 
 To change the preferred processor compatibility mode of a VSI by using the {{site.data.keyword.powerSys_notm}} user interface, complete the following steps:
 
-1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The "Edit virtual server instance details" panel is displayed.
 2. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 3. Click **Save**.
 
@@ -107,13 +107,13 @@ After you change the preferred processor compatibility mode of a VSI, you must s
 
 To shut down the VSI, complete the following steps:
 
-1. From the virtual server instance details page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The OS shutdown confirmation dialog is displayed.
+1. From the "Virtual server instance details" page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The "OS shutdown confirmation" dialog is displayed.
 
 2. Click **Shutdown** to proceed. A notification is displayed to indicate that the shutdown process has started.
 
 To start the VSI, complete the following steps:
 
-1. From the virtual server instance details page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI has started.
+1. From the "Virtual server instance details" page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI has started.
 
 2. Click the **Refresh** icon to see the change.
 
@@ -134,7 +134,7 @@ When you change the pinning policy of a VSI from **Hard** to **Soft** or disable
 
 To change the pinning state and server placement group of the VSI, complete the following steps:
 
-1. In the **Overview** tab, click the **Edit** icon in the Placement section. The Edit placement panel is displayed.
+1. In the **Overview** tab, click the **Edit** icon in the Placement section. The "Edit placement" panel is displayed.
 3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
 4. Click **Save**.
 
@@ -168,7 +168,7 @@ To resize an existing VSI that was created before 15 December 2020 to an 8x rati
 
 To edit a VSI and resize its capacity, complete the following steps:
 
-1. On the **Overview** tab, click the **Edit** icon in the Capacity section. The Edit capacity panel is displayed.
+1. On the **Overview** tab, click the **Edit** icon in the Capacity section. The "Edit capacity" panel is displayed.
 2. Select the new value and size for the VSI memory, cores, and virtual cores. The total estimated cost for the new selection is displayed for your review.
 3. Click the terms and conditions link to read the IBM Cloud Terms of Use. To continue, select the **I agree to the Terms and conditions** checkbox and click **Save**.
 
@@ -180,9 +180,9 @@ To edit a VSI and resize its capacity, complete the following steps:
 
 After you provision an IBM i-based VSI with the base IBM i OS license, you can modify the VSI to add or remove additional software licenses. To add or remove additional software licenses for the VSI, complete the following steps:
 
-1. From the Virtual server instances page, select the IBM i-based VSI that you want to modify. The Virtual server instance details page is displayed for the selected VSI.
+1. From the "Virtual server instances" page, select the IBM i-based VSI that you want to modify. The "Virtual server instance details" page is displayed for the selected VSI.
 
-2. On the **Overview** tab, click the **Edit** icon next to Software licenses in the IBM i licensing section. The Edit licenses panel is displayed.
+2. On the **Overview** tab, click the **Edit** icon next to Software licenses in the IBM i licensing section. The "Edit licenses" panel is displayed.
 
 3. Select the additional software licenses that you want to add. To remove a license, clear the corresponding checkbox. The total estimated cost for the selected licenses is displayed. The available options are:
     - **IBM Cloud Storage Solutions for IBM i**
@@ -213,11 +213,11 @@ To modify a VSI to add additional storage volumes, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace that contains the virtual server instance to which you want to add additional volumes. The Workspace details panel is displayed.
+3. Select the workspace that contains the virtual server instance to which you want to add additional volumes. The "Workspace details" panel is displayed.
 
-4. Click **View virtual servers**. The Virtual server instances page is displayed.
+4. Click **View virtual servers**. The "Virtual server instances" page is displayed.
 
-5. Select the VSI to which you want to add additional volumes. The Virtual server instance details page is displayed for the selected VSI.
+5. Select the VSI to which you want to add additional volumes. The "Virtual server instance details" page is displayed for the selected VSI.
 
 Depending on whether you want to attach an existing storage volume or create a new one for the VSI, follow the steps in the relevant section below:
 
@@ -229,7 +229,7 @@ Depending on whether you want to attach an existing storage volume or create a n
 
 To attach an existing volume to a VSI, complete the following steps:
 
-1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The Attach storage volumes panel is displayed with a list of existing storage volumes.
+1. On the **Storage** tab, click **Attach existing** in the Storage volumes section. The "Attach storage volumes" panel is displayed with a list of existing storage volumes.
 
 2. From the list of the existing storage volumes, select the storage volumes that you want to attach to the VSI. If the **Mixed storage pools in virtual server instances** warning message is displayed, select the following checkboxes:
     - **I acknowledge snapshots and clones will fail when performed on a set of volumes that are on mixed pools**
@@ -237,7 +237,7 @@ To attach an existing volume to a VSI, complete the following steps:
 
 3. Click **Attach volume**.
 
-Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the VSI details page and check the status of the selected storage volume to verify that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab.
+Attaching storage volumes to a VSI is an asynchronous operation. Before you use the storage volume, refresh the "Virtual server instance details" page and check the status of the selected storage volume to verify that the volume is attached to the VSI. If the volume is not attached, use the **Attach existing** option again from the **Storage** tab.
 {: note}
 
 #### Creating a storage volume for a VSI
@@ -245,7 +245,7 @@ Attaching storage volumes to a VSI is an asynchronous operation. Before you use 
 
 To create a storage volume and attach it to a VSI, complete the following steps:
 
-1. On the **Storage** tab, click **Create volume** in the Storage volumes section. The Create volume panel is displayed.
+1. On the **Storage** tab, click **Create volume** in the Storage volumes section. The "Create volume" panel is displayed.
 
 2. Enter the **Name** and **User tags** (optional) for the storage volume.
 
@@ -307,7 +307,7 @@ To detach storage volumes from a VSI, complete the following steps:
 
 1. On the **Storage** tab, select the storage volumes to detach from the Storage volumes section.
 
-2. Click **Detach**. The **Confirm detach** window is displayed.
+2. Click **Detach**. The "Confirm detach" window is displayed.
 
     Detached storage volumes are not deleted automatically and continue to incur charges until you delete them. For more information about deleting a volume, see [Deleting a volume](#deleting-volume).
     {: note}
@@ -343,15 +343,15 @@ To resize a storage volume after you create it, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace which contains the virtual server instance that you want modify to resize its storage volumes. The Workspace details panel is displayed.
+3. Select the workspace which contains the virtual server instance that you want modify to resize its storage volumes. The "Workspace details" panel is displayed.
 
-4. Click **View virtual servers**. The Virtual server instances page is displayed.
+4. Click **View virtual servers**. The "Virtual server instances" page is displayed.
 
-5. Select the VSI with the attached storage volume that you want to resize. The Virtual server instance details page is displayed for the selected VSI.
+5. Select the VSI with the attached storage volume that you want to resize. The "Virtual server instance details" page is displayed for the selected VSI.
 
 6. Click the **Storage** tab.
 
-7. From the Storage volumes section, click the overflow menu (⋮) on the volume entry that you want to resize and select **Edit**. The Edit storage volume panel is displayed.
+7. From the Storage volumes section, click the overflow menu (⋮) on the volume entry that you want to resize and select **Edit**. The "Edit storage volume" panel is displayed.
 
 8. In the **Size (GB)** field, specify the new size for the storage volume. You can also modify the **Name** and **Tier** fields to update the name and performance tier of the selected volume.
 
@@ -377,13 +377,13 @@ When you modify a VSI to update its configuration, you can use the **Storage** t
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace which contains the storage volume to delete. The Workspace details panel is displayed.
+3. Select the workspace which contains the storage volume to delete. The "Workspace details" panel is displayed.
 
-4. Click **View virtual servers**. The Virtual server instances page is displayed.
+4. Click **View virtual servers**. The "Virtual server instances" page is displayed.
 
-5. In the navigation panel, click **Storage** > **Storage volumes**. The Storage volumes page is displayed with a list of existing storage volumes on the **Volumes** tab.
+5. In the navigation panel, click **Storage** > **Storage volumes**. The "Storage volumes" page is displayed with a list of existing storage volumes on the **Volumes** tab.
 
-6. Click the overflow menu (⋮) on the volume entry to delete and select **Delete**. The Confirm delete dialog is displayed.
+6. Click the overflow menu (⋮) on the volume entry to delete and select **Delete**. The "Confirm delete" dialog is displayed.
 
 7. Click **Delete**.
 
@@ -406,14 +406,14 @@ You must delete a VSI manually. To delete all VSIs, delete the workspace or dele
 
 To delete a VSI, complete the following steps:
 
-1. On the **Virtual server instances** page, locate the VSI that you want to delete and use one of the following methods:
+1. On the "Virtual server instances" page, locate the VSI that you want to delete and use one of the following methods:
 
    - Click the overflow menu (⋮) for the VSI entry and select **Delete**.
-   - Click the VSI name to open the **Virtual server instance details** page, then click the **Delete** icon.
+   - Click the VSI name to open the "Virtual server instance details" page, then click the **Delete** icon.
 
-   The Delete virtual server instance dialog is displayed.
+   The "Delete virtual server instance" dialog is displayed.
 
-2. On the Delete virtual server instance dialog, set **Delete data volumes attached to this instance** to on. When you enable this option, the following actions occur:
+2. On the "Delete virtual server instance" dialog, set **Delete data volumes attached to this instance** to on. When you enable this option, the following actions occur:
 
     - Data volumes that are attached only to this VSI are deleted.
     - Data volumes that are attached to multiple VSIs are not deleted.
@@ -436,7 +436,7 @@ You cannot delete a VSI if it has one or more associated snapshots. You must del
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Public networks are not supported in all the IBM data center locations. If your VSI is in a location that supports public networks, you can set **Public networks** to **On** or **Off** in the virtual server instances page. When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information about how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
+Public networks are not supported in all the IBM data center locations. If your VSI is in a location that supports public networks, you can set **Public networks** to **On** or **Off** in the "Virtual server instances" page. When you toggle a public network off and then on, the {{site.data.keyword.powerSys_notm}} user interface regenerates new internal and external IP addresses. You need to check the {{site.data.keyword.powerSys_notm}} user interface for the new internal IP address (that maps to the external IP address). You must add a network interface controller (NIC) and point it to the new internal IP address. For information about how to add or remove an interface, see [How to add or remove a network interface from an AIX virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface) or [How to add or remove a network interface from an IBM i virtual machine (VM)](/docs/power-iaas?topic=power-iaas-managing-network-interface-ibmi).
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
@@ -456,7 +456,7 @@ When you enable access to the metadata service, you can access information about
 
 Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. To disable automated remote restart for a VSI, complete the following steps:
 
-1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The Edit virtual server instance details panel is displayed.
+1. On the **Overview** tab, click the **Edit** icon in the Virtual server instance details section. The "Edit virtual server instance details" panel is displayed.
 2. Set **Automated remote restart** to **Disabled**.
 3. Click **Save**.
 
@@ -473,7 +473,7 @@ The hard pin policy for a VSI takes precedence over the automated remote restart
 SRC is only supported for AIX and IBM i virtual machines.
 {: note}
 
-A system reference code (SRC) is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the **Server details** page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
+A system reference code (SRC) is a set of eight alphanumeric characters that identifies the name of the system component that detects the error codes and the reference code. The error codes and the reference code describe the error condition. When the {{site.data.keyword.powerSys_notm}} instance detects a problem, an SRC number is displayed along with a timestamp in the "Server details" page. You can use the SRC to resolve the issue yourself. If you are contacting support to resolve a problem, the SRC number might help the hardware service provider better understand the problem and to provide the solution.
 
 [{{site.data.keyword.off-prem}}]{: tag-blue} For an IBM i VSI, the SRC number can be progress code, operation code, or software code. For more information, see the [System Reference Code list](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_73/rzahb/rzahbsrclist.htm){: external} in the IBM i documentation. For AIX VSIs, the SRC numbers are progress codes that provide information about the stages that are involved in powering on and performing initial program load (IPL). AIX SRCs refresh once in 2 minutes. For more information, see [AIX IPL progress codes](https://www.ibm.com/support/knowledgecenter/POWER9_REF/p9eai/aixIPL_info.htm){: external}.
 

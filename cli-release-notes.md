@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-07-14"
+lastupdated: "2026-09-01"
 
 ---
 
@@ -13,6 +13,8 @@ lastupdated: "2026-07-14"
 
 In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.powerSysFull}} CLI plug-in.
 {: shortdesc}
+
+
 
 
 
