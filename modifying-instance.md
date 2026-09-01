@@ -47,7 +47,7 @@ To modify a VSI after you create it, complete the following steps:
 
 5. Select the VSI that you want to modify. The "Virtual server instance details" page is displayed for the selected VSI.
 
-From the "Virtual server instance details" page, You can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
+From the "Virtual server instance details" page, you can use the **Overview**, **Storage**, and **Networking** tabs to modify specific components of a VSI. Depending on your requirements, you can perform the following modifications:
 - [Changing the VSI name](#edit-vsi-name)
 - [Changing the preferred processor compatibility mode](#change-cpu-compatibility)
 - [Changing the pinning state and server placement group](#edit-vsi-pinning-placement)
@@ -135,8 +135,8 @@ When you change the pinning policy of a VSI from **Hard** to **Soft** or disable
 To change the pinning state and server placement group of the VSI, complete the following steps:
 
 1. In the **Overview** tab, click the **Edit** icon in the Placement section. The "Edit placement" panel is displayed.
-3. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
-4. Click **Save**.
+2. Select the new pinning policy from the **Virtual server pinning** list and the placement group from the **Placement group** list.
+3. Click **Save**.
 
 ### Resizing the capacity of a VSI
 {: #resize-core-mem}
@@ -259,7 +259,7 @@ To create a storage volume and attach it to a VSI, complete the following steps:
 
    - **Auto-select pool**: Use this option to allow the system to automatically select a storage pool, for the required storage tier, that has sufficient capacity.
 
-   - **Affinity**: Use this option to select an VSI or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the VSI's root (boot) volume.
+   - **Affinity**: Use this option to select a VSI or an existing volume as the affinity object. The new volume is created in the same storage pool where the affinity object resides. If you are using the VSI as an affinity object, the storage pool that is selected is based on the VSI's root (boot) volume.
 
    - **Anti-affinity**: Use this option to specify one or more existing VSIs or one or more volumes as the anti-affinity objects. The new volume is created in a different storage pool than the storage pool where one or more anti-affinity objects reside.
 
@@ -343,7 +343,7 @@ To resize a storage volume after you create it, complete the following steps:
 
 2. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. Select the workspace which contains the virtual server instance that you want modify to resize its storage volumes. The "Workspace details" panel is displayed.
+3. Select the workspace which contains the virtual server instance that you want to modify to resize its storage volumes. The "Workspace details" panel is displayed.
 
 4. Click **View virtual servers**. The "Virtual server instances" page is displayed.
 
@@ -483,7 +483,7 @@ A system reference code (SRC) is a set of eight alphanumeric characters that ide
 
 The following are some of the scenarios that you might face when you make a request for resizing the memory of a {{site.data.keyword.powerSys_notm}} instance:
 
-### Your request for resizing both memory and CPU fails:
+### Your request for resizing both memory and CPU fails
 {: #resize-mem-cpu-fail}
 
 When you attempt to resize the memory and the CPU of a deployed virtual server instance through a single request, it might fail due to the following reasons:
@@ -499,7 +499,7 @@ When you attempt to resize the memory and the CPU of a deployed virtual server i
 
 
 
-### You request for resizing the memory, but you get a partial resize:
+### Your request for resizing the memory, but you get a partial resize
 {: #resize-mem-cpu-partial}
 
 When you attempt to resize the memory of a deployed virtual server instance through a request, it might partially resize or might fail due to the following reasons:
@@ -512,5 +512,5 @@ When you attempt to resize the memory of a deployed virtual server instance thro
 
 
 
-In the current cloud environment, it might take up to 1.5 hours for the change in memory to be updated. All the places that are referring to the memory of the logical partition are to be updated. Hence, if you attempt to repeat the resize request, the consecutive retires fails until all referencing tables are updated.
+In the current cloud environment, it might take up to 1.5 hours for the change in memory to be updated. All the places that are referring to the memory of the logical partition are to be updated. Hence, if you attempt to repeat the resize request, the consecutive retries fails until all referencing tables are updated.
 {: important}
