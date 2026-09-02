@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2026
+  years: 2024, 2026
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-09-02"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -27,17 +27,17 @@ subcollection: power-iaas
 You can export a custom boot image from your image catalog to IBM Cloud Object Storage by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. Use image export to back up or archive a customized image, or to copy it to a different workspace or account in the same or a different region.
 {: shortdesc}
 
-Boot image import and export are long-running asynchronous operations that {{site.data.keyword.powerSys_notm}} monitors across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start a new operation until the ongoing operation completes.
+Boot image import and export are long-running, asynchronous operations. {{site.data.keyword.powerSys_notm}} monitors these operations across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start another operation in that workspace until the current operation is complete.
 {: important}
 
 ## Before you begin
 {: #before-you-begin-export}
 
-Before you export a boot image, complete the following prerequisites:
+Before you export a boot image, verify that you have the following prerequisites:
 
-- You have a {{site.data.keyword.powerSys_notm}} workspace with at least one custom boot image in your image catalog.
-- You have an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
-- You have generated HMAC credentials for your COS instance. For more information about generating HMAC credentials, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+- Ensure that your {{site.data.keyword.powerSys_notm}} workspace has at least one custom boot image in your image catalog.
+- Create an IBM Cloud Object Storage bucket to export the image to. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
+- Generate Hash-based Message Authentication Code (HMAC) credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} user interface
 {: #console-export-image}
@@ -60,9 +60,9 @@ To export a boot image from your image catalog by using the {{site.data.keyword.
 
 7. In the **Export boot image** panel, complete the following steps:
 
-   1. From the **Region** dropdown list, select the region that contains your COS bucket.
+   1. From the **Region** drop-down list, select the region that contains your COS bucket.
 
-   2. In the **Bucket name** field, enter the name of the bucket to which you want to export the image. If your image file must be stored in a subfolder within the bucket, specify the full path by using the `bucketName/optional/folders` format.
+   2. In the **Bucket name** field, enter the name of the bucket to which you want to export the image. If your image file must be stored in a subfolder in the bucket, specify the full path by using the `bucketName/optional/folders` format.
 
       To identify your bucket name, go to **Navigation menu** > **Resource list** > **Storage** and click your Cloud Object Storage instance name. Your buckets are listed on the **Buckets** tab.
 
@@ -86,7 +86,7 @@ The boot image export job is submitted. You can monitor the progress in the **St
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-export-image}
 
-To export a boot image, use the [`ibmcloud pi image export`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export) command. To verify that the export completed successfully, use the [`ibmcloud pi image export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export-show) command.
+To export a boot image, run the [`ibmcloud pi image export`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export) command. To verify that the export is complete, run the [`ibmcloud pi image export-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-export-show) command.
 
 ## Exporting a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-export-image}

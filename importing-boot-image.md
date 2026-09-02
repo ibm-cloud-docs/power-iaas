@@ -144,7 +144,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, also include `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, you must specify `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ```sh
 curl -X POST \
@@ -193,7 +193,15 @@ To view the boot image import job details by using the API, use the [Get detail 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}
 
-To download the boot image after you import it, navigate to **Resource list** in the IBM Cloud dashboard and access your **Cloud Object Storage** instance. In the bucket where you stored your boot image, click the boot image file, and then click **Download objects**. For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+To download the boot image after you import it, complete the following steps:
+
+1. In the IBM Cloud dashboard, go to **Resource list** and click your **Cloud Object Storage** instance.
+
+2. In the bucket where you stored your boot image, click the boot image file.
+
+3. Click **Download objects**.
+
+For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
 
 ## Related information
 {: #related-info-import}
