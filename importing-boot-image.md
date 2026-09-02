@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-02"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -115,11 +115,11 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
       A VSI cannot use Tier 1 and Tier 3 storage types simultaneously. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
       {: note}
 
-   4. In the **Storage pool** field, select a storage pool placement option.
+   4. In the **Storage pool** field, select a storage pool option.
 
       {{site.data.keyword.powerSys_notm}} places one or more custom image storage volumes in the storage pool based on the option that you select: **Auto-select**, **Affinity**, or **Anti-affinity**. The boot volume of any VSI that you deploy by using this image is created in the same storage pool. For more information about storage volumes, see [Adding and managing storage volumes](/docs/power-iaas?topic=power-iaas-modifying-instance#modifying-volume-network).
 
-      The following storage pool placement options are available:
+      The following storage pool options are available:
 
       - **Auto-select**: Creates the storage volume in a storage pool with sufficient capacity automatically.
 
@@ -137,9 +137,9 @@ The new boot image is listed on the **Boot images** page.
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} CLI
 {: #cli-import-image}
 
-To import a boot image, use the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command. To verify that the import completed successfully, use the [`ibmcloud pi image list`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
+To import a boot image, run the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command. To verify that the import is complete, run the [`ibmcloud pi image list`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image) command.
 
-If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image, add the [`--import-details`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) flag to the `ibmcloud pi image import` command to identify the image as SAP-certified.
+If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image, add the `--import-details` option to the [`ibmcloud pi image import`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) command to identify the image as SAP-certified.
 
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
