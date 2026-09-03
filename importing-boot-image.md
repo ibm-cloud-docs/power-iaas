@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-03"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -37,7 +37,7 @@ Boot image import and export are long-running, asynchronous operations. {{site.d
 ## Before you begin
 {: #before-you-begin-import}
 
-Before you import a boot image, complete the following prerequisites:
+Before you import a boot image, verify that you meet the following prerequisites:
 
 - Upload your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
 
@@ -86,11 +86,11 @@ To import a boot image by using the {{site.data.keyword.powerSys_notm}} user int
 
    7. Set **Validate import with checksum file** to **On** to verify the imported file against the checksum file. You must store the checksum file and the boot image file in the same COS bucket.
 
-      You can generate the checksum file when you export the image file to the IBM Cloud Object Storage bucket.
-
-      The checksum file name is based on the name of the boot image file and uses the `.sha256` file extension. For more information about generating a checksum file, see [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
+      You can generate the checksum file when you export the boot image file to the IBM Cloud Object Storage bucket. The checksum file name is based on the name of the boot image file and uses the `.sha256` file extension.
 
       If you create your own boot image, you can create a checksum file and store it with your boot image in the same bucket. You can generate the checksum file by running the `shasum -a 256 <filename>` or `sha256sum <filename>` command.
+
+      For more information about generating a checksum file, see [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
 
       Validating the import file against the checksum file might increase the import time.
       {: note}
@@ -144,7 +144,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create an cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the following required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, you must specify `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create a cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, you must specify `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ```sh
 curl -X POST \
@@ -178,7 +178,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Viewing boot image import results
 {: #view-import-results}
 
-After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view more details, click **View details** to open the Ongoing job status dialog. The dialog shows the following information:
+After you start a boot image import, the **Status** column on the **Boot images** page shows the import progress. To view details, click **View details** to open the "Ongoing job status" dialog. The dialog shows the following information:
 
 - Job ID
 - Operation type
