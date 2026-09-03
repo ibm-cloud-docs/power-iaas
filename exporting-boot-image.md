@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026
 
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-03"
 
 keywords: exporting a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, boot image, export, hmac keys, checksum
 
@@ -26,6 +26,9 @@ subcollection: power-iaas
 
 You can export a custom boot image from your image catalog to IBM Cloud Object Storage by using the {{site.data.keyword.powerSysFull}} user interface, CLI, or API. Use image export to back up or archive a customized image, or to copy it to a different workspace or account in the same or a different region.
 {: shortdesc}
+
+You cannot export IBM-provided stock images. Only custom boot images are available for export. Custom boot images include images that you imported by using the **Import image** function and images that you captured by using the **Capture and export** function.
+{: note}
 
 Boot image import and export are long-running, asynchronous operations. {{site.data.keyword.powerSys_notm}} monitors these operations across all workspaces in your account. You can run only one import or export operation at a time in a workspace. You cannot start another operation in that workspace until the current operation is complete.
 {: important}
