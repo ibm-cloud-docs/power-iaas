@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-08-28"
 
 keywords: image catalog, virtual server instance capture, cos bucket, export virtual server instance, ova
 
@@ -151,7 +151,7 @@ To view your exported image:
 To see your newly exported image in the image catalog by using the CLI, use the `ibmcloud pi image-list-catalog` command:
 
 ```text
-ibmcloud pi image-list-catalog [--long] [--json]
+ibmcloud pi image list-catalog [--long] [--json]
 ```
 {: codeblock}
 

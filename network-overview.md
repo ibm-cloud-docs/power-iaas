@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-21"
+lastupdated: "2026-09-04"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -107,7 +107,7 @@ As part of the network planning, you can review the following use cases and iden
 
 
 ## Network architecture diagrams
-{: #network-architecture-diagrams}
+{: #network-arch-diag}
 
 Figure 1 shows the overall view of the network architecture.
 ![{{site.data.keyword.powerSys_notm}} network architecture](./figures/PPC-network-arc-Sept.png "High-level network architecture in {{site.data.keyword.powerSys_notm}}"){: caption="High-level network architecture in {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
@@ -141,6 +141,9 @@ You can connect your {{site.data.keyword.powerSys_notm}} workspace and your data
 The BGP connection exports the workspace host virtual server instance (VSI) IP addresses as `/32` routes. If these routes are not required, you can add a deny rule in the route filter for each address on the network peer. 
 
 
+
+If your enterprise network advertises the same prefixes from multiple connections with equal cost, {{site.data.keyword.powerSys_notm}} Private Cloud honors all those links as equal-cost multi-path routes.
+{: note}
 
 ### Creating a network peering connection
 {: #network-peering-create}

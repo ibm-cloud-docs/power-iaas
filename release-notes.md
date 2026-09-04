@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-08-19"
+lastupdated: "2026-09-04"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -22,6 +22,24 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: shortdesc}
 
 
+## September 2026
+{: #September-2026}
+
+
+
+### 4 September 2026
+{: #power-iaas-sep0426}
+{: release-note}
+
+Stock images support
+:   * The following AIX stock images are available in the {{site.data.keyword.powerSys_notm}} data centers:
+        - AIX 7.3 TL4 SP2
+        - AIX 7.3 TL3 SP3
+        - AIX 7.2 TL5 SP13
+    * The following AIX stock images are removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS level is no longer supported:
+        - AIX 7.3 TL4 SP1
+        - AIX 7.3 TL3 SP2
+        - AIX 7.2 TL5 SP12
 
 
 ## August 2026

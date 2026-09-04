@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-08-05"
+lastupdated: "2026-09-01"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -207,7 +207,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     - **Specify preferred processor compatibility mode**: By default, this option is set to off. To use a specific processor compatibility mode, set **Specify preferred processor compatibility mode** to on, and then select the processor compatibility mode from the **Preferred processor compatibility mode** list.
 
-        The Virtual server instance details page of a deployed VSI displays the preferred and effective processor compatibility modes that are set for a VSI.
+        The "Virtual server instance details" page of a deployed VSI displays the preferred and effective processor compatibility modes that are set for a VSI.
 
         The preferred processor compatibility mode is the processor mode in which you want the VSI to operate. By default, Power Virtual Server sets the preferred processor compatibility mode to the highest mode that is supported by the targeted host type for the VSI.
 
@@ -216,7 +216,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
         The effective processor compatibility mode for the VSI might not match the preferred mode that is selected. If the operating system installed in the VSI does not support the preferred processor compatibility mode, the hypervisor can set the effective mode to a lesser mode than the preferred mode. However, the hypervisor cannot set the effective mode to a higher mode than the preferred mode. For more information about processor compatibility modes, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi).
         {: note}
 
-    - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. To disable this feature, set **Automated remote restart** to off during VSI creation. Alternatively, you can modify the settings on the Virtual server instance details page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
+    - **Automated remote restart**: Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. This feature automatically restarts your VSI on another available host if the current host fails unexpectedly. To disable this feature, set **Automated remote restart** to off during VSI creation. Alternatively, you can modify the settings on the "Virtual server instance details" page. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
         Automated remote restart does not restart pinned VSIs. Pinning VSIs to specific hosts results in extended downtime because the recovery depends on the time that is taken to repair the failed host. To minimize downtime, ensure that VSIs are not pinned to a host and are enabled for automated remote restart. For more information about VSI pinning, see [Virtual server pinning and its impacts on VSI availability](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vmpinning).
 
@@ -291,7 +291,7 @@ VSN is a unique identifier and can be assigned only to one VSI at a time. If you
 
 
 
-You can view the details of a VSN that is associated with a VSI on the VSI details page. You can also view the details of the VSNs associated with the VSIs for the workspace on the virtual serial numbers page. The VSNs are either in `assigned` or in `retained` state.
+You can view the details of a VSN that is associated with a VSI on the "Virtual server instance details" page. You can also view the details of the VSNs associated with the VSIs for the workspace on the "Virtual serial numbers" page. The VSNs are either in `assigned` or in `retained` state.
 
 
 
@@ -331,7 +331,7 @@ For more information about creating a VSI, see [Configuring a {{site.data.keywor
 To assign a VSN to an existing IBM i VSI, complete the following steps:
 
 1. Shut down the IBM i VSI that you plan to assign the VSN.
-2. Open the VSI to access the **Virtual server instance details** page.
+2. Open the VSI to access the "Virtual server instance details" page.
 3. Edit the **Virtual serial number** field.
 4. From the **VSN assignment** list, select one of the following options:
     - **None**: Does not assign a VSN to the VSI.
@@ -355,8 +355,8 @@ To assign a VSN to an existing IBM i VSI, complete the following steps:
 
 When you delete a VSI, you can either retain the VSN or release it. When you edit the VSI details to change the VSN, you can retain the existing VSN or release it. To release or retain a VSN, complete the following steps:
 
-1. Click the delete icon from the Virtual server instance details page. The Delete virtual server instance window is displayed.
-2. Edit the details of a VSI by clicking the overflow menu (three vertical dots) on the far right of the VSI entry from the Virtual server instance details page. The Edit virtual server instance window is displayed.
+1. Click the delete icon from the "Virtual server instance details" page. The "Delete virtual server instance" window is displayed.
+2. Edit the details of a VSI by clicking the overflow menu (three vertical dots) on the far right of the VSI entry from the "Virtual server instance details" page. The "Edit virtual server instance" window is displayed.
 3. Set **Release the VSN attached to the VM** to **Enable** or **Disable** on the page to release or retain the VSN:
     - **Enable**: (Default) Deletes the VSI and attaches the VSN to the VSI that is released and no longer associated with your account. By default, the **Release the VSN attached to the VM** is enabled.
     - **Disable**: Deletes only the VSI and retains the VSN that continues to be associated with your account. The retained VSN is moved to the retained VSN pool.
@@ -472,9 +472,9 @@ Consider an IBM Power server E980 that is running in a multiple VSI environment 
 
 You can configure your VSI to deploy Epic workloads when you select AIX as your operating system.
 
-To configure a VSI for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify whether the deployed VSI supports Epic workloads by checking the corresponding VSI details page. On the VSI details page, the **Deployment type** field must be set to **Epic**.
+To configure a VSI for Epic workloads, select the **Configure for Epic workloads** checkbox on the **Boot image** tile. You can verify whether the deployed VSI supports Epic workloads by checking the corresponding "Virtual server instance details" page. On the "Virtual server instance details" page, the **Deployment type** field must be set to **Epic**.
 
-In the VSI details page, for the VSIs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues. For the VSIs on which Epic workloads are supported and are in a shut-down state, you must not change the core type to any value other than `dedicated` to avoid performance issues.
+In the "Virtual server instance details" page, for the VSIs on which Epic workloads are supported, you must not create or attach volumes from Tier 3 to avoid performance issues. For the VSIs on which Epic workloads are supported and are in a shut-down state, you must not change the core type to any value other than `dedicated` to avoid performance issues.
 {: important}
 
 The following table describes the VSI configuration differences between workloads that support Epic and those that do not:

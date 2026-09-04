@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-08-19"
+lastupdated: "2026-08-31"
 
 keywords: Operating systems, powerVS OS
 
@@ -116,9 +116,9 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                                                               |
 | -------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
-| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
-| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
-| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP1 \n AIX 7.3 TL3 SP2 \n AIX 7.2 TL5 SP12 |
+| Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
+| Power10[^d]          | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
+| Power9[^a]           | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
 {: caption="Supported AIX versions for {{site.data.keyword.powerSys_notm}}" caption-side="bottom"}
 {: summary="This table lists the supported AIX versions for {{site.data.keyword.powerSys_notm}}"}
 {: #aix-public-private}
@@ -201,10 +201,7 @@ You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL
 
 Power Virtual Server supports multiple levels of RHEL and SLES. You can either use the stock Linux images that IBM provides with Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
-For more information about licensing, see:
-
-- IBM i: /docs/power-iaas?topic=power-iaas-ibmi-lpps
-- AIX: https://www.ibm.com/support/customer/csol/terms/#search-result
+For more information about IBM software licensing, see [IBM License Information documents](https://www.ibm.com/about/software-licensing/us-en/licensing/license_information_documents){: external}.
 
 You must ensure compliance with all third-party software licenses that you use in your environment, including middleware, application software, monitoring tools, and any other non-IBM licensed components.
 {: important}

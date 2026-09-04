@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-07-14"
+lastupdated: "2026-08-26"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -21,10 +21,8 @@ subcollection: power-iaas
 
 ---
 
-In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations as you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use the virtual private cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity.
+In some {{site.data.keyword.powerSys_notm}} data centers, internet access is provided through alternative networking configurations because you cannot directly attach public subnets to the logical partition (LPAR) or virtual server instance (VSI) in these data centers. In these cases, you can use the virtual private cloud (VPC) infrastructure components and a transit gateway connection to provide both outbound and inbound network connectivity. A transit gateway connects VPCs and {{site.data.keyword.powerSys_notm}} workspaces.
 {: shortdesc}
-
-A transit gateway connects VPCs and {{site.data.keyword.powerSys_notm}} workspaces.
 
 ## Configuring the public network for a {{site.data.keyword.powerSys_notm}} instance
 {: #setup-public-networking}
@@ -33,11 +31,11 @@ Complete the following steps to configure public network access for your LPAR or
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
 
-2. In the search box, type {{site.data.keyword.powerSys_notm}} and click the {{site.data.keyword.powerSys_notm}} tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. In the navigation panel, click **Workspaces**. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Click your workspace in the list to open the virtual server instance page.
+4. Click your workspace in the list to open the "Virtual server instances" page.
 
 5. Create a VSI. For instructions, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
@@ -54,9 +52,9 @@ You must select the same region and zone as your VSI for all the configurations.
 {{site.data.keyword.powerSys_notm}} instances can access the internet through outbound network connections. The following architecture describes this setup:
 
 1. Connect the {{site.data.keyword.powerSys_notm}} workspace to a transit gateway. The transit gateway provides the connection between the {{site.data.keyword.powerSys_notm}} instance and the VPC infrastructure.
-2. Connect the transit gateway to a VPC that contains a network load balancer (NLB) that is configured in the route mode.
+2. Connect the transit gateway to a VPC that contains a network load balancer (NLB) that is configured in routing mode.
 3. Route internet traffic from {{site.data.keyword.powerSys_notm}} instances through a VPC subnet to the internet by using the NLB as a routing gateway. The VPC security groups that are associated with the NLB filter the traffic between the {{site.data.keyword.powerSys_notm}} instance and the internet.
-4. Attach the VPC subnet to a public gateway, which provides the actual internet connectivity.
+4. Attach the VPC subnet to a public gateway that provides the actual internet connectivity.
 
 The following diagram illustrates the outbound network architecture to show how traffic flows from {{site.data.keyword.powerSys_notm}} instances through the transit gateway, VPC, and NLB to reach the internet.
 
@@ -71,7 +69,7 @@ Planning the outbound connectivity for your {{site.data.keyword.powerSys_notm}} 
 
 * A workspace with no external connections restricts LPAR and VSI communication to resources within the same Power Virtual Server workspace only.
 * A workspace that is connected to a transit gateway links to a VPC with internet access and enables outbound connectivity for the workspace resources.
-* Your {{site.data.keyword.powerSys_notm}} instances inherit network connectivity from the workspace configuration. As a result, you need not configure network access for individual LPAR or VSI instances.
+* Your {{site.data.keyword.powerSys_notm}} instances use the network connectivity defined in the workspace configuration. As a result, you need not configure network access for individual LPARs or VSIs.
 
 ## Configuring outbound network access for {{site.data.keyword.powerSys_notm}}
 {: #outbound-network}
@@ -93,17 +91,17 @@ Ensure that a VSI is created before you configure outbound network access. For m
     If the **Create a default prefix for each zone** checkbox is selected, IBM Cloud automatically creates default subnets in each available zone. You can use these default subnets for the NLB or create a custom subnet.
 
 
-2. Record the subnet ID and Classless Inter-Domain Routing (CIDR) range of the subnet. Use the subnet ID and CIDR range when you create an NLB. For more information, see [Create NLB with routing mode](#create-nlb).
+2. Record the subnet ID and Classless Inter-Domain Routing (CIDR) range of the subnet. Use the subnet ID and CIDR range when you create an NLB. For more information, see [Create a private NLB in routing mode](#create-nlb).
 
 3. Create a public gateway and attach the public gateway to the VPC subnet. For instructions, see [Creating public gateways](/docs/vpc?topic=vpc-create-public-gateways&interface=ui){: external}.
 
-### Step 2: Create a private NLB in the route mode.
+### Step 2: Create a private NLB in routing mode.
 {: #create-nlb}
 
-1. Create a private NLB in the route mode. For instructions, see [Creating a network load balancer with routing mode by using the UI](/docs/vpc?topic=vpc-nlb-vnf&interface=ui#nlb-vnf-ui){: external}.
+1. Create a private NLB in routing mode. For instructions, see [Creating a network load balancer with routing mode by using the UI](/docs/vpc?topic=vpc-nlb-vnf&interface=ui#nlb-vnf-ui){: external}.
 
     When you create the NLB, set the following values:
-    * Select the same VPC and VPC subnet that you created in [Step 1: Create VPC infrastructure](#create-vpc).
+    * Select the same VPC and VPC subnet that you created in [Step 1: Create the VPC infrastructure](#create-vpc).
     * In the details section, select the type as **Private**.
     * Set **Routing mode for VNFs** to **Enabled** to enable the routing mode for virtual network functions (VNFs).
     * Leave the **Back-end pools** and **Front-end listeners** sections empty.
@@ -126,7 +124,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
     When you create the transit gateway, set the following values:
     * Select the default resource group.
-    * Ensure that **GRE enhanced route propagation** is set to **Disabled**.
+    * Ensure that **GRE enhanced route propagation** is set to **Disabled**. For more information, see [Generic Routing Encapsulation (GRE) connection considerations](/docs/transit-gateway?topic=transit-gateway-helpful-tips&interface=ui#gre-considerations){: external}.
     * Select **Local routing** for a single region.
     * Choose a location that matches your {{site.data.keyword.powerSys_notm}} workspace location.
     * Create the transit gateway without adding network connections.
@@ -135,7 +133,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
 
     When you connect the VPC to the transit gateway, set the following values:
     * Select **VPC** as the network connection.
-    * Select **Add new connection in this account** as the connection reach.
+    * In the **Connection reach** area, click **Add new connection in this account**.
     * Use the same region, which is the region of the transit gateway.
     * Select your VPC in the **Available connection** section.
 
@@ -164,7 +162,7 @@ Ensure that a VSI is created before you configure outbound network access. For m
     * Set **Destination CIDR** to the following value:
 
         `0.0.0.0/0`
-    * Set **Priority** to **2**, **Action** to **Deliver**, and the **Next hop (IP address)** to the IP address of your NLB.
+    * Set **Priority** to **2**, **Action** to **Deliver**, and **Next hop (IP address)** to the IP address of your NLB.
     * Set **Advertise** to **On**.
 
 
@@ -216,7 +214,7 @@ Configure the inbound network by using the same VPC and subnet that you created 
 Ensure that a VSI is created and the outbound network access is configured before you configure the inbound network access. For more information, see [Configuring public network for {{site.data.keyword.powerSys_notm}} instance](#setup-public-networking).
 {: note}
 
-### Step 1: Attach a public address range (Public IP address) to the VPC.
+### Step 1: Attach a public IP address range to the VPC.
 {: #public-add-range}
 
 If you have a public IP address that is attached to your VPC, do not perform this step and go to [Step 2: Locate the NLB IP address](#find-nlb).
@@ -230,16 +228,16 @@ If you have a public IP address that is attached to your VPC, do not perform thi
         `/32 (1 address)`
     * Retain the default value for **Geography**, **Region**, and **Resource group**.
     * Set **Bind** to on. Select your VPC to attach the public address range.
-    * Set **Zone** to the same zone as the NLB that you created in [Step 2: Create NLB](#create-nlb).
+    * Set **Zone** to the same zone as the NLB that you created in [Step 2: Create a private NLB in the route mode](#create-nlb).
 
 2. Record the allocated public IP address. Use this IP address to access your {{site.data.keyword.powerSys_notm}} VSI from the internet.
 
 ### Step 2: Locate the NLB IP address.
 {: #find-nlb}
 
-Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create NLB](#create-nlb).
+Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create a private NLB in the route mode](#create-nlb).
 
-If you have not created an NLB, create an NLB in the route mode. For instructions, see [Step 2: Create NLB](#create-nlb).
+If you have not created an NLB, create an NLB in routing mode. For instructions, see [Step 2: Create a private NLB in the route mode](#create-nlb).
 {: note}
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
@@ -265,7 +263,7 @@ If you have not created an NLB, create an NLB in the route mode. For instruction
     * Set **Destination CIDR** to the following value:
 
         `1.2.3.4/32`
-    * Set **Priority** to **2**, **Action** to **Deliver**, and the **Next hop (IP address)** to the IP address of your NLB.
+    * Set **Priority** to **2**, **Action** to **Deliver**, and **Next hop (IP address)** to the IP address of your NLB.
     * Set **Advertise** to **Off**.
 
 ### Step 4: Create the transit gateway.
@@ -273,7 +271,7 @@ If you have not created an NLB, create an NLB in the route mode. For instruction
 
 The transit gateway that you created for outbound connectivity already connects the VPC and Power Virtual Server. For more information, see [Step 3: Create transit gateway and connect to {{site.data.keyword.powerSys_notm}}](#create-transit-gateway).
 
-### Step 5: Configure the VPC routing for the transit gateway.
+### Step 5: Configure VPC routing for the transit gateway.
 {: #vpc-routing-config}
 
 The transit gateway is already configured for outbound connectivity. For more information, see [Step 4: Configure VPC routing](#vpc-routing).
@@ -311,7 +309,7 @@ This static route configuration routes traffic for the public IP address directl
 ### Step 8: Configure the VSI network.
 {: #vsi-network}
 
-Because {{site.data.keyword.powerSys_notm}} does not support network address translation (NAT), you must configure the public IP address as a secondary interface in the guest operating system of your VSI. Retain the existing private interface for normal {{site.data.keyword.powerSys_notm}} subnet connectivity, and add the public IP address to a secondary interface.
+Because {{site.data.keyword.powerSys_notm}} does not support network address translation (NAT), you must configure the public IP address as a secondary interface in the guest operating system of your VSI. Retain the existing private interface for normal {{site.data.keyword.powerSys_notm}} subnet connectivity and add the public IP address to a secondary interface.
 
 Configure the secondary interface in the guest operating system on your VSI, and not in the {{site.data.keyword.powerSys_notm}} console. Complete this task in the operating system of your VSI that receives the routed internet traffic.
 
@@ -327,7 +325,7 @@ For new outbound or inbound connections, map the required security groups to the
 ### Step 10: Test the public IP address
 {: #test-public-ip}
 
-Test the public IP address from outside the IBM network by using a protocol that is allowed by your network security group.
+Test the public IP address from an external network by using a protocol that is allowed by your network security group.
 
 For example:
 
