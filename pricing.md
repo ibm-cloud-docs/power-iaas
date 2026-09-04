@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-02"
+lastupdated: "2026-09-04"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -237,7 +237,6 @@ Refer to the following table to view the part number descriptions and the associ
 | `IBM i LPP core-hour - mobile core-hour - SWMA paid`                                                                | `power-iaas-metric-ibmi-lpp-mol`                                          |
 | `IBM i P10 LPP core-hour`                                                                                           | `power-iaas-metric-ibmi-lpp-p10`                                          |
 | `IBM i LPP P10 - mobile core-hour - SWMA paid`                                                                      | `power-iaas-metric-ibmi-lpp-p10-mol`                                      |
-| `IBM i P30 LPP core-hour`                                                                                           | `power-iaas-metric-ibmi-lpp-p30`                                          |
 | `IBM i P30 LPP core-hour`                                                                                           | `power-iaas-metric-ibmi-lpp-p30`                                          |
 | `IBM i LPP P30 - mobile core-hour - SWMA paid`                                                                      | `power-iaas-metric-ibmi-lpp-p30-mol`                                      |
 | `IBM i P05 software tier license core-hour`                                                                         | `power-iaas-metric-ibmi-os-p05-tier`                                      |
