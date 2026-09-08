@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-24"
+lastupdated: "2026-09-08"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -118,41 +118,32 @@ For more information about managing and assigning access by using IAM policies, 
 
 
 
-## Understanding trusted profiles for {{site.data.keyword.powerSys_notm}}
+## Trusted profiles for {{site.data.keyword.powerSys_notm}}
 {: #trusted-profiles}
 
-A trusted profile is a security mechanism that eliminates the need to store static secrets, such as IBM Cloud API keys, in potentially vulnerable environments like virtual server instances (VSIs). An {{site.data.keyword.cloud_notm}} instance is trusted by IBM Cloud IAM as a type of compute resource. As a result, trusted profiles can be used to grant {{site.data.keyword.powerSys_notm}} VSIs secure access to call other service API endpoints without storing credentials within the instance.
+A trusted profile is an IAM identity for a compute resource. IBM Cloud IAM trusts your {{site.data.keyword.powerSys_notm}} virtual server instances (VSI) as a compute resource, which allows the VSI to call the API endpoints of other IBM Cloud services without storing API keys or credentials on the instance.
 {: shortdesc}
 
 
 ### Benefits of using trusted profiles
 {: #trusted-profiles-benefits}
 
-Using trusted profiles with {{site.data.keyword.powerSys_notm}} provides several security and operational advantages:
+Trusted profiles provide the following security benefits for {{site.data.keyword.powerSys_notm}}:
 
-Enhanced security
-:   Eliminates the risk of credential exposure by removing the need to store API keys or passwords on your VSIs.
-
-Simplified credential management
-:   Eliminates the need to rotate, update, or manage static credentials across your VSI fleet.
-
-Dynamic authentication
-:   Applications in the guest OS can generate tokens on demand based on the VSI identity, ensuring that access is always current and tied to the specific instance.
-
-Reduced attack surface
-:   Without stored credentials, compromised VSIs cannot expose long-lived secrets that can be used to access other resources.
-
-Granular access control
-:   You can assign specific access rights to individual VSIs through IAM policies and access groups.
+- **Enhanced security**: Eliminates the risk of credential exposure by removing the need to store API keys or passwords on your VSIs.
+- **Simplified credential management**: Eliminates the need to rotate, update, or manage static credentials across your VSIs.
+- **Dynamic authentication**: Applications in the guest OS can generate tokens on demand based on the VSI identity. Because tokens are short-lived, access credentials are always current and tied to the specific instance.
+- **Reduced attack surface**: Prevents compromised VSIs from exposing long-lived credentials to access other resources.
+- **Precise access control**: Controls which IBM Cloud services each VSI can access through IAM policies and access groups assigned at the individual VSI level.
 
 ### Managing trusted profiles
 {: #trusted-profiles-management}
 
-You manage trusted profiles through IBM Identity and Access Management (IAM). You can create, configure, and manage trusted profiles from the [IBM Cloud Trusted Profiles UI](https://cloud.ibm.com/iam/trusted-profiles){: external}. You can associate each profile with one or more {{site.data.keyword.powerSys_notm}} VSIs, and you can assign access policies to control which IBM Cloud services and resources the VSIs can access.
+You manage trusted profiles through IBM Identity and Access Management (IAM). You can create, configure, and manage trusted profiles from the [IBM Cloud Trusted Profiles UI](https://cloud.ibm.com/iam/trusted-profiles){: external}. You can associate each profile with one or more {{site.data.keyword.powerSys_notm}} VSIs and assign access policies to control which IBM Cloud services and resources the VSIs can access.
 
 ### Creating a trusted profile for {{site.data.keyword.powerSys_notm}}
 {: #trusted-profiles-create}
 
-To use trusted profiles with your {{site.data.keyword.powerSys_notm}} VSIs, you must first create a trusted profile in IAM. You can configure rule-based policies for the VSIs or specify an individual VSI that can use a trusted profile. All configuration is done from within an individual trusted profile.
+To use trusted profiles with your {{site.data.keyword.powerSys_notm}} VSIs, you must create a trusted profile in IAM. You can configure rule-based policies for the VSIs or specify an individual VSI that can use a trusted profile.
 
-For more information about creating and managing a trusted profile, see [Establishing trust with compute resources in the console](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-compute){: external}.
+For more information about creating and managing a trusted profile, see [Establishing trust with Power Virtual Server compute resources by using the console](/docs/iam?topic=iam-create-trusted-profile&interface=ui#create-profile-powervs){: external}.
