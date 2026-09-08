@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-04"
+lastupdated: "2026-09-08"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -24,7 +24,7 @@ subcollection: power-iaas
 
 ---
 
-The {{site.data.keyword.powerSysFull}} metadata service provides information about your virtual server instances (VSIs). When the metadata service is enabled for a VSI, you can retrieve information about that VSI by sending REST API requests from the VSI. Access to the metadata service API endpoint is available only from within the {{site.data.keyword.powerSys_notm}} environment.
+The {{site.data.keyword.powerSysFull}} metadata service provides information about your virtual server instances (VSIs) and enables identity operations for trusted profile authentication. When the metadata service is enabled on a VSI, you can retrieve information about that VSI by sending REST API requests from the VSI. Use the identity endpoints of the metadata service to authenticate with IAM-enabled services without storing credentials on the instance. Access to the metadata service API endpoint is available only within the {{site.data.keyword.powerSys_notm}} environment.
 {: shortdesc}
 
 
