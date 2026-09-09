@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-08"
+lastupdated: "2026-09-09"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -53,12 +53,12 @@ You can use platform access roles to enable users to complete tasks on {{site.da
 
 The following table displays the IAM platform access roles and the corresponding type of control that is allowed by the {{site.data.keyword.powerSys_notm}}:
 
-| Platform access role | Type of access allowed                                                                                  |
-| -------------------- | ------------------------------------------------------------------------------------------------------- |
-| Viewer               | View instances and list instances.                                                                      |
-| Operator             | View instances and manage aliases, bindings ({{site.data.keyword.on-prem-fname}} in client location only), and credentials.                     |
-| Editor               | View instances, list instances, create instances, and delete instances.                                 |
-| Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users. |
+| Platform access role | Type of access allowed                                                                                                      |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Viewer               | View instances and list instances.                                                                                          |
+| Operator             | View instances and manage aliases, bindings ({{site.data.keyword.on-prem-fname}} in client location only), and credentials. |
+| Editor               | View instances, list instances, create instances, and delete instances.                                                     |
+| Administrator        | View instances, list instances, create instances, delete instances, and assign policies to other users.                     |
 {: caption="IAM platform access roles" caption-side="bottom"}
 
 ## Service access roles
@@ -66,10 +66,10 @@ The following table displays the IAM platform access roles and the corresponding
 
 You can use the service access roles to define the actions that the users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table displays the IAM service access roles and the corresponding actions that a user can complete by using the {{site.data.keyword.powerSys_notm}}:
 
-| Service access role | Description of actions |
-|-----------|-------------------------|
-| Reader | View all resources (such as SSH keys, storage volumes, and network settings). You cannot modify the resources. |
-| Manager | Configure all resources. You can perform the following actions:  \n * Create instances  \n * Increase storage volume sizes  \n * Create SSH keys  \n * Modify network settings  \n * Create boot images  \n * Delete storage volumes |
+| Service access role | Description of actions                                                                                                                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Reader              | View all resources (such as SSH keys, storage volumes, and network settings). You cannot modify the resources.                                                                                                                       |
+| Manager             | Configure all resources. You can perform the following actions:  \n * Create instances  \n * Increase storage volume sizes  \n * Create SSH keys  \n * Modify network settings  \n * Create boot images  \n * Delete storage volumes |
 {: caption="IAM service access roles" caption-side="bottom"}
 
 To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
@@ -93,6 +93,7 @@ Although you can select a **Resource type** from the **Attribute type** list, it
 {: note}
 
 
+
 ## Access role requirements for {{site.data.keyword.powerSys_notm}}
 {: #access-roles-requirement}
 
@@ -100,15 +101,15 @@ Although you can select a **Resource type** from the **Attribute type** list, it
 
 The following table displays the additional access roles that are required for the corresponding type of services that are allowed by {{site.data.keyword.powerSys_notm}}:
 
-| Additional access role | Resources Attributes                                                                                  |
-| ---------------------- | ----------------------------------------------------------------------------------------------------- |
-| Editor, Manager, Operator, Reader, Viewer               | {{site.data.keyword.powerSys_notm}} service                          |
-| Editor, Manager, Operator, Reader, Viewer, VPN Client   | VPC Infrastructure Services service                                  |
-| Editor, Operator, Viewer                                | Transit Gateway service                                              |
-| Reader, Viewer                                          | All resources in account (Including future IAM enabled services)     |
-| Editor, Operator, Viewer                                | Direct Link service                                                  |
-| Viewer                                                  | All resource group                                                   |
-| Viewer                                                  | Satellite service [{{site.data.keyword.on-prem}}]{: tag-red}                           |
+| Additional access role                                | Resources Attributes                                             |
+| ----------------------------------------------------- | ---------------------------------------------------------------- |
+| Editor, Manager, Operator, Reader, Viewer             | {{site.data.keyword.powerSys_notm}} service                      |
+| Editor, Manager, Operator, Reader, Viewer, VPN Client | VPC Infrastructure Services service                              |
+| Editor, Operator, Viewer                              | Transit Gateway service                                          |
+| Reader, Viewer                                        | All resources in account (Including future IAM enabled services) |
+| Editor, Operator, Viewer                              | Direct Link service                                              |
+| Viewer                                                | All resource group                                               |
+| Viewer                                                | Satellite service [{{site.data.keyword.on-prem}}]{: tag-red}     |
 {: caption="Additional access roles" caption-side="bottom"}
 
 ## User access scenarios
