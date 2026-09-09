@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-09-09"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -90,12 +90,18 @@ You cannot assign the subnet that is already assigned to another virtual machine
 
     For more information about subnet ARP broadcast, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
 
+
+
 10. Set **DHCP** to to one of the following options:
     - **Enabled**: Network interfaces that are configured to use Dynamic Host Configuration Protocol (DHCP) receive their IPv4 configurations automatically. **DHCP** is set to **Enabled** by default.
 
     - **Disabled**: Network interfaces that are configured to use DHCP do not receive their IPv4 configurations automatically.
 
     The DHCP service is available only in IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about DHCP, see [DHCP network inside the pod](/docs/power-iaas?topic=power-iaas-network_use_cases#dhcp-network-new).
+
+
+
+
 
 11.  You can also attach a primary and redundant cloud connection to the subnet to set up high availability in an {{site.data.keyword.off-prem}}. For more information about high availability, see [Setting up high availability over cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections#ha-availability-cloud-connections).
 
