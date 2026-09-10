@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-10"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -169,6 +169,8 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
    5. Click **Done editing** to continue to the Profile section.
 
 9. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)**, and **Core type**.
+
+
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}

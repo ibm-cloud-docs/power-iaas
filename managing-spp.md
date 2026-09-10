@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-03-24"
+lastupdated: "2026-09-10"
 
 keywords: Shared processor pool, SPP, pool placement group, create SPP, SPP PG
 
@@ -143,7 +143,7 @@ To create an SPP, complete the following steps:
     |----|----|
     |Name|Enter a name that is unique within your cloud account.  \n Use a name of minimum 2 characters and a maximum of 12 characters. Special characters are not allowed except underscore (‘_’).|
      |Add to a pool placement group|Select the checkbox if you want to deploy the SPP directly into an existing pool placement group.  \n If the pool has the required affinity relation with other pools, the best practice is to deploy the pool directly into the placement group. You must create the pool placement group first. It prevents the pool from being deployed on a host that does not satisfy the affinity requirements, and having to move it later.|
-    |Select machine type|Specify the machine type. For more information about hardware specifications, see [S922](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}, and [E980 (Data centers other than Dallas and Washington)](http://www-01.ibm.com/support/docview.wss?uid=ssm1platformaix9080-M9S-vios-only){: external}.|
+    |Select machine type|Specify the machine type. For more information about hardware specifications, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud).|
     |Reserved processing cores[^1]|[{{site.data.keyword.off-prem}}]{: tag-blue} For {{site.data.keyword.powerSys_notm}}, the core-to-virtual core ratio is 1:1 by default.  \n [{{site.data.keyword.on-prem}}]{: tag-red} For {{site.data.keyword.on-prem-fname}}, the minimum core-to-virtual core ratio is 1:20. The minimum entitled capacity must be 0.05 and can be incremented by 0.05.|
      {: caption="Creating a new SPP fields and descriptions" caption-side="bottom"}
 
