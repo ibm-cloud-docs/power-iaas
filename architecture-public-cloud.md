@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-03"
+lastupdated: "2026-09-10"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -99,6 +99,7 @@ The following IBM Power server can host a {{site.data.keyword.powerSys_notm}}:
 - [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
 - [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^1]
 - [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
+- [IBM Power System E1150 (9043-MRU)](https://www-api.ibm.com/adobe/assets/urn:aaid:aem:81c04ae4-9377-44bf-9ab4-19a1f55b9fc6/original/as/ibm-power-e1150-data-sheet-ph.pdf){: external}
 
 
 
@@ -132,14 +133,13 @@ The IBM data centers have the following hardware components:
 
 
 
-The IBM data centers are configured with one or more of the following IBM Power Systems:
-
-* [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
-* [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
-* [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
-* [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
-* [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^2]
-* [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
+- [IBM Power System S922 (9009-22A)](https://www.ibm.com/downloads/cas/KQ4BOJ3N){: external}
+- [IBM Power System E980 (9080-M9S)](https://www.ibm.com/downloads/cas/VX0AM0EP){: external}
+- [IBM Power System S1022 (9105-22A) (Power10)](https://www.ibm.com/downloads/cas/MQR4B1RP){: external}
+- [IBM Power System E1080 (9080-HEX)](https://www.ibm.com/downloads/cas/MMOYB4YL){: external}
+- [IBM Power System E1050 (9043-MRX)](https://www.ibm.com/downloads/cas/MKQOQAYV){: external}[^1]
+- [IBM Power System S1122 (9824-22A)](https://www.ibm.com/downloads/documents/us-en/13774247783d5fe6){: external}
+- [IBM Power System E1150 (9043-MRU)](https://www-api.ibm.com/adobe/assets/urn:aaid:aem:81c04ae4-9377-44bf-9ab4-19a1f55b9fc6/original/as/ibm-power-e1150-data-sheet-ph.pdf){: external}
 
 
 
