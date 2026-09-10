@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-10"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -56,7 +56,7 @@ When you send API requests to the metadata service, the service triggers events 
 ## Configuring the metadata service
 {: #metadata-configure-service}
 
-You can configure access to the metadata service for a new or existing {{site.data.keyword.powerSys_notm}} VSI by using the {{site.data.keyword.powerSys_notm}} user interface, CLI, or API.
+You can configure access to the metadata service for a new or existing {{site.data.keyword.powerSys_notm}} VSI by using the {{site.data.keyword.powerSys_notm}} user interface, CLI, or API. Before you configure the metadata service, review the configuration requirements for your operating system.
 
 When you configure access to the metadata service, a network interface is created with the link-local IP address `169.254.169.253`. Do not delete the link-local IP address (`169.254.169.253`) or its route, and do not create networks that conflict with this address range from within the VSI.
 {: important}
@@ -80,7 +80,7 @@ The metadata service uses an internal network configured with the link-local IP 
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                           |
 | Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the **Shutoff** state. The VSI requires OS-level configuration of the metadata service network interface before the VSI can use a trusted profile. For more information, see [Configuring the metadata service interface on IBM i](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-ibmi-configure). |
 | Disabling access to the metadata service                   | After disabling the metadata service, you must remove the TCP/IP interface and line description to complete cleanup. For more information, see [Troubleshooting on IBM i](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-ibmi).                                                                                                        |
-| Considerations for boot disk overwrite operations          | OS-level configuration of the metadata service network interface is required after you overwrite the boot disk. For more information, see [Reconfiguring the metadata service interface after a custom image overwrite on IBM i](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-ibmi-reconfigure).                                    |
+| Overwriting the boot disk with a captured image          | OS-level configuration of the metadata service network interface is required after you overwrite the boot disk. For more information, see [Reconfiguring the metadata service interface after a custom image overwrite on IBM i](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-ibmi-reconfigure).                                    |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="IBM i"}
 {: tab-group="metadata-config-os"}
@@ -91,8 +91,8 @@ The metadata service uses an internal network configured with the link-local IP 
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                                                                                                                              |
 | Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the **Shutoff** state. After you enable the metadata service access and start the VSI, the metadata service interface is automatically configured. If you use AIX 7.1, you must configure the interface after the VSI boots. For more information, see [Validating and recovering network connectivity on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-validate).                                                                      |
-| Disabling access to the metadata service                   | You can disable access only when the VSI is in the **Shutoff** state. The `force-disable` option is not supported for AIX. When you disable the metadata service, the system removes the IP address, but network adapter entries might remain in the **Defined** state. You can clean up these remaining adapter entries. For more information, see [Cleaning up network interfaces after disabling the metadata service on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-cleanup). |
-| Considerations for boot disk overwrite operations          | After the boot disk is overwritten, you must reconfigure the metadata service interface. For more information, see [Validating and recovering network connectivity on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-validate).                                                                                                                                                                                                                                                  |
+| Disabling access to the metadata service                   | You can disable access only when the VSI is in the **Shutoff** state. The `--metadata-service-force` CLI option and the `forceDisable` API parameter are not supported for AIX. When you disable the metadata service, the system removes the IP address, but the network adapter entries might remain in the **Defined** state. You can clean up the remaining network adapter entries. For more information, see [Cleaning up network interfaces after disabling the metadata service on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-cleanup). |
+| Overwriting the boot disk with a captured image          | After the boot disk is overwritten, you must reconfigure the metadata service interface. For more information, see [Validating and recovering network connectivity on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-validate).                                                                                                                                                                                                                                                  |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="AIX"}
 {: tab-group="metadata-config-os"}
@@ -105,7 +105,7 @@ The metadata service uses an internal network configured with the link-local IP 
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                         |
 | Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the **Shutoff** state. After you enable the metadata service access and start the VSI, the metadata service interface is automatically configured.                                                                                                                                                                                                                                     |
 | Disabling access to the metadata service                   | When you use the `--metadata-service-force` CLI option or the `forceDisable` API parameter, you must remove the network interface configuration. Specific commands depend on your Linux distribution's network management tools. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).                                |
-| Considerations for boot disk overwrite operations          | Before you copy the disk image, you must remove network persistence rules to prevent connectivity issues when the image is restored. This involves backing up and clearing udev rules files with MAC address bindings. For more information, see [Reconfiguring the metadata service interface after image capture on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#reconfigure-linux-after-capture). |
+| Overwriting the boot disk with a captured image          | Before you copy the disk image, you must back up and clear the `udev` rules files (network interface configuration files) that contain MAC address bindings. This removes network persistence rules and prevents connectivity issues when the image is restored. For more information, see [Reconfiguring the metadata service interface after image capture on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#reconfigure-linux-after-capture). |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="Linux"}
 {: tab-group="metadata-config-os"}
@@ -121,38 +121,38 @@ The metadata service uses an internal network configured with the link-local IP 
 ### Enabling access to the metadata service for a new VSI by using the user interface
 {: #metadata-enable-new-instance-ui}
 
+You can enable access to the metadata service when you create a VSI by using the {{site.data.keyword.powerSys_notm}} user interface.
+
 To enable access to the metadata service when you create a VSI, complete the following steps:
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-3. From the Workspaces page, select a workspace in which you want to create a VSI. The Virtual server instances page is displayed.
+4. From the Workspaces page, select a workspace in which you want to create a VSI. The "Virtual server instances" page is displayed.
 
-4. Click **Create instance**. The Create virtual server instance page is displayed.
+5. Click **Create instance**. The "Create virtual server instance" page is displayed.
 
-5. In the **General** section, expand **Advanced configurations**, and set **Metadata service** to on.
+6. In the General section, expand **Advanced configurations** and set **Metadata service** to on. The **Default trusted profile (optional)** field and the **Auto link** toggle are displayed.
 
-      When you enable the metadata service, you can optionally specify a default trusted profile and configure the **Auto link** settings:
+      You can optionally configure the following settings:
 
-   1. To specify a default trusted profile, click **Select trusted profile**. The **Select default Trusted Profile** dialog opens with a list of existing trusted profiles that you have access to.
+      - **Default trusted profile**: To grant the VSI access to IAM-enabled services through a trusted profile, click **Select trusted profile**. The "Select default Trusted Profile" dialog is displayed. Select a trusted profile from the list and click **Select Trusted Profile**.
 
-   2. Select a trusted profile that you want to set as default and click **Select Trusted Profile**. The **Auto link** toggle is displayed.
+      - **Auto link**: Set the **Auto link** toggle:
 
-   Configure the following **Auto link** settings:
+         - **Enabled** Default. The VSI cloud resource name (CRN) is automatically added to the selected trusted profile and the profile is available to the VSI when the VSI starts.
 
-   - **Enabled**: Default. The VSI cloud resource name (CRN) is added to the selected default trusted profile and the profile is available to the VSI when the VSI starts.
-
-   - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
+         - **Disabled**: If the selected trusted profile is not configured with rule-based filters, you must manually link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use the trusted profile.
 
 {{_include-segments/autolink-enterprise-template-note.md}}
 
 
 
 
-6. Click **Continue** and complete the remaining steps to create the VSI. For more information about creating a VSI, see [Creating a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+7. Click **Continue** and complete the remaining steps to create the VSI. For more information about creating a VSI, see [Creating a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
 ### Enabling access to the metadata service for an existing VSI by using the user interface
 {: #metadata-enable-existing-instance-ui}
@@ -164,31 +164,29 @@ To enable access to the metadata service for an existing VSI, complete the follo
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Select the workspace that contains the VSI for which you want to enable the metadata service. The Virtual server instances page with a list of existing VSIs is displayed.
+4. Select the workspace that contains the VSI for which you want to enable the metadata service. The "Virtual server instances" page with a list of existing VSIs is displayed.
 
-5. Select the VSI for which you want to enable the metadata service. The Virtual server instance details page for the selected VSI is displayed.
+5. Select the VSI for which you want to enable the metadata service. The "Virtual server instance details" page for the selected VSI is displayed.
 
     If you enable access to the metadata service for a VSI that is in the **Active** state, you might need to complete additional steps to configure the network. For more information about configuration steps, see [Configuration requirements by operating system](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles&q=crn&tags=power-iaas#metadata-config-by-os).
 
-6. On the **Overview** tab, go to the Metadata service section, and click the **Edit** icon. The Edit Metadata service details panel is displayed.
+6. On the **Overview** tab, go to the Metadata service section, and click the **Edit** icon. The "Edit Metadata service details" panel is displayed.
 
-7. Set **Metadata service** to **Access enabled**.
+7. Set **Metadata service** to **Access enabled**. The **Default trusted profile (optional)** field and the **Auto link** toggle are displayed.
 
-      When you enable the metadata service, you can optionally specify a default trusted profile and configure the **Auto link** settings:
+      You can optionally configure the following settings:
 
-   1. To specify a default trusted profile, click **Select trusted profile**. The **Select default Trusted Profile** dialog opens with a list of existing trusted profiles that you have access to.
+      - **Default trusted profile**: To grant the VSI access to IAM-enabled services through a trusted profile, click **Select trusted profile**. The "Select default Trusted Profile" dialog is displayed. Select a trusted profile from the list and click **Select Trusted Profile**.
 
-   2. Select a trusted profile that you want to set as default and click **Select Trusted Profile**. The **Auto link** toggle is displayed.
+      - **Auto link**: Set the **Auto link** toggle:
 
-   Configure the following **Auto link** settings:
+         - **Enabled** (default): The VSI CRN is automatically added to the selected trusted profile and the profile is available to the VSI when the VSI starts.
 
-   - **Enabled**: Default. The VSI CRN is added to the selected default trusted profile and the profile is available to the VSI when the VSI starts.
-
-   - **Disabled**: If the selected default trusted profile is not configured with rule-based filters, you must link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use it.
+         - **Disabled**: If the selected trusted profile is not configured with rule-based filters, you must manually link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use the trusted profile.
 
 {{_include-segments/autolink-enterprise-template-note.md}}
 
@@ -199,7 +197,7 @@ To enable access to the metadata service for an existing VSI, complete the follo
 ### Disabling access to the metadata service by using the user interface
 {: #metadata-disable-instance-ui}
 
-You can disable access to the metadata service for a VSI on which the service is currently enabled. By default, access to the metadata service is disabled when you create a new VSI.
+You can disable access to the metadata service for a VSI on which the service is currently enabled. By default, access to the metadata service is disabled when you create a VSI.
 
 AIX VSIs must be in the **Shutoff** state before you can disable access to the metadata service.
 {: requirement}
@@ -208,15 +206,15 @@ To disable access to the metadata service for a VSI, complete the following step
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials.
 
-2. In the search box, type **{{site.data.keyword.powerSys_notm}}**, and click the **{{site.data.keyword.powerSys_notm}}** tile.
+2. In the search box, type **{{site.data.keyword.powerSys_notm}}** and click the **{{site.data.keyword.powerSys_notm}}** tile.
 
 3. Click **Workspaces** in the navigation panel. The Workspaces page with a list of existing workspaces is displayed.
 
-4. Select the workspace that contains the VSI for which you want to disable the metadata service. The Virtual server instances page with a list of existing VSIs is displayed.
+4. Select the workspace that contains the VSI for which you want to disable the metadata service. The "Virtual server instances" page with a list of existing VSIs is displayed.
 
-5. Select the VSI for which you want to disable the metadata service. The Virtual server instance details page for the selected VSI is displayed.
+5. Select the VSI for which you want to disable the metadata service. The "Virtual server instance details" page for the selected VSI is displayed.
 
-6. On the **Overview** tab, go to the Metadata service section and click the **Edit** icon. The Edit Metadata service details panel is displayed.
+6. On the **Overview** tab, go to the Metadata service section and click the **Edit** icon. The "Edit Metadata service details" panel is displayed.
 
 7. Set **Metadata service** to **Access disabled**.
 
@@ -227,7 +225,7 @@ To disable access to the metadata service for a VSI, complete the following step
 ### Enabling or disabling access to the metadata service by using the CLI
 {: #metadata-service-enable-cli}
 
-You can use the {{site.data.keyword.powerSys_notm}} CLI to enable or disable access to the metadata service when you create a new VSI or update an existing VSI.
+You can use the {{site.data.keyword.powerSys_notm}} CLI to enable or disable access to the metadata service when you create a VSI or update an existing VSI.
 
 Before you begin, install the IBM Cloud CLI and the {{site.data.keyword.powerSys_notm}} CLI plug-in. For more information, see [Installing the IBM Power Virtual Server CLI plug-in](/docs/power-iaas?topic=power-iaas-power-iaas-cli-byb).
 
@@ -272,9 +270,9 @@ ibmcloud pi instance update INSTANCE_ID --metadata-service true
 ### Enabling or disabling access to the metadata service by using the API
 {: #metadata-service-enable-api}
 
-You can use the {{site.data.keyword.powerSys_notm}} API to enable or disable access to the metadata service when you create a new VSI or update an existing VSI.
+You can use the {{site.data.keyword.powerSys_notm}} API to enable or disable access to the metadata service when you create a VSI or update an existing VSI.
 
-#### Enabling or disabling access to the metadata service when you create a new VSI by using the API
+#### Enabling or disabling access to the metadata service when you create a VSI by using the API
 {: #metadata-enable-new-instance-api}
 
 By default, the metadata service is disabled when you create a VSI by sending a `POST /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances` request.
