@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-10"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -17,8 +17,6 @@ subcollection: power-iaas
 {: #managing-resources-and-users}
 
 ---
-
-
 
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
