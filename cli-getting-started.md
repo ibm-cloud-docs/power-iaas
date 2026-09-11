@@ -19,7 +19,6 @@ lastupdated: "2026-09-11"
 
 ---
 
-
 The IBM {{site.data.keyword.powerSys_notm}} command-line interface (CLI) provides a set of commands that are grouped by namespace for you to interact with IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. For more information, see the following topics:
 
 
