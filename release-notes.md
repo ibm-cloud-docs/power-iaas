@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-04"
+lastupdated: "2026-09-11"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -26,6 +26,13 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: #September-2026}
 
 
+
+### 11 September 2026
+{: #power-iaas-sep1126}
+{: release-note}
+
+IBM Power System E1150 available in `CHE02` data center
+:   The IBM Power System E1150 (9043-MRU) is available in the `CHE02` data center. For more information, see [Hardware specifications](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud).
 
 ### 4 September 2026
 {: #power-iaas-sep0426}
