@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-11"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -194,12 +194,14 @@ To enable access to the metadata service for an existing VSI, complete the follo
 
 8. Click **Save**.
 
+   A notification is displayed indicating that the metadata service update was initiated. Refresh the page to see the updated metadata service status.
+
 ### Disabling access to the metadata service by using the user interface
 {: #metadata-disable-instance-ui}
 
 You can disable access to the metadata service for a VSI on which the service is currently enabled. By default, access to the metadata service is disabled when you create a VSI.
 
-AIX VSIs must be in the **Shutoff** state before you can disable access to the metadata service.
+AIX VSIs must be in the **Shutoff** state before you disable access to the metadata service.
 {: requirement}
 
 To disable access to the metadata service for a VSI, complete the following steps:
@@ -218,9 +220,11 @@ To disable access to the metadata service for a VSI, complete the following step
 
 7. Set **Metadata service** to **Access disabled**.
 
-   If you disable access to the metadata service for a VSI that is in the **Active** state, you might need to configure the network interface. For more information about configuration steps, see [Configuring and troubleshooting metadata service connectivity](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service).
+   If you disable access to the metadata service for a VSI that is in the **Active** state, you might need to configure the network interface. For more information about the configuration steps, see [Configuring and troubleshooting metadata service connectivity](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service).
 
 8. Click **Save**.
+
+   A notification is displayed indicating that the metadata service update was initiated. Refresh the page to see the updated metadata service status. After the metadata service is disabled, the VSI can no longer access the metadata service endpoint or generate identity and IAM tokens.
 
 ### Enabling or disabling access to the metadata service by using the CLI
 {: #metadata-service-enable-cli}
@@ -229,17 +233,17 @@ You can use the {{site.data.keyword.powerSys_notm}} CLI to enable or disable acc
 
 Before you begin, install the IBM Cloud CLI and the {{site.data.keyword.powerSys_notm}} CLI plug-in. For more information, see [Installing the IBM Power Virtual Server CLI plug-in](/docs/power-iaas?topic=power-iaas-power-iaas-cli-byb).
 
-#### Enabling or disabling access to the metadata service when you create a VSI by using the CLI
+#### Enabling or disabling access to the metadata service for a new VSI by using the CLI
 {: #metadata-enable-new-instance-cli}
 
-Run the [`ibmcloud pi instance create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command and set the `--metadata-service` option to `True`. Access to the metadata service is disabled by default.
+Run the [`ibmcloud pi instance create`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command and set the `--metadata-service` option to `true`. Access to the metadata service is disabled by default. The following example shows how to enable access to the metadata service when you create a VSI:
 
 ```sh
 ibmcloud pi instance create test-instance-1 --image IMAGE_ID --subnets SUBNET_ID --processors 0.5 --processor-type shared --memory 4 --metadata-service true
 ```
 {: codeblock}
 
-You can also specify a default trusted profile for your VSI. When you specify a default trusted profile, the `--default-trusted-profile-autolink` option is set to `true` by default. When auto-link is enabled, the specified trusted profile is automatically linked to the VSI. The following example shows the VSI creation command with `--default-trusted-profile-autolink` option set to `false`.
+You can also specify a default trusted profile for your VSI. When you specify a default trusted profile, the `--default-trusted-profile-autolink` option is set to `true` by default. When auto-link is enabled, the specified trusted profile is automatically linked to the VSI. The following example shows the command to create a VSI with the `--default-trusted-profile-autolink` option set to `false`.
 
 ```sh
 ibmcloud pi instance create test-instance-2 --default-trusted-profile "Profile-9fd84246-7df4-4667-94e4-8ecde51d5ac5" --default-trusted-profile-autolink false
@@ -251,7 +255,7 @@ ibmcloud pi instance create test-instance-2 --default-trusted-profile "Profile-9
 
 
 
-To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to metadata service for an AIX VSI, the VSI must be in the **Shutoff** state. The `--metadata-service-force` option is not supported for AIX.
+To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to the metadata service, AIX VSIs must be in the **Shutoff** state. The `--metadata-service-force` option of the `ibmcloud pi instance update` command is not supported for AIX.
 {: requirement}
 
 
@@ -272,14 +276,14 @@ ibmcloud pi instance update INSTANCE_ID --metadata-service true
 
 You can use the {{site.data.keyword.powerSys_notm}} API to enable or disable access to the metadata service when you create a VSI or update an existing VSI.
 
-#### Enabling or disabling access to the metadata service when you create a VSI by using the API
+#### Enabling or disabling access to the metadata service for a new VSI by using the API
 {: #metadata-enable-new-instance-api}
 
-By default, the metadata service is disabled when you create a VSI by sending a `POST /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances` request.
+By default, the metadata service is disabled when you create a VSI by sending a [`POST /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-post){: external} request.
 
-You can enable access to the metadata service by specifying the `metadataService` parameter and setting `enabled` to `true`.
+You can enable access to the metadata service by specifying the `metadataService` parameter and setting its `enabled` field to `true`.
 
-This example shows how to enable access to the metadata service during VSI creation by using the API:
+The following example shows how to enable access to the metadata service during VSI creation by using the API:
 
 ```sh
 curl -X POST "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances" \
@@ -308,15 +312,15 @@ curl -X POST "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/
 ```
 {: codeblock}
 
-The response shows that the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a `GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}` request.
+The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a [`GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} request.
 
 #### Enabling or disabling access to the metadata service for an existing VSI by using the API
 {: #metadata-enable-existing-instance-api}
 
-To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to metadata service for an AIX VSI, the VSI must be in the **Shutoff** state. The `forceDisable` option is not supported for AIX.
+To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to the metadata service, AIX VSIs must be in the **Shutoff** state. The `forceDisable` option of the [`PUT /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-put){: external} request is not supported for AIX.
 {: requirement}
 
-To enable or disable access to the metadata service from an existing VSI, send a `PUT /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}` request and specify the `metadataService` parameter. By default, the `enabled` option is set to `false`. To enable access to the metadata service, set the `enabled` option to `true`.
+By default, the metadata service is disabled on existing VSIs. To enable or disable access to the metadata service, send a [`PUT /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-put){: external} request and specify the `metadataService` parameter. To enable access to the metadata service, set the `enabled` field to `true`. To disable access, set the `enabled` field to `false`.
 
 The following example shows how to enable access to the metadata service for an existing VSI:
 
@@ -331,7 +335,7 @@ curl -X PUT "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/p
 ```
 {: codeblock}
 
-The response shows that the `metadataService` parameter is set to `true` when you enable access to the service. You can also verify the metadata service setting by sending a `GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}` request.
+The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a [`GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} request.
 
 
 
