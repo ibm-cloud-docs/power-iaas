@@ -196,7 +196,7 @@ toc:
           topics:
           - carbon-calculator.md
           - sysdig-monitoring-pvs.md
-          - cloud-log-events.md
+          - at-events.md
   - navgroup:
       id: reference
       topics:
