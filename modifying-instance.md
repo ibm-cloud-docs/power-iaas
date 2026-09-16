@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-16"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -103,22 +103,7 @@ To change the preferred processor compatibility mode of a VSI by using the {{sit
 2. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 3. Click **Save**.
 
-After you change the preferred processor compatibility mode of a VSI, you must shut down and then start the VSI for the changes to take effect. Only restarting the VSI does not activate the selected preferred processor compatibility mode.
-
-To shut down the VSI, complete the following steps:
-
-1. From the "Virtual server instance details" page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The "OS shutdown confirmation" dialog is displayed.
-
-2. Click **Shutdown** to proceed. A notification is displayed to indicate that the shutdown process has started.
-
-To start the VSI, complete the following steps:
-
-1. From the "Virtual server instance details" page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI has started.
-
-2. Click the **Refresh** icon to see the change.
-
-For more information about the processor compatibility mode, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}
-
+After you change the preferred processor compatibility mode of a VSI, you must shut down and then start the VSI for the changes to take effect. Only restarting the VSI does not activate the selected preferred processor compatibility mode. For more informaiton about shutting down and restarting a VSI, see [Shut down and restart a VSI](#shut-down-restart-vsi).
 
 ### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
@@ -397,7 +382,24 @@ For more information about deleting a primary volume, see [Deleting a primary vo
 
 
 
-## Deleting a virtual server instance
+## Shut down and restart a VSI
+{: #shut-down-restart-vsi}
+
+To shut down the VSI, complete the following steps:
+
+1. From the "Virtual server instance details" page of the selected VSI, select **OS Shutdown** from the overflow menu (⋮). The "OS shutdown confirmation" dialog is displayed.
+
+2. Click **Shutdown** to proceed. A notification is displayed to indicate that the shutdown process has started.
+
+To start the VSI, complete the following steps:
+
+1. From the "Virtual server instance details" page of the selected VSI, select **Start** from the overflow menu (⋮). A notification is displayed to indicate that the VSI has started.
+
+2. Click the **Refresh** icon to see the change.
+
+For more information about the processor compatibility mode, see [How does the processor compatibility mode work in a VSI?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor-compatibility-modes-vsi){: external}
+
+## Deleting a VSI
 {: #deleting-virtual-server-instance}
 {: help}
 {: support}
