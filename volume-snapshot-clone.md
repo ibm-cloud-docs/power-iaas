@@ -348,9 +348,9 @@ You cannot recover a snapshot after it is successfully deleted.
 
 You can delete a snapshot by using the following API and CLI:
 
-* **API**: [Delete a PVM instance snapshot of a cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-snapshots-delete){: external}.
+* **API**: [Delete a PVM instance snapshot of a cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-snapshots-delete).
 
-* **CLI**: [ibmcloud pi snapshot-delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshot-delete){: external}.
+* **CLI**: [ibmcloud pi snapshot delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshot-delete).
 
 You must provide values for the following parameters in the API and CLI:
 
