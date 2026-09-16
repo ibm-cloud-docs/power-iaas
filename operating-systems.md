@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-08-31"
+lastupdated: "2026-09-16"
 
 keywords: Operating systems, powerVS OS
 
@@ -109,6 +109,8 @@ For each major version of the OS that is enabled through the offering, {{site.da
 The VSIs can continue to run without any issues after the stock OS images are removed from the image catalog. However, you are advised to update the VSIs to the supported OS versions.
 {: note}
 
+
+
 ## Supported AIX, IBM i, and Linux versions for {{site.data.keyword.powerSys_notm}}
 {: #os-matrix-public-private}
 
@@ -180,6 +182,11 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 
 [^i]: IBM i 7.1 is supported on the IBM Power9 S924 and E980 models.
+
+
+
+
+
 
 ## System software maps
 {: #sw-mapping}
