@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-11"
+lastupdated: "2026-09-16"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -279,7 +279,7 @@ You can use the {{site.data.keyword.powerSys_notm}} API to enable or disable acc
 #### Enabling or disabling access to the metadata service for a new VSI by using the API
 {: #metadata-enable-new-instance-api}
 
-By default, the metadata service is disabled when you create a VSI by sending a [`POST /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-post){: external} request.
+By default, the metadata service is disabled when you create a VSI by sending a `POST` request to the [`/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-post){: external} endpoint.
 
 You can enable access to the metadata service by specifying the `metadataService` parameter and setting its `enabled` field to `true`.
 
@@ -310,9 +310,9 @@ curl -X POST "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/
       }
    }'
 ```
-{: codeblock}
+{: pre}
 
-The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a [`GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} request.
+The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a `GET` request to the [`/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} endpoint.
 
 #### Enabling or disabling access to the metadata service for an existing VSI by using the API
 {: #metadata-enable-existing-instance-api}
@@ -320,7 +320,7 @@ The response shows that the `enabled` field of the `metadataService` parameter i
 To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to the metadata service, AIX VSIs must be in the **Shutoff** state. The `forceDisable` option of the [`PUT /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-put){: external} request is not supported for AIX.
 {: requirement}
 
-By default, the metadata service is disabled on existing VSIs. To enable or disable access to the metadata service, send a [`PUT /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-put){: external} request and specify the `metadataService` parameter. To enable access to the metadata service, set the `enabled` field to `true`. To disable access, set the `enabled` field to `false`.
+By default, the metadata service is disabled on existing VSIs. To enable or disable access to the metadata service, send a `PUT` request to the [`/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-put){: external} endpoint and specify the `metadataService` parameter. To enable access to the metadata service, set the `enabled` field to `true`. To disable access, set the `enabled` field to `false`.
 
 The following example shows how to enable access to the metadata service for an existing VSI:
 
@@ -333,16 +333,16 @@ curl -X PUT "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/p
           }
       }'
 ```
-{: codeblock}
+{: pre}
 
-The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a [`GET /pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} request.
+The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a `GET` request to the [`/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} endpoint.
 
 
 
 #### Disabling auto-link by using the API
 {: #metadata-auto-link-api}
 
-To disable auto-link by using the API, set the `autolink` value for the `defaultTrustedProfile` parameter to `false`. The following example shows the `defaultTrustedProfile` parameter with the `autolink` option disabled.
+When you create a VSI with a default trusted profile, auto-link is enabled by default. To disable auto-link by using the API, set the `autolink` value for the `defaultTrustedProfile` parameter to `false`. The following example shows the `defaultTrustedProfile` parameter with the `autolink` option disabled.
 
 ```json
 "defaultTrustedProfile": {
@@ -352,21 +352,22 @@ To disable auto-link by using the API, set the `autolink` value for the `default
    }
   },
 ```
+{: codeblock}
 
-## Identity operations
+## Obtaining identity and IAM access tokens
 {: #metadata-identity-operations}
 
-You can use the metadata service to obtain an identity access token and then generate an IAM access token. You can use these tokens to access the metadata and IAM-enabled IBM Cloud APIs.
+You can use the metadata service to obtain an identity access token and generate an IAM access token. You can use these tokens to access the metadata and IAM-enabled IBM Cloud APIs.
 
 ### Identity access token
 {: #metadata-identity-token}
 
 An identity access token is a security credential that you use to access the {{site.data.keyword.powerSys_notm}} metadata and identity services. An identity access token is a signed token that contains claims based on information about the VSI.
 
-Communication between the VSI and the metadata service remains within the {{site.data.keyword.powerSys_notm}} environment. You can access the APIs only from a {{site.data.keyword.powerSys_notm}} VSIs. You cannot access the metadata and Identity APIs by using the {{site.data.keyword.powerSys_notm}} user interface or CLI.
+Communication between the VSI and the metadata service remains within the {{site.data.keyword.powerSys_notm}} environment. You can access the APIs only from {{site.data.keyword.powerSys_notm}} VSIs. You cannot access the metadata and identity APIs by using the {{site.data.keyword.powerSys_notm}} user interface or CLI.
 {: important}
 
-To obtain the identity access token, send a `PUT https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token` request to the [{{site.data.keyword.powerSys_notm}} Identity API](/docs/apis/power-cloud-identity#pvs-identity-api).
+To obtain the identity access token, send a `PUT` request to the `https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token` endpoint. For more information, see [Create an identity token](https://cloud.ibm.com/docs/apis/power-cloud-metadata-identity#put-identity-v1-token){: external}.
 
 ```sh
 curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" \
@@ -375,12 +376,12 @@ curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" \
 ```
 {: pre}
 
-In the request, you can specify an expiration time for the token. The default expiration value is `5` minutes, but you can specify any value between `5` seconds and `1` hour. The following example shows how to specify an expiration time:
+In the request, you can specify an expiration time for the token in seconds. The default expiration value is 5 minutes (300 seconds), but you can specify any value between 5 seconds and 1 hour (3600 seconds). The following example shows how to specify an expiration time:
 
 ```sh
 curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" \
 -H "Metadata-Flavor: ibm" \
--d '{"expires_in": 360}'
+-d '{"expires_in": 300}'
 ```
 {: pre}
 
@@ -398,20 +399,20 @@ The following JSON response shows an identity access token, the time when the to
 ```
 {: codeblock}
 
-You can then use the identity access token to authenticate with the metadata service and call the `metadata-instance` API. For more information, see [Retrieving metadata from a virtual server instance](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance){: external}.
+You can use the identity access token to authenticate with the metadata service and call the `metadata-instance` API. For more information, see [Retrieving metadata from a virtual server instance](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance){: external}.
 
 You can also generate an IAM token from the identity access token to call IAM-enabled services. For more information, see [Generating an IAM token from an identity access token](#metadata-iam-token-exchange).
 
 ### Generating an IAM token from an identity access token
 {: #metadata-iam-token-exchange}
 
-You can use an identity access token to generate an IAM token from a VSI that has an associated trusted profile. You can then use the generated IAM token to access IAM-enabled services, such as {{site.data.keyword.cos_full_notm}} and Cloud Database Service. The generated IAM token has a short lifetime and can be used like an API key.
+You can use an identity access token to generate an IAM token from a VSI that has an associated trusted profile. You can use the generated IAM token to access IAM-enabled services, such as {{site.data.keyword.cos_full_notm}} and Cloud Database Service. The generated IAM token has a short lifetime and can be used like an API key.
 
-Send a `POST https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/iam_tokens` request and optionally specify the trusted profile ID that is associated with the VSI. If you configured a default trusted profile for the VSI, you can omit the trusted profile parameter, and the request uses the default trusted profile ID.
+Send a `POST` request to the `https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/iam_tokens` endpoint and optionally specify the trusted profile ID that is associated with the VSI. If you configured a default trusted profile for the VSI, you can omit the trusted profile parameter, and the request uses the default trusted profile ID. For more information, see [Generate an IBM IAM access token](https://cloud.ibm.com/docs/apis/power-cloud-metadata-identity#post-identity-v1-iamtokens){: external}.
 
 The following example shows a request to generate an IAM token:
 
-```json
+```sh
 iam_token=`curl -X POST "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/iam_tokens" \
 -H "Authorization: Bearer $identity_token" \
 -H "Metadata-Flavor: ibm" \
@@ -442,16 +443,16 @@ For more information about how to use a trusted profile to call IAM-enabled serv
 
 After you enable access to the metadata service and create an identity access token, a VSI can retrieve metadata about itself.
 
-You can send a `GET https://api.metadata.power-iaas.cloud.ibm.com/metadata/v1/instance` request to retrieve detailed information about the VSI.
+You can send a `GET` request to the `https://api.metadata.power-iaas.cloud.ibm.com/metadata/v1/instance` endpoint to retrieve detailed information about the VSI.
 
 ```sh
 curl -X GET "https://api.metadata.power-iaas.cloud.ibm.com/metadata/v1/instance" \
 -H "Authorization: Bearer $identity_token" \
 -H "Metadata-Flavor: ibm"
 ```
-{: codeblock}
+{: pre}
 
-The response includes details about the VSI. For more information, see the [Retrieves information for the calling Virtual Server Instance (VSI)](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance).
+The response includes details about the VSI. For more information, see [Retrieves information for the calling Virtual Server Instance (VSI)](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance){: external}.
 
 
 
@@ -492,7 +493,7 @@ Follow these best practices to protect your VSI metadata.
 
 Use the `iptables` firewall utility on Linux to restrict access between the metadata service link-local address (trusted network) and the other network interfaces on your VSI. Define `iptables` rules on the VSI to control which traffic is allowed and which is blocked.
 
-The following example uses Linux `iptables` and its owner module to prevent the Apache Web server from accessing the metadata link-local address (169.254.169.253) based on the default Apache user ID. The example uses a deny rule to reject all metadata requests from any process that runs as the Apache user.
+The following example uses Linux `iptables` and its owner module to prevent the Apache web server from accessing the metadata link-local address (169.254.169.253) based on the default Apache user ID. The example uses a deny rule to reject all metadata requests from any process that runs as the Apache user.
 
 ```sh
 sudo iptables --append OUTPUT --proto tcp --destination 169.254.169.253 --match owner --uid-owner apache --jump REJECT
