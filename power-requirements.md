@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-09-16"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -75,4 +75,4 @@ If you have selected the configuration with 4 PDUs, you can include 6 power drop
 For more information about IBM power cords, see [Supported PDU power cord](https://www.ibm.com/docs/en/power9/0009-ESS?topic=pr-supported-pdu-power-cords){: external}.
 
 
-**Power calculators**: The [IBM Systems energy estimator](https://see.c8f8f055.public.multi-containers.ibm.com){: external} is a web-based tool for estimating power requirements for IBM systems. This tool estimates typical power requirements (watts) for a specific system configuration under normal operating conditions.
+**Power calculators**: The [IBM Systems energy estimator](https://www.ibm.com/it-infrastructure/resources/systems-environment-estimator){: external} is a web-based tool for estimating power requirements for IBM systems. This tool estimates typical power requirements (watts) for a specific system configuration under normal operating conditions.
