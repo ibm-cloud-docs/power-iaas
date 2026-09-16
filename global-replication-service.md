@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-31"
+lastupdated: "2026-09-16"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -808,7 +808,7 @@ Any attempt to change the tier of a replication-enabled volume fails, if one of 
 You can change the tier of the replication-enabled volume by using the following API and CLI commands:
 
 - API: [Perform an action on a Volume](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
-- CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
+- CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action){: external}
 
 
 
