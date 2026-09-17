@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-07-17"
+lastupdated: "2026-09-17"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -18,13 +18,13 @@ content-type: troubleshoot
 # Configuring and troubleshooting metadata service connectivity
 {: #troubleshoot-metadata-service}
 
-Learn how to configure the metadata service network interface on your virtual server instance (VSI) and troubleshoot connectivity issues.
+Learn how to configure the metadata service network interface on your virtual server instance (VSI) and troubleshoot connectivity issues on AIX, IBM i, and Linux operating systems.
 {: shortdesc}
 
-You must perform the following procedures while you are logged in to the operating system (OS) on your VSI. You can log in by using SSH or by accessing the OS through the {{site.data.keyword.powerSys_notm}} console.
+To complete the procedures in this topic, log in to the operating system (OS) of your VSI by using SSH or the {{site.data.keyword.powerSysFull}} console.
 {: requirement}
 
-The metadata service uses a link-local network with IP address 169.254.169.253 on your VSI and connects to the metadata service endpoint at 169.254.169.254. This network is system-created and must not be modified unless required to correct connectivity issues or as a cleanup activity, as described in this topic.
+The metadata service uses a link-local network with IP address `169.254.169.253` on your VSI and connects to the metadata service endpoint at `169.254.169.254`. {{site.data.keyword.powerSys_notm}} creates this network automatically. Do not modify this network configuration unless you need to resolve connectivity issues or remove residual network interfaces after disabling the metadata service, as described in this topic.
 
 
 
@@ -34,26 +34,21 @@ The metadata service uses a link-local network with IP address 169.254.169.253 o
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
 {: #reconfigure-ibmi-after-capture}
 
-Learn how to restore the metadata service network interface on an IBM i VSI after you overwrite the OS disk with a backup image.
+When you overwrite the OS disk of an IBM i VSI with a backup image, the network configuration, including the metadata service interface might be lost. Before you overwrite the disk, record the resource name and hardware address of the metadata service interface. After you overwrite the disk, reconfigure the metadata service interface by using the recorded hardware address.
 
-### Reconfiguring the metadata service interface after an OS disk overwrite
-{: #reconfigure-ibmi-after-os-or}
-
-When you overwrite the OS disk of an IBM i VSI, the network configuration, including the metadata service interface, might be lost. Before you overwrite the disk, record the resource name and hardware address of the metadata service interface. After the overwrite, reconfigure the metadata service interface by using the same hardware address.
-
-### Before overwriting your image
+### Recording the interface details before an OS disk overwrite
 {: #reconfigure-ibmi-before}
 
-To record the resource name and hardware address, complete the following steps:
+To preserve the resource name and hardware address required to restore the metadata service interface after an OS disk overwrite, complete the following steps:
 
-1. From a 5250 session, run the following command to identify the metadata service interface:
+1. From a 5250 emulator session, run the following command to identify the metadata service interface:
 
    ```text
    NETSTAT *IFC
    ```
    {: pre}
 
-2. Look for the interface with IP address `169.254.169.253`. Record the metadata service interface name (for example, `ETH01`, `ETH02`).
+2. Find the interface with the IP address `169.254.169.253` and record the associated line description name (for example, `ETH01` or `ETH02`).
 
 3. Run the following command to display the line description details. Record the hardware address from the line description details.
 
