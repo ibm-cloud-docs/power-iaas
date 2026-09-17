@@ -50,12 +50,14 @@ To preserve the resource name and hardware address required to restore the metad
 
 2. Find the interface with the IP address `169.254.169.253` and record the associated line description name (for example, `ETH01` or `ETH02`).
 
-3. Run the following command to display the line description details. Record the hardware address from the line description details.
+3. Run the following command to display the line description details:
 
    ```text
    DSPLIND LIND(ETH01)
    ```
    {: pre}
+
+   Replace `ETH01` with the line description name that you identified in step 2.
 
    Alternatively, you can use the following command:
 
