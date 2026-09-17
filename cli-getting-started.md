@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-09-11"
+lastupdated: "2026-09-17"
 
 ---
 
@@ -26,7 +26,7 @@ The IBM {{site.data.keyword.powerSys_notm}} command-line interface (CLI) provide
 * [IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1)
 * [IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem)
 
-After you switch accounts, target the workspace that is associated with the new account before you run additional commands. Most CLI commands require a targeted workspace to run.
+After you switch accounts, select the workspace that is associated with the new account before you run additional commands. Most CLI commands require an active workspace to run.
 
 
 
