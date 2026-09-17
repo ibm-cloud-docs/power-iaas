@@ -223,7 +223,7 @@ If you have a public IP address that is attached to your VPC, do not perform thi
 1. Reserve a public address range and attach it to the VPC. For instructions, see [Creating public address ranges](/docs/vpc?topic=vpc-par-creating&interface=ui){: external}.
 
     When you create the public address range, set the following values:
-    * From the **Size** list select the following value:
+    * From the **Size** list, select the following value:
 
         `/32 (1 address)`
     * Retain the default value for **Geography**, **Region**, and **Resource group**.
@@ -294,7 +294,7 @@ Do not modify the routing table that you created in [Step 4: Configure VPC routi
 Add a static route to your {{site.data.keyword.powerSys_notm}} workspace that points to your VSI. For instructions, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
 
 When you create the static route, set the following values:
-* Enter `1.2.3.4/32` IP address as **Destination**.
+* Enter `1.2.3.4/32` as the IP address in the **Destination** field.
 * Enter your VSI IP address as **Next hop**.
 * Set **Advertise** and **State** to **Enabled**.
 
