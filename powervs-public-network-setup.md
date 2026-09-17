@@ -224,7 +224,7 @@ If you have a public IP address that is attached to your VPC, do not perform thi
 
     When you create the public address range, set the following values:
     * From the **Size** list select the following value:
-        `/32 (1 address)`
+            `/32 (1 address)`
     * Retain the default value for **Geography**, **Region**, and **Resource group**.
     * Set **Bind** to on. Select your VPC to attach the public address range.
     * Select **Zone** as the same zone of the NLB that you created in [Step 2: Create a private NLB in routing mode](#create-nlb).
