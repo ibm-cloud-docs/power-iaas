@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-09-16"
+lastupdated: "2026-09-18"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -152,7 +152,7 @@ You can enable or disable the NSG feature on PER and enhanced CRN-enabled worksp
 To determine whether your {{site.data.keyword.powerSys_notm}} workspace has the prerequisites to support NSGs, run the following IBM Cloud CLI command:
 
 ```sh
-ibmcloud resource service-instance <WORKSPACE_CRN> -o json
+ibmcloud resource service-instance WORKSPACE_CRN -o json
 ```
 {: pre}
 

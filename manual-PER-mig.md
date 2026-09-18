@@ -3,7 +3,7 @@
 copyright:
   years: 2022, 2026 
 
-lastupdated: "2026-08-05"
+lastupdated: "2026-09-18"
 
 keywords: Power edge router migration, PER migration, migration, manual PER migration
 
@@ -181,7 +181,7 @@ You can update the DNS configuration in two ways:
     Run the following command:
 
     ```bash
-    ibmcloud pi netu <network_id> --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
+    ibmcloud pi subnet update SUBNET_ID --dns-servers "127.0.0.1 161.26.0.10 161.26.0.11"
     ```
     {: .codeblock}
 

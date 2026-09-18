@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-03-25"
+lastupdated: "2026-09-18"
 
 ---
 
@@ -64,7 +64,7 @@ To install, update, or view the IBM {{site.data.keyword.powerSys_notm}} CLI plug
 
    * For {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}, run the `ibmcloud pi ws ls -p` command.
 
-5. Target your service by entering `ibmcloud pi ws tg <CRN>` command:
+5. Target your service by entering `ibmcloud pi ws tg CRN` command:
    * Following is an example of the output for IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.off-prem}}:
 
     ```bash
