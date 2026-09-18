@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-18"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -39,16 +39,19 @@ When you overwrite the OS disk of an IBM i VSI with a backup image, the network 
 ### Recording the interface details before an OS disk overwrite
 {: #reconfigure-ibmi-before}
 
-To preserve the resource name and hardware address required to restore the metadata service interface after an OS disk overwrite, complete the following steps:
+To preserve the resource name and hardware address required to restore the metadata service interface after an OS disk overwrite, use one of the following methods from a 5250 emulator session:
 
-1. From a 5250 emulator session, run the following command to identify the metadata service interface:
+#### Method 1: Using the line description
+{: #reconfigure-ibmi-method1}
+
+1. Run the following command to display the TCP/IP interfaces:
 
    ```text
    NETSTAT *IFC
    ```
    {: pre}
 
-2. Find the interface with the IP address `169.254.169.253` and record the associated line description name (for example, `ETH01` or `ETH02`).
+2. Find the interface with the IP address `169.254.169.253` and record the line description name from the **Line Description** column (for example, `ETH01`).
 
 3. Run the following command to display the line description details:
 
@@ -59,26 +62,34 @@ To preserve the resource name and hardware address required to restore the metad
 
    Replace `ETH01` with the line description name that you identified in step 2.
 
-   Alternatively, you can use the following command:
+4. Record and save the following details. Use this information to reconfigure the interface after you overwrite the disk:
+
+   * Resource name (for example, `CMN05`)
+   * Hardware address (MAC address, for example, `FA163EA1B2C3`)
+
+#### Method 2: Using communication resources
+{: #reconfigure-ibmi-method2}
+
+1. Run the following command to display communication resources:
 
    ```text
    WRKHDWRSC *CMN
    ```
    {: pre}
 
-   Then select option 5 (Display details) for the Ethernet adapter.
+2. On the Work with Communication Resources screen, select option 5 (**Display details**) next to the Ethernet adapter to display the resource details.
 
-4. Record the following information:
+3. Record and save the following details. Use this information to reconfigure the interface after you overwrite the disk:
 
    * Resource name (for example, `CMN05`)
    * Hardware address (MAC address, for example, `FA163EA1B2C3`)
 
-5. Save this information to use it after the image overwrite.
-
-### After overwriting your image
+### Reconfiguring the metadata service interface after an OS disk overwrite
 {: #reconfigure-ibmi-after}
 
-To reconfigure the metadata service interface by using the information that you recorded, complete the following steps:
+After the OS disk overwrite is complete, use the resource name and hardware address that you recorded to reconfigure the metadata service interface.
+
+To reconfigure the metadata service interface, complete the following steps:
 
 1. From a 5250 session, run the following command to display the hardware resources:
 
@@ -87,16 +98,18 @@ To reconfigure the metadata service interface by using the information that you 
    ```
    {: pre}
 
+   The Work with Communication Resources screen is displayed with a list of communication hardware resources.
+
 2. Select option 5 (Display details) for each Ethernet adapter to identify which resource has the hardware address that you recorded.
 
-3. Run the following command to create a line description for the metadata service interface:
+3. Run the following command to create a line description for the metadata service interface. The following example uses `CMN05` as the resource name and `1G` as the line speed:
 
    ```text
    CRTLINETH LIND(METADATA) RSRCNAME(CMN05) LINESPEED(1G) DUPLEX(*FULL)
    ```
    {: pre}
 
-   Replace `CMN05` with the resource name that you recorded. Set the `LINESPEED` value to match your the speed of your Ethernet adapter.
+   Replace `CMN05` with the resource name that you recorded. Set the `LINESPEED` value to match the speed of your Ethernet adapter.
 
 4. Run the following command to activate the line description:
 
