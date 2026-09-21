@@ -107,7 +107,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     
 
-    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems. For Linux, an IBM-provided subscription is required. If you assign a virtual serial number (VSN) to a VSI without storage, you must assign the VSN ro the VSI before you attach the boot volume and start the VSI.
+    You can create a VSI without a boot volume for AIX, IBM i, and Linux operating systems. For Linux, an IBM-provided subscription is required. If you assign a virtual serial number (VSN) to a VSI without storage, you must assign the VSN to the VSI before you attach the boot volume and start the VSI.
     {: important}
 
     

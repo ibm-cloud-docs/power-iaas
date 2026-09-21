@@ -104,7 +104,7 @@ You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.ke
 ### Behavior of IBM i deployments on IBM Power11 servers
 {: #ibmi-power11-vsw-tier-behavior}
 
-When you create a VSI, if you select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places VSIs on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type. For more informaiton about creating a VSI, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+When you create a VSI, if you select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places VSIs on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type. For more information about creating a VSI, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 If you have a VSI that is running on an E1180 or S1122 host server, the VSI continues to run on the same host server.
 {: note}
@@ -122,7 +122,7 @@ Dynamic resizing limit (4-core cap)
     To resize an IBM i VSI beyond 4 cores, complete the following steps:
     1. Power off the VSI. For more information, see [Shut down and restart a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#shut-down-restart-vsi).
     2. Assign a virtual serial number (VSN) to the VSI. For more information, see [Assigning a VSN to an existing VSI](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#VSN-existing-VM).
-    3. Assign a compatible {{site.data.keyword.ibmi-vst}} that supports more than 4 cores to the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance). For more information about maximum cores supported by {{site.data.keyword.ibmi-vst}} see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
+    3. Assign a compatible {{site.data.keyword.ibmi-vst}} that supports more than 4 cores to the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance). For more information about maximum cores supported by {{site.data.keyword.ibmi-vst}}, see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
     4. Update the processor core count to the required size.
     5. Power on the VSI.
 
