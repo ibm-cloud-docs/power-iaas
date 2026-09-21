@@ -159,7 +159,6 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
     - Select **Linux for SAP (HANA)** in the IBM provided subscription section to use the IBM provided Linux subscription.
     - Select **Linux for SAP (HANA)** in the Client supplied subscription section to use your own license.
 
-
     To deploy an SAP certified profile from the **Standard RISE** or **Application Server** tabs, set **SAP RISE deployment** to on in the **Advanced Configurations* section. The **SAP RISE deployment** option is enabled only if you select the OS as **Linux for SAP (HANA)** and the machine type as IBM Power10 or later in the Profile section. 
 
     To deploy a VSI for SAP NetWeaver workloads without an SAP certified profile, complete the following steps:

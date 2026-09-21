@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-21"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -18,12 +18,7 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-
 
 
 {{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
@@ -31,8 +26,10 @@ subcollection: power-iaas
 
 ---
 
+## General
+{: #faq-general}
 
-## What is {{site.data.keyword.powerSysFull}} Private Cloud?
+### **What is {{site.data.keyword.powerSysFull}} Private Cloud?**
 {: #what-is-ppc}
 {: faq}
 {: support}
@@ -40,61 +37,92 @@ subcollection: power-iaas
 IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offering that includes a prescriptive set of physical infrastructure (compute, network, and storage). The infrastructure is deployed in your own data center. IBM site reliability engineers (SREs) fully maintain and operate your {{site.data.keyword.on-prem}} infrastructure and manage it through the IBM Cloud. Also, you can adjust your workloads by using pay-as-you-use billing. For more information, see [What is IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-about-power-iaas).
 
 
-## What is the difference between the {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}?
+### **What is the difference between the {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}} offerings of IBM {{site.data.keyword.powerSys_notm}}?**
 {: #private-cloud-on-cloud-diff}
 {: faq}
 
 The primary difference between the two is where the physical infrastructure resides. The {{site.data.keyword.on-prem}} infrastructure resides in your data center, while {{site.data.keyword.powerSys_notm}} infrastructure resides in the IBM data centers.
 
-## Which Power servers are supported?
+### **Which Power servers are supported?**
 {: #servers-supported}
 {: faq}
 
-[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power S1122.
+[{{site.data.keyword.off-prem}}]{: tag-blue} IBM Power S922, IBM Power E980, IBM Power S1022, IBM Power E1050, IBM Power E1080, IBM Power S1122, IBM Power E1150, and IBM Power E1180.
 
 [{{site.data.keyword.on-prem}}]{: tag-red} IBM Power S1122, IBM Power E1150, IBM Power E1180.
 
 For complete specifications, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
-
-## What versions of AIX, IBM i, and Linux&reg; are supported?
-{: #os-versions}
+### **What are the hardware specifications?**
+{: #hardware-specs}
 {: faq}
 {: support}
 
-For details about supported AIX, IBM i, and Linux operating systems on {{site.data.keyword.powerSys_notm}}, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
 
-## Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?
-{: #estimate}
+### **Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?**
+{: #multi}
 {: faq}
 
-To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for {{site.data.keyword.on-prem-fname}}, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+[{{site.data.keyword.off-prem}}]{: tag-blue}
 
-## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional compute nodes?
+The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
+
+### **Are there bare-metal options?**
+{: #bare}
+{: faq}
+
+No, the bare-metal options are not available. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
+
+### **How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?**
+{: #performance}
+{: faq}
+
+If you like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
+
+### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?**
+{: #simplified-infrastructure-selection}
+{: faq}
+{: support}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, E1180) into a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
+
+When you configure a VSI on Powewr11, you make infrastructure decisions based on operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You cannot select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
+
+Power9 and Power10 machine types continue to use the existing selection model, where you choose a specific machine type when you create a VSI.
+
+---
+
+## Private Cloud pods
+{: #faq-private-cloud-pods}
+
+### **Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional compute nodes?**
 {: #expand-pods}
 {: faq}
 
 Yes, you can add up to the maximum number of compute nodes for a specific configuration capacity. For example, you can start with 5 nodes and then add 3 more nodes.
 
-## Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional storage?
+### **Can {{site.data.keyword.on-prem-fname}} in Client location pods be expanded with additional storage?**
 {: #expand-pods-storage}
 {: faq}
 
 Yes, you can expand the pod with additional storage capacity. But you cannot add more storage controllers.
 
-## Are the {{site.data.keyword.on-prem-fname}} in Client location pods equipped with spare compute nodes for maintenance?
+### **Are the {{site.data.keyword.on-prem-fname}} in Client location pods equipped with spare compute nodes for maintenance?**
 {: #spare-compute-node}
 {: faq}
 
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
 
-## Where can I find the logs for the pod software or operator access logs?
+### **Where can I find the logs for the pod software or operator access logs?**
 {: #pod-logs}
 {: faq}
 
 As a security officer, auditor, or manager, you can use the IBM Cloud Logs service to manage general purpose application logs, platform logs, or structured audit events. IBM Cloud Logs can be used with logs from both IBM Cloud services and customer applications. For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started){: external}
 
-## Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?
+### **Will the pod disconnect from the IBM Cloud if there is an unplanned network outage?**
 {: #pod-disconnect-unplanned-nw-mcp}
 {: faq}
 
@@ -104,9 +132,20 @@ See Table 1 for the implications of a pod that is running in a disconnected mode
 
 {{_include-segments/network-outage-impact-table.md}}
 
+---
+
+## Operating systems and images
+{: #faq-os-images}
 
 
-## Can I use my own AIX, IBM i, or Linux  image?
+### **What versions of AIX, IBM i, and Linux&reg; are supported?**
+{: #os-versions}
+{: faq}
+{: support}
+
+For details about supported AIX, IBM i, and Linux operating systems on {{site.data.keyword.powerSys_notm}}, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+
+### **Can I use my own AIX, IBM i, or Linux  image?**
 {: #image}
 {: faq}
 {: support}
@@ -117,34 +156,56 @@ Yes. This feature is known as **bring your own image**. For more information, se
 
 
 
-## What versions of stock images are available?
+### **What versions of stock images are available?**
 {: #stock-images}
 {: faq}
 {: support}
 
 For each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for {{site.data.keyword.powerSys_notm}} environment.
 
-## When are stock images removed from the catalog?
+### **When are stock images removed from the catalog?**
 {: #remove-stock-images}
 {: faq}
 {: support}
 
 Any unsupported and older stock images are periodically removed from the offering. You are notified three weeks before the images are removed.
 
-## What happens to virtual machines deployed by using stock images that are removed?
+### **What happens to virtual machines deployed by using stock images that are removed?**
 {: #vm-stock-images}
 {: faq}
 {: support}
 
-If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor’s guidelines specific to your operating system.
+If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor's guidelines specific to your operating system.
 
-## What formats can I use to upload a custom image?
+### **What formats can I use to upload a custom image?**
 {: #custom-image}
 {: faq}
 
 Currently, you can import a custom image in the following formats: _.ova_, _.ova.gz_, _.tar_, _.tar.gz_ and _.tgz_.
 
-## What storage types are available in the storage area network (SAN)?
+### **Why can't I see the storage pool and tier of my boot images?**
+{: #stock-image-copy-improve}
+{: faq}
+
+IBM improved the performance of copying a stock image into customers' accounts. As a result of this new feature, the newly copied stock image acts like an image reference, where volumes are not accessible to the user. The improved process now offers:
+1.  Faster copy of stock image to your private project.
+2.  The stock image cannot be exported. One can do VM capture and export on a deployed VM that uses the stock image.
+3.  Storage pool and tier of a stock image shows "Empty" (API) or "Any" (UI) as VM can be deployed to any tier or pool by using the stock image.
+
+### **How can I share images across IBM Cloud accounts?**
+{: #shared-image}
+{: faq}
+
+In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
+
+---
+
+## Storage
+{: #faq-storage}
+
+### **What storage types are available in the storage area network (SAN)?**
 {: #storage-faq}
 {: faq}
 {: support}
@@ -159,13 +220,115 @@ The following tiers are supported:
 
 If you find the storage tiers are over or under-provisioned, you can change the storage tier of an existing volume. For more information, see [Storage tiers](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#storage-tiers-spec-private-cloud).
 
-## How do I extend my AIX rootvg?
+### **How do I extend my AIX rootvg?**
 {: #rootvg}
 {: faq}
 
 By default, the system deploys 20 GBs for the AIX _rootvg_. You can extend the AIX _rootvg_ by using the [extendvg](https://www.ibm.com/support/knowledgecenter/ssw_aix_72/e_commands/extendvg.html){: external} command to add a physical volume.
 
-## What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?
+### **How to set a PVM instance to allow attaching mixed storage?**
+{: #mixed_storage}
+{: faq}
+
+You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put).
+
+### **Can you tell me more about the snapshotting, cloning, and restoring capabilities?**
+{: #snapshot}
+{: faq}
+
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+
+### **What are the key differences between a snapshot and a clone?**
+{: #snap-vs-clone}
+{: faq}
+
+The key differences are as follows:
+
+| Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
+| ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Definition       | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts. |
+| Primary function | Revert or restore the source disks to a desired state                                                           | Create a complete volume clone                                                                                               |
+| Ease of creation | Easy and quick process                                                                                          | Three-step process and takes a long time                                                                                     |
+| Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the GRS costs                                                                                     |
+{: caption="Differences between a snapshot and clone" caption-side="bottom"}
+
+See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
+
+
+
+### **Are there any initial snapshot requirements in terms of storage?**
+{: #snap-storage-req}
+{: faq}
+
+None. The storage is allocated on demand.
+
+### **Does the snapshot and volume clone support any safeguard policy?**
+{: #snap-clone-safeguard}
+{: faq}
+
+None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
+
+### **Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?**
+{: #poweha-toolkit}
+{: faq}
+
+The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell, it does the following tasks:
+- Automates the memory flush
+- Create the volumes-clone
+- Attach the clones to a host
+- Start the host
+- Kick-off the backups
+- Move the BRMS data back to the production VM and then shut down the backup VM
+- Remove the cloned volumes
+
+Using the PowerHA toolkit, you can create an intermediate snap-shot and a volumes-clone before the process enters the long-running volume detach or attach phase. You can pause the process immediately before the volumes are attached.
+
+### **How do I convert existing volumes to replication-enabled volumes?**
+{: #convert-to-replication-vol}
+{: faq}
+
+
+
+You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
+
+### **How can I check whether volume is already replication enabled?**
+{: #check-for-replication-vol}
+{: faq}
+
+
+
+You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
+
+### **How can I check whether a volume is a primary or an auxiliary volume?**
+{: #check-for-primary-vol}
+{: faq}
+
+
+
+
+Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
+
+
+
+### **Can I update the storage tiers for the Global Replication Services (GRS) enabled volumes?**
+{: #grs-tier}
+{: faq}
+
+You cannot update the storage tiers for the GRS enabled volumes. To change the storage tier type, complete the following steps:
+
+1. Remove the volume from the volume group and disable GRS by completing the steps provided in the [Disabling GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs) topic.
+2. Update the volume to the required storage tier type.
+3. Enable the replication on the volume by setting the `replicationEnabled` flag as `True`.
+4. Add the replication-enabled volume back to the volume group.
+
+
+
+---
+
+## Processors and VSIs
+{: #faq-processors-vsi}
+
+### **What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?**
 {: #processor}
 {: faq}
 
@@ -203,20 +366,23 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 
 
 
-
-## How does my current environment compare to what's available through the {{site.data.keyword.powerSys_notm}}?
-{: #performance}
+### **What does it mean to set an affinity or anti-affinity rule?**
+{: #affinity}
 {: faq}
 
-If you like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
+You can apply affinity and anti-affinity policies to both VMs and volumes.
 
-## How do I migrate my VSI from one data center to another (WDC04 to DAL13)?
-{: #vm-migration}
-{: faq}
+**VM affinity and anti-affinity policy** allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-To migrate your VSI from one data center to another, you must capture and export your VSI to Cloud Object Storage. After you successfully capture and export your VSI, copy it to the Cloud Object Storage in the destination region, then do an import followed by a deployment.
+Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
-## What does VSI pinning do?
+The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
+
+- If an additional storage provider is not available to fulfill the requested policy, you might receive an error. The error indicates the inability to locate a storage provider to create a volume by using the requested volume affinity policy.
+
+- If additional storage providers exist but the storage providers do not have sufficient space to fulfill the requested policy, you might receive an error. The error indicates the inability to locate a storage provider with enough free capacity to satisfy the requested volume size.
+
+### **What does VSI pinning do?**
 {: #pinning}
 {: faq}
 
@@ -240,257 +406,21 @@ When you change the pin policy of a VSI from **Hard** to **Soft** or disable the
 
 
 
-## What does it mean to set an affinity or anti-affinity rule?
-{: #affinity}
+### **How do I migrate my VSI from one data center to another (WDC04 to DAL13)?**
+{: #vm-migration}
 {: faq}
 
-You can apply affinity and anti-affinity policies to both VMs and volumes.
+To migrate your VSI from one data center to another, you must capture and export your VSI to Cloud Object Storage. After you successfully capture and export your VSI, copy it to the Cloud Object Storage in the destination region, then do an import followed by a deployment.
 
-**VM affinity and anti-affinity policy** allow you to spread a group of VMs across different hosts or keep them on a specific host.
 
-Volume affinity and anti-affinity policy allow you to control the placement of a new volume based on an existing PVM instance (VM) or volume. When you set an affinity policy for a new storage volume, the volume is created within the same storage provider as an existing PVM instance or volume. With an anti-affinity policy, the new volume is created in a different storage provider other than the storage provider the existing PVM instance or volume is located in.
 
-The use of volume affinity policy (affinity or anti-affinity) requires the availability of multiple storage providers. You might experience the following errors when you use a volume affinity policy:
-
-- If an additional storage provider is not available to fulfill the requested policy, you might receive an error. The error indicates the inability to locate a storage provider to create a volume by using the requested volume affinity policy.
-
-- If additional storage providers exist but the storage providers do not have sufficient space to fulfill the requested policy, you might receive an error. The error indicates the inability to locate a storage provider with enough free capacity to satisfy the requested volume size.
-
-## How to set a PVM instance to allow attaching mixed storage?
-{: #mixed_storage}
-{: faq}
-
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put).
-
-## Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?
-{: #licensing-os}
-{: faq}
-
-No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux operating system.
-
-## How does licensing work for the AIX, IBM i, or Linux operating systems?
-{: #os-support}
-{: faq}
-
-The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
-
-You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
-
-{{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
-
-For more information about supported versions of OS, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
-
-## How does third-party licensing work?
-{: #third-party}
-{: faq}
-
-Clients are responsible for third-party licensing.
-
-## What are the hardware specifications?
-{: #hardware-specs}
-{: faq}
-{: support}
-
-For more information, see [Hardware specifications for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#hardware-specifications-on-cloud) and [Hardware and software specifications for {{site.data.keyword.on-prem-fname}}](/docs/power-iaas?topic=power-iaas-private-cloud-architecture#hardware-software-specs-private-cloud).
-
-## Do {{site.data.keyword.powerSys_notm}} run in a multi-tenant environment?
-{: #multi}
-{: faq}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-The {{site.data.keyword.powerSys_notm}} runs in a multi-tenant environment. If you have signed up for a dedicated host, you can get single-tenant capabilities.
-
-## Are there bare-metal options?
-{: #bare}
-{: faq}
-
-No, the bare-metal options are not available. The {{site.data.keyword.powerSys_notm}} offering focuses on virtual instances.
-
-## Can you tell me more about the snapshotting, cloning, and restoring capabilities?
-{: #snapshot}
-{: faq}
-
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
-
-## What are the key differences between a snapshot and a clone?
-{: #snap-vs-clone}
-{: faq}
-
-The key differences are as follows:
-
-| Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
-| ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Definition       | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts. |
-| Primary function | Revert or restore the source disks to a desired state                                                           | Create a complete volume clone                                                                                               |
-| Ease of creation | Easy and quick process                                                                                          | Three-step process and takes a long time                                                                                     |
-| Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the GRS costs                                                                                     |
-{: caption="Differences between a snapshot and clone" caption-side="bottom"}
-
-See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
-
-
-
-## Are there any initial snapshot requirements in terms of storage?
-{: #snap-storage-req}
-{: faq}
-
-None. The storage is allocated on demand.
-
-## Does the snapshot and volume clone support any safeguard policy?
-{: #snap-clone-safeguard}
-{: faq}
-
-None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
-
-## Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?
-{: #poweha-toolkit}
-{: faq}
-
-The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell, it does the following tasks:
-- Automates the memory flush
-- Create the volumes-clone
-- Attach the clones to a host
-- Start the host
-- Kick-off the backups
-- Move the BRMS data back to the production VM and then shut down the backup VM
-- Remove the cloned volumes
-
-Using the PowerHA toolkit, you can create an intermediate snap-shot and a volumes-clone before the process enters the long-running volume detach or attach phase. You can pause the process immediately before the volumes are attached.
-
-## How do you set up private networks between Intel&reg; Virtual Servers (x86) and {{site.data.keyword.powerSys_notm}}?
-{: #connecting}
-{: faq}
-{: support}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
-
-## How do you set up customer site access to a private network by using VPN?
-{: #configuring}
-{: faq}
-{: support}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
-For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
-
-## What firewall options are there around VPN connectivity?
-{: #firewall}
-{: faq}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-You must set your own firewall in your IBM Cloud account.
-
-## How do you connect a server instance between two data centers (DAL13 to WDC04)?
-{: #gts-cloud-connect}
-{: faq}
-{: support}
-
-You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world.
-
-IBM Cloud Connect is only available to IBM clients within the US.
-{: important}
-
-## How is network bandwidth billed?
-{: #billing}
-{: faq}
-{: support}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
-
-**IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
-
-## What monitoring services are available?
-{: #monitoring}
-{: faq}
-
-
-
-
-
-
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-
-
-IBM provides performance monitoring and status monitoring services for {{site.data.keyword.powerSys_notm}} only if the {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system. The IBM Cloud Monitoring system is a cloud-native and container-intelligence management system. You can get the visibility to the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. A {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system when the **Monitoring** option is set to for the workspace. By default, the **Monitoring** option is set to on when you create an {{site.data.keyword.off-prem-fname}} workspace. You can set the **Monitoring** option to on or off for an existing workspace on the Workspace details page. For more information, see [Monitoring a workspace](/docs/power-iaas?topic=power-iaas-integrate-scc#cloud-monitoring).
-
-
-
-
-
-For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
-
-
-
-
-
-
-
-## What performance and capacity planning services do you provide for IBM i?
-{: #ibmi-performance}
-{: faq}
-
-IBM uses the same tools that are on a private cloud system.
-
-## IBM i and solution certification
-{: #ibmi-certification}
-{: faq}
-
-You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
-
-## How to delete a workspace?
-{: #delete-service}
-{: faq}
-
-
-
-
-
-To delete your workspace and its resources from IBM {{site.data.keyword.powerSys_notm}}, complete the following steps:
-
-1. Log in to [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials. IBM Cloud Dashboard screen is displayed.
-2. Type **{{site.data.keyword.powerSys_notm}}** in the search field of the IBM Cloud Dashboard to view the Catalog Results.
-3. Select **{{site.data.keyword.powerSys_notm}}** from the Catalog Results. {{site.data.keyword.powerSys_notm}} window is displayed.
-4. Click **Workspaces** on the left navigation pane of the **{{site.data.keyword.powerSys_notm}}** window. A list of workspaces that are available in your account is displayed.
-5. Click the overflow menu of the workspace that must be deleted to view the delete option.
-6. Click **Delete** from the overflow menu. **Delete workspace** pop-up window with a confirmation message for deleting is displayed.
-7. Type the workspace name in the text field provided to confirm the deletion.
-8. Click **Delete**.
-
-You must first delete the resources of the workspace to increase the success of the workspace deletion.
-{: note}
-
-
-
-
-## How do I delete a single virtual server instance?
-{: #delete-service-instance}
-{: faq}
-
-Deleting a virtual server instance is a manual process. To delete all VSIs, delete the workspace or delete a subset of the virtual server instance.
-
-- Delete a single virtual server instance from the Virtual server instances page.
-Click the overflow menu (icon with 3 vertical dots) on the far right of each virtual server instance entry on the table. From the pull-down menu, click **Delete** to open the deleted confirmation modal. Click **Delete instance** to initiate the deletion request. This action cannot be undone.
-
-- Delete a single virtual server instance from the details page.
-On the Virtual server instances page, click the virtual server instance name present on the table, and go to the virtual server instance details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
-
-
-
-
-
-
-## How does the processor compatibility mode work in a VSI?
+### **How does the processor compatibility mode work in a VSI?**
 {: #processor-compatibility-modes-vsi}
 {: faq}
 
 
 
-You can set the preferred processor compatibility mode for a Virtual server instance (VSI) during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
+You can set the preferred processor compatibility mode for a VSI during its creation by using the GUI, CLI, API, or Terraform. For VSIs that are already deployed, you can change the preferred processor compatibility mode by modifying the VSI settings.
 
 
 
@@ -521,27 +451,149 @@ For more information about how to change the preferred processor compatibility m
 
 
 
-## How do I open a support ticket for the {{site.data.keyword.powerSys_notm}} workspace?
-{: #support-ticket}
+### **How can I check the serial number of my VSI?**
+{: #check-serial-no}
 {: faq}
 
-To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+The serial number is available after you deploy your VSI and you can choose to display the serial number system value.
 
-## What are the supported databases that I can run for SAP on {{site.data.keyword.powerSys_notm}}?
-{: #support-databases}
+
+
+### **How to delete a workspace?**
+{: #delete-service}
 {: faq}
 
-On an AIX VM, the following databases are supported:
-- IBM Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
-- Oracle Database version 12.1.0.2, or later
-- SAP Adaptive Server Enterprise version 16.0 SP03, or later
 
-On a Linux VM, the following database is supported:
-- SAP HANA Platform 2.0 SPS 04, or later
 
-You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
-## How can I get the WebSphere Application Server that is included with the **Web Enablement for i** packages?
+
+To delete your workspace and its resources from IBM {{site.data.keyword.powerSys_notm}}, complete the following steps:
+
+1. Log in to [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your credentials. IBM Cloud Dashboard screen is displayed.
+2. Type **{{site.data.keyword.powerSys_notm}}** in the search field of the IBM Cloud Dashboard to view the Catalog Results.
+3. Select **{{site.data.keyword.powerSys_notm}}** from the Catalog Results. {{site.data.keyword.powerSys_notm}} window is displayed.
+4. Click **Workspaces** on the left navigation pane of the **{{site.data.keyword.powerSys_notm}}** window. A list of workspaces that are available in your account is displayed.
+5. Click the overflow menu of the workspace that must be deleted to view the delete option.
+6. Click **Delete** from the overflow menu. **Delete workspace** pop-up window with a confirmation message for deleting is displayed.
+7. Type the workspace name in the text field provided to confirm the deletion.
+8. Click **Delete**.
+
+You must first delete the resources of the workspace to increase the success of the workspace deletion.
+{: note}
+
+
+
+
+### **How do I delete a single VSI?**
+{: #delete-service-instance}
+{: faq}
+
+Deleting a VSI is a manual process. To delete all VSIs, delete the workspace or delete a subset of the VSI.
+
+- Delete a single VSI from the Virtual server instances page.
+   Click the overflow menu (icon with 3 vertical dots) on the far right of each VSI entry on the table. From the pull-down menu, click **Delete** to open the deleted confirmation modal. Click **Delete instance** to initiate the deletion request. This action cannot be undone.
+
+- Delete a single VSI from the details page.
+    On the Virtual server instances page, click the VSI name present on the table, and go to the VSI details page. Find and click the trash icon on the upper right of the screen. Confirm the request by clicking **Delete instance**. This action cannot be undone.
+
+
+
+
+
+### **Can I add a user interface to an existing virtual machine?**
+{: #ui-vm}
+{: faq}
+
+Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the required adapter settings.
+
+
+
+### **What should I do if I do not see the latest information in the UI?**
+{: #ui-not-updated}
+{: faq}
+
+Consider the following if you do not see an update in the User Interface(UI):
+
+1. {{site.data.keyword.powerSys_notm}} uses a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
+2. In some scenarios out-dated information might be shown while the cache is updated, for approximately four minutes.
+3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
+4. When the DC has a heavy amount of traffic, and the cache is not refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI might display an error message. A subsequent page refresh retrieves and displays the updated information.
+
+---
+
+## Pricing and cost estimation
+{: #faq-pricing}
+
+### **Where can I find cost estimates for {{site.data.keyword.powerSys_notm}} infrastructure?**
+{: #estimate}
+{: faq}
+
+To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate cost](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate). For other pricing-related questions for {{site.data.keyword.on-prem-fname}}, see [Pricing FAQs](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#faq).
+
+### **How is network bandwidth billed?**
+{: #billing}
+{: faq}
+{: support}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
+
+**IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
+
+### [con-p11-added]{: tag-purple}**How does pricing work for Power11 with simplified infrastructure selection?**
+{: #power11-pricing}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require less than 109 cores or 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require more than 109 cores or 7,840 GiB of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they need additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+
+### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
+{: #power11-larger-system-pricing}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Pricing is based on the resources that you request while creating a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require less than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+
+### [con-p11-added]{: tag-purple}**How do large core and memory pricing apply with simplified infrastructure selection?**
+{: #power11-large-core-memory-pricing}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Power11 workloads are billed by using the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, {{site.data.keyword.powerSys_notm}} automatically applies large core pricing, large memory pricing, or both. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
+
+---
+
+## Licensing
+{: #faq-licensing}
+
+### **Does IBM provide maintenance for the AIX, IBM i, or Linux operating systems?**
+{: #licensing-os}
+{: faq}
+
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux operating system.
+
+### **How does licensing work for the AIX, IBM i, or Linux operating systems?**
+{: #os-support}
+{: faq}
+
+The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
+
+You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+{{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
+
+For more information about supported versions of OS, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+
+### **How does third-party licensing work?**
+{: #third-party}
+{: faq}
+
+Clients are responsible for third-party licensing.
+
+### **How can I get the WebSphere Application Server that is included with the **Web Enablement for i** packages?**
 {: #web-enablement-for-ibmi}
 {: faq}
 
@@ -558,21 +610,92 @@ If you have an IBM i VM instance with the licensed program bundle in the {{site.
     **Web Enablement for i (5722-WE2)** - WebSphere Express V8.5.5
     **Web Enablement for i (5733-WE3)** - WebSphere V9
 
-## How do I run Red Hat OpenShift Container Platform (OCP) on {{site.data.keyword.powerSys_notm}}?
-{: #ocp_on_powervs}
+### **What are the supported databases that I can run for SAP on {{site.data.keyword.powerSys_notm}}?**
+{: #support-databases}
 {: faq}
 
-You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM {{site.data.keyword.powerSys_notm}}](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+On an AIX VM, the following databases are supported:
+- IBM Db2 for LUW (Linux, UNIX, and Windows) version 10.5, or later
+- Oracle Database version 12.1.0.2, or later
+- SAP Adaptive Server Enterprise version 16.0 SP03, or later
 
+On a Linux VM, the following database is supported:
+- SAP HANA Platform 2.0 SPS 04, or later
 
-## What is the network latency over Direct Link?
+You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
+
+### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection handle IBM i workloads that require the P30 software tier?**
+{: #power11-p30-software-tier}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+{{site.data.keyword.powerSys_notm}} places IBM i workloads that require the P30 software tier on Power11 infrastructure that supports the P30 tier. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](#simplified-infrastructure-selection).
+
+You can specify the {{site.data.keyword.ibmi-vst}} while configuring a VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+
+### [con-p11-added]{: tag-purple}**What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when deploying a VSI on Power11?**
+{: #power11-default-software-tier}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+If you do not specify an {{site.data.keyword.ibmi-vst}} while configuring a VSI on Power11, {{site.data.keyword.powerSys_notm}} applies the default tier based on your workload requirements. Specify an {{site.data.keyword.ibmi-vst}} if your license or workload requires a specific tier.
+
+### **Where can I find IBM i solution certification and listing information?**
+{: #ibmi-certification}
+{: faq}
+
+You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
+
+---
+
+## Networking
+{: #faq-networking}
+
+### **How do you set up private networks between Intel&reg; Virtual Servers (x86) and {{site.data.keyword.powerSys_notm}}?**
+{: #connecting}
+{: faq}
+{: support}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+See the tutorial on [IBM {{site.data.keyword.powerSys_notm}} integration with x86-based workloads](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_and_x86_Integration_Tutorial_v1.pdf).
+
+### **How do you set up customer site access to a private network by using VPN?**
+{: #configuring}
+{: faq}
+{: support}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+For a complete tutorial about site-to-site Virtual Private Network (VPN) connectivity from a private cloud environment to {{site.data.keyword.powerSys_notm}}, see [IBM {{site.data.keyword.powerSys_notm}} Virtual Private Network Connectivity](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_VPN_Tutorial_v1.pdf){: external}.
+For more information on VPN, see [Managing VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections).
+
+### **What firewall options are there around VPN connectivity?**
+{: #firewall}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+You must set your own firewall in your IBM Cloud account.
+
+### **How do you connect a server instance between two data centers (DAL13 to WDC04)?**
+{: #gts-cloud-connect}
+{: faq}
+{: support}
+
+You can use IBM Cloud Connect to connect two data centers. IBM Cloud Connect is a software-defined network interconnect service that brings secure connectivity to client locations around the world.
+
+IBM Cloud Connect is only available to IBM clients within the US.
+{: important}
+
+### **What is the network latency over Direct Link?**
 {: #network_latency}
 {: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
 
-## What must be the network latency between the data center and the corresponding IBM Cloud region?
+### **What must be the network latency between the data center and the corresponding IBM Cloud region?**
 {: #network_latency-private-cloud}
 {: faq}
 
@@ -587,95 +710,13 @@ Network latency over Direct link is less than 1 millisecond in every location. T
 
 
 
-
-## Are we notified about any planned maintenance activities?
-{: #planned_maintenance_activity}
-{: faq}
-
-For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys_notm}} operations team sends you notifications at least 7 days in advance. Watch the notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
-
-## How do I convert existing volumes to replication-enabled volumes?
-{: #convert-to-replication-vol}
-{: faq}
-
-
-
-You can retype the volume to toggle the `replicationEnable` flag of the volume by using [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post) request. This is possible only when the volume pool of existing volumes supports replication.
-
-## How can I check whether volume is already replication enabled?
-{: #check-for-replication-vol}
-{: faq}
-
-
-
-You need to check the `replicationEnabled` attribute of the volume. A volume is replicationEnabled when it is true.
-
-## How can I check whether a volume is a primary or an auxiliary volume?
-{: #check-for-primary-vol}
-{: faq}
-
-
-
-
-Volume is an auxiliary when `isAuxiliary` field of volume is true. When `replicationEnabled` is true and `isAuxiliary` is false then the volume is a primary volume.
-
-
-
-## Can I update the storage tiers for the Global Replication Services (GRS) enabled volumes?
-{: #grs-tier}
-{: faq}
-
-You cannot update the storage tiers for the GRS enabled volumes. To change the storage tier type, complete the following steps:
-
-1. Remove the volume from the volume group and disable GRS by completing the steps provided in the [Disabling GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#disable-grs) topic.
-2. Update the volume to the required storage tier type.
-3. Enable the replication on the volume by setting the `replicationEnabled` flag as `True`.
-4. Add the replication-enabled volume back to the volume group.
-
-
-
-## How can I check the serial number of my virtual server instance?
-{: #check-serial-no}
-{: faq}
-
-The serial number is available after you deploy your virtual server instance and you can choose to display the serial number system value.
-
-
-
-## What should I do if I do not see the latest information in the UI?
-{: #ui-not-updated}
-{: faq}
-
-Consider the following if you do not see an update in the User Interface(UI):
-
-1. {{site.data.keyword.powerSys_notm}} uses a new caching mechanism for some resources to ensure that UI refresh operations complete in a timely manner.
-2. In some scenarios out-dated information might be shown while the cache is updated, for approximately four minutes.
-3. You can refresh the page to trigger an update to the cached data, eventually leading to the updated information's display.
-4. When the DC has a heavy amount of traffic, and the cache is not refreshed within the last four minutes, {{site.data.keyword.powerSys_notm}} UI might display an error message. A subsequent page refresh retrieves and displays the updated information.
-
-## Why can’t I see the storage pool and tier of my boot images?
-{: #stock-image-copy-improve}
-{: faq}
-
-IBM improved the performance of copying a stock image into customers' accounts. As a result of this new feature, the newly copied stock image acts like an image reference, where volumes are not accessible to the user. The improved process now offers:
-1.  Faster copy of stock image to your private project.
-2.  The stock image cannot be exported. One can do VM capture and export on a deployed VM that uses the stock image.
-3.  Storage pool and tier of a stock image shows "Empty" (API) or "Any" (UI) as VM can be deployed to any tier or pool by using the stock image.
-
-## Can I select a specific resource group when I create a cloud connection?
-{: #cc-res-group}
-{: faq}
-
-[{{site.data.keyword.off-prem}}]{: tag-blue}
-No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
-
-## What is the Maximum Transmission Unit (MTU) capacity that is supported in {{site.data.keyword.powerSys_notm}} networks?
+### **What is the Maximum Transmission Unit (MTU) capacity that is supported in {{site.data.keyword.powerSys_notm}} networks?**
 {: #mtu-max}
 {: faq}
 
 The {{site.data.keyword.powerSys_notm}} supports an MTU capacity of 1476 bytes for the public network interfaces and for the private network interfaces that are attached to a {{site.data.keyword.powerSys_notm}} VPN.
 
-## Can I automate the Maximum Transmission Unit (MTU) configuration?
+### **Can I automate the Maximum Transmission Unit (MTU) configuration?**
 {: #mtu-config}
 {: faq}
 
@@ -689,32 +730,76 @@ You can customize the cloud-init configurations only through the {{site.data.key
 
 [{{site.data.keyword.on-prem}}]{: tag-red} The automation of MTU is not supported. The admin must update the MTU value on the virtual machine manually.
 
-## Can I add a user interface to an existing virtual machine?
-{: #ui-vm}
+### **Can I select a specific resource group when I create a cloud connection?**
+{: #cc-res-group}
 {: faq}
 
-Yes, you can add a user interface to an existing virtual machine by performing Operation System administration steps to configure the required adapter settings.
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+No. When you create a cloud connection by using {{site.data.keyword.powerSys_notm}}, the cloud connection is always created in the default resource group even if you choose a specific resource group.
+
+---
+
+## Monitoring and performance
+{: #faq-monitoring}
+
+### **What monitoring services are available?**
+{: #monitoring}
+{: faq}
 
 
 
 
 
 
-## How can I search for {{site.data.keyword.powerSys_notm}} resources using the assigned user tags?
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+IBM provides performance monitoring and status monitoring services for {{site.data.keyword.powerSys_notm}} only if the {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system. The IBM Cloud Monitoring system is a cloud-native and container-intelligence management system. You can get the visibility to the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. A {{site.data.keyword.powerSys_notm}} workspace is registered as an observability instance on the IBM Cloud Monitoring system when the **Monitoring** option is set to for the workspace. By default, the **Monitoring** option is set to on when you create an {{site.data.keyword.off-prem-fname}} workspace. You can set the **Monitoring** option to on or off for an existing workspace on the Workspace details page. For more information, see [Monitoring a workspace](/docs/power-iaas?topic=power-iaas-integrate-scc#cloud-monitoring).
+
+
+
+
+
+For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+
+
+
+
+### **What performance and capacity planning services do you provide for IBM i?**
+{: #ibmi-performance}
+{: faq}
+
+IBM uses the same tools that are on a private cloud system.
+
+### **How do I run Red Hat OpenShift Container Platform (OCP) on {{site.data.keyword.powerSys_notm}}?**
+{: #ocp_on_powervs}
+{: faq}
+
+You can find a complete tutorial at the IBM Developer site: [Deploying Red Hat OpenShift Container Platform 4.x on IBM {{site.data.keyword.powerSys_notm}}](https://developer.ibm.com/series/deploy-ocp-cloud-paks-power-virtual-server/){: external}.
+
+---
+
+## Maintenance and support
+{: #faq-maintenance-support}
+
+### **Are we notified about any planned maintenance activities?**
+{: #planned_maintenance_activity}
+{: faq}
+
+For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys_notm}} operations team sends you notifications at least 7 days in advance. Watch the notifications space in the IBM Cloud dashboard for these alerts. You can receive a copy of these notifications directly in your inbox if your email is subscribed for notifications.
+
+### **How do I open a support ticket for the {{site.data.keyword.powerSys_notm}} workspace?**
+{: #support-ticket}
+{: faq}
+
+To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+
+
+
+### **How can I search for {{site.data.keyword.powerSys_notm}} resources using the assigned user tags?**
 {: #search-user-tags}
 {: faq}
 
 
 To view or search for resources that are provisioned in {{site.data.keyword.powerSys_notm}} by using the assigned `user tags`, see [Searching for Resources](/docs/account?topic=account-manage_resource&interface=cli#searching-for-resources). Note that the `user tags` are not included in the response for GET API and CLI requests.
-
-
-
-
-
-
-
-## How can I share images across IBM Cloud accounts?
-{: #shared-image}
-{: faq}
-
-In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
