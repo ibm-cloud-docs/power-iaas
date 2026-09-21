@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-09-17"
+lastupdated: "2026-09-21"
 
 ---
 
@@ -18,7 +18,38 @@ This change log lists the latest changes, improvements, and updates for the {{si
 
 
 
+## September 2026
+{: #sep-2026}
 
+### CLI v1.11.0
+{: #cli-v1.11.0}
+
+The CLI plug-in version 1.11.0 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+New commands
+:   The following CLI commands are added for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}:
+
+    - [ibmcloud pi workspace get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get): You can use this command to get the details of a private workspace.
+
+    - [ibmcloud pi network-address-group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-address-group): You can use this command to create, delete, get, or list a network address group. You can also add, remove, or update members of a network address group.
+
+    - [ibmcloud pi network-security-group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-security-group): You can use this command to create, delete, get, or list a network security group. You can also add a member, move a member, remove a member, add a rule, remove a rule, and update a network security group.
+
+    - [ibmcloud pi network-interface](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-interface): You can use this command to create, delete, get, list, and update a network interface.
+
+New options
+:   The following options are added to the existing CLI command:
+
+    - Aliased the `--metadata-service-force` option to the `--metadata-service-force-disable` option in the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to disable the metadata service while the virtual server instance (VSI) is active. The `--metadata-service-force` option is deprecated.
+
+    - The `--metadata-service-force-enable` option is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to enable the metadata service while the VSI is active.
+
+Other enhancements
+:   The following enhancements are included in this release:
+
+    - Changed system types `s1122`, `e1150`, and `e1180` to `Power11`.
+
+    - Removed the deprecated `ibmcloud pi snapshot` set of commands. Use the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) set of commands instead.
 
 ## June 2026
 {: #June-2026}

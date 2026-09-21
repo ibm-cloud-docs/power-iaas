@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-08-12"
+lastupdated: "2026-09-21"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -33,6 +33,9 @@ subcollection: power-iaas
 {: shortdesc}
 
 On IBM Power10 and later systems, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the capacity of the VSI, but you can select any physical system that supports the assigned tier. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI but not its hardware compatibility.
+
+IBM i is not supported on IBM E1050 and E1150 system types.
+{: note}
 
 The {{site.data.keyword.ibmi-vst}} determines the pricing tier for the IBM i OS and Licensed Program Products (LPPs). The tier also defines the limits for the following resources:
 - Maximum number of virtual processors
@@ -88,29 +91,43 @@ The following table lists the maximum number of virtual processors and memory fo
 
 
 
-
-
-You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.keyword.powerSys_notm}} system types. The following table lists the {{site.data.keyword.ibmi-vst}}s that are compatible with each system type.
+You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.keyword.powerSys_notm}} system types. The available software tiers vary depending on the current host capacity. The following table lists the {{site.data.keyword.ibmi-vst}}s that are compatible with each system type.
 
 | System types | Supported IBM i software tiers |     |     |     |
 | ------------ | ------------------------------ | --- | --- | --- |
 |              | P05                            | P10 | P20 | P30 |
 | S1022        | Yes                            | Yes | Yes | No  |
-| S1122        | Yes                            | Yes | Yes | No  |
 | E1080        | No                             | Yes | Yes | Yes |
-| E1180        | No                             | Yes | Yes | Yes |
+| Power11      | Yes                            | Yes | Yes | Yes |
 {: caption="Supported {{site.data.keyword.ibmi-vst}}s on {{site.data.keyword.powerSys_notm}}s" caption-side="bottom"}
 
+### Behavior of IBM i deployments on IBM Power11 servers
+{: #ibmi-power11-vsw-tier-behavior}
+
+Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} simplifies deployment by automatically placing VSIs on the most suitable host server based on your workload requirements. For earlier system generations, you manually select the specific system type (such as S1022 or E1080).
+
+When you deploy an IBM i VSI on Power11 without assigning an {{site.data.keyword.ibmi-vst}}, the following behaviors apply:
+
+Automatic tier assignment based on host server type
+:   If you do not select an {{site.data.keyword.ibmi-vst}}, the VSI is assigned to a tier based on the underlying host server where {{site.data.keyword.powerSys_notm}} places the instance. For example:
+    * A VSI that is placed on an S1122 host server is assigned to the P10 tier.
+    * A VSI that is placed on an E1180 host server is assigned to the P30 tier.
+
+Dynamic resizing limit (4-core cap)
+:   An IBM i VSI with 4 or fewer cores that is deployed without an IBM i software tier can dynamically resize only up to 4 cores (the P10 tier limit).
+
+    To resize an IBM i VSI beyond 4 cores, complete the following steps:
+    1. Power off the VSI. For more information, see [Shut down and restart a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#shut-down-restart-vsi).
+    2. Assign a virtual serial number (VSN) to the VSI. For more information, see [Assigning a VSN to an existing VSI](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#VSN-existing-VM).
+    3. Assign a compatible {{site.data.keyword.ibmi-vst}} that supports more than 4 cores to the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance). For more information about maximum cores supported by {{site.data.keyword.ibmi-vst}} see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
+    4. Update the processor core count to the required size.
+    5. Power on the VSI.
 
 
 
 
 
 
-
-
-IBM i is not supported on IBM E1050 and E1150 system types.
-{: note}
 
 
 

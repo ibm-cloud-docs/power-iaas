@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-21"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -46,7 +46,7 @@ subcollection: power-iaas
 
 In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with VSI resources. For more information about the billing of VSI resources, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#pricing-operating-systems) and [Linux for SAP workloads](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center#linux-SAP-workload-types).
 
-
+For Power11 and later, IBM charges OS licenses and software licenses at a different hourly rate based on the VSI size and system generation instead of the machine type.
 
 
 
@@ -64,16 +64,14 @@ All prices that are mentioned in the topic are illustrative and do not represent
 
 
 
-
-
-| Power Systems         | Usable cores | Memory               |
-| --------------------- | ------------ | -------------------- |
-| E980 (9080-M9S)       | 143          | Up to 15,307 GB [^1] |
-| S922 (9009-22A) [^2]  | 15           | Up to 942 GB         |
-| S1022 (9105-22A) [^3] | 33           | Up to 1984 GB        |
-| E1080 (9080-HEX)      | 165          | Up to 32 TB          |
-| E1050 (9043-MRX)      | 87           | Up to 8,192 GB       |
-| S1122 (9824-22A)      | 51           | Up to 1,904 GB       |
+| Power Systems         | Usable cores  | Memory               |
+| --------------------- | ------------- | -------------------- |
+| E980 (9080-M9S)       | 143           | Up to 15,307 GB [^1] |
+| S922 (9009-22A) [^2]  | 15            | Up to 942 GB         |
+| S1022 (9105-22A) [^3] | 33            | Up to 1984 GB        |
+| E1080 (9080-HEX)      | 165           | Up to 32 TB          |
+| E1050 (9043-MRX)      | 87            | Up to 8,192 GB       |
+| Power11               | Up to 229          | Up to 31,840 GiB       |
 {: caption="Theoretical maximum processors and memory" caption-side="bottom"}
 
 [^1]: In DAL12, DAL13, OSA21, SAO01, TOK04, WDC04, and WDC06 data centers, the E980 systems allow up to 23,070 GB of memory.
@@ -90,26 +88,10 @@ A theoretical maximum of a system depends on the data center. Also, the {{site.d
 ## Billing details
 {: #billing-details}
 
-In your invoice, use one of the following identifiers to identify the charges that apply to the deployed resource instances:
+In your invoice, use [IBM cloud resource names (CRNs)](#granular-crns) identifier to identify the charges that apply to the deployed resource instances:
 
-* [Consumer ID](#consumer-id)
-    The Consumer ID groups the billing usages that are under a single resource.
+To view the usage details at the resource level, complete the following steps:
 
-* [IBM cloud resource names (CRNs)](#granular-crns)
-    The IBM CRNs enable the identification and tracking of Power Virtual Server resources, such as volumes and snapshots, to manage and bill the usage of the resources.
-
-
-### Consumer ID
-{: #consumer-id}
-
-For metrics that are charged on a workspace instance, the **Consumer ID** groups billing usage under a VSI resource in that workspace. You can use the **Consumer ID** to identify the resource type and instance for each charge.
-
-The **Consumer ID** has the following benefits:
-
-* You can see a more detailed view of your bill by using the **Usage** page in the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} portal.
-* Charges are itemized by a resource type and an instance UUID in the Consumer ID field with the format `resource-type:resource-uuid`. Currently, only one metric is charged at the workspace level, which uses `pvm-instance` (VSI) as the resource type.
-
-To view the usage details at the resource level, do the following steps:
 1. Open the [Billing and Usage](https://cloud.ibm.com/billing/usage){: external} page in the IBM Cloud console.
 2. Click **Usage**, on the left navigation menu.
 3. Click **View plans** for the entry **{{site.data.keyword.powerSys_notm}} Workspace**. A page that lists all your workspaces is opened.
@@ -124,8 +106,7 @@ For more information on the billing and usage page, see [Billing and Usage docum
 
 
 
-IBM cloud resource names (CRNs) are identifiers that are assigned to uniquely identify resources within IBM Cloud.
-As CRNs are assigned to individual resources, a comprehensive bill is generated with individual {{site.data.keyword.powerSys_notm}} resource billing.
+IBM cloud resource names (CRNs) are identifiers that are assigned to uniquely identify resources within IBM Cloud such as volumes and snapshots. As CRNs are assigned to individual resources, a comprehensive bill is generated with individual {{site.data.keyword.powerSys_notm}} resource billing.
 
 When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to the resource.
 
@@ -140,24 +121,19 @@ To view or search for resources that are provisioned in IBM {{site.data.keyword.
 
 
 
-The following table lists the {{site.data.keyword.powerSys_notm}} resources that are enabled with CRN.
+The following table lists the billable {{site.data.keyword.powerSys_notm}} resources that are enabled with CRN.
 
-| Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
-| --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **General**                                   |                                             |                                                           |                                                                                                                                                              |
-| Workspace                                     | Enabled                                     | Enabled                                                   | VPN                                                                                                   |
-| **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
-| Virtual server instance                       | Enabled                                     | Enabled                                                   | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | Enabled                                     | Enabled                                                   | * SPP cores \n * SAP workloads                                                                                                          |
-| Server placement groups  | Enabled                                     | X                                                         | SAP workloads                                                                                                                                                |
-| Dedicated Host                                | Enabled                                     | X                                                         | Dedicated host capacity                                                                                                                                      |
-| **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
-| Volume                                        | Enabled                                     | Enabled                                                   | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
-| Snapshot                                      | Enabled                                     | Enabled                                                   | Snapshot storage                                                                                                                                             |
-| Virtual Persistent Memory                     | Enabled                                     | X                                                         | Virtual Persistent Memory storage                                                                                                                            |
+| Logical Resource          | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
+| ------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Compute**               |                                             |                                                           |                                                                                                                                                              |
+| Virtual server instance   | Enabled                                     | Enabled                                                   | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
+| Shared Processor Pool     | Enabled                                     | Enabled                                                   | * SPP cores \n * SAP workloads                                                                                                          |
+| Dedicated Host            | Enabled                                     | Disabled                                                  | Dedicated host capacity                                                                                                                                      |
+| **Storage**               |                                             |                                                           |                                                                                                                                                              |
+| Volume                    | Enabled                                     | Enabled                                                   | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
+| Snapshot                  | Enabled                                     | Enabled                                                   | Snapshot storage                                                                                                                                             |
+| Virtual Persistent Memory | Enabled                                     | Disabled                                                  | Virtual Persistent Memory storage                                                                                                                            |
 {: caption="{{site.data.keyword.powerSys_notm}} resources that are CRN enabled." caption-side="bottom"}
-
-
 
 ## Monthly usage
 {: #pricing-monthly-usage}
@@ -166,7 +142,7 @@ IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate 
 
 To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
-All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 {: important}
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance with the following configurations at a base price of $250.57 per month ($0.343 per hour):
@@ -194,114 +170,130 @@ A part number is associated with the license for the software product to be used
 Refer to the following table to view the part number descriptions and the associated metric IDs.
 
 
-| Part description for virtual server instance group (available on the IBM invoice)                                   | Metric ID (available in the IBM Cloud catalog)                            |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| **Shared capped processor cores**                                                                                   |                                                                           |
-| `IBM Power S1122 shared capped core-hour`                                                                           | `power-iaas-metric-S1122-core-capped`                                     |
-| `IBM Power E1080 shared capped core-hour`                                                                           | `power-iaas-metric-E1080-core-capped`                                     |
-| `IBM Power S1022 shared capped core-hour`                                                                           | `power-iaas-metric-S1022-core-capped`                                     |
-| `IBM Power E980 shared capped core-hour`                                                                            | `power-iaas-metric-E980-core-capped`                                      |
-| `IBM Power S922 shared capped core-hour`                                                                            | `power-iaas-metric-S922-core-capped`                                      |
-| `SAP NetWeaver workload - IBM Power S1022 shared capped core-hour`                                                  | `power-iaas-metric-netweaver-S1022-capped`                                |
-| **Shared uncapped processor cores**                                                                                 |                                                                           |
-| `IBM Power S1122 shared uncapped core-hour`                                                                         | `power-iaas-metric-S1122-core-shared`                                     |
-| `IBM Power E1080 shared uncapped core-hour`                                                                         | `power-iaas-metric-E1080-core-shared`                                     |
-| `IBM Power S1022 shared uncapped core-hour`                                                                         | `power-iaas-metric-S1022-core-shared`                                     |
-| `IBM Power E980 shared uncapped core-hour`                                                                          | `power-iaas-metric-E980-core-shared`                                      |
-| `IBM Power S922 shared uncapped core-hour`                                                                          | `power-iaas-metric-S922-core-shared`                                      |
-| `SAP NetWeaver workload - IBM Power S1022 shared uncapped core-hour`                                                | `power-iaas-metric-netweaver-S1022-shared`                                |
-| **Dedicated processor cores**                                                                                       |                                                                           |
-| `IBM Power S1122 dedicated core-hour`                                                                               | `power-iaas-metric-S1122-core-dedicated`                                  |
-| `IBM Power E1080 dedicated core-hour`                                                                               | `power-iaas-metric-E1080-core-dedicated`                                  |
-| `IBM Power S1022 dedicated core-hour`                                                                               | `power-iaas-metric-S1022-core-dedicated`                                  |
-| `IBM Power E980 dedicated core-hour`                                                                                | `power-iaas-metric-E980-core-dedicated`                                   |
-| `IBM Power S922 dedicated core-hour`                                                                                | `power-iaas-metric-S922-core-dedicated`                                   |
-| `SAP NetWeaver workload - IBM Power S1022 dedicated core-hour`                                                      | `power-iaas-metric-netweaver-S1022-dedicated`                             |
-| `AIX scale-out license core-hour`                                                                                   | `power-iaas-metric-aix-scale-out`                                         |
-| `AIX scale-up license core-hour`                                                                                    | `power-iaas-metric-aix-scale-up`                                          |
-| `SAP HANA workload balanced profile (bh1) - IBM Power E980 core-hour`                                               | `power-iaas-metric-bh1-hana-core`                                         |
-| `SAP HANA workload compute optimized profile (ch1) - IBM Power E980 core-hour`                                      | `power-iaas-metric-ch1-hana-core`                                         |
-| `SAP HANA workload custom profile (cnp) - IBM Power E980 core-hour`                                                 | `power-iaas-metric-hana-core`                                             |
-| `SAP HANA workload custom profile (cnp) - IBM Power E980 memory gigabyte-hour`                                      | `power-iaas-metric-hana-memory`                                           |
-| `IBM i Cloud Storage Solutions instance core-hour`                                                                  | `power-iaas-metric-ibmi-cos`                                              |
-| `IBM i PowerHA small instance core-hour`                                                                            | `power-iaas-metric-ibmi-pha-small`                                        |
-| `IBM i PowerHA medium instance core-hour`                                                                           | `power-iaas-metric-ibmi-pha-medium`                                       |
-| `IBM i P10 license core-hour`                                                                                       | `power-iaas-metric-ibmi-os-p10`                                           |
-| `IBM i P10 license - mobile core-hour - SWMA paid`                                                                  | `power-iaas-metric-ibmi-os-p10-mol`                                       |
-| `IBM i P10 service extension core-hour`                                                                             | `power-iaas-metric-ibmi-os-p10-sve`                                       |
-| `IBM i P30 license core-hour`                                                                                       | `power-iaas-metric-ibmi-os-p30`                                           |
-| `IBM i P30 license - mobile core-hour - SWMA paid`                                                                  | `power-iaas-metric-ibmi-os-p30-mol`                                       |
-| `IBM i LPP core-hour`                                                                                               | `power-iaas-metric-ibmi-lpp`                                              |
-| `IBM i LPP core-hour - mobile core-hour - SWMA paid`                                                                | `power-iaas-metric-ibmi-lpp-mol`                                          |
-| `IBM i P10 LPP core-hour`                                                                                           | `power-iaas-metric-ibmi-lpp-p10`                                          |
-| `IBM i LPP P10 - mobile core-hour - SWMA paid`                                                                      | `power-iaas-metric-ibmi-lpp-p10-mol`                                      |
-| `IBM i P30 LPP core-hour`                                                                                           | `power-iaas-metric-ibmi-lpp-p30`                                          |
-| `IBM i LPP P30 - mobile core-hour - SWMA paid`                                                                      | `power-iaas-metric-ibmi-lpp-p30-mol`                                      |
-| `IBM i P05 software tier license core-hour`                                                                         | `power-iaas-metric-ibmi-os-p05-tier`                                      |
-| `IBM i P10 software tier license core-hour`                                                                         | `power-iaas-metric-ibmi-os-p10-tier`                                      |
-| `IBM i P20 software tier license core-hour`                                                                         | `power-iaas-metric-ibmi-os-p20-tier`                                      |
-| `IBM i P30 software tier license core-hour`                                                                         | `power-iaas-metric-ibmi-os-p30-tier`                                      |
-| `IBM i P05 software tier service extension core-hour`                                                               | `power-iaas-metric-ibmi-os-p05-sve-tier`                                  |
-| `IBM i P10 software tier service extension core-hour`                                                               | `power-iaas-metric-ibmi-os-p10-sve-tier`                                  |
-| `IBM i P20 software tier service extension core-hour`                                                               | `power-iaas-metric-ibmi-os-p20-sve-tier`                                  |
-| `IBM i P30 software tier service extension core-hour`                                                               | `power-iaas-metric-ibmi-os-p30-sve-tier`                                  |
-| `IBM i software tier LPP core-hour`                                                                                 | `power-iaas-metric-ibmi-lpp-tier`                                         |
-| `IBM i software tier PowerHA small instance core-hour`                                                              | `power-iaas-metric-ibmi-pha-small-tier`                                   |
-| `IBM i software tier PowerHA medium instance core-hour`                                                             | `power-iaas-metric-ibmi-pha-medium-tier`                                  |
-| `IBM i P10 software tier license - mobile-core-hour - SWMA paid`                                                    | `power-iaas-metric-ibmi-os-p10-mol-tier`                                  |
-| `IBM i P30 software tier license - mobile-core-hour - SWMA paid`                                                    | `power-iaas-metric-ibmi-os-p30-mol-tier`                                  |
-| `IBM i software tier LPP - mobile-core-hour - SWMA paid`                                                            | `power-iaas-metric-ibmi-lpp-mol-tier`                                     |
-| `IBM i P30 service extension core-hour`                                                                             | `power-iaas-metric-ibmi-os-p30-sve`                                       |
-| `IBM i P30 - PowerHA instance core-hour`                                                                            | `power-iaas-metric-ibmi-pha-p30`                                          |
-| `IBM i Rational Developer Studio instance-hour`                                                                     | `power-iaas-metric-ibmi-rds`                                              |
-| `SAP HANA workload memory optimized profile (mh1) - IBM Power E980 core-hour`                                       | `power-iaas-metric-mh1-hana-core`                                         |
-| `SAP NetWeaver workload - IBM Power S1022 memory gigabyte-hour`                                                     | `power-iaas-metric-netweaver-S1022-memory`                                |
-| `IBM Power11 high-use scale-out memory gigabyte-hour`                                                               | `power-iaas-metric-p11-so-memory-highuse`                                 |
-| `IBM Power11 standard scale-out memory gigabyte-hour`                                                               | `power-iaas-metric-p11-so-memory-standard`                                |
-| `IBM Power10 high-use scale-out memory gigabyte-hour`                                                               | `power-iaas-metric-p10-so-memory-highuse`                                 |
-| `IBM Power10 standard scale-out memory gigabyte-hour`                                                               | `power-iaas-metric-p10-so-memory-standard`                                |
-| `IBM Power10 high-use scale-up memory gigabyte-hour`                                                                | `power-iaas-metric-p10-su-memory-highuse`                                 |
-| `IBM Power10 standard scale-up memory gigabyte-hour`                                                                | `power-iaas-metric-p10-su-memory-standard`                                |
-| `IBM Power9 high-use memory gigabyte-hour`                                                                          | `power-iaas-metric-p9-memory-highuse`                                     |
-| `IBM Power9 standard memory gigabyte-hour`                                                                          | `power-iaas-metric-p9-memory-standard`                                    |
-| `Red Hat Enterprise Linux SAP RISE scale-out license core-hour`                                                     | `power-iaas-metric-rhel-sap-rise-scale-out`                               |
-| `Red Hat Enterprise Linux SAP RISE scale-up license core-hour`                                                      | `power-iaas-metric-rhel-sap-rise-scale-up`                                |
-| `Red Hat Enterprise Linux SAP scale-out license core-hour`                                                          | `power-iaas-metric-rhel-sap-scale-out`                                    |
-| `Red Hat Enterprise Linux SAP scale-up license core-hour`                                                           | `power-iaas-metric-rhel-sap-scale-up`                                     |
-| `Red Hat Enterprise Linux scale-out license core-hour`                                                              | `power-iaas-metric-rhel-scale-out`                                        |
-| `Red Hat Enterprise Linux scale-up license core-hour`                                                               | `power-iaas-metric-rhel-scale-up`                                         |
-| `SAP HANA workload small profile (sh2) - IBM Power E1050 core-hour`                                                 | `power-iaas-metric-sh2-hana-E1050-core`                                   |
-| `SAP HANA workload small profile (sh2) - IBM Power E1050 memory gigabyte-hour`                                      | `power-iaas-metric-sh2-hana-E1050-memory`                                 |
-| `SAP HANA workload small profile (sh2) - IBM Power E1080 core-hour`                                                 | `power-iaas-metric-sh2-hana-E1080-core`                                   |
-| `SAP HANA workload small profile (sh2) - IBM Power E1080 memory gigabyte-hour`                                      | `power-iaas-metric-sh2-hana-E1080-memory`                                 |
-| `SAP HANA workload small profile (sh2) - IBM Power S1022 core-hour`                                                 | `power-iaas-metric-sh2-hana-S1022-core`                                   |
-| `SAP HANA workload small profile (sh2) - IBM Power S1022 memory gigabyte-hour`                                      | `power-iaas-metric-sh2-hana-S1022-memory`                                 |
-| `SAP HANA workload balanced profile (bh2) - IBM Power E1050 core-hour`                                              | `power-iaas-metric-bh2-hana-E1050-core`                                   |
-| `SAP HANA workload balanced profile (bh2) - IBM Power E1050 memory gigabyte-hour`                                   | `power-iaas-metric-bh2-hana-E1050-memory`                                 |
-| `SAP HANA workload balanced profile (bh2) - IBM Power E1080 core-hour`                                              | `power-iaas-metric-bh2-hana-E1080-core`                                   |
-| `SAP HANA workload balanced profile (bh2) - IBM Power E1080 memory gigabyte-hour`                                   | `power-iaas-metric-bh2-hana-E1080-memory`                                 |
-| `SAP HANA workload compute profile (ch2) - IBM Power E1050 core-hour`                                               | `power-iaas-metric-ch2-hana-E1050-core`                                   |
-| `SAP HANA workload compute profile (ch2) - IBM Power E1050 memory gigabyte-hour`                                    | `power-iaas-metric-ch2-hana-E1050-memory`                                 |
-| `SAP HANA workload compute profile (ch2) - IBM Power E1080 core-hour`                                               | `power-iaas-metric-ch2-hana-E1080-core`                                   |
-| `SAP HANA workload compute profile (ch2) - IBM Power E1080 memory gigabyte-hour`                                    | `power-iaas-metric-ch2-hana-E1080-memory`                                 |
-| `SAP HANA workload medium profile (mh2) - IBM Power E1080 core-hour`                                                | `power-iaas-metric-mh2-hana-E1080-core`                                   |
-| `SAP HANA workload medium profile (mh2) - IBM Power E1080 memory gigabyte-hour`                                     | `power-iaas-metric-mh2-hana-E1080-memory`                                 |
-| `SUSE Linux Enterprise Server SAP tier 1 instance-hour`                                                             | `power-iaas-metric-sles-sap-tier1`                                        |
-| `SUSE Linux Enterprise Server SAP tier 2 instance-hour`                                                             | `power-iaas-metric-sles-sap-tier2`                                        |
-| `SUSE Linux Enterprise Server SAP tier 3 instance-hour`                                                             | `power-iaas-metric-sles-sap-tier3`                                        |
-| `SUSE Linux Enterprise Server tier 1 instance-hour`                                                                 | `power-iaas-metric-sles-tier1`                                            |
-| `SUSE Linux Enterprise Server tier 2 instance-hour`                                                                 | `power-iaas-metric-sles-tier2`                                            |
-| `SUSE Linux Enterprise Server tier 3 instance-hour`                                                                 | `power-iaas-metric-sles-tier3`                                            |
-| `SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 core-hour` | `power-iaas-metric-sr3-hana-S1122-core`                                   |
-| `SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power S1122 memory gigabyte-hour`                       | `power-iaas-metric-sr3-hana-S1122-memory`  |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 core-hour`                                  | `power-iaas-metric-sr2-hana-E1050-core`                                   |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 memory gigabyte-hour`                       | `power-iaas-metric-sr2-hana-E1050-memory`                                 |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 core-hour`                                  | `power-iaas-metric-sr2-hana-E1080-core`                                   |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 memory gigabyte-hour`                       | `power-iaas-metric-sr2-hana-E1080-memory`                                 |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power S1022 core-hour`                                  | `power-iaas-metric-sr2-hana-S1022-core`                                   |
-| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power S1022 memory gigabyte-hour`                       | `power-iaas-metric-sr2-hana-S1022-memory`                                 |
-| `SAP HANA workload ultra-memory optimized profile (umh) - IBM Power E980 core-hour`                                 | `power-iaas-metric-umh-hana-core`                                         |
-| `Virtual Tape Library terabyte-hour`                                                                                | `power-iaas-metric-vtl`                                                   |
+| Part description for virtual server instance group (available on the IBM invoice)                          | Metric ID (available in the IBM Cloud catalog) |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Shared capped processor cores**                                                                          |                                                |
+| `IBM Power11 shared capped core-hour`                                         | `power-iaas-P11-core-capped`                   |
+| `IBM Power E1080 shared capped core-hour`                                                                  | `power-iaas-metric-E1080-core-capped`          |
+| `IBM Power S1022 shared capped core-hour`                                                                  | `power-iaas-metric-S1022-core-capped`          |
+| `IBM Power E980 shared capped core-hour`                                                                   | `power-iaas-metric-E980-core-capped`           |
+| `IBM Power S922 shared capped core-hour`                                                                   | `power-iaas-metric-S922-core-capped`           |
+| `SAP NetWeaver workload - IBM Power11 shared capped core-hour` | `power-iaas-netweaver-P11-capped` |
+| `SAP NetWeaver workload - IBM Power S1022 shared capped core-hour`                                         | `power-iaas-metric-netweaver-S1022-capped`     |
+| **Shared uncapped processor cores**                                                                        |                                                |
+| `IBM Power11 shared uncapped core-hour`                                       | `power-iaas-P11-core-shared`                   |
+| `IBM Power E1080 shared uncapped core-hour`                                                                | `power-iaas-metric-E1080-core-shared`          |
+| `IBM Power S1022 shared uncapped core-hour`                                                                | `power-iaas-metric-S1022-core-shared`          |
+| `IBM Power E980 shared uncapped core-hour`                                                                 | `power-iaas-metric-E980-core-shared`           |
+| `IBM Power S922 shared uncapped core-hour`                                                                 | `power-iaas-metric-S922-core-shared`           |
+| `SAP NetWeaver workload - IBM Power11 shared uncapped core-hour` | `power-iaas-netweaver-P11-shared` |
+| `SAP NetWeaver workload - IBM Power S1022 shared uncapped core-hour`                                       | `power-iaas-metric-netweaver-S1022-shared`     |
+| **Dedicated processor cores**                                                                              |                                                |
+| `IBM Power11 dedicated core-hour`                                             | `power-iaas-P11-core-dedicated`                |
+| `IBM Power E1080 dedicated core-hour`                                                                      | `power-iaas-metric-E1080-core-dedicated`       |
+| `IBM Power S1022 dedicated core-hour`                                                                      | `power-iaas-metric-S1022-core-dedicated`       |
+| `IBM Power E980 dedicated core-hour`                                                                       | `power-iaas-metric-E980-core-dedicated`        |
+| `IBM Power S922 dedicated core-hour`                                                                       | `power-iaas-metric-S922-core-dedicated`        |
+| `SAP NetWeaver workload - IBM Power11 dedicated core-hour` | `power-iaas-netweaver-P11-dedicated` |
+| `SAP NetWeaver workload - IBM Power S1022 dedicated core-hour`                                             | `power-iaas-metric-netweaver-S1022-dedicated`  |
+| `AIX scale-out license core-hour`                                                                          | `power-iaas-metric-aix-scale-out`              |
+| `AIX license core-hour`                                                       | `power-iaas-aix`                               |
+| `AIX scale-up license core-hour`                                                                           | `power-iaas-metric-aix-scale-up`               |
+| `SAP HANA workload balanced profile (bh3) - IBM Power11 core-hour`            | `power-iaas-bh3-hana-core`                     |
+| `SAP HANA workload balanced profile (bh3) - IBM Power11 memory gigabyte-hour` | `power-iaas-bh3-hana-memory`                   |
+| `SAP HANA workload compute profile (ch3) - IBM Power11 core-hour`             | `power-iaas-ch3-hana-core`                     |
+| `SAP HANA workload compute profile (ch3) - IBM Power11 memory gigabyte-hour`  | `power-iaas-ch3-hana-memory`                   |
+| `SAP HANA workload medium profile (mh3) - IBM Power11 core-hour`              | `power-iaas-mh3-hana-core`                     |
+| `SAP HANA workload medium profile (mh3) - IBM Power11 memory gigabyte-hour`   | `power-iaas-mh3-hana-memory`                   |
+| `SAP HANA workload small profile (sh3) - IBM Power11 core-hour` | `power-iaas-sh3-hana-core` |
+| `SAP HANA workload small profile (sh3) - IBM Power11 memory gigabyte-hour` | `power-iaas-sh3-hana-memory` |
+| `SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power11 core-hour` | `power-iaas-sr3-hana-core` |
+| `SAP RISE - SAP HANA workload optimized profile (sr3) - IBM Power11 memory gigabyte-hour` | `power-iaas-sr3-hana-memory` |
+| `SAP HANA workload balanced profile (bh1) - IBM Power E980 core-hour`                                      | `power-iaas-metric-bh1-hana-core`              |
+| `SAP HANA workload compute optimized profile (ch1) - IBM Power E980 core-hour`                             | `power-iaas-metric-ch1-hana-core`              |
+| `SAP HANA workload custom profile (cnp) - IBM Power E980 core-hour`                                        | `power-iaas-metric-hana-core`                  |
+| `SAP HANA workload custom profile (cnp) - IBM Power E980 memory gigabyte-hour`                             | `power-iaas-metric-hana-memory`                |
+| `SAP HANA workload memory optimized profile (mh1) - IBM Power E980 core-hour`                              | `power-iaas-metric-mh1-hana-core`              |
+| `IBM i Cloud Storage Solutions instance core-hour`                                                         | `power-iaas-metric-ibmi-cos`                   |
+| `IBM i PowerHA small instance core-hour`                                                                   | `power-iaas-metric-ibmi-pha-small`             |
+| `IBM i PowerHA medium instance core-hour`                                                                  | `power-iaas-metric-ibmi-pha-medium`            |
+| `IBM i P10 license core-hour`                                                                              | `power-iaas-metric-ibmi-os-p10`                |
+| `IBM i P10 license - mobile core-hour - SWMA paid`                                                         | `power-iaas-metric-ibmi-os-p10-mol`            |
+| `IBM i P10 service extension core-hour`                                                                    | `power-iaas-metric-ibmi-os-p10-sve`            |
+| `IBM i P30 license core-hour`                                                                              | `power-iaas-metric-ibmi-os-p30`                |
+| `IBM i P30 license - mobile core-hour - SWMA paid`                                                         | `power-iaas-metric-ibmi-os-p30-mol`            |
+| `IBM i LPP core-hour`                                                                                      | `power-iaas-metric-ibmi-lpp`                   |
+| `IBM i LPP core-hour - mobile core-hour - SWMA paid`                                                       | `power-iaas-metric-ibmi-lpp-mol`               |
+| `IBM i P10 LPP core-hour`                                                                                  | `power-iaas-metric-ibmi-lpp-p10`               |
+| `IBM i LPP P10 - mobile core-hour - SWMA paid`                                                             | `power-iaas-metric-ibmi-lpp-p10-mol`           |
+| `IBM i P30 LPP core-hour`                                                                                  | `power-iaas-metric-ibmi-lpp-p30`               |
+| `IBM i LPP P30 - mobile core-hour - SWMA paid`                                                             | `power-iaas-metric-ibmi-lpp-p30-mol`           |
+| `IBM i P05 software tier license core-hour`                                                                | `power-iaas-metric-ibmi-os-p05-tier`           |
+| `IBM i P10 software tier license core-hour`                                                                | `power-iaas-metric-ibmi-os-p10-tier`           |
+| `IBM i P20 software tier license core-hour`                                                                | `power-iaas-metric-ibmi-os-p20-tier`           |
+| `IBM i P30 software tier license core-hour`                                                                | `power-iaas-metric-ibmi-os-p30-tier`           |
+| `IBM i P05 software tier service extension core-hour`                                                      | `power-iaas-metric-ibmi-os-p05-sve-tier`       |
+| `IBM i P10 software tier service extension core-hour`                                                      | `power-iaas-metric-ibmi-os-p10-sve-tier`       |
+| `IBM i P20 software tier service extension core-hour`                                                      | `power-iaas-metric-ibmi-os-p20-sve-tier`       |
+| `IBM i P30 software tier service extension core-hour`                                                      | `power-iaas-metric-ibmi-os-p30-sve-tier`       |
+| `IBM i software tier LPP core-hour`                                                                        | `power-iaas-metric-ibmi-lpp-tier`              |
+| `IBM i software tier PowerHA small instance core-hour`                                                     | `power-iaas-metric-ibmi-pha-small-tier`        |
+| `IBM i software tier PowerHA medium instance core-hour`                                                    | `power-iaas-metric-ibmi-pha-medium-tier`       |
+| `IBM i P10 software tier license - mobile-core-hour - SWMA paid`                                           | `power-iaas-metric-ibmi-os-p10-mol-tier`       |
+| `IBM i P30 software tier license - mobile-core-hour - SWMA paid`                                           | `power-iaas-metric-ibmi-os-p30-mol-tier`       |
+| `IBM i software tier LPP - mobile-core-hour - SWMA paid`                                                   | `power-iaas-metric-ibmi-lpp-mol-tier`          |
+| `IBM i P30 service extension core-hour`                                                                    | `power-iaas-metric-ibmi-os-p30-sve`            |
+| `IBM i P30 - PowerHA instance core-hour`                                                                   | `power-iaas-metric-ibmi-pha-p30`               |
+| `IBM i Rational Developer Studio instance-hour`                                                            | `power-iaas-metric-ibmi-rds`                   |
+| `SAP NetWeaver workload - IBM Power11 memory gigabyte-hour` | `power-iaas-netweaver-P11-memory` |
+| `SAP NetWeaver workload - IBM Power S1022 memory gigabyte-hour`                                            | `power-iaas-metric-netweaver-S1022-memory`     |
+| `IBM Power10 high-use scale-out memory gigabyte-hour`                                                      | `power-iaas-metric-p10-so-memory-highuse`      |
+| `IBM Power10 standard scale-out memory gigabyte-hour`                                                      | `power-iaas-metric-p10-so-memory-standard`     |
+| `IBM Power10 high-use scale-up memory gigabyte-hour`                                                       | `power-iaas-metric-p10-su-memory-highuse`      |
+| `IBM Power10 standard scale-up memory gigabyte-hour`                                                       | `power-iaas-metric-p10-su-memory-standard`     |
+| `IBM Power11 high-use memory gigabyte-hour` | `power-iaas-p11-memory-highuse` |
+| `IBM Power9 high-use memory gigabyte-hour`                                                                 | `power-iaas-metric-p9-memory-highuse`          |
+| `IBM Power11 standard memory gigabyte-hour` | `power-iaas-p11-memory-standard` |
+| `IBM Power9 standard memory gigabyte-hour`                                                                 | `power-iaas-metric-p9-memory-standard`         |
+| `Red Hat Enterprise Linux license core-hour`                                  | `power-iaas-rhel`                              |
+| `Red Hat Enterprise Linux SAP license core-hour`                              | `power-iaas-rhel-sap`                          |
+| `Red Hat Enterprise Linux SAP RISE license core-hour`                         | `power-iaas-rhel-sap-rise`                     |
+| `Red Hat Enterprise Linux SAP RISE scale-out license core-hour`                                            | `power-iaas-metric-rhel-sap-rise-scale-out`    |
+| `Red Hat Enterprise Linux SAP RISE scale-up license core-hour`                                             | `power-iaas-metric-rhel-sap-rise-scale-up`     |
+| `Red Hat Enterprise Linux SAP scale-out license core-hour`                                                 | `power-iaas-metric-rhel-sap-scale-out`         |
+| `Red Hat Enterprise Linux SAP scale-up license core-hour`                                                  | `power-iaas-metric-rhel-sap-scale-up`          |
+| `Red Hat Enterprise Linux scale-out license core-hour`                                                     | `power-iaas-metric-rhel-scale-out`             |
+| `Red Hat Enterprise Linux scale-up license core-hour`                                                      | `power-iaas-metric-rhel-scale-up`              |
+| `SAP HANA workload small profile (sh2) - IBM Power E1050 core-hour`                                        | `power-iaas-metric-sh2-hana-E1050-core`        |
+| `SAP HANA workload small profile (sh2) - IBM Power E1050 memory gigabyte-hour`                             | `power-iaas-metric-sh2-hana-E1050-memory`      |
+| `SAP HANA workload small profile (sh2) - IBM Power E1080 core-hour`                                        | `power-iaas-metric-sh2-hana-E1080-core`        |
+| `SAP HANA workload small profile (sh2) - IBM Power E1080 memory gigabyte-hour`                             | `power-iaas-metric-sh2-hana-E1080-memory`      |
+| `SAP HANA workload small profile (sh2) - IBM Power S1022 core-hour`                                        | `power-iaas-metric-sh2-hana-S1022-core`        |
+| `SAP HANA workload small profile (sh2) - IBM Power S1022 memory gigabyte-hour`                             | `power-iaas-metric-sh2-hana-S1022-memory`      |
+| `SAP HANA workload balanced profile (bh2) - IBM Power E1050 core-hour`                                     | `power-iaas-metric-bh2-hana-E1050-core`        |
+| `SAP HANA workload balanced profile (bh2) - IBM Power E1050 memory gigabyte-hour`                          | `power-iaas-metric-bh2-hana-E1050-memory`      |
+| `SAP HANA workload balanced profile (bh2) - IBM Power E1080 core-hour`                                     | `power-iaas-metric-bh2-hana-E1080-core`        |
+| `SAP HANA workload balanced profile (bh2) - IBM Power E1080 memory gigabyte-hour`                          | `power-iaas-metric-bh2-hana-E1080-memory`      |
+| `SAP HANA workload compute profile (ch2) - IBM Power E1050 core-hour`                                      | `power-iaas-metric-ch2-hana-E1050-core`        |
+| `SAP HANA workload compute profile (ch2) - IBM Power E1050 memory gigabyte-hour`                           | `power-iaas-metric-ch2-hana-E1050-memory`      |
+| `SAP HANA workload compute profile (ch2) - IBM Power E1080 core-hour`                                      | `power-iaas-metric-ch2-hana-E1080-core`        |
+| `SAP HANA workload compute profile (ch2) - IBM Power E1080 memory gigabyte-hour`                           | `power-iaas-metric-ch2-hana-E1080-memory`      |
+| `SAP HANA workload medium profile (mh2) - IBM Power E1080 core-hour`                                       | `power-iaas-metric-mh2-hana-E1080-core`        |
+| `SAP HANA workload medium profile (mh2) - IBM Power E1080 memory gigabyte-hour`                            | `power-iaas-metric-mh2-hana-E1080-memory`      |
+| `SUSE Linux Enterprise Server SAP tier 1 instance-hour`                                                    | `power-iaas-metric-sles-sap-tier1`             |
+| `SUSE Linux Enterprise Server SAP tier 2 instance-hour`                                                    | `power-iaas-metric-sles-sap-tier2`             |
+| `SUSE Linux Enterprise Server SAP tier 3 instance-hour`                                                    | `power-iaas-metric-sles-sap-tier3`             |
+| `SUSE Linux Enterprise Server tier 1 instance-hour`                                                        | `power-iaas-metric-sles-tier1`                 |
+| `SUSE Linux Enterprise Server tier 2 instance-hour`                                                        | `power-iaas-metric-sles-tier2`                 |
+| `SUSE Linux Enterprise Server tier 3 instance-hour`                                                        | `power-iaas-metric-sles-tier3`                 |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 core-hour`                         | `power-iaas-metric-sr2-hana-E1050-core`        |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1050 memory gigabyte-hour`              | `power-iaas-metric-sr2-hana-E1050-memory`      |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 core-hour`                         | `power-iaas-metric-sr2-hana-E1080-core`        |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power E1080 memory gigabyte-hour`              | `power-iaas-metric-sr2-hana-E1080-memory`      |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power S1022 core-hour`                         | `power-iaas-metric-sr2-hana-S1022-core`        |
+| `SAP RISE - SAP HANA workload optimized profile (sr2) - IBM Power S1022 memory gigabyte-hour`              | `power-iaas-metric-sr2-hana-S1022-memory`      |
+| `SAP HANA workload ultra-memory optimized profile (umh) - IBM Power E980 core-hour`                        | `power-iaas-metric-umh-hana-core`              |
+| `Virtual Tape Library terabyte-hour`                                                                       | `power-iaas-metric-vtl`                        |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
@@ -311,7 +303,7 @@ Refer to the following table to view the part number descriptions and the associ
 
 | Part description for shared processor pool group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
 | ------------------------------------------------------------------------------- | ---------------------------------------------- |
-| `Shared Processor Pool - IBM Power S1122 core-hour`                             | `power-iaas -metric-S1122-spp-cores`           |
+| `Shared Processor Pool - IBM Power11 core-hour`    | `power-iaas-P11-cores-spp`                     |
 | `Shared Processor Pool - IBM Power S1022 core-hour`                             | `power-iaas-metric-S1022-cores-spp`            |
 | `Shared Processor Pool - IBM Power E1050 core-hour`                             | `power-iaas-metric-E1050-cores-spp`            |
 | `Shared Processor Pool - IBM Power E1080 core-hour`                             | `power-iaas-metric-E1080-cores-spp`            |
@@ -374,31 +366,26 @@ Refer to the following table to view the part number descriptions and the associ
 {: tab-title="Snapshot group"}
 {: translate="no"}
 
-| Part description for vPMEM composite service (available on the IBM invoice)                        | Metric ID (available in the IBM Cloud catalog) |
-| -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| `SAP workload - IBM Power E1050 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-E1050-vpmem`            |
-| `SAP workload - IBM Power E1080 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-E1080-vpmem`            |
-| `SAP workload - IBM Power S1022 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-S1022-vpmem`            |
-| `SAP application server workload - IBM Power S1022 virtual persistent memory volume gigabyte`      | `power-iaas-metric-netweaver-S1022-vpmem`      |
-| `IBM Power10 high-use scale-out virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-p10-so-vpmem-highuse`       |
-| `IBM Power10 standard scale-out virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-p10-so-vpmem-standard`      |
-| `IBM Power10 high-use scale-up virtual persistent memory volume gigabyte-hour`                     | `power-iaas-metric-p10-su-vpmem-highuse`       |
-| `IBM Power10 standard scale-up virtual persistent memory volume gigabyte-hour`                     | `power-iaas-metric-p10-su-vpmem-standard`      |
-| `SAP workload - IBM Power E1150 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-E1150-vpmem`            |
-| `SAP workload - IBM Power E1180 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-E1180-vpmem`            |
-| `SAP workload - IBM Power S1122 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-sap-S1122-vpmem`            |
-| `SAP application server workload - IBM Power S1122 virtual persistent memory volume gigabyte-hour` | `power-iaas-metric-netweaver-S1122-vpmem`      |
-| `IBM Power11 high-use scale-out virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-p11-so-vpmem-highuse`       |
-| `IBM Power11 standard scale-out virtual persistent memory volume gigabyte-hour`                    | `power-iaas-metric-p11-so-vpmem-standard`      |
-| `IBM Power11 high-use scale-up virtual persistent memory volume gigabyte-hour`                     | `power-iaas-metric-p11-su-vpmem-highuse`       |
-| `IBM Power11 standard scale-up virtual persistent memory volume gigabyte-hour`                     | `power-iaas-metric-p11-su-vpmem-standard`      |
+| Part description for vPMEM composite service (available on the IBM invoice)                                                 | Metric ID (available in the IBM Cloud catalog) |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `IBM Power11 standard virtual persistent memory gigabyte-hour`                                 | `power-iaas-p11-vpmem-standard`                |
+| `IBM Power11 high-use virtual persistent memory gigabyte-hour`                                 | `power-iaas-p11-vpmem-highuse`                 |
+| `SAP workload - IBM Power11 virtual persistent memory volume gigabyte-hour`                    | `power-iaas-sap-P11-vpmem`                     |
+| `SAP application server workload - IBM Power11 virtual persistent memory volume gigabyte-hour` | `power-iaas-netweaver-P11-vpmem`               |
+| `SAP workload - IBM Power E1050 virtual persistent memory volume gigabyte-hour`                                             | `power-iaas-metric-sap-E1050-vpmem`            |
+| `SAP workload - IBM Power E1080 virtual persistent memory volume gigabyte-hour`                                             | `power-iaas-metric-sap-E1080-vpmem`            |
+| `SAP workload - IBM Power S1022 virtual persistent memory volume gigabyte-hour`                                             | `power-iaas-metric-sap-S1022-vpmem`            |
+| `SAP application server workload - IBM Power S1022 virtual persistent memory volume gigabyte`                               | `power-iaas-metric-netweaver-S1022-vpmem`      |
+| `IBM Power10 high-use scale-out virtual persistent memory volume gigabyte-hour`                                             | `power-iaas-metric-p10-so-vpmem-highuse`       |
+| `IBM Power10 standard scale-out virtual persistent memory volume gigabyte-hour`                                             | `power-iaas-metric-p10-so-vpmem-standard`      |
+| `IBM Power10 high-use scale-up virtual persistent memory volume gigabyte-hour`                                              | `power-iaas-metric-p10-su-vpmem-highuse`       |
+| `IBM Power10 standard scale-up virtual persistent memory volume gigabyte-hour`                                              | `power-iaas-metric-p10-su-vpmem-standard`      |
 {: class="simple-tab-table"}
 {: tab-group="part_number_descriptions"}
 {: caption="Part number descriptions for IBM {{site.data.keyword.powerSys_notm}}." caption-side="bottom"}
 {: #vpmem-composite-service}
 {: tab-title="vPMEM group"}
 {: translate="no"}
-
 
 ## Base instances
 {: #pricing-base-instance-prices}
@@ -420,17 +407,17 @@ You can bring your own custom AIX or IBM i image to use on a {{site.data.keyword
 You can select an IBM {{site.data.keyword.powerSys_notm}} provided Linux&reg; stock image or bring your own Red Hat Linux Enterprise (RHEL) and SUSE Linux Enterprise Server (SLES) image in OVA format. For a Linux subscription, you can opt to use a [full Linux&reg; subscription](/docs/power-iaas?topic=power-iaas-set-full-Linux) for {{site.data.keyword.powerSys_notm}} or obtain the subscription for the Linux operating system directly from the vendor. For more information about how to create an OVA format Linux image, see [Creating a custom Linux image in OVA format](/docs/power-iaas?topic=power-iaas-linux-deployment).
 
 
-If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
+If you bring your own image, you are charged for the image size and the storage tier that you use for the image. The cost of the storage unit (per GB) for stored boot images is the same as the cost of the storage tier (Tier 0 or Tier 3) in which your boot disks are deployed. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public){: external} tool. For more information, see [Deploying a custom image within IBM {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-deploy-custom-image).
 
 ## Linux for SAP workloads
 {: #linux-SAP-workload-types}
 
 You can deploy the following types of SAP workloads as VSIs:
 
-* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are like other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not the same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on S1022, E1080, S922, and E980 systems.
+* **SAP NetWeaver**: For SAP NetWeaver for Linux, the charges for hardware, processors, and memory are like other types of Linux deployments. However, the SAP NetWeaver for Linux requires a different type of operating system and license to be deployed. So, the charges for these types of deployments are not the same as that of Red Hat Enterprise Linux for SAP (non-SAP OS). SAP NetWeaver can be deployed on Power11, S1022, E1080, S922, and E980 systems.
 
 * **SAP HANA**: For SAP HANA, the billing parts for processor and memory are distinct. The charges on these distinct parts appear on the monthly invoices. The following types of systems, processors, and memory are supported for SAP HANA:
-    - System types: S1022 (for workloads less than 2 TB of RAM), E1080 (for workloads more than 2 TB of RAM), or E980.
+    - System types: Power11, S1022 (for workloads less than 2 TB of RAM), E1080 (for workloads more than 2 TB of RAM), or E980.
     - Virtual processor core type: dedicated
     - Memory types: scale-out or scale-up
 
@@ -447,7 +434,7 @@ You can also bring your own SAP (HANA or NetWeaver) image with your own subscrip
 
 You are charged different rates based on the processor type that you choose for your VSI. **Dedicated processors** are priced the highest as they provide the best overall performance. **Shared capped processors** cost slightly more than **shared uncapped processors** because of their flexibility in addressing licensing restrictions. The processors are all charged on an hourly basis according to the machine type, processor type, and the number of cores that are used in a month.
 
-Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
+Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and Power11). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
 {: important}
@@ -475,13 +462,19 @@ The following examples show the cost per system for general purpose VSIs in Nort
 | 1                       | $0.22 (shared capped)        | $159.14                  |
 {: caption="S1022 processor type pricing example" caption-side="bottom"}
 
-| Number of cores (S1122) | Hourly rate (Processor type) | Monthly cost (730 hours) |
-| ----------------------- | ---------------------------- | ------------------------ |
-| 1                       | $0.62 (dedicated)            | $454.37                  |
-| 1                       | $0.16 (shared uncapped)      | $113.59                  |
-| 1                       | $0.23 (shared capped)        | $170.44                  |
-{: caption="S1122 processor type pricing example" caption-side="bottom"}
+| Number of cores (Power11, &le;109 cores, &le;7,840 GiB) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------------------- | ---------------------------- | ------------------------ |
+| 1                         | $0.62 (dedicated)            | $454.37                  |
+| 1                         | $0.16 (shared uncapped)      | $113.59                  |
+| 1                         | $0.23 (shared capped)        | $170.44                  |
+{: caption="Power11 processor type with maximum 109 cores and maximum 7,840 GiB memory pricing example" caption-side="bottom"}
 
+|  Number of cores (Power11, &gt;109 cores, &gt;7,840 GiB) | Hourly rate (Processor type) | Monthly cost (730 hours) |
+| ------------------------------- | ---------------------------- | ------------------------ |
+| 1                               | $2.18 (dedicated)            | $1591.40                 |
+| 1                               | $0.54 (shared uncapped)      | $394.20                  |
+| 1                               | $0.82 (shared capped)        | $598.60                  |
+{: caption="Power11 processor type with more than 109 cores and more than 7,840 GiB memory pricing example" caption-side="bottom"}
 
 ## Pricing for Global Replication Services
 {: #price-grs}
@@ -502,10 +495,8 @@ The cost of GRS is calculated for only one location at any point in time. The lo
 
 
 
-
 ## Pricing for shared processor pool
 {: #price-spp}
-
 
 Shared processor pool (SPP) provides the capability to manage CPU cores efficiently. The number of cores that are assigned to an SPP depends on the entitled cores (EC) and virtual cores (VC) ratio. The EC:VP ratio varies by system type. For example, POWER10 systems allow different ratios as compared to POWER9 systems. For more information, see [Managing the shared processor pool](/docs/power-iaas?topic=power-iaas-manage-SPP).
 
@@ -655,15 +646,6 @@ vPMEM is not supported on a VSI with IBM i operating system.
 For VSIs with AIX or Linux OS that are attached with vPMEM volumes, the total cost is calculated based on the total memory usage. For VSI with SAP (HANA) profile, the vPMEM volume memory is allocated from the SAP profile capacity so the cost of the memory remains the same.
 
 
-## Pricing for IBM {{site.data.keyword.powerSys_notm}} VPN (VPN) connection
-{: #pricing-vpn}
-
-When you use a VPN connection, you are billed monthly.
-
-IBM charges with the base price hourly per connection. The base price varies for each region. If you use one VPN connection that is active for a month, the monthly bill is calculated as the VPN hourly base price for your region that is multiplied by 24 hours per day and 30 days per month. For example, if VPN is used in a US region and the US base price is $0.05 per VPN instance, the monthly price is $36. VPN charges are associated with the {{site.data.keyword.powerSys_notm}} workspace resource.
-
-On `July 14, 2025`, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached its end of life. If you are using {{site.data.keyword.powerSys_notm}} VPNaaS product, you are encouraged to move to the [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) to avoid VPN service interruptions.
-{: important}
 
 ## Pricing for Power Edge Router (PER)
 {: #per-pricing}
