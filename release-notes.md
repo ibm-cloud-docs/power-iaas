@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-11"
+lastupdated: "2026-09-21"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -114,10 +114,10 @@ GRS support in data center pairs
 {: #power-iaas-jun2426}
 {: release-note}
 
-Disabling automated remote restart for a virtual server instance
+Disabling automated remote restart for a VSI
 :   Automated remote restart is enabled by default for all VSIs in the {{site.data.keyword.powerSys_notm}} environment. You can disable automated remote restart by modifying the settings for a VSI. For more information, see [Disabling automated remote restart for a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#disable-arr).
 
-Monitoring boot image import, boot image export, and virtual server instance (VSI) capture and export status in the UI
+Monitoring boot image import, boot image export, and VSI capture and export status in the UI
 :   You can view the status of boot image import, boot image export, and VSI capture and export operations in the UI. This enhancement provides improved visibility into long-running image jobs before you start another image job. For more information, see [Viewing import boot image results](/docs/power-iaas?topic=power-iaas-importing-boot-image#view-import-results), [Viewing export boot image results](/docs/power-iaas?topic=power-iaas-exporting-boot-image#view-export-results), and [Viewing the capture and export results](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#view-capture-export-results).
 
 Metadata service and trusted profiles support
@@ -206,10 +206,10 @@ AIX, IBM i, and SLES stock images added to OS Image Catalog
    - IBM i COR (refreshed)
 
 End-of-Life reminder for IBM i 7.2, RHEL 9.4 general purpose, and RHEL 8.6 SAP OS images
-:   The end of support date for the IBM i 7.2 operating system is 30 April 2026. Stock images for IBM i 7.2 are scheduled to be removed from the {{site.data.keyword.powerSys_notm}} image library starting from 1 May 2026. Existing virtual server instances (VSIs) that are deployed using these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the IBM i end of support guidelines, see [IBM i Release Life Cycle](https://www.ibm.com/support/pages/release-life-cycle). For more information about the available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+:   The end of support date for the IBM i 7.2 operating system is 30 April 2026. Stock images for IBM i 7.2 are scheduled to be removed from the {{site.data.keyword.powerSys_notm}} image library starting from 1 May 2026. Existing VSIs that are deployed using these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the IBM i end of support guidelines, see [IBM i Release Life Cycle](https://www.ibm.com/support/pages/release-life-cycle). For more information about the available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 {: important}
 
-:   The Red Hat Enterprise Linux (RHEL) end of support date for the RHEL 9.4 general purpose is 30 April 2026 and RHEL 8.6 SAP is 31 May 2026. Stock images for RHEL 9.4 general purpose are scheduled to be removed starting from 1 May 2026, and RHEL 8.6 SAP starting from 1 June 2026, from the {{site.data.keyword.powerSys_notm}} image library. Existing virtual server instances (VSIs) that are deployed using these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about the available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
+:   The RHEL end of support date for the RHEL 9.4 general purpose is 30 April 2026 and RHEL 8.6 SAP is 31 May 2026. Stock images for RHEL 9.4 general purpose are scheduled to be removed starting from 1 May 2026, and RHEL 8.6 SAP starting from 1 June 2026, from the {{site.data.keyword.powerSys_notm}} image library. Existing VSIs that are deployed using these stock images can continue to operate without interruption. To receive continued support and maintenance from IBM, update your VSIs to a supported operating system version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about the available operating system stock images, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 {: important}
 
 Private Cloud offering expansion
@@ -239,9 +239,9 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 ## December 2025
 {: #Dec-2025}
 
-- Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes reduce the time it takes to restart SAP HANA virtual server instances. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
+- Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes reduce the time it takes to restart SAP HANA VSIs. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
 
-- The virtual server instance (VSI) console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
+- The VSI console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
 
 
 
@@ -315,7 +315,7 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 
 
-- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system on which it runs. It controls the pricing tier for the IBM i operating system and licensed program products (LPPs). The {{site.data.keyword.ibmi-vst}} also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
+- With IBM Power10 systems and later, you can assign an {{site.data.keyword.ibmi-vst}} to a VSI. The {{site.data.keyword.ibmi-vst}} limits the size of the VSI, but not the physical system on which it runs. It controls the pricing tier for the IBM i operating system and licensed program products (LPPs). The {{site.data.keyword.ibmi-vst}} also defines the boundaries for the virtual processors and memory size. For more information, see [Assigning an IBM i software tier to an IBM i Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers).
 
 
 
@@ -428,12 +428,12 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 
 
-The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing virtual server instances (VSIs) that use the stock images can continue to operate without interruption. To get continued support and maintenance from IBM, update your VSIs to a supported OS version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
+The RHEL end of support date for RHEL 9.2 general purpose, RHEL 8.8 general purpose, and RHEL 8.4 for SAP is 30 May 2025. Stock images for these OS versions are scheduled to be removed from the Power Virtual Server image library starting 31 May 2025. The existing VSIs that use the stock images can continue to operate without interruption. To get continued support and maintenance from IBM, update your VSIs to a supported OS version. For more information about the RHEL end of support guidelines, see [Red Hat Enterprise Linux Life Cycle](https://access.redhat.com/support/policy/updates/errata){: external}. For more information about available OS stock images, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 {: important}
 
 - IBM i 7.3, 7.2 and Cloud Optical Repository (COR) stock images have been refreshed.
 
-- IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces in [February 2025](#Feb-2025) . Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as virtual server instances (VSIs), shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
+- IBM {{site.data.keyword.powerSys_notm}} started the support of cloud resource names (CRNs) for new workspaces in [February 2025](#Feb-2025) . Starting from April to June 2025, CRNs are being assigned to the existing {{site.data.keyword.powerSys_notm}} workspaces. CRN identifiers are assigned to uniquely identify resources in the IBM Cloud, such as VSIs, shared processor pools (SPPs), volumes, snapshots, and dedicated hosts.
 
   The billing and metering plans are updated with the following changes:
 
@@ -449,7 +449,7 @@ The Red Hat Enterprise Linux (RHEL) end of support date for RHEL 9.2 general pur
 
 
 
-- The idle timeout for the virtual server instance (VSI) console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
+- The idle timeout for the VSI console (previously called VNC console) is extended to up to 2 hours from 30 minutes. For more information, see [Working with the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console).
 
 
 
@@ -604,7 +604,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - [{{site.data.keyword.off-prem}}]{: tag-blue}You can now enable the replication services for a volume from the user interface. For more information, see [Global Replication Services (GRS)](/docs/power-iaas?topic=power-iaas-getting-started-GRS).
 - [{{site.data.keyword.off-prem}}]{: tag-blue}You can now configure a virtual machine that contains a boot volume and deploy an IBM i virtual machine to support the attachment of large quantity of data volumes available in `DAL10` and `WDC07` data centers. For more information, see [Configuring large quantity of data volumes on {{site.data.keyword.off-prem}}](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#config-large-vol).
 - [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the `DAL10` and `WDC07` location pair to resize a replication-enabled primary volume from the primary site. The system then resizes the associated auxiliary volume on its corresponding remote site within 24 hours. For more information, see [Updating a primary volume](/docs/power-iaas?topic=power-iaas-getting-started-GRS#update-prime-vol).
-- [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the SUSE Linux Enterprise Server (SLES) stock image when you register for full Linux subscription, for {{site.data.keyword.powerSys_notm}}. For more information, see [Full Linux® subscription for IBM Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
+- [{{site.data.keyword.on-prem}}]{: tag-red}You can now select the SLES stock image when you register for full Linux subscription, for {{site.data.keyword.powerSys_notm}}. For more information, see [Full Linux® subscription for IBM Power Virtual Server in {{site.data.keyword.on-prem}}](/docs/power-iaas?topic=power-iaas-full-linux-sub).
 - [{{site.data.keyword.on-prem}}]{: tag-red}You can now validate the import file against the SHA-256 checksum file from the user interface. For more information, see [Using the Power Virtual Server user interface to import a boot image](/docs/power-iaas?topic=power-iaas-importing-boot-image#console-import-image) and [Using the Power Virtual Server user interface to capture and export a VM](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm#console-capture-export).
 - You can now download, Secure Automated Backup with Compass by Cobalt Iron, from [IBM Cloud Catalog](https://cloud.ibm.com/catalog){: external} for immediate deployment. The solution provides the environment for Cloud backup and recovery for IBM {{site.data.keyword.powerSys_notm}} workloads. The offering is the only automated BaaS and recovery solution for IBM {{site.data.keyword.powerSys_notm}} workloads that are powered by IBM Storage Protect, such as SAP HANA, Oracle, Db2 on AIX and Linux. For more information, see [Cobalt Iron Expands Access to Secure Automated Backup With Compass for IBM Power Virtual Server](https://info.cobaltiron.com/news/cobalt-iron-ibm-vs-baas-global-expansion){: external}.
 
@@ -689,7 +689,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 ## March 2024
 {: #mar-2024}
 
-- Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a virtual server instance. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
+- Reserve an IP address from the {{site.data.keyword.powerSys_notm}} user interface. The IP address that you reserve are not assigned to a VSI. For more information. see [Reserving IP addresses](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
 - New AIX 7.3 TL2, and 7.2 TL5 SP7 operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - New IBM i 7.5 TR3, IBM i 7.4 TR9, and IBM i COR[^1] operating system images are available. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - A new data center `CHE01` is available. The following are some capabilities that differ for this data center:
