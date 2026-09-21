@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-16"
+lastupdated: "2026-09-21"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -143,7 +143,7 @@ To enable access to the metadata service when you create a VSI, complete the fol
 
       - **Auto link**: Set the **Auto link** toggle:
 
-         - **Enabled** Default. The VSI cloud resource name (CRN) is automatically added to the selected trusted profile and the profile is available to the VSI when the VSI starts.
+         - **Enabled** (default): The VSI cloud resource name (CRN) is automatically added to the selected trusted profile and the profile is available to the VSI when the VSI starts.
 
          - **Disabled**: If the selected trusted profile is not configured with rule-based filters, you must manually link the trusted profile to the VSI by using the IAM Trusted Profile UI, CLI, or API before the VSI can use the trusted profile.
 
@@ -454,8 +454,6 @@ curl -X GET "https://api.metadata.power-iaas.cloud.ibm.com/metadata/v1/instance"
 
 The response includes details about the VSI. For more information, see [Retrieves information for the calling Virtual Server Instance (VSI)](/docs/apis/power-cloud-metadata-identity#get-metadata-v1-instance){: external}.
 
-
-
 ## Using a trusted profile to call IAM-enabled services
 {: #metadata-use-trusted-profiles}
 
@@ -484,7 +482,7 @@ Use the IAM token to call IAM-enabled services.
 ## Security best practices
 {: #metadata-security-best-practices}
 
-Follow these best practices to protect your VSI metadata.
+Use the following best practices to help protect your VSI metadata.
 
 
 
