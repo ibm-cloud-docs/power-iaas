@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-09-18"
+lastupdated: "2026-09-22"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -125,19 +125,21 @@ To reconfigure the metadata service interface, complete the following steps:
    ```
    {: pre}
 
+   This command creates a TCP/IP interface on the `METADATA` line description and assigns the link-local IP address `169.254.169.253` to the interface. The interface enables communication with the metadata service endpoint.
+
 ### Verifying the metadata service interface configuration
 {: #reconfigure-ibmi-verify}
 
 To verify that the metadata service interface is configured correctly and active, complete the following steps:
 
-1. Run the following command to verify the metadata interface configuration:
+1. Run the following command to verify the metadata service interface configuration:
 
    ```text
    NETSTAT *IFC
    ```
    {: pre}
 
-   Look for the metadata service interface with IP address `169.254.169.253`. The status of the metadata service interface must be `Active`.
+   Find the metadata service interface with IP address `169.254.169.253` in the output and verify that its status is `Active`. If the interface is not active, see [Resolving interface activation issues](#troubleshoot-ibmi-activation).
 
 2. Run the following command to test connectivity to the metadata service interface:
 
@@ -146,20 +148,20 @@ To verify that the metadata service interface is configured correctly and active
    ```
    {: pre}
 
-   Press F3 to end the ping after confirming connectivity.
+3. After you verify connectivity, press **F3** to end the ping. If the ping fails, see [Validating network connectivity to the metadata service endpoint](#troubleshoot-ibmi-validate).
 
-The metadata service network uses the link-local IP range `169.254.169.254/30`. The metadata service interface IP address is `169.254.169.253`. No gateway is required for this network.
+The metadata service network uses the link-local IP range `169.254.169.254/30`. The metadata service interface IP address is `169.254.169.253`. You do not need to configure a gateway for this network.
 {: tip}
 
 ## Reconfiguring the metadata service interface on Linux after an OS disk overwrite
 {: #reconfigure-linux-after-capture}
 
-When you overwrite the OS disk of a Linux VSI with a previously created disk image, the network configuration, including the metadata service interface, might be removed. You can take preventative measures before you capture the image or use the MAC address to restore the configuration afterward.
+When you overwrite the OS disk of a Linux VSI with a previously created disk image, the OS disk overwrite might remove the network configuration, including the metadata service interface. You can configure the network settings before you capture the image, or use the MAC address to restore the metadata service interface configuration after the overwrite.
 
 ### Preventing network configuration loss
 {: #reconfigure-linux-prevent}
 
-You can take one of the following preventative measures to avoid losing connectivity to the metadata service endpoint:
+To avoid losing connectivity to the metadata service endpoint, take one of the following actions:
 
 * Remove the network persistence rules before you perform the capture
 * Note the MAC address of the interface to restore the configuration
@@ -618,7 +620,7 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   The output should show a route for the `169.254.169.252/30` network associated with your metadata interface.
+   The output should show a route for the `169.254.169.252/30` network associated with your metadata service interface.
 
    If you see conflicting routes or interface configurations, carefully review the routes before making any changes. Your custom image might include configurations that were intentionally set for your environment. Removing or modifying configurations without understanding their purpose might disrupt other network connectivity. Ensure that any changes do not break other intentional network configurations.
    {: important}
