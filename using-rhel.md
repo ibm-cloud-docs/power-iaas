@@ -3,7 +3,7 @@
 copyright:
   years: 2020, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-09-22"
 
 keywords: rhel, using RHEL with PowerVS, Linux, NAT, SNAT
 
@@ -135,7 +135,7 @@ eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc fq_codel state UNKNOWN mo
 ### Configuring Network Address Translation (NAT) in the {{site.data.keyword.powerSys_notm}} environment
 {: #nat-configuration}
 
-Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: external}.
+Most organizations are allotted a limited number of publicly routable IP addresses from their ISP. Due to this limited allowance, administrators must find a way to share access to internet services without giving limited public IP addresses to every node on the LAN. RHEL 8 uses the nftables utility, instead of iptables, to set up complex firewalls. For instructions on setting up NAT on RHEL, see [Configuring NAT using nftables](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/getting-started-with-nftables_configuring-and-managing-networking#configuring-nat-using-nftables_getting-started-with-nftables){: external}.
 
 Before running the `iptables` commands, complete the following steps to ensure that the configuration settings persist after the virtual machine is restarted.
 
