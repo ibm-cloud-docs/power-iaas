@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-09-22"
 
 keywords: ibm i, network install server, volume_list
 
@@ -35,7 +35,7 @@ To learn more about the options available on upgrading the IBM i operating syste
 ## Configuration
 {: #ibmi-nw-server-config}
 
-To complete the configuration of an IBM i network installation server, see [Virtual optical storage by using the Network File System](https://www.ibm.com/docs/en/i/7.4?topic=storage-virtual-optical-using-network-file-system){: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: external}.
+To complete the configuration of an IBM i network installation server, see [Virtual optical storage by using the Network File System](https://www.ibm.com/docs/en/i/7.6.0?topic=storage-virtual-optical-using-network-file-system){: external} and [IBM i Network Install](http://www.redbooks.ibm.com/redpapers/pdfs/redp4937.pdf){: external}.
 
 
 

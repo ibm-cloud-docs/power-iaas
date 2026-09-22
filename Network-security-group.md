@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-22"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -40,7 +40,7 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 
 
 
-Existing workspaces can support NSG only after the data center where the workspaces are deployed is updated to use the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+Existing workspaces can support NSG only after the data center where the workspaces are deployed is updated to use the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#Feb-2025).
 
 
 

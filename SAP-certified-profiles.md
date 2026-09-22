@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-09-22"
 
 keywords: power, SAP HANA, profiles, certified profiles, sr2, sh2, bh2, ch2, ch1, bh1, ush1, umh
 
@@ -156,7 +156,7 @@ For more information about SAP Application Server profiles, see [SAP Application
 ## Generating an estimate of a Power Virtual Server instance
 {: #sap-hana-prof-est}
 
-When you are generating an estimate of a {{site.data.keyword.powerSys_notm}} instance, you can select SAP certified profiles. For more information about generating an estimate of a {{site.data.keyword.powerSys_notm}} instance with SAP certified profiles, see [Estimating SAP workloads](/docs/power-iaas?topic=power-iaas-generating-an-estimate#est-sap-workloads).
+When you are generating an estimate of a {{site.data.keyword.powerSys_notm}} instance, you can select SAP certified profiles. For more information about generating an estimate of a {{site.data.keyword.powerSys_notm}} instance with SAP certified profiles, see [Estimating SAP workloads](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public#est-sap-workloads).
 
 
 ## Creating a Power Virtual Server instance

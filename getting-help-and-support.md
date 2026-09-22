@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-09-22"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -31,7 +31,7 @@ You can choose a Basic, Advanced, or Premium support plan to customize your IBM 
 Users with a Lite or Trial account can create support cases but are limited to non-technical issues.
 {: note}
 
-Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs) and [Getting support](/docs/get-support?topic=get-support-using-avatar&interface=ui).
+Before you open a support ticket against {{site.data.keyword.powerSysShort}}, review the [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs) and [Getting support](/docs/support?topic=support-using-avatar).
 {: shortdesc}
 
 ## Opening PowerVS infrastructure cases

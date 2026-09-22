@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-22"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -769,12 +769,12 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 New data center availability
 :   - `MAD04` is available. It is a PER-enabled Power10 data center that supports IBM Cloud Monitoring service.
     - `SAO04` is available for PER.
-    - **Cost estimator tool** - A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Getting started with the cost estimator tool](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+    - **Cost estimator tool** - A new cost estimator tool for {{site.data.keyword.powerSys_notm}} is available. You can access it from the {{site.data.keyword.powerSys_notm}} [home page](https://cloud.ibm.com/power/overview){: external}. To learn more about the cost estimator tool, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
     - **Dedicated hosts** - A new dedicated host capability is available. You can provision IBM Power S922 and S1022 servers for your dedicated use. For more information, see [Dedicated host](/docs/power-iaas?topic=power-iaas-dedicated-host).
     - **VPC VPN service** - The VPC VPN is a robust service that replaces the legacy {{site.data.keyword.powerSys_notm}} VPN. To learn more on VPC VPN, see [Creating a Virtual Private Cloud VPN connection](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn).
     - **Flexible IOPS** - {{site.data.keyword.powerSys_notm}} now offers a tier-less storage service with the name Flexible IOPS. With Flexible IOPS, you can now change the IOPS level for your existing volumes and clone volumes to your choice of IOPS level, and much more. See: [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
     - New RHEL versions are available. See [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) page for details on the latest version.
-    - **Update on the new SAP HANA large t-shirt profiles feature** - The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [SAP documentation on OS](/docs/sap?topic=sap-plan-os-powervs) for IBM {{site.data.keyword.powerSys_notm}}.
+    - **Update on the new SAP HANA large t-shirt profiles feature** - The latest RHEL 9.2 for SAP, RHEL 8.8 for general purpose and SAP, and current RHEL 8.6 for general purpose and SAP OS images are being updated to support the larger t-shirt profiles. Until further notice, use t-shirt profiles with less than 64 cores for RHEL 9.2, RHEL 8.8, and RHEL 8.6 OS images. For more information, see the [Operating system planning and image management for SAP on IBM Power Virtual Server](/docs/sap?topic=sap-plan-os-powervs) for IBM {{site.data.keyword.powerSys_notm}}.
     - **New GRS pairs support** - The respective data center pairs `MAD02` and `FRA04` along with `MAD04` and `FRA05` now supports GRS.
 
 ### November 2023
@@ -818,4 +818,4 @@ SAP Netweaver is not certified for use with S1022 systems, making them suitable 
 - IBM {{site.data.keyword.keymanagementserviceshort}} is now supported on AIX and Linux workloads. For more information, see [Integrating {{site.data.keyword.powerSys_notm}} with IBM Cloud Key Management Services](/docs/power-iaas?topic=power-iaas-integrate-hpcs#AIX-hpcs).
 - Effective 1 May 2023, AIX 7.1 on {{site.data.keyword.powerSys_notm}} is covered for software support. In {{site.data.keyword.powerSys_notm}}, starting March 2024[^1], Service Extension pricing is automatically added to the AIX charge for AIX 7.1 usage. AIX 7.1 Service Extension was announced on January 24, 2023. For more information see, [AIX support lifecycle information](https://www.ibm.com/support/pages/aix-support-lifecycle-information){: external}.
 
-[^1]: See the update in the [April 2024](/docs/power-iaas?topic=power-iaas-release-notes#apr-2024) release note section.
+[^1]: See the update in the [April 2024](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#apr-2024) release note section.

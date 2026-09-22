@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-22"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -50,7 +50,7 @@ For more information, see [Supported resource limits by the IBM i software tier]
 
 When you change the software tier, the billing for the {{site.data.keyword.ibmi-vst}} automatically changes to reflect the selected tier.
 
-You can generate an estimate of {{site.data.keyword.powerSys_notm}} resources with an {{site.data.keyword.ibmi-vst}} before you deploy the resources. For more information, see [Estimating a virtual server instance](/docs/power-iaas?topic=power-iaas-generating-an-estimate#est-vsi).
+You can generate an estimate of {{site.data.keyword.powerSys_notm}} resources with an {{site.data.keyword.ibmi-vst}} before you deploy the resources. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 
 
 To assign an {{site.data.keyword.ibmi-vst}} to an IBM i {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
