@@ -80,7 +80,7 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 
 If you like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 
-### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?**
+### **How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?**
 {: #simplified-infrastructure-selection}
 {: faq}
 {: support}
@@ -540,7 +540,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
-### [con-p11-added]{: tag-purple}**How does pricing work for Power11 with simplified infrastructure selection?**
+### **How does pricing work for Power11 with simplified infrastructure selection?**
 {: #power11-pricing}
 {: faq}
 
@@ -548,7 +548,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require less than 109 cores or 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require more than 109 cores or 7,840 GiB of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they need additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
-### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
+### **How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
 {: #power11-larger-system-pricing}
 {: faq}
 
@@ -556,7 +556,7 @@ Power11 pricing is based on the resources that you request for a VSI, not on the
 
 Pricing is based on the resources that you request while creating a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require less than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
-### [con-p11-added]{: tag-purple}**How do large core and memory pricing apply with simplified infrastructure selection?**
+### **How do large core and memory pricing apply with simplified infrastructure selection?**
 {: #power11-large-core-memory-pricing}
 {: faq}
 
@@ -624,7 +624,7 @@ On a Linux VM, the following database is supported:
 
 You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
-### [con-p11-added]{: tag-purple}**How does simplified infrastructure selection handle IBM i workloads that require the P30 software tier?**
+### **How does simplified infrastructure selection handle IBM i workloads that require the P30 software tier?**
 {: #power11-p30-software-tier}
 {: faq}
 
@@ -634,7 +634,7 @@ You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys
 
 You can specify the {{site.data.keyword.ibmi-vst}} while configuring a VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
-### [con-p11-added]{: tag-purple}**What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when deploying a VSI on Power11?**
+### **What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when deploying a VSI on Power11?**
 {: #power11-default-software-tier}
 {: faq}
 
