@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-06-24"
+lastupdated: "2026-09-22"
 
 content-type: cli-docs
 
@@ -10,7 +10,7 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.10.0 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.11.0 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -34,24 +34,26 @@ The following list of commands are available with command-line interface (CLI) f
 
 **Available Commands**:
 
-- `datacenter`:    IBM Cloud Power Virtual Server Datacenters.
+- `datacenter`:    IBM Cloud Power Virtual Server datacenters.
 - `disaster-recovery`:    List disaster recovery locations for the current region or all regions.
-- `image`:    IBM Cloud Power Virtual Server Images.
-- `instance`:    IBM Cloud Power Virtual Server Instances.
-- `job`:    IBM Cloud Power Virtual Server Jobs.
-- `network-peer`:    IBM Cloud Power Virtual Server Network Peers.
-- `placement-group`:    IBM Cloud Power Virtual Server Placement Groups.
-- `route`:    IBM Cloud Power Virtual Server Network Routes.
-- `shared-processor-pool`:    IBM Cloud Power Virtual Server Shared Processor Pools.
-- `snapshot`:    [DEPRECATED] IBM Cloud Power Virtual Server Snapshots.
-- `ssh-key`:    IBM Cloud Power Virtual Server SSH-Keys.
+- `image`:    IBM Cloud Power Virtual Server images.
+- `instance`:    IBM Cloud Power Virtual Server instances.
+- `job`:    IBM Cloud Power Virtual Server jobs.
+- `network-address-group`:    IBM Cloud Power Virtual Server network address groups.
+- `network-interface`:    IBM Cloud Power Virtual Server network interfaces.
+- `network-peer`:    IBM Cloud Power Virtual Server network peers.
+- `network-security-group`:    IBM Cloud Power Virtual Server network security groups.
+- `placement-group`:    IBM Cloud Power Virtual Server placement groups.
+- `route`:    IBM Cloud Power Virtual Server network routes.
+- `shared-processor-pool`:    IBM Cloud Power Virtual Server shared processor pools.
+- `ssh-key`:    IBM Cloud Power Virtual Server ssh-keys.
 - `storage-pools`:    List all storage pools for the targeted region.
 - `storage-tiers`:    List all storage tiers for the targeted region.
-- `subnet`:    IBM Cloud Power Virtual Server Subnets.
-- `virtual-serial-number`:    IBM Cloud Power Virtual Server Virtual Serial Number.
-- `volume`:    IBM Cloud Power Virtual Server Volumes.
-- `volume-group`:    IBM Cloud Power Virtual Server Volume Groups.
-- `workspace`:    IBM Cloud Power Virtual Server Workspaces.
+- `subnet`:    IBM Cloud Power Virtual Server subnets.
+- `virtual-serial-number`:    IBM Cloud Power Virtual Server virtual serial number.
+- `volume`:    IBM Cloud Power Virtual Server volumes.
+- `volume-group`:    IBM Cloud Power Virtual Server volume groups.
+- `workspace`:    IBM Cloud Power Virtual Server workspaces.
 
 ---
 
@@ -60,14 +62,16 @@ The following list of commands are available with command-line interface (CLI) f
 
 **Alias**: `datacenter, dat`
 
-**Description**: IBM Cloud Power Virtual Server Datacenters.
+**Description**: IBM Cloud Power Virtual Server datacenters.
 
 **Usage**: `datacenter`
 
 **Available Commands**:
 
-- `get`:    View details of a datacenter.
-- `list`:    List all datacenter details.
+- `get`:    View details of a datacenter. This command requires a CRN to be targeted
+only when getting information from a private/on-prem datacenter.
+- `list`:    List all datacenter details. This command requires a CRN to be targeted
+only when listing information from a private/on-prem datacenter.
 
 ---
 
@@ -76,7 +80,8 @@ The following list of commands are available with command-line interface (CLI) f
 
 **Alias**: `get`
 
-**Description**: View details of a datacenter.
+**Description**: View details of a datacenter. This command requires a CRN to be targeted
+only when getting information from a private/on-prem datacenter.
 
 **Usage**:
 
@@ -89,7 +94,7 @@ get DATACENTER [--private=True|False]
 **Available Options**:
 
 ```bash
-  -p, --private   Retrieve additional details about a private datacenter that you own.
+  -p, --private   Retrieve additional details about a private/on-prem datacenter that you own.
                   Required if getting information from a private/on-prem datacenter.
 ```
 
@@ -100,7 +105,8 @@ get DATACENTER [--private=True|False]
 
 **Alias**: `list, ls`
 
-**Description**: List all datacenter details.
+**Description**: List all datacenter details. This command requires a CRN to be targeted
+only when listing information from a private/on-prem datacenter.
 
 **Usage**: `list [--long=True|False] [--private=True|False]`
 
@@ -108,7 +114,7 @@ get DATACENTER [--private=True|False]
 
 ```bash
   -l, --long      Retrieve additional details for datacenters.
-  -p, --private   Retrieve additional details for private datacenters that you own.
+  -p, --private   Retrieve additional details for private/on-prem datacenters that you own.
 ```
 
 ---
@@ -135,7 +141,7 @@ get DATACENTER [--private=True|False]
 
 **Alias**: `image, img`
 
-**Description**: IBM Cloud Power Virtual Server Images.
+**Description**: IBM Cloud Power Virtual Server images.
 
 **Usage**: `image`
 
@@ -380,26 +386,26 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
 
 **Alias**: `instance, ins`
 
-**Description**: IBM Cloud Power Virtual Server Instances.
+**Description**: IBM Cloud Power Virtual Server instances.
 
 **Usage**: `instance`
 
 **Available Commands**:
 
 - `action`:    Perform an operation in a PVM server instance.
-- `capture`:    IBM Cloud Power Virtual Server Instance Capture.
-- `console`:    IBM Cloud Power Virtual Server Instance Console.
+- `capture`:    IBM Cloud Power Virtual Server instance captures.
+- `console`:    IBM Cloud Power Virtual Server instance consoles.
 - `create`:    Create a server instance.
 - `delete`:    Delete a server instance.
 - `get`:    View details of a server instance.
 - `list`:    List all server instances.
 - `operation`:    Perform an operation on an IBMi server instance.
-- `snapshot`:    IBM Cloud Power Virtual Server Instance Snapshots.
-- `subnet`:    IBM Cloud Power Virtual Server Instance Subnets.
+- `snapshot`:    IBM Cloud Power Virtual Server instance snapshots.
+- `subnet`:    IBM Cloud Power Virtual Server instance subnets.
 - `update`:    Update a server instance.
-- `virtual-serial-number`:    IBM Cloud Power Virtual Server Instance Virtual Serial Number.
-- `volume`:    IBM Cloud Power Virtual Server Instance Volumes.
-- `vpmem-volume`:    IBM Cloud Power Virtual Server Instance vPMEM Volumes.
+- `virtual-serial-number`:    IBM Cloud Power Virtual Server instance virtual serial number.
+- `volume`:    IBM Cloud Power Virtual Server instance volumes.
+- `vpmem-volume`:    IBM Cloud Power Virtual Server instance vPMEM volumes.
 
 ---
 
@@ -438,7 +444,7 @@ action INSTANCE_ID --operation OPERATION
 
 **Alias**: `capture, cap`
 
-**Description**: IBM Cloud Power Virtual Server Instance Capture.
+**Description**: IBM Cloud Power Virtual Server instance captures.
 
 **Usage**: `capture`
 
@@ -510,7 +516,7 @@ show INSTANCE_ID
 
 **Alias**: `console, con`
 
-**Description**: IBM Cloud Power Virtual Server Instance Console.
+**Description**: IBM Cloud Power Virtual Server instance consoles.
 
 **Usage**: `console`
 
@@ -547,7 +553,7 @@ get INSTANCE_ID
 **Usage**:
 
 ```bash
-create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
+create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IPn] [NSGn]"]
     [--boot-volume-replication-enabled=True|False]
     [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
      [--default-trusted-profile-autolink=True|False]]
@@ -560,9 +566,9 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
     [--storage-affinity-volume VOLUME] [--storage-anti-affinity-instances INSTANCE1[,INSTANCEn]]
     [--storage-anti-affinity-volumes VOLUME1[,VOLUMEn]] [--storage-connection STORAGE_CONNECTION]
     [--storage-pool STORAGE_POOL] [--storage-pool-affinity=True|False] [--storage-tier STORAGE_TIER]
-    [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]]
+    [--sys-type TYPE] [--user-data USER_DATA] [--user-tags USER_TAG1[,USER_TAGn]] [--virtual-cores ASSIGNED_CORES]
     [--virtual-serial-number "(SERIAL | 'auto-assign')[,DESCRIPTION]" [--software-tier SOFTWARE_TIER]]
-    [--virtual-cores ASSIGNED_CORES] [--volumes VOLUME1[,VOLUMEn]] [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
+    [--volumes VOLUME1[,VOLUMEn]] [--vpmem-volumes "NAME SIZE[,"NAMEn SIZEn"]]
 
   INSTANCE_NAME: The name of the instance.
 ```
@@ -583,7 +589,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
-  -r, --processor-type string                           Type of processors: "shared" or "dedicated" or "capped". Default is "dedicated".
+  -r, --processor-type string                           Processor type. Valid values are: capped, dedicated, shared. Default is "dedicated".
   -p, --processors float                                Amount of processors to allocate to the instance. Default is 1 core.
       --replicant-affinity-policy string                Affinity policy to use when multicreate is used. Valid values are: affinity, anti-affinity, none.
       --replicant-scheme string                         Naming scheme to use for duplicate VMs. Valid values are: prefix, suffix.
@@ -616,14 +622,16 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1]"[,"SUBNETn [IPn]"]
   -t, --storage-tier string                             Storage tier for server deployment when deploying a stock or custom image
                                                         (use "ibmcloud pi storage-tiers" to see available storage tiers in the targeted region).
                                                         Default to tier3 if not provided.
-  -n, --subnets strings                                 Comma separated list of subnet identifiers or names and optional IP address to associate with the instance.
-                                                        Example: --subnets "subnet-name2 192.168.0.2,subnet-name3"
+  -n, --subnets strings                                 Comma separated list of subnet identifiers or names, an optional IP address,
+                                                        and network security group id that the network interface is a member of to associate with the instance.
+                                                        If no network group security group id is specified, default one is used.
+                                                        Example: --subnets "subnet-name1 192.168.0.1 nsg-id,subnet-name2 192.168.0.2,subnet-name3"
   -s, --sys-type string                                 System type used to host the instance. Valid values are: s1022, e1050, e1080, s1122, e1150, e1180.
   -u, --user-data string                                The user data passed into the instance. Strings and file names are supported. File names must be prepended with "@".
       --user-tags strings                               Comma separated list of user tags to be attached to the instance.
       --virtual-cores int                               The number of virtual cores assigned.
       --virtual-serial-number string                    IBMi virtual serial number information added with the instance.
-                                                        Must include an existing virtual serial number or 'auto-assign' and optionally a description.
+                                                        Must include an existing virtual serial number or 'auto-assign' and optionally a description or software tier.
   -v, --volumes strings                                 Comma separated list of volume identifiers or names to associate with the instance.
       --vpmem-volumes strings                           Comma separated list of vPMEM volume names and sizes to associate with the instance.
                                                         The maximum number of vPMEM volumes for SAP instances is 1 otherwise it is 4.
@@ -731,7 +739,7 @@ operation INSTANCE_ID (--operation-type "boot" --boot-mode MODE --boot-operating
 
 **Alias**: `snapshot, snap`
 
-**Description**: IBM Cloud Power Virtual Server Instance Snapshots.
+**Description**: IBM Cloud Power Virtual Server instance snapshots.
 
 **Usage**: `snapshot`
 
@@ -851,7 +859,7 @@ restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
 
 ```bash
   -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore. Valid values for "--restore" are: retry, rollback.
+  -r, --restore string    Action to take on a failed snapshot restore. Valid values are: retry, rollback.
   -s, --snapshot string   The unique identifier of the snapshot.
 ```
 
@@ -892,7 +900,7 @@ update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 
 **Alias**: `subnet, snet`
 
-**Description**: IBM Cloud Power Virtual Server Instance Subnets.
+**Description**: IBM Cloud Power Virtual Server instance subnets.
 
 **Usage**: `subnet`
 
@@ -914,7 +922,7 @@ update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
 **Usage**:
 
 ```bash
-attach INSTANCE_ID --subnet SUBNET_ID [--ip-address IP_ADDRESS]
+attach INSTANCE_ID --subnet SUBNET_ID [--ip-address IP_ADDRESS] [--network-security-group-id NETWORK_SECURITY_GROUP_ID]
 
   INSTANCE_ID: The unique identifier or name of the instance.
 ```
@@ -922,8 +930,10 @@ attach INSTANCE_ID --subnet SUBNET_ID [--ip-address IP_ADDRESS]
 **Available Options**:
 
 ```bash
-  -i, --ip-address string   The requested ip address of this subnet interface (192.168.1.0).
-  -n, --subnet string       The subnet ID.
+  -i, --ip-address string                  The requested ip address of this subnet interface (192.168.1.0).
+      --network-security-group-id string   The network security group that the network interface is a member of.
+                                           If not specified, the default network security group is used.
+  -n, --subnet string                      The subnet ID.
 ```
 
 **Examples**:
@@ -996,7 +1006,8 @@ update INSTANCE_ID
      [--default-trusted-profile-autolink=True|False]]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
     [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
-    [--metadata-service=True|False [--metadata-service-force=True|False]]
+    [--metadata-service=True|False
+    ([--metadata-service-force-disable=True|False] | [--metadata-service-force-enable=True|False])]
     [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
     [--processor-type TYPE] [--processors NUMBER] [--storage-pool-affinity=True|False]
     [--virtual-cores ASSIGNED_CORES] [--virtual-optional-device ("attach" | "detach")]
@@ -1012,15 +1023,18 @@ update INSTANCE_ID
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
       --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
   -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server update.
-  -m, --memory float                                    New amount of memory for the server instance.
+  -m, --memory float                                    New amount of memory in GiB for the server instance.
       --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
-      --metadata-service-force                          If set to true, this allows the metadata service to be disabled while the VM is active,
+      --metadata-service-force-disable                  If set to true, this allows the metadata service to be disabled while the VM is active,
                                                         which may require manual interface cleanup by the OS administrator.
                                                         This option is only supported for disabling the metadata service.
+      --metadata-service-force-enable                   If set to true, this allow the metadata service to be enabled while the VSI is active.
+                                                        The user is responsible for manually configuring networking on the VSI after the update.
+                                                        Only supported on Linux VSIs.
   -n, --name string                                     New name of the server instance.
       --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
   -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
-  -r, --processor-type string                           New processor type for the server instance.
+  -r, --processor-type string                           New processor type for the server instance. Valid values are: capped, dedicated, shared.
   -p, --processors float                                New amount of processors for the server instance.
   -s, --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
                                                         If set to false, then volumes from any storage tier and pool can be attached to the PVM instance.
@@ -1045,7 +1059,7 @@ update INSTANCE_ID
 
 **Alias**: `virtual-serial-number, vsn`
 
-**Description**: IBM Cloud Power Virtual Server Instance Virtual Serial Number.
+**Description**: IBM Cloud Power Virtual Server instance virtual serial number.
 
 **Usage**: `virtual-serial-number`
 
@@ -1163,7 +1177,7 @@ update INSTANCE_ID (--description DESCRIPTION | --software-tier SOFTWARE_TIER)
 
 **Alias**: `volume, vol`
 
-**Description**: IBM Cloud Power Virtual Server Instance Volumes.
+**Description**: IBM Cloud Power Virtual Server instance volumes.
 
 **Usage**: `volume`
 
@@ -1288,7 +1302,7 @@ list INSTANCE_ID
 
 **Alias**: `vpmem-volume, vpmem, vpmemvol`
 
-**Description**: IBM Cloud Power Virtual Server Instance vPMEM Volumes.
+**Description**: IBM Cloud Power Virtual Server instance vPMEM volumes.
 
 **Usage**: `vpmem-volume`
 
@@ -1419,7 +1433,7 @@ update INSTANCE_ID --vpmem-volume VPMEM_VOLUME_ID --name NAME
 
 **Alias**: `job`
 
-**Description**: IBM Cloud Power Virtual Server Jobs.
+**Description**: IBM Cloud Power Virtual Server jobs.
 
 **Usage**: `job`
 
@@ -1484,12 +1498,327 @@ get JOB_ID
 
 ---
 
+## `ibmcloud pi network-address-group`
+{: #ibmcloud-pi-network-address-group}
+
+**Alias**: `network-address-group, nag`
+
+**Description**: IBM Cloud Power Virtual Server network address groups.
+
+**Usage**: `network-address-group`
+
+**Available Commands**:
+
+- `create`:    Create a network address group.
+- `delete`:    Delete a network address group.
+- `get`:    View details of a network address group.
+- `list`:    List all network address groups.
+- `member-add`:    Add a member to a network address group.
+- `member-remove`:    Remove a member from a network address group.
+- `update`:    Update a network address group.
+
+---
+
+### `ibmcloud pi network-address-group create`
+{: #ibmcloud-pi-network-address-group-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network address group.
+
+**Usage**:
+
+```bash
+create NETWORK_ADDRESS_GROUP_NAME [--user-tags USER_TAG1[,USER_TAGn]]
+
+  NETWORK_ADDRESS_GROUP_NAME: The desired name of the network address group.
+```
+
+**Available Options**:
+
+```bash
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the network address group.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-address-group create test-network-address-group --user-tags "project:customer-poc,env:dev,dataresidency:germany"
+```
+
+---
+
+### `ibmcloud pi network-address-group delete`
+{: #ibmcloud-pi-network-address-group-delete}
+
+**Alias**: `delete, del`
+
+**Description**: Delete a network address group.
+
+**Usage**:
+
+```bash
+delete NETWORK_ADDRESS_GROUP_ID
+
+  NETWORK_ADDRESS_GROUP_ID: The unique identifier of the network address group.
+```
+
+---
+
+### `ibmcloud pi network-address-group get`
+{: #ibmcloud-pi-network-address-group-get}
+
+**Alias**: `get`
+
+**Description**: View details of a network address group.
+
+**Usage**:
+
+```bash
+get NETWORK_ADDRESS_GROUP_ID
+
+  NETWORK_ADDRESS_GROUP_ID: The unique identifier of the network address group.
+```
+
+---
+
+### `ibmcloud pi network-address-group list`
+{: #ibmcloud-pi-network-address-group-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all network address groups.
+
+**Usage**: `list`
+
+---
+
+### `ibmcloud pi network-address-group member-add`
+{: #ibmcloud-pi-network-address-group-member-add}
+
+**Alias**: `member-add, ma`
+
+**Description**: Add a member to a network address group.
+
+**Usage**:
+
+```bash
+member-add NETWORK_ADDRESS_GROUP_ID --cidr-block CIDR
+
+  NETWORK_ADDRESS_GROUP_ID: The unique identifier of the network address group.
+```
+
+**Available Options**:
+
+```bash
+  -c, --cidr-block string   The member CIDR to add. Valid values are in CIDR notation (192.168.1.0/22).
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-address-group member-add 43064761-948f-469d-ac8e-b8e5f0d6056f --cidr-block "198.168.0.0/24"
+```
+
+---
+
+### `ibmcloud pi network-address-group member-remove`
+{: #ibmcloud-pi-network-address-group-member-remove}
+
+**Alias**: `member-remove, mr`
+
+**Description**: Remove a member from a network address group.
+
+**Usage**:
+
+```bash
+member-remove NETWORK_ADDRESS_GROUP_ID --member-id NETWORK_ADDRESS_GROUP_MEMBER_ID
+
+  NETWORK_ADDRESS_GROUP_ID: The unique identifier of the network address group.
+```
+
+**Available Options**:
+
+```bash
+  -m, --member-id string   The id of the network address group member to be removed.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-address-group member-remove 43064761-948f-469d-ac8e-b8e5f0d6056 --member-id 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+### `ibmcloud pi network-address-group update`
+{: #ibmcloud-pi-network-address-group-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a network address group.
+
+**Usage**:
+
+```bash
+update NETWORK_ADDRESS_GROUP_ID --name NAME
+
+  NETWORK_ADDRESS_GROUP_ID: The unique identifier of the network address group.
+```
+
+**Available Options**:
+
+```bash
+  -n, --name string   New name of the network address group.
+```
+
+---
+
+## `ibmcloud pi network-interface`
+{: #ibmcloud-pi-network-interface}
+
+**Alias**: `network-interface, ni`
+
+**Description**: IBM Cloud Power Virtual Server network interfaces.
+
+**Usage**: `network-interface`
+
+**Available Commands**:
+
+- `create`:    Create a network interface for a network.
+- `delete`:    Delete a network interface from a network.
+- `get`:    View details of a network interface for a network.
+- `list`:    List all network interfaces for a network (use "ibmcloud pi subnet list" to see available networks).
+- `update`:    Update a network interface for a network.
+
+---
+
+### `ibmcloud pi network-interface create`
+{: #ibmcloud-pi-network-interface-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network interface for a network.
+
+**Usage**:
+
+```bash
+create NETWORK_INTERFACE_NAME --network-id NETWORK_ID [--ip-address IP_ADDRESS] [--user-tags USER_TAG1[,USER_TAGn]]
+
+  NETWORK_INTERFACE_NAME: The desired name of the network interface.
+```
+
+**Available Options**:
+
+```bash
+  -i, --ip-address string   The requested ip address of this network interface (192.168.1.0).
+  -n, --network-id string   Network ID that is associated with the network interface.
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the network interface.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-interface create test-network-interface --network-id 43064761-948f-469d-ac8e-b8e5f0d6056f --ip-address 195.168.0.43 --user-tags "project:customer-poc,env:dev,dataresidency:germany"
+```
+
+---
+
+### `ibmcloud pi network-interface delete`
+{: #ibmcloud-pi-network-interface-delete}
+
+**Alias**: `delete, del`
+
+**Description**: Delete a network interface from a network.
+
+**Usage**:
+
+```bash
+delete NETWORK_INTERFACE_ID --network-id NETWORK_ID
+
+  NETWORK_INTERFACE_ID: The unique identifier of the network interface.
+```
+
+**Available Options**:
+
+```bash
+  -n, --network-id string   Network ID that is associated with the network interface.
+```
+
+---
+
+### `ibmcloud pi network-interface get`
+{: #ibmcloud-pi-network-interface-get}
+
+**Alias**: `get`
+
+**Description**: View details of a network interface for a network.
+
+**Usage**:
+
+```bash
+get NETWORK_INTERFACE_ID --network-id NETWORK_ID
+
+  NETWORK_INTERFACE_ID: The unique identifier of the network interface.
+```
+
+**Available Options**:
+
+```bash
+  -n, --network-id string   Network ID that is associated with the network interface.
+```
+
+---
+
+### `ibmcloud pi network-interface list`
+{: #ibmcloud-pi-network-interface-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all network interfaces for a network (use "ibmcloud pi subnet list" to see available networks).
+
+**Usage**: `list --network-id NETWORK_ID`
+
+**Available Options**:
+
+```bash
+  -n, --network-id string   Network ID that is associated with the network interface.
+```
+
+---
+
+### `ibmcloud pi network-interface update`
+{: #ibmcloud-pi-network-interface-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a network interface for a network.
+
+**Usage**:
+
+```bash
+update NETWORK_INTERFACE_ID --network-id NETWORK_ID [--instance-id INSTANCE_ID] [--name NAME]
+
+  NETWORK_INTERFACE_ID: The unique identifier of the network interface.
+```
+
+**Available Options**:
+
+```bash
+  -i, --instance-id string   The ID of the instance that will be added to the network interface.
+                             If this value is set to '', the network interface detaches from the instance.
+      --name string          New name of network interface.
+  -n, --network-id string    Network ID that is associated with the network interface.
+```
+
+---
+
 ## `ibmcloud pi network-peer`
 {: #ibmcloud-pi-network-peer}
 
 **Alias**: `network-peer, np`
 
-**Description**: IBM Cloud Power Virtual Server Network Peers.
+**Description**: IBM Cloud Power Virtual Server network peers.
 
 **Usage**: `network-peer`
 
@@ -1500,7 +1829,7 @@ get JOB_ID
 - `get`:    View details of a network peer.
 - `interfaces`:    List all network peer interfaces.
 - `list`:    List all network peers.
-- `route-filter`:    IBM Cloud Power Virtual Server Route Filters.
+- `route-filter`:    IBM Cloud Power Virtual Server route filters.
 - `update`:    Update a network peer.
 
 ---
@@ -1607,15 +1936,15 @@ get NETWORK_PEER_ID
 
 **Alias**: `route-filter, rf`
 
-**Description**: IBM Cloud Power Virtual Server Route Filters.
+**Description**: IBM Cloud Power Virtual Server route filters.
 
 **Usage**: `route-filter`
 
 **Available Commands**:
 
-- `create`:    Create a network peer route-filter.
-- `delete`:    Delete a network peer route-filter.
-- `get`:    View details of a network peer route-filter.
+- `create`:    Create a network peer route filter.
+- `delete`:    Delete a network peer route filter.
+- `get`:    View details of a network peer route filter.
 
 ---
 
@@ -1624,7 +1953,7 @@ get NETWORK_PEER_ID
 
 **Alias**: `create, cr`
 
-**Description**: Create a network peer route-filter.
+**Description**: Create a network peer route filter.
 
 **Usage**:
 
@@ -1655,7 +1984,7 @@ create NETWORK_PEER_ID --action ("allow" | "deny") --direction ("export" | "impo
 
 **Alias**: `delete, del`
 
-**Description**: Delete a network peer route-filter.
+**Description**: Delete a network peer route filter.
 
 **Usage**:
 
@@ -1678,7 +2007,7 @@ delete ROUTE_FILTER_ID --network-peer-id NETWORK_PEER_ID
 
 **Alias**: `get`
 
-**Description**: View details of a network peer route-filter.
+**Description**: View details of a network peer route filter.
 
 **Usage**:
 
@@ -1731,12 +2060,360 @@ update NETWORK_PEER_ID [--customer-asn ASN] [--customer-cidr CIDR]
 
 ---
 
+## `ibmcloud pi network-security-group`
+{: #ibmcloud-pi-network-security-group}
+
+**Alias**: `network-security-group, nsg`
+
+**Description**: IBM Cloud Power Virtual Server network security groups.
+
+**Usage**: `network-security-group`
+
+**Available Commands**:
+
+- `action`:    Perform actions on network security groups.
+- `clone`:    IBM Cloud Power Virtual Server network security group clones.
+- `create`:    Create a network security group.
+- `delete`:    Delete a network security group.
+- `get`:    View details of a network security group.
+- `list`:    List all network security groups.
+- `member-add`:    Add a member to a network security group.
+- `member-move`:    Move a member to another network security group.
+- `member-remove`:    Remove a member from a network security group.
+- `rule-add`:    Add a rule to a network security group.
+- `rule-remove`:    Remove a rule from a network security group.
+- `update`:    Update a network security group.
+
+---
+
+### `ibmcloud pi network-security-group action`
+{: #ibmcloud-pi-network-security-group-action}
+
+**Alias**: `action, act`
+
+**Description**: Perform actions on network security groups.
+
+**Usage**:
+
+```bash
+action NETWORK_SECURITY_GROUP_ACTION
+
+  NETWORK_SECURITY_GROUP_ACTION: The desired action to be performed on network security groups. Valid values are "enable" and "disable".
+         If "enable" is chosen, the currently targeted workspace will have network-security-group functionality added.
+         If "disable" is chosen, the currently targeted workspace will have network-security-group functionality removed.
+         Prior to choosing the "disable" action, all network-security-groups and network-address-groups must be to be removed.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group action enable
+```
+
+---
+
+### `ibmcloud pi network-security-group clone`
+{: #ibmcloud-pi-network-security-group-clone}
+
+**Alias**: `clone, cl`
+
+**Description**: IBM Cloud Power Virtual Server network security group clones.
+
+**Usage**: `clone`
+
+**Available Commands**:
+
+- `create`:    Create a network security group using an existing network security group id.
+
+---
+
+#### `ibmcloud pi network-security-group clone create`
+{: #ibmcloud-pi-network-security-group-clone-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network security group using an existing network security group id.
+
+**Usage**:
+
+```bash
+create NETWORK_SECURITY_GROUP_ID --name CLONE_NAME
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -n, --name string   The name of the cloned network security group.
+```
+
+---
+
+### `ibmcloud pi network-security-group create`
+{: #ibmcloud-pi-network-security-group-create}
+
+**Alias**: `create, cr`
+
+**Description**: Create a network security group.
+
+**Usage**:
+
+```bash
+create NETWORK_SECURITY_GROUP_NAME [--user-tags USER_TAG1[,USER_TAGn]]
+
+  NETWORK_SECURITY_GROUP_NAME: The desired name of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -u, --user-tags strings   Comma separated list of user tags to be attached to the network security group.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group create test-network-security-group --user-tags "project:customer-poc,env:dev,dataresidency:germany"
+```
+
+---
+
+### `ibmcloud pi network-security-group delete`
+{: #ibmcloud-pi-network-security-group-delete}
+
+**Alias**: `delete, del`
+
+**Description**: Delete a network security group.
+
+**Usage**:
+
+```bash
+delete NETWORK_SECURITY_GROUP_ID
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+---
+
+### `ibmcloud pi network-security-group get`
+{: #ibmcloud-pi-network-security-group-get}
+
+**Alias**: `get`
+
+**Description**: View details of a network security group.
+
+**Usage**:
+
+```bash
+get NETWORK_SECURITY_GROUP_ID
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+---
+
+### `ibmcloud pi network-security-group list`
+{: #ibmcloud-pi-network-security-group-list}
+
+**Alias**: `list, ls`
+
+**Description**: List all network security groups.
+
+**Usage**: `list`
+
+---
+
+### `ibmcloud pi network-security-group member-add`
+{: #ibmcloud-pi-network-security-group-member-add}
+
+**Alias**: `member-add, ma`
+
+**Description**: Add a member to a network security group.
+
+**Usage**:
+
+```bash
+member-add NETWORK_SECURITY_GROUP_ID --member-type ("ipv4-address" | "network-interface") --target TARGET
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -m, --member-type string   The type of member. Valid values are: ipv4-address, network-interface.
+  -t, --target string        The target member to add. This is an IP4 address if type is set to 'ipv4-address'.
+                             This is a network interface ID if type is set to 'network-interface'.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group member-add 43064761-948f-469d-ac8e-b8e5f0d6056f --member-type "network-interface" --target 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+### `ibmcloud pi network-security-group member-move`
+{: #ibmcloud-pi-network-security-group-member-move}
+
+**Alias**: `member-move, mm`
+
+**Description**: Move a member to another network security group.
+
+**Usage**:
+
+```bash
+member-move NETWORK_SECURITY_GROUP_ID --member-id NETWORK_SECURITY_GROUP_MEMBER_ID --network-security-group-id-destination NETWORK_SECURITY_GROUP_ID_DESTINATION
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -m, --member-id string                               The id of the network security group member to be move.
+  -n, --network-security-group-id-destination string   The id of the network security group the member will move to.
+```
+
+---
+
+### `ibmcloud pi network-security-group member-remove`
+{: #ibmcloud-pi-network-security-group-member-remove}
+
+**Alias**: `member-remove, mr`
+
+**Description**: Remove a member from a network security group.
+
+**Usage**:
+
+```bash
+member-remove NETWORK_SECURITY_GROUP_ID --member-id NETWORK_SECURITY_GROUP_MEMBER_ID
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -m, --member-id string   The id of the network security group member to be removed.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group member-remove 43064761-948f-469d-ac8e-b8e5f0d6056 --member-id 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+### `ibmcloud pi network-security-group rule-add`
+{: #ibmcloud-pi-network-security-group-rule-add}
+
+**Alias**: `rule-add, ra`
+
+**Description**: Add a rule to a network security group.
+
+**Usage**:
+
+```bash
+rule-add NETWORK_SECURITY_GROUP_ID --action ("allow" | "deny")
+    (--protocol "all" |  --protocol "icmp" [--icmp-type TYPE] |
+    --protocol "tcp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX] [--tcp-flags FLAG1[,FLAGn]] |
+    --protocol "udp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX])
+    (--remote-type "default-network-address-group" |
+    --remote-type "network-address-group" --remote-group-id REMOTE_NETWORK_ADDRESS_GROUP_ID |
+    --remote-type "network-security-group" --remote-group-id REMOTE_NETWORK_SECURITY_GROUP_ID)
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -a, --action string            The action to take if the rule matches network traffic. Valid action values are: allow, deny.
+      --dest-port-max int        The end of the destination port range. If the value is not present then the default value of 65535 will be the maximum port number.
+      --dest-port-min int        The start of the destination port range. If the value is not present then the default value of 1 will be the minimum port number.
+  -i, --icmp-type string         The ICMP packet type affected by ICMP rules. Valid values are: all, echo, echo-reply, source-quench, time-exceeded, destination-unreach.
+  -p, --protocol string          The protocol of the network traffic. Valid values are: all, icmp, tcp, udp.
+  -g, --remote-group-id string   The unique identifier of the remote network address group or network security group.
+  -r, --remote-type string       Specifies the type of remote group that defines the origin of network traffic for rule matching.
+                                 Remote groups represent MAC addresses, IP addresses, CIDRs, or external CIDRs.
+                                 Valid values are: default-network-address-group, network-address-group, network-security-group.
+                                 The "default-network-address-group" is a network address group that specifies all external network traffic.
+      --src-port-max int         The end of the source port range. If the value is not present then the default value of 65535 will be the maximum port number.
+      --src-port-min int         The start of the source port range. If the value is not present then the default value of 1 will be the minimum port number.
+  -t, --tcp-flags strings        Comma separated list of TCP flag options. Valid values are: syn, ack, fin, rst.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group rule-add 43064761-948f-469d-ac8e-b8e5f0d6056f --action allow --protocol all --remote-type network-address-group --remote-group-id 85716e61-948f-309d-de8b-c4e5f0d3126d
+    ibmcloud pi network-security-group rule-add 43064761-948f-469d-ac8e-b8e5f0d6056f --action allow --protocol tcp --dest-port-min 1200 --dest-port-max 37465 --src-port-min 1000 --src-port-max 20000 --tcp-flags "syn,ack,fin" --remote-type network-security-group --remote-group-id 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+### `ibmcloud pi network-security-group rule-remove`
+{: #ibmcloud-pi-network-security-group-rule-remove}
+
+**Alias**: `rule-remove, rr`
+
+**Description**: Remove a rule from a network security group.
+
+**Usage**:
+
+```bash
+rule-remove NETWORK_SECURITY_GROUP_ID --rule-id RULE_ID
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -r, --rule-id string   The id of the network security group rule to be removed.
+```
+
+**Examples**:
+
+```bash
+    ibmcloud pi network-security-group rule-remove 43064761-948f-469d-ac8e-b8e5f0d6056 --rule-id 85716e61-948f-309d-de8b-c4e5f0d3126d
+```
+
+---
+
+### `ibmcloud pi network-security-group update`
+{: #ibmcloud-pi-network-security-group-update}
+
+**Alias**: `update, upd`
+
+**Description**: Update a network security group.
+
+**Usage**:
+
+```bash
+update NETWORK_SECURITY_GROUP_ID --name NAME
+
+  NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
+```
+
+**Available Options**:
+
+```bash
+  -n, --name string   New name of the network security group.
+```
+
+---
+
 ## `ibmcloud pi placement-group`
 {: #ibmcloud-pi-placement-group}
 
 **Alias**: `placement-group, pg`
 
-**Description**: IBM Cloud Power Virtual Server Placement Groups.
+**Description**: IBM Cloud Power Virtual Server placement groups.
 
 **Usage**: `placement-group`
 
@@ -1776,7 +2453,7 @@ create PLACEMENT_GROUP_NAME --policy POLICY [--user-tags USER_TAG1[,USER_TAGn]]
 **Examples**:
 
 ```bash
-    ibmcloud pi placement-group test-placement-group --policy anti-affinity
+    ibmcloud pi placement-group create test-placement-group --policy anti-affinity
 ```
 
 ---
@@ -1889,7 +2566,7 @@ server-remove PLACEMENT_GROUP_ID --server INSTANCE_ID
 
 **Alias**: `route, rt`
 
-**Description**: IBM Cloud Power Virtual Server Network Routes.
+**Description**: IBM Cloud Power Virtual Server network routes.
 
 **Usage**: `route`
 
@@ -2035,7 +2712,7 @@ update ROUTE_ID [--action ACTION] [--advertise ("enable" | "disable")]
 
 **Alias**: `shared-processor-pool, spp`
 
-**Description**: IBM Cloud Power Virtual Server Shared Processor Pools.
+**Description**: IBM Cloud Power Virtual Server shared processor pools.
 
 **Usage**: `shared-processor-pool`
 
@@ -2045,7 +2722,7 @@ update ROUTE_ID [--action ACTION] [--advertise ("enable" | "disable")]
 - `delete`:    Delete a shared processor pool.
 - `get`:    View details of a shared processor pool.
 - `list`:    List all shared processor pools.
-- `placement-group`:    IBM Cloud Power Virtual Server Placement Groups.
+- `placement-group`:    IBM Cloud Power Virtual Server placement groups.
 - `update`:    Update a shared processor pool.
 
 ---
@@ -2077,7 +2754,7 @@ create SHARED_PROCESSOR_POOL_NAME --host-group HOST_GROUP --reserved-cores NUMBE
 **Examples**:
 
 ```bash
-    ibmcloud pi shared-processor-pool create test-shared-processor-pool --host-group e980 --reserver-cores 2 --placement-group-id 43064761-948f-469d-ac8e-b8e5f0d6056f
+    ibmcloud pi shared-processor-pool create test-shared-processor-pool --host-group e980 --reserved-cores 2 --placement-group-id 43064761-948f-469d-ac8e-b8e5f0d6056f
 ```
 
 ---
@@ -2132,7 +2809,7 @@ get SHARED_PROCESSOR_POOL_ID
 
 **Alias**: `placement-group, pg`
 
-**Description**: IBM Cloud Power Virtual Server Placement Groups.
+**Description**: IBM Cloud Power Virtual Server placement groups.
 
 **Usage**: `placement-group`
 
@@ -2304,166 +2981,12 @@ update SHARED_PROCESSOR_POOL_ID [--name SHARED_PROCESSOR_POOL_NAME] [--reserved-
 
 ---
 
-## `ibmcloud pi snapshot`
-{: #ibmcloud-pi-snapshot}
-
-**Alias**: `snapshot, snap`
-
-**Description**: [DEPRECATED] IBM Cloud Power Virtual Server Snapshots.
-
-**Usage**: `snapshot`
-
-**Available Commands**:
-
-- `create`:    [DEPRECATED] Create a snapshot.
-- `delete`:    [DEPRECATED] Delete a snapshot.
-- `get`:    [DEPRECATED] View details of a snapshot.
-- `list`:    [DEPRECATED] List all snapshots.
-- `restore`:    [DEPRECATED] Restore a snapshot.
-- `update`:    [DEPRECATED] Update a snapshot.
-
----
-
-### `ibmcloud pi snapshot create`
-{: #ibmcloud-pi-snapshot-create}
-
-**Alias**: `create, cr`
-
-**Description**: [DEPRECATED] Create a snapshot.
-
-**Usage**:
-
-```bash
-create INSTANCE_ID --name SNAPSHOT_NAME [--description DESCRIPTION] [--user-tags USER_TAG1[,USER_TAGn]] [--volumes VOLUME1[,VOLUMEn]]
-
-  INSTANCE_ID: The unique identifier or name of the instance.
-```
-
-**Available Options**:
-
-```bash
-  -d, --description string   Snapshot description.
-  -n, --name string          Name of the snapshot.
-  -u, --user-tags strings    Comma separated list of user tags to be attached to the snapshot.
-  -v, --volumes strings      Comma separated list of volume identifiers or names to include in the snapshot.
-                             If you do not specify this option or if the volumes list is empty,
-                             all the volumes that are attached to the instance are included in the snapshot.
-```
-
-**Examples**:
-
-```bash
-    ibmcloud pi snapshot create 85716e61-948f-309d-de8b-c4e5f0d3126d --name test-snapshot-name
-```
-
----
-
-### `ibmcloud pi snapshot delete`
-{: #ibmcloud-pi-snapshot-delete}
-
-**Alias**: `delete, del`
-
-**Description**: [DEPRECATED] Delete a snapshot.
-
-**Usage**:
-
-```bash
-delete SNAPSHOT_ID
-
-  SNAPSHOT_ID: The unique identifier of the snapshot.
-```
-
----
-
-### `ibmcloud pi snapshot get`
-{: #ibmcloud-pi-snapshot-get}
-
-**Alias**: `get`
-
-**Description**: [DEPRECATED] View details of a snapshot.
-
-**Usage**:
-
-```bash
-get SNAPSHOT_ID
-
-  SNAPSHOT_ID: The unique identifier of the snapshot.
-```
-
----
-
-### `ibmcloud pi snapshot list`
-{: #ibmcloud-pi-snapshot-list}
-
-**Alias**: `list, ls`
-
-**Description**: [DEPRECATED] List all snapshots.
-
-**Usage**: `list`
-
----
-
-### `ibmcloud pi snapshot restore`
-{: #ibmcloud-pi-snapshot-restore}
-
-**Alias**: `restore, res`
-
-**Description**: [DEPRECATED] Restore a snapshot.
-
-**Usage**:
-
-```bash
-restore INSTANCE_ID --snapshot SNAPSHOT_ID [--force] [--restore VALUE]
-
-  INSTANCE_ID: The unique identifier or name of the instance.
-```
-
-**Available Options**:
-
-```bash
-  -f, --force             By default the VM must be shutoff during a snapshot restore, force set to true will relax the VM shutoff pre-condition.
-  -r, --restore string    Action to take on a failed snapshot restore. Valid values are: "retry", "rollback".
-  -s, --snapshot string   The unique identifier of the snapshot.
-```
-
-**Examples**:
-
-```bash
-    ibmcloud pi snapshot restore 85716e61-948f-309d-de8b-c4e5f0d3126d --snapshot 43064761-948f-469d-ac8e-b8e5f0d6056f --force --restore retry
-```
-
----
-
-### `ibmcloud pi snapshot update`
-{: #ibmcloud-pi-snapshot-update}
-
-**Alias**: `update, upd`
-
-**Description**: [DEPRECATED] Update a snapshot.
-
-**Usage**:
-
-```bash
-update SNAPSHOT_ID [--description DESCRIPTION] [--name NAME]
-
-  SNAPSHOT_ID: The unique identifier of the snapshot.
-```
-
-**Available Options**:
-
-```bash
-  -d, --description string   New snapshot description.
-  -n, --name string          New name of the snapshot.
-```
-
----
-
 ## `ibmcloud pi ssh-key`
 {: #ibmcloud-pi-ssh-key}
 
 **Alias**: `ssh-key, ssh`
 
-**Description**: IBM Cloud Power Virtual Server SSH-Keys.
+**Description**: IBM Cloud Power Virtual Server ssh-keys.
 
 **Usage**: `ssh-key`
 
@@ -2611,7 +3134,7 @@ update KEY_NAME [--description DESCRIPTION] [--key KEY] [--name NAME] [--visibil
 
 **Alias**: `subnet, snet`
 
-**Description**: IBM Cloud Power Virtual Server Subnets.
+**Description**: IBM Cloud Power Virtual Server subnets.
 
 **Usage**: `subnet`
 
@@ -2751,7 +3274,7 @@ update SUBNET_ID [--advertise ("enable" | "disable")] [--arp-broadcast ("enable"
 
 **Alias**: `virtual-serial-number, vsn`
 
-**Description**: IBM Cloud Power Virtual Server Virtual Serial Number.
+**Description**: IBM Cloud Power Virtual Server virtual serial number.
 
 **Usage**: `virtual-serial-number`
 
@@ -2861,7 +3384,7 @@ update VIRTUAL_SERIAL_NUMBER [--description DESCRIPTION]
 
 **Alias**: `volume, vol`
 
-**Description**: IBM Cloud Power Virtual Server Volumes.
+**Description**: IBM Cloud Power Virtual Server volumes.
 
 **Usage**: `volume`
 
@@ -2869,16 +3392,20 @@ update VIRTUAL_SERIAL_NUMBER [--description DESCRIPTION]
 
 - `action`:    Perform an action on a volume.
 - `bulk-delete`:    Delete multiple volumes.
-- `clone`:    IBM Cloud Power Virtual Server Volume Clone Requests. This command can be used to create clone requests whose lifecycle must be managed. It cannot be used to clone single volumes.
-- `clone-async`:    IBM Cloud Power Virtual Server Volume Clones. This command asynchronously creates clone tasks whose status can be queried. It can be used to clone one or more volumes.
+- `clone`:    IBM Cloud Power Virtual Server volume clone requests. This command
+can be used to create clone requests whose lifecycle must be managed.
+It cannot be used to clone single volumes.
+- `clone-async`:    IBM Cloud Power Virtual Server volume clones. This command
+asynchronously creates clone tasks whose status can be queried.
+It can be used to clone one or more volumes.
 - `create`:    Create a volume.
 - `delete`:    Delete a volume.
 - `flash-copy-mapping`:    Get a list of flash copy mappings of a volume directly from primary storage host.
 - `get`:    View details of a volume.
 - `list`:    List all storage volumes in a workspace.
-- `onboarding`:    IBM Cloud Power Virtual Server Volume Onboarding.
+- `onboarding`:    IBM Cloud Power Virtual Server volume onboarding.
 - `remote-copy-relationship`:    Get the remote copy relationship information of a volume.
-- `snapshot`:    IBM Cloud Power Virtual Server Volume Snapshot.
+- `snapshot`:    IBM Cloud Power Virtual Server volume snapshot.
 - `update`:    Update a volume.
 
 ---
@@ -2936,7 +3463,9 @@ action VOLUME_ID [--replication-enabled=True|False] [--target-tier STORAGE_TIER]
 
 **Alias**: `clone, cl`
 
-**Description**: IBM Cloud Power Virtual Server Volume Clone Requests. This command can be used to create clone requests whose lifecycle must be managed. It cannot be used to clone single volumes.
+**Description**: IBM Cloud Power Virtual Server volume clone requests. This command
+can be used to create clone requests whose lifecycle must be managed.
+It cannot be used to clone single volumes.
 
 **Usage**: `clone`
 
@@ -3139,7 +3668,9 @@ start VOLUME_CLONE_REQUEST_ID
 
 **Alias**: `clone-async, cla`
 
-**Description**: IBM Cloud Power Virtual Server Volume Clones. This command asynchronously creates clone tasks whose status can be queried. It can be used to clone one or more volumes.
+**Description**: IBM Cloud Power Virtual Server volume clones. This command
+asynchronously creates clone tasks whose status can be queried.
+It can be used to clone one or more volumes.
 
 **Usage**: `clone-async`
 
@@ -3327,7 +3858,7 @@ get VOLUME_ID
 
 **Alias**: `onboarding, on`
 
-**Description**: IBM Cloud Power Virtual Server Volume Onboarding.
+**Description**: IBM Cloud Power Virtual Server volume onboarding.
 
 **Usage**: `onboarding`
 
@@ -3415,7 +3946,7 @@ remote-copy-relationship VOLUME_ID
 
 **Alias**: `snapshot, snap`
 
-**Description**: IBM Cloud Power Virtual Server Volume Snapshot.
+**Description**: IBM Cloud Power Virtual Server volume snapshot.
 
 **Usage**: `snapshot`
 
@@ -3485,7 +4016,7 @@ update VOLUME_ID [--bootable=True|False] [--name NAME] [--size SIZE] [--shareabl
 
 **Alias**: `volume-group, vg`
 
-**Description**: IBM Cloud Power Virtual Server Volume Groups.
+**Description**: IBM Cloud Power Virtual Server volume groups.
 
 **Usage**: `volume-group`
 
@@ -3689,7 +4220,7 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME1[,VOLUMEn]"] [--remove-m
 
 **Alias**: `workspace, ws`
 
-**Description**: IBM Cloud Power Virtual Server Workspaces.
+**Description**: IBM Cloud Power Virtual Server workspaces.
 
 **Usage**: `workspace`
 
@@ -3698,6 +4229,7 @@ update VOLUME_GROUP_ID [--add-member-volume-ids "VOLUME1[,VOLUMEn]"] [--remove-m
 - `context`:    Display the CRN of the currently targeted workspace.
 - `create`:    Create a workspace.
 - `delete`:    Delete a workspace.
+- `get`:    View details of a workspace.
 - `list`:    List all workspaces for this account.
 - `target`:    Target a workspace.
 
@@ -3765,6 +4297,23 @@ create WORKSPACE_NAME --datacenter DATACENTER --group RESOURCE_GROUP --plan PLAN
 delete (WORKSPACE_CRN | WORKSPACE_ID)
 
   WORKSPACE_CRN:  The cloud resource name that uniquely identifies IBM Cloud resources.
+
+  WORKSPACE_ID: The unique identifier of the workspace.
+```
+
+---
+
+### `ibmcloud pi workspace get`
+{: #ibmcloud-pi-workspace-get}
+
+**Alias**: `get`
+
+**Description**: View details of a workspace.
+
+**Usage**:
+
+```bash
+get WORKSPACE_ID
 
   WORKSPACE_ID: The unique identifier of the workspace.
 ```
