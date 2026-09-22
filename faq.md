@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-22"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -89,7 +89,7 @@ If you like to compare your current environment's performance to what's availabl
 
 Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, E1180) into a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
 
-When you configure a VSI on Power11, you make infrastructure decisions based on operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You cannot select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
+When you configure a VSI on Power11, you make infrastructure decisions based on operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
 
 Power9 and Power10 machine types continue to use the existing selection model, where you choose a specific machine type when you create a VSI.
 
