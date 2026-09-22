@@ -163,27 +163,27 @@ When you overwrite the OS disk of a Linux VSI with a previously created disk ima
 
 To avoid losing connectivity to the metadata service endpoint, take one of the following actions:
 
-* Remove the network persistence rules before you perform the capture
-* Note the MAC address of the interface to restore the configuration
+* [Remove the network persistence rules](#reconfigure-linux-remove-rules) before you capture the image.
+* [Record the MAC address](#reconfigure-linux-before) of the interface before you overwrite the OS disk with an image.
 
-#### Removing network persistence rules before capture
+#### Removing network persistence rules before capturing the image
 {: #reconfigure-linux-remove-rules}
 
 To prevent network configuration loss by removing network persistence rules before you capture the image, complete the following steps:
 
-1. Run the following command to back up the file that contains network persistence rules, including the MAC address:
+1. Run the following command to back up the file that contains the network persistence rules, including the MAC address:
 
    ```bash
    cp /etc/udev/rules.d/70-persistent-net.rules /home/admin/.
    ```
    {: pre}
 
-   The `admin` user might not exist in your environment. Adjust the path as needed for your environment.
+   The `admin` user might not exist in your environment. Modify the path for your environment.
    {: note}
 
 2. Delete the contents of the `/etc/udev/rules.d/70-persistent-net.rules` file. Ensure that file permissions are retained.
 
-3. Run the following command to back up the file that generates network persistence rules:
+3. Run the following command to back up the file that generates the network persistence rules:
 
    ```bash
    cp /lib/udev/rules.d/85-persistent-net-generator.rules /home/admin/.
@@ -192,12 +192,12 @@ To prevent network configuration loss by removing network persistence rules befo
 
 4. Delete the contents of the `/lib/udev/rules.d/85-persistent-net-generator.rules` file. Ensure that file permissions are retained.
 
-### Before overwriting your image
+### Recording the MAC address before overwriting your image
 {: #reconfigure-linux-before}
 
-If you prefer to keep the network persistence rules in place, record the MAC address of the interface that communicates with the metadata service endpoint. After you overwrite the boot disk of your VSI with the saved image, you can reconfigure the interface by using the MAC address.
+If you want to retain the network persistence rules, record the MAC address of the interface that communicates with the metadata service endpoint. After you overwrite the boot disk of your VSI with the saved image, you can reconfigure the interface by using the MAC address.
 
-To record the MAC address before you overwrite your image, complete the following steps:
+To record the MAC address before you overwrite the OS disk with an image, complete the following steps:
 
 1. Run the following command to identify the metadata service interface:
 
@@ -215,18 +215,20 @@ To record the MAC address before you overwrite your image, complete the followin
    ```
    {: screen}
 
-2. Record the MAC address from the output. In this example: `fa:16:3e:a1:b2:c3`.
+2. Record the MAC address from the output.
 
-   Alternatively, run the following command to retrieve only the MAC address:
+   In this example, the MAC address is `fa:16:3e:a1:b2:c3`.
+
+3. Optional: Run the following command to retrieve only the MAC address:
 
    ```bash
    ip link show eth1 | grep link/ether | awk '{print $2}'
    ```
    {: pre}
 
-   Replace `eth1` with the interface name from the output in step 1.
+   Replace `eth1` with the interface name from the previous output.
 
-3. Save this MAC address to use it after the image overwrite.
+4. Save the MAC address to reconfigure the metadata service interface after the OS disk overwrite.
 
 ### After overwriting your image
 {: #reconfigure-linux-after}
