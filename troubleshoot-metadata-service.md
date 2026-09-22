@@ -230,19 +230,19 @@ To record the MAC address before you overwrite the OS disk with an image, comple
 
 4. Save the MAC address to reconfigure the metadata service interface after the OS disk overwrite.
 
-### After overwriting your image
+### Reconfiguring the metadata service interface after the OS disk overwrite
 {: #reconfigure-linux-after}
 
-If you removed the network persistence rules before the image capture, no further configuration is required. If you kept the network persistence rules in place and recorded the MAC address, complete the following steps to reconfigure the metadata service interface:
+If you remove the network persistence rules before you capture the image, you do not need to configure the metadata service interface after the OS disk overwrite. If you retain the network persistence rules and record the MAC address, complete the following steps to reconfigure the metadata service interface:
 
-1. Run the following command to identify the interface that has the MAC address that you recorded:
+1. Run the following command to identify the interface with the MAC address that you record:
 
    ```bash
    ip link show | grep -B 1 "fa:16:3e:a1:b2:c3"
    ```
    {: pre}
 
-   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you recorded in step 2 of the [Before overwriting your image](#reconfigure-linux-before) section.
+   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you record in step 2 of the [Recording the MAC address before overwriting your image](#reconfigure-linux-before) section.
 
    The output shows the metadata service interface name (for example, `eth1`, `ens4`).
 
