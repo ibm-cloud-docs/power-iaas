@@ -242,16 +242,18 @@ If you remove the network persistence rules before you capture the image, you do
    ```
    {: pre}
 
-   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you record in step 2 of the [Recording the MAC address before overwriting your image](#reconfigure-linux-before) section.
+   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you record in the [Recording the MAC address before overwriting your image](#reconfigure-linux-before) section.
 
-   The output shows the metadata service interface name (for example, `eth1`, `ens4`).
+   The output shows the metadata service interface name (for example, `eth1` or `ens4`).
 
-2. Configure the interface by using the following procedures for your Linux distribution.
+2. Configure the interface based on your Linux distribution.
 
-#### For RHEL or CentOS 7 and earlier
+   The following procedures are organized by Linux distribution and network management tool. RHEL or CentOS 7 and earlier versions use the `network` service, RHEL or CentOS 8 and later versions use `NetworkManager`, and SLES uses `wicked`.
+
+#### Configuring the interface on RHEL or CentOS 7 and earlier versions
 {: #reconfigure-linux-rhel7}
 
-To configure the metadata service interface on RHEL or CentOS 7 and earlier, complete the following steps:
+To configure the metadata service interface on RHEL or CentOS 7 and earlier versions, complete the following steps:
 
 1. Create or edit the `/etc/sysconfig/network-scripts/ifcfg-eth1` file with the following content:
 
@@ -273,10 +275,12 @@ To configure the metadata service interface on RHEL or CentOS 7 and earlier, com
    ```
    {: pre}
 
-#### For RHEL or CentOS 8 and later (using NetworkManager)
+   The network service restarts and applies the new interface configuration.
+
+#### Configuring the interface on RHEL or CentOS 8 and later versions by using NetworkManager
 {: #reconfigure-linux-rhel8}
 
-To configure the metadata service interface on RHEL or CentOS 8 and later with NetworkManager, run the following commands:
+To configure the metadata service interface on RHEL or CentOS 8 and later versions with NetworkManager, run the following commands:
 
 ```bash
 nmcli connection add type ethernet con-name trusted-profile ifname eth1 ip4 169.254.169.253/30
@@ -284,9 +288,11 @@ nmcli connection up trusted-profile
 ```
 {: pre}
 
+The connection is activated and the interface is configured with the metadata service IP address.
+
 Replace `eth1` with your metadata service interface name.
 
-#### For SLES (using wicked)
+#### Configuring the interface on SLES by using wicked
 {: #reconfigure-linux-sles}
 
 To configure the metadata service interface on SLES by using wicked, complete the following steps:
@@ -308,6 +314,8 @@ To configure the metadata service interface on SLES by using wicked, complete th
    wicked ifup eth1
    ```
    {: pre}
+
+   The interface is brought up with the metadata service IP address.
 
    Replace `eth1` with your metadata service interface name.
 
