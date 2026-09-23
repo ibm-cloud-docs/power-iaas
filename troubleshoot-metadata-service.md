@@ -353,7 +353,7 @@ To verify that the metadata service interface is configured correctly and is act
    ```
    {: pre}
 
-   If the VSI cannot reach the metadata service, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
+   If the command succeeds, it returns a JSON response with an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the VSI cannot reach the metadata service endpoint, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
 
 ## Removing network interfaces after disabling the metadata service on AIX
 {: #aix-metadata-interface-removal}
@@ -445,11 +445,13 @@ To remove the metadata service network interface, complete the following steps:
    Do not delete the connection for your primary network interface.
    {: important}
 
+   The connection is deleted from your OS configuration.
+
 ## Troubleshooting metadata service connectivity on AIX
 {: #troubleshoot-aix}
 {: troubleshoot}
 
-If your AIX VSI cannot reach the metadata service endpoint, complete the following steps to validate and restore connectivity
+If your AIX VSI cannot reach the metadata service endpoint, complete the following steps to validate and restore connectivity.
 {: shortdesc}
 
 ### Validating and restoring network connectivity
@@ -464,9 +466,9 @@ To validate and restore network connectivity to the metadata service endpoint, c
    ```
    {: pre}
 
-2. If the IP address is not present in the output, identify an interface that does not have an IP address assigned.
+2. If the IP address is present in the output, go to step 5 to validate connectivity. If the IP address is not present in the output, identify an interface that does not have an IP address assigned.
 
-3. Run the following command to configure the IP address and bring the interface up:
+3. Run the following command to configure the IP address and bring up the interface:
 
    ```bash
    chdev -l en2 -a netaddr=169.254.169.253 -a netmask=255.255.0.0 -a state=up
@@ -491,9 +493,7 @@ To validate and restore network connectivity to the metadata service endpoint, c
    ```
    {: pre}
 
-   This command retrieves an instance identity token from the metadata service.
-
-If you still cannot communicate with the metadata service endpoint, contact [IBM Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+   If the command succeeds, it returns a JSON response with an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the command fails or returns an error, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Troubleshooting metadata service connectivity on Linux
 {: #troubleshoot-linux}
@@ -502,7 +502,7 @@ If you still cannot communicate with the metadata service endpoint, contact [IBM
 If your Linux VSI cannot reach the metadata service endpoint, complete the following steps to validate and restore connectivity.
 {: shortdesc}
 
-### Validating the network configuration
+### Validating the metadata service network configuration
 {: #troubleshoot-linux-validate}
 
 To validate the metadata service network configuration, complete the following steps:
@@ -514,9 +514,11 @@ To validate the metadata service network configuration, complete the following s
    ```
    {: pre}
 
-2. If the IP address is not present in the output, identify an interface that does not have an IP address assigned. Then, configure the IP address on that interface by following the steps in [After overwriting your image](#reconfigure-linux-after).
+2. If the IP address is present in the output, the interface is configured correctly. If the IP address is not present in the output, identify an interface that does not have an IP address assigned.
 
-### Troubleshooting when the interface is configured but unreachable
+3. Configure the IP address on that interface by following the steps in [Reconfiguring the metadata service interface](#reconfigure-linux-after).
+
+### Troubleshooting an unreachable metadata service endpoint
 {: #troubleshoot-linux-unreachable}
 
 If the metadata service interface is configured but you cannot reach the metadata service endpoint at `169.254.169.254`, complete the following steps:
@@ -530,9 +532,9 @@ If the metadata service interface is configured but you cannot reach the metadat
 
    Replace `eth1` with your metadata service interface name.
 
-   The output should show a route for the `169.254.169.252/30` network.
+   The output shows a route for the `169.254.169.252/30` network. If the route is not present, reconfigure the metadata service interface by following the steps in [Reconfiguring the metadata service interface](#reconfigure-linux-after).
 
-2. Run the following commands to check firewall rules:
+2. Run one of the following commands to verify the firewall rules, depending on your firewall tool:
 
    For `firewalld`:
 
@@ -548,9 +550,9 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   If necessary, add a rule to allow traffic to IP address `169.254.169.254`.
+3. Optional: Add a rule to allow traffic to IP address `169.254.169.254`.
 
-3. Run the following command to verify that no conflicting routes exist:
+4. Run the following command to verify that no conflicting routes exist:
 
    ```bash
    ip route show | grep 169.254
@@ -579,7 +581,7 @@ If the interface configuration is in place but the interface does not activate, 
    ```
    {: pre}
 
-   The status should show `VARIED ON`.
+   The status shows `VARIED ON`.
 
 2. If the line is varied off, run the following command to vary it on:
 
@@ -632,7 +634,7 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   The output should show a route for the `169.254.169.252/30` network associated with your metadata service interface.
+   The output shows a route for the `169.254.169.252/30` network associated with your metadata service interface.
 
    If you see conflicting routes or interface configurations, carefully review the routes before making any changes. Your custom image might include configurations that were intentionally set for your environment. Removing or modifying configurations without understanding their purpose might disrupt other network connectivity. Ensure that any changes do not break other intentional network configurations.
    {: important}
@@ -644,7 +646,7 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   The interface with IP address `169.254.169.253` should show status `Active`.
+   The interface with IP address `169.254.169.253` shows the status `Active`.
 
 3. Run the following command to verify that the line description is varied on:
 
@@ -653,7 +655,7 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   The line description status should show `VARIED ON`.
+   The line description status shows `VARIED ON`.
 
 4. Run the following command to access the TCP/IP configuration menu:
 
@@ -666,4 +668,4 @@ If the metadata service interface is configured but you cannot reach the metadat
 
 5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another `CMN*` device might be available but unconfigured.
 
-If you are still unable to communicate with the metadata service endpoint, contact [IBM Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If you are still unable to communicate with the metadata service endpoint, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
