@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-23"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -19,9 +19,10 @@ subcollection: power-iaas
 ---
 
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -158,7 +159,7 @@ ibmcloud resource service-instance WORKSPACE_CRN -o json
 
 Verify that the output contains the `resourceCRNs` property with a value of `true`:
 
-```sh
+```json
 "extensions": {
             "resourceCRNs": true
         },

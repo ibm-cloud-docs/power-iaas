@@ -94,6 +94,7 @@ toc:
           topics:
           - configuring-private-subnet.md
           - static-routes.md
+          - Network-security-group.md
           - subnet-arp-broadcast-oracle-rac.md
           - X86-based-systems.md
       - topicgroup:
@@ -101,7 +102,6 @@ toc:
           topics:
           - new-network-architecture.md
           - getting-started-PER.md
-          - Network-security-group.md
           - powervs-public-network-setup.md
           - vpn-connections.md
           - network-security.md
