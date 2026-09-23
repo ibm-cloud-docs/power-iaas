@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-23"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -248,7 +248,7 @@ If you remove the network persistence rules before you capture the image, you do
 
 2. Configure the interface based on your Linux distribution.
 
-   The following procedures are organized by Linux distribution and network management tool. RHEL or CentOS 7 and earlier versions use the `network` service, RHEL or CentOS 8 and later versions use `NetworkManager`, and SLES uses `wicked`.
+   The following procedures are organized by Linux distribution and network management tool. RHEL or CentOS 7 and earlier versions use the network service, RHEL or CentOS 8 and later versions use NetworkManager, and SLES uses the Wicked network management tool.
 
 #### Configuring the interface on RHEL or CentOS 7 and earlier versions
 {: #reconfigure-linux-rhel7}
@@ -290,14 +290,14 @@ nmcli connection up trusted-profile
 
 The connection is activated and the interface is configured with the metadata service IP address.
 
-Replace `eth1` with your metadata service interface name.
+Replace `trusted-profile` with a connection name of your choice and `eth1` with your metadata service interface name.
 
-#### Configuring the interface on SLES by using wicked
+#### Configuring the interface on SLES by using Wicked
 {: #reconfigure-linux-sles}
 
-To configure the metadata service interface on SLES by using wicked, complete the following steps:
+To configure the metadata service interface on SLES by using the Wicked network management tool, complete the following steps:
 
-1. Edit the `/etc/sysconfig/network/ifcfg-eth1` file with the following content:
+1. Create or edit the `/etc/sysconfig/network/ifcfg-eth1` file with the following content:
 
    ```text
    BOOTPROTO='static'
@@ -308,21 +308,21 @@ To configure the metadata service interface on SLES by using wicked, complete th
 
    Replace `eth1` with your metadata service interface name.
 
-2. Run the following command to restart the network:
+2. Run the following command to bring up the metadata service interface:
 
    ```bash
    wicked ifup eth1
    ```
    {: pre}
 
-   The interface is brought up with the metadata service IP address.
+   The metadata service interface is brought up with the metadata service IP address.
 
    Replace `eth1` with your metadata service interface name.
 
 ### Verifying the metadata service interface configuration
 {: #reconfigure-linux-verify}
 
-To verify that the metadata service interface is configured correctly and active, complete the following steps:
+To verify that the metadata service interface is configured correctly and is active, complete the following steps:
 
 1. Run the following command to verify the interface configuration:
 
@@ -340,11 +340,11 @@ To verify that the metadata service interface is configured correctly and active
    ```
    {: screen}
 
-2. Verify that the metadata service interface is configured to start automatically on boot:
+2. Verify that the metadata service interface starts automatically when the system boots:
 
-   * For RHEL or CentOS 7 and earlier: Verify that the `ONBOOT` parameter is set to `yes` in the interface configuration file.
+   * For RHEL or CentOS 7 and earlier: Verify that the `ONBOOT` parameter is set to `yes` in the `/etc/sysconfig/network-scripts/ifcfg-eth1` file, where `eth1` is your metadata service interface name.
 
-   * For NetworkManager-based systems: NetworkManager configures the connection to start automatically on boot.
+   * For NetworkManager-based systems: NetworkManager configures the connection to start automatically when the system boots.
 
 3. Run the following command to verify that the VSI can reach the metadata service and request an identity token:
 
@@ -352,6 +352,8 @@ To verify that the metadata service interface is configured correctly and active
    curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Accept: application/json"
    ```
    {: pre}
+
+   If the VSI cannot reach the metadata service, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
 
 ## Steps to perform within AIX after disabling access to the metadata service endpoint
 {: #aix-metadata-interface-removal}
