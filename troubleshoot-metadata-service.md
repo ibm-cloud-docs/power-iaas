@@ -355,12 +355,12 @@ To verify that the metadata service interface is configured correctly and is act
 
    If the VSI cannot reach the metadata service, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
 
-## Steps to perform within AIX after disabling access to the metadata service endpoint
+## Removing network interfaces after disabling the metadata service on AIX
 {: #aix-metadata-interface-removal}
 
-When you disable access to the metadata service on an AIX VSI, the network interfaces are not automatically removed. Network interfaces that are left in a "Defined" state require cleanup.
+When you [disable access to the metadata service](/docs/power-iaas?topic=power-iaas-instance_metadata_pvs#metadata-disable-instance-ui) on an AIX VSI, the network interfaces are not automatically removed. Network interfaces that are left in a `Defined` state must be removed.
 
-To clean up the metadata service network interfaces, complete the following steps:
+To remove the metadata service network interfaces, complete the following steps:
 
 1. Run the following command to list all network adapters:
 
@@ -369,7 +369,7 @@ To clean up the metadata service network interfaces, complete the following step
    ```
    {: pre}
 
-2. From the output, identify the adapter that is in the "Defined" state.
+2. From the output, identify and record the adapter number that is in the `Defined` state.
 
 3. Run the following command to display the adapter attributes:
 
@@ -378,9 +378,9 @@ To clean up the metadata service network interfaces, complete the following step
    ```
    {: pre}
 
-   Replace `<X>` with the adapter number that you identified in step 2.
+   Replace `<X>` with the adapter number that you recorded.
 
-4. Verify that the IP address shown in the output is `169.254.169.253`.
+4. Verify that the IP address in the output is `169.254.169.253`.
 
 5. Run the following commands to remove the logical and physical device entries:
 
@@ -390,14 +390,14 @@ To clean up the metadata service network interfaces, complete the following step
    ```
    {: pre}
 
-   Replace `<X>` with the adapter number from step 2.
+   Replace `<X>` with the adapter number that you recorded.
 
-## Cleaning up network interfaces after disabling the metadata service on Linux
+## Removing network interfaces after disabling the metadata service on Linux
 {: #cleanup-linux}
 
-If you use the `force_disable` flag during a VSI edit, you must clean up the network interface that the metadata service used. The tool that configures the metadata service interface varies based on the Linux distribution. The following example uses NetworkManager and the `nmcli` command to remove the connection.
+If you use the `force_disable` flag during a VSI edit, you must remove the network interface that the metadata service used. The tool that configures the metadata service interface varies based on the Linux distribution. The following example uses NetworkManager and the `nmcli` command to remove the connection.
 
-To clean up the metadata service network interface, complete the following steps:
+To remove the metadata service network interface, complete the following steps:
 
 1. Run the following command to identify the interface with the IP address `169.254.169.253`:
 
@@ -440,7 +440,7 @@ To clean up the metadata service network interface, complete the following steps
    ```
    {: pre}
 
-   Replace `<UUID>` with the UUID that you recorded from step 2.
+   Replace `<UUID>` with the UUID that you recorded.
 
    Ensure that you do not delete the connection for your primary network interface.
    {: important}
@@ -473,7 +473,7 @@ To validate and restore network connectivity to the metadata service endpoint, c
    ```
    {: pre}
 
-   Replace `en2` with the interface name that you identified in step 2.
+   Replace `en2` with the interface name that you identified.
 
 4. Run the following command to ensure that the interface is active:
 
