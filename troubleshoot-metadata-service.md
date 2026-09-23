@@ -395,7 +395,7 @@ To remove the metadata service network interfaces, complete the following steps:
 ## Removing network interfaces after disabling the metadata service on Linux
 {: #cleanup-linux}
 
-If you use the `force_disable` flag during a VSI edit, you must remove the network interface that the metadata service used. The tool that configures the metadata service interface varies based on the Linux distribution. The following example uses NetworkManager and the `nmcli` command to remove the connection.
+If you use the `--metadata-service-force-disable` option with the `ibmcloud pi instance update` command to disable the metadata service on an active Linux VSI, you must manually remove the network interface. The `--metadata-service-force-disable` option disables the metadata service but does not automatically remove the network interface. The tool that configures the metadata service interface varies based on the Linux distribution. The following example uses NetworkManager and the `nmcli` command to remove the network interface.
 
 To remove the metadata service network interface, complete the following steps:
 
@@ -413,7 +413,7 @@ To remove the metadata service network interface, complete the following steps:
    ```
    {: pre}
 
-   The output displays connection information in columns:
+   The output lists the connection name, UUID, type, and device for each connection:
 
    ```text
    NAME                UUID                                  TYPE      DEVICE
@@ -422,18 +422,18 @@ To remove the metadata service network interface, complete the following steps:
    ```
    {: screen}
 
-   Locate the connection that uses the interface name from step 1, and record the UUID (the second column).
+3. From the output, locate the connection that uses your metadata service interface name and record the UUID.
 
-   Alternatively, you can filter the output by using the interface name:
+4. Optional: Run the following command to filter the output by interface name:
 
    ```bash
    nmcli con show | grep <interface_name>
    ```
    {: pre}
 
-   Replace `<interface_name>` with the interface name from step 1. Record the UUID from the second column of the output.
+   Replace `<interface_name>` with your metadata service interface name. Record the UUID from the output.
 
-3. Run the following command to delete the connection from your OS configuration:
+5. Run the following command to delete the connection from your OS configuration:
 
    ```bash
    nmcli con delete <UUID>
@@ -442,7 +442,7 @@ To remove the metadata service network interface, complete the following steps:
 
    Replace `<UUID>` with the UUID that you recorded.
 
-   Ensure that you do not delete the connection for your primary network interface.
+   Do not delete the connection for your primary network interface.
    {: important}
 
 ## Troubleshooting metadata service connectivity on AIX
