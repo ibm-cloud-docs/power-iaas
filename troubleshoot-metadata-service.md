@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-09-23"
+lastupdated: "2026-09-24"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -559,31 +559,33 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
-   If you see conflicting routes, carefully review the routes before making any changes. Your custom image might include routes that were intentionally configured for your environment. Removing routes without understanding their purpose might disrupt other network connectivity. Ensure that removing a route does not break any other intentional network configurations.
+   If you see conflicting routes, review the routes carefully before making any changes. Your custom image might include routes that serve other purposes, and removing these routes might disrupt other network connectivity.
    {: important}
+
+After you address any firewall rules and conflicting routes, verify connectivity to the metadata service endpoint. If the issue persists, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Troubleshooting metadata service connectivity on IBM i
 {: #troubleshoot-ibmi}
 {: troubleshoot}
 
-If your IBM i VSI cannot reach the metadata service endpoint, use these procedures to diagnose and resolve the connectivity issue.
+If your IBM i VSI cannot reach the metadata service endpoint, complete the following steps to validate and restore connectivity.
 {: shortdesc}
 
-### Resolving interface activation issues
+### Resolving metadata service interface activation issues
 {: #troubleshoot-ibmi-activation}
 
-If the interface configuration is in place but the interface does not activate, complete the following steps:
+If the metadata service interface is configured but does not activate, complete the following steps:
 
-1. Run the following command to check the line description status:
+1. Run the following command to check the status of the line description:
 
    ```text
    WRKLIND LIND(METADATA)
    ```
    {: pre}
 
-   The status shows `VARIED ON`.
+   Verify that the status shows `VARIED ON`.
 
-2. If the line is varied off, run the following command to vary it on:
+2. If the status shows `VARIED OFF`, run the following command to activate the line description:
 
    ```text
    VRYCFG CFGOBJ(METADATA) CFGTYPE(*LIN) STATUS(*ON)
@@ -597,7 +599,7 @@ If the interface configuration is in place but the interface does not activate, 
    ```
    {: pre}
 
-   Look for messages that are related to the line description or TCP/IP interface.
+   Search for messages that are related to the line description or TCP/IP interface.
 
 4. Run the following command to verify that the resource name is correct and not in use by another line description:
 
@@ -608,7 +610,7 @@ If the interface configuration is in place but the interface does not activate, 
 
    Ensure that the resource is not allocated to another line description.
 
-5. Run the following command to check if the interface is set to autostart:
+5. Run the following command to verify that the Auto-Start setting for the interface is enabled:
 
    ```text
    NETSTAT *IFC
