@@ -103,7 +103,7 @@ To change the preferred processor compatibility mode of a VSI by using the {{sit
 2. Select the preferred processor compatibility mode from the **Preferred processor compatibility mode** list.
 3. Click **Save**.
 
-After you change the preferred processor compatibility mode of a VSI, you must shut down and then start the VSI for the changes to take effect. Only restarting the VSI does not activate the selected preferred processor compatibility mode. For more informaiton about shutting down and restarting a VSI, see [Shut down and restart a VSI](#shut-down-restart-vsi).
+After you change the preferred processor compatibility mode of a VSI, you must shut down and then start the VSI for the changes to take effect. Only restarting the VSI does not activate the selected preferred processor compatibility mode. For more informaiton about shutting down and restarting a VSI, see [Shutting down and restarting a VSI](#shut-down-restart-vsi).
 
 ### Changing the pinning state and server placement groups
 {: #edit-vsi-pinning-placement}
@@ -388,7 +388,7 @@ For more information about deleting a primary volume, see [Deleting a primary vo
 
 
 
-## Shut down and restart a VSI
+## Shutting down and restarting a VSI
 {: #shut-down-restart-vsi}
 
 To shut down the VSI, complete the following steps:
