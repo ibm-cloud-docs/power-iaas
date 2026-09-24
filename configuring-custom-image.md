@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -66,14 +66,19 @@ To view a list of the supported AIX, IBM i, and Linux operating system technolog
 
 The {{site.data.keyword.powerSys_notm}} offering supports the following versions of AIX operating system depending on the IBM Power server:
 
+
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-| Machine type                                                   | Supported AIX versions                                |
-| -------------------------------------------------------------- | ----------------------------------------------------- |
-| * S922 (9009-22A) \n * E980 (9080-M9S)                         | AIX 7.1 or later                                      |
-| * E1080 (9080-HEX) \n * S1022 (9105-22A)                       | AIX 7.1 TL5 or later                                  |
-| * S1122 (9824-22A) \n * E1150 (9043-MRU) \n * E1180 (9080-HEU) | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
+| Machine type                             | Supported AIX versions                                |
+| ---------------------------------------- | ----------------------------------------------------- |
+| * S922 (9009-22A) \n * E980 (9080-M9S)   | AIX 7.1 or later                                      |
+| * E1080 (9080-HEX) \n * S1022 (9105-22A) | AIX 7.1 TL5 or later                                  |
+| * S1122 (9824-22A)                       | AIX 7.2 TL5 SP8 \n AIX 7.3 TL2 SP2 \n AIX 7.3 TL3 SP0 |
 {: caption="Supported AIX versions in IBM data center" caption-side="bottom"}
+
+
+
 
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
@@ -100,13 +105,18 @@ If you are using an older version of IBM i, you must upgrade the OS to a current
 
 
 
+ 
+
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 | Machine type                             | Supported IBM i versions |
 | ---------------------------------------- | ------------------------ |
 | * E1022 (9105-22A) \n * E1080 (9080-HEX) | IBM i 7.3 or later       |
-| * S1122 (9824-22A) \n * E1180 (9080-HEU) | IBM i 7.4 or later       |
 {: caption="Supported IBM i versions in IBM data center" caption-side="bottom"}
+
+
+
+
 
 [{{site.data.keyword.on-prem}}]{: tag-red}
 
@@ -140,10 +150,7 @@ SUSE Linux Enterprise (SLES) and Red Hat Enterprise Linux (RHEL) are supported b
 
 Power server E1080 (9080-HEX) and S1022 (9105-22A) supports RHEL 8.4 or later and SLES 15 SP3 or later versions.
 
-The following Power11 servers support RHEL 8.10, RHEL 9.4, RHEL 9.6 or later, and SLES 15 SP6 or later versions:
-* S1122 (9824-22A)
-* E1150 (9043-MRU)
-* E1180 (9080-HEU)
+
 
 For SAP applications, ensure that you use an IBM stock OS image for SAP. These images are certified for SAP application use. To learn more about SAP applications with PowerVS, see the [Must-Reads](/docs/sap?topic=sap-powervs-set-up-power-instances#powervs-memory-sizing-and-subscription-concepts){: external} before you start deployment.
 {: note}
