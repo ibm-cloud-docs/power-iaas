@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-21"
+lastupdated: "2026-09-24"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -26,8 +26,6 @@ subcollection: power-iaas
 
 The {{site.data.keyword.powerSysFull}} metadata service provides information about your virtual server instances (VSIs) and enables identity operations for trusted profile authentication. When the metadata service is enabled on a VSI, you can retrieve information about that VSI by sending REST API requests from the VSI. Use the identity endpoints of the metadata service to authenticate with IAM-enabled services without storing credentials on the instance. Access to the metadata service API endpoint is available only within the {{site.data.keyword.powerSys_notm}} environment.
 {: shortdesc}
-
-
 
 
 
@@ -61,12 +59,10 @@ You can configure access to the metadata service for a new or existing {{site.da
 When you configure access to the metadata service, a network interface is created with the link-local IP address `169.254.169.253`. Do not delete the link-local IP address (`169.254.169.253`) or its route, and do not create networks that conflict with this address range from within the VSI.
 {: important}
 
-
-
 ### Configuration requirements by operating system
 {: #metadata-config-by-os}
 
-The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system (OS). The following table provides the configuration requirements for each supported OS.
+The metadata service uses an internal network configured with the link-local IP address `169.254.169.253` to provide secure, instance-level authentication. Configuration requirements and procedures vary by operating system (OS). Review the following table to understand the configuration requirements for your OS.
 
 
 
@@ -91,7 +87,7 @@ The metadata service uses an internal network configured with the link-local IP 
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                                                                                                                              |
 | Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the **Shutoff** state. After you enable the metadata service access and start the VSI, the metadata service interface is automatically configured. If you use AIX 7.1, you must configure the interface after the VSI boots. For more information, see [Validating and recovering network connectivity on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-validate).                                                                      |
-| Disabling access to the metadata service                   | You can disable access only when the VSI is in the **Shutoff** state. The `--metadata-service-force` CLI option and the `forceDisable` API parameter are not supported for AIX. When you disable the metadata service, the system removes the IP address, but the network adapter entries might remain in the **Defined** state. You can clean up the remaining network adapter entries. For more information, see [Cleaning up network interfaces after disabling the metadata service on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-cleanup). |
+| Disabling access to the metadata service                   | You can disable access only when the VSI is in the **Shutoff** state. The `--metadata-service-force-disable` CLI option and the `forceDisable` API parameter are not supported for AIX. When you disable the metadata service, the system removes the IP address, but the network adapter entries might remain in the **Defined** state. You can clean up the remaining network adapter entries. For more information, see [Cleaning up network interfaces after disabling the metadata service on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-cleanup). |
 | Overwriting the boot disk with a captured image          | After the boot disk is overwritten, you must reconfigure the metadata service interface. For more information, see [Validating and recovering network connectivity on AIX](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-aix-validate).                                                                                                                                                                                                                                                  |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="AIX"}
@@ -99,24 +95,161 @@ The metadata service uses an internal network configured with the link-local IP 
 {: class="simple-tab-table"}
 {: #metadata-config-os-aix}
 
-
-| Scenario                                                   | Linux                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                         |
-| Enabling access to the metadata service on an existing VSI | You can enable access only when the VSI is in the **Shutoff** state. After you enable the metadata service access and start the VSI, the metadata service interface is automatically configured.                                                                                                                                                                                                                                     |
-| Disabling access to the metadata service                   | When you use the `--metadata-service-force` CLI option or the `forceDisable` API parameter, you must remove the network interface configuration. Specific commands depend on your Linux distribution's network management tools. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).                                |
-| Overwriting the boot disk with a captured image          | Before you copy the disk image, you must back up and clear the `udev` rules files (network interface configuration files) that contain MAC address bindings. This removes network persistence rules and prevents connectivity issues when the image is restored. For more information, see [Reconfiguring the metadata service interface after image capture on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#reconfigure-linux-after-capture). |
+| Scenario                                                   | Linux                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Creating a VSI with metadata service access enabled        | The metadata service interface is automatically configured with IP address `169.254.169.253`. No additional configuration is required.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Enabling access to the metadata service on an existing VSI | By default, you can enable access only when the VSI is in the **Shutoff** state. After you enable the metadata service access and start the VSI, the metadata service interface is automatically configured. You can also use the `--metadata-service-force-enable` CLI option or the `forceEnable` API parameter to enable access while the VSI is in the **Active** state (Linux only). When you use this option, you must manually configure the metadata service network interface after the update completes. For more information, see [Configuring the network interface after enabling the metadata service on an active Linux VSI](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-configure-linux-force-enable). |
+| Disabling access to the metadata service                   | When you use the `--metadata-service-force-disable` CLI option or the `forceDisable` API parameter, you must remove the network interface configuration. Specific commands depend on your Linux distribution's network management tools. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).                                                                                                                                                                                                                                                                                    |
+| Overwriting the boot disk with a captured image          | Before you copy the disk image, you must back up and clear the `udev` rules files (network interface configuration files) that contain MAC address bindings. This removes network persistence rules and prevents connectivity issues when the image is restored. For more information, see [Reconfiguring the metadata service interface after image capture on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#reconfigure-linux-after-capture).                                                                                                                                                                                                                                                                                                       |
 {: caption="Metadata service configuration requirements by operating system" caption-side="bottom"}
 {: tab-title="Linux"}
 {: tab-group="metadata-config-os"}
 {: class="simple-tab-table"}
 {: #metadata-config-os-linux}
 
+### Configuring the network interface after enabling the metadata service on an active Linux VSI
+{: #metadata-configure-linux-force-enable}
 
+When you use the `--metadata-service-force-enable` CLI option or the `forceEnable` API parameter to enable the metadata service on a Linux VSI that is in the **Active** state, the metadata service network interface is not automatically configured. You must manually configure the interface before the VSI can reach the metadata service endpoint at `169.254.169.254`. The configuration steps vary by Linux distribution.
 
+#### Identifying the metadata service network interface
+{: #force-enable-identify-interface}
 
+Before you enable the metadata service, run the following command and note any interfaces that do not have an IP address assigned:
 
+```bash
+ip a
+```
+{: pre}
 
+After you enable the metadata service, run the `ip a` command again and identify the newly added interface that does not have an IP address assigned. This interface is the metadata service network interface and must be configured before use. Configure the metadata service network interface by using the steps for your Linux distribution.
+
+#### Configuring the interface by Linux distribution
+{: #force-enable-configure-by-distro}
+
+##### For RHEL or CentOS 7 and earlier
+{: #force-enable-rhel7}
+
+To configure the metadata service interface on RHEL or CentOS 7 and earlier, complete the following steps:
+
+1. Create or edit the `/etc/sysconfig/network-scripts/ifcfg-eth1` file with the following content:
+
+   ```text
+   DEVICE=eth1
+   BOOTPROTO=none
+   ONBOOT=yes
+   IPADDR=169.254.169.253
+   NETMASK=255.255.255.252
+   ```
+   {: codeblock}
+
+   Replace `eth1` with the name of the metadata service network interface that you identified.
+
+2. Run the following command to restart the network service:
+
+   ```bash
+   systemctl restart network
+   ```
+   {: pre}
+
+After the network service restarts, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+
+##### For RHEL or CentOS 8 and later (using NetworkManager)
+{: #force-enable-rhel8}
+
+To configure the metadata service interface on RHEL or CentOS 8 and later with NetworkManager, run the following commands:
+
+```bash
+nmcli connection add type ethernet con-name trusted-profile ifname eth1 ip4 169.254.169.253/30
+nmcli connection up trusted-profile
+```
+{: pre}
+
+Replace `eth1` with the name of the metadata service network interface that you identified.
+
+`trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates. Replace `trusted-profile` with a name of your choice.
+
+After the commands complete, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+
+##### For SLES 15 and earlier (using wicked)
+{: #force-enable-sles}
+
+To configure the metadata service interface on SLES 15 and earlier by using wicked, complete the following steps:
+
+1. Edit the `/etc/sysconfig/network/ifcfg-eth1` file with the following content:
+
+   ```text
+   BOOTPROTO='static'
+   IPADDR='169.254.169.253/30'
+   STARTMODE='auto'
+   ```
+   {: codeblock}
+
+   Replace `eth1` with the name of the metadata service network interface that you identified.
+
+2. Run the following command to activate the interface:
+
+   ```bash
+   wicked ifup eth1
+   ```
+   {: pre}
+
+   Replace `eth1` with the name of the metadata service network interface that you identified.
+
+After the interface is activated, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+
+##### For SLES 16 and later (using NetworkManager)
+{: #force-enable-sles16}
+
+SLES 16 replaced `wicked` with NetworkManager. To configure the metadata service interface on SLES 16 and later with NetworkManager, run the following commands:
+
+```bash
+nmcli connection add type ethernet con-name trusted-profile ifname eth1 ip4 169.254.169.253/30
+nmcli connection up trusted-profile
+```
+{: pre}
+
+Replace `eth1` with the name of the metadata service network interface that you identified.
+
+`trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates. Replace `trusted-profile` with a name of your choice.
+
+After the commands complete, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+
+#### Verifying the configuration
+{: #force-enable-verify}
+
+To verify that the interface is configured correctly and that the VSI can reach the metadata service, complete the following steps:
+
+1. Run the following command to verify the interface configuration:
+
+   ```bash
+   ip addr show eth1
+   ```
+   {: pre}
+
+   Replace `eth1` with the name of the metadata service network interface that you identified.
+
+   The output must include the following IP address configuration:
+
+   ```text
+   inet 169.254.169.253/30 brd 169.254.169.255 scope global eth1
+   ```
+   {: screen}
+
+2. Verify that the interface is configured to start automatically on boot:
+
+   - For RHEL or CentOS 7 and earlier: Verify that the `ONBOOT` parameter is set to `yes` in the interface configuration file.
+   - For SLES 15 and earlier (wicked): Verify that the `STARTMODE` parameter is set to `auto` in the interface configuration file.
+   - For NetworkManager-based systems: NetworkManager configures the connection to start automatically on boot.
+
+3. Run the following command to verify that the VSI can reach the metadata service endpoint and request an identity token:
+
+   ```bash
+   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "content-type: application/json" -d '{}'
+   ```
+   {: pre}
+
+   A successful response confirms that the VSI can reach the metadata service endpoint and that the metadata service network interface is configured correctly.
 
 ### Enabling access to the metadata service for a new VSI by using the user interface
 {: #metadata-enable-new-instance-ui}
@@ -253,14 +386,8 @@ ibmcloud pi instance create test-instance-2 --default-trusted-profile "Profile-9
 #### Enabling or disabling access to the metadata service for an existing VSI by using the CLI
 {: #metadata-enable-existing-instance-cli}
 
-
-
-To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to the metadata service, AIX VSIs must be in the **Shutoff** state. The `--metadata-service-force` option of the `ibmcloud pi instance update` command is not supported for AIX.
+To enable access to the metadata service, the VSI must be in the **Shutoff** state. To disable access to the metadata service, AIX VSIs must be in the **Shutoff** state. The `--metadata-service-force-enable` and `--metadata-service-force-disable` options of the `ibmcloud pi instance update` command are not supported for AIX.
 {: requirement}
-
-
-
-
 
 Run the [`ibmcloud pi instance update`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command and specify the instance ID. To enable access to the metadata service, set the `--metadata-service` option to `true`. To disable access, set the `--metadata-service` option to `false`. The following example shows a CLI command that enables access to the metadata service:
 
@@ -269,7 +396,23 @@ ibmcloud pi instance update INSTANCE_ID --metadata-service true
 ```
 {: codeblock}
 
+To enable the metadata service on a Linux VSI that is in the **Active** state, use the `--metadata-service-force-enable` option. When you use this option, you must manually configure the metadata service network interface after the command completes. For more information, see [Configuring the network interface after enabling the metadata service on an active Linux VSI](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-configure-linux-force-enable).
 
+The following example shows how to enable the metadata service on an active Linux VSI:
+
+```sh
+ibmcloud pi instance update INSTANCE_ID --metadata-service true --metadata-service-force-enable
+```
+{: codeblock}
+
+To disable the metadata service on a Linux VSI that is in the **Active** state, use the `--metadata-service-force-disable` option. When you use this option, you must remove the metadata service network interface configuration after the command completes. For more information, see [Cleaning up network interfaces after disabling the metadata service on Linux](/docs/power-iaas?topic=power-iaas-troubleshoot-metadata-service#metadata-troubleshooting-linux-cleanup).
+
+The following example shows how to disable the metadata service on an active Linux VSI:
+
+```sh
+ibmcloud pi instance update INSTANCE_ID --metadata-service false --metadata-service-force-disable
+```
+{: codeblock}
 
 ### Enabling or disabling access to the metadata service by using the API
 {: #metadata-service-enable-api}
@@ -337,7 +480,21 @@ curl -X PUT "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/p
 
 The response shows that the `enabled` field of the `metadataService` parameter is set to `true` when you enable access to the metadata service. You can also verify the metadata service setting by sending a `GET` request to the [`/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}`](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} endpoint.
 
+To enable access to the metadata service on an active Linux VSI, include the `forceEnable` option in the `metadataService` parameter and set it to `true`. When you use this option, you must manually configure the metadata service network interface after the request completes. For more information, see [Configuring the network interface after enabling the metadata service on an active Linux VSI](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-configure-linux-force-enable).
 
+The following example shows how to use the `forceEnable` option to enable the metadata service on an active Linux VSI:
+
+```sh
+curl -X PUT "$power_api_endpoint/pcloud/v1/cloud-instances/{cloud_instance_id}/pvm-instances/{pvm_instance_id}"\
+    -H "Authorization: Bearer $iam_token"\
+    -d '{
+          "metadataService": {
+            "enabled": true,
+            "forceEnable": true
+          }
+      }'
+```
+{: pre}
 
 #### Disabling auto-link by using the API
 {: #metadata-auto-link-api}

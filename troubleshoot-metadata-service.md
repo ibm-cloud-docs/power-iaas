@@ -28,7 +28,7 @@ The metadata service uses a link-local network with IP address `169.254.169.253`
 
 
 
-{{site.data.keyword.powerSys_notm}} uses `cloud-init` package to configure connectivity from a VSI to the metadata service. The `cloud-init` package is required for each OS. If you use a custom image and your OS does not have the IP address 169.254.169.253 configured after you enable metadata service access for your VSI, ensure that your custom image includes the `cloud-init` package.
+{{site.data.keyword.powerSys_notm}} uses the `cloud-init` package to configure connectivity from a VSI to the metadata service. The `cloud-init` package is required for each OS. If you use a custom image and your OS does not have the IP address `169.254.169.253` configured after you enable metadata service access for your VSI, ensure that your custom image includes the `cloud-init` package.
 {: requirement}
 
 ## Reconfiguring the metadata service interface on IBM i after an OS disk overwrite
@@ -195,7 +195,7 @@ To prevent network configuration loss by removing network persistence rules befo
 ### Recording the MAC address before overwriting your image
 {: #reconfigure-linux-before}
 
-If you want to retain the network persistence rules, record the MAC address of the interface that communicates with the metadata service endpoint. After you overwrite the boot disk of your VSI with the saved image, you can reconfigure the interface by using the MAC address.
+If you want to retain the network persistence rules, record the MAC address of the interface that communicates with the metadata service endpoint. After you overwrite the OS disk of your VSI with the saved image, you can reconfigure the interface by using the MAC address.
 
 To record the MAC address before you overwrite the OS disk with an image, complete the following steps:
 
@@ -235,14 +235,14 @@ To record the MAC address before you overwrite the OS disk with an image, comple
 
 If you remove the network persistence rules before you capture the image, you do not need to configure the metadata service interface after the OS disk overwrite. If you retain the network persistence rules and record the MAC address, complete the following steps to reconfigure the metadata service interface:
 
-1. Run the following command to identify the interface with the MAC address that you record:
+1. Run the following command to identify the interface with the MAC address that you recorded:
 
    ```bash
    ip link show | grep -B 1 "fa:16:3e:a1:b2:c3"
    ```
    {: pre}
 
-   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you record in the [Recording the MAC address before overwriting your image](#reconfigure-linux-before) section.
+   Replace `fa:16:3e:a1:b2:c3` with the MAC address that you recorded in the [Recording the MAC address before overwriting your image](#reconfigure-linux-before) section.
 
    The output shows the metadata service interface name (for example, `eth1` or `ens4`).
 
