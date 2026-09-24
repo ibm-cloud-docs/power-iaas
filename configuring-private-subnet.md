@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-23"
+lastupdated: "2026-09-24"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -97,7 +97,7 @@ You cannot assign the subnet that is already assigned to another virtual machine
 
     - **Disabled**: Network interfaces that are configured to use DHCP do not receive their IPv4 configurations automatically.
 
-    The DHCP service is available only in IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about DHCP, see [DHCP network inside the pod](/docs/power-iaas?topic=power-iaas-network_use_cases#dhcp-network-new).
+    The DHCP service is available only in IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}. For more information about DHCP, see [DHCP network inside the pod](/docs/power-iaas?topic=power-iaas-network_use_cases#dhcp-network-old).
 
 
 

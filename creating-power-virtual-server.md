@@ -139,8 +139,6 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
-    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [Behavior of IBM i deployments on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
-
     Assigning a VSN is not supported on a VSI with IBM i version 7.1 or earlier.
     {: note}
 
