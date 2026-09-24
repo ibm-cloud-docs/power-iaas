@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-24"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,6 +20,8 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+
+
 ## September 2026
 {: #September-2026}
 
@@ -32,9 +34,6 @@ Enabling the metadata service on an active Linux VSI
 
 Network security groups for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 :   You can use network security groups (NSGs) in your {{site.data.keyword.powerSys_notm}} Private Cloud workspaces to control the inbound network traffic to your virtual network. With NSGs, you can define security rules based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
-
-Simplified infrastructure selection for VSIs deployed on Power11 or later systems
-:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your VSI requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
 
 Stock images support
 :   * The following Red Hat Enterprise Linux (RHEL) stock images are available in the {{site.data.keyword.powerSys_notm}} data centers:
