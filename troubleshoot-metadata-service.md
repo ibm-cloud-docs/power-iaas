@@ -568,7 +568,7 @@ After you address any firewall rules and conflicting routes, verify connectivity
 {: #troubleshoot-ibmi}
 {: troubleshoot}
 
-If your IBM i VSI cannot reach the metadata service endpoint, complete the following steps to validate and restore connectivity.
+If your IBM i VSI cannot reach the metadata service endpoint, use one of the following procedures based on your issue.
 {: shortdesc}
 
 ### Resolving metadata service interface activation issues
@@ -610,14 +610,16 @@ If the metadata service interface is configured but does not activate, complete 
 
    Ensure that the resource is not allocated to another line description.
 
-5. Run the following command to verify that the Auto-Start setting for the interface is enabled:
+5. Run the following command to verify the Auto-Start setting for the metadata service interface:
 
    ```text
    NETSTAT *IFC
    ```
    {: pre}
 
-   Look at the Auto-Start column. If it shows `NO`, run the following command to update the interface:
+   In the output, find the interface with IP address `169.254.169.253` and check the value in the Auto-Start column.
+
+6. Optional: If the Auto-Start column shows `NO`, run the following command to enable autostart for the metadata service interface:
 
    ```text
    CHGTCPIFC INTNETADR('169.254.169.253') AUTOSTART(*YES)
@@ -638,26 +640,26 @@ If the metadata service interface is configured but you cannot reach the metadat
 
    The output shows a route for the `169.254.169.252/30` network associated with your metadata service interface.
 
-   If you see conflicting routes or interface configurations, carefully review the routes before making any changes. Your custom image might include configurations that were intentionally set for your environment. Removing or modifying configurations without understanding their purpose might disrupt other network connectivity. Ensure that any changes do not break other intentional network configurations.
+   If you see conflicting routes or interface configurations, review the routes carefully before making any changes. Your custom image might include configurations that serve other purposes, and removing these configurations might disrupt other network connectivity.
    {: important}
 
-2. Run the following command to check if the interface is active:
+2. Run the following command to verify that the interface is active:
 
    ```text
    NETSTAT *IFC
    ```
    {: pre}
 
-   The interface with IP address `169.254.169.253` shows the status `Active`.
+   The interface with IP address `169.254.169.253` shows the status as `Active`.
 
-3. Run the following command to verify that the line description is varied on:
+3. Run the following command to check the status of the line description:
 
    ```text
    WRKLIND LIND(METADATA)
    ```
    {: pre}
 
-   The line description status shows `VARIED ON`.
+   Verify that the status shows `VARIED ON`.
 
 4. Run the following command to access the TCP/IP configuration menu:
 
@@ -666,8 +668,12 @@ If the metadata service interface is configured but you cannot reach the metadat
    ```
    {: pre}
 
+   The Configure TCP/IP menu is displayed.
+
    Select option 1 (Work with TCP/IP interfaces) and verify that the metadata service interface configuration is correct.
 
-5. If the previous steps do not restore connectivity, configure the metadata service IP address on another `CMN*` device and test connectivity again. The RMC interface that is used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another `CMN*` device might be available but unconfigured.
+5. If the previous steps do not restore connectivity, configure the metadata service IP address on another communications resource (such as `CMN01` or `CMN02`) and test connectivity again.
 
-If you are still unable to communicate with the metadata service endpoint, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+You can use the `WRKHDWRSC *CMN` command to view available communications resources. The Resource Monitoring and Control (RMC) interface used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another communications resource might be available but not configured.
+
+If you still cannot reach the metadata service endpoint, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
