@@ -110,7 +110,7 @@ The metadata service uses an internal network configured with the link-local IP 
 ### Configuring the network interface after enabling the metadata service on an active Linux VSI
 {: #metadata-configure-linux-force-enable}
 
-When you use the `--metadata-service-force-enable` CLI option or the `forceEnable` API parameter to enable the metadata service on a Linux VSI that is in the **Active** state, the metadata service network interface is not automatically configured. You must manually configure the interface before the VSI can reach the metadata service endpoint at `169.254.169.254`. The configuration steps vary by Linux distribution.
+When you use the `--metadata-service-force-enable` CLI option or the `forceEnable` API parameter to enable the metadata service on a Linux VSI that is in the **Active** state, the metadata service network interface is not automatically configured. You must manually configure the metadata service network interface before the VSI can reach the metadata service endpoint at `169.254.169.254`. The configuration steps vary by Linux distribution.
 
 #### Identifying the metadata service network interface
 {: #force-enable-identify-interface}
@@ -124,10 +124,10 @@ ip a
 
 After you enable the metadata service, run the `ip a` command again and identify the newly added interface that does not have an IP address assigned. This interface is the metadata service network interface and must be configured before use. Configure the metadata service network interface by using the steps for your Linux distribution.
 
-#### Configuring the interface by Linux distribution
+#### Configuring the metadata service interface by Linux distribution
 {: #force-enable-configure-by-distro}
 
-##### For RHEL or CentOS 7 and earlier
+##### Configuring the interface on RHEL or CentOS 7 and earlier
 {: #force-enable-rhel7}
 
 To configure the metadata service interface on RHEL or CentOS 7 and earlier, complete the following steps:
@@ -152,9 +152,9 @@ To configure the metadata service interface on RHEL or CentOS 7 and earlier, com
    ```
    {: pre}
 
-After the network service restarts, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+   The network service restarts and applies the new interface configuration. To verify the configuration, complete the steps in [Verifying the configuration](#force-enable-verify).
 
-##### For RHEL or CentOS 8 and later (using NetworkManager)
+##### Configuring the interface on RHEL or CentOS 8 and later by using NetworkManager
 {: #force-enable-rhel8}
 
 To configure the metadata service interface on RHEL or CentOS 8 and later with NetworkManager, run the following commands:
@@ -165,18 +165,16 @@ nmcli connection up trusted-profile
 ```
 {: pre}
 
-Replace `eth1` with the name of the metadata service network interface that you identified.
+Replace `trusted-profile` with a connection name of your choice and `eth1` with the name of the metadata service network interface that you identified. `trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates.
 
-`trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates. Replace `trusted-profile` with a name of your choice.
+If the commands succeed, the connection is activated and the metadata service interface is configured with the metadata service IP address. To verify the configuration, complete the steps in [Verifying the configuration](#force-enable-verify).
 
-After the commands complete, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
-
-##### For SLES 15 and earlier (using wicked)
+##### Configuring the interface on SLES 15 and earlier by using Wicked
 {: #force-enable-sles}
 
-To configure the metadata service interface on SLES 15 and earlier by using wicked, complete the following steps:
+To configure the metadata service interface on SLES 15 and earlier by using the Wicked network management tool, complete the following steps:
 
-1. Edit the `/etc/sysconfig/network/ifcfg-eth1` file with the following content:
+1. Create or edit the `/etc/sysconfig/network/ifcfg-eth1` file with the following content:
 
    ```text
    BOOTPROTO='static'
@@ -187,7 +185,7 @@ To configure the metadata service interface on SLES 15 and earlier by using wick
 
    Replace `eth1` with the name of the metadata service network interface that you identified.
 
-2. Run the following command to activate the interface:
+2. Run the following command to activate the metadata service interface:
 
    ```bash
    wicked ifup eth1
@@ -196,9 +194,9 @@ To configure the metadata service interface on SLES 15 and earlier by using wick
 
    Replace `eth1` with the name of the metadata service network interface that you identified.
 
-After the interface is activated, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
+   If the command succeeds, the metadata service interface is brought up with the metadata service IP address. To verify the configuration, complete the steps in [Verifying the configuration](#force-enable-verify).
 
-##### For SLES 16 and later (using NetworkManager)
+##### Configuring the interface on SLES 16 and later by using NetworkManager
 {: #force-enable-sles16}
 
 SLES 16 replaced `wicked` with NetworkManager. To configure the metadata service interface on SLES 16 and later with NetworkManager, run the following commands:
@@ -209,18 +207,16 @@ nmcli connection up trusted-profile
 ```
 {: pre}
 
-Replace `eth1` with the name of the metadata service network interface that you identified.
+Replace `trusted-profile` with a connection name of your choice and `eth1` with the name of the metadata service network interface that you identified. `trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates.
 
-`trusted-profile` is the name of the connection profile that the `nmcli connection add` command creates. Replace `trusted-profile` with a name of your choice.
+If the commands succeed, the connection is activated and the metadata service interface is configured with the metadata service IP address. To verify the configuration, complete the steps in [Verifying the configuration](#force-enable-verify).
 
-After the commands complete, verify the configuration by completing the steps in [Verifying the configuration](#force-enable-verify).
-
-#### Verifying the configuration
+#### Verifying the metadata service interface configuration
 {: #force-enable-verify}
 
-To verify that the interface is configured correctly and that the VSI can reach the metadata service, complete the following steps:
+To verify that the metadata service interface is configured correctly and that the VSI can reach the metadata service endpoint, complete the following steps:
 
-1. Run the following command to verify the interface configuration:
+1. Run the following command to verify the metadata service interface configuration:
 
    ```bash
    ip addr show eth1
@@ -236,20 +232,20 @@ To verify that the interface is configured correctly and that the VSI can reach 
    ```
    {: screen}
 
-2. Verify that the interface is configured to start automatically on boot:
+2. Verify that the metadata service interface is configured to start automatically when the system boots:
 
    - For RHEL or CentOS 7 and earlier: Verify that the `ONBOOT` parameter is set to `yes` in the interface configuration file.
-   - For SLES 15 and earlier (wicked): Verify that the `STARTMODE` parameter is set to `auto` in the interface configuration file.
-   - For NetworkManager-based systems: NetworkManager configures the connection to start automatically on boot.
+   - For SLES 15 and earlier (Wicked): Verify that the `STARTMODE` parameter is set to `auto` in the interface configuration file.
+   - For NetworkManager-based systems: NetworkManager configures the connection to start automatically when the system boots.
 
 3. Run the following command to verify that the VSI can reach the metadata service endpoint and request an identity token:
 
    ```bash
-   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "content-type: application/json" -d '{}'
+   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Content-Type: application/json" -d '{}'
    ```
    {: pre}
 
-   A successful response confirms that the VSI can reach the metadata service endpoint and that the metadata service network interface is configured correctly.
+   A successful response includes an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint and that the metadata service network interface is configured correctly.
 
 ### Enabling access to the metadata service for a new VSI by using the user interface
 {: #metadata-enable-new-instance-ui}

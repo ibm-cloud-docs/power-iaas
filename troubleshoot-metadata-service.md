@@ -150,7 +150,7 @@ To verify that the metadata service interface is configured correctly and active
 
 3. After you verify connectivity, press **F3** to end the ping. If the ping fails, see [Validating network connectivity to the metadata service endpoint](#troubleshoot-ibmi-validate).
 
-The metadata service network uses the link-local IP range `169.254.169.254/30`. The metadata service interface IP address is `169.254.169.253`. You do not need to configure a gateway for this network.
+The metadata service uses the link-local IP range `169.254.169.254/30`. The metadata service interface IP address is `169.254.169.253`. You do not need to configure a gateway for this network.
 {: tip}
 
 ## Reconfiguring the metadata service interface on Linux after an OS disk overwrite
@@ -288,9 +288,9 @@ nmcli connection up trusted-profile
 ```
 {: pre}
 
-The connection is activated and the interface is configured with the metadata service IP address.
-
 Replace `trusted-profile` with a connection name of your choice and `eth1` with your metadata service interface name.
+
+If the commands succeed, the connection is activated and the interface is configured with the metadata service IP address.
 
 #### Configuring the interface on SLES by using Wicked
 {: #reconfigure-linux-sles}
@@ -349,11 +349,11 @@ To verify that the metadata service interface is configured correctly and is act
 3. Run the following command to verify that the VSI can reach the metadata service and request an identity token:
 
    ```bash
-   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Accept: application/json"
+   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Content-Type: application/json" -d '{}'
    ```
    {: pre}
 
-   If the command succeeds, it returns a JSON response with an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the VSI cannot reach the metadata service endpoint, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
+   A successful response includes an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the VSI cannot reach the metadata service endpoint, see [Troubleshooting metadata service connectivity on Linux](#troubleshoot-linux).
 
 ## Removing network interfaces after disabling the metadata service on AIX
 {: #aix-metadata-interface-removal}
@@ -489,11 +489,11 @@ To validate and restore network connectivity to the metadata service endpoint, c
 5. Run the following command to validate connectivity to the metadata service endpoint:
 
    ```bash
-   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Accept: application/json"
+   curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" -H "Metadata-Flavor: ibm" -H "Content-Type: application/json" -d '{}'
    ```
    {: pre}
 
-   If the command succeeds, it returns a JSON response with an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the command fails or returns an error, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+   A successful response includes an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the command fails or returns an error, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
 
 ## Troubleshooting metadata service connectivity on Linux
 {: #troubleshoot-linux}
