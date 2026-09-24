@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-16"
+lastupdated: "2026-09-22"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -347,8 +347,6 @@ For more information, refer to the {{site.data.keyword.powerSys_notm}} documenta
 ## Data centers that support PER
 {: #dcs-per}
 
-
-
 The following table shows the data centers for {{site.data.keyword.powerSys_notm}} that supports PER:
 
 | Location      | Data centers                             | PER availability         |
@@ -359,7 +357,7 @@ The following table shows the data centers for {{site.data.keyword.powerSys_notm
 | Frankfurt     | `FRA04` \n `FRA05`                       | Yes \n Yes               |
 | London        | `LON04` \n `LON06`                       | Yes \n Yes               |
 | Madrid        | `MAD02` \n `MAD04`                       | Yes \n Yes               |
-| Montreal      | `MON01`                                  | No                       |
+| Montreal      | `MON01`                                  | Yes                      |
 | Osaka         | `OSA21`                                  | Yes                      |
 | Sao Paulo     | `SAO01` \n `SAO04`                       | Yes \n Yes               |
 | Sydney        | `SYD04` \n `SYD05`                       | Yes \n Yes               |

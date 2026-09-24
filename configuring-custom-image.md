@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-08-11"
+lastupdated: "2026-09-24"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -105,6 +105,7 @@ If you are using an older version of IBM i, you must upgrade the OS to a current
 
 
 
+ 
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-09-01"
+lastupdated: "2026-09-21"
 
 ---
 
@@ -11,14 +11,45 @@ lastupdated: "2026-09-01"
 # {{site.data.keyword.powerSysFull}} CLI change log
 {: #cli-release-notes}
 
-In this change log, you can learn about the latest changes, improvements, and updates for the {{site.data.keyword.powerSysFull}} CLI plug-in.
+This change log lists the latest changes, improvements, and updates for the {{site.data.keyword.powerSysFull}} CLI plug-in.
 {: shortdesc}
 
 
 
 
 
+## September 2026
+{: #sep-2026}
 
+### CLI v1.11.0
+{: #cli-v1.11.0}
+
+The CLI plug-in version 1.11.0 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+New commands
+:   The following CLI commands are added for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}:
+
+    - [ibmcloud pi workspace get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-get): You can use this command to get the details of a private workspace.
+
+    - [ibmcloud pi network-address-group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-address-group): You can use this command to create, delete, get, or list a network address group. You can also add, remove, or update members of a network address group.
+
+    - [ibmcloud pi network-security-group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-security-group): You can use this command to create, delete, get, or list a network security group. You can also add a member, move a member, remove a member, add a rule, remove a rule, and update a network security group.
+
+    - [ibmcloud pi network-interface](/docs/power-iaas?topic=power-iaas-power-iaas-cli-on-prem#ibmcloud-pi-network-interface): You can use this command to create, delete, get, list, and update a network interface.
+
+New options
+:   The following options are added to the existing CLI command:
+
+    - Aliased the `--metadata-service-force` option to the `--metadata-service-force-disable` option in the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to disable the metadata service while the virtual server instance (VSI) is active. The `--metadata-service-force` option is deprecated.
+
+    - The `--metadata-service-force-enable` option is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to enable the metadata service while the VSI is active.
+
+Other enhancements
+:   The following enhancements are included in this release:
+
+    - Changed system types `s1122`, `e1150`, and `e1180` to `Power11`.
+
+    - Removed the deprecated `ibmcloud pi snapshot` set of commands. Use the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) set of commands instead.
 
 ## June 2026
 {: #June-2026}
@@ -46,7 +77,7 @@ New options
 
     - `--allow-remote-restart` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to enable  for an instance.
 
-    - `--default-trusted-profile` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify the trusted profile cloud resource name (CRN), ID, or name of the default identity and access management (IAM) trusted profile to use for a virtual server instance (VSI).
+    - `--default-trusted-profile` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to specify the trusted profile cloud resource name (CRN), ID, or name of the default identity and access management (IAM) trusted profile to use for a VSI.
 
     - `--default-trusted-profile-autolink` is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create), [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update), and [ibmcloud pi instance sap create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-sap-create) commands. You can use this option to enable the system to create a link to the specified trusted profile when you create or update the server.
 
@@ -421,35 +452,35 @@ New CLI version `v1.1.0` available. The {{site.data.keyword.powerSys_notm}} CLI 
 New CLI version `0.7.0` available. Here are the changes for the new CLI version:
 
 New command
-:   - [List all storage tiers for the targeted region](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-storage-tiers): List all storage tiers for the targeted region.
+:   - [List all storage tiers for the targeted region](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-storage-tiers): List all storage tiers for the targeted region.
 
 New options
-:   - A `--virtual-optical-device` option is added in [Update a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-update) command: Use this to attach a virtual optical device to this instance. Valid value is "attach".
-    - A `--mtu` option is added in [Create a private network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-network-create-private) command: Use this is to define the Maximum Transmission Unit. The default value is 1450.
-    - A `--mtu` option is added in [Create a public network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-network-create-public) command: Use this is to define the Maximum Transmission Unit. The default value is 1450.
-    - A `--target-tier` option is added in [Perform an action on a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action) command:  Use this to change the storage tier of the volume (use [List all storage tiers for the targeted region](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-storage-tiers) to see available storage tiers in the targeted region). `Tier5k` volumes cannot exceed 200 GB.
+:   - A `--virtual-optical-device` option is added in [Update a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command: Use this to attach a virtual optical device to this instance. Valid value is "attach".
+    - A `--mtu` option is added in [Create a private network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-create-private) command: Use this is to define the Maximum Transmission Unit. The default value is 1450.
+    - A `--mtu` option is added in [Create a public network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-create-public) command: Use this is to define the Maximum Transmission Unit. The default value is 1450.
+    - A `--target-tier` option is added in [Perform an action on a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action) command:  Use this to change the storage tier of the volume (use [List all storage tiers for the targeted region](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-storage-tiers) to see available storage tiers in the targeted region). `Tier5k` volumes cannot exceed 200 GB.
 
 What's Changed
-:   - New custom deployment type - `VMNoStorage` for [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-create) command.
-    - Deprecate `--jumbo` option in [Create a public network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-network-create-public) and [Create a private network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-network-create-private) commands.
+:   - New custom deployment type - `VMNoStorage` for [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command.
+    - Deprecate `--jumbo` option in [Create a public network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-create-public) and [Create a private network](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-network-create-private) commands.
     - New Power Edge Router (PER) details field when using the `workspace` command.
 
 ## November 2023
 {: #nov-2023}
 
 New CLI version `0.6.0` available. Here are the new changes for the new CLI version:
-   * New commands - [Create a workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-workspace-create) and [Delete a workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-workspace-delete) added.
+   * New commands - [Create a workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-create) and [Delete a workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace-delete) added.
 
 
 New CLI version `0.5.0` available. Here are the new changes for the new CLI version:
-   * New `--user-data` option added in the [instance-create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-create) command.
-   * New command [datacenter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-datacenter) and [datacenters](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-datacenters) added.
-   * Deprecated `service-list` command in favor of new [workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-workspace) and [workspaces](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-workspaces) commands.
+   * New `--user-data` option added in the [instance-create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) command.
+   * New command [datacenter](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-datacenter) and [datacenters](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-datacenters) added.
+   * Deprecated `service-list` command in favor of new [workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) and [workspaces](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspaces) commands.
 
 ## September 2023
 {: #sep-2023}
 
-- Added s1022 in `sys-type value` for [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-create) and [Create a virtual tape library](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-virtual-tape-library-create) commands.
+- Added s1022 in `sys-type value` for [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [Create a virtual tape library](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-virtual-tape-library-create) commands.
 
 ## 2022
 {: #2022}
@@ -463,50 +494,50 @@ New CLI version `0.5.0` available. Here are the new changes for the new CLI vers
 {: #sept-2022}
 
 - You can now use shared processor pool that uses CLI. The following are new commands for shared processor pools:
-    - [View details of a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-shared-processor-pool)
-    - [Create a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-shared-processor-pool-create)
-    - [Delete a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-shared-processor-pool-delete)
-    - [Update a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-shared-processor-pool-update)
-    - [List all shared processor pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-shared-processor-pools)
-    - [View details of a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-group)
-    - [Create a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-group-create)
-    - [Delete a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-group-delete)
-    - [Add a shared processor pool to the placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-group-member-add)
-    - [Remove a shared processor pool from the placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-group-member-remove)
-    - [List all shared processor pool placement groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-spp-placement-groups)
+    - [View details of a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool)
+    - [Create a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-create)
+    - [Delete a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-delete)
+    - [Update a shared processor pool](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pool-update)
+    - [List all shared processor pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-shared-processor-pools)
+    - [View details of a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-group)
+    - [Create a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-group-create)
+    - [Delete a shared processor pool placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-group-delete)
+    - [Add a shared processor pool to the placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-group-member-add)
+    - [Remove a shared processor pool from the placement group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-group-member-remove)
+    - [List all shared processor pool placement groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-spp-placement-groups)
 
-- The command [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-create) is updated to include the following new options for SPP and Epic:
+- The command [Create a server instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) is updated to include the following new options for SPP and Epic:
     - *shared-processor-pool value*
     - *deployment-type value*
 
 - You can now use global replication service by using CLI. The following commands are added new for global replication service:
-    - [List disaster recovery locations for the current region or all regions](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-disaster-recovery-locations)
-    - [Perform an action on a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action)
-    - [Get a list of flash copy mappings of a volume directly from primary storage host.](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-flash-copy-mapping)
-    - [View details of a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group)
-    - [Create a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-create)
-    - [Delete a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-delete)
-    - [Get all remote copy relationships for each volume in a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-remote-copy-relationships)
-    - [Reset a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-reset)
-    - [List all volume groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-groups)
-    - [Start a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-start)
-    - [Stop a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-stop)
-    - [View storage details of a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-storage-details)
-    - [Update a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-group-update)
-    - [Get the information of volume onboarding operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-onboarding)
-    - [Create a volume onboarding operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-onboarding-create)
-    - [List all volume onboarding operations](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-onboardings)
-    - [Get the remote copy relationship information of a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-remote-copy-relationship)
+    - [List disaster recovery locations for the current region or all regions](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-disaster-recovery-locations)
+    - [Perform an action on a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action)
+    - [Get a list of flash copy mappings of a volume directly from primary storage host.](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-flash-copy-mapping)
+    - [View details of a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group)
+    - [Create a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-create)
+    - [Delete a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-delete)
+    - [Get all remote copy relationships for each volume in a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-remote-copy-relationships)
+    - [Reset a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-reset)
+    - [List all volume groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-groups)
+    - [Start a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-start)
+    - [Stop a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-stop)
+    - [View storage details of a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details)
+    - [Update a volume group](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update)
+    - [Get the information of volume onboarding operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding)
+    - [Create a volume onboarding operation](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-create)
+    - [List all volume onboarding operations](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboardings)
+    - [Get the remote copy relationship information of a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-remote-copy-relationship)
 
-- The command [Create a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-create) is updated to include a new option *replication-enabled*.
+- The command [Create a volume](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-create) is updated to include a new option *replication-enabled*.
 
-- The description of [Create a new SAP PVM Instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-sap-create-instance) is changed for HANA images.
+- The description of [Create a new SAP PVM Instance](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-sap-create-instance) is changed for HANA images.
 
 
 ### July 2022
 {: #Jul-2022}
 
-- You can now use [Transit Gateway](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-connection-create) to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC).
+- You can now use [Transit Gateway](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-connection-create) to interconnect your {{site.data.keyword.powerSys_notm}} to the {{site.data.keyword.cloud_notm}} classic and Virtual Private Cloud (VPC).
 
 ### April 2022
 {: #apr-2022}
@@ -519,36 +550,36 @@ New CLI version `0.5.0` available. Here are the new changes for the new CLI vers
 ### December 2021
 {: #dec-2021}
 
-- You can now use [Storage pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-create) to set affinity policies by using CLI.
-- You can now use [Create connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-connection-create) to set a 10 Gbps speed for your Cloud connection by using CLI.
-- You can now use [Placement Groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-placement-group-create) to create placement groups and add VMs to set policies by using CLI.
+- You can now use [Storage pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) to set affinity policies by using CLI.
+- You can now use [Create connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-connection-create) to set a 10 Gbps speed for your Cloud connection by using CLI.
+- You can now use [Placement Groups](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-placement-group-create) to create placement groups and add VMs to set policies by using CLI.
 
 
 ### October 2021
 {: #oct-2021}
 
-- You can now use [VPN](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-vpn-connection-create) to create VPN connection by using CLI.
-- You can now use [VPN IKE policies](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-vpn-ike-policies) to create an IKE policy for the VPN connection by using CLI.
-- You can now use [VPN IKE policies](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-vpn-ike-policies) to create an IPsec policy for the VPN connection by using CLI.
+- You can now use [VPN](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn-connection-create) to create VPN connection by using CLI.
+- You can now use [VPN IKE policies](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn-ike-policies) to create an IKE policy for the VPN connection by using CLI.
+- You can now use [VPN IKE policies](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-vpn-ike-policies) to create an IPsec policy for the VPN connection by using CLI.
 
 
 ### September 2021
 {: #sep-2021}
 
-- You can now use [Import Image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-image-import) to Import an image from IBM Cloud Object Storage by using CLI.
-- You can now use [Jobs](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-job) to View details of a job by using CLI.
-- You can now use [Console language](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-update-console-language) to update Language to Japanese.
+- You can now use [Import Image](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import) to Import an image from IBM Cloud Object Storage by using CLI.
+- You can now use [Jobs](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-job) to View details of a job by using CLI.
+- You can now use [Console language](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update-console-language) to update Language to Japanese.
 
 ### May 2021
 {: #may-2021}
 
-- You can now use [Cloud connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-connection-create) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources by using CLI.
+- You can now use [Cloud connection](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-connection-create) to automate the way you connect your Power Systems Virtual Server instances to the IBM Cloud resources by using CLI.
 
 ### March 2021
 {: #mar-2021}
 
-- You can now manage [snapshots](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshots) of a cloud instance by using the CLI.
-- You can create and list [SAP profiles](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-sap-list) by using CLI.
-- You can [list of available system pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-system-pool) within a particular data center by using CLI.
-- You can [attach](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-connection-attach-network), [detach](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-connection-detach-network), or [list all the attached networks](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-instance-networks) to an instance.
+- You can now manage [snapshots](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-snapshots) of a cloud instance by using the CLI.
+- You can create and list [SAP profiles](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-sap-list) by using CLI.
+- You can [list of available system pools](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-system-pool) within a particular data center by using CLI.
+- You can [attach](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-connection-attach-network), [detach](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-connection-detach-network), or [list all the attached networks](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-networks) to an instance.
 - Added image-import progress (task) monitoring.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-08-26"
+lastupdated: "2026-09-17"
 
 keywords: power virtual server, public network, outbound connectivity, inbound connectivity, network setup
 
@@ -39,9 +39,9 @@ Complete the following steps to configure public network access for your LPAR or
 
 5. Create a VSI. For instructions, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
-6. Configure the outbound networking for the VSI. For instructions, see [Outbound network overview](#outbound-overview).
+6. Configure the outbound network for the VSI. For instructions, see [Outbound network overview](#outbound-overview).
 
-7. Configure the inbound networking for the VSI. For instructions, see [Inbound network overview](#inbound-overview). You can configure inbound networking only after you configure outbound networking.
+7. Configure the inbound network for the VSI. For instructions, see [Inbound network overview](#inbound-overview). You can configure inbound network only after you configure outbound network.
 
 You must select the same region and zone as your VSI for all the configurations.
 {: note}
@@ -223,21 +223,21 @@ If you have a public IP address that is attached to your VPC, do not perform thi
 1. Reserve a public address range and attach it to the VPC. For instructions, see [Creating public address ranges](/docs/vpc?topic=vpc-par-creating&interface=ui){: external}.
 
     When you create the public address range, set the following values:
-    * Set the **Size** to the following value:
+    * From the **Size** list, select the following value:
 
         `/32 (1 address)`
     * Retain the default value for **Geography**, **Region**, and **Resource group**.
     * Set **Bind** to on. Select your VPC to attach the public address range.
-    * Set **Zone** to the same zone as the NLB that you created in [Step 2: Create a private NLB in the route mode](#create-nlb).
+    * Select **Zone** as the same zone of the NLB that you created in [Step 2: Create a private NLB in routing mode](#create-nlb).
 
 2. Record the allocated public IP address. Use this IP address to access your {{site.data.keyword.powerSys_notm}} VSI from the internet.
 
 ### Step 2: Locate the NLB IP address.
 {: #find-nlb}
 
-Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create a private NLB in the route mode](#create-nlb).
+Complete the following steps to locate the private IP address of the NLB that you created in [Step 2: Create a private NLB in routing mode](#create-nlb).
 
-If you have not created an NLB, create an NLB in routing mode. For instructions, see [Step 2: Create a private NLB in the route mode](#create-nlb).
+If you have not created an NLB, create an NLB in routing mode. For instructions, see [Step 2: Create a private NLB in routing mode](#create-nlb).
 {: note}
 
 1. Log in to the [IBM Cloud catalog](https://cloud.ibm.com/catalog){: external} with your IBM credentials.
@@ -259,10 +259,8 @@ If you have not created an NLB, create an NLB in routing mode. For instructions,
 2. Create a route. For instructions, see [Creating a route](/docs/vpc?topic=vpc-create-vpc-route&interface=ui){: external}.
 
     When you create the route, set the following values:
-    * Set the **Zone** to the same zone as your NLB.
-    * Set **Destination CIDR** to the following value:
-
-        `1.2.3.4/32`
+    * Select the **Zone** as the same zone of your NLB.
+    * Enter `1.2.3.4/32` as the **Destination CIDR**.
     * Set **Priority** to **2**, **Action** to **Deliver**, and **Next hop (IP address)** to the IP address of your NLB.
     * Set **Advertise** to **Off**.
 
@@ -282,10 +280,8 @@ The transit gateway is already configured for outbound connectivity. For more in
 Route the incoming traffic for the public IP address to the VPC subnet. Configure the default routing table and create a route for your VPC. For instructions, see [Creating a route](/docs/vpc?topic=vpc-create-vpc-route&interface=ui){: external}.
 
 When you create a route in the default routing table of your VPC, set the following values:
-* Set the **Zone** to the same zone as your NLB.
-* Set **Destination CIDR** to the following value:
-
-    `1.2.3.4/32`
+* Select the **Zone** as the same zone of your NLB.
+* Enter `1.2.3.4/32` as the **Destination CIDR**.
 * Set **Action** to **Delegate-VPC** and **Next hop (IP address)** to the IP address of your NLB.
 * Set **Advertise** to **Off**.
 
@@ -298,10 +294,8 @@ Do not modify the routing table that you created in [Step 4: Configure VPC routi
 Add a static route to your {{site.data.keyword.powerSys_notm}} workspace that points to your VSI. For instructions, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
 
 When you create the static route, set the following values:
-* Set **Destination** to the following value:
-
-    `1.2.3.4/32`
-* Set **Next hop** to your VSI IP address.
+* Enter `1.2.3.4/32` as the IP address in the **Destination** field.
+* Enter your VSI IP address as **Next hop**.
 * Set **Advertise** and **State** to **Enabled**.
 
 This static route configuration routes traffic for the public IP address directly to the VSI.

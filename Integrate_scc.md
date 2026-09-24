@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-09-17"
 
 keywords: Security and Compliance Center, SCC, Workload Protection, Workload Protection agent Linux, AIX, PowerVS SCC
 
@@ -93,11 +93,11 @@ After you provision an instance of the {{site.data.keyword.compliance_short}} {{
 
 {{site.data.keyword.sysdigsecure_short}} provides the following features to protect your stand-alone Linux or AIX hosts on {{site.data.keyword.powerSys_notm}}.
 
-| Feature | On Linux hosts | On AIX hosts |
-| ------- | -------- | ------ |
-| Posture management | Scans host configuration files for compliance and benchmarks such as CIS Linux Benchmark |Scans host configuration files for compliance and benchmarks such as CIS AIX Benchmark|
-| Host scanning | Scans host packages, detects associated vulnerabilities, and identifies the resolution priority based on available fixed versions and severity |   - |
-| Threat detection and response | Identifies threats and suspicious activity based on application, network, and host activity by processing syscall events and investigates with detailed system captures |  - |
+| Feature                       | On Linux hosts                                                                                                                                                          | On AIX hosts                                                                           |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Posture management            | Scans host configuration files for compliance and benchmarks such as CIS Linux Benchmark                                                                                | Scans host configuration files for compliance and benchmarks such as CIS AIX Benchmark |
+| Host scanning                 | Scans host packages, detects associated vulnerabilities, and identifies the resolution priority based on available fixed versions and severity                          | Not applicable                                                                         |
+| Threat detection and response | Identifies threats and suspicious activity based on application, network, and host activity by processing syscall events and investigates with detailed system captures | Not applicable                                                                         |
 {: caption="{{site.data.keyword.sysdigsecure_short}} agent features" caption-side="top"}
 
 For more information about managing and deploying the {{site.data.keyword.sysdigsecure_short}} agent on your Linux hosts, see [Managing the Workload Protection agent in Linux on PowerVS](/docs/workload-protection?topic=workload-protection-agent-deploy-linux-powervs){: external}.

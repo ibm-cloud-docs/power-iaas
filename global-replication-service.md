@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-31"
+lastupdated: "2026-09-22"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -808,7 +808,7 @@ Any attempt to change the tier of a replication-enabled volume fails, if one of 
 You can change the tier of the replication-enabled volume by using the following API and CLI commands:
 
 - API: [Perform an action on a Volume](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
-- CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-volume-action){: external}
+- CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action){: external}
 
 
 
@@ -933,7 +933,7 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 {: attention}
 
 
-When you [disable the replication service on the primary volume](#disable-vol-repli) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
+When you [disable the replication service on the primary volume](#disable-grs) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
 
 
 ## GRS impacts on other {{site.data.keyword.powerSys_notm}} operations

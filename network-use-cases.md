@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-09"
+lastupdated: "2026-09-23"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -142,7 +142,7 @@ Figure 6 describes the network connectivity between a virtual machine and a Red 
 
 
 ## Use case 4: DHCP network inside the pod
-{: #dhcp-network-new}
+{: #dhcp-network-old}
 
 The {{site.data.keyword.powerSys_notm}} Dynamic Host Configuration Protocol (DHCP) service provides automated IP address assignment and network configuration for virtual server instances (VSIs) in your workspace.
 

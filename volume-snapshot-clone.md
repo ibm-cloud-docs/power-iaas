@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2026 # 
+  years: 2023, 2026
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-09-24"
 
 keywords: cloning and restoring snapshots, power virtual server as a service, private cloud, snapshots, clone API
 
@@ -139,7 +139,7 @@ You can create a snapshot by using the following API and CLI:
 
 - **API:** [Create a PVM Instance snapshot](/docs/apis/power-cloud#pcloud-pvminstances-snapshots-post)
 
-- **CLI:** [ibmcloud pi snapshot create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-create)
+- **CLI:** [ibmcloud pi instance snapshot create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot-create)
 
 You must provide values for the following parameters in the API and CLI:
 
@@ -258,7 +258,7 @@ You can restore a snapshot by using the following API and CLI:
 
 * **API**: [Restore a PVM Instance snapshot](/docs/apis/power-cloud#pcloud-pvminstances-snapshots-restore-post).
 
-* **CLI**: [ibmcloud pi snapshot-restore](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-restore)
+* **CLI**: [ibmcloud pi instance snapshot restore](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot-restore)
 
 You must provide values for the following parameters in the API and CLI:
 
@@ -348,9 +348,9 @@ You cannot recover a snapshot after it is successfully deleted.
 
 You can delete a snapshot by using the following API and CLI:
 
-* **API**: [Delete a PVM instance snapshot of a cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-snapshots-delete){: external}.
+* **API**: [Delete a PVM instance snapshot of a cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-snapshots-delete).
 
-* **CLI**: [ibmcloud pi snapshot-delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference#ibmcloud-pi-snapshot-delete){: external}.
+* **CLI**: [ibmcloud pi instance snapshot delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot-delete).
 
 You must provide values for the following parameters in the API and CLI:
 

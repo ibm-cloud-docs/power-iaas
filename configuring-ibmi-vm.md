@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-09-18"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -72,8 +72,6 @@ To restore the VSI console session, complete the following steps:
 2. Click **VM actions** in the Virtual server details page and select **Open console** from the drop-down list. The session is restored and the 'Connected (encrypted)' message is displayed
 
 Alternatively, if you have multiple IBM i-based VSIs you can use the IBM Cloud CLI to return the VSI console session URL, such as using a shell command loop:
-
-
 
 ```shell
 ibmcloud pi workspace list

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-24"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -86,7 +86,6 @@ For more information about the systems that are available for your data center, 
 
 A theoretical maximum of a system depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 
-
 ## Billing details
 {: #billing-details}
 
@@ -142,22 +141,19 @@ To view or search for resources that are provisioned in IBM {{site.data.keyword.
 
 The following table lists the {{site.data.keyword.powerSys_notm}} resources that are enabled with CRN.
 
-| Logical Resource                              | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
-| --------------------------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **General**                                   |                                             |                                                           |                                                                                                                                                              |
-| Workspace                                     | Enabled                                     | Enabled                                                   | VPN                                                                                                   |
-| **Compute**                                   |                                             |                                                           |                                                                                                                                                              |
-| Virtual server instance                       | Enabled                                     | Enabled                                                   | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
-| Shared Processor Pool                         | Enabled                                     | Enabled                                                   | * SPP cores \n * SAP workloads                                                                                                          |
-| Server placement groups  | Enabled                                     | X                                                         | SAP workloads                                                                                                                                                |
-| Dedicated Host                                | Enabled                                     | X                                                         | Dedicated host capacity                                                                                                                                      |
-| **Storage**                                   |                                             |                                                           |                                                                                                                                                              |
-| Volume                                        | Enabled                                     | Enabled                                                   | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
-| Snapshot                                      | Enabled                                     | Enabled                                                   | Snapshot storage                                                                                                                                             |
-| Virtual Persistent Memory                     | Enabled                                     | X                                                         | Virtual Persistent Memory storage                                                                                                                            |
+| Logical Resource          | IBM Power Virtual Server in IBM data center | IBM Power Virtual Server Private Cloud in Client location | Billable elements                                                                                                                                            |
+| ------------------------- | ------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **General**               |                                             |                                                           |                                                                                                                                                              |
+| Workspace                 | Enabled                                     | Enabled                                                   | VPN                                                                                                                                                          |
+| **Compute**               |                                             |                                                           |                                                                                                                                                              |
+| Virtual server instance   | Enabled                                     | Enabled                                                   | * Cores \n * Memory \n * SAP workload licenses \n * OS licenses                                                                                              |
+| Shared Processor Pool     | Enabled                                     | Enabled                                                   | * SPP cores \n * SAP workloads                                                                                                          |
+| Dedicated Host            | Enabled                                     | Disabled                                                  | Dedicated host capacity                                                                                                                                      |
+| **Storage**               |                                             |                                                           |                                                                                                                                                              |
+| Volume                    | Enabled                                     | Enabled                                                   | * Standard volume storage \n * Image volume storage (onboarded by users) \n * Replicated volume storage \n * Service charges for Global replication services |
+| Snapshot                  | Enabled                                     | Enabled                                                   | Snapshot storage                                                                                                                                             |
+| Virtual Persistent Memory | Enabled                                     | Disabled                                                  | Virtual Persistent Memory storage                                                                                                                            |
 {: caption="{{site.data.keyword.powerSys_notm}} resources that are CRN enabled." caption-side="bottom"}
-
-
 
 ## Monthly usage
 {: #pricing-monthly-usage}
@@ -399,7 +395,6 @@ Refer to the following table to view the part number descriptions and the associ
 {: tab-title="vPMEM group"}
 {: translate="no"}
 
-
 ## Base instances
 {: #pricing-base-instance-prices}
 
@@ -511,11 +506,9 @@ Shared processor pool (SPP) provides the capability to manage CPU cores efficien
 
 
 
-
 SPP metering is optimized to improve the Total Cost of Ownership (TCO) for AIX and IBM i software licensing and disaster recovery (DR) scenarios. Virtual servers that are configured within an SPP do not incur additional cost per VSI core or the cost for high-use memory parts.
 
 {{_include-segments/spp-pricing-JIRA-18311.md}}
-
 
 
 
@@ -563,7 +556,6 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     | 20 GB + 30 GB        | 50 GB          |
     {: caption="Calculation of deployed VSIs volume" caption-side="bottom"}
 
-
 - **Deployed VSI snapshots** are the snapshots of the volumes that are taken after the VSI is deployed. The size of the volume snapshot is related to the number of updates that are made to the VSI. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of one or more volumes of the VSI. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
 For an example, consider a VSI with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
@@ -589,7 +581,6 @@ The following tables show examples of how different storage types affect the cos
 | Tier 3           | $0.00003865                  | $0.03                    |
 | Tier 5k          | $0.00010652                  | $0.08                    |
 {: caption="Snapshot storage pricing example" caption-side="bottom"}
-
 
 
 
@@ -642,7 +633,6 @@ Total billable storage = 595 GB
 - Data volumes: 235 GB
 - Image volumes: 200 GB
 - Deployed VSIs: 160 GB
-
 
 ## Virtual Persistent Memory
 {: #vPMEM-parts}

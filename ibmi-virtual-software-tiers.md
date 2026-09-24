@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-08-12"
+lastupdated: "2026-09-24"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -34,6 +34,9 @@ subcollection: power-iaas
 
 On IBM Power10 and later systems, you can assign an {{site.data.keyword.ibmi-vst}} to a virtual server instance (VSI). The {{site.data.keyword.ibmi-vst}} limits the capacity of the VSI, but you can select any physical system that supports the assigned tier. For example, a virtual server that is assigned to a P10 tier can run on either an S1022 or an E1080 server. The tier restricts the resource allocation for the VSI but not its hardware compatibility.
 
+IBM i is not supported on IBM E1050 and E1150 system types.
+{: note}
+
 The {{site.data.keyword.ibmi-vst}} determines the pricing tier for the IBM i OS and Licensed Program Products (LPPs). The tier also defines the limits for the following resources:
 - Maximum number of virtual processors
 - Maximum memory
@@ -47,7 +50,7 @@ For more information, see [Supported resource limits by the IBM i software tier]
 
 When you change the software tier, the billing for the {{site.data.keyword.ibmi-vst}} automatically changes to reflect the selected tier.
 
-You can generate an estimate of {{site.data.keyword.powerSys_notm}} resources with an {{site.data.keyword.ibmi-vst}} before you deploy the resources. For more information, see [Estimating a virtual server instance](/docs/power-iaas?topic=power-iaas-generating-an-estimate#est-vsi).
+You can generate an estimate of {{site.data.keyword.powerSys_notm}} resources with an {{site.data.keyword.ibmi-vst}} before you deploy the resources. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 
 
 To assign an {{site.data.keyword.ibmi-vst}} to an IBM i {{site.data.keyword.powerSys_notm}} instance, complete the following steps:
@@ -90,6 +93,7 @@ The following table lists the maximum number of virtual processors and memory fo
 
 
 
+
 You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.keyword.powerSys_notm}} system types. The following table lists the {{site.data.keyword.ibmi-vst}}s that are compatible with each system type.
 
 | System types | Supported IBM i software tiers |     |     |     |
@@ -109,8 +113,7 @@ You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.ke
 
 
 
-IBM i is not supported on IBM E1050 and E1150 system types.
-{: note}
+
 
 
 

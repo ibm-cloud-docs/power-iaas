@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-11"
+lastupdated: "2026-09-15"
 
 keywords: IBM Cloud Logs, log events, regulatory audit requirements, abnormal activity, Power Virtual Server
 

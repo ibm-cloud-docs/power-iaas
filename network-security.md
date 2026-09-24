@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2026 
+  years: 2019, 2026
 
-lastupdated: "2026-07-17"
+lastupdated: "2026-09-22"
 
 keywords: firewall, ports, network security, vSRX, ICMP
 
@@ -56,4 +56,4 @@ The following firewall ports are also open, typically used for IBM i logical par
 
 The port 6443 is also open for miscellaneous purposes. However, the port 6443 is not open for the WDC04 and DAL13 data centers.
 
-If you need extra ports to be opened, use a customer-specific firewall option. The option is available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to {{site.data.keyword.powerSys_notm}} by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the {{site.data.keyword.powerSys_notm}} connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#networking-environment).
+If you need extra ports to be opened, use a customer-specific firewall option. The option is available by using an IBM Cloud firewall, such as Vyatta, Juniper vSRX, or FortiGate, and by connecting to {{site.data.keyword.powerSys_notm}} by using [Direct Link Connect](/docs/power-iaas?topic=power-iaas-ordering-direct-link-connect). To understand the {{site.data.keyword.powerSys_notm}} connection methods, see [Network architecture diagrams](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams).

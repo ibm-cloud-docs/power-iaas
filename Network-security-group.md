@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-09-11"
+lastupdated: "2026-09-23"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -19,9 +19,10 @@ subcollection: power-iaas
 ---
 
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
+
+
+{{site.data.keyword.on-prem-fname}} in [{{site.data.keyword.on-prem}}]{: tag-red}
 
 
 ---
@@ -40,7 +41,7 @@ Using NSGs in your {{site.data.keyword.powerSys_notm}} environment provides the 
 
 
 
-Existing workspaces can support NSG only after the data center where the workspaces are deployed is updated to use the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-release-notes#Feb-2025).
+Existing workspaces can support NSG only after the data center where the workspaces are deployed is updated to use the new metering code. The metering code must be based on cloud resource name (CRN). For more information about the rollout schedule, see [Release notes](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#Feb-2025).
 
 
 
@@ -152,13 +153,13 @@ You can enable or disable the NSG feature on PER and enhanced CRN-enabled worksp
 To determine whether your {{site.data.keyword.powerSys_notm}} workspace has the prerequisites to support NSGs, run the following IBM Cloud CLI command:
 
 ```sh
-ibmcloud resource service-instance <WORKSPACE_CRN> -o json
+ibmcloud resource service-instance WORKSPACE_CRN -o json
 ```
 {: pre}
 
 Verify that the output contains the `resourceCRNs` property with a value of `true`:
 
-```sh
+```json
 "extensions": {
             "resourceCRNs": true
         },

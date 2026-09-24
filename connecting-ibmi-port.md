@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2025-04-30"
+lastupdated: "2026-09-22"
 
 keywords: port forwarding, ibm i virtual machine, putty session, tcp servers
 
@@ -71,7 +71,7 @@ If you are on a Windows&reg; system, continue with [Setting up and configuring P
 ## Setting up and configuring PuTTY on a Windows system
 {: #configure-putty}
 
-Install [PuTTY](https://www.putty.org/){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
+Install [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html){: external} onto your system. PuTTY is used for the SSH tunnel on a Windows system.
 
 1. Open **Session** under **Category:**.
 

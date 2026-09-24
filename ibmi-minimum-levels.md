@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-09-22"
 
 keywords: ibm i, program temporary fixes
 
@@ -45,10 +45,10 @@ Ensure that your IBM i image includes the necessary code levels for the Power sy
 
 
 
-For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.4?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.4?topic=ssw_ibm_i_74/cl/sndptford.htm){: external}.
+For more information on installing PTF packages, see [Installing cumulative PTF packages](https://www.ibm.com/docs/en/i/7.6.0?topic=scenario-installing-cumulative-ptf-packages){: external}. The `SNDPTFORD` command can also be used to send PTFs to the system, see [Send PTF Order (SNDPTFORD)](https://www.ibm.com/docs/en/i/7.6.0?topic=s-send-program-temporary-fix-order){: external}.
 
-When you use an IBM i custom image, these PTFs must be installed and the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}.
-An overview of IBM i fix concepts and terms is found at [Fixes concepts and terms](https://www.ibm.com/docs/en/i/7.4?topic=fixes-concepts-terms){: external}.
+When you use an IBM i custom image, these PTFs must be installed along with the software that is required for `Cloud-Init`. For more information, see [Cloud-Init Support for IBM i](https://www.ibm.com/support/pages/node/1166194){: external}.
+For an overview of IBM i fix concepts and terms, see [Fixes concepts and terms](https://www.ibm.com/docs/en/i/7.6.0?topic=fixes-concepts-terms){: external}.
 
 To learn more about the options available to upgrade the IBM i operating system, see [Performing IBM i Upgrades on Power Virtual Servers](https://www.ibm.com/support/pages/performing-ibm-i-upgrades-power-virtual-servers){: external}.
 {: important}
