@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-28"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -185,7 +185,7 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #shared-image}
 {: faq}
 
-In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 
 
@@ -554,7 +554,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 
 The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
 
-You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 {{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
@@ -750,7 +750,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 {: #support-ticket}
 {: faq}
 
-To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 
 

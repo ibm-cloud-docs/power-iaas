@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-28"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -50,7 +50,7 @@ In addition to hardware resources, the licensed operating systems and the associ
 
 
 
-You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Generating an estimate for IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
+You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 
 
 
@@ -162,7 +162,7 @@ IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate 
 
 To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
 
-All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 {: important}
 
 In the following monthly usage example, the customer purchases a {{site.data.keyword.powerSys_notm}} instance with the following configurations at a base price of $250.57 per month ($0.343 per hour):
@@ -444,7 +444,7 @@ You are charged different rates based on the processor type that you choose for 
 
 Processor cores are charged at different hourly rates based on the core type (**Dedicated**, **Shared uncapped**, or **Shared capped**) and the machine type (S922, E1080, S1022, E1080, and S1122). For information on different processor type functions, see [What's the difference between shared capped and shared uncapped processor performance? How are they compared with dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor)
 
-All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Generating an estimate](/docs/power-iaas?topic=power-iaas-generating-an-estimate).
+All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} cost estimator](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 {: important}
 
 The following examples show the cost per system for general purpose VSIs in North and South America regions:

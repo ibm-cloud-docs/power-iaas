@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-08"
+lastupdated: "2026-09-28"
 
 keywords: managing placement groups, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, placement groups, add placement group, delete placement group
 
@@ -95,7 +95,7 @@ You can use the following APIs for managing server placement groups:
 You can add VSIs to a server placement group.  You cannot add a VSI to a server placement group that contains a VSI in the **Build** state.  You must wait until the VSI changes to the **Active** state before adding another VSI to the server placement group. Use the following API to add a server to a placement group: [Add server to placement group](/docs/apis/power-cloud#pcloud-placementgroups-members-post).
 
 
-When you add a VSI to the server placement group, the request might fail due to a conflict (409) with the affinity policy. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+When you add a VSI to the server placement group, the request might fail due to a conflict (409) with the affinity policy. In this case, you might need to open a DLPAR operations support ticket. To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 {: note}
 
 To add a VSI to a placement group, complete the following steps:

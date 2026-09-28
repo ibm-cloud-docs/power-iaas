@@ -3,7 +3,7 @@
 copyright:
   years: 2026
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-28"
 
 keywords: metadata service, troubleshooting, configuration, trusted profiles, power virtual server, network connectivity, AIX, Linux, IBM i
 
@@ -358,7 +358,7 @@ To verify that the metadata service interface is configured correctly and is act
 ## Removing network interfaces after disabling the metadata service on AIX
 {: #aix-metadata-interface-removal}
 
-When you [disable access to the metadata service](/docs/power-iaas?topic=power-iaas-instance_metadata_pvs#metadata-disable-instance-ui) on an AIX VSI, the network interfaces are not automatically removed. Network interfaces that are left in a `Defined` state must be removed.
+When you [disable access to the metadata service](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-disable-instance-ui) on an AIX VSI, the network interfaces are not automatically removed. Network interfaces that are left in a `Defined` state must be removed.
 
 To remove the metadata service network interfaces, complete the following steps:
 
@@ -493,7 +493,7 @@ To validate and restore network connectivity to the metadata service endpoint, c
    ```
    {: pre}
 
-   A successful response includes an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the command fails or returns an error, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+   A successful response includes an `access_token`, `created_at`, `expires_at`, and `expires_in` field, confirming that the VSI can reach the metadata service endpoint. If the command fails or returns an error, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 ## Troubleshooting metadata service connectivity on Linux
 {: #troubleshoot-linux}
@@ -562,7 +562,7 @@ If the metadata service interface is configured but you cannot reach the metadat
    If you see conflicting routes, review the routes carefully before making any changes. Your custom image might include routes that serve other purposes, and removing these routes might disrupt other network connectivity.
    {: important}
 
-After you address any firewall rules and conflicting routes, verify connectivity to the metadata service endpoint. If the issue persists, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+After you address any firewall rules and conflicting routes, verify connectivity to the metadata service endpoint. If the issue persists, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 ## Troubleshooting metadata service connectivity on IBM i
 {: #troubleshoot-ibmi}
@@ -676,4 +676,4 @@ If the metadata service interface is configured but you cannot reach the metadat
 
 You can use the `WRKHDWRSC *CMN` command to view available communications resources. The Resource Monitoring and Control (RMC) interface used by {{site.data.keyword.powerSys_notm}} might not have been configured on your OS, or another communications resource might be available but not configured.
 
-If you still cannot reach the metadata service endpoint, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If you still cannot reach the metadata service endpoint, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).

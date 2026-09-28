@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-28"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -626,7 +626,7 @@ You can modify an existing volume to be replication-enabled if it is created in 
 
 Use the following API and CLI commands to query the volume details:
 
-- **API**: [Perform an action on a volume group](apidocs/power-cloud#pcloud-cloudinstances-volumes-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Using the API, query the volume details as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Using the API, query the volume details as defined in the following code:
 
 ```code
 
@@ -807,7 +807,7 @@ Any attempt to change the tier of a replication-enabled volume fails, if one of 
 
 You can change the tier of the replication-enabled volume by using the following API and CLI commands:
 
-- API: [Perform an action on a Volume](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
+- API: [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post){: external}
 - CLI: [ibmcloud pi volume-action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-action){: external}
 
 
@@ -879,7 +879,7 @@ To delete a volume or a replication-enabled primary volume, the status of the vo
 To delete a primary volume, you must complete the actions on the primary and secondary locations:
 
 - Complete the following actions on the primary location:
-    1. [Remove the primary volume from its volume group, if the primary volume is associated with a volume group](rem-prim-vol-vol-grp)
+    1. [Remove the primary volume from its volume group, if the primary volume is associated with a volume group](#rem-prim-vol-vol-grp)
     2. [Delete the primary volume](#del-prim-vol)
 
 - Complete the following actions on the secondary location, if the auxiliary volume is onboarded on the secondary location:

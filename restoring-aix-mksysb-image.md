@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-09-28"
 
 keywords: aix mksysb, aix helper vm, attaching new disk
 
@@ -80,7 +80,7 @@ Ensure that you have experience in AIX administration and are familiar with depl
 ## Creating the mksysb image on the source AIX instance
 {: #create-image-source-AIX}
 
-Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=m-mksysb-command) documentation for full details on the command usage. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg.
+Refer to the [mksysb](https://www.ibm.com/docs/en/aix/7.3.0?topic=alt-disk-mksysb-command) documentation for full details on the command usage. Ensure that there is sufficient file system space to hold the produced mksysb image. Generally, 10 to 15 GB is sufficient depending on additional non-AIX data added to the rootvg.
 
 In the following example, mksysb creates the image in /tmp. The `-i` builds the image from the latest rootvg details and the `-b` option can potentially improve the performance when creating the mksysb image. The `-X` mksysb option expands `/tmp` if necessary for the boot image. This can be omitted if the available space is known to be sufficient.
 
@@ -192,7 +192,7 @@ For example,
 
 Use the `cksum` command to confirm the `my-mksysb` image file was successfully transferred.
 
-Now the mksysb image can be restored onto the attached free storage volume that will become the new rootvg boot disk with the configuration from the source AIX instance. This is done by using the [alt_disk_mksysb](https://www.ibm.com/docs/en/aix/7.3?topic=alt-disk-mksysb-command) command. In the following mksysb restore example, `alt_disk_mksysb` sets hdisk1 as the boot disk for subsequent boots.
+Now the mksysb image can be restored onto the attached free storage volume that will become the new rootvg boot disk with the configuration from the source AIX instance. This is done by using the [alt_disk_mksysb](https://www.ibm.com/docs/en/aix/7.3.0?topic=alt-disk-mksysb-command) command. In the following mksysb restore example, `alt_disk_mksysb` sets hdisk1 as the boot disk for subsequent boots.
 
 ```
 alt_disk_mksysb -c /dev/vty0 -d hdisk1 -m /mksysb-staging/my-mksysb
@@ -267,3 +267,4 @@ When the old boot volume is detached and deleted by using the user interface, th
 
 * [Getting Started with IBM Power Systems Virtual Servers](/docs/power-iaas?topic=power-iaas-getting-started).
 * [{{site.data.keyword.powerSys_notm}} CLI Reference](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference).
+* [Getting started with the {{site.data.keyword.powerSys_notm}} CLI plug-in](/docs/power-iaas?topic=power-iaas-power-iaas-cli-get-start)

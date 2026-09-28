@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-22"
+lastupdated: "2026-09-28"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -282,7 +282,7 @@ The absence of the Power Edge Router (PER) section in the Workspace details pane
 
 To resolve a fallback Cloud Connection workspace, you can delete the workspace and create a new PER-enabled workspace. To create a new PER-enabled workspace, complete the steps provided in the [Creating a PER workspace]( /docs/power-iaas?topic=power-iaas-per#create-per-workspace) section.
 
-Deleting a workspace does not automatically remove the failed underlying network configuration. To remove the failed network configurations, [open a support ticket]( /docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
+Deleting a workspace does not automatically remove the failed underlying network configuration. To remove the failed network configurations, [open a support ticket]( /docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs){: external}.
 {: important}
 
 ### Best practices for creating PER-enabled workspaces

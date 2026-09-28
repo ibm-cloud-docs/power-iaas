@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-28"
 
 keywords: Operating systems, powerVS OS
 
@@ -203,7 +203,7 @@ System software maps are reference documents that outline the compatibility betw
 
 The license for the AIX and IBM i operating systems is a part of the overall cost for the workspace. You cannot use an existing license that you have already purchased.
 
-You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL)) to move your existing on-premises entitlements to the {{site.data.keyword.powerSys_notm}}. Contact IBM support to know more about IBM i MOL. For the available support resources, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support){: external}.
+You can use movable IBM i OS entitlements (IBM i Moveable Operating License (MOL)) to move your existing on-premises entitlements to the {{site.data.keyword.powerSys_notm}}. Contact IBM support to know more about IBM i MOL. For the available support resources, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs){: external}.
 
 Power Virtual Server supports multiple levels of RHEL and SLES. You can either use the stock Linux images that IBM provides with Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
