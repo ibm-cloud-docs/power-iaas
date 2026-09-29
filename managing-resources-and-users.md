@@ -32,7 +32,7 @@ IAM enables you to securely authenticate users, control access to {{site.data.ke
 
 
 
-[{{site.data.keyword.on-prem}}]{: tag-red} To display the **Infrastructure capacity** navigation menu for the {{site.data.keyword.on-prem-fname}} when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you assign a `Viewer` role in the IAM Access Management service.
+[{{site.data.keyword.on-prem}}]{: tag-red} To display the **Infrastructure capacity** navigation menu for the {{site.data.keyword.on-prem-fname}} when you use a custom role with the `power-iaas.pod-capacity.view` IAM action, ensure that you assign a viewer role in the IAM Access Management service.
 {: important}
 
 
@@ -62,7 +62,7 @@ The following table lists the IAM platform access roles and the type of access t
 ## Service access roles
 {: #service-access-roles}
 
-You can use the service access roles to define the actions that the users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table lists the IAM service access roles and the corresponding actions that a user can complete in {{site.data.keyword.powerSys_notm}}:
+You can use service access roles to define the actions that the users can perform on {{site.data.keyword.powerSys_notm}} resources. The following table lists the IAM service access roles and the corresponding actions that a user can complete in {{site.data.keyword.powerSys_notm}}:
 
 | Service access role | Description of actions                                                                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -85,7 +85,7 @@ When you assign access to the {{site.data.keyword.powerSys_notm}} service, you c
 
 
 
-The access management tags are supported only on {{site.data.keyword.powerSys_notm}} workspaces. The {{site.data.keyword.powerSys_notm}} service ignores the access management tags that are attached to the individual resources in a workspace.
+Access management tags are supported only on {{site.data.keyword.powerSys_notm}} workspaces. The {{site.data.keyword.powerSys_notm}} service ignores the access management tags that are attached to the individual resources in a workspace.
 
 
 
