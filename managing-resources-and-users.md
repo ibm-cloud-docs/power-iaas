@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-10"
+lastupdated: "2026-09-29"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -72,6 +72,8 @@ You can use the service access roles to define the actions that the users can pe
 
 To see the complete list of actions for each specific role, see the [IAM roles and actions](/docs/iam?topic=iam-iam-service-roles-actions#power-iaas-roles) page in IBM Cloud documentation.
 
+
+
 ### Resources supported for {{site.data.keyword.powerSys_notm}} IAM access policies
 {: #res-supported}
 
@@ -89,6 +91,8 @@ The access management tags are supported only on {{site.data.keyword.powerSys_no
 
 Although you can select a **Resource type** from the **Attribute type** list, it is not supported. Any roles and actions that are assigned to the **Resource type** are ignored.
 {: note}
+
+
 
 
 
@@ -120,7 +124,7 @@ For more information about managing and assigning access by using IAM policies, 
 ## Trusted profiles for {{site.data.keyword.powerSys_notm}}
 {: #trusted-profiles}
 
-A trusted profile is an IAM identity for a compute resource. IBM Cloud IAM trusts your {{site.data.keyword.powerSys_notm}} virtual server instances (VSI) as a compute resource, which allows the VSI to call the API endpoints of other IBM Cloud services without storing API keys or credentials on the instance.
+A trusted profile is an IAM identity for a compute resource. IBM Cloud IAM trusts your {{site.data.keyword.powerSys_notm}} VSI as a compute resource, which allows the VSI to call the API endpoints of other IBM Cloud services without storing API keys or credentials on the instance.
 {: shortdesc}
 
 
