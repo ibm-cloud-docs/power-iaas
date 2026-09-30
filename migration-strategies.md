@@ -41,7 +41,7 @@ Recent IBM i migration enhancements include the following items:
 * [90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external} to facilitate migration to new servers.
 * [IBM i migrate while active](https://www.ibm.com/support/pages/ibm-i-migrate-while-active){: external} to migrate data without shutting down the system.
 
-## Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
+## BRMS and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
 BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including Cloud Object Storage.
