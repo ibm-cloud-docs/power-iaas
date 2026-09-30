@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-09-30"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -185,13 +185,7 @@ To apply or remove an IBM i software key, the VSI must be active and in the runn
 ## Managing storage volumes on a VSI
 {: #modifying-volume-network}
 
-
-
-You can attach storage volumes to a VSI from different storage tiers and pools. However, you cannot attach storage volumes to the same storage pool where the root (boot) volume of the VSI is deployed. To attach mixed storage volumes, you must modify the VSI and set the `storagePoolAffinity` property to `false`. For more information, see [How to set a VSI to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
-
-
-
-
+By default, the `storagePoolAffinity` property is set to `true`. If the `storagePoolAffinity` property is set to `true`, all storage volumes that are attached to a VSI must reside in the same storage pool as the boot volume. To attach volumes from a different storage pool, set `storagePoolAffinity` to `false`. For more information, see [How do you set a PVM instance to allow attaching mixed storage?](/docs/power-iaas?topic=power-iaas-powervs-faqs#mixed_storage).
 
 ### Adding additional storage volumes to a VSI
 {: #create-storage-vol}

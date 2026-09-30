@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-09-30"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -215,17 +215,21 @@ If you find the storage tiers are over or under-provisioned, you can change the 
 
 By default, the system deploys 20 GBs for the AIX _rootvg_. You can extend the AIX _rootvg_ by using the [extendvg](https://www.ibm.com/docs/en/aix/7.3.0?topic=e-extendvg-command){: external} command to add a physical volume.
 
-
-
-### **How to set a PVM instance to allow attaching mixed storage?**
+### **How do you set a PVM instance to allow attaching mixed storage?**
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put).
+By default, all storage volumes that are attached to a VSI must reside in the same storage pool as the boot volume. The `storagePoolAffinity` property, which is set to `true` when the VSI is deployed, controls this behavior.
 
+In the IBM Cloud console, you cannot change the `storagePoolAffinity` property directly. This property is updated automatically when a volume from a different storage pool is created or attached to the VSI. However, this update occurs only after you acknowledge the implications of attaching volumes from different storage pools in the console. To change this property programmatically, use the [Update a PCloud PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put) API.
 
+### **What are the limitations of mixed storage pools?**
+{: #mixed_storage_limitations}
+{: faq}
 
+Capture, clone, and snapshot operations are limited to volumes within a single storage pool. If a VSI has volumes across multiple storage pools, you must perform these operations separately for each pool. You cannot capture, clone, or snapshot the full set of volumes in a single operation.
 
+When replicating volumes that span multiple storage pools, each pool requires its own replication group. Because replication groups operate independently, you must manually coordinate point-in-time consistency across all volumes on the VSI.
 
 ### **Can you tell me more about the snapshotting, cloning, and restoring capabilities?**
 {: #snapshot}
