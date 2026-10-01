@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-10-01"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,7 +20,15 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## October 2026
+{: #October-2026}
 
+### 01 October 2026
+{: #power-iaas-oct0126}
+{: release-note}
+
+Simplified infrastructure selection for VSIs deployed on Power11 or later systems
+:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your VSI requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
 
 ## September 2026
 {: #September-2026}
