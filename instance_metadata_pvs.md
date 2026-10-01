@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-09-28"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -670,4 +670,4 @@ sudo iptables --append OUTPUT --proto tcp --destination 169.254.169.253 --match 
 
 Limit the trusted profiles that you create for compute resource identities in IAM. If a VSI does not need a compute resource identity, do not assign a compute resource identity.
 
-You can also update existing trusted profiles by redefining the trust relationship, assigning access policies, and updating session limits. For more information, see [Updating trusted profiles](/docs/account?topic=account-trusted-profile-update){: external}.
+You can also update existing trusted profiles by redefining the trust relationship, assigning access policies, and updating session limits. For more information, see [Updating trusted profiles by using the console](/docs/iam?topic=iam-trusted-profile-update&interface=ui#updating-tp-console){: external}.

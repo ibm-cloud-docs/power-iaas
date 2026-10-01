@@ -1,9 +1,9 @@
-﻿---
+---
 
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-18"
+lastupdated: "2026-09-30"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -36,11 +36,12 @@ Learn about the various strategies to migrate your data and workloads to an {{si
 
 Learn about migration strategies that are specific to IBM i systems.
 
-Recent IBM i migration enhancements:
-1.	BRMS enhanced to [support software data compression](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} for tape and virtual tape
-2.	[90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external}.
+Recent IBM i migration enhancements include the following items:
+* [Software data compression in BRMS](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} to support tape and virtual tape compression.
+* [90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external} to facilitate migration to new servers.
+* [IBM i migrate while active](https://www.ibm.com/support/pages/ibm-i-migrate-while-active){: external} to migrate data without shutting down the system.
 
-## Backup Recovery and Media Services (BRMS) and Cloud Storage (ICC)
+## BRMS and Cloud Storage (ICC)
 {: #ibmi-brms-icc}
 
 BRMS is an IBM i product that can be used to automate activities that help define and process your backup, recovery, and media management operations. The ICC product can be integrated with BRMS to move and retrieve objects from remote locations, including Cloud Object Storage.

@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-09-28"
 
 keywords: direct link, order DL, ordering DL
 
@@ -99,7 +99,7 @@ To order {{site.data.keyword.dl_short}} Connect, complete the following steps:
 
    After your {{site.data.keyword.dl_short}} connection order is submitted, go to **Interconnectivity** > **{{site.data.keyword.dl_short}}** to view the status of your order. The **Direct Link** page lists all existing {{site.data.keyword.dl_short}} connections.
 
-3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
+3. To [complete your connection](/docs/dl?topic=dl-how-to-order-ibm-cloud-dl-connect#complete-connection-connect), submit an [IBM Support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs) to the {{site.data.keyword.powerSys_notm}} team. In the description field, enter the following details.
 
     ```text
     Customer name:

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2024-12-05"
+lastupdated: "2026-09-28"
 
 keywords: rsct, rmc, IPv6, Reliable Scalable Cluster Technology, RSCT package, Resource Management Control, RMC
 
@@ -107,7 +107,7 @@ If one of your NICs does not contain an IPv6 link local address, continue on to 
 
 7. *(Optional)* To build a `nodeid`, run the `/opt/rsct/bin/rmcctrl -p` command if not already done in step 3.
 
-If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If these recovery steps do not restore the RMC status to **active** and its health to **OK**, open a case with [support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 {: tip}
 
 ## Recovering from a missing IPv6 link local address when using your own boot image

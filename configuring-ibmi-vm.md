@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-18"
+lastupdated: "2026-09-28"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -138,7 +138,7 @@ To resolve an issue with operating system licenses that are expired when you dep
 4. Run IBM i command `STRSBS QBASE` or `STRSBS QCTL` to exit restricted state.
 5. Run IBM i command `CFGTCP` to verify whether the TCP/IP configuration is complete.
 
-If the stock image is deployed without displaying the Operating System License Information screen, run the `STRSBS QBASE` command within one hour of the VSI deployment. For additional help, contact the support team. For more information, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+If the stock image is deployed without displaying the Operating System License Information screen, run the `STRSBS QBASE` command within one hour of the VSI deployment. For additional help, contact the support team. For more information, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 
 

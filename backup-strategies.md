@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-29"
+lastupdated: "2026-09-28"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -225,4 +225,4 @@ To get the support for the Backup Offering, contact Cobalt Iron. You must have t
 * For more information, see the [Cobalt Iron documentation](https://help.cobaltiron.com/?s=POWERVS/){: extrnal}.
 * For issues related to backup and restore, contact Cobalt Iron by opening a service ticket through `support.cobaltiron.com`.
 
-For more information about the issues that are related to {{site.data.keyword.powerSys_notm}} or IBM Cloud, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+For more information about the issues that are related to {{site.data.keyword.powerSys_notm}} or IBM Cloud, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).

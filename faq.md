@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-10-01"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -81,6 +81,18 @@ No, the bare-metal options are not available. The {{site.data.keyword.powerSys_n
 If you like to compare your current environment's performance to what's available through the {{site.data.keyword.powerSys_notm}} offering, see the [IBM Power Performance Report](https://www.ibm.com/downloads/cas/K90RQOW8){: external}.
 
 
+### **How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?**
+{: #simplified-infrastructure-selection}
+{: faq}
+{: support}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, E1180) into a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
+
+When you configure a VSI on Power11, you make infrastructure decisions based on operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
+
+Power9 and Power10 machine types continue to use the existing selection model, where you choose a specific machine type when you create a VSI.
 
 ---
 
@@ -185,7 +197,7 @@ IBM improved the performance of copying a stock image into customers' accounts. 
 {: #shared-image}
 {: faq}
 
-In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+In advanced image management scenarios, {{site.data.keyword.powerSys_notm}} supports sharing images between IBM Cloud accounts. To enable this feature, open an IBM Cloud support ticket and state your business need. For more information about opening a support ticket, see [Getting Help and Support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 
 
@@ -215,17 +227,21 @@ If you find the storage tiers are over or under-provisioned, you can change the 
 
 By default, the system deploys 20 GBs for the AIX _rootvg_. You can extend the AIX _rootvg_ by using the [extendvg](https://www.ibm.com/docs/en/aix/7.3.0?topic=e-extendvg-command){: external} command to add a physical volume.
 
-
-
-### **How to set a PVM instance to allow attaching mixed storage?**
+### **How do you set a PVM instance to allow attaching mixed storage?**
 {: #mixed_storage}
 {: faq}
 
-You can now attach storage volumes to a PVM instance from different storage tiers and pools, other than the storage pool the PVM instance's root (boot) volume is deployed in. To attach storage volumes to a PVM, modify the PVM instance and set the _storagePoolAffinity_ property of the new PVM instance to false. By default, the _storagePoolAffinity_ property of the PVM instance is set to true when the PVM instance is deployed and can be changed only by using the modified PVM instance API. Attaching mixed storage to a PVM instance has implications on the PVM instance capture, clone, and snapshot features. For more information about modifying a PVM instance API, see [Modify PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put).
+By default, all storage volumes that are attached to a VSI must reside in the same storage pool as the boot volume. The `storagePoolAffinity` property, which is set to `true` when the VSI is deployed, controls this behavior.
 
+In the IBM Cloud console, you cannot change the `storagePoolAffinity` property directly. This property is updated automatically when a volume from a different storage pool is created or attached to the VSI. However, this update occurs only after you acknowledge the implications of attaching volumes from different storage pools in the console. To change this property programmatically, use the [Update a PCloud PVM Instance](/docs/apis/power-cloud#pcloud-pvminstances-put) API.
 
+### **What are the limitations of mixed storage pools?**
+{: #mixed_storage_limitations}
+{: faq}
 
+Capture, clone, and snapshot operations are limited to volumes within a single storage pool. If a VSI has volumes across multiple storage pools, you must perform these operations separately for each pool. You cannot capture, clone, or snapshot the full set of volumes in a single operation.
 
+When replicating volumes that span multiple storage pools, each pool requires its own replication group. Because replication groups operate independently, you must manually coordinate point-in-time consistency across all volumes on the VSI.
 
 ### **Can you tell me more about the snapshotting, cloning, and restoring capabilities?**
 {: #snapshot}
@@ -535,7 +551,29 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
+### **How does pricing work for Power11 with simplified infrastructure selection?**
+{: #power11-pricing}
+{: faq}
 
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require less than 109 cores or 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require more than 109 cores or 7,840 GiB of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they need additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+
+### **How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
+{: #power11-larger-system-pricing}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Pricing is based on the resources that you request while creating a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require less than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+
+### **How do large core and memory pricing apply with simplified infrastructure selection?**
+{: #power11-large-core-memory-pricing}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+Power11 workloads are billed by using the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, {{site.data.keyword.powerSys_notm}} automatically applies large core pricing, large memory pricing, or both. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
 
 ---
 
@@ -554,7 +592,7 @@ No. It is the customer's responsibility to maintain, update, and manage the AIX,
 
 The license for the AIX and IBM i operating systems is part of the overall cost for the workspace. You cannot use an existing license that you already purchased. Refer to the AIX section to learn how to [create an AIX VM](/docs/power-iaas?topic=power-iaas-create-vm).
 
-You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+You can use the movable IBM i (IBM i MOL) to move your existing on premises entitlements to {{site.data.keyword.powerSys_notm}}. Contact support to know more about the IBM i MOL, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 {{site.data.keyword.powerSys_notm}} supports multiple levels of RHEL and SLES. You can either use IBM provided stock Linux images with IBM Full Linux Subscription or bring your own custom Linux image with vendor-provided subscription.
 
@@ -597,7 +635,23 @@ On a Linux VM, the following database is supported:
 
 You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys_notm}}](https://launchpad.support.sap.com/#/notes/2855850){: external}.
 
+### **How does simplified infrastructure selection handle IBM i workloads that require the P30 software tier?**
+{: #power11-p30-software-tier}
+{: faq}
 
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+{{site.data.keyword.powerSys_notm}} places IBM i workloads that require the P30 software tier on Power11 infrastructure that supports the P30 tier. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](#simplified-infrastructure-selection).
+
+You can specify the {{site.data.keyword.ibmi-vst}} while configuring a VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+
+### **What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when deploying a VSI on Power11?**
+{: #power11-default-software-tier}
+{: faq}
+
+[{{site.data.keyword.off-prem}}]{: tag-blue}
+
+If you do not specify an {{site.data.keyword.ibmi-vst}} while configuring a VSI on Power11, {{site.data.keyword.powerSys_notm}} applies the default tier based on your workload requirements. Specify an {{site.data.keyword.ibmi-vst}} if your license or workload requires a specific tier.
 
 ### **Where can I find IBM i solution certification and listing information?**
 {: #ibmi-certification}
@@ -750,7 +804,7 @@ For planned maintenance and disruptive changes, the {{site.data.keyword.powerSys
 {: #support-ticket}
 {: faq}
 
-To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+To open a support ticket, see [Getting help and support](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 
 

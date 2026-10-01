@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-04-28"
+lastupdated: "2026-09-28"
 
 keywords: workload migration, power systems, hardware, migration checklist
 
@@ -132,7 +132,7 @@ To learn more about IBM Power10 performance and migration strategies, see the fo
 - [System to IBM i mapping](https://www.ibm.com/support/pages/system-ibm-i-mapping){: external}
 - [IBM i on Power - Performance FAQ](https://www.ibm.com/downloads/cas/QWXA9XKN){: external}
 - [IBM Power performance resource center](https://www.ibm.com/it-infrastructure/resources/power-performance/){: external}
-- [Supported Linux distributions and virtualization options for Power10 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-systems?topic=lpo-supported-linux-distributions-virtualization-options-power10-linux-power-servers){: external}
+- [Linux distributions and virtualization options for Power10 and Power11 Linux on Power servers](https://www.ibm.com/docs/en/linux-on-power-systems?topic=lpo-linux-distributions-virtualization-options-power10-power11-linux-power-servers){: external}
 
 
 ## Migrating to an IBM Power9 in an IBM data center

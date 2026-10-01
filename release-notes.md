@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-10-01"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,7 +20,15 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+## October 2026
+{: #October-2026}
 
+### 01 October 2026
+{: #power-iaas-oct0126}
+{: release-note}
+
+Simplified infrastructure selection for VSIs deployed on Power11 or later systems
+:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your VSI requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
 
 ## September 2026
 {: #September-2026}
@@ -97,7 +105,7 @@ Power9 servers reach end of life on December 31, 2027
     - **If you had VSIs on Power9 servers before August 2026:** You can continue to deploy new VSIs on Power9 servers until November 2026, subject to available capacity. Your existing VSIs can continue to run until December 31, 2027.
     - **If you did not have VSIs on Power9 servers before August 2026:** As of August 2026, you cannot deploy new VSIs on Power9 servers.
 
-    To migrate your VSIs to Power10 or Power11, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+    To migrate your VSIs to Power10 or Power11, open a [support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 ## July 2026
 {: #July-2026}
@@ -395,7 +403,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
 
 - IBM {{site.data.keyword.powerSys_notm}} integrates with IBM watsonx SaaS services to deliver a powerful and flexible infrastructure. The integrated infrastructure supports demanding workloads, runs advanced AI applications, and scales rapidly in a hybrid platform environment with automated AI infrastructure setup and management. For more information, see [IBM Power Virtual Server and watsonx integration](/docs/powervs-watsonx-toolkit).
 
-**End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-release-notes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
+**End of Life Reminder**: Effective 1 July 2025, Cloud Connections is no longer available at no-charge (see [March 2025](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#March-2025) for details), and you will incur monthly charges for any Direct Link connections that you continue to use. The pricing is based on the port speed of your connections. To avoid these charges, migrate your workspace to PER-enabled workspaces. The `CHE01` and `MON01` data centers continue to use Cloud Connections without any charges. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 {: important}
 
 
@@ -442,7 +450,7 @@ On 14 July 2025, the {{site.data.keyword.powerSys_notm}} VPNaaS product reached 
   - RHEL 8.10 general purpose
   - RHEL 9.4 general purpose
 
-- You can deploy the SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP NetWeaver profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles#sap-appser-profiles).
+- You can deploy the SAP NetWeaver sr2 profiles on IBM Power servers. For more information, see [SAP certified profiles](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles).
 
 ## April 2025
 {: #April-2025}
@@ -504,7 +512,7 @@ The End of Life date for the no-charge Cloud Connections, which IBM Power Virtua
 
 
 
-- You can deploy SAP HANA CH2 and BH2 profiles on specific IBM Power servers. For more information, see [SAP HANA certified profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-certified-profiles).
+- You can deploy SAP HANA CH2 and BH2 profiles on specific IBM Power servers. For more information, see [SAP certified profiles for SAP HANA](/docs/power-iaas?topic=power-iaas-SAP-certified-profiles#sap-certpro-hana).
 
 
 
@@ -573,7 +581,7 @@ The End of Support date for Cloud Connections has been extended from 18 April, 2
 - You can now use automation to migrate an existing network to Power Edge Router (PER) through CLI. For more information, see [Migrating to PER](/docs/power-iaas?topic=power-iaas-per#migrate-per).
 - As the {{site.data.keyword.powerSys_notm}} offering transitions to the PER integrated network solution, the ability to create new {{site.data.keyword.powerSys_notm}} Cloud Connections across most data centers is disabled. You are encouraged to migrate to PER now if you have not done so already. For more information about PER, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per). You can create Cloud Connections only in the `CHE01` and `MON01` data centers. For more information, see [IBM Power Virtual Server Cloud Connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
 
-Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections solution will reach the end of life on `June 18, 2025`. For more information about End of Service Notice, see [July 2024](/docs/power-iaas?topic=power-iaas-release-notes#jul-2024).
+Support for Cloud Connections ends on `April 18, 2025` and the Cloud Connections solution will reach the end of life on `June 18, 2025`. For more information about End of Service Notice, see [July 2024](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#jul-2024).
 {: note}
 
 - All IBM {{site.data.keyword.powerSys_notm}} data centers are now PER-enabled, except for the `CHE01` and `MON01` data centers. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -636,7 +644,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - New IBM i 7.5 TR4 and IBM i 7.4 TR10 operating system images are available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. For more information, see [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs).
 - New `IBM i COR` stock image is available for both {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem}}. While you are installing the image, if you encounter any issues, you can refer to the [Extended Base Support in Error](https://www.ibm.com/support/pages/extended-base-support-error){: external} procedure. For more information, see [FAQs](/docs/power-iaas?topic=power-iaas-powervs-faqs#ibm-os-versions).
 
-**End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
+**End of Service Notice** - End of service effective `October 31, 2024` will prevent the use of E880 hosts in the IBM {{site.data.keyword.powerSys_notm}} offering. E880 hosts will no longer be accessible to establish new or existing workspaces. You must ensure that all existing workspaces are moved to another host. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs). If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `October 31, 2024`.
 {: important}
 
 ## August 2024
@@ -652,14 +660,14 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 - Global replication service supports new data center pairs `SAO01`-`SAO04` and `MON01`-`TOR01`. For more information, see [Locations that support global replication service](/docs/power-iaas?topic=power-iaas-getting-started-GRS#locations-GRS).
 - You can now deploy Linux for SAP (HANA or Netweaver) OS images within IBM {{site.data.keyword.powerSys_notm}} by using the SAP provided central image repository or by bringing your own customized image. For more information, see [SAP provided central image repository](/docs/power-iaas?topic=power-iaas-deploying-SAP-image) and [Bring your own customized Linux for SAP (HANA or NetWeaver) image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image).
 - You can now deploy SAP full system profiles on S1022 systems, if no virtual machines are deployed on the system. For more information, see the [SAP full system profiles](/docs/power-iaas?topic=power-iaas-SAP-full-system-profiles).
-- You can now deploy SAP HANA sr2 and sh2 profiles on S1022 and E1080 systems. For more information, see [SAP HANA sr2 and sh2 profiles](/docs/power-iaas?topic=power-iaas-SAP-hana-sr2-sh2-profiles).
+- You can now deploy SAP HANA sr2 and sh2 profiles on S1022 and E1080 systems. For more information, see [Deploying a Linux for SAP (HANA or NetWeaver) custom image](/docs/power-iaas?topic=power-iaas-deploying-SAP-image).
 - You can now provision {{site.data.keyword.powerSys_notm}} workloads on Power10 E1080 (9080-HEX) hosts available in `DAL10` and `WDC07` data centers.
 
 **End of Service Notice** - End of marketing effective `October 19, 2024` will prevent new Cloud Connections from being established in existing workspaces. In turn, IBM will stop delivering standard support for {{site.data.keyword.powerSys_notm}} Direct Link Connect in PER-enabled data centers by `April 18, 2025`. If you choose not to take the recommended action and encounter issues, IBM will not be able to support you. The solution will reach its end of life on `June 18, 2025`.
 {: important}
 
 
-- Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+- Due to inherent configuration complexity of the current {{site.data.keyword.powerSys_notm}} Cloud Connections which leverage Direct Link Connect service for connectivity to IBM Cloud, the direction going forward is to leverage the newly enabled Power Edge Router capability along with Transit Gateway service to connect {{site.data.keyword.powerSys_notm}} workspaces with IBM Cloud resources for a better user experience, improved reliability, and significantly higher bandwidth. You can follow a detailed [migration plan](/docs/power-iaas?topic=power-iaas-migrate-ws-per) to move your existing workspace to a PER workspace if you have set up your network manually using the Cloud Connections solution. {{site.data.keyword.powerSys_notm}} team is available to assist you. If you need assistance, open a [open a support ticket](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 ## June 2024
 {: #jun-2024}
@@ -707,7 +715,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 
 
 
-[^2]: This update is regarding the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-release-notes#may-2023) release notes section.
+[^2]: This update is regarding the service extension update in the [May 2023](/docs/power-iaas?topic=power-iaas-power-iaas-relnotes#may-2023) release notes section.
 
 ## March 2024
 {: #mar-2024}
@@ -719,7 +727,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     - `CHE01` supports up to 5 GB Direct Link connections compared to other data centers that supports up to 10 GB.
     - To use Transit Gateway, you need to connect to `CHE01` using a different data center that supports Transit Gateway. For more information, see [Managing IBM Cloud connections](/docs/power-iaas?topic=power-iaas-cloud-connections).
     - IBM Cloud Monitoring and Power Edge Router network connectivity are currently unavailable for `CHE01`.
-- SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for Power Virtual Servers](/docs/power-iaas?topic=power-iaas-pricing-virtual-server-on-cloud).
+- SUSE part numbers for each tier are available. For more information, see the part numbers table in [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 - Flexible I/O operation per second (IOPS) is now available in the `DAL12`, `DAL13`, `SAO01`, `SAO04`, `WDC04`, and `WDC06` data centers. For more information, see [Flexible IOPS](/docs/power-iaas?topic=power-iaas-on-cloud-architecture#storage-tiers).
 - IBM Cloud Monitoring service is now available in `DAL13` and `FRA04`. For more information, see [Monitoring metrics for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-monitor-sysdig).
 - PER is now available in the `OSA21`, `SYD05`, and `TOK04` data center. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
@@ -746,7 +754,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
     - RHEL9-SP2-SAP
     - RHEL9-SP2-SAP-NETWEAVER
 
-- The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [Activity tracker regions](/docs/power-iaas?topic=power-iaas-at-events#at-regions).
+- The {{site.data.keyword.powerSys_notm}} workspaces provisioned in London, São Paulo, Osaka, Washington D.C., Montreal, and Toronto will send events to activity tracker instances in their respective regions effective from 29 January 2024. For more information, see [IBM Cloud Logs regions](/docs/power-iaas?topic=power-iaas-cloud-log-events#at-regions).
 - PER is now available in `DAL12` and `FRA04`. For more information, see [Getting Started with Power Edge Router](/docs/power-iaas?topic=power-iaas-per).
 
 - The direction going forward for VPN connectivity capability of the {{site.data.keyword.powerSys_notm}} will be to use the existing [IBM Cloud VPC VPN](/docs/power-iaas?topic=power-iaas-VPN-connections#vpc-vpn) for a one cloud experience, improved reliability, and high availability connections.

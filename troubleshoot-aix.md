@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-09-28"
 
 keywords: troubleshooting, hung virtual machine, support, help, system management services, SMS, object data manager, improving performance, suboptimal, lsattr
 
@@ -56,7 +56,7 @@ nim_master_setup -a device=/usr/sys/inst.images -a mk_resource=no
 4. Once completed, the NIM master file set is installed and the basic resource objects created.
     The administrator is now able to add more NIM clients and define resources.
 
-For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support).
+For more information, see [Setting up NIM to boot into maintenance mode](https://www.ibm.com/support/pages/setting-nim-boot-maintenance-mode){: external}. If you are unfamiliar with this process, create a [new support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs).
 
 ## How can I improve the performance of my AIX VM Tier 1 NVMe-based Flash Storage disk?
 {: #troubleshoot-slow-aix}

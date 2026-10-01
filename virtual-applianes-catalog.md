@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2023, 2024
+  years: 2023, 2026 
 
-lastupdated: "2024-12-03"
+lastupdated: "2026-09-28"
 
 keywords: managing virtual appliances, onboarding VM images
 
@@ -43,4 +43,4 @@ As part of the onboarding process for selling {{site.data.keyword.powerSys_notm}
 1.	Create your [{{site.data.keyword.powerSys_notm}} instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 2.	Create an instance of [IBM Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage) and upload your image to a bucket.
 3.	Create your [HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
-4.	[Open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support) so that the {{site.data.keyword.powerSys_notm}} product management team can convert your image into a stock image. Include your HMAC credentials and bucket details in the support case.
+4.	[Open a support case](/docs/power-iaas?topic=power-iaas-getting-help-and-support-pvs) so that the {{site.data.keyword.powerSys_notm}} product management team can convert your image into a stock image. Include your HMAC credentials and bucket details in the support case.
