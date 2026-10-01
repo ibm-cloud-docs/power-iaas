@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-10-01"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -88,11 +88,11 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 7. Optional: Expand **Advanced Configurations** to set more options for your VSI.
 
-    - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, the VSI is kept on its current host; however, downtime can occur during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard**.
+    - **Virtual server pinning**: By default, the **Virtual server pinning** option is set to off. When you enable this option, the VSI is kept on its current host. However, downtime can occur during planned and unplanned outages. To select a pinning type, set **Virtual server pinning** to on, and then select **Soft** or **Hard**.
 
         For more information about VSI pinning, see [Virtual server pinning and its impacts on VSI availability](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#vmpinning).
 
-    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you have access to the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
+    - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you can access the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
 8. Complete the **Boot image** fields.
 
@@ -166,7 +166,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 9. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)**, and **Core type**.
 
-
+    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [Behavior of IBM i deployments on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
