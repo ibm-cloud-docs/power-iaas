@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-05"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -83,6 +83,7 @@ All prices that are mentioned in the topic are illustrative and do not represent
 For more information about the systems that are available for your data center, see the overview page of the [{{site.data.keyword.powerSys_notm}}](https://cloud.ibm.com/power/overview) in the IBM Cloud console.
 
 A theoretical maximum of a system depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
+
 
 
 ## Billing details
