@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-10-05"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -35,7 +35,7 @@ The additional backup strategies that you can use are as follows:
 You can engage IBM teams and services to assist you throughout the migration lifecycle.
 
 - [Expert Labs](https://www.ibm.com/products/expertlabs){: external}
-- [IBM Services for Cloud Migration](https://www.ibm.com/services/cloud/migration){: external}
+- [IBM Services for Cloud Migration](https://www.ibm.com/consulting/cloud-migration){: external}
 
 ## Image capture
 {: #backup-image-capture}
@@ -101,7 +101,7 @@ Default output format [None]: json
 ## Veeam for AIX
 {: #veam-aix}
 
-Veeam for AIX provides simple physical server backup solutions for systems that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/ibm-aix-oracle-solaris-backup.html){: external}.
+Veeam for AIX provides simple physical server backup solutions for systems that are running in respective UNIX® operating systems. With them, IT organizations can provide industry-leading file-based backup and disaster recovery for their environments. For more information, see [Veeam Agents for IBM AIX](https://www.veeam.com/products/physical/ibm-aix-oracle-solaris-backup-recovery.html){: external}.
 
 
 
