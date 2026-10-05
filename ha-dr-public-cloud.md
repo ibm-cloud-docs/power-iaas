@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026
 
-lastupdated: "2026-08-05"
+lastupdated: "2026-10-05"
 
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.powerSysFull}} supports various high availability and disaster recovery solutions that you can deploy in your environment. Host failure recovery is the default high availability solution in {{site.data.keyword.powerSys_notm}}. You can also deploy advanced solutions, such as PowerHA SystemMirror for cluster management and PowerHA geographic mirroring for replication-based disaster recovery.
+{{site.data.keyword.powerSysFull}} supports various high availability and disaster recovery solutions that you can deploy in your environment. Host failure recovery is the default high availability solution in {{site.data.keyword.powerSys_notm}}. You can also deploy advanced solutions, such as Power High Availability (PowerHA) SystemMirror for cluster management and PowerHA geographic mirroring for replication-based disaster recovery.
 {: shortdesc}
 
 
