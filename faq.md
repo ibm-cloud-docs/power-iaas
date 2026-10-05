@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-05"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -657,7 +657,9 @@ If you do not specify an {{site.data.keyword.ibmi-vst}} while configuring a VSI 
 {: #ibmi-certification}
 {: faq}
 
-You can find self-certification and listing information on the [IBM Global Solutions Directory](https://www.ibm.com/partnerworld/public/find-partner-solution){: external}.
+You can find self-certification and listing information on the [IBM Partner Plus Directory](https://www.ibm.com/partnerplus/directory/solutions){: external}.
+
+To find IBM Power software and solutions provided by independent software vendors (ISVs) worldwide, see [IBM Power Solutions Catalog](https://www.ibm.com/power/resources/isv/power-solutions/){: external}.
 
 ---
 

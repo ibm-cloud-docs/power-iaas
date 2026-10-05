@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-05"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -276,7 +276,7 @@ VSN has the following characteristics:
 * It can be assigned to a new or an existing VSI.
 * It can be assigned to an empty VSI in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
 
-For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
+For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html).
 
 A VSI moves across systems with its associated VSN. Therefore, when a VSN is associated with a VSI, you do not need to pin the VSI to a host for licensing or entitlement purposes.
 
