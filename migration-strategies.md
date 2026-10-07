@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-30"
+lastupdated: "2026-10-07"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -61,10 +61,10 @@ For more information, see [Data backup and recovery by using BRMS and IBM Cloud 
 
 
 
+
+
 ## Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
 {: #logical-rep-glvm}
-
-
 
 GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geo mirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
 
@@ -72,7 +72,5 @@ GeoMirroring enables IBM i disk mirroring technology on multiple system environm
 
 
 
-
-
-- [Geographic mirroring](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_73/rzaue/rzalygeographicmirror.htm){: external}
+- [Geographic mirroring](https://www.ibm.com/docs/en/i/7.6.0?topic=ssw_ibm_i_76/rzaue/rzalygeographicmirror.html){: external}
 - [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}
