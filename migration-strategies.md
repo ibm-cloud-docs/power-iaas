@@ -66,7 +66,9 @@ For more information, see [Data backup and recovery by using BRMS and IBM Cloud 
 ## Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
 {: #logical-rep-glvm}
 
-GeoMirroring enables IBM i disk mirroring technology on multiple system environments and supports host-based and logical replication across geographically distant sites. Geo mirroring supports synchronous and asynchronous modes. You can integrate PowerHA SystemMirror (Enterprise Edition) for network monitoring and automated failover support.
+You can use geographic mirroring with PowerHA SystemMirror (Enterprise Edition) to migrate an IBM i partition to a {{site.data.keyword.powerSys_notm}} instance. The {{site.data.keyword.powerSys_notm}} instance serves as the replication target. Data replicates continuously from the on-premises source system to the {{site.data.keyword.powerSys_notm}} target. After data synchronizes, perform a switchover to complete the migration.
+
+Geographic mirroring supports synchronous and asynchronous modes. To enable network monitoring and automated failover, select an IBM PowerHA SystemMirror for i license.
 
 
 
