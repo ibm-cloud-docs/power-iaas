@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-09-15"
+lastupdated: "2026-10-09"
 
 keywords: IBM Cloud Logs, log events, regulatory audit requirements, abnormal activity, Power Virtual Server
 
@@ -28,7 +28,7 @@ subcollection: power-iaas
 
 ---
 
-{{site.data.keyword.logs_full_notm}} is a scalable logging service that stores and manages logs. You can use {{site.data.keyword.logs_full_notm}} to monitor and audit events and operations across your {{site.data.keyword.powerSys_notm}} resources.
+{{site.data.keyword.logs_full_notm}} is a scalable logging service that stores and manages logs. You can use {{site.data.keyword.logs_full_notm}} to monitor and audit events and operations across your {{site.data.keyword.powerSysFull}} resources.
 {: shortdesc}
 
 
@@ -36,7 +36,7 @@ subcollection: power-iaas
 
 
 
-{{site.data.keyword.powerSysFull}} automatically generates log events that report on activities that affect your resources. These log events can appear in different formats, including unstructured text, JSON, delimiter-separated values, and key-value pairs. You can use these log events to investigate abnormal activity, track critical actions, and meet regulatory audit requirements.
+{{site.data.keyword.powerSys_notm}} automatically generates log events that report activities that affect your resources. These log events can appear in different formats, including unstructured text, JSON, delimiter-separated values, and key-value pairs. You can use these log events to investigate abnormal activity, track critical actions, and meet regulatory audit requirements.
 
 
 For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs?topic=cloud-logs-getting-started).
@@ -54,14 +54,44 @@ For more information, see [Getting started with IBM Cloud Logs](/docs/cloud-logs
 ## Management events
 {: #management-events}
 
-The following events are auto-generated when you create, read, update, or delete {{site.data.keyword.powerSys_notm}} resources, such as instances, networks, and volumes.
+Management events are audit logs that capture control-plane actions that are performed on your {{site.data.keyword.powerSys_notm}} resources. These events are generated when you create, read, update, delete, or list resources. You can use these events for security auditing, compliance, and troubleshooting.
+
+The following event categories are available:
+
+- [Instance events](#instance-events)
+- [Image events](#image-events)
+- [Network events](#network-events)
+- [{{site.data.keyword.powerSys_notm}} events](#power-virtual-server-events)
+- [Secure Shell (SSH) key events](#secure-shell-ssh-key-events)
+- [Data volume events](#data-volumes-events)
+- [Storage capacity events](#storage-capacity-events)
+- [Storage pool events](#storage-pool-events)
+- [Tenant events](#tenant-events)
+- [Cloud instance job events](#cloud-instance-job-events)
+- [Network port events](#network-port-events)
+- [SAP events](#sap-events)
+- [Cloud connections events](#cloud-connections-events)
+- [Placement groups events](#placement-groups-events)
+- [Shared processor pool (SPP) placement groups events](#spp-placement-groups-events)
+- [Data center events](#data-center-events)
+- [Host events](#host-events)
+- [Route events](#route-events)
+- [SPP events](#spp-events)
+- [Snapshot events](#snapshot-events)
+- [Stock image events](#stock-image-events)
+- [Virtual serial number events](#virtual-serial-number-events)
+- [Workspace events](#workspace-events)
+- [Disaster recovery events](#disaster-recovery-events)
+- [Service broker events](#service-broker-events)
+- [Software tiers (IBM i licensing) events](#software-tiers-ibmi-licensing-events)
+- [Metadata and identity events](#metadata-and-identity-events)
 
 ### Instance events
 {: #instance-events}
 
 The following events are generated when you list or read {{site.data.keyword.powerSys_notm}} instances:
 
-| Event                  | Description                            |
+| Event                   | Description                            |
 | :---------------------- | :------------------------------------- |
 | `power-iaas.event.list` | Lists all events from a cloud instance |
 | `power-iaas.event.read` | Reads an event from a cloud instance   |
@@ -72,7 +102,7 @@ The following events are generated when you list or read {{site.data.keyword.pow
 
 The following events are generated when you import, export, update, or delete images in a workspace:
 
-| Event                    | Description      |
+| Event                     | Description      |
 | :------------------------ | :--------------- |
 | `power-iaas.image.delete` | Deletes an image |
 | `power-iaas.image.export` | Exports an image |
@@ -85,9 +115,9 @@ The following events are generated when you import, export, update, or delete im
 ### Network events
 {: #network-events}
 
-The following events are generated when you create, read, update, delete, or list network resources such as network address groups, network peers, security groups, and interfaces:
+The following events are generated when you create, read, update, delete, or list network resources such as network address groups, network peers, network security groups, and interfaces:
 
-| Event                                        | Description                                       |
+| Event                                         | Description                                       |
 | :-------------------------------------------- | :------------------------------------------------ |
 | `power-iaas.network-address-group.create`     | Creates a network address group                   |
 | `power-iaas.network-address-group.delete`     | Deletes a network address group from a workspace  |
@@ -97,8 +127,8 @@ The following events are generated when you create, read, update, delete, or lis
 | `power-iaas.network-interfaces.create`        | Creates a network interface                       |
 | `power-iaas.network-interfaces.delete`        | Deletes a network interface                       |
 | `power-iaas.network-interfaces.list`          | Lists all network interfaces                      |
-| `power-iaas.network-interfaces.read`          | Reads a network interface       |
-| `power-iaas.network-interfaces.update`        | Updates a network interface       |
+| `power-iaas.network-interfaces.read`          | Reads a network interface                         |
+| `power-iaas.network-interfaces.update`        | Updates a network interface                       |
 | `power-iaas.network-peer-route-filter.create` | Creates a network peer route filter               |
 | `power-iaas.network-peer-route-filter.delete` | Deletes a network peer route filter               |
 | `power-iaas.network-peer-route-filter.read`   | Reads a network peer route filter                 |
@@ -113,7 +143,7 @@ The following events are generated when you create, read, update, delete, or lis
 | `power-iaas.network-security-group.list`      | Lists all network security groups for a workspace |
 | `power-iaas.network-security-group.read`      | Reads a network security group                    |
 | `power-iaas.network-security-group.update`    | Updates a network security group                  |
-| `power-iaas.network.create`                   | Creates a network (public or private)             |
+| `power-iaas.network.create`                   | Creates a public or private network               |
 | `power-iaas.network.delete`                   | Deletes a network                                 |
 | `power-iaas.network.list`                     | Lists all networks                                |
 | `power-iaas.network.read`                     | Reads a network                                   |
@@ -126,36 +156,36 @@ The following events are generated when you create, read, update, delete, or lis
 
 The following events are generated when you create, start, stop, capture, update, or delete {{site.data.keyword.powerSys_notm}} instances and their associated resources:
 
-| Event                                                 | Description                                                                                                                     |
-| :----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| `power-iaas.pvm-instance-virtual-serial-number.create` | Assigns a virtual serial number to a {{site.data.keyword.powerSys_notm}} instance                                               |
-| `power-iaas.pvm-instance-virtual-serial-number.delete` | Unassigns a virtual serial number from a {{site.data.keyword.powerSys_notm}} instance                                           |
-| `power-iaas.pvm-instance-virtual-serial-number.read`   | Reads the virtual serial number information of a {{site.data.keyword.powerSys_notm}} instance                                   |
-| `power-iaas.pvm-instance-virtual-serial-number.update` | Updates a virtual serial number of a {{site.data.keyword.powerSys_notm}} instance                                               |
-| `power-iaas.pvm-instance-vpmem-volume.create`          | Creates a vpmem volume to be attached to a {{site.data.keyword.powerSys_notm}} instance                                         |
-| `power-iaas.pvm-instance-vpmem-volume.delete`          | Deletes a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance                                               |
-| `power-iaas.pvm-instance-vpmem-volume.list`            | Lists all vpmem volumes that are attached to a {{site.data.keyword.powerSys_notm}} instance                                              |
-| `power-iaas.pvm-instance-vpmem-volume.read`            | Reads a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance                                                 |
-| `power-iaas.pvm-instance-vpmem-volume.update`          | Updates a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance                                               |
-| `power-iaas.pvm-instance.capture`                      | Captures a {{site.data.keyword.powerSys_notm}} instance as an image                                                           |
-| `power-iaas.pvm-instance.create`                       | Creates a {{site.data.keyword.powerSys_notm}} instance                                                                          |
-| `power-iaas.pvm-instance.delete`                       | Deletes a {{site.data.keyword.powerSys_notm}} instance                                                                          |
-| `power-iaas.pvm-instance.immediate-shutdown`           | Shuts down a {{site.data.keyword.powerSys_notm}} instance immediately                                                           |
-| `power-iaas.pvm-instance.list`                         | Lists all {{site.data.keyword.powerSys_notm}} instances and instance snapshots        |
-| `power-iaas.pvm-instance.monitor`                      | Lists all supported console languages                                                                                           |
-| `power-iaas.pvm-instance.operation`                    | Triggers an operation on a {{site.data.keyword.powerSys_notm}} instance                                                         |
-| `power-iaas.pvm-instance.read`                         | Reads a {{site.data.keyword.powerSys_notm}} instance and restores an instance snapshot |
-| `power-iaas.pvm-instance.renew`                        | Restarts a {{site.data.keyword.powerSys_notm}} instance                                                                         |
-| `power-iaas.pvm-instance.snapshot`                     | Creates a {{site.data.keyword.powerSys_notm}} instance snapshot                                                                 |
-| `power-iaas.pvm-instance.start`                        | Starts a {{site.data.keyword.powerSys_notm}} instance                                                                           |
-| `power-iaas.pvm-instance.stop`                         | Stops a {{site.data.keyword.powerSys_notm}} instance                                                                            |
-| `power-iaas.pvm-instance.unknown`                      | Triggers an unknown action on a {{site.data.keyword.powerSys_notm}} instance                                                    |
-| `power-iaas.pvm-instance.update`                       | Updates a {{site.data.keyword.powerSys_notm}} instance                                                                          |
-| `power-iaas.pvm-instance-network.create`               | Attaches a network to a {{site.data.keyword.powerSys_notm}} instance                                                            |
-| `power-iaas.pvm-instance-network.delete`               | Detaches a network from a {{site.data.keyword.powerSys_notm}} instance                                                          |
-| `power-iaas.pvm-instance-network.list`                 | Lists all networks that are attached to a {{site.data.keyword.powerSys_notm}} instance                                                   |
-| `power-iaas.pvm-instance-network.read`                 | Reads the information of a network that is attached to a {{site.data.keyword.powerSys_notm}} instance                                   |
-| `power-iaas.cloud-instance.read`                       | Reads the current state and configuration of a cloud instance                                                                   |
+| Event                                                  | Description                                                                                           |
+| :----------------------------------------------------- | :---------------------------------------------------------------------------------------------------- |
+| `power-iaas.pvm-instance-virtual-serial-number.create` | Assigns a virtual serial number to a {{site.data.keyword.powerSys_notm}} instance                     |
+| `power-iaas.pvm-instance-virtual-serial-number.delete` | Unassigns a virtual serial number from a {{site.data.keyword.powerSys_notm}} instance                 |
+| `power-iaas.pvm-instance-virtual-serial-number.read`   | Reads the virtual serial number information of a {{site.data.keyword.powerSys_notm}} instance         |
+| `power-iaas.pvm-instance-virtual-serial-number.update` | Updates a virtual serial number of a {{site.data.keyword.powerSys_notm}} instance                     |
+| `power-iaas.pvm-instance-vpmem-volume.create`          | Creates a vpmem volume to be attached to a {{site.data.keyword.powerSys_notm}} instance               |
+| `power-iaas.pvm-instance-vpmem-volume.delete`          | Deletes a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance             |
+| `power-iaas.pvm-instance-vpmem-volume.list`            | Lists all vpmem volumes that are attached to a {{site.data.keyword.powerSys_notm}} instance           |
+| `power-iaas.pvm-instance-vpmem-volume.read`            | Reads a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance               |
+| `power-iaas.pvm-instance-vpmem-volume.update`          | Updates a vpmem volume that is attached to a {{site.data.keyword.powerSys_notm}} instance             |
+| `power-iaas.pvm-instance.capture`                      | Captures a {{site.data.keyword.powerSys_notm}} instance as an image                                   |
+| `power-iaas.pvm-instance.create`                       | Creates a {{site.data.keyword.powerSys_notm}} instance                                                |
+| `power-iaas.pvm-instance.delete`                       | Deletes a {{site.data.keyword.powerSys_notm}} instance                                                |
+| `power-iaas.pvm-instance.immediate-shutdown`           | Shuts down a {{site.data.keyword.powerSys_notm}} instance immediately                                 |
+| `power-iaas.pvm-instance.list`                         | Lists all {{site.data.keyword.powerSys_notm}} instances and instance snapshots                        |
+| `power-iaas.pvm-instance.monitor`                      | Lists all supported console languages                                                                 |
+| `power-iaas.pvm-instance.operation`                    | Triggers an operation on a {{site.data.keyword.powerSys_notm}} instance                               |
+| `power-iaas.pvm-instance.read`                         | Reads a {{site.data.keyword.powerSys_notm}} instance and restores an instance snapshot                |
+| `power-iaas.pvm-instance.renew`                        | Restarts a {{site.data.keyword.powerSys_notm}} instance                                               |
+| `power-iaas.pvm-instance.snapshot`                     | Creates a {{site.data.keyword.powerSys_notm}} instance snapshot                                       |
+| `power-iaas.pvm-instance.start`                        | Starts a {{site.data.keyword.powerSys_notm}} instance                                                 |
+| `power-iaas.pvm-instance.stop`                         | Stops a {{site.data.keyword.powerSys_notm}} instance                                                  |
+| `power-iaas.pvm-instance.unknown`                      | Triggers an unknown action on a {{site.data.keyword.powerSys_notm}} instance                          |
+| `power-iaas.pvm-instance.update`                       | Updates a {{site.data.keyword.powerSys_notm}} instance                                                |
+| `power-iaas.pvm-instance-network.create`               | Attaches a network to a {{site.data.keyword.powerSys_notm}} instance                                  |
+| `power-iaas.pvm-instance-network.delete`               | Detaches a network from a {{site.data.keyword.powerSys_notm}} instance                                |
+| `power-iaas.pvm-instance-network.list`                 | Lists all networks that are attached to a {{site.data.keyword.powerSys_notm}} instance                |
+| `power-iaas.pvm-instance-network.read`                 | Reads the information of a network that is attached to a {{site.data.keyword.powerSys_notm}} instance |
+| `power-iaas.cloud-instance.read`                       | Reads the current state and configuration of a cloud instance                                         |
 {: caption="{{site.data.keyword.powerSys_notm}} events" caption-side="bottom"}
 
 ### Secure Shell (SSH) key events
@@ -163,53 +193,53 @@ The following events are generated when you create, start, stop, capture, update
 
 The following events are generated when you create, update, or delete SSH keys in a workspace:
 
-| Event                     | Description        |
+| Event                      | Description        |
 | :------------------------- | :----------------- |
 | `power-iaas.sshkey.create` | Creates an SSH key |
 | `power-iaas.sshkey.delete` | Deletes an SSH key |
 | `power-iaas.sshkey.list`   | Lists all SSH keys |
 | `power-iaas.sshkey.read`   | Reads an SSH key   |
 | `power-iaas.sshkey.update` | Updates an SSH key |
-{: caption="Secure shell (SSH) key events" caption-side="bottom"}
+{: caption="Secure Shell (SSH) key events" caption-side="bottom"}
 
 ### Data volume events
 {: #data-volumes-events}
 
 The following events are generated when you create, attach, clone, read, update, or delete data volumes and volume groups:
 
-| Event                                | Description                                                                                        |
-| :------------------------------------ | :------------------------------------------------------------------------------------------------- |
-| `power-iaas.volume-group.delete`      | Deletes a cloud instance volume group                                                              |
-| `power-iaas.volume-group.list`        | Lists all volume groups                                                                            |
-| `power-iaas.volume-group.post`        | Creates a volume group                                                                             |
-| `power-iaas.volume-group.read`        | Lists the remote-copy volume relationships for a volume group                                                             |
-| `power-iaas.volume-group.reset`       | Resets an operation on a volume group                                                              |
-| `power-iaas.volume-group.start`       | Starts a volume group                                                                              |
-| `power-iaas.volume-group.stop`        | Stops a volume group                                                                               |
-| `power-iaas.volume-group.unknown`     | Triggers an unknown operation on a volume group                                                    |
-| `power-iaas.volume-group.update`      | Updates a volume group                                                                             |
-| `power-iaas.volume-onboarding.create` | Adds auxiliary volumes to the target site                                                          |
-| `power-iaas.volume-onboarding.list`   | Lists all volume onboarding operations                                                             |
-| `power-iaas.volume-onboarding.read`   | Reads information about a volume onboarding operation                                              |
-| `power-iaas.volume-snapshot.list`     | Lists all volume snapshots in a workspace                                                       |
-| `power-iaas.volume-snapshot.read`     | Reads the details of a volume snapshot                                                             |
-| `power-iaas.volume.clone`             | Creates a volume clone for specified volumes                                                       |
+| Event                                 | Description                                                                                                |
+| :------------------------------------ | :--------------------------------------------------------------------------------------------------------- |
+| `power-iaas.volume-group.delete`      | Deletes a cloud instance volume group                                                                      |
+| `power-iaas.volume-group.list`        | Lists all volume groups                                                                                    |
+| `power-iaas.volume-group.post`        | Creates a volume group                                                                                     |
+| `power-iaas.volume-group.read`        | Lists the remote-copy volume relationships for a volume group                                              |
+| `power-iaas.volume-group.reset`       | Resets an operation on a volume group                                                                      |
+| `power-iaas.volume-group.start`       | Starts a volume group                                                                                      |
+| `power-iaas.volume-group.stop`        | Stops a volume group                                                                                       |
+| `power-iaas.volume-group.unknown`     | Triggers an unknown operation on a volume group                                                            |
+| `power-iaas.volume-group.update`      | Updates a volume group                                                                                     |
+| `power-iaas.volume-onboarding.create` | Adds auxiliary volumes to the target site                                                                  |
+| `power-iaas.volume-onboarding.list`   | Lists all volume onboarding operations                                                                     |
+| `power-iaas.volume-onboarding.read`   | Reads information about a volume onboarding operation                                                      |
+| `power-iaas.volume-snapshot.list`     | Lists all volume snapshots in a workspace                                                                  |
+| `power-iaas.volume-snapshot.read`     | Reads the details of a volume snapshot                                                                     |
+| `power-iaas.volume.clone`             | Creates a volume clone for specified volumes                                                               |
 | `power-iaas.volume.configure`         | Attaches, detaches, or updates a volume that is attached to a {{site.data.keyword.powerSys_notm}} instance |
-| `power-iaas.volume.create`            | Creates a volume                                                                                   |
-| `power-iaas.volume.delete`            | Deletes a volume                                                                                   |
-| `power-iaas.volume.list`              | Lists all volumes                                                                                  |
-| `power-iaas.volume.operation`         | Triggers an action on a volume                                                                     |
-| `power-iaas.volume.read`              | Reads a volume, flash copy mappings of a volume, and remote copy volume information                |
-| `power-iaas.volume.start`             | Starts an operation on a volume                                                                    |
-| `power-iaas.volume.update`            | Updates a volume                                                                                   |
-{: caption="Data volumes events" caption-side="bottom"}
+| `power-iaas.volume.create`            | Creates a volume                                                                                           |
+| `power-iaas.volume.delete`            | Deletes a volume                                                                                           |
+| `power-iaas.volume.list`              | Lists all volumes                                                                                          |
+| `power-iaas.volume.operation`         | Triggers an action on a volume                                                                             |
+| `power-iaas.volume.read`              | Reads a volume, flash copy mappings of a volume, and remote copy volume information                        |
+| `power-iaas.volume.start`             | Starts an operation on a volume                                                                            |
+| `power-iaas.volume.update`            | Updates a volume                                                                                           |
+{: caption="Data volume events" caption-side="bottom"}
 
 ### Storage capacity events
 {: #storage-capacity-events}
 
 The following events are generated when you list or read storage capacity information for a workspace or pod:
 
-| Event                             | Description                                                 |
+| Event                              | Description                                                 |
 | :--------------------------------- | :---------------------------------------------------------- |
 | `power-iaas.storage-capacity.list` | Lists storage capacity information for a workspace          |
 | `power-iaas.storage-capacity.read` | Reads storage capacity information                          |
@@ -221,7 +251,7 @@ The following events are generated when you list or read storage capacity inform
 
 The following event is generated when you list storage pools for an IBM data center:
 
-| Event                         | Description                               |
+| Event                          | Description                               |
 | :----------------------------- | :---------------------------------------- |
 | `power-iaas.system-pools.list` | Lists storage pools of an IBM data center |
 {: caption="Storage pool events" caption-side="bottom"}
@@ -231,7 +261,7 @@ The following event is generated when you list storage pools for an IBM data cen
 
 The following events are generated when you read or update tenant information and manage tenant SSH keys:
 
-| Event                            | Description                    |
+| Event                             | Description                    |
 | :-------------------------------- | :----------------------------- |
 | `power-iaas.tenant-sshkey.create` | Creates a tenant SSH key       |
 | `power-iaas.tenant-sshkey.delete` | Deletes a tenant SSH key       |
@@ -247,7 +277,7 @@ The following events are generated when you read or update tenant information an
 
 The following events are generated when you create, delete, list, or read cloud instance jobs:
 
-| Event                  | Description                                                   |
+| Event                   | Description                                                   |
 | :---------------------- | :------------------------------------------------------------ |
 | `power-iaas.job.create` | Creates a cloud instance job                                  |
 | `power-iaas.job.delete` | Deletes a cloud instance job                                  |
@@ -260,7 +290,7 @@ The following events are generated when you create, delete, list, or read cloud 
 
 The following events are generated when you create, update, or delete network ports in a workspace:
 
-| Event                   | Description             |
+| Event                    | Description             |
 | :----------------------- | :---------------------- |
 | `power-iaas.port.create` | Creates a network port  |
 | `power-iaas.port.delete` | Deletes a network port  |
@@ -274,7 +304,7 @@ The following events are generated when you create, update, or delete network po
 
 The following events are generated when you create or read SAP {{site.data.keyword.powerSys_notm}} instances:
 
-| Event                  | Description                                                 |
+| Event                   | Description                                                 |
 | :---------------------- | :---------------------------------------------------------- |
 | `power-iaas.sap.create` | Creates an SAP {{site.data.keyword.powerSys_notm}} instance |
 | `power-iaas.sap.list`   | Lists all SAP {{site.data.keyword.powerSys_notm}} instances |
@@ -284,9 +314,9 @@ The following events are generated when you create or read SAP {{site.data.keywo
 ### Cloud connections events
 {: #cloud-connections-events}
 
-The following events are generated when you create, update, or delete cloud connections in a workspace:
+The following events are generated when you read, list, create, update, or delete cloud connections in a workspace:
 
-| Event                               | Description                 |
+| Event                                | Description                 |
 | :----------------------------------- | :-------------------------- |
 | `power-iaas.cloud-connection.create` | Creates a cloud connection  |
 | `power-iaas.cloud-connection.delete` | Deletes a cloud connection  |
@@ -295,46 +325,46 @@ The following events are generated when you create, update, or delete cloud conn
 | `power-iaas.cloud-connection.update` | Updates a cloud connection  |
 {: caption="Cloud connections events" caption-side="bottom"}
 
-### Placement groups events
+### Placement group events
 {: #placement-groups-events}
 
 The following events are generated when you create, update, or delete placement groups for {{site.data.keyword.powerSys_notm}} instances:
 
-| Event                               | Description                |
+| Event                                | Description                |
 | :----------------------------------- | :------------------------- |
 | `power-iaas.placement-group.create`  | Creates a placement group  |
 | `power-iaas.placement-group.delete`  | Deletes a placement group  |
 | `power-iaas.placement-group.list`    | Lists all placement groups |
 | `power-iaas.placement-group.read`    | Reads a placement group    |
 | `power-iaas.placement-groups.update` | Updates a placement group  |
-{: caption="Placement groups events" caption-side="bottom"}
+{: caption="Placement group events" caption-side="bottom"}
 
-### Shared processor pool (SPP) placement groups events
+### Shared processor pool (SPP) placement group events
 {: #spp-placement-groups-events}
 
 The following events are generated when you create, update, or delete SPP placement groups:
 
-| Event                                   | Description                      |
-| :--------------------------------------- | :------------------------------- |
-| `power-iaas.spp-placement-group.create`  | Creates an SPP placement group   |
-| `power-iaas.spp-placement-group.delete`  | Deletes an SPP placement group   |
-| `power-iaas.spp-placement-group.list`    | Lists all SPP placement groups   |
-| `power-iaas.spp-placement-group.read`    | Reads an SPP placement group     |
+| Event                                    | Description                                     |
+| :--------------------------------------- | :---------------------------------------------- |
+| `power-iaas.spp-placement-group.create`  | Creates an SPP placement group                  |
+| `power-iaas.spp-placement-group.delete`  | Deletes an SPP placement group                  |
+| `power-iaas.spp-placement-group.list`    | Lists all SPP placement groups                  |
+| `power-iaas.spp-placement-group.read`    | Reads an SPP placement group                    |
 | `power-iaas.spp-placement-groups.delete` | Deletes all SPP placement groups in a workspace |
-| `power-iaas.spp-placement-groups.update` | Updates an SPP placement group   |
-{: caption="SPP placement groups events" caption-side="bottom"}
+| `power-iaas.spp-placement-groups.update` | Updates an SPP placement group                  |
+{: caption="SPP placement group events" caption-side="bottom"}
 
 ### Data center events
 {: #data-center-events}
 
 The following events are generated when you list or read information and capabilities for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} or in {{site.data.keyword.on-prem}}:
 
-| Event                               | Description                                                                   |
-| :----------------------------------- | :---------------------------------------------------------------------------- |
+| Event                                | Description                                            |
+| :----------------------------------- | :----------------------------------------------------- |
 | `power-iaas.datacenter-private.list` | Lists all data center information at a client location |
-| `power-iaas.datacenter-private.read` | Reads the data center information at a client location  |
-| `power-iaas.datacenter.list`         | Lists all IBM data center information                       |
-| `power-iaas.datacenter.read`         | Reads the IBM data center information                 |
+| `power-iaas.datacenter-private.read` | Reads the data center information at a client location |
+| `power-iaas.datacenter.list`         | Lists all IBM data center information                  |
+| `power-iaas.datacenter.read`         | Reads the IBM data center information                  |
 {: caption="Data center events" caption-side="bottom"}
 
 ### Host events
@@ -342,18 +372,18 @@ The following events are generated when you list or read information and capabil
 
 The following events are generated when you create, read, update, delete, or list dedicated hosts and host groups in a workspace:
 
-| Event                            | Description                                    |
-| :-------------------------------- | :--------------------------------------------- |
-| `power-iaas.host-group.create`    | Creates a host group with one or more hosts    |
-| `power-iaas.host-group.delete`    | Deletes a host group                           |
-| `power-iaas.host-group.list`      | Lists all host groups for your workspace       |
-| `power-iaas.host-group.read`      | Reads the details of a host group              |
-| `power-iaas.host-group.update`    | Updates a host group                           |
-| `power-iaas.host.delete`          | Releases a host from its host group            |
+| Event                             | Description                                       |
+| :-------------------------------- | :------------------------------------------------ |
+| `power-iaas.host-group.create`    | Creates a host group with one or more hosts       |
+| `power-iaas.host-group.delete`    | Deletes a host group                              |
+| `power-iaas.host-group.list`      | Lists all host groups for your workspace          |
+| `power-iaas.host-group.read`      | Reads the details of a host group                 |
+| `power-iaas.host-group.update`    | Updates a host group                              |
+| `power-iaas.host.delete`          | Releases a host from its host group               |
 | `power-iaas.host.list`            | Lists all hosts that are available to a workspace |
-| `power-iaas.host.read`            | Reads the details of a host                    |
-| `power-iaas.host.update`          | Updates the display name of a host             |
-| `power-iaas.available-hosts.list` | Lists all hosts that can be reserved           |
+| `power-iaas.host.read`            | Reads the details of a host                       |
+| `power-iaas.host.update`          | Updates the display name of a host                |
+| `power-iaas.available-hosts.list` | Lists all hosts that can be reserved              |
 {: caption="Host events" caption-side="bottom"}
 
 ### Route events
@@ -361,13 +391,13 @@ The following events are generated when you create, read, update, delete, or lis
 
 The following events are generated when you create, update, or delete routes in a workspace:
 
-| Event                    | Description                        |
-| :------------------------ | :--------------------------------- |
-| `power-iaas.route.create` | Creates a network route                    |
-| `power-iaas.route.delete` | Deletes a network route                    |
+| Event                     | Description                             |
+| :------------------------ | :-------------------------------------- |
+| `power-iaas.route.create` | Creates a network route                 |
+| `power-iaas.route.delete` | Deletes a network route                 |
 | `power-iaas.route.list`   | Lists all network routes in a workspace |
-| `power-iaas.route.read`   | Reads information about a network route    |
-| `power-iaas.route.update` | Updates information for a network route    |
+| `power-iaas.route.read`   | Reads information about a network route |
+| `power-iaas.route.update` | Updates information for a network route |
 {: caption="Route events" caption-side="bottom"}
 
 ### SPP events
@@ -375,7 +405,7 @@ The following events are generated when you create, update, or delete routes in 
 
 The following events are generated when you create, read, update, delete, or list SPPs for a cloud instance:
 
-| Event                                    | Description                                      |
+| Event                                     | Description                                      |
 | :---------------------------------------- | :----------------------------------------------- |
 | `power-iaas.shared-processor-pool.create` | Creates an SPP                                   |
 | `power-iaas.shared-processor-pool.delete` | Deletes an SPP from a cloud instance             |
@@ -389,20 +419,23 @@ The following events are generated when you create, read, update, delete, or lis
 
 The following events are generated when you list, read, update, or delete workspace snapshots:
 
-| Event                       | Description                           |
-| :--------------------------- | :------------------------------------ |
-| `power-iaas.snapshot.list` (deprecated)   | Lists all snapshots in a workspace |
-| `power-iaas.snapshot.read` (deprecated)  | Reads the details of a snapshot       |
-| `power-iaas.snapshot.delete` | Deletes a snapshot                    |
-| `power-iaas.snapshot.update` | Updates a snapshot                    |
+| Event                                   | Description                        |
+| :-------------------------------------- | :--------------------------------- |
+| `power-iaas.snapshot.list` (deprecated) | Lists all snapshots in a workspace |
+| `power-iaas.snapshot.read` (deprecated) | Reads the details of a snapshot    |
+| `power-iaas.snapshot.delete`            | Deletes a snapshot                 |
+| `power-iaas.snapshot.update`            | Updates a snapshot                 |
 {: caption="Snapshot events" caption-side="bottom"}
+
+The `power-iaas.snapshot.list` and `power-iaas.snapshot.read` events are deprecated. Use `power-iaas.volume-snapshot.list` and `power-iaas.volume-snapshot.read` instead.
+{: note}
 
 ### Stock image events
 {: #stock-image-events}
 
 The following events are generated when you list or read available stock images for a workspace:
 
-| Event                        | Description                                   |
+| Event                         | Description                                   |
 | :---------------------------- | :-------------------------------------------- |
 | `power-iaas.stock-image.list` | Lists all available stock images              |
 | `power-iaas.stock-image.read` | Reads the details of an available stock image |
@@ -413,10 +446,10 @@ The following events are generated when you list or read available stock images 
 
 The following events are generated when you list, read, update, or delete virtual serial numbers:
 
-| Event                                    | Description                                                 |
+| Event                                     | Description                                                 |
 | :---------------------------------------- | :---------------------------------------------------------- |
-| `power-iaas.virtual-serial-number.delete` | Unreserves a retained virtual serial number                 |
-| `power-iaas.virtual-serial-number.list`   | Lists all used and retained virtual serial numbers      |
+| `power-iaas.virtual-serial-number.delete` | Deletes a retained virtual serial number              |
+| `power-iaas.virtual-serial-number.list`   | Lists all used and retained virtual serial numbers          |
 | `power-iaas.virtual-serial-number.read`   | Reads the information for a virtual serial number           |
 | `power-iaas.virtual-serial-number.update` | Updates the description of a reserved virtual serial number |
 {: caption="Virtual serial number events" caption-side="bottom"}
@@ -426,16 +459,16 @@ The following events are generated when you list, read, update, or delete virtua
 
 The following events are generated when you enable, disable, list, or read workspaces that belong to a tenant:
 
-| Event                         | Description                                        |
-| :----------------------------- | :------------------------------------------------- |
-| `power-iaas.workspace.disable` | Disables a workspace                               |
-| `power-iaas.workspace.enable`  | Enables a workspace                                |
-| `power-iaas.workspace.list`    | Lists all workspace information and capabilities   |
-| `power-iaas.workspace.read`    | Reads information of a workspace |
-| `power-iaas.workspace.unknown` | Triggers an unknown action on a workspace          |
+| Event                          | Description                                      |
+| :----------------------------- | :----------------------------------------------- |
+| `power-iaas.workspace.disable` | Disables a workspace                             |
+| `power-iaas.workspace.enable`  | Enables a workspace                              |
+| `power-iaas.workspace.list`    | Lists all workspace information and capabilities |
+| `power-iaas.workspace.read`    | Reads information of a workspace                 |
+| `power-iaas.workspace.unknown` | Triggers an unknown action on a workspace        |
 {: caption="Workspace events" caption-side="bottom"}
 
-An `unknown` event is generated when an unrecognized action is triggered on a workspace.
+An unknown event is generated when an unrecognized action is triggered on a workspace.
 {: note}
 
 ### Disaster recovery events
@@ -443,7 +476,7 @@ An `unknown` event is generated when an unrecognized action is triggered on a wo
 
 The following event is generated when you read disaster recovery site details for a data center location:
 
-| Event                              | Description                                                                   |
+| Event                               | Description                                                                   |
 | :---------------------------------- | :---------------------------------------------------------------------------- |
 | `power-iaas.disaster-recovery.read` | Reads the disaster recovery site details for the current data center location |
 {: caption="Disaster recovery events" caption-side="bottom"}
@@ -453,8 +486,8 @@ The following event is generated when you read disaster recovery site details fo
 
 The following event is generated when you list supported storage tiers for a {{site.data.keyword.powerSys_notm}} instance:
 
-| Event                           | Description                                            |
-| :------------------------------- | :----------------------------------------------------- |
+| Event                            | Description                                                                          |
+| :------------------------------- | :----------------------------------------------------------------------------------- |
 | `power-iaas.service-broker.read` | Lists all supported storage tiers for a {{site.data.keyword.powerSys_notm}} instance |
 {: caption="Service broker events" caption-side="bottom"}
 
@@ -463,7 +496,7 @@ The following event is generated when you list supported storage tiers for a {{s
 
 The following event is generated when you list supported software tiers for IBM i licensing:
 
-| Event                          | Description                                            |
+| Event                           | Description                                            |
 | :------------------------------ | :----------------------------------------------------- |
 | `power-iaas.software-tier.list` | Lists all supported software tiers for IBM i licensing |
 {: caption="Software tiers (IBM i licensing) events" caption-side="bottom"}
@@ -473,11 +506,11 @@ The following event is generated when you list supported software tiers for IBM 
 
 The following events are generated when you create or request identity tokens or read metadata for a virtual server instance:
 
-| Event                                              | Description                                                                       |
+| Event                                               | Description                                                                       |
 | :-------------------------------------------------- | :-------------------------------------------------------------------------------- |
 | `power-iaas.metadata-identity-token.create`         | Creates an identity token                                                         |
 | `power-iaas.metadata-computeresource-token.request` | Requests an IBM Cloud Identity and Access Management (IAM) access token           |
-| `power-iaas.metadata-instance.read`                 | Reads information about the virtual server instance (VSI) that issued the request |
+| `power-iaas.metadata-instance.read`                 | Reads information about the virtual server instance (VSI) that provided the request |
 {: caption="Metadata and identity events" caption-side="bottom"}
 
 
@@ -584,19 +617,15 @@ The following table lists the data centers and their corresponding regions where
 
 
 | Data centers | Current {{site.data.keyword.logs_full_notm}} region | New {{site.data.keyword.logs_full_notm}} region |
-| ---------- | --------------------------------------------------- | ----------------------------------------------- |
-| `WDC04`    | us-south                                            | us-east                                         |
-| `WDC06`    | us-south                                            | us-east                                         |
-| `WDC07`    | us-south                                            | us-east                                         |
-| `MON01`    | us-south                                            | ca-tor                                          |
-| `TOR04`    | us-south                                            | ca-tor                                          |
-| `SAO01`    | us-south                                            | br-sao                                          |
-| `SAO04`    | us-south                                            | br-sao                                          |
-| `LON04`    | eu-de                                               | eu-gb                                           |
-| `LON06`    | eu-de                                               | eu-gb                                           |
-| `OSA21`    | jp-tok                                              | jp-osa                                          |
+| ------------ | --------------------------------------------------- | ----------------------------------------------- |
+| `WDC04`      | us-south                                            | us-east                                         |
+| `WDC06`      | us-south                                            | us-east                                         |
+| `WDC07`      | us-south                                            | us-east                                         |
+| `MON01`      | us-south                                            | ca-tor                                          |
+| `TOR04`      | us-south                                            | ca-tor                                          |
+| `SAO01`      | us-south                                            | br-sao                                          |
+| `SAO04`      | us-south                                            | br-sao                                          |
+| `LON04`      | eu-de                                               | eu-gb                                           |
+| `LON06`      | eu-de                                               | eu-gb                                           |
+| `OSA21`      | jp-tok                                              | jp-osa                                          |
 {: caption="Data centers and their corresponding IBM Cloud Logs instance regions" caption-side="bottom"}
-
-
-
-
