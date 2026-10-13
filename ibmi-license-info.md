@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-18"
+lastupdated: "2026-10-13"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -65,7 +65,6 @@ The following LPP, and IBM i operating system features are included in the {{sit
 - 5761-AMT: Rational Application Management Toolset
 - 5761-AP1: Advanced DBCS Printer Support
 - 5733-B45: AFP Font Collection for i
-- 5770-BR1: Backup, Recovery, and Media Services
 - 5770-BR2: Backup, Recovery, and Media Services
 - 5761-DB1: System/38 Utilities
 - 5761-CM1: Communications Utilities
