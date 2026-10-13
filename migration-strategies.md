@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-07"
+lastupdated: "2026-10-13"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -18,8 +18,6 @@ subcollection: power-iaas
 
 ---
 
-
-
 {{site.data.keyword.off-prem-fname}} in [{{site.data.keyword.off-prem}}]{: tag-blue}
 
 
@@ -28,13 +26,8 @@ subcollection: power-iaas
 
 ---
 
-Learn about the various strategies to migrate your data and workloads to an {{site.data.keyword.powerSysFull}}.
+Learn about the various strategies that are specific to IBM i systems to migrate your data and workloads to an {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
-
-## IBM i migration strategies
-{: #migration-ibmi}
-
-Learn about migration strategies that are specific to IBM i systems.
 
 Recent IBM i migration enhancements include the following items:
 * [Software data compression in BRMS](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} to support tape and virtual tape compression.
@@ -66,13 +59,23 @@ For more information, see [Data backup and recovery by using BRMS and IBM Cloud 
 ## Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
 {: #logical-rep-glvm}
 
-You can use geographic mirroring with PowerHA SystemMirror (Enterprise Edition) to migrate an IBM i partition to a {{site.data.keyword.powerSys_notm}} instance. The {{site.data.keyword.powerSys_notm}} instance serves as the replication target. Data replicates continuously from the on-premises source system to the {{site.data.keyword.powerSys_notm}} target. After data synchronizes, perform a switchover to complete the migration.
-
-Geographic mirroring supports synchronous and asynchronous modes. To enable network monitoring and automated failover, select an IBM PowerHA SystemMirror for i license.
-
+## Migrating IBM i partitions by using geographic mirroring and PowerHA SystemMirror for IBM i
+{: #migration-gm-sm}
 
 
+You can migrate an IBM i partition to a {{site.data.keyword.powerSys_notm}} instance by using geographic mirroring with PowerHA SystemMirror (Enterprise Edition). The {{site.data.keyword.powerSys_notm}} instance serves as the replication target.
 
+Before you configure geographic mirroring, establish a private network connection between your on-premises system and your {{site.data.keyword.powerSys_notm}} workspace. For more information, see [Connecting a client-managed data center](/docs/power-iaas?topic=power-iaas-network-architecture-diagrams#per-on-orem) and [VPN connections](/docs/power-iaas?topic=power-iaas-VPN-connections). After you establish the connection, data replicates continuously from the on-premises source system to the {{site.data.keyword.powerSys_notm}} instance. After you verify that the data is synchronized, perform a switchover to complete the migration. For instructions on performing a planned switchover, see the "Switching a geographic mirroring environment" chapter in [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}.
+
+You can use geographic mirroring in synchronous or asynchronous mode. For more information, see the "Modes of operation" section in [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}.
+
+To use network monitoring and automated failover, you need a license for IBM PowerHA SystemMirror for i. You can add the licenses when you create a virtual server instance (VSI). For more information, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+
+
+
+
+
+For more information about geographic mirroring, see the following resources:
 
 - [Geographic mirroring](https://www.ibm.com/docs/en/i/7.6.0?topic=ssw_ibm_i_76/rzaue/rzalygeographicmirror.html){: external}
 - [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}
