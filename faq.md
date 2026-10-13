@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-13"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -247,13 +247,21 @@ When replicating volumes that span multiple storage pools, each pool requires it
 {: #snapshot}
 {: faq}
 
+
+
 {{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+
+
+
+
 
 ### **What are the key differences between a snapshot and a clone?**
 {: #snap-vs-clone}
 {: faq}
 
 The key differences are as follows:
+
+
 
 | Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -263,7 +271,17 @@ The key differences are as follows:
 | Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the GRS costs                                                                                     |
 {: caption="Differences between a snapshot and clone" caption-side="bottom"}
 
+
+
+
+
+
+
 See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning) for more detailed information.
+
+
+
+
 
 
 
@@ -271,13 +289,25 @@ See [Snapshots, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapsh
 {: #snap-storage-req}
 {: faq}
 
+
+
 None. The storage is allocated on demand.
+
+
+
+
 
 ### **Does the snapshot and volume clone support any safeguard policy?**
 {: #snap-clone-safeguard}
 {: faq}
 
+
+
 None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any options to safeguarded copy (such as cyber protection).
+
+
+
+
 
 ### **Can you tell me more about the backup process by using the PowerHA Toolkit for IBM i?**
 {: #poweha-toolkit}
