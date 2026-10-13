@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-08"
+lastupdated: "2026-10-13"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -24,6 +24,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## October 2026
 {: #October-2026}
+
+
 
 ### 01 October 2026
 {: #power-iaas-oct0126}
@@ -160,7 +162,7 @@ S1122 servers as dedicated hosts
 :   You can provision S1122 servers as dedicated hosts. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 Networking enhancements
-:   * **DHCP service for {{site.data.keyword.powerSys_notm}}**: You can enable or disable Dynamic Host Configuration Protocol (DHCP) services on subnets in your    {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} page.
+:   * **DHCP service for {{site.data.keyword.powerSys_notm}}**: You can enable or disable DHCP services on subnets in your    {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
     * **Network routes**: The network routes feature is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. A network route defines the path that data packets follow to travel from a source to a destination across a network. You can use the network routes feature in {{site.data.keyword.powerSys_notm}} to view implicit network routes and create or manage static routes in your Power Virtual Server workspaces. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
     * **{{site.data.keyword.arp-broadcast}}**: The Address Resolution Protocol (ARP) is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. ARP maps IP addresses to physical Media Access Control (MAC) addresses in a network. For more information, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
 
