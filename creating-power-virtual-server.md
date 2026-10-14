@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-14"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -94,7 +94,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you can access the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
-8. Complete the **Boot image** fields.
+8. Click **Continue** to proceed to the **Boot image** section, then complete the **Boot image** fields.
 
     You can create or provision a VSI without an initial boot image volume. VSIs without a boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. You can create a VSI without a boot volume and then attach a cloned or replicated volume to restore the backed-up VSI.
 
@@ -228,6 +228,8 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 11. Click **Continue**.
 
 12. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the VSI.
+
+    
 
     Expand **Advanced Configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
@@ -505,8 +507,14 @@ To learn more about the flexible tier offering of {{site.data.keyword.powerSys_n
 
 For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
+
+
 If you add volumes to be created and attached to your new VSI during creation, all the volumes are provisioned in the same selected storage pool. Volumes can be created in different storage pools after the VSI is provisioned.
 {: note}
+
+
+
+
 
 
 ## Provisioning a virtual machine without an initial boot volume

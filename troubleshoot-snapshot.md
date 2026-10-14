@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2019, 2026 
+  years: 2019, 2026
 
-lastupdated: "2026-07-13"
+lastupdated: "2026-10-14"
 
 keywords: snapshot, restore, clone, troubleshoot
 
 subcollection: power-iaas
+
+content-type: troubleshoot
 
 ---
 
@@ -35,11 +37,14 @@ Learn how to troubleshoot {{site.data.keyword.powerSysShort}} snapshot, clone an
 {: #troubleshoot-clone}
 {: troubleshoot}
 
-Symptoms: When you clone and attach a volume to the same PVM as the PVM containing the original volume, the PVIDs of both volumes are found to be the same on your AIX operating system.
+When you clone and attach a volume to the same PVM as the PVM containing the original volume, the PVIDs of both volumes are found to be the same on your AIX operating system.
+{: tsSymptoms}
 
-Causes: There's a problem with the underlying technology that is supporting the clone feature.
+There is a problem with the underlying technology that supports the clone feature.
+{: tsCauses}
 
-Resolve: To resolve this issue, enter the following commands:
+To resolve this issue, run the following commands:
+{: tsResolve}
 
 1. `chdev -a pv=clear -l hdisk2`
 2. `recreatevg -y copyvg hdisk2`
