@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-29"
+lastupdated: "2026-10-14"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -26,7 +26,7 @@ subcollection: power-iaas
 
 ---
 
-IAM enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is the central service for all user and resource management in {{site.data.keyword.cloud_notm}}.
+{{site.data.keyword.iamlong}} (IAM) enables you to securely authenticate users, control access to {{site.data.keyword.powerSysShort}} resources with resource groups, and allow access to specific resources for a set of users with access groups. IAM is the central service for all user and resource management in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
 
@@ -124,7 +124,7 @@ For more information about managing and assigning access by using IAM policies, 
 ## Trusted profiles for {{site.data.keyword.powerSys_notm}}
 {: #trusted-profiles}
 
-A trusted profile is an IAM identity for a compute resource. IBM Cloud IAM trusts your {{site.data.keyword.powerSys_notm}} VSI as a compute resource, which allows the VSI to call the API endpoints of other IBM Cloud services without storing API keys or credentials on the instance.
+A trusted profile is an IAM identity for a compute resource. IBM Cloud IAM trusts your {{site.data.keyword.powerSys_notm}} virtual server instances (VSI) as a compute resource, which allows the VSI to call the API endpoints of other IBM Cloud services without storing API keys or credentials on the instance.
 {: shortdesc}
 
 

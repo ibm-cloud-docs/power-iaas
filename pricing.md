@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -89,7 +89,7 @@ A theoretical maximum of a system depends on the data center. Also, the {{site.d
 ## Billing details
 {: #billing-details}
 
-In your invoice, use [IBM cloud resource names (CRNs)](#granular-crns) identifier to identify the charges that apply to the deployed resource instances:
+In your invoice, use [IBM cloud resource names](#granular-crns) identifier to identify the charges that apply to the deployed resource instances:
 
 To view the usage details at the resource level, complete the following steps:
 
@@ -102,7 +102,7 @@ To view the usage details at the resource level, complete the following steps:
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
 
-### IBM Cloud Resource Names
+### IBM cloud resource names
 {: #granular-crns}
 
 
