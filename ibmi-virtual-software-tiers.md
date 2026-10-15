@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-15"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -102,10 +102,10 @@ You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.ke
 | Power11      | Supported                      | Supported | Supported | Supported     |
 {: caption="Supported {{site.data.keyword.ibmi-vst}}s on {{site.data.keyword.powerSys_notm}}s" caption-side="bottom"}
 
-### Behavior of IBM i deployments on IBM Power11 servers
+### IBM i deployment behavior on IBM Power11 servers
 {: #ibmi-power11-vsw-tier-behavior}
 
-When you create a VSI, if you select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places VSIs on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type. For more information about creating a VSI, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
+WWhen you create a VSI and select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type as the host server. For more information about creating a VSI, see [Creating an IBM Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
 If you have a VSI that is running on an E1180 or S1122 host server, the VSI continues to run on the same host server.
 {: note}

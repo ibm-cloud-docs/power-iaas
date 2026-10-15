@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-14"
+lastupdated: "2026-10-15"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -166,7 +166,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 9. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)**, and **Core type**.
 
-    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [Behavior of IBM i deployments on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
+    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [IBM i deployment behavior on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
