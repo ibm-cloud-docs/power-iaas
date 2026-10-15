@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-10-15"
 
 keywords: estimate price, estimate, generating an estimate, {{site.data.keyword.powerSys_notm}}, private cloud, creating estimate, saving estimate, estimate virtual server instance, estimate storage volume, estimate shared processor pool, estimate VPN, estimate virtual tape library
 
@@ -51,6 +51,7 @@ You can create an estimate for {{site.data.keyword.powerSys_notm}} resources in 
     * [Estimating a {{site.data.keyword.powerSys_notm}} instance with an {{site.data.keyword.ibmi-vst}}](#est-ibmi-vst)
     * [Estimating SAP workloads](#est-sap-workloads)
     * [Estimating a storage volume](#est-storage-vol)
+    
     * [Estimating a shared processor pool](#est-spp)
     * [Estimating a virtual tape library](#est-vtl)
     * [Estimating a dedicated host](#est-dh) 
@@ -164,6 +165,8 @@ The following table explains the fields that you can use to create an estimate f
 | Tier               | Select Tier 0, Tier 1, Tier 3, or Fixed IOPs from the Tier list.                                      |
 | Total storage (GB) | Specify the total storage. The minimum total storage that you can specify is 1 GB.                    |
 {: caption="Fields and corresponding actions for estimating a storage volume in {{site.data.keyword.powerSys_notm}}" caption-side="top"}
+
+
 
 
 ### Estimating a shared processor pool
