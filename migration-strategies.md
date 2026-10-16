@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-13"
+lastupdated: "2026-10-16"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -31,7 +31,7 @@ Learn about the various strategies that are specific to IBM i systems to migrate
 
 Recent IBM i migration enhancements include the following items:
 * [Software data compression in BRMS](https://helpsystemswiki.atlassian.net/wiki/spaces/IWT/pages/165642446/Enhancements+to+BRMS){: external} to support tape and virtual tape compression.
-* [90-day software license for BRMS and ICC](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external} to facilitate migration to new servers.
+* [IBM offers subscription term pricing for IBM Backup, Recovery and Media Services for i and IBM Cloud Storage Solutions for i](https://www.ibm.com/docs/en/announcements/offers-subscription-term-pricing-backup-recovery-media-services-i-cloud-storage-solutions-i){: external} to facilitate migration to new servers.
 * [IBM i migrate while active](https://www.ibm.com/support/pages/ibm-i-migrate-while-active){: external} to migrate data without shutting down the system.
 
 ## BRMS and Cloud Storage (ICC)
