@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-16"
+lastupdated: "2026-10-22"
 
 keywords: planning, site-readiness, {{site.data.keyword.powerSys_notm}}, private cloud, power requirement, power
 
@@ -57,7 +57,8 @@ Table 2 shows the number of PDUs and the corresponding power cords that are requ
 If you have selected the configuration with 4 PDUs, you can include 6 power drops in the facility plan to increase the number of PDUs in future.
 {: note}
 
-| Rack type                                    | PDU feature codes            | Number of PDUs | Number of Power S1122 servers                     | Number of Power S1150 servers | Number of Power S1122 and S1150 servers | Number of Power  S1180 servers (no mixing) |
+
+| Rack type                                    | PDU feature codes            | Number of PDUs | Number of Power S1122 servers                     | Number of Power E1150 servers | Number of Power S1122 and E1150 servers | Number of Power E1180 servers (no mixing) |
 | -------------------------------------------- | ---------------------------- | -------------- | ------------------------------------------------- | ----------------------------- | --------------------------------------- | --------------------------------------------- |
 | ESMP (Small)                                 | ECNJ or ECJQ**  \n (Default) | 4              | 8 x S1122 (includes management server)            | N/A                           | N/A                                     | N/A                                           |
 |                                              |                              | 6              | 3 extra S1122                                     | (C19 PDUs are required)       | N/A                                     | N/A                                           |
@@ -68,6 +69,10 @@ If you have selected the configuration with 4 PDUs, you can include 6 power drop
 | EMPD + 4653 or 54  \n (Medium rack 1 or 2)   |                              | 4              | 8                                                 | 3                             | N/A                                     | 1x2 enclosures                                |
 |                                              |                              | 6              | 12                                                | 4                             | N/A                                     | 2x2 enclosures                                |
 {: caption="PDUs and power drops requirements" caption-side="bottom"}
+
+
+
+
 
 ** You can place an order for ECJJ or ECJL PDUs only if there is an order with ER3E identifier (specifies 9043-MRU) or EN31 identifier (specifies 4983-AH8).
 {: note}

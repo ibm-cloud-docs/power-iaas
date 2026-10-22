@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-23"
+lastupdated: "2026-10-22"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -98,6 +98,8 @@ The following pod sizes are available:
 * Small: 1 rack of IBM Power11 (S1122) processor.
 * Medium: 2–4 racks of IBM Power11 (S1122, E1150, or E1180) processors.
 
+
+
 You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes are used for maintenance or automatic high availability purposes.
 
 You can use 100% of the core, memory, and storage of the nodes by excluding the spare nodes.
@@ -172,12 +174,21 @@ An expandable modular architecture is used to design a medium pod that supports 
 
 A medium pod supports up to 6 compute racks for S1122 or E1150 system types and up to 18 compute racks for a E1180 (2CEC) system type.
 
+
+
 You can expand the capacity of a medium pod by adding compute racks of the same type that are already installed in the pod.
 {: note}
+
+
+
+
 
 S1122 or E1150 pods are configured with a minimum of three base racks that include one compute rack, one storage rack, and one management rack. You can add up to five compute racks to make it a total of six compute racks.
 
 An E1180 pod is configured with a minimum of four base racks that include two compute racks, one storage rack, and one management rack. You can add up to 16 compute racks to make it a total of 18 compute racks.
+
+
+
 
 
 The following configurations and memory types are available for S1122, E1150, and E1180 (2CEC) pods:
@@ -245,6 +256,10 @@ The following configurations and memory types are available for S1122, E1150, an
 {: caption="Medium pod configuration." caption-side="top"}
 {: #E1180-multi-rack}
 {: tab-title="E1180 (2CEC)"}
+
+
+
+
 
 The medium pod is available with storage capacity of 460 TB or 920 TB FlashSystem (FS) storage for S1122, E1150, and E1180 server types. The following storage configurations are available for medium pods with FS storage options:
 
