@@ -24,6 +24,9 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+## October 2026
+{: #October-2026}
+
 ### 01 October 2026
 {: #power-iaas-oct0126}
 {: release-note}
