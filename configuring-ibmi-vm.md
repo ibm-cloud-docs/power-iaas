@@ -37,7 +37,7 @@ IBM i 7.3 or later stock images support up to 127 storage volumes per VSI by def
 ## First boot of IBM i
 {: #first-boot}
 
-When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the Dedicated Service Tools (DST) password for the IBM i standard user `QSECOFR` through the console. Complete this step within an hour of VSI deployment for TCP configuration to complete.
+When you use IBM i 7.5 or later stock OS image on an {{site.data.keyword.powerSysFull}}, you must first reset the dedicated service tools (DST) password for the IBM i standard user `QSECOFR` through the console. Complete this step within an hour of VSI deployment for TCP configuration to complete.
 
 The IBM i standard user `QSECOFR` is set to the password `QSECOFR`. You must change it to a 15-character password (no blank spaces) through the VSI console. For tips on working with the IBM i console, see [Tips for working with the IBM i console](/docs/power-iaas?topic=power-iaas-configuring-ibmi#tips-ibmi).
 
@@ -186,12 +186,12 @@ Updating the IBM i VSI license and memory at the same time might cause a timeout
 
 
 
-## Changing the System Service Tools (SST) and Dedicated Service Tools (DST) passwords
+## Changing the system service tools (SST) and DST passwords
 {: #sst-dst}
 
 The SST and DST passwords are expired by default. Complete the following steps to access SST and change the passwords.
 
-To change the System Service Tools (SST) and Dedicated Service Tools (DST) passwords, complete the following steps:
+To change the SST and DST passwords, complete the following steps:
 
 1. Go to the **IBM Power Virtual Server** instance in the {{site.data.keyword.powerSys_notm}} user interface and click your IBM i VSI. The Virtual server instance details page appears.
 2. Click **VM actions** in the Virtual server details page and select **IBM i operations** from the drop-down list. The IBM i operations dialog appears.
@@ -277,7 +277,7 @@ For more information about IBM i network and software installation, see:
 
 
 
-## Considerations for IBM i and Global Replication Services (GRS)
+## Considerations for IBM i and Global Replication Services
 {: #ibmi-grs-io}
 
 If you plan to use Global Replication Services to replicate your IBM i VSI volumes, review the recommended volume group limits and their impact on I/O response times. For more information, see [Performance and I/O considerations for GRS](/docs/power-iaas?topic=power-iaas-getting-started-GRS#performance-IO-time).
