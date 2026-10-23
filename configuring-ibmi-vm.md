@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-10-23"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -91,11 +91,15 @@ Releases before IBM i 7.5 is presented on the System Sign-on screen first, where
 2. The **Change Service Tools User Password** screen loads, and the cursor is on `Current password . . . .`, enter `QSECOFR`.
 3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
 4. Repeat the step on the `New password (to verify) . . . .` field and enter the new password again.
-5. Press ENTER to continue.
+5. Press ENTER to continue. If you enter the password incorrectly, you can try again. If a warning message about locking the user is displayed, click **PF3** at the bottom of the console window and start again.
 6. The **IPL or Install the System** screen is shown.
 
-Multiple attempts are permitted, if the warning message is shown about locking the user then click **PF3** at the bottom of the console window and start again.
+
+
+If the DST sign on screen displays the message `Password is correct but set to expired`, press **F18** to bypass the screen and continue. This message is displayed if the console session is interrupted and reconnected during deployment.
 {: note}
+
+
 
 The IBM i VSI is now ready to be configured and prompts to select whether to perform an Initial Program Load (IPL), Install the OS, or Perform an Automated Install of the OS.
 
