@@ -87,7 +87,7 @@ When the VSI console is loading and the IBM i console screen appears (IBM i 7.5 
 For releases before IBM i 7.5, the System Sign-on screen appears first, where you must reset the `QSECOFR` password.
 {: note}
 
-1. In the VSI console window, when the IBM i VSI waits on the **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` and then click **PF5** at the bottom of the console window to open the change password screen.
+1. In the VSI console window, when the IBM i VSI waits on the **Dedicated Service Tools (DST) Sign On** screen, type `QSECOFR` and then click **PF5** to open the change password screen.
 2. When the **Change Service Tools User Password** screen loads, place the cursor on `Current password . . . .` and enter `QSECOFR`.
 3. Press the TAB key to move the cursor to the `New password . . . .` field and enter a 15 character password (no blanks).
 4. Repeat the step on the `New password (to verify) . . . .` field and enter the new password again.
@@ -114,7 +114,7 @@ When the installation is complete, the **System Sign-On** screen appears. Follow
 2. To accept the license agreements from the console, press **5=Display** for each license agreement and press ENTER.
 3. Press **F14** to accept each agreement.
 4. After you accept all agreements, press ENTER. The IBM i main menu appears.
-5. After the IBM i main menu appears, cloud-init begins to configure the network and inject the license keys. This process can take up to 5 minutes.
+5. After the IBM i main menu appears, cloud-init configures the network and inject the license keys. This process can take up to 5 minutes.
 6. Confirm that the system has the [Minimum PTF levels for IBM i](/docs/power-iaas?topic=power-iaas-minimum-levels).
 
 
@@ -242,7 +242,7 @@ The **IBM i operations** option is available only for the IBM i VSIs.
 
     Server operating mode
     :   - **Normal** - Allows you to access the operating system and perform an unattended IPL operation. After the system power-on, operating the system in **Normal** (unattended) mode requires no operator intervention during the IPL operation. When you turn on the system in **Normal** mode, the system performs the IPL operation and presents the **Sign On** display on all available display stations. The operator cannot change the internal system environment during the IPL operation. Dedicated service tools (DST) and the operating system do not present any menus or options during this IPL operation.
-        - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzal2/rzal2ipliplmodeco.htm){: external}.
+        - **Manual** - Allows you to access DST and perform an attended IPL operation. After the system power-on, operating the system in Manual (attended) mode means that an operator uses the **Operation** page or the control page to direct the system for special needs. During the IPL operation in **Manual** mode, DST and the operating system present menus and prompts you to change the internal system environment. These modifications can include entering debug mode for service representatives to diagnose difficult problems. For more information, see [Operating mode of an IPL](https://www.ibm.com/docs/en/i/7.6.0?topic=panel-operating-mode-ipl){: external}.
 
 5. Click **Run Action**.
 
