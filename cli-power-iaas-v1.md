@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-09-22"
+lastupdated: "2026-10-27"
 
 content-type: cli-docs
 
@@ -4441,6 +4441,8 @@ delete VOLUME_ID
 **Alias**: `flash-copy-mapping, fcm`
 
 **Description**: Get a list of flash copy mappings of a volume directly from primary storage host.
+
+
 
 **Usage**:
 
