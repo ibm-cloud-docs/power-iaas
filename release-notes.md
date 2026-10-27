@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-22"
+lastupdated: "2026-10-27"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -26,6 +26,13 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 ## October 2026
 {: #October-2026}
+
+### 29 October 2026
+{: #power-iaas-oct2926}
+{: release-note}
+
+IBM i PowerHA Full System Manager licenses
+:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more informaiton, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
 
 ### 01 October 2026
 {: #power-iaas-oct0126}
