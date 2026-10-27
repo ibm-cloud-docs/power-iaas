@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-23"
+lastupdated: "2026-10-27"
 
 keywords: license keys, system service tools, dedicated service tools, network configuration, ibm i, ssh tunneling
 
@@ -96,7 +96,7 @@ For releases before IBM i 7.5, the System Sign-on screen appears first, where yo
 
 
 
-If the DST sign-on screen displays the message `Password is correct but set to expired`, press **F18** to bypass the screen and continue. This message appears if the console session is interrupted and reconnected during deployment.
+If the DST sign-on screen displays the message `ATTENTION: This device can become the console`, press **F18** to bypass the screen and continue. This message appears if the console session is interrupted and reconnected during deployment.
 {: note}
 
 
