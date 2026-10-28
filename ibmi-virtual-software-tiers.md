@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-10-15"
+lastupdated: "2026-10-28"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -57,7 +57,7 @@ To assign an {{site.data.keyword.ibmi-vst}} to an IBM i {{site.data.keyword.powe
 
 1. Create a VSI by following the instructions at [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 2. Select an IBM i image with version 7.3 or later from the **Image** list in the **Boot image** section.
-3. Select an IBM Power10 or later server type from the **Machine type** list in the **Profile** section.
+3. Select a Power10 or later server type from the **Machine type** list in the **Profile** section.
 4. Click the **Edit** icon for the **Virtual serial number (VSN)** field in the **Profile** section. The virtual serial number summary pane appears.
 5. Select **Auto-assign** or **Select from retained VSNs** to assign a VSN.
 
@@ -102,31 +102,34 @@ You can assign {{site.data.keyword.ibmi-vst}}s only to compatible {{site.data.ke
 | Power11      | Supported                      | Supported | Supported | Supported     |
 {: caption="Supported {{site.data.keyword.ibmi-vst}}s on {{site.data.keyword.powerSys_notm}}s" caption-side="bottom"}
 
-### IBM i deployment behavior on IBM Power11 servers
+### IBM i deployment behavior on Power11 servers
 {: #ibmi-power11-vsw-tier-behavior}
 
-WWhen you create a VSI and select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type as the host server. For more information about creating a VSI, see [Creating an IBM Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
+When you create a VSI and select Power11 as the machine type, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. This behavior differs from earlier Power servers, such as S1022 or E1080, where you manually select the specific system type as the host server. For more information about creating a VSI, see [Creating an IBM Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server).
 
-If you have a VSI that is running on an E1180 or S1122 host server, the VSI continues to run on the same host server.
+If you have an existing VSI that is already running on an E1180 or S1122 host server, the VSI continues to run on the same host server.
 {: note}
 
 When you deploy an IBM i VSI on Power11 without assigning an {{site.data.keyword.ibmi-vst}}, the following behaviors apply:
 
-Automatic tier assignment based on host server type
-:   If you do not select an {{site.data.keyword.ibmi-vst}} while creating an IBM i VSI, the VSI is assigned to a tier based on the underlying host server where {{site.data.keyword.powerSys_notm}} places the instance. For example:
-    * A VSI that is placed on an S1122 host server is assigned to the P10 tier.
-    * A VSI that is placed on an E1180 host server is assigned to the P30 tier.
+Automatic tier assignment based on the host server type
+:   If you do not select an {{site.data.keyword.ibmi-vst}} when you create an IBM i VSI, {{site.data.keyword.powerSys_notm}} assigns the VSI to a tier based on the host server. For example:
+    * {{site.data.keyword.powerSys_notm}} assigns the P10 tier to a VSI that runs on an S1122 host server.
+    * {{site.data.keyword.powerSys_notm}} assigns the P30 tier to a VSI that runs on an E1180 host server.
 
-Dynamic resizing limit (4-core cap)
-:   An IBM i VSI with 4 or fewer cores that is deployed without an IBM i software tier can dynamically resize only up to 4 cores (the P10 tier limit).
+Dynamic resize limit (4-core maximum)
+:   An IBM i VSI that you deploy without an IBM i software tier and with 4 or fewer cores can resize dynamically only up to 4 cores (the P10 tier limit).
 
-    To resize an IBM i VSI beyond 4 cores, complete the following steps:
+    To resize an IBM i VSI to more than 4 cores, complete the following steps:
     1. Power off the VSI. For more information, see [Shutting down and restarting a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#shut-down-restart-vsi).
     2. Assign a virtual serial number (VSN) to the VSI. For more information, see [Assigning a VSN to an existing VSI](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#VSN-existing-VM).
-    3. Assign a compatible {{site.data.keyword.ibmi-vst}} that supports more than 4 cores to the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance). For more information about maximum cores supported by {{site.data.keyword.ibmi-vst}}, see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
-    4. Update the processor core count to the required size.
+    3. Assign a compatible {{site.data.keyword.ibmi-vst}} that supports more than 4 cores to the VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
+    4. Update the processor core count to the required size. For more information, see [Resizing the capacity of a VSI](/docs/power-iaas?topic=power-iaas-modifying-instance#resize-core-mem).
     5. Power on the VSI.
 
+    After the VSI starts, the assigned {{site.data.keyword.ibmi-vst}} is applied and the VSI can use more than 4 cores within the limits of the selected tier.
+
+For the maximum cores supported by each IBM i software tier, see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
 
 
 
@@ -138,5 +141,5 @@ Dynamic resizing limit (4-core cap)
 
 
 
-If you deploy multiple IBM i VSIs with the P20 software tier on IBM S1022 hosts, the deployment might fail during an IBM data center upgrade. However, deploying a single IBM i VSI with the P20 software tier on an S1022 host is supported.
+If you deploy multiple IBM i VSIs with the P20 software tier on IBM S1022 hosts, the deployment might fail during an IBM data center upgrade. However, you can deploy a single IBM i VSI with the P20 software tier on an S1022 host.
 {: restriction}
