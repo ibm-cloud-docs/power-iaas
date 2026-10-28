@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-13"
+lastupdated: "2026-10-28"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -88,9 +88,9 @@ If you like to compare your current environment's performance to what's availabl
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, E1180) into a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
+Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, and E1180) to a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
 
-When you configure a VSI on Power11, you make infrastructure decisions based on operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
+When you configure a VSI on Power11, you make infrastructure decisions based on the operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
 
 Power9 and Power10 machine types continue to use the existing selection model, where you choose a specific machine type when you create a VSI.
 
@@ -315,14 +315,14 @@ None. {{site.data.keyword.powerSys_notm}} does not (currently) provide any optio
 
 The PowerHA Toolkit for IBM i provides the 5250 user interfaces and automation to use them for backups. In a nutshell, it does the following tasks:
 - Automates the memory flush
-- Create the volumes-clone
-- Attach the clones to a host
-- Start the host
-- Kick-off the backups
-- Move the BRMS data back to the production VM and then shut down the backup VM
-- Remove the cloned volumes
+- Creates the volumes-clone
+- Attaches the clones to a host
+- Starts the host
+- Initiates the backups
+- Moves the BRMS data back to the production VM and then shut down the backup VM
+- Removes the cloned volumes
 
-Using the PowerHA toolkit, you can create an intermediate snap-shot and a volumes-clone before the process enters the long-running volume detach or attach phase. You can pause the process immediately before the volumes are attached.
+Using the PowerHA toolkit, you can create an intermediate snapshot and a volumes-clone before the process enters the long-running volume detach or attach phase. You can pause the process immediately before the volumes are attached.
 
 ### **How do I convert existing volumes to replication-enabled volumes?**
 {: #convert-to-replication-vol}
@@ -587,7 +587,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require less than 109 cores or 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require more than 109 cores or 7,840 GiB of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they need additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require 109 or more cores or 7,840 GiB or more of memory as large VSIs. {{site.data.keyword.powerSys_notm}} classifies workloads that require more than 109 cores or 7,840 GiB of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they require additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
 ### **How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
 {: #power11-larger-system-pricing}
@@ -595,7 +595,7 @@ Power11 pricing is based on the resources that you request for a VSI, not on the
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Pricing is based on the resources that you request while creating a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require less than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+Pricing is based on the resources that you request when you create a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require fewer than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
 ### **How do large core and memory pricing apply with simplified infrastructure selection?**
 {: #power11-large-core-memory-pricing}
@@ -603,7 +603,7 @@ Pricing is based on the resources that you request while creating a VSI, regardl
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Power11 workloads are billed by using the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, {{site.data.keyword.powerSys_notm}} automatically applies large core pricing, large memory pricing, or both. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
+Power11 workloads are billed according to the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, large core pricing, large memory pricing, or both are charged, as applicable. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
 
 ---
 
@@ -675,7 +675,7 @@ You can find an up-to-date list at [SAP Apps on IBM {{site.data.keyword.powerSys
 
 You can specify the {{site.data.keyword.ibmi-vst}} while configuring a VSI. For more information, see [Configuring a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-instance).
 
-### **What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when deploying a VSI on Power11?**
+### **What happens if you do not specify a {{site.data.keyword.ibmi-vst}} when you deploy a VSI on Power11?**
 {: #power11-default-software-tier}
 {: faq}
 
