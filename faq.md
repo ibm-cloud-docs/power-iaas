@@ -115,7 +115,13 @@ Yes, you can expand the pod with additional storage capacity. But you cannot add
 {: #spare-compute-node}
 {: faq}
 
+
+
 In each pod, one spare node is available that is exclusively usable for IBM operational purposes, such as to perform system maintenance. The system type of the spare node matches the largest client-usable node. For example, if you have a pod with 4X S1022 and 1X E1080 client-usable hosts, then the spare node is E1080.
+
+
+
+
 
 ### **Where can I find the logs for the pod software or operator access logs?**
 {: #pod-logs}
