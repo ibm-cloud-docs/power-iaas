@@ -104,8 +104,6 @@ The following pod sizes are available:
 
 
 
-
-
 You can expand the pod by adding more compute nodes up to a specific maximum number. This limit is related to the configuration size of the pod. For example, if you start the pod with 5 nodes, you can later add 3 more nodes. The pods are equipped with a spare compute node per compute type. For example, 1 compute node for each group of IBM Power E1180 processors. The spare nodes are used for maintenance or automatic high availability purposes.
 
 You can use 100% of the core, memory, and storage of the nodes by excluding the spare nodes.
