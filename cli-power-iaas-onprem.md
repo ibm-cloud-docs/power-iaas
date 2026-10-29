@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-10-27"
+lastupdated: "2026-10-29"
 
 content-type: cli-docs
 
@@ -226,7 +226,7 @@ export IMAGE_ID --access-key KEY --bucket BUCKET_NAME --region REGION_NAME --sec
   -a, --access-key string   Cloud Object Storage HMAC access key.
   -b, --bucket string       Cloud Object Storage bucket name.
   -c, --checksum            Creates a checksum file. Default is "false".
-  -r, --region string       Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
+  -r, --region string       Cloud Object Storage region. Valid values are: au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, in-che, in-mum, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string   Cloud Object Storage HMAC secret key.
 ```
 
@@ -318,7 +318,7 @@ import IMAGE_NAME [--bucket-access private] [--storage-tier STORAGE_TIER] [--os-
                                           Valid product values: Hana, Netweaver.
                                           Valid vendor values: SAP.
   -o, --os-type string                    Operating system contained in the image. Valid values are: "aix", "ibmi", "rhel", "sles". Required when importing a raw image.
-  -r, --region string                     Cloud Object Storage region au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
+  -r, --region string                     Cloud Object Storage region. Valid values are: au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, in-che, in-mum, jp-osa, jp-tok, us-east, us-south.
   -s, --secret-key string                 Cloud Object Storage HMAC secret key.
   -p, --storage-pool string               Storage pool where the image will be imported to. Use "ibmcloud pi storage-pools" to see available storage pools.
                                           If "--storage-pool" is provided then "--affinity-policy" cannot be specified.
@@ -558,6 +558,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
     [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
      [--default-trusted-profile-autolink=True|False]]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
+    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--metadata-service=True|False] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
     [--replicant-affinity-policy AFFINITY_POLICY] [--replicant-scheme SCHEME] [--replicants NUMBER]
@@ -577,6 +578,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
 
 ```bash
       --IBMiCSS-license                                 IBMi CSS software license associated with the instance.
+      --IBMiPHA-FSM-count int                           Number of IBMi PHA Full System Management (FSM) software licenses associated with the instance. Default is 0.
       --IBMiPHA-license                                 IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               Number of IBMi RDS user software licenses associated with the instance. Default is 0.
   -b, --boot-volume-replication-enabled                 Enables storage replication on the boot volume. Default is "false".
@@ -1005,6 +1007,7 @@ update INSTANCE_ID
     [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
      [--default-trusted-profile-autolink=True|False]]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
+    [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
     [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
     [--metadata-service=True|False
     ([--metadata-service-force-disable=True|False] | [--metadata-service-force-enable=True|False])]
@@ -1019,6 +1022,7 @@ update INSTANCE_ID
 
 ```bash
       --IBMiCSS-license                                 New IBMi CSS software license associated with the instance.
+      --IBMiPHA-FSM-count int                           New number of IBMi PHA Full System Management (FSM) software licenses associated with the instance.
       --IBMiPHA-license                                 New IBMi PHA IASP Management software license associated with the instance.
       --IBMiRDS-users int                               New number of IBMi RDS user software licenses associated with the instance.
       --default-trusted-profile string                  Trusted profile CRN, ID or name of the default IAM trusted profile to use for this instance.
@@ -3806,8 +3810,6 @@ delete VOLUME_ID
 **Alias**: `flash-copy-mapping, fcm`
 
 **Description**: Get a list of flash copy mappings of a volume directly from primary storage host.
-
-
 
 **Usage**:
 
