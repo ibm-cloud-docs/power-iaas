@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-27"
+lastupdated: "2026-10-29"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -76,7 +76,7 @@ For Compass to create or manage VPCs, Transit Gateways, and other cloud networki
    4. Configure the Compass VTL on your IBM i instance as an iSCSI target device. Use IBM Navigator for IBM i, as it is the preferred way to configure iSCSI targets.
    5. Use the Compass iSCSI VTL as the target for your Backup, Recovery, and Media Services (BRMS) or Save Object (SAV) backups and restores.
 
-   For more information about protecting IBM i with Compass, see [Compass Quick Start Guide for IBM i Data Protection](https://www.cobaltiron.com/wp-content/uploads/2026/02/CobaltIron-Compass-IBMi-QuickStartGuide-20260107.pdf){: external}.
+   For more information about protecting IBM i with Compass, see [Compass Quick Start Guide for IBM i Data Protection](https://www.cobaltiron.com/compass-quick-start-guide-for-ibm/){: external}.
 
 ## BRMS and ICC
 {: #brms-icc}
@@ -92,8 +92,8 @@ The typical IBM i customer uses the following flow to back up LPARs and objects:
 2. Connect to IBM Cloud Object Storage by following the steps that are mentioned in [Using Cloud Object Storage](/docs/power-iaas?topic=power-iaas-additional-backup-strategies#cos-over-directlink).
 3. Complete the back up to Cloud Object Storage by choosing the speed and resiliency that is required.
 
-   - [Working with ICC](https://www.ibm.com/support/knowledgecenter/ssw_ibm_i_72/icc/topics/iccucon_commands_cloud_overview.htm){: external}
-   - [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8brmscloudrequireandconsider.htm){: external}
+   - [Working with ICC](https://www.ibm.com/docs/en/i/7.2.0?topic=guide-working-files-in-cloud-storage-solutions){: external}
+   - [BRMS with Cloud Storage Solutions for i considerations and requirements](https://www.ibm.com/docs/en/i/7.6.0?topic=ssw_ibm_i_76/rzai8/rzai8brmscloudrequireandconsider.html){: external}
    - [Data backup and recovery by using BRMS and IBM Cloud Storage Solutions for i](https://www.ibm.com/support/knowledgecenter/en/ssw_ibm_i_74/rzai8/rzai8backupandrecoveryusingBRMSandICC.htm){: external}
 
 For a complete tutorial on backing up and restoring IBM i VM data, see [Backing up and restoring data in an IBM i VM](https://cloud.ibm.com/media/docs/downloads/power-iaas-tutorials/PowerVS_IBMi_Backups_Tutorial_v1.pdf){: external}.
