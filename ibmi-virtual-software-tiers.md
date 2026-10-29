@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026
 
-lastupdated: "2026-10-28"
+lastupdated: "2026-10-29"
 
 keywords: ibm i, virtual tiers, {{site.data.keyword.vst}}s, ibm i {{site.data.keyword.vst}}s
 
@@ -130,10 +130,6 @@ Dynamic resize limit (4-core maximum)
     After the VSI starts, the assigned {{site.data.keyword.ibmi-vst}} is applied and the VSI can use more than 4 cores within the limits of the selected tier.
 
 For the maximum cores supported by each IBM i software tier, see [Supported resource limits by the {{site.data.keyword.ibmi-vst}}](#ibmi-vsw-system-types).
-
-
-
-
 
 
 
