@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-09-21"
+lastupdated: "2026-10-29"
 
 ---
 
@@ -43,6 +43,8 @@ New options
     - Aliased the `--metadata-service-force` option to the `--metadata-service-force-disable` option in the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to disable the metadata service while the virtual server instance (VSI) is active. The `--metadata-service-force` option is deprecated.
 
     - The `--metadata-service-force-enable` option is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to enable the metadata service while the VSI is active.
+
+    - The `--IBMiPHA-FSM-count` option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) commands. You can use this option to assign the number of IBM i PowerHA Full System Management software licenses to a {{site.data.keyword.powerSys_notm}} instance.
 
 Other enhancements
 :   The following enhancements are included in this release:
