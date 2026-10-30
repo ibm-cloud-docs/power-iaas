@@ -32,7 +32,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: release-note}
 
 IBM i PowerHA Full System Manager licenses
-:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more informaiton, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
+:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more information, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
 
 ### 01 October 2026
 {: #power-iaas-oct0126}
