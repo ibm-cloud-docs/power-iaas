@@ -39,7 +39,7 @@ IBM i PowerHA Full System Manager licenses
 {: release-note}
 
 Simplified infrastructure selection for VSIs deployed on Power11 or later systems
-:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your virtual server instance (VSI) requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
+:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your VSI requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
 
 ## September 2026
 {: #September-2026}
