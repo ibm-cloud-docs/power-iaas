@@ -62,9 +62,6 @@ PowerHA SystemMirror is a high-availability solution that is designed to minimiz
 
 In {{site.data.keyword.powerSys_notm}}, you can deploy PowerHA SystemMirror on VSIs to provide advanced high-availability features in addition to the default host-failure recovery.
 
-[PowerHA-FSM-end]{: tag-purple}
-
-
 The following platform-specific editions are available for AIX and IBM i:
 
 PowerHA SystemMirror for AIX Standard Edition
