@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-10-29"
 
 keywords: backup strategies, cos, brms, icc, veeam for aix, ibm spectrum support, cloud setup, direct link, reverse proxy
 
@@ -72,7 +72,7 @@ To deploy the Backup Offering in an IBM data center, complete the following step
    3. Configure the Compass VTL on your IBM i instance as an iSCSI target device. Use IBM Navigator for IBM i, as it is the preferred way to configure iSCSI targets.
    4. Use the Compass iSCSI VTL as the target for your Backup, Recovery, and Media Services (BRMS) or Save Object (SAV) backups and restores.
 
-   For more information about protecting IBM i with Compass, see [Compass Quick Start Guide for IBM i Data Protection](https://www.cobaltiron.com/wp-content/uploads/2026/02/CobaltIron-Compass-IBMi-QuickStartGuide-20260107.pdf){: external}.
+   For more information about protecting IBM i with Compass, see [Compass Quick Start Guide for IBM i Data Protection](https://www.cobaltiron.com/compass-quick-start-guide-for-ibm/){: external}.
 
 
 ### Network architecture for deploying the Backup Offering

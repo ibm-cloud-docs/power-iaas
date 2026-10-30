@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-10-05"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -40,6 +40,7 @@ You can generate an estimate of the resources for IBM {{site.data.keyword.powerS
 
 
 For more information about IBM Cloud regions that can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).
+
 
 
 ## Monthly usage

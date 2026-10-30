@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-05-18"
+lastupdated: "2026-10-30"
 
 keywords: ibm i license, operating system, SWMA products, Rational Development Studio
 
@@ -65,7 +65,6 @@ The following LPP, and IBM i operating system features are included in the {{sit
 - 5761-AMT: Rational Application Management Toolset
 - 5761-AP1: Advanced DBCS Printer Support
 - 5733-B45: AFP Font Collection for i
-- 5770-BR1: Backup, Recovery, and Media Services
 - 5770-BR2: Backup, Recovery, and Media Services
 - 5761-DB1: System/38 Utilities
 - 5761-CM1: Communications Utilities
@@ -91,20 +90,15 @@ These additional LPPs for IBM i, which are available and can be included in your
 
 2. Click the **Edit details** option in the **Server details** page. A menu appears.
 
-
-
-3. Select the wanted licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through {{site.data.keyword.powerSys_notm}}:
+3. Select the licenses that you want to include in your VM instance. Currently, you can purchase the following licenses through {{site.data.keyword.powerSys_notm}}:
 
    - IBM i Cloud Storage Solutions (5773-ICC)
-   - IBM i PowerHA (5770-HAS)
+   - IBM PowerHA SystemMirror for i
+   - IBM PowerHA Full System Manager for i
    - Rational Development Studio for IBM i (5770-WDS)
 
     Each of these programs is individually priced. The selected licensed programs are injected to your VM instance. Or install specific licensed program solutions on your VM instance.
     If you want to use these programs on your IBM i VM instance, you must order these licensed programs through {{site.data.keyword.powerSys_notm}} you cannot use existing licenses in your VM instance.
-
-
-
-
 
 4. Check the service agreement box and click **Save edits and order** to complete the instance modification process and to accept the price.
 

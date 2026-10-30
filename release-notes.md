@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-30"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -20,15 +20,26 @@ content-type: release-note
 Use these release notes to learn about the latest changes to {{site.data.keyword.powerSysFull}}.
 {: shortdesc}
 
+
+
+
+
 ## October 2026
 {: #October-2026}
+
+### 30 October 2026
+{: #power-iaas-oct3026}
+{: release-note}
+
+IBM i PowerHA Full System Manager licenses
+:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more informaiton, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
 
 ### 01 October 2026
 {: #power-iaas-oct0126}
 {: release-note}
 
 Simplified infrastructure selection for VSIs deployed on Power11 or later systems
-:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your VSI requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
+:   Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} changes how you select infrastructure in IBM data centers. You need not select a specific hardware machine type. Instead, select the hardware generation, such as Power11, define your virtual server instance (VSI) requirements, such as cores and memory, and deploy your VSI. {{site.data.keyword.powerSys_notm}} automatically places the VSI on the appropriate infrastructure within the selected hardware generation. For more information, see [How does simplified infrastructure selection work for VSIs that are deployed on IBM Power11?](/docs/power-iaas?topic=power-iaas-powervs-faqs#simplified-infrastructure-selection).
 
 ## September 2026
 {: #September-2026}
@@ -38,7 +49,7 @@ Simplified infrastructure selection for VSIs deployed on Power11 or later system
 {: release-note}
 
 Enabling the metadata service on an active Linux VSI
-:   You can enable the metadata service on a Linux virtual server instance (VSI) that is in the **Active** state. For more information, see [Configuring the network interface after enabling the metadata service on an active Linux VSI](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-configure-linux-force-enable).
+:   You can enable the metadata service on a Linux VSI that is in the **Active** state. For more information, see [Configuring the network interface after enabling the metadata service on an active Linux VSI](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles#metadata-configure-linux-force-enable).
 
 Network security groups for {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}
 :   You can use network security groups (NSGs) in your {{site.data.keyword.powerSys_notm}} Private Cloud workspaces to control the inbound network traffic to your virtual network. With NSGs, you can define security rules based on source IP addresses, ports, and protocols (TCP, UDP, ICMP, and Any). For more information, see [Network security groups](/docs/power-iaas?topic=power-iaas-nsg).
@@ -158,7 +169,7 @@ S1122 servers as dedicated hosts
 :   You can provision S1122 servers as dedicated hosts. For more information see [Getting started with dedicated hosts on IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-dedicated-host).
 
 Networking enhancements
-:   * **DHCP service for {{site.data.keyword.powerSys_notm}}**: You can enable or disable Dynamic Host Configuration Protocol (DHCP) services on subnets in your    {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} page.
+:   * **DHCP service for {{site.data.keyword.powerSys_notm}}**: You can enable or disable DHCP services on subnets in your    {{site.data.keyword.powerSys_notm}} workspace. The DHCP service automatically provides IP addresses and network configuration information to VSIs that are configured to use DHCP. The DHCP service is available only on the IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}}.
     * **Network routes**: The network routes feature is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. A network route defines the path that data packets follow to travel from a source to a destination across a network. You can use the network routes feature in {{site.data.keyword.powerSys_notm}} to view implicit network routes and create or manage static routes in your Power Virtual Server workspaces. For more information, see [Creating and managing network routes in IBM Power Virtual Server workspaces](/docs/power-iaas?topic=power-iaas-routes).
     * **{{site.data.keyword.arp-broadcast}}**: The Address Resolution Protocol (ARP) is available for {{site.data.keyword.off-prem-fname}} in both {{site.data.keyword.off-prem}} and in {{site.data.keyword.on-prem}}. ARP maps IP addresses to physical Media Access Control (MAC) addresses in a network. For more information, see [Configuring the ARP broadcast in Power Virtual Server subnets](/docs/power-iaas?topic=power-iaas-subnet-arp-oracle-rac).
 

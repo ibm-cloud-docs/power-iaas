@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-14"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -85,10 +85,11 @@ For more information about the systems that are available for your data center, 
 A theoretical maximum of a system depends on the data center. Also, the {{site.data.keyword.powerSys_notm}} development team enforces the current available resources within each data center. With these processing maximums, the {{site.data.keyword.powerSys_notm}} can meet any business workload requirement.
 
 
+
 ## Billing details
 {: #billing-details}
 
-In your invoice, use [IBM cloud resource names (CRNs)](#granular-crns) identifier to identify the charges that apply to the deployed resource instances:
+In your invoice, use [IBM cloud resource names](#granular-crns) identifier to identify the charges that apply to the deployed resource instances:
 
 To view the usage details at the resource level, complete the following steps:
 
@@ -101,7 +102,7 @@ To view the usage details at the resource level, complete the following steps:
 For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
 
-### IBM Cloud Resource Names
+### IBM cloud resource names
 {: #granular-crns}
 
 
@@ -353,6 +354,8 @@ Refer to the following table to view the part number descriptions and the associ
 {: tab-title="Volume group"}
 {: translate="no"}
 
+
+
 | Part description for snapshot group (available on the IBM invoice) | Metric ID (available in the IBM Cloud catalog) |
 | ------------------------------------------------------------------ | ---------------------------------------------- |
 | `Snapshot storage (tier 0: 25 IOPS per GB) gigabyte-hour`          | `power-iaas-metric-snapshot-tier0`             |
@@ -365,6 +368,10 @@ Refer to the following table to view the part number descriptions and the associ
 {: #snapshot-group}
 {: tab-title="Snapshot group"}
 {: translate="no"}
+
+
+
+
 
 | Part description for vPMEM composite service (available on the IBM invoice)                    | Metric ID (available in the IBM Cloud catalog) |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -555,6 +562,8 @@ The {{site.data.keyword.powerSys_notm}} charges based on three different storage
     {: caption="Calculation of deployed VSIs volume" caption-side="bottom"}
 
 
+
+
 - **Deployed VSI snapshots** are the snapshots of the volumes that are taken after the VSI is deployed. The size of the volume snapshot is related to the number of updates that are made to the VSI. When you take a snapshot for the first time, the size of the snapshot is a fraction of the size of one or more volumes of the VSI. The size of subsequent snapshots might increase based on the changes that are made to the original volume.
 
 For an example, consider a VSI with a volume of 100 GB. The size of the first snapshot is 100 GB. The size of the second snapshot might be 1 GB.
@@ -580,6 +589,10 @@ The following tables show examples of how different storage types affect the cos
 | Tier 3           | $0.00003865                  | $0.03                    |
 | Tier 5k          | $0.00010652                  | $0.08                    |
 {: caption="Snapshot storage pricing example" caption-side="bottom"}
+
+
+
+
 
 
 

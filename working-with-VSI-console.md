@@ -3,7 +3,7 @@
 copyright:
   year: 2025, 2026 
 
-lastupdated: "2026-09-23"
+lastupdated: "2026-10-16"
 
 keywords: VSI console, Power virtual server instance console, AIX console, IBM i console, PowerVS console, VTERM, vterm
 
@@ -162,7 +162,7 @@ The copy and paste functionality in the VSI console has the following limitation
 
 - The copy and paste functionality in the VSI console currently supports English only.
 
-- Special characters such as `^V`, `[[200~`, `{}`, or `[[201~` might appear when you paste text from your workstation into the VSI console of an AIX- or Linux-based VSI that uses bash as the command shell and is configured to use bracketed-paste mode. For more information, see [enable-bracketed-paste](https://www.gnu.org/software/bash/manual/bash.html#index-enable_002dbracketed_002dpaste){: external}.
+- Special characters such as `^V`, `[[200~`, `{}`, or `[[201~` might appear when you paste text from your workstation into the VSI console of an AIX- or Linux-based VSI that uses bash as the command shell and is configured to use bracketed-paste mode.
 
 ## Sharing the VSI console session
 {: #sharing-console-session}

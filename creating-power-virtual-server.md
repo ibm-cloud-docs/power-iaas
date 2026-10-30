@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-10-30"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -94,7 +94,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     - **Metadata service**: By default, the **Metadata service** option is set to off. When you enable access to the metadata service on a VSI, you can access the metadata and identity APIs. You can use the metadata service to access information about a VSI and access IAM-enabled services. For more information, see [Configuring and managing the metadata service for Power Virtual Server](/docs/power-iaas?topic=power-iaas-metadata-service-trusted-profiles).
 
-8. Complete the **Boot image** fields.
+8. Click **Continue** to proceed to the **Boot image** section, then complete the **Boot image** fields.
 
     You can create or provision a VSI without an initial boot image volume. VSIs without a boot volume are helpful in [high availability and disaster recovery](/docs/power-iaas?topic=power-iaas-ha-dr) use cases. You can create a VSI without a boot volume and then attach a cloned or replicated volume to restore the backed-up VSI.
 
@@ -120,19 +120,14 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
     If you select AIX as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with an option to configure the VSI for Epic workload. For more information about Epic workloads, see [Configuring a VSI for Epic workloads](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#configuring-a-vm-for-epic-workloads).
 
-    
-
     If you select IBM i as the boot image, the {{site.data.keyword.powerSys_notm}} user interface provides you with the following options:
     - Add the following licenses to your VSI:
       - IBM i Cloud Storage Solution
-      - IBM i PowerHA
+      - IBM PowerHA SystemMirror for i
+      - IBM PowerHA Full System Manager for i
       - Rational Dev Studio for IBM i
 
-        Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically applied. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
-
-     
-
-     
+    Adding a license increases the service cost. The selected licenses are injected to your VSI. You can install specific solutions on your VSI, and the licenses are automatically applied. If you want to use these licensed programs on your IBM i VSI, you must order these licenses through {{site.data.keyword.powerSys_notm}}. You cannot use existing licenses in your VSI.
 
     - Select the {{site.data.keyword.ibmi-vst}} from the **{{site.data.keyword.ibmi-vst}}** list. To select an {{site.data.keyword.ibmi-vst}}, you must select an image with OS version 7.3 or later from the **Boot image** field and set the **Virtual serial number (VSN)** as assigned.
 
@@ -166,7 +161,7 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 9. Complete the **Profile** fields by selecting the **Machine type**, the number of **Cores**, the amount of **Memory (GB)**, and **Core type**.
 
-    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [Behavior of IBM i deployments on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
+    When you deploy an IBM i VSI on an IBM Power11 server, {{site.data.keyword.powerSys_notm}} automatically places the VSI on a supported host server based on your workload requirements. For more information, see [IBM i deployment behavior on IBM Power11 servers](/docs/power-iaas?topic=power-iaas-ibmi-vsw-tiers#ibmi-power11-vsw-tier-behavior).
 
     The core-to-virtual core ratio is 1:1. For shared processors, fractional cores round up to the nearest whole number. For example, 1.25 cores are equal to 2 virtual cores. For more information about processor types, see [What's the difference between shared capped and shared uncapped processor performance? How do they compare to dedicated processor performance?](/docs/power-iaas?topic=power-iaas-powervs-faqs#processor). If the machine type is S922 and the operating system is IBM i, IBM i supports a maximum of 4 cores per VSI.
     {: important}
@@ -229,6 +224,8 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 12. Complete the **Storage volumes** fields to attach or create new volumes and associate them with the VSI.
 
+    
+
     Expand **Advanced Configurations**, and then set **Configure for large quantity volumes** to **Enabled** to support more than 127 (up to 500) volumes. This setting is at a VSI-level that remains unmodifiable upon provisioning.
 
     
@@ -276,7 +273,7 @@ VSN has the following characteristics:
 * It can be assigned to a new or an existing VSI.
 * It can be assigned to an empty VSI in [{{site.data.keyword.off-prem}}]{: tag-blue}. 
 
-For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html){: external}.
+For more information, see [Assigning the virtual serial number to a logical partition](https://www.ibm.com/docs/en/power10/9080-HEX?topic=9080-HEX/p10hat/p10hat_pvsn.html).
 
 A VSI moves across systems with its associated VSN. Therefore, when a VSN is associated with a VSI, you do not need to pin the VSI to a host for licensing or entitlement purposes.
 
@@ -505,8 +502,14 @@ To learn more about the flexible tier offering of {{site.data.keyword.powerSys_n
 
 For more information about affinity and anti-affinity policy, see [What does it mean to set an affinity or anti-affinity rule?](/docs/power-iaas?topic=power-iaas-powervs-faqs#affinity).
 
+
+
 If you add volumes to be created and attached to your new VSI during creation, all the volumes are provisioned in the same selected storage pool. Volumes can be created in different storage pools after the VSI is provisioned.
 {: note}
+
+
+
+
 
 
 ## Provisioning a virtual machine without an initial boot volume
