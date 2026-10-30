@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-27"
+lastupdated: "2026-10-30"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -27,8 +27,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## October 2026
 {: #October-2026}
 
-### 29 October 2026
-{: #power-iaas-oct2926}
+### 30 October 2026
+{: #power-iaas-oct3026}
 {: release-note}
 
 IBM i PowerHA Full System Manager licenses
