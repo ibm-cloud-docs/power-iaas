@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-16"
+lastupdated: "2026-10-30"
 
 keywords: migration strategies, cos, mass data migration, pwoervc, backup and restore, replication, aspera, mksysb, aws cli, pip, yum
 
@@ -54,14 +54,8 @@ For more information, see [Data backup and recovery by using BRMS and IBM Cloud 
 
 
 
-
-
-## Logical Replication with Geographic Mirroring and PowerHA SystemMirror for i
-{: #logical-rep-glvm}
-
-## Migrating IBM i partitions by using geographic mirroring and PowerHA SystemMirror for IBM i
+## Migrating IBM i partitions by using PowerHA SystemMirror for IBM i geographic mirroring
 {: #migration-gm-sm}
-
 
 You can migrate an IBM i partition to a {{site.data.keyword.powerSys_notm}} instance by using geographic mirroring with PowerHA SystemMirror (Enterprise Edition). The {{site.data.keyword.powerSys_notm}} instance serves as the replication target.
 
@@ -69,10 +63,7 @@ Before you configure geographic mirroring, establish a private network connectio
 
 You can use geographic mirroring in synchronous or asynchronous mode. For more information, see the "Modes of operation" section in [IBM PowerHA SystemMirror for i: Using Geographic Mirroring](https://www.redbooks.ibm.com/redbooks/pdfs/sg248401.pdf){: external}.
 
-To use network monitoring and automated failover, you need a license for IBM PowerHA SystemMirror for i. You can add the licenses when you create a virtual server instance (VSI). For more information, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
-
-
-
+To use network monitoring and automated failover, you need a license for IBM PowerHA SystemMirror for i or IBM PowerHA Full System Manager for i. You can add these licenses when you create a virtual server instance (VSI). For more information, see [Creating a Power Virtual Server workspace](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#creating-service).
 
 
 For more information about geographic mirroring, see the following resources:

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026
 
-lastupdated: "2026-10-05"
+lastupdated: "2026-10-30"
 
 
 keywords: ha-dr, {{site.data.keyword.powerSys_notm}} as a service, private cloud, before you begin, terminology, high availability, disaster recovery, power systems, virtual servers, hardware failure
@@ -55,30 +55,36 @@ Host failure recovery:
 
 - Restarts the VSI on another host with a different physical serial number. If your software depends on serial numbers, consider using virtual serial numbers (VSNs) for IBM i. Check your independent software vendor (ISV) licensing policy to determine whether VSNs are appropriate.
 
+## PowerHA SystemMirror
+{: #powerha-systemmirror}
+
+PowerHA SystemMirror is a high-availability solution that is designed to minimize unplanned downtime for critical workloads on IBM Power Systems. PowerHA SystemMirror provides automated failover, cluster management, and uninterrupted workload availability. It monitors resources and restarts services on available nodes when failures occur.
+
+In {{site.data.keyword.powerSys_notm}}, you can deploy PowerHA SystemMirror on VSIs to provide advanced high-availability features in addition to the default host-failure recovery.
+
+[PowerHA-FSM-end]{: tag-purple}
 
 
-## PowerHA SystemMirror for AIX Standard Edition
-{: #ha-dr-ha-standard}
+The following platform-specific editions are available for AIX and IBM i:
 
-PowerHA SystemMirror for AIX Standard Edition is available with a monthly subscription model. For more information, see [Standard Edition monthly pricing options](https://www.ibm.com/docs/en/announcements/archive/ENUS219-288){: external}.
+PowerHA SystemMirror for AIX Standard Edition
+:   You can use a monthly subscription model when you purchase PowerHA SystemMirror for AIX Standard Edition. For more information, see [Standard Edition monthly pricing options](https://www.ibm.com/docs/en/announcements/archive/ENUS219-288){: external}.
 
-After you purchase the software, you can download it from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/index.wss){: external}. You can install PowerHA SystemMirror for AIX on the virtual server that is running in your {{site.data.keyword.powerSys_notm}} environment. For installation instructions, see [Installing PowerHA SystemMirror](https://www.ibm.com/docs/en/powerha-aix/7.2.x?topic=installing){: external}.
+    After you purchase the software, you can download it from [Entitled Systems Support (ESS)](https://www.ibm.com/servers/eserver/ess/index.wss){: external}. You can install PowerHA SystemMirror for AIX on the virtual server that is running in your {{site.data.keyword.powerSys_notm}} environment. For installation instructions, see [Installing PowerHA SystemMirror](https://www.ibm.com/docs/en/powerha-aix/7.2.x?topic=installing){: external}.
 
-Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment:
+    Review the following information for implementing PowerHA SystemMirror for AIX in your {{site.data.keyword.powerSys_notm}} environment:
 
-- Select **Different Server** from the **Colocation Rules** field when you create the virtual servers that are part of the PowerHA SystemMirror cluster. Selecting **Different Server** ensures that the different logical partitions (LPARs) in the PowerHA SystemMirror cluster are not deployed on the same host.
+    - Select **Different Server** from the **Colocation Rules** field when you are creating the virtual servers that are part of the PowerHA SystemMirror cluster. Selecting **Different Server** ensures that the different logical partitions (LPARs) in the PowerHA SystemMirror cluster are not deployed on the same host.
 
-- Select **On** from the **Shareable** field when you create storage volumes for the virtual servers that are part of the PowerHA SystemMirror cluster.
+    - Select **On** from the **Shareable** field when you create storage volumes for the virtual servers that are part of the PowerHA SystemMirror cluster.
 
-- You do not have access to the HMC, VIOS, and host system on {{site.data.keyword.powerSys_notm}}. Therefore, PowerHA SystemMirror functions that require access to these capabilities, such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP), are not available. However, PowerHA SystemMirror 7.2.6 SP1 or later versions support ROHA functions. For more information about configuring and using ROHA with {{site.data.keyword.powerSys_notm}}, see [Resource Optimized High Availability in Cloud](https://www.ibm.com/docs/en/powerha-aix/7.2.x?topic=administering-resources-optimized-high-availability-in-cloud){: external}.
+    - Because you do not have access to the HMC, VIOS, or the host system on {{site.data.keyword.powerSys_notm}}, PowerHA SystemMirror features that depend on these components are unavailable. These unavailable features include functions such as Resource Optimized High Availability (ROHA) and Active Node Halt Policy (ANHP). However, PowerHA SystemMirror 7.2.6 SP1 or later versions support ROHA functions. For more information about configuring and using ROHA with {{site.data.keyword.powerSys_notm}}, see [Resource Optimized High Availability in Cloud](https://www.ibm.com/docs/en/powerha-aix/7.2.x?topic=administering-resources-optimized-high-availability-in-cloud){: external}.
 
-Licenses that are purchased outside a subscription model are not eligible for use with {{site.data.keyword.powerSys_notm}}.
-{: note}
+    Licenses that are purchased outside a subscription model are not eligible for use with {{site.data.keyword.powerSys_notm}}.
+    {: note}
 
-
-
-
-
+PowerHA SystemMirror for IBM i
+:   PowerHA Full System Manager (FSM) for IBM i is a cloud feature that is available on {{site.data.keyword.powerSys_notm}}. With FSM, you can deploy or modify VSIs that are configured with IBM i PowerHA Full System Manager licenses. You can specify the number of FSM licenses for each VSI. IBM bills for FSM licenses hourly, based on the number of licenses in use. You can also use PowerHA FSM licenses and PowerHA Independent Auxiliary Storage Pool (IASP) management licenses simultaneously on the same VSI. For more information, see [PowerHA Full System Manager](https://fortradocs.atlassian.net/wiki/spaces/IWT/pages/4323639299/PowerHA+Full+System+Manager+7.5).
 
 ## Disaster recovery mechanisms
 {: #dr-aix-ibmi}
