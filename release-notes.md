@@ -32,7 +32,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 {: release-note}
 
 IBM i PowerHA Full System Manager licenses
-:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more informaiton, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
+:   You can configure IBM i PowerHA Full System Manager (FSM) software licenses when you create or edit a virtual server instance (VSI). You can specify the number of required licenses for your instance and assign both FSM and IBM i PowerHA Independent Auxiliary Storage Pool (IASP) management licenses to the same virtual server. For more information, see [PowerHA SystemMirror](/docs/power-iaas?topic=power-iaas-ha-dr-on-cloud#powerha-systemmirror).
 
 ### 01 October 2026
 {: #power-iaas-oct0126}
@@ -281,7 +281,7 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 ## December 2025
 {: #Dec-2025}
 
-- Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a {{site.data.keyword.powerSys_notm}} instance (VSI) with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes reduce the time it takes to restart SAP HANA VSIs. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
+- Virtual Persistent Memory (vPMEM) volumes are supported by IBM {{site.data.keyword.powerSys_notm}}. You can attach a vPMEM volume to a VSI with AIX&reg;, Linux&reg;, or Linux (SAP HANA) operating systems on a Power10 or later systems. vPMEM volumes reduce the time it takes to restart SAP HANA VSIs. For more information see, [Attaching Virtual Persistent Memory in a Power Virtual Server instance](/docs/power-iaas?topic=power-iaas-vPMEM).
 
 - The VSI console supports copying and pasting text between your workstation and the VSI console. You can copy commands or scripts from Windows&reg;, macOS&reg;, or Linux&reg;-based workstations and paste the copied text to an AIX&reg;, IBM i, or Linux-based VSI console. For more information, see [Copying and pasting text in the VSI console](/docs/power-iaas?topic=power-iaas-vsi-console#copy-paste-console).
 
@@ -353,7 +353,7 @@ ENS High and Protected B certifications for {{site.data.keyword.powerSys_notm}}
 
 
 
-- Starting on 25 July 2025, you can deploy Power Virtual Server instances running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) for more details.
+- Starting on 25 July 2025, you can deploy Power VSIs running the AIX, IBM i, RHEL, and SLES operating systems on IBM Power11 (subject to capacity availability). Refer to the [Operating systems supported in IBM Power Virtual Server](/docs/power-iaas?topic=power-iaas-operating-systems-powervs) for more details.
 
 
 
@@ -759,7 +759,7 @@ The latest IBM i and AIX stock images were added to the OS image catalog in Sept
 ## January 2024
 {: #jan-2024}
 
-- Certain stock images for SAP will be updated with new Ansible packages. Until then it is recommended that you do not use the following images to create a new {{site.data.keyword.powerSys_notm}} instance for use with SAP workloads:
+- Certain stock images for SAP will be updated with new Ansible packages. Until then it is recommended that you do not use the following images to create a new VSI instance for use with SAP workloads:
     - RHEL8-SP8-SAP
     - RHEL8-SP8-SAP-NETWEAVER
     - RHEL9-SP2-SAP
