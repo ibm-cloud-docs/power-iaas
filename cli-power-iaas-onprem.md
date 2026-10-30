@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-10-29"
+lastupdated: "2026-10-30"
 
 content-type: cli-docs
 
@@ -479,7 +479,7 @@ create INSTANCE_ID --destination (cloud-storage | both) --name NAME --access-key
   -d, --destination string   Destination for the deployable image. Valid values are: "cloud-storage", "image-catalog", "both".
   -i, --image-path string    Cloud Object Storage image path. Required if destination is cloud-storage. E.g. bucket-name[/optional/folder].
   -n, --name string          Name of the deployable image created for the captured instance.
-  -r, --region string        Cloud Object Storage regions au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, jp-osa, jp-tok, us-east, us-south.
+  -r, --region string        Cloud Object Storage regions. Valid values are: au-syd, br-sao, ca-tor, che01, eu-de, eu-es, eu-gb, in-che, in-mum, jp-osa, jp-tok, us-east, us-south.
                              Required if destination is cloud-storage.
   -s, --secret-key string    Cloud Object Storage HMAC secret key. Required if destination is cloud-storage.
   -u, --user-tags strings    Comma separated list of user tags to be attached to the instance capture.
@@ -557,7 +557,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
     [--boot-volume-replication-enabled=True|False]
     [--default-trusted-profile (CRN | TRUSTED_PROFILE_ID | TRUSTED_PROFILE_NAME)
      [--default-trusted-profile-autolink=True|False]]
-    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False] [--IBMiRDS-users NUMBER_USERS]
+    [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
     [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS]
     [--key-name NAME] [--memory MEMORY] [--metadata-service=True|False] [--pin-policy POLICY] [--placement-group GROUP_ID]
     [--preferred-processor-compatibility-mode MODE] [--processor-type PROC_TYPE] [--processors PROCESSORS]
@@ -590,7 +590,8 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
       --metadata-service                                Indicates whether the metadata service endpoint will be available to the virtual server.
       --pin-policy string                               Pin policy. Valid values are: "none", "soft", "hard". Default is "none".
       --placement-group string                          The placement group ID of the group that the server will be added to.
-  -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
+  -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode.
+                                                        Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           Processor type. Valid values are: capped, dedicated, shared. Default is "dedicated".
   -p, --processors float                                Amount of processors to allocate to the instance. Default is 1 core.
       --replicant-affinity-policy string                Affinity policy to use when multicreate is used. Valid values are: affinity, anti-affinity, none.
@@ -643,7 +644,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
 
 ```bash
     ibmcloud pi instance create test-instance --image 43064761-948f-469d-ac8e-b8e5f0d6056f --subnets 85716e61-948f-309d-de8b-c4e5f0d3126d
-    ibmcloud pi instance create test-instance --image 43064761-948f-469d-ac8e-b8e5f0d6056f --subnets 85716e61-948f-309d-de8b-c4e5f0d3126d --volumes 43064761-948f-469d-ac8e-b8e5f0d6056f --storage-tier tier1 --processors 1 --processor-type dedicated --deployment-type EPIC --sys-type e980
+    ibmcloud pi instance create test-instance --image 43064761-948f-469d-ac8e-b8e5f0d6056f --subnets 85716e61-948f-309d-de8b-c4e5f0d3126d --volumes 43064761-948f-469d-ac8e-b8e5f0d6056f --storage-tier tier1 --memory 5 --processors 1 --processor-type dedicated --deployment-type EPIC --sys-type e980
     ibmcloud pi instance create test-instance --image 43064761-948f-469d-ac8e-b8e5f0d6056f --subnets 85716e61-948f-309d-de8b-c4e5f0d3126d --storage-tier tier1 --replicants 2 --replicant-scheme prefix --replicant-affinity-policy affinity
     ibmcloud pi instance create test-instance --image 43064761-948f-469d-ac8e-b8e5f0d6056f --subnets 85716e61-948f-309d-de8b-c4e5f0d3126d --boot-volume-replication-enabled --replication-sites dal10
 ```
@@ -1008,7 +1009,6 @@ update INSTANCE_ID
      [--default-trusted-profile-autolink=True|False]]
     [--IBMiCSS-license=True|False] [--IBMiPHA-license=True|False]
     [--IBMiPHA-FSM-count NUMBER_USERS] [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
-    [--IBMiRDS-users NUMBER_USERS] [--memory AMOUNT]
     [--metadata-service=True|False
     ([--metadata-service-force-disable=True|False] | [--metadata-service-force-enable=True|False])]
     [--name NAME] [--pin-policy POLICY] [--preferred-processor-compatibility-mode MODE]
@@ -1032,12 +1032,13 @@ update INSTANCE_ID
       --metadata-service-force-disable                  If set to true, this allows the metadata service to be disabled while the VM is active,
                                                         which may require manual interface cleanup by the OS administrator.
                                                         This option is only supported for disabling the metadata service.
-      --metadata-service-force-enable                   If set to true, this allow the metadata service to be enabled while the VSI is active.
+      --metadata-service-force-enable                   If set to true, this allows the metadata service to be enabled while the VSI is active.
                                                         The user is responsible for manually configuring networking on the VSI after the update.
                                                         Only supported on Linux VSIs.
   -n, --name string                                     New name of the server instance.
       --pin-policy string                               New pin policy for the server instance. Valid values are: "none", "soft", "hard".
-  -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode. Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
+  -c, --preferred-processor-compatibility-mode string   The preferred processor compatibility mode.
+                                                        Valid values are: default, POWER7, POWER8, POWER9, POWER9_Base, POWER10, POWER11
   -r, --processor-type string                           New processor type for the server instance. Valid values are: capped, dedicated, shared.
   -p, --processors float                                New amount of processors for the server instance.
   -s, --storage-pool-affinity                           Indicates if all volumes attached to the server must reside in the same storage pool.
@@ -2323,12 +2324,12 @@ member-remove NETWORK_SECURITY_GROUP_ID --member-id NETWORK_SECURITY_GROUP_MEMBE
 
 ```bash
 rule-add NETWORK_SECURITY_GROUP_ID --action ("allow" | "deny")
-    (--protocol "all" |  --protocol "icmp" [--icmp-type TYPE] |
-    --protocol "tcp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX] [--tcp-flags FLAG1[,FLAGn]] |
-    --protocol "udp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX])
-    (--remote-type "default-network-address-group" |
-    --remote-type "network-address-group" --remote-group-id REMOTE_NETWORK_ADDRESS_GROUP_ID |
-    --remote-type "network-security-group" --remote-group-id REMOTE_NETWORK_SECURITY_GROUP_ID)
+  (--protocol "all" | --protocol "icmp" [--icmp-type TYPE] |
+   --protocol "tcp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX] [--tcp-flags FLAG1[,FLAGn]] |
+   --protocol "udp" [--dest-port-min MIN] [--dest-port-max MAX] [--src-port-min MIN] [--src-port-max MAX])
+  (--remote-type "default-network-address-group" |
+   --remote-type "network-address-group" --remote-group-id REMOTE_NETWORK_ADDRESS_GROUP_ID |
+   --remote-type "network-security-group" --remote-group-id REMOTE_NETWORK_SECURITY_GROUP_ID)
 
   NETWORK_SECURITY_GROUP_ID: The unique identifier of the network security group.
 ```
@@ -3183,7 +3184,7 @@ create SUBNET_NAME --cidr-block CIDR --net-type private [--advertise ("enable" |
       --enable-dhcp            Indicates if the network will support DHCP or not. Default is "true" for private networks.
   -g, --gateway string         Gateway to use for this subnet.
   -i, --ip-range string        IP Addresses range(s) for this subnet, format: "startIP-endIP[,startIP-endIP]".
-  -m, --mtu int                Maximum Transmission Unit. MTU be between 1450 and 9000. Default is 1450.
+  -m, --mtu int                Maximum Transmission Unit. MTU must be between 1450 and 9000. Default is 1450.
   -n, --net-type string        Subnet type.
   -u, --user-tags strings      Comma separated list of user tags to be attached to the subnet.
 ```
@@ -3637,7 +3638,7 @@ get VOLUME_CLONE_REQUEST_ID
                         completed - includes status values (completed)
                         execute - includes status values (executing, available-rollback)
                         failed - includes status values (failed)
-                        finalized - included status values (completed, failed, cancelled)
+                        finalized - includes status values (completed, failed, cancelled)
                         prepare - includes status values (preparing, prepared)
                         start - includes status values (starting, available)
 ```
