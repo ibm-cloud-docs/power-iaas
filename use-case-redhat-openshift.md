@@ -43,7 +43,7 @@ You can deploy Red Hat OpenShift on {{site.data.keyword.powerSys_notm}} by using
 
 
 
-- User-Provisioned Infrastructure (UPI): Uses a manual process specific to your environment that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSys_notm}](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/installing_on_ibm_power_virtual_server/index){: external}.
+- User-Provisioned Infrastructure (UPI): Uses a manual process specific to your environment that gives the administrator the ability to create and manage OpenShift nodes themselves. For more information, see [Installing OpenShift Container Platform on {{site.data.keyword.powerSysFull}](https://docs.redhat.com/en/documentation/openshift_container_platform/4.21/html/installing_on_ibm_power_virtual_server/index){: external}.
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
