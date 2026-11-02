@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-11-02"
 
 keywords: suma, fixes, updates, PTF, TL, SNDPTFORD, fix central, network install server
 
@@ -50,6 +50,8 @@ SUMA sets up an automated interface to download fixes and updates from a fix dis
 
 When you configure SUMA in an AIX logical partition (LPAR) or as the NIM master, SUMA establishes a connection to the fix distribution website and downloads the available service update.
 
+
+
 To verify that SUMA can get through to the IBM fix servers, run the following command (from the AIX system where you want to download the fixes):
 
 ```code
@@ -62,6 +64,9 @@ You can access the SUMA configuration by running the [suma command](https://www.
 - **TL**: Specifies a request to download a specific TL (such as 7200-02).
 - **SP**: Specifies a request to download a specific SP (such as 7200-02-00).
 - **Latest**: Specifies a request to download the latest fixes. This value returns the latest SP or TL as specified in the **FilterML** attribute.
+
+When you use `smit` or `smit suma` to download or filter updates (for example, targeting AIX 7.3 TL1), you must specify the exact Technology Level or Service Pack string, such as `7300-01` (or `7300-01-00` depending on your request type) for fields like `FilterML` or `RqName`. Do not use wildcard characters or asterisks (such as `7300-01*`). The SUMA validation engine does not support wildcards in level fields and will return a search or download error.
+{: note}
 
 ### Configuring SUMA to use the proxy settings
 {: #configuring-aix-proxy}
