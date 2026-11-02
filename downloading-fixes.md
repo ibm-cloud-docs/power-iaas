@@ -203,7 +203,7 @@ suma -s "30 2 15 * *" -a RqType=Latest   \
     -a DisplayName="Latest fixes - 15th Monthly"
 ```
 
-## Using the Electronic Service Agent (ESA) to download fixes and updates for IBM i VMs
+## Using the Electronic Service Agent (ESA) to download fixes and updates for IBM i VSIs
 {: #downloading-fixes-ibmi}
 {: help}
 {: support}
