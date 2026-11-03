@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-11-03"
 
 keywords: Operating systems, powerVS OS
 
@@ -114,6 +114,8 @@ The VSIs can continue to run without any issues after the stock OS images are re
 
 The following table lists the supported AIX, IBM i, and Linux OS versions that can be installed on {{site.data.keyword.powerSys_notm}} instances. OS versions that are not listed in the following table are not supported and cannot be installed on a VSI.
 
+
+
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                                                               |
 | -------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
 | Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
@@ -126,6 +128,10 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}
 {: row-headers}
+
+
+
+
 
 | **Processor family** | **Supported IBM i versions** | **Latest stock image versions**                                    |
 | -------------------- | ---------------------------- | ------------------------------------------------------------------ |

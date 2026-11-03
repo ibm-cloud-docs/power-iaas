@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-29"
+lastupdated: "2026-11-03"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -593,7 +593,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Power11 pricing is based on the resources that you request for a VSI, not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require fewer than 109 cores and less than 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require 109 or more cores or 7,840 GiB or more of memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they require additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+Power11 pricing is based on the resources that you request for a VSI, and not on the underlying infrastructure that {{site.data.keyword.powerSys_notm}} assigns. Standard VSI pricing applies to workloads that require fewer than 109 cores and less than 7,840 GiB of memory. {{site.data.keyword.powerSys_notm}} classifies workloads that require 109 or more cores or 7,840 GiB or more memory as large VSIs. Large VSI pricing applies to the workloads that are classified as large VSIs because they require additional infrastructure resources to run. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
 ### **How does simplified infrastructure selection affect my charges if my workload is placed on a larger Power11 system?**
 {: #power11-larger-system-pricing}
@@ -601,7 +601,7 @@ Power11 pricing is based on the resources that you request for a VSI, not on the
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Pricing is based on the resources that you request when you create a VSI, regardless of the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require fewer than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
+Pricing is based on the resources that you request when you create a VSI, and not on the specific Power11 infrastructure that hosts the workload. You are charged based on the requested VSI configuration and the applicable software tier. Workloads in Power11 that require fewer than 109 cores or 7,840 GiB of memory qualify for standard pricing, even if {{site.data.keyword.powerSys_notm}} places them on a larger Power11 system. For more information, see [Pricing for IBM Power Virtual Server in IBM data centers](/docs/power-iaas?topic=power-iaas-pricing-ibm-data-center).
 
 ### **How do large core and memory pricing apply with simplified infrastructure selection?**
 {: #power11-large-core-memory-pricing}
@@ -609,7 +609,7 @@ Pricing is based on the resources that you request when you create a VSI, regard
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
 
-Power11 workloads are billed according to the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, large core pricing, large memory pricing, or both are charged, as applicable. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
+Power11 workloads are billed according to the standard Power11 pricing model. For Power11 workloads that require large CPU or memory configurations, IBM charges for large cores, large memory, or both, as applicable. For more information see, [How does pricing work for Power11 with simplified infrastructure selection?](#power11-pricing).
 
 ---
 
