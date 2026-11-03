@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-11-03"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -46,8 +46,8 @@ The basic steps that are involved in deploying an instance by using a custom ima
 
 Before you can use a custom image as the boot volume, review the following information:
 
-- You must have a basic understanding of [IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage){: external} concepts.
-- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your private cloud environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc/2.0.1?topic=images-capturing-virtual-machine){: external} and [Exporting images](https://www.ibm.com/docs/en/powervc/2.0.2?topic=init-installing-configuring-cloud-linux){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The {{site.data.keyword.powerSys_notm}} does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes.
+- You must have a basic understanding of [IBM Cloud Object Storage](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage){: external} concepts.
+- If you do not have an existing AIX or IBM i image, you can use IBM® PowerVC™ from your private cloud environment to capture and export an image for use with a {{site.data.keyword.powerSys_notm}}. For more information, see [Capturing a virtual machine](https://www.ibm.com/docs/en/powervc-cloud/2.3.3?topic=images-capturing-virtual-machine){: external} and [Exporting and importing images](https://www.ibm.com/docs/en/powervc-cloud/2.3.3?topic=images-exporting-importing){: external}. To capture and export an image by using IBM PowerVC, the PowerVC private environment must contain N_Port ID Virtualization (NPIV) data volumes. The {{site.data.keyword.powerSys_notm}} does not support captured images from environment with shared Storage Pools (SSP) vSCSI data volumes.
 - Alternatively, if you have deployed a virtual server instance, you can capture it and redeploy a new virtual server instance. To accomplish this, you can use the [{{site.data.keyword.cloud}} CLI](/docs/cli?topic=cli-getting-started){: external} to capture a virtual server instance.
 - You must verify that your AIX, IBM i, or Linux OS technology level is supported on the Power hardware that you selected in the **Machine Type** field.
 
