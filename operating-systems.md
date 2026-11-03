@@ -161,6 +161,8 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 
 
+
+
 | **Processor family** | **Supported SLES versions**                                                                                                                              | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Power11              | * SLES 16 general purpose and SAP \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP                                         | * SLES 16 general purpose (SLES16) \n * SLES 16 for SAP HANA (SLES16-SAP) \n * SLES 16 for SAP NetWeaver (SLES16-SAP-NETWEAVER) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER)                                                                                                                                                                          |
@@ -173,6 +175,10 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}
 {: row-headers}
+
+
+
+
 
 
 [^a]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.
