@@ -18,6 +18,19 @@ This change log lists the latest changes, improvements, and updates for the {{si
 
 
 
+## October 2026
+{: #oct-2026}
+
+### CLI v1.11.1
+{: #cli-v1.11.1}
+
+The CLI plug-in version 1.11.1 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+New options
+:   The following option is added to the existing CLI commands:
+
+    - The `--IBMiPHA-FSM-count` option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) commands. You can use this option to assign the number of IBM i PowerHA Full System Management software licenses to a {{site.data.keyword.powerSys_notm}} instance.
+
 ## September 2026
 {: #sep-2026}
 
