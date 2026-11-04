@@ -26,22 +26,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
-<staging
-
-## November 2026
-{: #October-2026}
-
-### 30 November 2026
-{: #power-iaas-nov3026}
-{: release-note}
-
-Stock images support
-:   * The following SUSE Linux Enterprise Server (SLES) stock images are removed from the {{site.data.keyword.powerSys_notm}} data centers because the OS levelS are no longer supported:
-        - SLES 15 SP4 for SAP HANA (SLES16-SAP)
-        - SLES 15 SP4 for SAP NetWeaver (SLES15-SAP-NETWEAVER)
-        - SLES 16 general purpose (SLES16)
-
-</staging>>
+>
 
 ## October 2026
 {: #October-2026}
