@@ -26,7 +26,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
->
+
 
 ## October 2026
 {: #October-2026}
