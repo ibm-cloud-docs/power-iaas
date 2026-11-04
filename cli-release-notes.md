@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2026 
-lastupdated: "2026-10-29"
+lastupdated: "2026-11-04"
 
 ---
 
@@ -44,14 +44,25 @@ New options
 
     - The `--metadata-service-force-enable` option is added to the [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) command. You can use this option to enable the metadata service while the VSI is active.
 
-    - The `--IBMiPHA-FSM-count` option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) commands. You can use this option to assign the number of IBM i PowerHA Full System Management software licenses to a {{site.data.keyword.powerSys_notm}} instance.
-
 Other enhancements
 :   The following enhancements are included in this release:
 
     - Changed system types `s1122`, `e1150`, and `e1180` to `Power11`.
 
     - Removed the deprecated `ibmcloud pi snapshot` set of commands. Use the [ibmcloud pi instance snapshot](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-snapshot) set of commands instead.
+
+## October 2026
+{: #oct-2026}
+
+### CLI v1.11.1
+{: #cli-v1.11.1}
+
+The CLI plug-in version 1.11.1 is available for {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} and {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}}.
+
+New options
+:   The following option is added to the existing CLI commands:
+
+    - The `--IBMiPHA-FSM-count` option is added to the [ibmcloud pi instance create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-create) and [ibmcloud pi instance update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-instance-update) commands. You can use this option to assign the number of IBM i PowerHA Full System Management software licenses to a {{site.data.keyword.powerSys_notm}} instance.
 
 ## June 2026
 {: #June-2026}
