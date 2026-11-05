@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-11-03"
 
 keywords: Operating systems, powerVS OS
 
@@ -114,6 +114,8 @@ The VSIs can continue to run without any issues after the stock OS images are re
 
 The following table lists the supported AIX, IBM i, and Linux OS versions that can be installed on {{site.data.keyword.powerSys_notm}} instances. OS versions that are not listed in the following table are not supported and cannot be installed on a VSI.
 
+
+
 | **Processor family** | **Supported AIX versions** | **Latest stock image versions**                                                               |
 | -------------------- | -------------------------- | --------------------------------------------------------------------------------------------- |
 | Power11              | AIX 7.2 TL5 or later       | AIX 7.3 TL4 SP2 \n AIX 7.3 TL3 SP3 \n AIX 7.2 TL5 SP13 |
@@ -126,6 +128,10 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}
 {: row-headers}
+
+
+
+
 
 | **Processor family** | **Supported IBM i versions** | **Latest stock image versions**                                    |
 | -------------------- | ---------------------------- | ------------------------------------------------------------------ |
@@ -155,6 +161,8 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 
 
 
+
+
 | **Processor family** | **Supported SLES versions**                                                                                                                              | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Power11              | * SLES 16 general purpose and SAP \n * SLES 15.7 general purpose and SAP \n * SLES 15.6 general purpose and SAP                                         | * SLES 16 general purpose (SLES16) \n * SLES 16 for SAP HANA (SLES16-SAP) \n * SLES 16 for SAP NetWeaver (SLES16-SAP-NETWEAVER) \n * SLES 15 SP7 general purpose (SLES15) \n * SLES 15 SP7 for SAP HANA (SLES15-SP7-SAP) \n * SLES 15 SP7 for SAP NetWeaver (SLES15-SP7-SAP-NETWEAVER) \n * SLES 15 SP6 general purpose (SLES15) \n * SLES 15 SP6 for SAP HANA (SLES15-SP6-SAP) \n * SLES 15 SP6 for SAP NetWeaver (SLES15-SP6-SAP-NETWEAVER)                                                                                                                                                                          |
@@ -167,6 +175,10 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}
 {: row-headers}
+
+
+
+
 
 
 [^a]: Not available for {{site.data.keyword.on-prem-fname}} in client locations.

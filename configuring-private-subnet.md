@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-09-24"
+lastupdated: "2026-11-02"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -47,7 +47,7 @@ When you specify a CIDR, the following values are automatically populated:
 - An IP range
 - DNS server
 
-You must use a CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://tools.ietf.org/html/rfc1518){: external} and [RFC 1519](https://tools.ietf.org/html/rfc1519){: external}.
+You must use a CIDR notation when you choose the IP ranges for your private network subnet. CIDR notation is defined in [RFC 1518](https://www.rfc-editor.org/info/rfc1518/){: external} and [RFC 1519](https://www.rfc-editor.org/info/rfc1519/){: external}.
 A CIDR has the following format:
 ```shell
 <IPv4 address>/<number>

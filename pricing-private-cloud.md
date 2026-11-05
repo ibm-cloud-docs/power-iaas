@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-10-05"
+lastupdated: "2026-11-02"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -488,7 +488,7 @@ Review the following frequently asked questions about pricing:
 * [Creating an estimate for Power Virtual Server resources in a client location](/docs/power-iaas?topic=power-iaas-creating-an-estimate-private).
 
 
-   By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating your costs](https://cloud.ibm.com/docs/account?topic=account-cost){: external}.
+   By default, the cost estimator shows hourly prices for the selected resources and their units of measure. For more information, see [Estimating IBM Cloud service costs with the cost estimator](/docs/account?topic=account-estimate-cost){: external}.
 
 
 

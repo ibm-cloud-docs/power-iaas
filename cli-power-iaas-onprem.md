@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2026 
-lastupdated: "2026-10-30"
+lastupdated: "2026-11-05"
 
 content-type: cli-docs
 
@@ -10,7 +10,7 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.11.0 for {{site.data.keyword.on-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.11.1 for {{site.data.keyword.on-prem}}
 {: #power-iaas-cli-on-prem}
 
 ---
@@ -3811,6 +3811,8 @@ delete VOLUME_ID
 **Alias**: `flash-copy-mapping, fcm`
 
 **Description**: Get a list of flash copy mappings of a volume directly from primary storage host.
+
+
 
 **Usage**:
 

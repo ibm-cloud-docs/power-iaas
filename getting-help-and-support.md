@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026
 
-lastupdated: "2026-10-29"
+lastupdated: "2026-11-02"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -29,7 +29,7 @@ subcollection: power-iaas
 If you experience an issue or have questions about {{site.data.keyword.powerSys_notm}}, IBM Support is available to help. You can open a support case directly, or use the following self-service resources if you prefer a self-service approach.
 {: shortdesc}
 
-* Troubleshoot with [{{site.data.keyword.paver_full}}](http://cloud.paver.ibm.com){: external}. {{site.data.keyword.paver}} is an embedded AI operator that understands your account context, creates a resolution plan, and executes changes on your behalf, while always requiring your approval before touching your live environment.
+* Troubleshoot with [{{site.data.keyword.paver_full}}](https://cloud.ibm.com/catalog/services/paver){: external}. {{site.data.keyword.paver}} is an embedded AI operator that understands your account context, creates a resolution plan, and executes changes on your behalf, while always requiring your approval before touching your live environment.
 * Review the [FAQs for Power Virtual Server](/docs/power-iaas?topic=power-iaas-powervs-faqs).
 * Review the [troubleshooting documentation](/docs/power-iaas?group=troubleshooting) to resolve common issues.
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources on the [Status page](/status){: external}.
