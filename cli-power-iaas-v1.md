@@ -10,7 +10,7 @@ content-type: cli-docs
 
 {{site.data.keyword.attribute-definition-list}}
 
-# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.11.0 for {{site.data.keyword.off-prem}}
+# IBM {{site.data.keyword.powerSys_notm}} CLI version 1.11.1 for {{site.data.keyword.off-prem}}
 {: #power-iaas-cli-reference-v1}
 
 
