@@ -24,6 +24,7 @@ The following list of commands are available with command-line interface (CLI) f
 
 
 
+
 ## `ibmcloud pi`
 {: #ibmcloud-pi}
 
@@ -1203,6 +1204,7 @@ create INSTANCE_NAME --image IMAGE --subnets "SUBNET1 [IP1] [NSG]"[,"SUBNETn [IP
   -a, --default-trusted-profile-autolink                If set to true, the system will create a link to the specified trusted profile during server creation.
       --deployment-target string                        The deployment of the dedicated host.
                                                         Deployment must include either a host group id and "hostGroup", or a host id and "host".
+                                                        Example: --deployment-target "424,host"
   -d, --deployment-type string                          The custom deployment type. Valid values are: "EPIC" or "VMNoStorage". If '--deployment-type "VMNoStorage"' is set,
                                                         then "--image" must be one of "AIX-EMPTY", "IBMI-EMPTY", "RHEL-EMPTY", or "SLES-EMPTY".
   -i, --image string                                    Operating system image identifier or name.
@@ -1344,6 +1346,10 @@ operation INSTANCE_ID (--operation-type "boot" --boot-mode MODE --boot-operating
 
 ```bash
   -b, --boot-mode string             Name of the server boot mode. Valid values are: a, b, c, d.
+                                     Boot mode 'a' means to boot from disk using copy A.
+                                     Boot mode 'b' means to boot from disk using copy B.
+                                     Boot mode 'c' is reserved for IBM lab use only.
+                                     Boot mode 'd' means to boot from storage media or drives.
   -m, --boot-operating-mode string   Name of the server operating mode. Valid values are: manual, normal.
   -j, --job-task string              Name of the job task to execute.
                                      Valid values are: consoleservice, dston, dumprestart, iopdump, iopreset, remotedstoff, remotedston, retrydump.
@@ -4447,7 +4453,6 @@ delete VOLUME_ID
 **Alias**: `flash-copy-mapping, fcm`
 
 **Description**: Get a list of flash copy mappings of a volume directly from primary storage host.
-
 
 
 
