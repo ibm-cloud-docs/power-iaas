@@ -651,7 +651,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 {: support}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
+**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages from IBM Cloud](https://www.ibm.com/products/cloud-bandwidth-pricing){: external}.
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
@@ -810,7 +810,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
+Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](/docs/dl?topic=dl-understanding-latency).
 
 ### **What must be the network latency between the data center and the corresponding IBM Cloud region?**
 {: #network_latency-private-cloud}
@@ -878,7 +878,7 @@ IBM provides performance monitoring and status monitoring services for {{site.da
 
 
 
-For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-regions){: external}.
 
 
 
