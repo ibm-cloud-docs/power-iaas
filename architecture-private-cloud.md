@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-28"
+lastupdated: "2026-11-11"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -152,6 +152,8 @@ For the S1122 server, the following memory configurations are available:
 
 
 
+
+
 The small pod with one rack is available with FS 5300 TB flash system storage.
 
 | Storage types                           | FS 5300 TB |      |
@@ -166,6 +168,10 @@ The small pod with one rack is available with FS 5300 TB flash system storage.
 | Usable capacity in TB at 2x compression | 438        | 876  |
 {: caption="Small pod with flash system storage configuration." caption-side="top"}
 {: #single-rack-storage}
+
+
+
+
 
 ### Medium pod configurations
 {: #pod-config-medium}
@@ -265,6 +271,8 @@ The following configurations and memory types are available for S1122, E1150, an
 
 
 
+
+
 The medium pod is available with storage capacity of 460 TB or 920 TB FlashSystem (FS) storage for S1122, E1150, and E1180 server types. The following storage configurations are available for medium pods with FS storage options:
 
 | 460 TB FS configurations               | Minimum configuration | Maximum configuration |
@@ -297,6 +305,10 @@ The medium pod is available with storage capacity of 460 TB or 920 TB FlashSyste
 {: #4-multi-rack-storage}
 {: tab-title="920 TB FS"}
 
+
+
+
+
 ### Supported Power11 servers
 {: #power-system-spec-private-cloud}
 
@@ -316,13 +328,21 @@ IBM {{site.data.keyword.powerSys_notm}} in {{site.data.keyword.on-prem}} provide
 ### Storage
 {: #storage-private-cloud}
 
+
+
 For small pods, only the IBM Flash System FS5300 is supported. For more information, see [IBM Flash System FS5300](https://www.ibm.com/products/flashsystem-5300){: external}.
+
+
+
+
 
 
 
 
 You can extend the storage capacity of the pods, but you cannot add more storage controllers.
 {: note}
+
+
 
 ### Storage tiers
 {: #storage-tiers-spec-private-cloud}

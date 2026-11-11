@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-11-11"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -82,6 +82,8 @@ When the defined RPO exceeds more than 8 hours, the IBM operations team alerts y
 {: note}
 
 Replication is not supported between the VMs in the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} environment and the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} environment.
+
+
 
 
 
