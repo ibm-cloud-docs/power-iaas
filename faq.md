@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-11-06"
+lastupdated: "2026-11-11"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -474,6 +474,7 @@ Before you shelve a VSI, complete the following tasks:
 - Shut down the VSI. The VSI must be in the **Shutoff** state.
 - Remove the public IP address from the VSI.
 - Remove the hard or soft pinning policy from the VSI.
+- For AIX VSIs, update the `cloud-init` package to version `[version]` or later. If you do not update the `cloud-init` package before shelving, the VSI health state displays as **Warning** and the operating system status displays as **Unknown** after an unshelve operation.
 
 For more information, see the [Prerequisites](/docs/power-iaas?topic=power-iaas-shelving-instance#shelving-prereqs) section in the [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance) page.
 
