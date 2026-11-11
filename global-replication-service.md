@@ -90,8 +90,6 @@ Replication is not supported between the VMs in the {{site.data.keyword.off-prem
 
 
 
-
-
 ## Pricing for GRS
 {: #pricing-GRS}
 
