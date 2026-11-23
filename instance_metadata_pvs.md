@@ -3,7 +3,7 @@
 copyright:
   years: 2026, 2026
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-11-23"
 
 keywords: metadata service, trusted profiles, power virtual server, instance metadata, IAM, authentication, security, identity token, IAM token
 
@@ -39,7 +39,7 @@ Access to the metadata service is disabled by default. You can enable access to 
 The metadata service provides the following API endpoints:
 
 Identity endpoints
-:   The identity endpoints provide identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the identity endpoints to create a short-lived IAM token for uploading objects to an {{site.data.keyword.cos_full_notm}} bucket. For more information, see [Identity access token](#metadata-identity-token).
+:   The identity endpoints provide identity access tokens and IAM access tokens. You need an identity access token to access and retrieve metadata information. To access other {{site.data.keyword.cloud_notm}} IAM-enabled services, you can generate an IAM token by using the identity access token. For example, you can use the identity endpoints to create a short-lived IAM token, which expires after a limited time, to upload objects to an {{site.data.keyword.cos_full_notm}} bucket. For more information, see [Identity access token](#metadata-identity-token).
 
 Metadata endpoint
 :   The metadata endpoint provides access to the metadata for a VSI. {{site.data.keyword.powerSys_notm}} supports the instance metadata endpoint, which returns information about the VSI including the instance ID, name, CRN, workspace information, and network configuration.
@@ -540,11 +540,11 @@ curl -X PUT "https://api.metadata.power-iaas.cloud.ibm.com/identity/v1/token" \
 
 The API response contains the identity access token. Use this token to access the metadata service.
 
-The following JSON response shows an identity access token, the time when the token was created, the time when it expires, and the expiration time that you set. The identity access token in this example expires in 5 minutes.
+The following example JSON response shows an identity access token, the time when the token was created, the time when it expires, and the expiration time that you set. The identity access token in this example expires in 5 minutes.
 
 ```json
 {
-  "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlZTSS1DUl91cy1lYXN0X2I5...",
+  "access_token": "<identity_access_token>",
   "created_at": "2025-06-10T11:08:39.363Z",
   "expires_at": "2025-06-10T11:13:39.363Z",
   "expires_in": 300
@@ -577,11 +577,11 @@ iam_token=`curl -X POST "https://api.metadata.power-iaas.cloud.ibm.com/identity/
 ```
 {: pre}
 
-The JSON response shows the IAM token.
+The following example JSON response shows the IAM token.
 
 ```json
 {
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aGVfYmVzdCI6I8...",
+  "access_token": "<iam_token>",
   "created_at": "2025-06-10T14:10:15Z",
   "expires_at": "2025-06-10T15:10:15Z",
   "expires_in": 3600

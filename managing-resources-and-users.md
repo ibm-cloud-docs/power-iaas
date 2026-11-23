@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-23"
 
 keywords: identity, access management, iam, managing virtual servers, platform access roles, user access scenarios
 
@@ -135,8 +135,8 @@ Trusted profiles provide the following security benefits for {{site.data.keyword
 
 - **Enhanced security**: Eliminates the risk of credential exposure by removing the need to store API keys or passwords on your VSIs.
 - **Simplified credential management**: Eliminates the need to rotate, update, or manage static credentials across your VSIs.
-- **Dynamic authentication**: Applications in the guest OS can generate tokens on demand based on the VSI identity. Because tokens are short-lived, access credentials are always current and tied to the specific instance.
-- **Reduced attack surface**: Prevents compromised VSIs from exposing long-lived credentials to access other resources.
+- **Dynamic authentication**: Applications in the guest OS can generate tokens on demand based on the VSI identity. Because tokens are short-lived and expire automatically, access credentials are always current and tied to the specific instance.
+- **Reduced attack surface**: Prevents compromised VSIs from exposing long-lived credentials, such as API keys or service credentials, to access other resources. Unlike short-lived tokens, long-lived credentials remain valid until you delete them or they reach an expiration date.
 - **Precise access control**: Controls which IBM Cloud services each VSI can access through IAM policies and access groups that are assigned at the individual VSI level.
 
 ### Managing trusted profiles

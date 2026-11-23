@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-23"
 
 keywords: Operating systems, powerVS OS
 
@@ -208,7 +208,6 @@ System software maps are reference documents that outline the compatibility betw
 - [System software maps for IBM i](https://www.ibm.com/support/pages/node/6023368){: external}
 - [System software maps for SUSE Linux Enterprise Server](https://www.ibm.com/support/pages/node/6023374){: external}
 - [System software maps for Red Hat Enterprise Linux](https://www.ibm.com/support/pages/node/6024466){: external}
-
 
 ## Licensing and software components
 {: #licensing-sw-components}

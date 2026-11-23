@@ -2,7 +2,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-10-30"
+lastupdated: "2026-11-23"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}}, configure instance, processor, profile, networking, large volumes, ibm i 500 volume, boot vm, epic
 
@@ -238,8 +238,10 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 13. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not available at all IBM data center locations. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
-    When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
+    From 1 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate until 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
     {: important}
+
+    When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
 
     For an AIX VSI, network interface controllers (NICs) are assigned based on the order in which you specify them during creation. To display the information about all the network interfaces after provisioning, open the AIX console and type `ifconfig -a`.
     {: note}
