@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-11-11"
+lastupdated: "2026-11-24"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -182,7 +182,7 @@ Any unsupported and older stock images are periodically removed from the offerin
 {: faq}
 {: support}
 
-If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the os by following the vendor's guidelines specific to your os.
+If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the OS by following the vendor's guidelines specific to your OS.
 
 ### **What formats can I use to upload a custom image?**
 {: #custom-image}
@@ -453,74 +453,7 @@ When you change the pin policy of a VSI from **Hard** to **Soft** or disable the
 
 
 
-[shelve-unshelve-start]{: tag-green}
 
-### **What does it mean to shelve a VSI?**
-{: #shelve-vsi}
-{: faq}
-
-When you shelve a VSI, {{site.data.keyword.powerSys_notm}} releases the compute resources of the VSI, such as cores, memory, and OS licenses. {{site.data.keyword.powerSys_notm}} retains the storage volumes, metadata, Cloud Resource Name (CRN), IP addresses, and private networking configuration of the VSI. The VSI remains in your workspace in the **Shelved** state. You can unshelve the VSI later to redeploy it with the original or an updated configuration.
-
-A shelved VSI supports only the capture, delete, and unshelve operations. You can also manage the attached storage volumes of the shelved VSI.
-
-For more information, see [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance).
-
-### **What must I do before I shelve a VSI?**
-{: #shelve-vsi-prereqs}
-{: faq}
-
-Before you shelve a VSI, complete the following tasks:
-
-- Shut down the VSI. The VSI must be in the **Shutoff** state.
-- Remove the public IP address from the VSI.
-- Remove the hard or soft pinning policy from the VSI.
-- For AIX VSIs, update the `cloud-init` package to version `[version]` or later. If you do not update the `cloud-init` package before shelving, the VSI health state displays as **Warning** and the operating system status displays as **Unknown** after an unshelve operation.
-
-For more information, see the [Prerequisites](/docs/power-iaas?topic=power-iaas-shelving-instance#shelving-prereqs) section in the [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance) page.
-
-### **What happens to my data when I shelve and unshelve a VSI?**
-{: #shelve-vsi-data}
-{: faq}
-
-When you shelve a VSI, all attached block storage volumes remain in storage. If the VSI has volumes with GRS enabled, replication continues while the VSI is shelved.
-
-If the VSI has virtual persistent memory (vPMEM) volumes attached, {{site.data.keyword.powerSys_notm}} retains the vPMEM configuration when you unshelve the VSI. However, the data in the vPMEM volumes is lost. {{site.data.keyword.powerSys_notm}} re-creates the vPMEM volumes on the new host when the VSI starts.
-
-For more information, see the [Considerations and limitations](/docs/power-iaas?topic=power-iaas-shelving-instance#shelving-considerations) section in the [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance) page.
-
-### **Which configuration settings can I change when I unshelve a VSI?**
-{: #unshelve-vsi-config}
-{: faq}
-
-When you unshelve a VSI, you can change the following settings:
-
-- **Placement**: dedicated host, machine type, shared processor pool (SPP), server placement group, and processor compatibility mode
-- **Compute capacity**: core type, core and memory values, SAP profile, and IBM i software tier
-
-You cannot change the trusted profile or the vPMEM configuration when you unshelve a VSI.
-
-For more information, see [Unshelving a VSI](/docs/power-iaas?topic=power-iaas-shelving-instance#unshelving-vsi).
-
-### **How do I migrate a VSI to a different hardware generation, SPP, or dedicated host?**
-{: #shelve-vsi-migration}
-{: faq}
-
-To migrate a VSI, shut down the VSI, shelve the VSI, and then unshelve the VSI. When you unshelve the VSI, select the target configuration for your migration:
-
-You cannot migrate an IBM i VSI that uses a virtual serial number (VSN) with a software tier from Power10 to Power9.
-
-For more information, see the [Migrating a VSI](/docs/power-iaas?topic=power-iaas-shelving-instance#shelving-use-case-migration) section in the [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance) page.
-
-### **Why is my VSI in the Error state after I unshelve it?**
-{: #unshelve-vsi-error}
-{: faq}
-
-{{site.data.keyword.powerSys_notm}} does not reserve capacity for a shelved VSI. When you unshelve a VSI, {{site.data.keyword.powerSys_notm}} schedules and deploys the VSI by using the standard provisioning process, and might place the VSI on a different host than before. If capacity is unavailable, the VSI enters the **Error** state.
-
-For more information, see [Considerations and limitations](/docs/power-iaas?topic=power-iaas-shelving-instance#shelving-considerations) section in the [Shelving and unshelving a virtual server instance](/docs/power-iaas?topic=power-iaas-shelving-instance) page.
-
-
-[shelve-unshelve-end]{: tag-green}
 
 ### **How do I migrate my VSI from one data center to another (WDC04 to DAL13)?**
 {: #vm-migration}
@@ -554,10 +487,10 @@ You cannot dynamically change the effective processor compatibility mode of a VS
 
 {{_include-segments/cpu-compatibility-note.md}}
 
-When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the os that is running in the VSI supports that mode. If the os supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the os does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the os. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
+When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the OS that is running in the VSI supports that mode. If the OS supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the OS does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the OS. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
 
 
-For example, if a VSI runs on a POWER11 processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the os installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the os and the host firmware support and is lower than the preferred mode of `POWER11`.
+For example, if a VSI runs on a POWER11 processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the OS installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the OS and the host firmware support and is lower than the preferred mode of `POWER11`.
 
 If you set the preferred processor compatibility mode to `Default`, the hypervisor does not consider `POWER9` as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10`, or `POWER11`, but it cannot be `POWER9`.
 
@@ -689,7 +622,7 @@ Power11 workloads are billed according to the standard Power11 pricing model. Fo
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux os.
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux OS.
 
 ### **How does licensing work for the AIX, IBM i, or Linux operating systems?**
 {: #os-support}
