@@ -3,7 +3,7 @@
 copyright:
   year: 2024, 2026 
 
-lastupdated: "2026-10-16"
+lastupdated: "2026-11-23"
 
 keywords: Network security group, Power virtual server NSG, PowerVS NSGs, network address groups, NAG, NAGs, rules, security rules, members, nsg rules evaluation order, NAG precedence, traffic matching
 
@@ -399,10 +399,7 @@ When you delete a {{site.data.keyword.powerSys_notm}} workspace, all NSGs in tha
 ### Creating and managing NAGs in a workspace
 {: #create-manage-nag}
 
-NAGs are part of the inbound rules that define inbound traffic from network addresses external to your {{site.data.keyword.powerSys_notm}} workspace to members of an NSG. You can create NAGs in your workspace and add CIDR addresses to them. You can create up to 10 NAGs in a single workspace.
-
-In addition to customer-defined NAGs, a default NAG consisting of the `0.0.0.0/0` CIDR is available.
-{: note}
+NAGs are part of the inbound rules that define inbound traffic from network addresses external to your {{site.data.keyword.powerSys_notm}} workspace to members of an NSG. You can create NAGs in your workspace and add CIDR addresses to them. You can create up to 10 NAGs in a single workspace. In addition to customer-defined NAGs, a default NAG consisting of the `0.0.0.0/0` CIDR is available.
 
 To create an NAG, complete the following steps:
 
@@ -428,8 +425,10 @@ To create an NAG, complete the following steps:
 
     - CIDR notation must follow the standards defined in [RFC 1518](https://datatracker.ietf.org/doc/html/rfc1518){: external} and [RFC 1519](https://datatracker.ietf.org/doc/html/rfc1519){: external}.
     - The valid CIDR format is `<IPv4 address>/<number>`. For example, `192.168.1.0/24` represents the IP range of `192.168.1.0 — 192.168.1.255` and `10.0.0.0/16` represents the IP range of `10.0.0.0—10.0.255.255`.
+    - You cannot use the same CIDR in more than one NAG.
+    - You can add a maximum of three members when you create an NAG. After you create the NAG, you can add more members.
 
-    The same CIDR cannot be used in more than one NAG. You can add a maximum of three members when creating an NAG, but you can add more members after the NAG is created.
+    The CIDR of an NAG member can overlap with the CIDR of a private subnet in the same workspace. If the CIDRs overlap, the NAG member CIDR must be a superset of the private subnet CIDR.
     {: note}
 
     You can use CIDR `161.26.0.0/16` to identify IBM Cloud IaaS private endpoints such as DNS, Linux® software repositories, and NTP. You can use CIDR `166.8.0.0/14` to identify IBM Cloud PaaS private endpoints such as IBM Cloud Databases.

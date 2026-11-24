@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-24"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -90,7 +90,7 @@ If you like to compare your current environment's performance to what's availabl
 
 Starting with IBM Power11, {{site.data.keyword.powerSys_notm}} groups all Power11 machine types (S1122, E1150, and E1180) to a single generation-based host group. When you create a virtual server instance (VSI), you select a hardware generation (such as Power11) instead of a specific machine type. {{site.data.keyword.powerSys_notm}} automatically assigns a supported host server that is suitable for your workload.
 
-When you configure a VSI on Power11, you make infrastructure decisions based on the operating system compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
+When you configure a VSI on Power11, you make infrastructure decisions based on the operating system (OS) compatibility, workload requirements, software tiers, and hardware generation. {{site.data.keyword.powerSys_notm}} places the VSI on a supported host server within the selected hardware generation, based on your workload requirements. You need not select a specific Power11 machine type such as S1122, E1150, or E1180 when you configure a VSI on Power11.
 
 Power9 and Power10 machine types continue to use the existing selection model, where you choose a specific machine type when you create a VSI.
 
@@ -168,7 +168,7 @@ Yes. This feature is known as **bring your own image**. For more information, se
 {: faq}
 {: support}
 
-For each major version (example: Technology Level) of the operating system (OS) that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for {{site.data.keyword.powerSys_notm}} environment.
+For each major version (example: Technology Level) of the OS that is enabled through the offering, {{site.data.keyword.powerSys_notm}} provides a single stock image. {{site.data.keyword.powerSys_notm}} typically provides stock images for the last three major versions of the supported OS. Any update to the OS stock image is planned only when the image level is certified for {{site.data.keyword.powerSys_notm}} environment.
 
 ### **When are stock images removed from the catalog?**
 {: #remove-stock-images}
@@ -182,7 +182,7 @@ Any unsupported and older stock images are periodically removed from the offerin
 {: faq}
 {: support}
 
-If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the operating system by following the vendor's guidelines specific to your operating system.
+If the stock images that are used to deploy the virtual machines are removed, the virtual machines can continue to operate without any issue. You are recommended to update the OS by following the vendor's guidelines specific to your OS.
 
 ### **What formats can I use to upload a custom image?**
 {: #custom-image}
@@ -274,7 +274,7 @@ The key differences are as follows:
 | Definition       | A snapshot is a thin-provisioned group of volumes that cannot be attached to a host or accessed or manipulated. | A clone is created from a snapshot and results in independent volumes which surface in the GUI and can be attached to hosts. |
 | Primary function | Revert or restore the source disks to a desired state                                                           | Create a complete volume clone                                                                                               |
 | Ease of creation | Easy and quick process                                                                                          | Three-step process and takes a long time                                                                                     |
-| Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the GRS costs                                                                                     |
+| Pricing          | Charged 30% of the regular storage rate                                                                         | target volume storage plus the Global Replication Service (GRS) costs                                                                                     |
 {: caption="Differences between a snapshot and clone" caption-side="bottom"}
 
 
@@ -389,7 +389,7 @@ The core-to-virtual core ratio is 1:1. For shared processors, fractional cores r
 
 | Dedicated processors                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the operating system (OS) logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications. |
+| The hypervisor makes a 1:1 binding between the processor of the partition and a physical processor core. After a VM is activated, the 1:1 binding is static. In the VM, the OS logical thread runs on the physical processor core that is bound with the processor. With a dedicated processor partition, you must resize the number of cores to meet the **peak** demand of the partition. For example, on a typical workday, the CPU consumption is around four cores. But, because of the **peak** demand, the processor requires around eight cores. So, configure the partition with eight cores to handle the **peak** demand and avoid any queuing delays in dispatching the applications. |
 {: class="simple-tab-table"}
 {: tab-group="processor"}
 {: caption="Dedicated processors" caption-side="top"}
@@ -453,6 +453,8 @@ When you change the pin policy of a VSI from **Hard** to **Soft** or disable the
 
 
 
+
+
 ### **How do I migrate my VSI from one data center to another (WDC04 to DAL13)?**
 {: #vm-migration}
 {: faq}
@@ -485,10 +487,10 @@ You cannot dynamically change the effective processor compatibility mode of a VS
 
 {{_include-segments/cpu-compatibility-note.md}}
 
-When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the operating system that is running in the VSI supports that mode. If the operating system supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the operating system does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the operating system. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
+When the VSI is deployed and activated, the hypervisor on the host server checks the preferred processor compatibility mode and determines whether the OS that is running in the VSI supports that mode. If the OS supports the preferred processor compatibility mode, the hypervisor assigns the preferred processor compatibility mode to the VSI. If the OS does not support the preferred processor compatibility mode, the hypervisor assigns the highest processor compatibility mode to the VSI that is supported by the OS. After the VSI is activated, you can check the effective processor compatibility mode on the VSI details page.
 
 
-For example, if a VSI runs on a POWER11 processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the operating system installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the operating system and the host firmware support and is lower than the preferred mode of `POWER11`.
+For example, if a VSI runs on a POWER11 processor-based host and you set `POWER11` as the preferred processor compatibility mode, but the OS installed in the VSI supports only `POWER10`, the hypervisor sets `POWER10` as the effective processor compatibility mode. This mode is the highest mode that the OS and the host firmware support and is lower than the preferred mode of `POWER11`.
 
 If you set the preferred processor compatibility mode to `Default`, the hypervisor does not consider `POWER9` as a valid effective processor compatibility mode. In the default mode, the effective modes can be `POWER9_Base`, `POWER10`, or `POWER11`, but it cannot be `POWER9`.
 
@@ -583,7 +585,7 @@ To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Est
 {: support}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages](https://www.ibm.com/cloud/bandwidth){: external}.
+**IBM Cloud Classic environment:** Inbound bandwidth is unlimited and not charged. Outbound bandwidth is charged per GB tier with bandwidth offered as an allotment for each month. As an example, for your compute instances, 250 GB is included with each monthly virtual server and 20 TB is included with each monthly bare metal server. Extra bandwidth can also be purchased per package. For more information, see [Bandwidth packages from IBM Cloud](https://www.ibm.com/products/cloud-bandwidth-pricing){: external}.
 
 **IBM {{site.data.keyword.powerSys_notm}} environment:** Inbound bandwidth is unlimited and not charged. Bandwidth is not charged when you use a public network. If you are using a private network with DirectLink Connect, you are charged **IBM Cloud Classic environment** rates.
 
@@ -620,7 +622,7 @@ Power11 workloads are billed according to the standard Power11 pricing model. Fo
 {: #licensing-os}
 {: faq}
 
-No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux operating system.
+No. It is the customer's responsibility to maintain, update, and manage the AIX, IBM i, or Linux OS.
 
 ### **How does licensing work for the AIX, IBM i, or Linux operating systems?**
 {: #os-support}
@@ -742,7 +744,7 @@ IBM Cloud Connect is only available to IBM clients within the US.
 {: faq}
 
 [{{site.data.keyword.off-prem}}]{: tag-blue}
-Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](https://cloud.ibm.com/docs/dl?topic=dl-understanding-latency).
+Network latency over Direct link is less than 1 millisecond in every location. To know more about network latency, see [Understanding latency](/docs/dl?topic=dl-understanding-latency).
 
 ### **What must be the network latency between the data center and the corresponding IBM Cloud region?**
 {: #network_latency-private-cloud}
@@ -810,7 +812,7 @@ IBM provides performance monitoring and status monitoring services for {{site.da
 
 
 
-For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-regions){: external}.
 
 
 

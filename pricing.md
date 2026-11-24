@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-24"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -142,6 +142,8 @@ The following table lists the billable {{site.data.keyword.powerSys_notm}} resou
 IBM {{site.data.keyword.powerSys_notm}} instances are charged at a monthly rate that is metered every hour. If you change resources in an LPAR during the month, the monthly bill for the LPAR reflects the resource change and the LPAR price aggregating all hourly charges before and after the change.
 
 To reduce costs, capture a VSI as a volume-backed image and delete it when the VSI is not used. For more information about capturing a VSI, see [Capturing and exporting a VSI](/docs/power-iaas?topic=power-iaas-capturing-exporting-vm). For more information about deleting a VSI, see [Deleting a virtual server instance](/docs/power-iaas?topic=power-iaas-modifying-instance#deleting-virtual-server-instance).
+
+
 
 All prices that are mentioned in the topic are illustrative and do not represent the actual amounts that are used for billing. To generate an estimated price, use the [{{site.data.keyword.powerSys_notm}} Estimate pricing](https://cloud.ibm.com/power/estimate){: external} tool. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 {: important}

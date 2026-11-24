@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-10-14"
+lastupdated: "2026-11-24"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -399,6 +399,8 @@ To shut down an active VSI, complete the following steps:
 3. In the confirmation dialog, click **Shutdown**. A notification is displayed indicating that the shutdown process has started.
 4. Click the **Refresh** icon to verify that the VSI status changes to **Shutoff**.
 
+
+
 ### Starting a VSI
 {: #start-vsi}
 
@@ -470,6 +472,8 @@ Public networks are not supported in all the IBM data center locations. If your 
 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
+
+
 
 ## Enabling or disabling access to the metadata service
 {: #enable-disable-metadata-service}

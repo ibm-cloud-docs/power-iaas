@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-11-02"
+lastupdated: "2026-11-24"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -183,6 +183,8 @@ You can establish a private network communication between the two {{site.data.ke
 
 ## Using CIDR notation
 {: #cidr-notation}
+
+
 
 
 

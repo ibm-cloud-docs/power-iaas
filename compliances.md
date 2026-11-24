@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-08-12"
+lastupdated: "2026-11-11"
 
 keywords: IBM compliances, SOC1, SOC2, HIPAA, ISO 27017:2015
 
@@ -97,6 +97,7 @@ The Information System Security Management and Assessment Program (ISMAP) is a J
 
 
 
+
 ## HITRUST
 {: #hitrust}
 
@@ -104,6 +105,9 @@ The Information System Security Management and Assessment Program (ISMAP) is a J
 The HITRUST CSF&reg; is a framework for assessing and managing cybersecurity threats and safeguarding sensitive data such as protected health information (PHI). {{site.data.keyword.powerSys_notm}} is HITRUST CSF&reg; compliant. [Contact an IBM representative](https://www.ibm.com/account/reg/signup?formid=MAIL-wcp){: external} to request HITRUST certification letters for {{site.data.keyword.powerSys_notm}} with more detailed scope descriptions for {{site.data.keyword.cloud_notm}} infrastructure services.
 
 For more information, see [What is HITRUST?](https://www.ibm.com/cloud/compliance/hitrust){: external}.
+
+
+
 
 
 ## Financial Services® Validated
@@ -140,6 +144,7 @@ The International Organization for Standardization (ISO) is an independent, non-
 
 For more information, see [IBM Cloud&reg; compliance: ISO 27017](https://www.ibm.com/cloud/compliance/iso-27017){: external} and [Products in the scope of the IBM services information security management system (ISMS)](https://www.ibm.com/downloads/cas/OELMNOND){: external}.
 
+
 ## PCI-DSS
 {: #pci-dss-compliance}
 
@@ -152,6 +157,9 @@ Contact an [IBM representative](https://www.ibm.com/account/reg/signup?formid=MA
 You can build PCI-DSS compliant environments and applications by using IBM Cloud. For more information, see [IBM Cloud PCI DSS Guidance](https://www.ibm.com/downloads/cas/OPLDK4Q2){: external}.
 
 PCI-DSS reports are available only upon request. To submit a request, use the [IBM Cloud Compliance Report Request Form](https://forms.monday.com/forms/31287c1a9093af2f4c53be348675a7db){: external}.
+
+
+
 
 ## HIPAA
 {: #HIPAA-cert}
