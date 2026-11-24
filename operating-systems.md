@@ -3,7 +3,7 @@
 copyright:
   years: 2025, 2026 
 
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-24"
 
 keywords: Operating systems, powerVS OS
 
@@ -146,6 +146,8 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: class="comparison-tab-table"}
 {: row-headers}
 
+
+
 | **Processor family** | **Supported RHEL versions**                                                                                                                                                                          | **Latest stock image versions**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Power11              | * RHEL 10 general purpose and SAP \n * RHEL 10.2 general purpose and SAP NetWeaver \n * RHEL 9.8 general purpose \n * RHEL 9.6 general purpose and SAP \n * RHEL 8.10 general purpose                | * RHEL 10 general purpose (RHEL10) \n * RHEL 10 for SAP HANA (RHEL10-SAP) \n * RHEL 10 for SAP NetWeaver (RHEL10-SAP-NETWEAVER) \n * RHEL 10.2 general purpose (RHEL10-SP2) \n * RHEL 10.2 for SAP NetWeaver (RHEL10-SP2-SAP-NETWEAVER) \n * RHEL 9.8 general purpose (RHEL9-SP8) \n * RHEL 9.6 general purpose (RHEL9-SP6) \n * RHEL 9.6 for SAP HANA (RHEL9-SP6-SAP-HANA) \n * RHEL 9.6 for SAP NetWeaver (RHEL9-SP6-SAP-NETWEAVER) \n * RHEL 8.10 general purpose (RHEL8-SP10)                                                                                                                                                                                                                                                                                               |
@@ -158,6 +160,10 @@ The following table lists the supported AIX, IBM i, and Linux OS versions that c
 {: tab-group="operating-systems-public-private"}
 {: class="comparison-tab-table"}
 {: row-headers}
+
+
+
+
 
 
 

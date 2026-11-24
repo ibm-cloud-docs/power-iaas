@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-24"
 
 keywords: modifying an instance, {{site.data.keyword.powerSys_notm}} as a service, private clouds, howto, terminology, video, how-to, storage volume, new storage size, modifying server, editing volume, volume modification, DLPAR, modifying instance, scaling vm, public network, nic, affinity
 
@@ -473,8 +473,7 @@ Public networks are not supported in all the IBM data center locations. If your 
 You cannot toggle a public network off if there are no other defined networks.
 {: note}
 
-From 1 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate until 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
-{: important}
+
 
 ## Enabling or disabling access to the metadata service
 {: #enable-disable-metadata-service}

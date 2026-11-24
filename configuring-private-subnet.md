@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-11-23"
+lastupdated: "2026-11-24"
 
 keywords: ssh key, AIX virtual machine, configure ssh key, new virtual server, public ssh key, connecting private subnets, gateway, CIDR, reserve IP, DNS
 
@@ -186,8 +186,7 @@ You can establish a private network communication between the two {{site.data.ke
 
 
 
-From 1 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate until 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
-{: important}
+
 
 You can use CIDR notations if public subnets are enabled and are in use. You can specify CIDR notation for a public subnet with either an [RFC 1918](https://datatracker.ietf.org/doc/html/rfc1918){: external} IP address space (`10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) or an IP address space registered with the Internet Assigned Numbers Authority (IANA). You must plan carefully when you use a non-RFC 1918 IP address space. If a subnet contains non-RFC 1918 IP addresses, a virtual server instance (VSI) in that subnet might not reach certain IP addresses when public networks are also attached to the VSI.
 
