@@ -255,7 +255,7 @@ When replicating volumes that span multiple storage pools, each pool requires it
 
 
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
 
 
 

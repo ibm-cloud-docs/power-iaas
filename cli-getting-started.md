@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026, 2026 
-lastupdated: "2026-11-05"
+lastupdated: "2026-11-25"
 
 ---
 
@@ -26,4 +26,4 @@ The IBM {{site.data.keyword.powerSys_notm}} command-line interface (CLI) provide
 
 After you switch accounts, select the workspace that is associated with the new account before you run additional commands. Most CLI commands require an active workspace to run.
 
-You can also use the application programming interfaces (APIs) to interact with the IBM {{site.data.keyword.powerSys_notm}}. For more information, see [API references](https://cloud.ibm.com/docs/apis/power-cloud){: external}.
+You can also use the application programming interfaces (APIs) to interact with the IBM {{site.data.keyword.powerSys_notm}}. For more information, see [API references](/docs/apis/power-cloud){: external}.

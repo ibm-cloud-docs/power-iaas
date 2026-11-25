@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2019, 2024
+  years: 2019, 2026 
 
-lastupdated: "2026-01-30"
+lastupdated: "2026-11-25"
 
 keywords: sysdig metrics, Power VS, PowerVS metrics, IBM Cloud metrics
 
@@ -46,7 +46,7 @@ You can monitor platform metrics from resources in your {{site.data.keyword.powe
 {: #sysdig-ov}
 {: #platform_metrics}
 
-Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in IBM Cloud. You can monitor metrics from enabled-monitoring services on the IBM Cloud in the region where the service is available. For more information, see [Working with platform metrics](https://cloud.ibm.com/docs/monitoring?topic=monitoring-platform_metrics_working){: external}.
+Platform metrics are metrics that are exposed by enabled-monitoring services and the platform in IBM Cloud. You can monitor metrics from enabled-monitoring services on the IBM Cloud in the region where the service is available. For more information, see [Working with platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_working){: external}.
 
 You can view the platform metrics for {{site.data.keyword.powerSys_notm}} after you create an {{site.data.keyword.mon_full_notm}} instance in the same region that is enabled for monitoring the platform metrics. For more information, see [Enabling platform metrics](/docs/monitoring?topic=monitoring-platform_metrics_enabling).
 
@@ -63,7 +63,7 @@ Before you create an {{site.data.keyword.mon_full_notm}} instance, consider the 
 You must provision the {{site.data.keyword.mon_full}} service instance in the {{site.data.keyword.cloud_notm}}. Then, you can deploy the {{site.data.keyword.mon_short}} agent on your Linux hosts in a {{site.data.keyword.powerSys_notm}} workspace to collect the data and platform metrics from the active VMs.
 
 
-The {{site.data.keyword.mon_short}} service instance can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the IBM Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the {{site.data.keyword.mon_short}} agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring the metrics for your environment, see [Monitoring Linux on a PowerVS workspace](https://cloud.ibm.com/docs/monitoring?topic=monitoring-powervs){: external}.
+The {{site.data.keyword.mon_short}} service instance can collect over 100 metrics that includes additional CPU, memory, file, file system, and network data points. The metrics that are collected from the VMs are routed to the Sysdig backend and then displayed on the IBM Cloud Monitoring dashboards for the selected account. You can configure the metrics to be monitored in each environment. For more information about deploying, updating, and troubleshooting the {{site.data.keyword.mon_short}} agent, see [Managing the IBM Cloud Monitoring Linux agent on a PowerVS workspace](/docs/monitoring?topic=monitoring-linux_powervs){: external}. For more information about configuring the metrics for your environment, see [Monitoring Linux on a PowerVS workspace](/docs/monitoring?topic=monitoring-powervs){: external}.
 
 By default, the Linux-based agent collects core infrastructure and network time series metrics. You can use the collected metrics to monitor the application host. For more information about a list of collected metrics, see [Metrics Available for non-orchestrated environments](https://docs.sysdig.com/en/docs/installation/sysdig-agent/agent-configuration/configure-agent-modes/metrics-available-in-monitor-light/){: external}.
 
@@ -78,14 +78,14 @@ For more information about basic platform metrics, see [Platform metrics overvie
 
 
 
-The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can get the information about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring){: external}.
+The IBM Cloud&reg; Monitoring system is a cloud-native and container-intelligence management system. You can get the information about the performance and health of your applications, services, and platforms through the IBM Cloud Monitoring system. It offers administrators, DevOps teams, and developers a full-stack telemetry with advanced features to monitor and troubleshoot, define alerts, and design custom dashboards. For more information, see [IBM Cloud Monitoring](/docs/monitoring){: external}.
 
 
 
 
 Before you enable the IBM Cloud Monitoring service, you can review the estimated cost on the Summary page and generate an estimate. For more information about generating an estimate, see [Cloud Monitoring](https://cloud.ibm.com/observability/catalog/ibm-cloud-monitoring){: external}.
 
-You can register a {{site.data.keyword.powerSys_notm}} workspace as an observability instance on the IBM Cloud Monitoring system. Integration costs are based on the usage and vary due to the hourly consumption of nodes and virtual machines. Review the cost that is associated Monitoring services in the IBM Cloud catalog. For more information about the costs associated with a {{site.data.keyword.powerSys_notm}} workspace monitoring, see [Pricing](https://cloud.ibm.com/docs/monitoring?topic=monitoring-pricing_plans){: external}.
+You can register a {{site.data.keyword.powerSys_notm}} workspace as an observability instance on the IBM Cloud Monitoring system. Integration costs are based on the usage and vary due to the hourly consumption of nodes and virtual machines. Review the cost that is associated Monitoring services in the IBM Cloud catalog. For more information about the costs associated with a {{site.data.keyword.powerSys_notm}} workspace monitoring, see [Pricing](/docs/monitoring?topic=monitoring-pricing_plans){: external}.
 
 
 ### Enabling IBM Cloud Monitoring service in a Power Virtual Server workspace
@@ -101,7 +101,7 @@ To enable the IBM Cloud Monitoring service in an existing {{site.data.keyword.po
 
 The **Monitoring** option is enabled by default when you create an {{site.data.keyword.off-prem-fname}} workspace.
 
-For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-regions){: external}.
+For more information about the regions that support IBM Cloud Monitoring, see [Regions for IBM Cloud Monitoring](/docs/monitoring?topic=monitoring-regions){: external}.
 
 
 

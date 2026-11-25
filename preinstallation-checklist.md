@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-11-25"
 
 keywords: preinstallation, checklist, preinstallation checklist, preorder, site-readiness, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network validation, account activation
 
@@ -43,8 +43,8 @@ Before you place the order, you must confirm if the following criteria to instal
 {: #power-sys-req}
 
 Before you connect to the IBM Cloud, create a workspace, or perform other pre-installation activities, you must complete the following tasks or keep the following information in hand:
-*  You must have an active IBM Cloud account ID. To create an IBM Cloud account ID, see [Setting up your IBM Cloud account](https://cloud.ibm.com/docs/account?topic=account-account-getting-started){: external}.
-*  Create a Satellite location associated with an IBM Cloud region. Select the IBM Cloud region that is closest to the physical location of your data center. The network latency between your data center and the selected IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Create a Satellite location overview](https://cloud.ibm.com/docs/satellite?topic=satellite-locations){: external}.
+*  You must have an active IBM Cloud account ID. To create an IBM Cloud account ID, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started){: external}.
+*  Create a Satellite location associated with an IBM Cloud region. Select the IBM Cloud region that is closest to the physical location of your data center. The network latency between your data center and the selected IBM Cloud region must maintain a network round-trip time (RTT) of less than or equal to 200 milliseconds. For more information, see [Create a Satellite location overview](/docs/satellite?topic=satellite-locations){: external}.
 
 ## Site-planning and environmental requirements
 {: #site-plan-env-req}

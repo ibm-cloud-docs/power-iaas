@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-07-07"
+lastupdated: "2026-11-25"
 
 keywords: power systems, cloud regions
 
@@ -57,7 +57,7 @@ The network round-trip latency, also known as round-trip time (RTT), is approxim
 [^6]: For more information about the IBM Cloud regions that support VPC, see [Creating a VPC in a different region](/docs/vpc?topic=vpc-creating-a-vpc-in-a-different-region&interface=cli){: external}.
 [^9]: IBM Cloud for government. [Learn more](https://www.ibm.com/cloud/government){: external}.
 [^9a]: IBM Cloud for government. [Learn more](https://www.ibm.com/cloud/government){: external}.
-[^x]: IBM Cloud maps the VPC zone names by account and uses the universal zone names. For more information about the zone mapping by account, see [Zone mapping per account](https://cloud.ibm.com/docs/overview?topic=overview-locations&locale=en#zone-mapping){: external} and the tip after the table.
+[^x]: IBM Cloud maps the VPC zone names by account and uses the universal zone names. For more information about the zone mapping by account, see [Zone mapping per account](/docs/overview?topic=overview-locations&locale=en#zone-mapping){: external} and the tip after the table.
 
 | Location  | VPC region[^7] | {{site.data.keyword.powerSys_notm}} region | VPC zone                        | {{site.data.keyword.powerSys_notm}} zone | Classic infrastructure[^3]         |
 | --------- | -------------- | ------------------------------------------ | ------------------------------- | ---------------------------------------- | ---------------------------------- |

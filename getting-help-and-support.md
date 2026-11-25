@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026
 
-lastupdated: "2026-11-02"
+lastupdated: "2026-11-25"
 
 keywords: getting help and support, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, help and support, support ticket, faq, create new case
 
@@ -34,7 +34,7 @@ If you experience an issue or have questions about {{site.data.keyword.powerSys_
 * Review the [troubleshooting documentation](/docs/power-iaas?group=troubleshooting) to resolve common issues.
 * Check the status of the {{site.data.keyword.Bluemix_notm}} platform and resources on the [Status page](/status){: external}.
 * Review [Stack Overflow](https://stackoverflow.com/questions/tagged/ibm-cloud){: external} to see whether other users have experienced the same problem. When you post a question, tag it with `ibm-cloud` so that IBM development teams can find it.
-* Review [Getting support](https://cloud.ibm.com/docs/support){: external} for an overview of support options.
+* Review [Getting support](/docs/support){: external} for an overview of support options.
 * Review the [IBM Power Virtual Server Support Reference Guide](https://www.ibm.com/support/pages/node/6953473){: external} for detailed guidance on opening and managing support cases.
 
 Use the following table to identify which support process applies to your situation.
@@ -49,7 +49,7 @@ Use the following table to identify which support process applies to your situat
 ## Support plans
 {: #support-plans}
 
-You can choose a Basic, Advanced, or Premium support plan to customize your {{site.data.keyword.cloud_notm}} support experience. The support plan that you select determines the severity level that you can assign to support cases and your level of access to the tools in the Support Center. For more information, see [Basic, Advanced, and Premium support plans](https://cloud.ibm.com/docs/support?topic=support-support-plans){: external}.
+You can choose a Basic, Advanced, or Premium support plan to customize your {{site.data.keyword.cloud_notm}} support experience. The support plan that you select determines the severity level that you can assign to support cases and your level of access to the tools in the Support Center. For more information, see [Basic, Advanced, and Premium support plans](/docs/support?topic=support-support-plans){: external}.
 
 If you have a Lite or Free support plan, you can open cases only for non-technical issues, such as account management, billing and usage, and access management. To open technical support cases for {{site.data.keyword.powerSys_notm}}, you must have a Basic, Advanced, or Premium support plan.
 {: note}

@@ -2,7 +2,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-11-02"
+lastupdated: "2026-11-25"
 
 keywords: pricing, {{site.data.keyword.powerSys_notm}}, private cloud, before you begin, terminology, video, how-to, pricing for private cloud, monthly usage, storage type, memory type
 
@@ -36,7 +36,7 @@ subcollection: power-iaas
 
 In addition to hardware resources, the licensed operating systems and the associated workloads are metered along with virtual machine (VM) resources. For more information about billing for operating systems, see [Operating systems](/docs/power-iaas?topic=power-iaas-pricing-private-cloud#operating-systems).
 
-You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
+You can generate an estimate of the resources for IBM {{site.data.keyword.powerSys_notm}}. The estimated cost might differ from the actual cost when you purchase the infrastructure or instances due to discounts and promotion codes. For more information, see [Creating an estimate for Power Virtual Server resources in an IBM data center](/docs/power-iaas?topic=power-iaas-creating-an-estimate-public).
 
 
 For more information about IBM Cloud regions that can host connections from the pods for {{site.data.keyword.on-prem-fname}}, see [IBM Satellite location](/docs/power-iaas?topic=power-iaas-satellite-location-spec-private-cloud).

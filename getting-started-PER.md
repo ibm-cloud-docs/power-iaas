@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-28"
+lastupdated: "2026-11-25"
 
 keywords: PER, Power Edge Router, PER workspace, PER and Transit Gateway, IBM PER
 
@@ -201,7 +201,7 @@ From your PER workspace, you can create a virtual server instance and attach sub
 
 
 
-You must use Direct endpoints to access Cloud Object Storage (COS) from a PER-enabled workspace. For more information about available Direct endpoints, see [Regional Endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region){: external}.
+You must use Direct endpoints to access Cloud Object Storage (COS) from a PER-enabled workspace. For more information about available Direct endpoints, see [Regional Endpoints](/docs/cloud-object-storage?topic=cloud-object-storage-endpoints#endpoints-region){: external}.
 {: important}
 
 
