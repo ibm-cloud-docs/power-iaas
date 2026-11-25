@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026 
 
-lastupdated: "2026-11-03"
+lastupdated: "2026-11-25"
 
 keywords: custom image, boot image, upload image, deploy, boot volume
 
@@ -183,7 +183,7 @@ Objects are limited to 200 MB when uploaded through the console unless you use t
 
 4. Find your new service credential in the service credentials table.
 
-    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials){: external} and [Bucket permissions](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
+    To view your credential information, such as your secret and access keys, click the arrow that is next to the **View credentials** field. For more information, see [Service credentials](/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials){: external} and [Bucket permissions](/docs/cloud-object-storage?topic=cloud-object-storage-iam-bucket-permissions&interface=ui){: external}.
 
 ## Using a custom boot image to provision a new instance
 {: #upload-custom-boot}
@@ -212,5 +212,5 @@ The **Image file name** field supports the following formats: *.ova*, *.ova.gz*,
 
 1. Return to **Virtual server instances** and provision a new {{site.data.keyword.powerSys_notm}} instance. Click the arrow in the appropriate boot image tile to see your custom boot image.
 
-    To download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#download-an-object){: external} for the Cloud Object Storage CLI command.
+    To download your image at a later point, go to the **Resource List** in the {{site.data.keyword.powerSys_notm}} user interface. Once there, access your **Cloud Object Storage** workspace. In the bucket where your image is stored, select the image file that you want to download and select **Download objects**. See [Download an object](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#download-an-object){: external} for the Cloud Object Storage CLI command.
     {: tip}

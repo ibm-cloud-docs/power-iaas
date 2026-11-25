@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-23"
+lastupdated: "2026-11-25"
 
 keywords: network, network use cases, {{site.data.keyword.powerSys_notm}}, private cloud, terminology, architecture, how-to, outbound-only, bidirectional, BGP, DHCP, full linux
 
@@ -65,7 +65,7 @@ To access the external connectivity, complete the following steps:
 To create a peer interface, complete the following steps:
 
 1. Create a workspace.
-2. Open a [support ticket](https://cloud.ibm.com/docs/support?topic=support-using-avatar){: external} to create a peer interface. The support team sets up a peer interface with one of the following combinations:
+2. Open a [support ticket](/docs/support?topic=support-using-avatar){: external} to create a peer interface. The support team sets up a peer interface with one of the following combinations:
    - Layer 2
    - Layer 2 and Layer 3 with BGP route
    - Layer 2 and Layer 3 with static route
@@ -83,7 +83,7 @@ To create an external subnet, use one of the peer interfaces configured in `Step
 
 **Step 3: Deploy VMs to access external connectivity**
 
-To configure your workspace, open a [support ticket](https://cloud.ibm.com/docs/support?topic=support-using-avatar){: external}.
+To configure your workspace, open a [support ticket](/docs/support?topic=support-using-avatar){: external}.
 
 You can deploy VMs on your workspace after you receive the confirmation from the support team about the completion of configuring your workspace.
 

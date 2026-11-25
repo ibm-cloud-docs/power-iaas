@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-09-03"
+lastupdated: "2026-11-25"
 
 keywords: importing a boot image, {{site.data.keyword.powerSys_notm}} as a service, private cloud, terminology, video, how-to, boot image, import, upload boot image, storage types, regions, tier 1, tier 3
 
@@ -39,7 +39,7 @@ Boot image import and export are long-running, asynchronous operations. {{site.d
 
 Before you import a boot image, verify that you meet the following prerequisites:
 
-- Upload your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
+- Upload your boot image file to an IBM Cloud Object Storage bucket. Supported file formats are `.ova`, `.ova.gz`, `.tar`, `.tar.gz`, and `.tgz`. For more information, see [Create some buckets to store your data](/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets){: external}.
 
 - Generate Hash-based Message Authentication Code (HMAC) credentials for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
@@ -144,7 +144,7 @@ If you are using a bring-your-own-license (BYOL) SAP HANA or SAP NetWeaver image
 ## Importing a boot image by using the {{site.data.keyword.powerSys_notm}} API
 {: #api-import-image}
 
-To import a boot image from IBM Cloud Object Storage by using the API, use the [Create a cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, you must specify `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
+To import a boot image from IBM Cloud Object Storage by using the API, use the [Create a cos-image import job](/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-post){: external} method with the required properties in the request body: `imageName`, `imageFilename`, and `bucketName`. For private buckets, you must specify `accessKey` and `secretKey`, which are the HMAC access key and secret key for your COS instance. For more information, see [Using HMAC credentials](/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main).
 
 ```sh
 curl -X POST \
@@ -188,7 +188,7 @@ After you start a boot image import, the **Status** column on the **Boot images*
 
 To view the boot image import job details by using the CLI, use the [`ibmcloud pi image import-show`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-image-import-show) command.
 
-To view the boot image import job details by using the API, use the [Get detail of last cos-image import job](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
+To view the boot image import job details by using the API, use the [Get detail of last cos-image import job](/docs/apis/power-cloud#pcloud-v1-cloudinstances-cosimages-get){: external} method.
 
 ## Downloading a boot image from Cloud Object Storage
 {: #download-boot-image-cos}
@@ -201,7 +201,7 @@ To download the boot image after you import it, complete the following steps:
 
 3. Click **Download objects**.
 
-For more information about the Cloud Object Storage CLI command, see [Download an object](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
+For more information about the Cloud Object Storage CLI command, see [Download an object](/docs/cloud-object-storage?topic=cloud-object-storage-ic-cos-cli#ic-download-object){: external}.
 
 ## Related information
 {: #related-info-import}

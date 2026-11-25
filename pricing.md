@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-11-24"
+lastupdated: "2026-11-25"
 
 keywords: pricing, monthly usage, billing process, billing cycle, DLPAR, processor types, linux
 
@@ -99,7 +99,7 @@ To view the usage details at the resource level, complete the following steps:
 4. Click **View details** for a workspace. A page that lists the usage details of a selected workspace is opened.
 5. Scroll to the end of the page and click **View instance details**. A page that lists the usage details of the selected VSI is opened.
 
-For more information on the billing and usage page, see [Billing and Usage documentation](https://cloud.ibm.com/docs/account?topic=account-viewingusage&interface=ui){: external}.
+For more information on the billing and usage page, see [Billing and Usage documentation](/docs/account?topic=account-viewingusage&interface=ui){: external}.
 
 
 ### IBM cloud resource names
@@ -113,7 +113,7 @@ When you create a resource, {{site.data.keyword.cloud_notm}} assigns a CRN to th
 
 When you delete a workspace, the resources that are associated with the workspace are deleted before the workspace is deleted. If you use a dedicated host that is shared with a secondary workspace, remove the secondary workspace resources (VSIs) from the dedicated host, then delete the dedicated host workspace.
 
-For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](https://cloud.ibm.com/docs/account?topic=account-crn).
+For more information about {{site.data.keyword.cloud_notm}} CRNs, see [Cloud Resource Names](/docs/account?topic=account-crn).
 
 
 

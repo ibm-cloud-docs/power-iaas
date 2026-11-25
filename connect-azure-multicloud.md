@@ -3,7 +3,7 @@
 copyright:
   years: 2024, 2026 
 
-lastupdated: "2026-04-10"
+lastupdated: "2026-11-25"
 
 keywords: Microsoft Azure, Power-iaas multi cloud, PowerVS Azure, Megaport and Azure, megaport
 
@@ -104,7 +104,7 @@ This solution uses the following networks as shown in the table:
 
 To establish private connectivity by using cloud connectivity providers, you need to obtain the IBM Cloud Account ID. This 32-character unique identifier identifies your IBM Cloud account that owns the IBM Cloud Direct Link service.
 
-To obtain your IBM Cloud Account ID, follow the instructions that are provided in the [IBM Cloud Docs pages](https://cloud.ibm.com/docs/account?topic=account-accountfaqs#account-details).
+To obtain your IBM Cloud Account ID, follow the instructions that are provided in the [IBM Cloud Docs pages](/docs/account?topic=account-accountfaqs#account-details).
 
 
 
@@ -136,7 +136,7 @@ For more information, see IBM Cloud docs pages [how to configure networking](/do
 Transit gateway provides routed L3 private interconnectivity to your {{site.data.keyword.powerSys_notm}} instances to other IBM Cloud IaaS platforms or your private networks via Transit Gateway that is attached to IBM Cloud Direct Link. To provision a Transit Gateway, you need to:
    - Create an IBM Cloud Transit Gateway Instance
 
-For more information on how to create a Transit Gateway, see the [IBM Cloud Docs pages](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui).
+For more information on how to create a Transit Gateway, see the [IBM Cloud Docs pages](/docs/transit-gateway?topic=transit-gateway-ordering-transit-gateway&interface=ui).
 
 #### Adding {{site.data.keyword.powerSys_notm}} environment to Transit gateway
 {: #add-tgw-pvs}
@@ -148,7 +148,7 @@ To configure a Transit Gateway, you need to:
 - Create a connection between TGW and your IBM {{site.data.keyword.powerSys_notm}} workspace instance
 - Configure prefix filtering on the {{site.data.keyword.powerSys_notm}} Transit Gateway connection
 
-For more information on how to add a {{site.data.keyword.powerSys_notm}} connection to your Transit Gateway, see [IBM Cloud Docs pages](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-adding-connections&interface=ui).
+For more information on how to add a {{site.data.keyword.powerSys_notm}} connection to your Transit Gateway, see [IBM Cloud Docs pages](/docs/transit-gateway?topic=transit-gateway-adding-connections&interface=ui).
 
 
 ## Configuring hybrid platform connectivity with Megaport
@@ -205,7 +205,7 @@ To create an MCR, you need to make a few decisions for the connectivity. The fol
 
 For a detailed explanation of the steps required, refer to [Megaport documentation](https://docs.megaport.com/mcr/creating-mcr/).
 
-To find details for IBM Cloud Direct Link connectivity locations, see the [IBM Cloud Docs pages](https://cloud.ibm.com/docs/dl?topic=dl-locations#connect-locations).
+To find details for IBM Cloud Direct Link connectivity locations, see the [IBM Cloud Docs pages](/docs/dl?topic=dl-locations#connect-locations).
 
 ### Creating a connection from MCR to IBM Cloud Direct Link
 {: #create-connection-mcr}
@@ -223,7 +223,7 @@ Redundancy
 :   The megaport supports redundant connections. In each of the Direct Link peering locations, Megaport established two diverse Direct Links with IBM Cloud. In the [Megaport Portal](https://portal.megaport.com/){: external}, the Ports are noted as Port 1 and Port 2. A redundant IBM Cloud Direct Link configuration requires two or more VXCs.
 
 Local and Global routing options
-:   The Local Routing option provides access to data centers with the same three-letter prefix as the Point of Presence (such as DAL, AMS, and MEL). The Global Routing option is required as an add-on to reach data centers outside of those locations. For more information on local and global routing options, see the [IBM cloud documentation](https://cloud.ibm.com/docs/direct-link).
+:   The Local Routing option provides access to data centers with the same three-letter prefix as the Point of Presence (such as DAL, AMS, and MEL). The Global Routing option is required as an add-on to reach data centers outside of those locations. For more information on local and global routing options, see the [IBM cloud documentation](/docs/direct-link).
 
 Port speed
 :    Port speed options for IBM Direct Link Connect are 50 Mbps, 100 Mbps, 200 Mbps, 500 Mbps, 1 Gbps, 2 Gbps, or 5 Gbps.
@@ -329,11 +329,11 @@ In some cases, you might need to filter some routes to be advertised to Megaport
 
 For route filtering, you can use either use Transit Gateway’s route filtering capabilities or apply route filtering on Direct Link, depending on where you want to filter the routes. With Transit Gateway, you can only filter learned prefixes (import) from the connections. With Direct link, you can apply route filters for both learned (import) and advertisements (export). You can also attach GRE tunnels to a Transit Gateway. With GRE tunnels, the route filtering is done with BGP from the connecting router/gateway.
 
-For more information on route-filtering, see the IBM Cloud Docs pages for [Transit Gateway](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-adding-prefix-filters&interface=ui){: external} and [Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-filter-routes&interface=ui){: external}.
+For more information on route-filtering, see the IBM Cloud Docs pages for [Transit Gateway](/docs/transit-gateway?topic=transit-gateway-adding-prefix-filters&interface=ui){: external} and [Direct Link](/docs/dl?topic=dl-filter-routes&interface=ui){: external}.
 
 For AS-prepends, you can use Direct Link’s AS-prepend capabilities to alter the length of the learned (import) or advertised (export) AS-paths. When using GRE tunnels, it is recommended to connect to all Transit Gateway routers in the multizone region, and you might want to control your preferred GRE tunnels with BGP metrics/attributes. With GRE tunnels, the AS-prepends are done with BGP from the connecting router/gateway.
 
-For more information AS-prepending, see the following IBM Cloud Docs pages for [Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-prepend-as-paths&interface=ui){: external}. For GRE tunnels, see the [Transit Gateway pages](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-helpful-tips#gre-considerations){: external} in IBM Cloud Docs.
+For more information AS-prepending, see the following IBM Cloud Docs pages for [Direct Link](/docs/dl?topic=dl-prepend-as-paths&interface=ui){: external}. For GRE tunnels, see the [Transit Gateway pages](/docs/transit-gateway?topic=transit-gateway-helpful-tips#gre-considerations){: external} in IBM Cloud Docs.
 
 ## Creating ExpressRoute through Microsoft Azure portal
 {: #expressroute}

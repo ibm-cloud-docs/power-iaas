@@ -3,7 +3,7 @@
 copyright:
   years: 2021, 2026 
 
-lastupdated: "2026-07-14"
+lastupdated: "2026-11-25"
 
 keywords: VPN connections, IKE policies, IPsec policies, vpnaas, VPC VPN, VPN as a service
 
@@ -108,7 +108,7 @@ To use the VPC VPN service, you must switch from Power Virtual Server VPN as a s
          1.  Select the values for VPN server, VPN gateway, and transit gateway.
          2.  Select **Advertise to** under Transit Gateway.
 
-      For more information, see [Getting started with Virtual Private Cloud (VPC)](https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started){: external}.
+      For more information, see [Getting started with Virtual Private Cloud (VPC)](/docs/vpc?topic=vpc-getting-started){: external}.
 
 2. Create a VPN connection between the VPC and the remote connection of the existing VPNaaS. Complete the following steps:
 
@@ -120,13 +120,13 @@ To use the VPC VPN service, you must switch from Power Virtual Server VPN as a s
    - Subnets for the remote VPN, VPC, and workspace must be distinct.
    - Subnets cannot be shared or overlapped.
 
-   For more information about VPN options, see [About site-to-site VPN gateways](https://cloud.ibm.com/docs/vpc?topic=vpc-using-vpn){: external}.
+   For more information about VPN options, see [About site-to-site VPN gateways](/docs/vpc?topic=vpc-using-vpn){: external}.
 
 3. Create a transit gateway by completing the following steps:
    1. Add VPC to Transit Gateway.
    2. Click **Create** under **Routing tables** to create a routing table. You can see the list of VPC, CIDR, and the CIDR for the remote VPN.
 
-   For more information about transit gateways, see [Getting started with IBM Cloud Transit Gateway](https://cloud.ibm.com/docs/transit-gateway?topic=transit-gateway-getting-started){: external}.
+   For more information about transit gateways, see [Getting started with IBM Cloud Transit Gateway](/docs/transit-gateway?topic=transit-gateway-getting-started){: external}.
 
    Consider the following assumptions and start the switch from VPNaas to VPC VPN:
    * The connectivity between a virtual server on the VPC and a system on the remote VPN is working.

@@ -1,9 +1,9 @@
 ---
 
 copyright:
-  years: 2025, 2026 
+  years: 2025, 2026
 
-lastupdated: "2026-11-11"
+lastupdated: "2026-11-25"
 
 keywords: Global Replication Services, GRS, configure GRS, pricing for GRS, GRS APIs,
 
@@ -16,6 +16,7 @@ subcollection: power-iaas
 
 # {{site.data.keyword.powerSysFull}} Global Replication Services
 {: #getting-started-GRS}
+
 ---
 
 
@@ -27,10 +28,7 @@ subcollection: power-iaas
 
 ---
 
-
-
-
-{{site.data.keyword.powerSysFull}} supports Global Replication Services (GRS). You can use GRS that provides volume replication services based on Storage Area Network (SAN) as the foundation for building disaster recovery (DR) solutions. GRS is based on an asynchronous replication technology called IBM FlashSystem Global Mirror Change Volume (GMCV).
+{{site.data.keyword.powerSysFull}} supports Global Replication Services (GRS). You can use GRS that provides volume replication services based on Storage Area Network (SAN) as the foundation for building disaster recovery (DR) solutions. GRS is based on an asynchronous replication technology called IBM FlashSystem&reg; Global Mirror Change Volume (GMCV).
 
 You can create a replication-enabled volume from the GRS-enabled location. The replication-enabled volume is considered as the primary volume. The replicated volume on the secondary location is known as the auxiliary volume.
 
@@ -45,31 +43,32 @@ GRS on {{site.data.keyword.powerSys_notm}} has the following benefits:
 - Removes the dedicated networks that are overpriced for replication and avoids bandwidth upgrades.
 
 
-Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers in which storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both the directions.
+Enabling GRS in the IBM {{site.data.keyword.powerSys_notm}} allows asynchronous replication of data between two IBM Cloud regional data centers in which storage replication is enabled. The data center pairs are fixed and mapped in a one-to-one relationship mode in both the directions from and to the two IBM Cloud regional data centers.
 
 
 
-## Terms and definitions
+## GRS terms and definitions
 {: #GRS-terminology}
 
 In the following table, the terms that are used throughout the document are defined.
 
-| Term                            | Definition                                                                                                                                                                 |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Primary location                | Location in which the volume is created.                                                                                                                                   |
-| Secondary location              | Location in which the auxiliary volume for replication is created.                                                                                                         |
-| Primary volume                  | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.          |
-| Auxiliary volume                | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible and managed by IBM {{site.data.keyword.powerSys_notm}}. |
-| IBM cloud resource names (CRNs) | Identifiers that are assigned to uniquely identify resources in IBM Cloud.                                                                                                 |
+| Term                                  | Definition                                                                                                                                                                       |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Primary location                      | Location in which the volume is created.                                                                                                                                         |
+| Secondary location                    | Location in which the auxiliary volume for replication is created.                                                                                                               |
+| Primary volume                        | Initial instance of the replication volume in the primary location. \n This volume is visible to the user and managed by IBM {{site.data.keyword.powerSys_notm}}.                |
+| Storage replication consistency group | Group that stores the consistent copy for the volumes in the volume group.                                                                                                       |
+| Auxiliary volume                      | Instance of the replicated volume in the secondary location. When the auxiliary volume is onboarded, it is visible to and is managed by IBM {{site.data.keyword.powerSys_notm}}. |
+| IBM cloud resource names (CRNs)       | Identifiers that are assigned to uniquely identify resources in IBM Cloud.                                                                                                       |
 {: class="simple-table"}
 {: caption="GRS terms and definitions" caption-side="bottom"}
 
 
-## GRS in the [{{site.data.keyword.on-prem}}]{: tag-red}
+## GRS in a [{{site.data.keyword.on-prem}}]{: tag-red}
 {: #grs-on-prem}
 
 
-Enabling GRS in the {{site.data.keyword.on-prem-fname}} enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} provides.
+Enabling GRS in a {{site.data.keyword.on-prem-fname}} environment enables asynchronous replication of data between the primary location infrastructure and the secondary location infrastructure. The two infrastructure locations have the identical set of capabilities that {{site.data.keyword.off-prem-fname}} in a {{site.data.keyword.off-prem}} provides.
 
 The network configuration between the primary location and the secondary location for replication includes the following prerequisites:
 
@@ -82,6 +81,8 @@ When the defined RPO exceeds more than 8 hours, the IBM operations team alerts y
 {: note}
 
 Replication is not supported between the VMs in the {{site.data.keyword.off-prem-fname}} in {{site.data.keyword.off-prem}} environment and the {{site.data.keyword.on-prem-fname}} in {{site.data.keyword.on-prem}} environment.
+
+
 
 
 
@@ -103,7 +104,6 @@ Part numbers are used for calculating the cost of GRS based on the storage tier 
 To maintain the required performance and predictable I/O response times when you use GRS, it is best to limit each volume group to 30 volumes or fewer. As the number of replicated volumes grows, the storage system must coordinate a consistent set of changes across all volumes. The more volumes involved in this coordination, the greater the impact on response times. This additional synchronization can introduce latency and affect application responsiveness.
 
 The ideal number of volumes depends on your workload characteristics, including the operating system, I/O intensity, and the tolerance of your environment for increased response times.
-
 
 
 
@@ -135,13 +135,12 @@ The following table shows the location pairs that support replication.
 {: class="simple-table"}
 {: caption="The {{site.data.keyword.powerSys_notm}} region pairs that are replication-enabled" caption-side="bottom"}
 
-
 ### Listing the {{site.data.keyword.powerSys_notm}} regions that support GRS by using API or CLI commands
 {: #location-api-cli}
 
 To get a list of {{site.data.keyword.powerSys_notm}} regions that are replication-enabled, use the following API or CLI commands:
 
-- **API**: [Get the disaster recovery site details for the current location](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-locations-disasterrecovery-get){: external}
+- **API**: [Get the disaster recovery site details for the current location](/docs/apis/power-cloud#pcloud-locations-disasterrecovery-get){: external}
 
 - **CLI**: [`ibmcloud pi disaster-recovery`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-disaster-recovery){: external}. Set the `--all-regions` flag as `true`.
 
@@ -171,12 +170,12 @@ To verify whether two data centers are a location pair that support replication,
 
 ```
 
-## {{site.data.keyword.powerSys_notm}} storage pools that support GRS
+## Identifying the {{site.data.keyword.powerSys_notm}} storage pools that support GRS
 {: storage-pool-grs}
 
 You can allocate replication-enabled volumes only from storage pools that support replication. To identify the storage pools that support replication, use the following API or CLI commands:
 
-- **API**: [Storage capacity for all available storage pools in a region](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-storagecapacity-pools-getall){: external}
+- **API**: [Storage capacity for all available storage pools in a region](/docs/apis/power-cloud#pcloud-storagecapacity-pools-getall){: external}
 
 - **CLI**: [`ibmcloud pi storage-pools`](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-storage-pools){: external}
 
@@ -205,55 +204,57 @@ When you onboard a volume on the secondary location, if the volume group is not 
 
 
 
-A volume group is used to enable, disable, and manage a replication-enabled consistency group in storage volumes. By using a consistency group, you can perform operations on multiple volumes instead of managing each volume individually. The consistency group has a `state` property that indicates the state of the `copy` operation of the volumes in the group. Refer to the following table that lists different states of the replication-enabled consistency group in storage volumes.
+A volume group is used to enable, disable, and manage a replication-enabled consistency group in storage volumes. By using a consistency group, you can perform operations on multiple volumes instead of managing each volume individually. The consistency group in storage volumes has a `state` property that indicates the state of the `copy` operation of the volumes in the group. The following table provides different states of the `copy` operation of the replication-enabled consistency group in storage volumes.
 
-| State                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `inconsistent_stopped`    | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `inconsistent_copying`    | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation is started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `consistent_copying`      | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume can become outdated and so the data must be updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes.  \n The `consistent_copying` progress bar is an indicator to show the progress of copy operation. One cycle period of copy operation is expected to be between the range of 1-100%. In some cases, the copy operation can complete the activity before the progress bar reaches the maximum value of 100%.  |
-| `consistent_stopped`      | The auxiliary volumes contain a consistent copy of the primary volumes, but can be outdated with the data on the primary volumes. The state indicates that the consistency group that was in a `consistent_copying` state was stopped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `idling`                  | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `idling_disconnected`     | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `consistent_disconnected` | This state indicates that the volumes in the consistency groups are operating in the non-primary role and you cannot perform `read` or `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `empty`                   | This state indicates that the volumes in the consistency group do not have any relationship with each other.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+| State                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `inconsistent_stopped`    | The primary volumes are accessible for `read` and `write` I/O operations but the auxiliary volumes are not accessible. This state indicates that copying the data from primary to auxiliary volume has stopped. Start the `copy` operation on the auxiliary volume to make it consistent with primary volume.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `inconsistent_copying`    | The primary volumes are accessible for `read` and `write` I/O but the auxiliary volumes are not accessible and the `copy` operation has started. This state indicates that the `copy` operation has started on the consistency group that was previously in the `inconsistent_stopped` state.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `consistent_copying`      | The primary volumes are accessible for `read` and `write` I/O operation. The auxiliary volumes contain a consistent copy of the data on the primary volumes. The data on the auxiliary volume is outdated so it is updated with the data on the primary volume. This state indicates that copying is in progress and auxiliary volumes are updated with the current copy of the primary volumes.  \n The `consistent_copying` progress bar is an indicator to show the progress of copy operation. One cycle period of copy operation is expected to be between the range of 1-100%. In some cases, the copy operation can complete the activity before the progress bar reaches the maximum value of 100%.  |
+| `consistent_stopped`      | The auxiliary volumes contain a consistent copy of the primary volumes. After sometime, the data on the auxiliary volume becomes outdated with the data on the primary volume. The state indicates that the `consistent_copying` state of the primary volume to auxiliary volume has stopped.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `idling`                  | The primary and auxiliary volumes are operating in the primary role and are accessible for `read` and `write` I/O operations. The `idling` state indicates that the data from the primary or auxiliary volumes is not copied to the primary or auxiliary volumes in the replication pair because the replication process is disabled.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `idling_disconnected`     | This state indicates that the volumes in the consistency group are operating in the primary role and can accept `read` and `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `consistent_disconnected` | This state indicates that no volume in the consistency group is marked as primary volume so you cannot perform `read` or `write` I/O operations.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `empty`                   | This state indicates that the volumes in the consistency group do not have any relationship with each other.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 {: class="simple-table"}
-{: caption="Different states of storage replication consistency group and their descriptions." caption-side="bottom"}
+{: caption="States of storage replication consistency group" caption-side="bottom"}
 
-If you perform any operation on a volume group at one location, it affects the associated volume group on the other location. For example, consider that a volume group is stopped on a primary location. After sometime, the associated volume group on the secondary location is updated to reflect the replication status of the pair in the volume group. In this case, the `replicationStatus` field displays the state of the volume group as `disabled` on both primary and secondary locations.
+If you perform any operation on a volume group in one location, it affects the associated volume group on the other location. For example, consider that an active volume group is set to `disabled` on a primary location. After sometime, the associated volume group on the secondary location is updated to reflect the replication status of the pair in the volume group. In this case, the `replicationStatus` field displays the state of the volume group as `disabled` on both primary and secondary locations.
 
-Before you perform any operation on a volume group at one location, confirm the replication status of both the volume groups at the primary and secondary locations.
+Before you perform any operation on a volume group at one location, confirm that the replication status is not set for both the volume groups in the primary and secondary locations.
 
-You can group the replication-enabled volumes that are similar in function. For example, volumes that are related to a specific workload can be grouped under one volume group. When additional replication-enabled volumes are created, you can add a volume to an existing volume group with similar volumes based on the function. You can create a new volume group for the volumes if their function is not same as the existing volumes.
-
-
+You can group the replication-enabled volumes that are similar in function. For example, volumes that are related to a specific workload can be grouped under one volume group. When additional replication-enabled volumes are created, you can add a volume to an existing volume group with volumes that are similar in function. You can create a volume group for the volumes if their function is not the same as the existing volumes.
 
 
-## Preparation for disaster recovery
+
+
+## Preparing for disaster recovery
 {: #dr-prep}
 
-Consider that you have virtual server instances with data volumes that are running workloads. If a failure occurs and if the data volumes are replicated, you can recover the data volumes from the secondary location. To enable the volume replication service, complete the following actions:
+Consider virtual server instances that contain the volumes with active workloads. When a failure occurs and the volumes are replicated, you can recover the volumes from the secondary location. To enable the volume replication service, complete the following actions:
 
-- [Actions on the primary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site)
-- [Actions on the secondary site](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site)
+- [Enabling volume replication on the primary location](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-primary-site)
+- [Enabling volume replication on the secondary location](/docs/power-iaas?topic=power-iaas-getting-started-GRS#configure-secondary-site)
 
-You must complete the actions on the primary site before you proceed with the actions on the secondary site.
+You must complete the actions on the primary location before you proceed with the actions on the secondary location.
 {: note}
 
-
-### Prerequisites
+### Prerequisites for disaster recovery
 {: #prereq-prep-dr}
 
 Complete the following prerequisites before you prepare a replication-enabled volume for disaster recovery (DR):
 
-- Use the same IBM Cloud account ID to create two workspaces, each in the primary and secondary locations that supports GRS
-- Ensure that two workspaces have different CRNs
-- Do not define additional properties for the workspaces to denote that they contain replication-enabled volumes
+- Use the same IBM Cloud account ID to create two workspaces, one in the primary location and one in the secondary locations that supports GRS.
+- Ensure that the two workspaces have different CRNs.
+- Do not define the properties for the workspaces to denote that they contain replication-enabled volumes.
 
-### Actions on the primary site
+
+
+### Enabling volume replication on the primary location
 {: #configure-primary-site}
 
-To enable volume replication on the primary site, complete the following steps:
+To enable replication of the volume on the primary location, complete the following steps:
 
 1. [Create a volume for replication](#create-vol-rep)
 2. [Verify the replication status of the volume](#veri-vol-rep)
@@ -264,9 +265,9 @@ To enable volume replication on the primary site, complete the following steps:
 #### Creating a volume for replication
 {: #create-vol-rep}
 
-Use {{site.data.keyword.powerSys_notm}} interface to create a virtual server instance with volumes that support replication.
+Use the {{site.data.keyword.powerSys_notm}} interface to create a virtual server instance with volumes that support replication.
 
-The boot volumes of virtual server instances that you create are always set to non-replication-enabled. You can provide a combination of replication- and non-replication-enabled volumes for a virtual server instance if they belong to the same storage pool. All the affinity policies that are related to a storage pool are valid for replication-enabled volumes. For more information, see [Configuring affinity policies](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#affinity-pol).
+The boot volumes of virtual server instances that you create are always set to non-replication-enabled that is the volumes that are not replication-enabled. You can provide a combination of replication and non-replication-enabled volumes for a virtual server instance if they belong to the same storage pool. All the affinity policies that are related to a storage pool are valid for replication-enabled volumes. For more information, see [Configuring affinity policies](/docs/power-iaas?topic=power-iaas-creating-power-virtual-server#affinity-pol).
 {: note}
 
 You can also create a replication-enabled volume by using the following API or CLI commands:
@@ -275,9 +276,9 @@ You can also create a replication-enabled volume by using the following API or C
 - **CLI**: [ibmcloud pi volume create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-create).
 
 Set the values for the following parameters:
--  `VOLUME_ID`: Set the value to the primary volume ID
--  `--size`: Set the unit of measurement to gigabytes (GB)
--  `replicationEnabled`: Set the flag to `True`
+-  `VOLUME_ID`: Set the value to the primary volume ID.
+-  `--size`: Set the unit of measurement to gigabytes (GB).
+-  `replicationEnabled`: Set the flag to `True`.
 
 For more information about the replication properties of a volume, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs#convert-to-replication-vol).
 
@@ -285,32 +286,38 @@ For more information about the replication properties of a volume, see [FAQ](/do
 #### Verifying the replication status of a volume
 {: #veri-vol-rep}
 
-After you create a replication-enabled volume, retrieve the details of the volume to verify the replication status of the volume. The `replicationEnabled` property must be set to `true`. The replication-enabled status might not be enabled immediately as the creation of the volume is asynchronous. Continue to monitor the state of the volume. If the volume is in the `available` state and the replication-enabled status is not yet set to `true`, update the volume to set the replication-enabled status to `true`. For more information, see [Updating a volume to be replication-enabled](#update-vol-rep-enabled).
+After you create a replication-enabled volume, get the details of the volume to verify the replication status of the volume. Complete the following steps to verify the replication status of the volume:
+
+1. Confirm that the `replicationEnabled` property is set to `true`. The replication-enabled status might not be enabled immediately as the creation of the volume is asynchronous.
+2. Continue to monitor the state of the volume.
+3. Update the volume to set the replication-enabled status to `true` if the volume is in the `available` state and the replication-enabled status is not yet set to `true`.
+
+For more information, see [Updating a volume to be replication-enabled](#update-vol-rep-enabled).
 
 Use the following API and CLI commands to get the replication-status of a volume:
 
 - **API**: [List all volumes for this cloud instance](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-getall). Set the value of the `VOLUME_ID` parameter to the primary volume ID.
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get). Set the value of the `VOLUME_ID` parameter to the primary volume ID.
 
-Refer to the following table for the properties of a replication-enabled volume.
+The following table provides the properties of a replication-enabled volume that indicates the replication-status of the volume.
 
-| Property               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `consistencyGroupName` | Indicates the name of the consistency group when a volume is part of a volume group.                                                                                                                                                                                                                                                                                                                                                                                           |
-| `masterVolumeName`     | Indicates the name of the `master` volume in the storage. The storage controller auto-generates this name.                                                                                                                                                                                                                                                                                                                                                                     |
-| `mirroringState`       | Indicates the mirrored state of the replication-enabled volume. This state is related to the current state of replication between the primary and the auxiliary volumes. For more information, see [Status of volume groups](#vol-grop-status-table).                                                                                                                                                                                                                          |
-| `outOfBandDeleted`     | Indicates the status of the replication-enabled volume when deleted. If the replication status is `disabled` on the primary volume and the auxiliary volume on the secondary location is not deleted within 24 hours, the status of the `outOfBandDeleted` property is set to `true`. In this state, you cannot perform any actions on the primary volume. When primary volumes are in this state, they are not billed.                                                        |
-| `primaryRole`          | Indicates the active volume in the primary and auxiliary volume. If this property value is set to `master`, the primary volume is the active volume in which you can perform I/O operations. If this property value is set to `aux`, the auxiliary volume is the active volume in which you can perform I/O operations. An inactive volume does not allow I/O operations to be performed on it. For a replication-enabled volume pair, the value of this property is the same. |
-| `replicationEnabled`   | Indicates the replication status of a volume. Set to `True` if the volume is replication-enabled.                                                                                                                                                                                                                                                                                                                                                                              |
-| `replicationStatus`    | Returns the value of the replication status for a volume. If the returned value is `enabled`, the replication is active for the volume. If the returned value is `disabled`, the replication is inactive for the volume. If the returned value is `not-capable`, the volume is not replication-enabled and not associated with another volume on a different location.                                                                                                         |
+| Property               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consistencyGroupName` | Indicates the name of the consistency group when a volume is part of a volume group.                                                                                                                                                                                                                                                                                                                                                                                              |
+| `masterVolumeName`     | Indicates the name of the `master` volume in the storage. The storage controller auto-generates this name.                                                                                                                                                                                                                                                                                                                                                                        |
+| `mirroringState`       | Indicates the mirrored state of the replication-enabled volume. This state is related to the current state of replication between the primary and the auxiliary volumes. For more information, see [Status of volume groups](#vol-grop-status-table).                                                                                                                                                                                                                             |
+| `outOfBandDeleted`     | Indicates the status of the replication-enabled volume when the volume is deleted. If the replication status is `disabled` on the primary volume and the auxiliary volume on the secondary location is not deleted within 24 hours, the status of the `outOfBandDeleted` property is set to `true`. In this state, you cannot perform any actions on the primary volume. When primary volumes are in the `outOfBandDeleted` state, they are not billed.                           |
+| `primaryRole`          | Indicates the active volume in the primary and auxiliary volume. If this property value is set to `master`, the primary volume is the active volume in which you can perform I/O operations. If this property value is set to `aux`, the auxiliary volume is the active volume in which you can perform I/O operations. An inactive volume does not allow I/O operations to be performed. For a replication-enabled volume pair, the value of `primaryRole` property is the same. |
+| `replicationEnabled`   | Indicates the replication status of a volume. Set the status to `True` if the volume is replication-enabled.                                                                                                                                                                                                                                                                                                                                                                      |
+| `replicationStatus`    | Returns the value of the replication status for a volume. If the returned value is `enabled`, the replication is active for the volume. If the returned value is `disabled`, the replication is inactive for the volume. If the returned value is `not-capable`, the volume is not replication-enabled and the volume is not associated with another volume on a different location.                                                                                              |
 {: class="simple-table"}
-{: caption="Properties of replication-enabled volume and their descriptions." caption-side="bottom"}
+{: caption="Properties of replication-enabled volumes" caption-side="bottom"}
 
 
 #### Creating a volume group
 {: #create-vol-grp-prime}
 
-Create a volume group (consistency group) to add replication-enabled volumes to it. You can create a volume group by using the following API or CLI commands:
+Create a consistency group to add replication-enabled volumes to it. You can create a consistency group by using the following API or CLI commands:
 
 - **API**: [create a new volume group](/docs/apis/power-cloud#pcloud-volumegroups-post)
 - **CLI**: [ibmcloud pi volume-group create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-create)
@@ -323,27 +330,27 @@ A replication-enabled volume can be attached to a volume group when you create i
 #### Verifying the status of the volume group
 {: #verify-vol-grp-stat}
 
-Verify that the volume group is created successfully and it is in a `consistent_copying` state by using the following API or CLI commands:
+Verify that the volume group is created successfully and it is in the `consistent_copying` state by using the following API or CLI commands:
 
 - **API**: [get storage details of the volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get)
 - **CLI**: [ibmcloud pi volume-group storage-details](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details)
 
 Set the value of the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Provide the primary volume group IDs to get the details.
 
-Refer to the following table for the properties that you can use with the API and CLI commands for verifying the status of the volume group and its definitions.
+The following table provides the properties that you can use with the API and CLI commands to verify the status of the volume group and its definitions.
 
-| Property               | Description                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `consistencyGroupName` | Indicates the name of the replication consistency group that is created at the storage level. The name is same as the replication consistency group on the secondary location. The storage controller creates the name and not defined by the user.                                                                                                                     |
-| `auxiliary`            | Indicates whether the volume group is for the auxiliary volumes or for the primary volumes. If the volume group is for the auxiliary volumes on the secondary location, the returned value is `true`. If the volume group is for the primary volumes on the primary location, the returned value is `false`.                                                            |
-| `name`                 | Indicates the name of the volume group that you provide when you created it in the primary location. In the secondary location, the name property is same as the `consistencyGroupName` property.                                                                                                                                                                       |
-| `volumeIDs`            | Lists the volume IDs that are part of the volume group.                                                                                                                                                                                                                                                                                                                 |
-| `statusDescription`    | Assigned with a status, if any failure occurs when you add volumes to a volume group.                                                                                                                                                                                                                                                                                   |
-| `status`               | Indicates one of the following volume group states: \n - `available` - ready to be managed\n - `error` - encountered an error. Volume group is not manageable in this state and you can only perform a `delete` operation\n - `updating` - `update` operation on the volume group is in progress\n - `creating` - `create` operation on the volume group is in progress |
-| `replicationStatus`    | Indicates that replication status is active for the volume group. If this property value is set to `disabled`, replication is not active for the volume group.                                                                                                                                                                                                          |
-| `state`                | Indicates the status of the consistency group.                                                                                                                                                                                                                                                                                                                          |
+| Property               | Description                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `consistencyGroupName` | Indicates the name of the replication consistency group that is created at the storage level. The name is the name of the replication consistency group on the secondary location. The storage controller creates the name and is not defined by the user.                                                                                                                  |
+| `auxiliary`            | Indicates whether the volume group is for the auxiliary volumes or for the primary volumes. If the volume group is for the auxiliary volumes on the secondary location, the returned value is `true`. If the volume group is for the primary volumes on the primary location, the returned value is `false`.                                                                |
+| `name`                 | Indicates the name of the volume group that you provide when you create the volume in the primary location. In the secondary location, the name property is same as the `consistencyGroupName` property.                                                                                                                                                                    |
+| `volumeIDs`            | Lists the volume IDs that are a part of the volume group.                                                                                                                                                                                                                                                                                                                   |
+| `statusDescription`    | When you add volumes to a volume group, if the operation fails, a status is assigned to the volume group.                                                                                                                                                                                                                                                                   |
+| `status`               | Indicates one of the following volume group states: \n - `available`: Ready to be managed.\n - `error`: Encountered an error. You cannot manage the volume group in this state and you can only perform a `delete` operation. \n - `updating`: `update` operation on the volume group is in progress.\n - `creating`: `create` operation on the volume group is in progress. |
+| `replicationStatus`    | Indicates that the replication status is active for the volume group. If this property value is set to `disabled`, replication is not active for the volume group.                                                                                                                                                                                                          |
+| `state`                | Indicates the status of the consistency group.                                                                                                                                                                                                                                                                                                                              |
 {: class="simple-table"}
-{: caption="Properties of a volume group and their descriptions." caption-side="bottom"}
+{: caption="Properties of a volume group" caption-side="bottom"}
 {: #vol-grop-status-table}
 
 The status of the volume group changes to `consistent_copying` state when the primary volume data is replicated to the auxiliary volume on the secondary location and is ready to continue the replication process. The {{site.data.keyword.powerSys_notm}} manages the auxiliary volume after it is onboarded to the secondary location.
@@ -351,23 +358,23 @@ The status of the volume group changes to `consistent_copying` state when the pr
 You must have the following information before you start onboarding the auxiliary volumes on the secondary location:
 
 - CRN of the workspace in which the primary volumes are added
-- Auxiliary volume names associated with the primary volumes that are replication-enabled. You can get the auxiliary volume names by querying the details of the primary volumes.
+- Auxiliary volume names that are associated with the primary volumes and are replication-enabled. You can get the auxiliary volume names by using the API or CLI to get the details of the primary volumes.
 
 After you collect the CRN and auxiliary volume names, you can switch to the secondary location and the workspace in which the auxiliary volumes are located.
 
-The workspace must be part of the same IBM Cloud account ID as the primary location workspace.
+The workspace must be a part of the same IBM Cloud account ID as the primary location workspace.
 {: note}
 
-### Actions on the secondary location
+### Enabling volume replication on the secondary location
 {: #configure-secondary-site}
 
-Complete the following actions to onboard auxiliary volumes on the secondary location:
+Complete the following actions to onboard the auxiliary volumes on the secondary location:
 
 - [Onboarding an auxiliary volume](#onboard-aux-vol)
 - [Verifying the auxiliary volume for replication](#verify-aux-vol)
 
 #### Onboarding an auxiliary volume
-{: #onboard-aux-vol}
+{: onboard-aux-vol}
 
 To manage the replicated volume on a remote location and perform volume recovery, onboard an auxiliary volume. For {{site.data.keyword.powerSys_notm}} to manage the auxiliary volume, onboard the auxiliary volume to the secondary location.
 
@@ -376,13 +383,13 @@ You must have the `editor` role access on the source and target {{site.data.keyw
 
 Obtain the following information from the primary location to request for onboarding the auxiliary volumes on the secondary location:
 
-- Have editor role access on both the primary and the secondary location workspaces
-- Maintain the same IBM Cloud account ID on both primary and secondary location workspaces
-- Fetch the cloud resource name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance in which the primary volumes are located (primary location)
-- Fetch the auxiliary volume names from the **auxVolumeName** field of primary volumes in the primary location for onboarding
+- Must have editor role access on both the primary and the secondary location workspaces
+- Maintain the same IBM Cloud account ID on the primary and secondary location workspaces
+- Get the cloud resource name (CRN) of the {{site.data.keyword.powerSys_notm}} workspace instance in which the primary volumes are located (primary location)
+- Get the auxiliary volume names from the **auxVolumeName** field of primary volumes in the primary location for onboarding
 
 
-When onboarding an auxiliary volume, the following conditions apply:
+When you onboard an auxiliary volume, the following conditions apply:
 
 - If a volume group of the auxiliary volume exists in the secondary location, the auxiliary volume is added to it.
 - If a volume group of the auxiliary volume does not exist in the secondary location, the onboarding operation automatically creates a volume group. The volume group is associated with the auxiliary volume on the secondary location.
@@ -392,14 +399,14 @@ The onboarded auxiliary volume is added to this volume group. The volume group t
 Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the value of the workspace to the service workspace in which the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
 
-To onboard the auxiliary volume on the secondary site, use the following API or CLI commands:
+To onboard the auxiliary volume on the secondary location, use the following API or CLI commands:
 
 - **API**: [onboard auxiliary volume](/docs/apis/power-cloud#pcloud-volume-onboarding-post)
 - **CLI**: [ibmcloud pi volume onboarding create](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-create)
 
 Specify the following parameters:
-- source CRN: Specify the CRN parameter of the workspace in which the primary volume is located
-- auxiliary volume: Specify the auxiliary volume name
+- `source CRN`: Specify the CRN parameter of the workspace in which the primary volume is located
+- `auxiliary volume`: Specify the auxiliary volume name
 
 #### Verifying the replication status of the auxiliary volume
 {: #verify-aux-vol}
@@ -409,19 +416,18 @@ An onboarding task ID is returned when you complete onboarding the auxiliary vol
 - **API**: [List all volume onboardings for this cloud instance](/docs/apis/power-cloud#pcloud-volume-onboarding-getall)
 - **CLI**: [ibmcloud pi volume onboarding get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-onboarding-get)
 
+The following table provides the properties of a replication-enabled volume that indicates the replication-status of the volume.
 
-Refer to the following table for the properties that you can use with the API or CLI commands for verifying the replication status of the auxiliary volume and its definitions.
-
-| Property   | Description                                                                                                                                                                                                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `progress` | Indicates the progress of the onboarding operation of the auxiliary volume in percentage                                                                                                                     |
-| `results`  | Contains the list of onboarded volume names or details of any failures that occurred during the onboarding operation of the auxiliary volume                                                                 |
-| `status`   | Indicates the status of the volume onboarding operation. If the operation is successful, the return value is `Success`. If an error occurred during the onboarding operation, the return value is `Failure`. |
+| Property   | Description                                                                                                                                                                                                |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `progress` | Indicates the progress of the onboarding operation of the auxiliary volume in percentage.                                                                                                                  |
+| `results`  | Contains the list of the onboarded volume names or details of any failures that occurred during the onboarding operation of the auxiliary volume.                                                          |
+| `status`   | Indicates the status of the volume onboarding operation. If the operation is successful, the return value is `Success`. If an error occurs during the onboarding operation, the return value is `Failure`. |
 {: class="simple-table"}
-{: caption="Properties of an auxiliary volume and their descriptions." caption-side="bottom"}
+{: caption="Properties of an auxiliary volume" caption-side="bottom"}
 
 
-If the onboarding process of the auxiliary volume on the secondary location is successful, both the onboarded volume and volume group are present in the {{site.data.keyword.powerSys_notm}} workspace on the secondary location. The resources in the secondary location have their own IDs. The IDs are different from the IDs and CRNs of the associated volumes on the primary location.
+If the onboarding process of the auxiliary volume on the secondary location is successful, the onboarded volume and volume group are available in the {{site.data.keyword.powerSys_notm}} workspace on the secondary location. The resources in the secondary location have their own IDs. The IDs are different from the IDs and CRNs of the associated volumes on the primary location.
 
 Obtain the status of the auxiliary volumes by using the auxiliary volume names. If the onboarding operation is successful, the auxiliary volume names are available. Verify the status of the auxiliary volumes by using the following API and CLI commands:
 
@@ -429,36 +435,37 @@ Obtain the status of the auxiliary volumes by using the auxiliary volume names. 
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get)
 
 
-Refer to the following table to verify whether the replication properties of the volume are as expected.
+The following table provides properties to verify the replication properties of the volume.
 
-| Property               | Verifying the replication status                                                   |
-| ---------------------- | ---------------------------------------------------------------------------------- |
-| `auxVolumeName`        | Matches the `auxVolumeName` value that is used to onboard the volume               |
-| `auxiliary`            | Set to `true` because the volume is the auxiliary volume                           |
-| `consistencyGroupName` | Matches the consistency group name of the volume group on the primary location     |
-| `groupID`              | Returns the ID of the volume group                                                 |
-| `masterVolumeName`     | Matches the `masterVolumeName` value of the primary volume on the primary location |
-| `mirroringState`       | Set to `consistent_copying` state                                                  |
-| `primaryRole`          | Set to `master` as the primary volume is acting as the active volume               |
-| `replicationEnabled`   | Set to `true`                                                                      |
-| `replicationStatus`    | Set to `enabled`                                                                   |
+| Property               | Verifying the replication status                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `auxVolumeName`        | Verify that the property value is same as the `auxVolumeName` value that is used to onboard the volume.               |
+| `auxiliary`            | Verify that the property is set to `true` because the volume is the auxiliary volume.                                 |
+| `consistencyGroupName` | Verify that the property value is the same as the consistency group name of the volume group on the primary location. |
+| `groupID`              | Verify that the property value is the ID of the volume group.                                                         |
+| `masterVolumeName`     | Verify that the property value is same as the `masterVolumeName` value of the primary volume on the primary location. |
+| `mirroringState`       | Verify that the property is set to `consistent_copying`.                                                              |
+| `primaryRole`          | Verify that the property value is set to `master` as the primary volume is the active volume.                         |
+| `replicationEnabled`   | Verify that the property is set to `true`.                                                                            |
+| `replicationStatus`    | Verify that the property is set to `enabled`.                                                                         |
 {: class="simple-table"}
-{: caption="Verifying the replication status of an auxiliary volume." caption-side="bottom"}
+{: caption="Verifying the replication status of an auxiliary volume" caption-side="bottom"}
 
 
-Using the `groupID` value of the auxiliary volume, query the details of the volume group. Verify whether the auxiliary volume is replication-enabled by using the following API and CLI commands:
+Using the `groupID` value of the auxiliary volume, get the details of the volume group. Verify whether the auxiliary volume is replication-enabled by using the following API and CLI commands:
 
 
 - **CLI**: [ibmcloud pi volume-group get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-get)
 - **API**: [Get all volume groups](/docs/apis/power-cloud#pcloud-volumegroups-getall)
 
-Refer to the following table to verify that the replication status of the volume group is as expected.
 
-| Property    | Verifying the replication status                                                                                                             |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `auxiliary` | Set to `true`                                                                                                                                |
-| `state`     | Set to `consistent_copying` state to match the `mirroringState` of the auxiliary volume                                                      |
-| `volumeIDs` | Contains a list of volume IDs that belongs to the volume group. Verify whether it contains the ID of the auxiliary volume that was onboarded |
+The following table provides properties to verify the replication status of the volume group.
+
+| Property    | Verifying the replication status                                                                                                               |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `auxiliary` | Verify that the property is set to `true`.                                                                                                     |
+| `state`     | Verify that the property is set to the `consistent_copying` state to match the `mirroringState` status of the auxiliary volume.                |
+| `volumeIDs` | Verify that the property contains a list of volume IDs that belongs to the volume group and the ID of the auxiliary volume that was onboarded. |
 {: class="simple-table"}
 {: caption="Verifying the replication-enabled status of a volume group." caption-side="bottom"}
 
@@ -466,26 +473,23 @@ Refer to the following table to verify that the replication status of the volume
 ## Performing a failover and fallback operation
 {: #perform-fail-over-back}
 
-If a disaster occurs on the primary location, access to all the storage volumes that are allocated on the primary location is lost. The replication relationship for the replication-enabled primary volumes is broken with the secondary location. The state of the consistency group (volume group) changes to `inconsistent-disconnected`. On the primary location, no volume is associated with the primary role in the volume group.
+If a disaster occurs on the primary location, access to all the storage volumes that are allocated on the primary location is lost. The replication relationship for the replication-enabled primary volumes is broken with the secondary location. The state of the consistency group (volume group) changes to `inconsistent-disconnected`. In the primary location, the primary role is not associated with any volume in the volume group.
 
-
-
-Complete the following steps to perform the failover operations on the secondary location:
-
-1. Stop the auxiliary volume group and access the auxiliary volume on the secondary location. See, [Failover to the secondary location](#failover-sec-loc)
-2. [Verify that the auxiliary volume group is in an idling state](#verify-aux-vol-grp-idling)
-
-When you complete the failover steps, the volumes are ready to accept I/O requests. The virtual server instance that these volumes are attached to can be powered on and you can continue the execution.
 
 
 ### Failover to the secondary location
 {: #failover-sec-loc}
 
-To access the auxiliary volumes from the secondary location due to a primary location failure, stop the volume group. Allow the auxiliary volumes in the volume group to access the auxiliary volumes on the secondary location.
+Complete the following steps to perform the failover operations on the secondary location:
+
+1. Stop the auxiliary volume group and access the auxiliary volume on the secondary location.
+2. [Verify that the auxiliary volume group is in an idle state](#verify-aux-vol-grp-idling).
+
+When you complete the failover steps, the volumes that are attached to the virtual server instance can be powered on. You can continue the execution of I/O operations on the volumes.
 
 You can perform the failover operation by using the following API and CLI commands:
 
-- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post) API with **access** flag set to `True`
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post) API with the **access** flag set to `True`
 
 
 
@@ -502,16 +506,21 @@ If you are using the CLI command to onboard an auxiliary volume, the service wor
 Verify that the action that you perform on a volume group meets the current state of the volume group. Otherwise, an error message appears indicating that the volume group is not in the expected state.
 {: attention}
 
+You can perform the following actions on the volume group based on the volume group status:
+- Stop a volume group when `replicationStatus` is in the `disabled` state.
+- Start a volume group when `replicationsStatus` is in the `enabled` or `available` state.
+- Reset a volume group that is not in the `error` state.
 
-When you perform an action on a volume group, an error is returned if the following state and actions on the volume group do not match:
-- Stop a volume group when the `replicationStatus` is in the `disabled` state
-- Start a volume group when the `replicationsStatus` is in the `enabled` or `available` state
-- Reset a volume group that is not in the `error` state
+When you perform an action on a volume group, an error is returned if the state and actions on the volume group do not match.
+{: note}
 
-### Verifying the volume group for idling state
+### Verifying the volume group for the `idling` state
 {: #verify-aux-vol-grp-idling}
 
-When you stop the volume group, the status of the consistency group is changed to `idling`, replication is disabled, and the auxiliary volumes allow I/O operations.
+When you stop the volume group, you can see the following changes:
+- Status of the consistency group changes to `idling`
+- Replication is disabled
+- Auxiliary volumes allow I/O operations
 
 Get the volume group details to verify the status of the volume group by using the following API and CLI commands:
 
@@ -524,14 +533,14 @@ Get the volume group details to verify the status of the volume group by using t
 
 When the primary location is recovered, you can re-enable the primary volume group for replication. When the primary volume is ready for replication, you can fallback to the primary location. Complete the following steps to synchronize the data between the auxiliary volumes and primary volumes:
 
-1. Turn off the virtual server instance on the secondary location
-2. [Synchronize the I/O updates from auxiliary volume to primary volume](#sync-io-aux-prim)
-3. [Stop the primary volume group to disable replication](#stop-prim-vol-grp-disable-rep)
-4. [Re-enable replication on the primary volume group](#re-enabl-repl)
+1. Turn off the virtual server instance on the secondary location.
+2. [Synchronize the I/O updates from auxiliary volume to primary volume](#sync-io-aux-prim).
+3. [Stop the primary volume group to disable replication](#stop-prim-vol-grp-disable-rep).
+4. [Re-enable replication on the primary volume group](#re-enabl-repl).
 
 After replication is re-enabled, you can start the virtual server instance and its workload in the primary location. When the primary server instance is the active instance, you can turn off the virtual server instance in the secondary location.
 
-#### Synchronizing I/O updates from auxiliary volume to primary volume
+#### Synchronizing I/O updates from the auxiliary volume to the primary volume
 {: #sync-io-aux-prim}
 
 To fallback to the primary volume, any I/O updates made to the auxiliary volume must be replicated to the primary volume. Start the primary volume group in the auxiliary mode to synchronize the data from auxiliary volume to primary volume.
@@ -539,9 +548,9 @@ To fallback to the primary volume, any I/O updates made to the auxiliary volume 
 Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace in which the auxiliary volumes are located. For example, `ibmcloud pi ws target AUXILIARY_WS_CRN`.
 {: note}
 
-Use the following API or CLI commands to start the primary volume in auxiliary mode:
+Use the following API or CLI commands to start the primary volume in the auxiliary mode:
 
-- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID. Using the API, start the volume group and to set it as the `aux` volume as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID. Use the following code example to start the volume group and to set it as the `aux` volume:
 
 
 ```code
@@ -554,16 +563,24 @@ Use the following API or CLI commands to start the primary volume in auxiliary m
     }
 
 ```
-- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID, `--operation` flag to `start`, and set `--source` flag to `aux`.
+- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Use the following values to set the parameter and flags in the command:
+  - `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID
+  - `--operation` flag to `start`
+  - `--source` flag to `aux`
 
-Verify whether the `primaryRole` value of the volume group is set to `aux`. Monitor the state of the volume group until the replication of data from the auxiliary volume to the primary volume is completed. The change in the state of the primary volume group to `consistent_copying` value indicates that the data is synchronized from the secondary location to the primary location.
+To synchronize the data from the secondary location to the primary location, complete the following steps:
 
-#### Stopping the primary volume group to disable replication
+1. Verify whether the `primaryRole` value of the volume group is set to `aux`.
+2. Monitor the state of the volume group until the replication of data from the auxiliary volume to the primary volume is completed.
+3. The change in the state of the primary volume group to `consistent_copying` value
+indicates that the data is synchronized from the secondary location to the primary location.
+
+#### Disabling replication by stopping the primary volume group
 {: #stop-prim-vol-grp-disable-rep}
 
-When you complete data replication from the auxiliary volume to the primary volume, it is time to fallback to the primary volume. To enable the primary volume, use the following API and CLI commands to stop the primary volume group and disable the replication:
+When you complete data replication from the auxiliary volume to the primary volume, you can fallback to the primary volume and enable replication from primary volume to auxiliary volume. To enable the primary volume, you must stop the primary volume and disable existing replication. Use the following API and CLI commands to stop the primary volume group and disable the replication:
 
-- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. The API must stop the volume group and allow read access. For example, the request body must be defined as follows:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. The API must stop the volume group and allow read access. Use the following code example to stop the volume group and allow read access:
 
 
 ```code
@@ -577,16 +594,19 @@ When you complete data replication from the auxiliary volume to the primary volu
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Set the `VOLUME_GROUP_ID` parameter to primary volume group ID, `--operation` flag to `stop`, and `--allow-read-access` flag to `True`.
+- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Use the following values to set the parameter and flags in the command:
+  - `VOLUME_GROUP_ID` parameter to the primary volume group ID
+  - `--operation` flag to `stop`
+  - `--allow-read-access` flag to `True`
 
-Wait for the `replicationStatus` parameter of the primary volume group to change to the `disabled` state. In this state, the primary and secondary locations do not replicate with each other. Therefore, I/O operations on the auxiliary volume do not replicate to the primary volume.
+Wait until the `replicationStatus` parameter of the primary volume group changes to the `disabled` state. In this state, the primary and secondary locations do not replicate each other. Therefore, I/O operations on the auxiliary volume do not replicate the primary volume.
 
 #### Reenabling replication on the primary volume group
 {: #re-enabl-repl}
 
-To restart the primary volume group that is in the disabled state, use the `start` command. When you start the volume group to re-enable replication, the primary volumes of the primary volume group are the `master` volumes again.
+To restart the primary volume group that is in the disabled state, use the `start` command. When you start the volume group to re-enable replication, the `primaryRole` property of the primary volumes in the primary volume group are set to `master` volumes.
 
-- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, start the volume group and set it as the `master` volume as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Use the following code example to start the volume group and set it as the `master` volume:
 
 
 ```code
@@ -600,10 +620,13 @@ To restart the primary volume group that is in the disabled state, use the `star
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Set the `VOLUME_GROUP_ID` parameter to primary volume group ID, `--operation` flag to `start`, and set `--source` flag to `master`.
+- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-action). Use the following values to set the parameter and flags in the command:
+  - `VOLUME_GROUP_ID` parameter to primary volume group ID
+  - `--operation` flag to `start`
+  - `--source` flag to `master`
 
 
-Wait for the volume group to be replication-enabled and in a `consistent_copying` state. When replication is active, the I/O operations on the primary volume are replicated to the auxiliary volume on the secondary location.
+Wait for the volume group to be replication-enabled and in the `consistent_copying` state. When replication is active, the I/O operations on the primary volume are replicated to the auxiliary volume on the secondary location.
 
 
 
@@ -622,11 +645,17 @@ Wait for the volume group to be replication-enabled and in a `consistent_copying
 ## Updating an existing volume as a replication-enabled volume
 {: #update-vol-rep-enabled}
 
-You can modify an existing volume to be replication-enabled if it is created in a storage pool that supports the replication process. To verify, query the details of the volume, get the details of the storage pool that contains the volume, and verify it with the list of storage pools that support replication. For more information about storage pools that support replication, see [{{site.data.keyword.powerSys_notm}} storage pool that supports GRS](#locations-GRS).
+You can modify an existing volume to be replication-enabled if it is created in a storage pool that supports the replication process. To verify the status of the volume complete the following steps:
+
+1. Query the details of the volume.
+2. Get the details of the storage pool that contains the volume.
+3. Verify the details with the list of storage pools that support replication.
+
+For more information about storage pools that support replication, see [{{site.data.keyword.powerSys_notm}} storage pool that supports GRS](#locations-GRS).
 
 Use the following API and CLI commands to query the volume details:
 
-- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Using the API, query the volume details as defined in the following code:
+- **API**: [Perform an action on a volume group](/docs/apis/power-cloud#pcloud-volumegroups-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Use the following code example to query the volume details:
 
 ```code
 
@@ -637,7 +666,7 @@ Use the following API and CLI commands to query the volume details:
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the `VOLUME_ID` parameter to the primary volume ID, and query if the `--replication-enabled` flag is set to `True`.
+- **CLI**: [ibmcloud pi volume-group action](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the `VOLUME_ID` parameter to the primary volume ID and query if the `--replication-enabled` flag is set to `True`.
 
 
 ## Adding a replication-enabled volume to an existing volume group
@@ -645,7 +674,7 @@ Use the following API and CLI commands to query the volume details:
 
 You can add replication-enabled volumes to an existing volume group by using the following API and CLI commands:
 
-- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Using the API, add the primary volume IDs to the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Use the following code example to add the primary volume IDs to the volume group:
 
 ```code
 
@@ -658,33 +687,33 @@ You can add replication-enabled volumes to an existing volume group by using the
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID, and set the `--add-member-ids` flag to the primary volume IDs that must be added to the volume group.
+- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Set the `--add-member-ids` flag to the primary volume IDs that must be added to the volume group.
 
-## Disabling replication of a volume
+## Disabling the replication of a volume
 {: #disable-grs}
 
 When you disable replication of a primary volume, the associated auxiliary volume on the secondary location is deleted.
 
-Failure to complete this procedure in the specified order might result in the loss of source volume data. First, you must complete the actions on the primary location and then complete the actions on the secondary location.
+Failure to complete this procedure in the specified order might result in the loss of source volume data. You must complete the actions on the primary location and then complete the actions on the secondary location.
 {: attention}
 
 To disable replication of a primary volume, perform the following steps:
 
-1. Actions on the primary location
+1. Perform the following actions on the primary location:
 
-   1. [Remove the primary volume from the volume group](#rem-prim-vol-grp)
-   2. [Delete the primary volume group, if empty](#del-prim-vol-grp)
-   3. [Disable replication for the primary volume](#dis-repl-prim-vol)
-   4. [Verify whether the replication is disabled for the primary volume](#ver-repl-prim-vol)
+   1. Remove the primary volume from the primary volume group. For more information, see [Removing the primary volume from the volume group](#rem-prim-vol-grp).
+   2. Delete the primary volume group if the primary volume group is empty. See, [Deleting an empty a primary volume group](#del-prim-vol-grp).
+   3. Disable replication for the primary volume. For more information, see [Disabling replication for the primary volume](#dis-repl-prim-vol.)
+   4. Verify whether the replication is disabled for the primary volume. For more information, see [Verifying whether replication is disabled for the primary volume](#ver-repl-prim-vol).
 
-2. Actions on the secondary location
+2. Perform the following actions on the secondary location:
 
 You can perform these steps only if you complete the onboarding operation of the auxiliary volume.
 {: note}
 
-   1. [Remove the auxiliary volume from the volume group](#rem-aux-vol-grp)
-   2. [Delete the auxiliary volume group, if empty](#del-aux-vol-grp)
-   3. [Delete the auxiliary volume](#del-aux-vol-second)
+   1. Remove the auxiliary volume from the volume group. For more information, see [Removing auxiliary volume from the volume group](#rem-aux-vol-grp).
+   2. Delete the auxiliary volume group, if the volume group is empty. For more information, see [Deleting an empty auxiliary volume group](#del-aux-vol-grp).
+   3. Delete the auxiliary volume. For more information, see [Deleting the auxiliary volume](#del-aux-vol-second).
 
 
 ### Removing the primary volume from the volume group
@@ -692,7 +721,7 @@ You can perform these steps only if you complete the onboarding operation of the
 
 Use the following API and CLI commands to remove the primary volume from the volume group:
 
-- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the following code example to remove the primary volume ID from the volume group:
 
 ```code
 
@@ -705,17 +734,17 @@ Use the following API and CLI commands to remove the primary volume from the vol
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID, and set the `--remove-member-volume-ids` flag to the primary volume IDs that must be removed from the volume group.
+- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Set the `--remove-member-volume-ids` flag to the primary volume IDs that must be removed from the volume group.
 
 Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-workspace) CLI command to set the service workspace to the workspace in which the primary volumes are located. For example, `ibmcloud pi ws target PRIMARY_WS_CRN`.
 {: note}
 
 You can remove multiple replication-enabled volumes from a volume group.
 
-### Deleting an empty a primary volume group
+### Deleting an empty primary volume group
 {: #del-prim-vol-grp}
 
-Use the following API and CLI commands to delete the primary volume group if it is empty:
+Use the following API and CLI commands to delete an empty primary volume group:
 
 - **API**: [Delete a cloud instance volume group](/docs/apis/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID.
 
@@ -725,9 +754,9 @@ Use the following API and CLI commands to delete the primary volume group if it 
 ### Disabling replication for the primary volume
 {: #dis-repl-prim-vol}
 
-Use the following API and CLI commands to disable replication for the primary volume, if it is removed from the volume group:
+Use the following API and CLI commands to disable replication for the primary volume that is removed from the volume group:
 
-- **API**: [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Use the API to disable the replication for the primary volume ID as defined in the following code:
+- **API**: [Perform an action on a Volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-action-post). Set the `VOLUME_ID` parameter to the primary volume ID. Use the following code example to disable the replication for the primary volume ID:
 
 ```code
 
@@ -750,12 +779,12 @@ Use the following API and CLI commands to verify whether replication is disabled
 - **CLI**: [ibmcloud pi volume get](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-get). Set the `VOLUME_ID` parameter to the primary volume ID to query the replication status.
 
 
-### Removing auxiliary volume from the volume group
+### Removing the auxiliary volume from the volume group
 {: #rem-aux-vol-grp}
 
 Use the following API and CLI commands to remove the auxiliary volume from the volume group:
 
-- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the volume group ID and the`VOLUME_ID` parameter to the auxiliary volume ID. Use the API to remove the auxiliary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the volume group ID and the`VOLUME_ID` parameter to the auxiliary volume ID. Use the following code example to remove the auxiliary volume ID from the volume group:
 
 ```code
 
@@ -768,17 +797,17 @@ Use the following API and CLI commands to remove the auxiliary volume from the v
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to an auxiliary volume group ID, and set the `--remove-member-volume-ids` flag to the auxiliary volume IDs that must be removed from the volume group.
+- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to an auxiliary volume group ID. Set the `--remove-member-volume-ids` flag to the auxiliary volume IDs that must be removed from the volume group.
 
 
 ### Deleting an empty auxiliary volume group
 {: #del-aux-vol-grp}
 
-Use the following API and CLI commands to delete the auxiliary volume group if it is empty:
+Use the following API and CLI commands to delete an empty auxiliary volume group:
 
-- **API**: [Delete a cloud instance volume group](/docs/apis/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to auxiliary volume group ID.
+- **API**: [Delete a cloud instance volume group](/docs/apis/power-cloud#pcloud-volumegroups-delete). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID.
 
-- **CLI**: [ibmcloud pi volume-group delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-delete). Set the `VOLUME_GROUP_ID` parameter to an auxiliary volume group ID that must be deleted.
+- **CLI**: [ibmcloud pi volume-group delete](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-delete). Set the `VOLUME_GROUP_ID` parameter to the auxiliary volume group ID that must be deleted.
 
 
 ### Deleting an auxiliary volume
@@ -803,7 +832,7 @@ You can change the tier of a replication-enabled volume if one of the following 
 - The volume is a primary volume and the `primaryRole` property of the volume is set to `master`.
 - The volume is an auxiliary volume and the `primaryRole` property of the volume is set to `aux`.
 
-Any attempt to change the tier of a replication-enabled volume fails, if one of the conditions are not met. The change in the tier of the replication-enabled volume does not synchronize with the paired volume.
+Any attempt to change the tier of a replication-enabled volume fails, if one of the conditions is not met. The change in the tier of the replication-enabled volume does not synchronize with the paired volume.
 
 You can change the tier of the replication-enabled volume by using the following API and CLI commands:
 
@@ -817,25 +846,23 @@ You can change the tier of the replication-enabled volume by using the following
 ## Modifying a replication-enabled primary volume
 {: #modify-rep-prim-vol}
 
-You can modify the attributes of a replication-enabled primary volume. To modify some of the properties of the primary and auxiliary volumes, you must perform related actions on the primary and secondary locations.
+You can modify the attributes of a replication-enabled primary volume. To modify some of the properties of the primary and auxiliary volumes, you must perform actions on the primary and secondary locations.
 
-### Changing the capacity of a primary volume
-{: #changing-capacity-primary-vol}
+### Changing the size of a primary volume
 
-To change the capacity of a replication-enabled primary volume, complete the following steps:
+To change the size of a replication-enabled primary volume, complete the following steps:
 
-1. Remove the primary volume from the volume group
-2. Change the capacity of the primary volume
-3. Add the primary volume back to the volume group
+1. Remove the primary volume from the volume group.
+2. Change the size of the primary volume.
+3. Add the primary volume back to the volume group.
 
-In the next 24 hours, the capacity of the auxiliary volume on the secondary location is changed.
+The size of the auxiliary volume on the secondary location is updated within 24 hours.
 
-For example, on the `dal10` and `wdc07` location pair, when you change the capacity of a replication-enabled primary volume on the primary location, the system changes the size of the auxiliary volume on the secondary location in the next 24 hours.
+For example, on the `dal10` and `wdc07` location pair, consider `dal10` as the primary location and `wdc07` as the secondary location. If you change the size of a replication-enabled primary volume in the `dal10` location, the system updates the size of the auxiliary volume in the `wdc07` location within 24 hours.
 
-Use the following API and CLI commands to change the capacity of the replication-enabled primary volume:
+Use the following API and CLI commands to change the size of the replication-enabled primary volume:
 
-
--**API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to primary volume ID and set the size in GB by using the following request body:
+- **API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to primary volume ID. Use the following code example to set the size of the volume in GB:
 
 ```code
   Request Body:
@@ -845,9 +872,9 @@ Use the following API and CLI commands to change the capacity of the replication
 
 ```
 
--**CLI**: [ibmcloud pi volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the value in the `VOLUME_ID` parameter to the primary volume ID and set the `--size` value to be in GB.
+- **CLI**: [ibmcloud pi volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the value in the `VOLUME_ID` parameter to the primary volume ID and set the `--size` value to be in GB.
 
-Do not resize a primary volume by disabling replication of the volume as it results in errors on the auxiliary volume on the secondary location.
+If you disable replication of the volume to resize a primary volume, it results in errors on the auxiliary volume on the secondary location.
 {: important}
 
 
@@ -858,23 +885,40 @@ Do not resize a primary volume by disabling replication of the volume as it resu
 
 To change the values of the `bootable` or `shareable` properties on the primary volume, use the following API or CLI commands:
 
--**API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to the primary volume ID and set the `--bootable` or `--shareable` flags to `True` or `False` value.
+- **API**: [Update a cloud instance volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-put). Set the `VOLUME_ID` parameter to the primary volume ID and set the `--bootable` or `--shareable` flags to `True` or `False` value.
 
--**CLI**: [ibmcloud pi volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the value of the `VOLUME_ID` parameter to the primary volume ID and set the value of the `--bootable` or `--shareable` flags to `True` or `False` value.
+- **CLI**: [ibmcloud pi volume update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-update). Set the value of the `VOLUME_ID` parameter to the primary volume ID. Set the value of the `--bootable` or `--shareable` flags to `True` or `False` value.
 
-A volume can be either shareable or bootable, but cannot be both.
+You can set a volume to be either `--shareable` or `--bootable` but cannot assign both the values.
 {: note}
 
-After you change the `bootable` or `shareable` property values for a primary volume on the primary location, you must update the same property for the auxiliary volume on the secondary location.
 
 
 
 
 
-## Deleting a replication-enabled primary volume
+
+
+
+
+
+
+
+## Deleting a replication-enabled volume in a primary location
 {: #delete-prime-vol}
 
-To delete a volume or a replication-enabled primary volume, the status of the volume must indicate one of the following states: `available`, `error`, `error_restoring`, `error_extending`, or `error_managing`. In addition, you cannot delete the volume if it is in the `migrating` or `attached` state, belongs to a volume group, has snapshots, or if it is disassociated from its snapshots after a transfer.
+To delete a volume or a replication-enabled volume in a primary location, the status of the volume must indicate one of the following states:
+- `available`
+- `error`
+- `error_restoring`
+- `error_extending`
+- `error_managing`
+
+In addition, you cannot delete the volume if one of the following conditions is met:
+- Volume is in `migrating` or `attached` state.
+- Volume belongs to a volume group.
+- Volume has snapshots.
+- Volume is disassociated from its snapshots after a transfer.
 
 To delete a primary volume, you must complete the actions on the primary and secondary locations:
 
@@ -890,7 +934,6 @@ To delete a primary volume, you must complete the actions on the primary and sec
 If you do not delete the auxiliary volume from the secondary location, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to the `ERROR` state. You cannot use the auxiliary volume when it is in the `ERROR` state. You can only delete the volume.
 {: note}
 
-
 ### Removing the primary volume from its volume group
 {: #rem-prim-vol-vol-grp}
 
@@ -900,7 +943,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 {: note}
 
 
-- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the API to remove the primary volume ID from the volume group as defined in the following code:
+- **API**: [updates the volume group](/docs/apis/power-cloud#pcloud-volumegroups-put). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID and the `VOLUME_ID` parameter to the primary volume ID. Use the following code example to remove the primary volume ID from the volume group:
 
 ```code
 
@@ -913,7 +956,7 @@ Use the [ibmcloud pi workspace](/docs/power-iaas?topic=power-iaas-power-iaas-cli
 
 ```
 
-- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID, and set the `--remove-member-volume-ids` flag to the primary volume ID that must be removed from the volume group.
+- **CLI**: [ibmcloud pi volume-group update](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-update). Set the `VOLUME_GROUP_ID` parameter to the primary volume group ID. Set the `--remove-member-volume-ids` flag to the primary volume ID that must be removed from the volume group.
 
 
 ### Deleting the primary volume
@@ -933,36 +976,47 @@ If you delete an auxiliary volume, the associated primary volume is also deleted
 {: attention}
 
 
-When you [disable the replication service on the primary volume](#disable-grs) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary site, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
+When you [disable the replication service on the primary volume](#disable-grs) or [delete the primary volume](#del-prim-vol), the replication relationship between the primary volume and the secondary volume is deleted in the storage backend. If the auxiliary volume on the secondary location is associated with a volume group, [remove the auxiliary volume from the volume group](#rem-aux-vol-grp). Delete the auxiliary volume manually. If you do not delete the auxiliary volume from the secondary location, an out-of-band periodic check that occurs every 24 hours sets the auxiliary volume to an `ERROR` state. Confirm the status of the auxiliary volume by checking the `outOfBandDeleted` property of the auxiliary volume.
 
 
-## GRS impacts on other {{site.data.keyword.powerSys_notm}} operations
+
+
+
+
+
+
+
+
+## Impacts of GRS on {{site.data.keyword.powerSys_notm}} operations
 {: #impacts-on-powervs}
 
-The impacts of GRS on other {{site.data.keyword.powerSys_notm}} operations are as follows:
+The impacts of GRS on {{site.data.keyword.powerSys_notm}} operations are as follows:
 
-- Image interface is not changed and replication is not supported for images
-- Operation interface and the affinity policies for storage pool for virtual server instances are not changed. The replication and non-replication-enabled volumes support volume attachment and detachment.
-- Snapshot and capture operations are allowed for a virtual server instance with replication and non-replication-enabled volumes when the volumes are from the same storage pool. The snapshot and capture operations are performed by using the non-replication-enabled volumes internally even though the volumes of a virtual server instance are replication-enabled.
-- Cloned volume is replication-enabled when you clone a replication-enabled volume by default. During cloning, you can specify whether the cloned volume must be replication-enabled or not. If you want the cloned volume to be replication-enabled, specify the policy for the clone volume. You can use the following methods to clone a volume:
+- User interface to capture and export a VM instance as a volume-backed image is not changed. Replication is not supported for volume-backed images.
+- Operation interface and the affinity policies for the storage pool for virtual server instances are not changed. You can attach or remove a volume from the replication and non-replication-enabled volumes.
+
+
+
+- Cloned volume is replication-enabled when you clone a replication-enabled volume by default. During cloning, you can specify whether the cloned volume must be replication-enabled. If you want the cloned volume to be replication-enabled, specify the policy for the clone volume. You can use the following methods to clone a volume:
     - [Clone a volume by using API](/docs/apis/power-cloud#pcloud-v2-volumesclone-execute-post){: external}.
     - [Clone a volume by using CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-clone){: external}.
     - [Clone a volume by using Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume_clone){: external}.
 
 
+
 ## Best practices for GRS
 {: #best-practices-GRS}
 
-- Set the **Shareable** and **Bootable** flag explicitly on onboarded volumes, if required.
-- Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary site. Verify that the volume group is created successfully and it is in a consistent copying state by using the [get storage details of the volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
-* Get volume details by using the following methods:
-    * [Power Cloud API](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external}.
-    * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume){: external}.
-* Get the details of the volume groups storage details by using the following methods:
-    * [Power Cloud API](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external}.
+- Set the `--shareable` and `--bootable` flags explicitly on onboarded volumes, if required.
+- Start the onboarding of auxiliary volumes only when the primary volumes and volume group are in a consistent copying state. You can get the volume details by using the [get volume](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external} API to determine the state of the primary volumes and volume group in the mirroring state on the primary location. Verify that the volume group is created successfully and it is in a `consistent_copying` state by using the [get storage details of the volume group](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external} API.
+* Get the volume details by using the following methods:
+    * [Power Cloud API](/docs/apis/power-cloud#pcloud-cloudinstances-volumes-get){: external}
+    * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/pi_volume){: external}
+* Get the volume groups storage details by using the following methods:
+    * [Power Cloud API](/docs/apis/power-cloud#pcloud-volumegroups-storagedetails-get){: external}
     * [Power Virtual Server CLI](/docs/power-iaas?topic=power-iaas-power-iaas-cli-reference-v1#ibmcloud-pi-volume-group-storage-details){: external}
-    * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}.
+    * [Terraform](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/pi_volume_group_storage_details){: external}
 
 - When you add or remove a primary or an auxiliary volume from a volume group from one location, perform the same operation from the other location to keep the data in sync.
-- Delete the volumes from the primary and secondary location. Volumes are charged when you delete an auxiliary volume but fail to delete the primary volume.
-- Use the primary location for all the volume operations and perform operations on the auxiliary volume on the secondary location only during failover.
+- Delete the volumes from the primary and secondary location. Volumes are charged when you delete the auxiliary volume and do not delete the primary volume.
+- Use the primary location for all the volume operations. On the secondary location, perform operations on the auxiliary volume only during failover.

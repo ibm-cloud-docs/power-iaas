@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-10-01"
+lastupdated: "2026-11-25"
 
 keywords: power systems, infrastructure as a service, multiple virtual servers, hybrid environment, hybrid platform environment, linux, aix, ibm i,
 
@@ -76,7 +76,7 @@ IBM provides you with stock AIX and IBM i images when you create a {{site.data.k
 ### Support for SAP NetWeaver or SAP HANA applications
 {: #support-SAPNetWeaver-or-SAPHANA}
 
-When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For more information about supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs). For more information, see [Deploying your infrastructure](https://cloud.ibm.com/docs/sap?topic=sap-vs-set-up-infrastructure){: external}.
+When you provision a {{site.data.keyword.powerSys_notm}} instance to support SAP NetWeaver applications, select a version of the IBM-provided AIX or Linux stock operating system image. When you provision a {{site.data.keyword.powerSys_notm}} instance to support the SAP HANA applications, select a version of the IBM provided Linux&reg; stock image. IBM i operating system and custom AIX and Linux images are not supported for SAP workloads. For more information about supported operating system versions, see [FAQ](/docs/power-iaas?topic=power-iaas-powervs-faqs). For more information, see [Deploying your infrastructure](/docs/sap?topic=sap-vs-set-up-infrastructure){: external}.
 
 When you provision a {{site.data.keyword.powerSys_notm}} to support SAP NetWeaver applications, select a version of the IBM-provided AIX operating system stock image. IBM i and operating system custom images are not supported for SAP workloads.
 {: note}
@@ -207,7 +207,7 @@ The storage pool selection is based on the use of storage pool or storage affini
 
 
 
-To view the tier of volumes attached to an instance, use the [Get a Cloud Instance's current state/information](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-cloudinstances-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](https://cloud.ibm.com/docs/apis/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
+To view the tier of volumes attached to an instance, use the [Get a Cloud Instance's current state/information](/docs/apis/power-cloud#pcloud-cloudinstances-get){: external} API command. If you use the [Get all the pvm instances for this cloud instance](/docs/apis/power-cloud#pcloud-pvminstances-getall){: external} and [Get a PVM Instance's current state or information](/docs/apis/power-cloud#pcloud-pvminstances-get){: external} API commands, the tier value is returned as `any` for the `storageType` parameter because of the Flexible IOPS.
 {: note}
 
 

@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-06-23"
+lastupdated: "2026-11-25"
 
 keywords: getting started, {{site.data.keyword.powerSys_notm}} as a service, iaas, private cloud, before you begin, terminology, video, how-to
 
@@ -60,9 +60,9 @@ IBM {{site.data.keyword.powerSys_notm}} Private Cloud is an as-a-service offerin
 
 * **IBM Cloud account** - You can log on to IBM Cloud dashboard by using IBM Cloud account to access various IBM Cloud solutions, services, and offerings. To create an IBM Cloud account, see [Signing up for the IBM Cloud](https://cloud.ibm.com/registration){: external}.
 
-* **Location and region** - The global network of locations of IBM Cloud provides three tiers of regions: multizone regions (MZR), single-campus multizone regions, and data centers. To achieve low application latency, choose your nearest location and region. For details about the available IBM Cloud regions and data centers, review [Region and data center locations for resource deployment](https://cloud.ibm.com/docs/overview?topic=overview-locations){: external}.
+* **Location and region** - The global network of locations of IBM Cloud provides three tiers of regions: multizone regions (MZR), single-campus multizone regions, and data centers. To achieve low application latency, choose your nearest location and region. For details about the available IBM Cloud regions and data centers, review [Region and data center locations for resource deployment](/docs/overview?topic=overview-locations){: external}.
 
-* **Satellite location** - A Satellite location is a representation of an environment in your infrastructure provider, such as a private cloud data center. Each {{site.data.keyword.on-prem-fname}} pod in your data center must be associated with a Satellite location to manage the lifecycle operations of the pod. You must create multiple and unique Satellite locations if you are planning to deploy multiple pods in your data center. For detailed information, see [Understanding Satellite location and hosts](https://cloud.ibm.com/docs/satellite?topic=satellite-location-host){: external}.
+* **Satellite location** - A Satellite location is a representation of an environment in your infrastructure provider, such as a private cloud data center. Each {{site.data.keyword.on-prem-fname}} pod in your data center must be associated with a Satellite location to manage the lifecycle operations of the pod. You must create multiple and unique Satellite locations if you are planning to deploy multiple pods in your data center. For detailed information, see [Understanding Satellite location and hosts](/docs/satellite?topic=satellite-location-host){: external}.
 
 * **workspace** - A workspace is a container of all the virtual machines, storage volumes, network configurations, and so on, at a specific geographic region. {{site.data.keyword.powerSys_notm}} workspaces are available from the **Resource list** in the {{site.data.keyword.powerSys_notm}} user interface. Each workspace can contain multiple {{site.data.keyword.powerSys_notm}} instances. Within each Satellite location, you can create multiple workspaces. For example, you can create two workspaces in the Satellite location of the North Data Center: one workspace for production workloads and another workspace for development tests.
 

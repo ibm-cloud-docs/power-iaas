@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-11-24"
+lastupdated: "2026-11-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -255,7 +255,9 @@ When replicating volumes that span multiple storage pools, each pool requires it
 
 
 
-{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](https://cloud.ibm.com/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+{{site.data.keyword.powerSys_notm}} provides the capability to capture full and point-in-time copies of entire logical volumes or data sets. Using IBM's _FlashCopy_ feature, the [{{site.data.keyword.powerSys_notm}} API](/docs/apis/power-cloud#introduction){: external} lets you create delta snapshots, volume clones, and restore your disks. To learn more, see [Snapshotting, cloning, and restoring](/docs/power-iaas?topic=power-iaas-snapshots-cloning).
+
+
 
 
 
@@ -266,8 +268,6 @@ When replicating volumes that span multiple storage pools, each pool requires it
 {: faq}
 
 The key differences are as follows:
-
-
 
 | Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |

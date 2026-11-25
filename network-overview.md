@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-09-04"
+lastupdated: "2026-11-25"
 
 keywords: network overview, {{site.data.keyword.powerSys_notm}} as a service, private cloud, network, network architecture
 
@@ -64,7 +64,7 @@ When an {{site.data.keyword.on-prem-fname}} infrastructure that is deployed in a
 
 The IBM Cloud Direct Link 2.0 Connect is an IBM Cloud technology to connect to the remote data centers. This technology connects a Virtual Private Cloud (VPC) on IBM Cloud and a router connected to the pod that is located in your data center. The IBM Cloud Direct Link 2.0 Connect uses an IPsec over VPN (also known as last-mile connectivity) to connect to the pod. Thus, the IBM Cloud Direct Link network goes through the data center environment at a minimum level and is connected to the pod's router. The control plane network is set up with redundancy, providing multiple network paths, to ensure that the pods are connected to the IBM Cloud regions reliably. IBM orders an IBM Cloud Direct Link 2.0 Connect for your account by using the third-party network provider details that you might have provided earlier (like Megaport or Equinix). The attributes, such as service keys, are gathered from the ordering process. After the ordering is complete, the corresponding third-party network providers can establish the remote connectivity between the IBM Cloud and the data center.
 
-The IBM Cloud Direct Link 2.0 Connect can be viewed as an alternative to a traditional site-to-site VPN solution. This connectivity can provide secure, private, consistent, and higher-throughput connectivity between a remote network and IBM Cloud environments. For more information about IBM Cloud Direct Link Connect, see [Getting started with IBM Cloud Direct Link](https://cloud.ibm.com/docs/dl?topic=dl-get-started-with-ibm-cloud-dl){: external}.
+The IBM Cloud Direct Link 2.0 Connect can be viewed as an alternative to a traditional site-to-site VPN solution. This connectivity can provide secure, private, consistent, and higher-throughput connectivity between a remote network and IBM Cloud environments. For more information about IBM Cloud Direct Link Connect, see [Getting started with IBM Cloud Direct Link](/docs/dl?topic=dl-get-started-with-ibm-cloud-dl){: external}.
 
 The connectivity between IBM Cloud and pod has two parts:
 * Shared connectivity between the IBM Cloud network infrastructure and the third-party network provider infrastructure.

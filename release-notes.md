@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2026
 
-lastupdated: "2026-11-04"
+lastupdated: "2026-11-25"
 
 keywords: release notes, announcements, feature updates, changes, power virtual server, IBM data center, Client location
 
@@ -26,7 +26,15 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 
+## November 2026
+{: #November-2026}
 
+### 25 November 2026
+{: #power-iaas-nov2526}
+{: release-note}
+
+**End of support reminder for public subnets in the Chennai region:** From 10 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate till 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region might lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
+{: important}
 
 ## October 2026
 {: #October-2026}
