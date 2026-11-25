@@ -29,7 +29,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 ## November 2026
-{: #October-2026}
+{: #November-2026}
 
 ### 25 November 2026
 {: #power-iaas-nov2526}
