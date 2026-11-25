@@ -37,8 +37,7 @@ End of support reminder for public subnets in the Chennai region
 :   From 10 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate till 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region might lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
 {: important}
 
-Test
-:   Testing important tag
+Testing important tag
 {: important}
 
 ## October 2026
