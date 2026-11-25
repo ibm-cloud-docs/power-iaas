@@ -240,7 +240,8 @@ To create a VSI, you must first create a [{{site.data.keyword.powerSys_notm}} wo
 
 13. Define your **Network interfaces** by adding a public network, private network, or both. Public networks are not available at all IBM data center locations. When you add an existing private network, you can choose a specific IP address or have one auto-assigned.
 
-
+    From 10 December 2026, you can no longer create deployments that use classic-based public subnets in the Chennai (CHE) region. Existing deployments continue to operate till 30 June 2027. After 30 June 2027, workloads that use public subnets in Chennai region might lose internet connectivity. To avoid disruption, migrate to virtual private cloud (VPC) connectivity with a transit gateway before 30 June 2027. For more information, see [Public network connectivity for {{site.data.keyword.powerSys_notm}}](/docs/power-iaas?topic=power-iaas-powervs-public-network-setup).
+    {: important}
 
     When you choose to provide a specific IP address, ensure that the IP address is not listed under [reserved IP](/docs/power-iaas?topic=power-iaas-configuring-subnet#reserv-ip).
 

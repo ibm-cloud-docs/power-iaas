@@ -42,7 +42,7 @@
     {
       "title": "Connecting Power Virtual Server to Microsoft Azure",
       "description": "This topic provides a detailed guide on how to connect IBM Power Virtual Server to Microsoft Azure with Megaport.",
-      "href": "/docs/power-iaas?topic=power-iaas-connect-azure-with-megaport",
+      "href": "https://cloud.ibm.com/docs/power-iaas?topic=power-iaas-connect-azure-with-megaport",
       "type": "redbook",
       "recommended": true
     }
