@@ -3,7 +3,7 @@
 copyright:
   years: 2023, 2026 
 
-lastupdated: "2026-11-24"
+lastupdated: "2026-11-25"
 
 keywords: faq, virtual server, network bandwidth, private network setup, multi-tenant environment, delete workspace, supported operating systems, hardware specifications, software maps, affinity, processor types, pinning, snapshot, clone, restore
 
@@ -261,13 +261,13 @@ When replicating volumes that span multiple storage pools, each pool requires it
 
 
 
+
+
 ### **What are the key differences between a snapshot and a clone?**
 {: #snap-vs-clone}
 {: faq}
 
 The key differences are as follows:
-
-
 
 | Context          | Snapshot                                                                                                        | Clone                                                                                                                        |
 | ---------------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
